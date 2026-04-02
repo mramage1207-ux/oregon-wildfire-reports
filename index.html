@@ -252,7 +252,7 @@ function fmtAcres(v) {
 function drawChart(hist) {
   const svg = document.getElementById('trendChart');
   if (!svg || !hist || hist.length < 2) return;
-  const W=1000, H=180, P={t:10,r:10,b:28,l:46};
+  const W=1000, H=180, P={t:10,r:44,b:28,l:46};
   const cW=W-P.l-P.r, cH=H-P.t-P.b;
   const maxA = Math.max(...hist.map(d=>d.acres_burned||0)) || 1;
   const maxF = Math.max(...hist.map(d=>d.active_fires||0)) || 1;
@@ -268,7 +268,7 @@ function drawChart(hist) {
     return e;
   };
 
-  // grid lines
+  // grid lines + left axis labels (acres burned)
   [0,.25,.5,.75,1].forEach(t => {
     const y = P.t + cH*(1-t);
     svg.appendChild(el('line', {x1:P.l, y1:y, x2:P.l+cW, y2:y,
@@ -278,6 +278,19 @@ function drawChart(hist) {
     lb.textContent = Math.round(maxA*t);
     svg.appendChild(lb);
   });
+
+  // right axis labels (active fires)
+  [0,.25,.5,.75,1].forEach(t => {
+    const y = P.t + cH*(1-t);
+    const lb = el('text', {x:P.l+cW+6, y:y+4, 'text-anchor':'start',
+      'font-size':'8', fill:'#1a2744', 'font-weight':'600'});
+    lb.textContent = Math.round(maxF*t);
+    svg.appendChild(lb);
+  });
+
+  // right axis border line
+  svg.appendChild(el('line', {x1:P.l+cW, y1:P.t, x2:P.l+cW, y2:P.t+cH,
+    stroke:'#e2e8f0', 'stroke-width':'0.8'}));
 
   // acres area
   const ap = hist.map((d,i)=>`${i===0?'M':'L'}${xS(i)},${yA(d.acres_burned)}`).join(' ')
