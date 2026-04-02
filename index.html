@@ -349,8 +349,9 @@ function render(pdfs, data) {
   });
 
   const latest = enriched[0];
-  const nLargeFires = data && data.active_large_fires != null ? data.active_large_fires : '—';
-  const nStructLost = data && data.structures_lost    != null ? data.structures_lost    : '—';
+  const nLargeFires   = data && data.active_large_fires     != null ? data.active_large_fires     : '—';
+  const nLargeAcres   = data && data.total_large_fire_acres != null ? data.total_large_fire_acres : '—';
+  const nStructLost   = data && data.structures_lost        != null ? data.structures_lost        : '—';
 
   // ── Hero card ──
   document.getElementById('hero-card').innerHTML = `
@@ -368,8 +369,8 @@ function render(pdfs, data) {
         <div class="lbl">Active Fires</div>
       </div>
       <div class="stat-pill">
-        <div class="val">${fmtAcres(latest.acres_burned)}</div>
-        <div class="lbl">Acres Burned</div>
+        <div class="val">${fmtAcres(nLargeAcres)}</div>
+        <div class="lbl">Total Acres YTD<br><span style="font-size:0.75em;opacity:0.8">(Large Fires)</span></div>
       </div>
       <div class="stat-pill">
         <div class="val">${nStructLost}</div>
