@@ -1,6 +1,7 @@
 {
   "last_updated": "2026-04-02",
-  "n_incidents": 2,
+  "active_large_fires": 0,
+  "structures_lost": 0,
   "historical_data": [
     {
       "date": "2026-01-01",

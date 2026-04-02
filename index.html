@@ -349,7 +349,8 @@ function render(pdfs, data) {
   });
 
   const latest = enriched[0];
-  const nIncidents = data && data.n_incidents != null ? data.n_incidents : '—';
+  const nLargeFires = data && data.active_large_fires != null ? data.active_large_fires : '—';
+  const nStructLost = data && data.structures_lost    != null ? data.structures_lost    : '—';
 
   // ── Hero card ──
   document.getElementById('hero-card').innerHTML = `
@@ -359,6 +360,10 @@ function render(pdfs, data) {
     </div>
     <div class="hero-stats">
       <div class="stat-pill">
+        <div class="val">${nLargeFires}</div>
+        <div class="lbl">Active Large Fires</div>
+      </div>
+      <div class="stat-pill">
         <div class="val">${latest.active_fires}</div>
         <div class="lbl">Active Fires</div>
       </div>
@@ -367,8 +372,8 @@ function render(pdfs, data) {
         <div class="lbl">Acres Burned</div>
       </div>
       <div class="stat-pill">
-        <div class="val">${nIncidents}</div>
-        <div class="lbl">2026 Incidents</div>
+        <div class="val">${nStructLost}</div>
+        <div class="lbl">Structures Lost</div>
       </div>
     </div>
     <div class="hero-actions">
