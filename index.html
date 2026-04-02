@@ -3,141 +3,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oregon Wildfire Daily Reports — 2026 Archive</title>
+  <title>Oregon Wildfire Daily Reports &mdash; 2026 Archive</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #f4f5f7;
-      color: #1a1a2e;
-      min-height: 100vh;
+      background: #f4f5f7; color: #1a1a2e; min-height: 100vh;
     }
     a { color: inherit; text-decoration: none; }
+
+    /* ── header ── */
     header {
       background: linear-gradient(135deg, #1a2744 0%, #0f3460 100%);
-      color: #fff;
-      padding: 0 2rem;
+      color: #fff; padding: 0 2rem;
     }
     .header-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      padding: 1.4rem 0;
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; gap: 1.25rem; padding: 1.4rem 0;
     }
-    .header-flame { font-size: 2.4rem; line-height: 1; filter: drop-shadow(0 0 8px rgba(255,120,20,0.7)); }
-    .header-text h1 { font-size: 1.45rem; font-weight: 700; letter-spacing: -0.3px; }
-    .header-text p { font-size: 0.82rem; opacity: 0.72; margin-top: 2px; }
+    .header-flame { font-size: 2.4rem; line-height: 1; filter: drop-shadow(0 0 8px rgba(255,120,20,.7)); }
+    .header-text h1 { font-size: 1.45rem; font-weight: 700; letter-spacing: -.3px; }
+    .header-text p { font-size: .82rem; opacity: .72; margin-top: 2px; }
     .header-badge {
       margin-left: auto;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.22);
-      border-radius: 20px;
-      padding: 0.3rem 0.85rem;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      white-space: nowrap;
+      background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22);
+      border-radius: 20px; padding: .3rem .85rem;
+      font-size: .78rem; font-weight: 600; letter-spacing: .5px; white-space: nowrap;
     }
+
+    /* ── hero ── */
     .hero-wrap {
       background: linear-gradient(135deg, #0f3460 0%, #1a2744 100%);
       padding: 0 2rem 2.5rem;
     }
     .hero { max-width: 1100px; margin: 0 auto; padding-top: 2rem; }
     .hero-label {
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 1.2px;
-      text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 0.9rem;
+      font-size: .72rem; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: rgba(255,255,255,.55); margin-bottom: .9rem;
     }
     .hero-card {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 12px;
-      padding: 1.4rem 1.6rem;
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      color: #fff;
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
+      border-radius: 12px; padding: 1.4rem 1.6rem;
+      display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; color: #fff;
     }
     .report-date { font-size: 1.35rem; font-weight: 700; }
-    .report-sub { font-size: 0.8rem; opacity: 0.6; margin-top: 3px; }
+    .report-sub { font-size: .8rem; opacity: .6; margin-top: 3px; }
     .hero-stats { display: flex; gap: 1.2rem; }
     .stat-pill {
-      background: rgba(255,255,255,0.1); border-radius: 10px;
-      padding: 0.6rem 1rem; text-align: center; min-width: 80px;
+      background: rgba(255,255,255,.1); border-radius: 10px;
+      padding: .6rem 1rem; text-align: center; min-width: 80px;
     }
     .stat-pill .val { font-size: 1.5rem; font-weight: 700; line-height: 1; }
-    .stat-pill .lbl { font-size: 0.68rem; opacity: 0.65; margin-top: 3px; text-transform: uppercase; letter-spacing: 0.4px; }
-    .hero-actions { margin-left: auto; display: flex; gap: 0.7rem; flex-direction: column; }
+    .stat-pill .lbl { font-size: .68rem; opacity: .65; margin-top: 3px; text-transform: uppercase; letter-spacing: .4px; }
+    .hero-actions { margin-left: auto; display: flex; gap: .7rem; flex-direction: column; }
     .btn-primary {
       background: #e67e22; color: #fff; border-radius: 8px;
-      padding: 0.55rem 1.1rem; font-size: 0.85rem; font-weight: 600; white-space: nowrap;
+      padding: .55rem 1.1rem; font-size: .85rem; font-weight: 600; white-space: nowrap;
     }
     .btn-secondary {
-      background: rgba(255,255,255,0.12); color: #fff; border-radius: 8px;
-      padding: 0.55rem 1.1rem; font-size: 0.85rem; font-weight: 600;
-      border: 1px solid rgba(255,255,255,0.22); white-space: nowrap;
+      background: rgba(255,255,255,.12); color: #fff; border-radius: 8px;
+      padding: .55rem 1.1rem; font-size: .85rem; font-weight: 600;
+      border: 1px solid rgba(255,255,255,.22); white-space: nowrap;
     }
+    .loading-hero {
+      color: rgba(255,255,255,.5); font-size: .9rem; padding: 1.5rem 0;
+    }
+
+    /* ── main ── */
     main { max-width: 1100px; margin: 0 auto; padding: 2rem; }
     .chart-card {
       background: #fff; border-radius: 12px; padding: 1.4rem 1.6rem;
-      margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,.07);
     }
     .chart-card h2 { font-size: 1rem; font-weight: 700; color: #1a2744; }
-    .chart-sub { font-size: 0.78rem; color: #718096; margin-top: 3px; margin-bottom: 1rem; }
-    .chart-legend { display: flex; gap: 1.2rem; margin-bottom: 0.6rem; }
-    .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; color: #4a5568; }
+    .chart-sub { font-size: .78rem; color: #718096; margin-top: 3px; margin-bottom: 1rem; }
+    .chart-legend { display: flex; gap: 1.2rem; margin-bottom: .6rem; }
+    .legend-item { display: flex; align-items: center; gap: .4rem; font-size: .78rem; color: #4a5568; }
     .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
     svg.trend { width: 100%; display: block; }
-    .section-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem; }
+
+    /* ── archive table ── */
+    .section-header { display: flex; align-items: center; gap: .8rem; margin-bottom: .8rem; }
     .section-header h2 { font-size: 1rem; font-weight: 700; color: #1a2744; }
     .pill-count {
       background: #e67e22; color: #fff; border-radius: 20px;
-      padding: 0.15rem 0.6rem; font-size: 0.72rem; font-weight: 700;
+      padding: .15rem .6rem; font-size: .72rem; font-weight: 700;
     }
     .table-card {
       background: #fff; border-radius: 12px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      box-shadow: 0 1px 4px rgba(0,0,0,.07);
       overflow: hidden; margin-bottom: 1.5rem;
     }
     table { width: 100%; border-collapse: collapse; }
     thead th {
       background: #f8fafc; color: #718096;
-      font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
-      padding: 0.75rem 1.2rem; text-align: left; border-bottom: 1px solid #e2e8f0;
+      font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
+      padding: .75rem 1.2rem; text-align: left; border-bottom: 1px solid #e2e8f0;
     }
     tbody tr { border-bottom: 1px solid #f0f4f8; }
     tbody tr:last-child { border-bottom: none; }
     tbody tr.latest { background: #fffbf5; }
-    tbody td { padding: 0.85rem 1.2rem; font-size: 0.88rem; }
+    tbody td { padding: .85rem 1.2rem; font-size: .88rem; }
     .date-cell { font-weight: 600; }
-    .iso { font-size: 0.75rem; color: #a0aec0; font-weight: 400; }
+    .iso { font-size: .75rem; color: #a0aec0; font-weight: 400; }
     .badge-new {
       background: #e67e22; color: #fff; border-radius: 4px;
-      padding: 0.1rem 0.4rem; font-size: 0.65rem; font-weight: 700;
+      padding: .1rem .4rem; font-size: .65rem; font-weight: 700;
       vertical-align: middle; margin-left: 4px;
     }
     .fires-val { font-weight: 700; color: #c0392b; }
     .acres-val { font-weight: 700; color: #e67e22; }
     .action-link {
-      display: inline-flex; align-items: center; gap: 0.3rem;
+      display: inline-flex; align-items: center; gap: .3rem;
       background: #f0f4f8; border-radius: 6px;
-      padding: 0.3rem 0.65rem; font-size: 0.78rem; font-weight: 600;
+      padding: .3rem .65rem; font-size: .78rem; font-weight: 600;
       color: #1a2744; margin-right: 4px;
     }
     .action-link.dl { background: #fff3e6; color: #e67e22; }
+    .loading-row td {
+      text-align: center; padding: 2rem; color: #718096; font-size: .88rem;
+    }
+    .error-box {
+      background: #fff5f5; border-left: 3px solid #e53e3e; border-radius: 0 8px 8px 0;
+      padding: 1rem 1.2rem; font-size: .82rem; color: #742a2a; margin-bottom: 1.5rem;
+    }
     .info-box {
       background: #f0f6ff; border-left: 3px solid #3b82f6;
       border-radius: 0 8px 8px 0; padding: 1rem 1.2rem;
-      font-size: 0.82rem; color: #4a5568; line-height: 1.6; margin-bottom: 1.5rem;
+      font-size: .82rem; color: #4a5568; line-height: 1.6; margin-bottom: 1.5rem;
     }
+
+    /* ── footer ── */
     footer {
-      background: #1a2744; color: rgba(255,255,255,0.5);
-      text-align: center; padding: 1.6rem 2rem; font-size: 0.78rem; line-height: 1.8;
+      background: #1a2744; color: rgba(255,255,255,.5);
+      text-align: center; padding: 1.6rem 2rem; font-size: .78rem; line-height: 1.8;
     }
-    footer a { color: rgba(255,255,255,0.7); text-decoration: underline; }
-    footer strong { color: rgba(255,255,255,0.85); }
+    footer a { color: rgba(255,255,255,.7); text-decoration: underline; }
+    footer strong { color: rgba(255,255,255,.85); }
+
     @media (max-width: 700px) {
       .hero-card { flex-direction: column; gap: 1.2rem; }
       .hero-actions { margin-left: 0; flex-direction: row; flex-wrap: wrap; }
@@ -149,7 +152,7 @@
 
 <header>
   <div class="header-inner">
-    <div class="header-flame">🔥</div>
+    <div class="header-flame">&#128293;</div>
     <div class="header-text">
       <h1>Oregon Wildfire Daily Reports</h1>
       <p>2026 Season Archive &mdash; Published daily by automated ODF/OEM data pipeline</p>
@@ -161,46 +164,22 @@
 <div class="hero-wrap">
   <div class="hero">
     <div class="hero-label">Latest Report</div>
-    <div class="hero-card">
-      <div class="hero-date-block">
-        <div class="report-date">Wednesday, April 1, 2026</div>
-        <div class="report-sub">Data sourced from OEM ArcGIS Dashboard &amp; ODF</div>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-pill">
-          <div class="val">9</div>
-          <div class="lbl">Active Fires</div>
-        </div>
-        <div class="stat-pill">
-          <div class="val">234.5</div>
-          <div class="lbl">Acres Burned</div>
-        </div>
-        <div class="stat-pill">
-          <div class="val">2</div>
-          <div class="lbl">2026 Incidents</div>
-        </div>
-      </div>
-      <div class="hero-actions">
-        <a class="btn-primary" href="oregon_wildfire_report_2026-04-01.pdf" target="_blank">&#128196; View Report</a>
-        <a class="btn-secondary" href="oregon_wildfire_report_2026-04-01.pdf" download>&#8595; Download PDF</a>
-      </div>
+    <div id="hero-card" class="hero-card">
+      <div class="loading-hero">&#9203; Loading latest report&hellip;</div>
     </div>
   </div>
 </div>
 
 <main>
-
-  <div class="chart-card">
+  <div class="chart-card" id="chart-card">
     <h2>2026 Season Trend</h2>
-    <div class="chart-sub">Active fires &amp; acres burned — all reported days, Jan–Apr 2026</div>
+    <div class="chart-sub">Active fires &amp; acres burned &mdash; all reported days</div>
     <div class="chart-legend">
       <div class="legend-item">
-        <div class="legend-dot" style="background:#e67e22;"></div>
-        Acres Burned (left axis)
+        <div class="legend-dot" style="background:#e67e22;"></div> Acres Burned (left axis)
       </div>
       <div class="legend-item">
-        <div class="legend-dot" style="background:#1a2744;"></div>
-        Active Fires (right axis)
+        <div class="legend-dot" style="background:#1a2744;"></div> Active Fires (right axis)
       </div>
     </div>
     <svg class="trend" viewBox="0 0 1000 180" preserveAspectRatio="none" id="trendChart"></svg>
@@ -208,9 +187,9 @@
 
   <div class="section-header">
     <h2>Report Archive</h2>
-    <span class="pill-count">4 PDFs available</span>
+    <span class="pill-count" id="pdf-count">&#8230;</span>
   </div>
-
+  <div id="error-area"></div>
   <div class="table-card">
     <table>
       <thead>
@@ -221,71 +200,23 @@
           <th>Report</th>
         </tr>
       </thead>
-      <tbody>
-        <tr class="latest">
-          <td class="date-cell">
-            Wednesday, April 1, 2026 <span class="badge-new">Latest</span><br>
-            <span class="iso">2026-04-01</span>
-          </td>
-          <td class="fires-val">9</td>
-          <td class="acres-val">234.5</td>
-          <td>
-            <a class="action-link" href="oregon_wildfire_report_2026-04-01.pdf" target="_blank">&#128196; View</a>
-            <a class="action-link dl" href="oregon_wildfire_report_2026-04-01.pdf" download>&#8595; Download</a>
-          </td>
-        </tr>
-        <tr>
-          <td class="date-cell">
-            Tuesday, March 31, 2026<br>
-            <span class="iso">2026-03-31</span>
-          </td>
-          <td class="fires-val">8</td>
-          <td class="acres-val">246.14</td>
-          <td>
-            <a class="action-link" href="oregon_wildfire_report_2026-03-31.pdf" target="_blank">&#128196; View</a>
-            <a class="action-link dl" href="oregon_wildfire_report_2026-03-31.pdf" download>&#8595; Download</a>
-          </td>
-        </tr>
-        <tr>
-          <td class="date-cell">
-            Monday, March 30, 2026<br>
-            <span class="iso">2026-03-30</span>
-          </td>
-          <td class="fires-val">8</td>
-          <td class="acres-val">236.24</td>
-          <td>
-            <a class="action-link" href="oregon_wildfire_report_2026-03-30.pdf" target="_blank">&#128196; View</a>
-            <a class="action-link dl" href="oregon_wildfire_report_2026-03-30.pdf" download>&#8595; Download</a>
-          </td>
-        </tr>
-        <tr>
-          <td class="date-cell">
-            Sunday, March 29, 2026<br>
-            <span class="iso">2026-03-29</span>
-          </td>
-          <td class="fires-val">—</td>
-          <td class="acres-val">—</td>
-          <td>
-            <a class="action-link" href="oregon_wildfire_report_2026-03-29.pdf" target="_blank">&#128196; View</a>
-            <a class="action-link dl" href="oregon_wildfire_report_2026-03-29.pdf" download>&#8595; Download</a>
-          </td>
-        </tr>
+      <tbody id="archive-tbody">
+        <tr class="loading-row"><td colspan="4">&#9203; Loading reports&hellip;</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="info-box">
     <strong style="color:#1a2744;">About this archive:</strong>
-    Daily PDF reports are published automatically each morning from the OEM ArcGIS Portfolio Dashboard
-    and Oregon Department of Forestry data feeds. Active fire counts and acres reflect all fires tracked
-    statewide across all jurisdictions. Historical data in the trend chart spans all reporting days since
-    January 1, 2026. PDFs are preserved indefinitely.
+    Daily PDF reports are published automatically each morning from the OEM ArcGIS Portfolio
+    Dashboard and Oregon Department of Forestry data feeds. The PDF list is fetched live from
+    the repository &mdash; any report added (automatically or manually) appears here immediately.
+    PDFs are preserved indefinitely.
   </div>
-
 </main>
 
 <footer>
-  <strong>Oregon Wildfire Daily Reports — 2026 Season</strong><br>
+  <strong>Oregon Wildfire Daily Reports &mdash; 2026 Season</strong><br>
   Data sourced from
   <a href="https://geo.maps.arcgis.com/apps/instant/portfolio/index.html?appid=22d04c007866419c91ccf00d097526c8" target="_blank">OEM ArcGIS Dashboard</a>
   &nbsp;&bull;&nbsp;
@@ -296,68 +227,213 @@
 </footer>
 
 <script>
-const data = [{d:"2026-01-01",f:1,a:0},{d:"2026-01-02",f:1,a:0},{d:"2026-01-05",f:15,a:0},{d:"2026-01-06",f:10,a:27},{d:"2026-01-07",f:19,a:176},{d:"2026-01-08",f:23,a:176},{d:"2026-01-09",f:19,a:215},{d:"2026-01-12",f:3,a:215},{d:"2026-01-14",f:11,a:289},{d:"2026-01-15",f:13,a:289},{d:"2026-01-16",f:19,a:603},{d:"2026-01-20",f:4,a:603},{d:"2026-01-21",f:8,a:474},{d:"2026-01-22",f:10,a:474},{d:"2026-01-26",f:5,a:497},{d:"2026-01-27",f:9,a:579},{d:"2026-01-28",f:15,a:589},{d:"2026-01-29",f:17,a:624},{d:"2026-01-30",f:12,a:710},{d:"2026-02-02",f:6,a:705},{d:"2026-02-03",f:9,a:705},{d:"2026-02-04",f:10,a:651},{d:"2026-02-05",f:12,a:686},{d:"2026-02-06",f:9,a:830},{d:"2026-02-09",f:6,a:828},{d:"2026-02-10",f:10,a:828},{d:"2026-02-11",f:10,a:828},{d:"2026-02-12",f:8,a:828},{d:"2026-02-13",f:3,a:923},{d:"2026-02-17",f:4,a:923},{d:"2026-02-18",f:9,a:923},{d:"2026-02-19",f:11,a:923},{d:"2026-02-20",f:9,a:744},{d:"2026-02-23",f:2,a:704},{d:"2026-02-24",f:5,a:704},{d:"2026-02-25",f:3,a:704},{d:"2026-02-26",f:4,a:704},{d:"2026-02-27",f:3,a:0},{d:"2026-03-02",f:1,a:0},{d:"2026-03-03",f:2,a:1},{d:"2026-03-04",f:3,a:1},{d:"2026-03-05",f:4,a:1},{d:"2026-03-06",f:4,a:1},{d:"2026-03-09",f:1,a:1},{d:"2026-03-10",f:1,a:1},{d:"2026-03-11",f:1,a:1},{d:"2026-03-12",f:2,a:1},{d:"2026-03-13",f:1,a:0},{d:"2026-03-16",f:0,a:0},{d:"2026-03-17",f:6,a:2},{d:"2026-03-18",f:9,a:19},{d:"2026-03-19",f:11,a:19},{d:"2026-03-20",f:14,a:126},{d:"2026-03-26",f:13,a:119},{d:"2026-03-27",f:13,a:142},{d:"2026-03-30",f:8,a:236.24},{d:"2026-03-31",f:8,a:246.14},{d:"2026-04-01",f:9,a:234.5}];
+// ── CONFIG ──────────────────────────────────────────────────────────────────
+const REPO      = 'mramage1207-ux/oregon-wildfire-reports';
+const API_URL   = 'https://api.github.com/repos/' + REPO + '/contents/';
+const DATA_URL  = 'data.json';   // relative: served from same GitHub Pages origin
+const PDF_RE    = /^oregon_wildfire_report_(\d{4}-\d{2}-\d{2})\.pdf$/;
 
-(function() {
+// ── UTILITIES ────────────────────────────────────────────────────────────────
+function fmtDate(iso) {
+  try {
+    const [y,m,d] = iso.split('-').map(Number);
+    return new Date(y, m-1, d).toLocaleDateString('en-US',
+      {weekday:'long', year:'numeric', month:'long', day:'numeric'});
+  } catch(e) { return iso; }
+}
+
+function fmtAcres(v) {
+  if (v == null || v === '—' || v === '') return '—';
+  const n = parseFloat(v);
+  return isNaN(n) ? v : n.toLocaleString('en-US', {maximumFractionDigits: 1});
+}
+
+// ── CHART ────────────────────────────────────────────────────────────────────
+function drawChart(hist) {
   const svg = document.getElementById('trendChart');
-  const W=1000, H=180, PAD={t:10,r:10,b:28,l:42};
-  const cW=W-PAD.l-PAD.r, cH=H-PAD.t-PAD.b;
-  const maxA=Math.max(...data.map(d=>d.a));
-  const maxF=Math.max(...data.map(d=>d.f));
-  const n=data.length;
-  const xS=i=>PAD.l+(i/(n-1))*cW;
-  const yA=v=>PAD.t+cH-(v/(maxA||1))*cH;
-  const yF=v=>PAD.t+cH-(v/(maxF||1))*cH;
+  if (!svg || !hist || hist.length < 2) return;
+  const W=1000, H=180, P={t:10,r:10,b:28,l:46};
+  const cW=W-P.l-P.r, cH=H-P.t-P.b;
+  const maxA = Math.max(...hist.map(d=>d.acres_burned||0)) || 1;
+  const maxF = Math.max(...hist.map(d=>d.active_fires||0)) || 1;
+  const n = hist.length;
+  const xS = i => P.l + (i/(n-1))*cW;
+  const yA = v => P.t + cH - ((v||0)/maxA)*cH;
+  const yF = v => P.t + cH - ((v||0)/maxF)*cH;
 
-  [0,0.25,0.5,0.75,1].forEach(t=>{
-    const y=PAD.t+cH*(1-t);
-    const ln=document.createElementNS('http://www.w3.org/2000/svg','line');
-    Object.entries({x1:PAD.l,y1:y,x2:PAD.l+cW,y2:y,stroke:'#e2e8f0','stroke-width':'0.6'}).forEach(([k,v])=>ln.setAttribute(k,v));
-    svg.appendChild(ln);
-    const lb=document.createElementNS('http://www.w3.org/2000/svg','text');
-    lb.setAttribute('x',PAD.l-5); lb.setAttribute('y',y+4);
-    lb.setAttribute('text-anchor','end'); lb.setAttribute('font-size','8'); lb.setAttribute('fill','#a0aec0');
-    lb.textContent=Math.round(maxA*t);
+  const ns = 'http://www.w3.org/2000/svg';
+  const el = (tag, attrs) => {
+    const e = document.createElementNS(ns, tag);
+    Object.entries(attrs).forEach(([k,v]) => e.setAttribute(k,v));
+    return e;
+  };
+
+  // grid lines
+  [0,.25,.5,.75,1].forEach(t => {
+    const y = P.t + cH*(1-t);
+    svg.appendChild(el('line', {x1:P.l, y1:y, x2:P.l+cW, y2:y,
+      stroke:'#e2e8f0', 'stroke-width':'0.6'}));
+    const lb = el('text', {x:P.l-5, y:y+4, 'text-anchor':'end',
+      'font-size':'8', fill:'#a0aec0'});
+    lb.textContent = Math.round(maxA*t);
     svg.appendChild(lb);
   });
 
-  const ap=data.map((d,i)=>`${i===0?'M':'L'}${xS(i)},${yA(d.a)}`).join(' ')
-    +` L${xS(n-1)},${PAD.t+cH} L${xS(0)},${PAD.t+cH} Z`;
-  const area=document.createElementNS('http://www.w3.org/2000/svg','path');
-  area.setAttribute('d',ap); area.setAttribute('fill','rgba(230,126,34,0.18)');
-  svg.appendChild(area);
+  // acres area
+  const ap = hist.map((d,i)=>`${i===0?'M':'L'}${xS(i)},${yA(d.acres_burned)}`).join(' ')
+    + ` L${xS(n-1)},${P.t+cH} L${xS(0)},${P.t+cH} Z`;
+  svg.appendChild(el('path', {d:ap, fill:'rgba(230,126,34,.18)'}));
 
-  const al=document.createElementNS('http://www.w3.org/2000/svg','polyline');
-  al.setAttribute('points',data.map((d,i)=>`${xS(i)},${yA(d.a)}`).join(' '));
-  al.setAttribute('fill','none'); al.setAttribute('stroke','#e67e22');
-  al.setAttribute('stroke-width','2'); al.setAttribute('stroke-linejoin','round');
-  svg.appendChild(al);
+  // acres line
+  svg.appendChild(el('polyline', {
+    points: hist.map((d,i)=>`${xS(i)},${yA(d.acres_burned)}`).join(' '),
+    fill:'none', stroke:'#e67e22', 'stroke-width':'2', 'stroke-linejoin':'round'
+  }));
 
-  const fl=document.createElementNS('http://www.w3.org/2000/svg','polyline');
-  fl.setAttribute('points',data.map((d,i)=>`${xS(i)},${yF(d.f)}`).join(' '));
-  fl.setAttribute('fill','none'); fl.setAttribute('stroke','#1a2744');
-  fl.setAttribute('stroke-width','1.8'); fl.setAttribute('stroke-dasharray','4 2'); fl.setAttribute('stroke-linejoin','round');
-  svg.appendChild(fl);
+  // fires line
+  svg.appendChild(el('polyline', {
+    points: hist.map((d,i)=>`${xS(i)},${yF(d.active_fires)}`).join(' '),
+    fill:'none', stroke:'#1a2744', 'stroke-width':'1.8',
+    'stroke-dasharray':'4 2', 'stroke-linejoin':'round'
+  }));
 
-  [["2026-01-01","Jan"],["2026-02-01","Feb"],["2026-03-01","Mar"],["2026-04-01","Apr"]].forEach(([ms,name])=>{
-    const idx=data.findIndex(d=>d.d>=ms);
-    if(idx<0)return;
-    const x=xS(idx);
-    const lb=document.createElementNS('http://www.w3.org/2000/svg','text');
-    lb.setAttribute('x',x); lb.setAttribute('y',H-4); lb.setAttribute('text-anchor','middle');
-    lb.setAttribute('font-size','9'); lb.setAttribute('fill','#718096'); lb.setAttribute('font-weight','600');
-    lb.textContent=name;
+  // month labels
+  const months = [...new Set(hist.map(d=>d.date.slice(0,7)))].sort();
+  months.forEach(mo => {
+    const idx = hist.findIndex(d => d.date >= mo+'-01');
+    if (idx < 0) return;
+    const x = xS(idx);
+    const lb = el('text', {x, y:H-4, 'text-anchor':'middle',
+      'font-size':'9', fill:'#718096', 'font-weight':'600'});
+    lb.textContent = new Date(mo+'-15').toLocaleDateString('en-US',{month:'short'});
     svg.appendChild(lb);
-    const tk=document.createElementNS('http://www.w3.org/2000/svg','line');
-    Object.entries({x1:x,y1:PAD.t+cH,x2:x,y2:PAD.t+cH+4,stroke:'#cbd5e0','stroke-width':'1'}).forEach(([k,v])=>tk.setAttribute(k,v));
-    svg.appendChild(tk);
+    svg.appendChild(el('line', {x1:x, y1:P.t+cH, x2:x, y2:P.t+cH+4,
+      stroke:'#cbd5e0', 'stroke-width':'1'}));
   });
 
-  const dot=document.createElementNS('http://www.w3.org/2000/svg','circle');
-  dot.setAttribute('cx',xS(n-1)); dot.setAttribute('cy',yA(data[n-1].a));
-  dot.setAttribute('r','4'); dot.setAttribute('fill','#e67e22');
-  dot.setAttribute('stroke','#fff'); dot.setAttribute('stroke-width','2');
-  svg.appendChild(dot);
+  // latest dot
+  svg.appendChild(el('circle', {
+    cx:xS(n-1), cy:yA(hist[n-1].acres_burned),
+    r:'4', fill:'#e67e22', stroke:'#fff', 'stroke-width':'2'
+  }));
+}
+
+// ── RENDER ───────────────────────────────────────────────────────────────────
+function render(pdfs, data) {
+  const histByDate = {};
+  if (data && data.historical_data) {
+    data.historical_data.forEach(r => { histByDate[r.date] = r; });
+  }
+
+  // Enrich PDFs with stats
+  const enriched = pdfs.map(p => {
+    const row = histByDate[p.date_iso] || {};
+    return {
+      ...p,
+      active_fires: row.active_fires != null ? row.active_fires : '—',
+      acres_burned: row.acres_burned != null ? row.acres_burned : '—'
+    };
+  });
+
+  const latest = enriched[0];
+  const nIncidents = data && data.n_incidents != null ? data.n_incidents : '—';
+
+  // ── Hero card ──
+  document.getElementById('hero-card').innerHTML = `
+    <div class="hero-date-block">
+      <div class="report-date">${fmtDate(latest.date_iso)}</div>
+      <div class="report-sub">Data sourced from OEM ArcGIS Dashboard &amp; ODF</div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-pill">
+        <div class="val">${latest.active_fires}</div>
+        <div class="lbl">Active Fires</div>
+      </div>
+      <div class="stat-pill">
+        <div class="val">${fmtAcres(latest.acres_burned)}</div>
+        <div class="lbl">Acres Burned</div>
+      </div>
+      <div class="stat-pill">
+        <div class="val">${nIncidents}</div>
+        <div class="lbl">2026 Incidents</div>
+      </div>
+    </div>
+    <div class="hero-actions">
+      <a class="btn-primary" href="${latest.filename}" target="_blank">&#128196; View Report</a>
+      <a class="btn-secondary" href="${latest.filename}" download>&#8595; Download PDF</a>
+    </div>`;
+
+  // ── Count pill ──
+  document.getElementById('pdf-count').textContent = enriched.length + ' PDF' + (enriched.length !== 1 ? 's' : '') + ' available';
+
+  // ── Archive table ──
+  document.getElementById('archive-tbody').innerHTML = enriched.map((r, i) => `
+    <tr${i === 0 ? ' class="latest"' : ''}>
+      <td class="date-cell">
+        ${fmtDate(r.date_iso)}${i === 0 ? ' <span class="badge-new">Latest</span>' : ''}<br>
+        <span class="iso">${r.date_iso}</span>
+      </td>
+      <td class="fires-val">${r.active_fires}</td>
+      <td class="acres-val">${fmtAcres(r.acres_burned)}</td>
+      <td>
+        <a class="action-link" href="${r.filename}" target="_blank">&#128196; View</a>
+        <a class="action-link dl" href="${r.filename}" download>&#8595; Download</a>
+      </td>
+    </tr>`).join('');
+
+  // ── Chart ──
+  if (data && data.historical_data) drawChart(data.historical_data);
+}
+
+// ── MAIN LOAD ────────────────────────────────────────────────────────────────
+(async function() {
+  try {
+    // Fetch PDF list from GitHub Contents API + data.json simultaneously
+    const [apiResp, dataResp] = await Promise.allSettled([
+      fetch(API_URL + '?_=' + Date.now()).then(r => {
+        if (!r.ok) throw new Error('GitHub API ' + r.status);
+        return r.json();
+      }),
+      fetch(DATA_URL + '?_=' + Date.now()).then(r => r.ok ? r.json() : null)
+    ]);
+
+    const files = apiResp.status === 'fulfilled' ? apiResp.value : null;
+    const data  = dataResp.status === 'fulfilled' ? dataResp.value : null;
+
+    if (!files || !Array.isArray(files)) {
+      // GitHub API failed (rate limit etc.) — show what we can
+      document.getElementById('error-area').innerHTML =
+        '<div class="error-box">&#9888; Could not reach GitHub API to list reports. ' +
+        'If you know the filename, you can access reports directly at: ' +
+        '<code>https://mramage1207-ux.github.io/oregon-wildfire-reports/oregon_wildfire_report_YYYY-MM-DD.pdf</code></div>';
+      // Still try to render chart if we have data.json
+      if (data && data.historical_data) drawChart(data.historical_data);
+      document.getElementById('hero-card').innerHTML =
+        '<div style="color:rgba(255,255,255,.6);font-size:.9rem;">Unable to load report list &mdash; see error above.</div>';
+      document.getElementById('archive-tbody').innerHTML =
+        '<tr class="loading-row"><td colspan="4">Unable to load PDF list from GitHub API.</td></tr>';
+      return;
+    }
+
+    // Filter and sort PDFs
+    const pdfs = files
+      .filter(f => PDF_RE.test(f.name))
+      .sort((a, b) => b.name.localeCompare(a.name))
+      .map(f => ({ filename: f.name, date_iso: f.name.match(PDF_RE)[1] }));
+
+    if (pdfs.length === 0) {
+      document.getElementById('archive-tbody').innerHTML =
+        '<tr class="loading-row"><td colspan="4">No reports found in repository yet.</td></tr>';
+      return;
+    }
+
+    render(pdfs, data);
+
+  } catch(err) {
+    document.getElementById('error-area').innerHTML =
+      '<div class="error-box">&#9888; Error loading page: ' + err.message + '</div>';
+    console.error(err);
+  }
 })();
 </script>
 </body>

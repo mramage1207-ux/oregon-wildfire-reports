@@ -1,0 +1,301 @@
+{
+  "last_updated": "2026-04-02",
+  "n_incidents": 2,
+  "historical_data": [
+    {
+      "date": "2026-01-01",
+      "active_fires": 1,
+      "acres_burned": 0
+    },
+    {
+      "date": "2026-01-02",
+      "active_fires": 1,
+      "acres_burned": 0
+    },
+    {
+      "date": "2026-01-05",
+      "active_fires": 15,
+      "acres_burned": 0
+    },
+    {
+      "date": "2026-01-06",
+      "active_fires": 10,
+      "acres_burned": 27
+    },
+    {
+      "date": "2026-01-07",
+      "active_fires": 19,
+      "acres_burned": 176
+    },
+    {
+      "date": "2026-01-08",
+      "active_fires": 23,
+      "acres_burned": 176
+    },
+    {
+      "date": "2026-01-09",
+      "active_fires": 19,
+      "acres_burned": 215
+    },
+    {
+      "date": "2026-01-12",
+      "active_fires": 3,
+      "acres_burned": 215
+    },
+    {
+      "date": "2026-01-14",
+      "active_fires": 11,
+      "acres_burned": 289
+    },
+    {
+      "date": "2026-01-15",
+      "active_fires": 13,
+      "acres_burned": 289
+    },
+    {
+      "date": "2026-01-16",
+      "active_fires": 19,
+      "acres_burned": 603
+    },
+    {
+      "date": "2026-01-20",
+      "active_fires": 4,
+      "acres_burned": 603
+    },
+    {
+      "date": "2026-01-21",
+      "active_fires": 8,
+      "acres_burned": 474
+    },
+    {
+      "date": "2026-01-22",
+      "active_fires": 10,
+      "acres_burned": 474
+    },
+    {
+      "date": "2026-01-26",
+      "active_fires": 5,
+      "acres_burned": 497
+    },
+    {
+      "date": "2026-01-27",
+      "active_fires": 9,
+      "acres_burned": 579
+    },
+    {
+      "date": "2026-01-28",
+      "active_fires": 15,
+      "acres_burned": 589
+    },
+    {
+      "date": "2026-01-29",
+      "active_fires": 17,
+      "acres_burned": 624
+    },
+    {
+      "date": "2026-01-30",
+      "active_fires": 12,
+      "acres_burned": 710
+    },
+    {
+      "date": "2026-02-02",
+      "active_fires": 6,
+      "acres_burned": 705
+    },
+    {
+      "date": "2026-02-03",
+      "active_fires": 9,
+      "acres_burned": 705
+    },
+    {
+      "date": "2026-02-04",
+      "active_fires": 10,
+      "acres_burned": 651
+    },
+    {
+      "date": "2026-02-05",
+      "active_fires": 12,
+      "acres_burned": 686
+    },
+    {
+      "date": "2026-02-06",
+      "active_fires": 9,
+      "acres_burned": 830
+    },
+    {
+      "date": "2026-02-09",
+      "active_fires": 6,
+      "acres_burned": 828
+    },
+    {
+      "date": "2026-02-10",
+      "active_fires": 10,
+      "acres_burned": 828
+    },
+    {
+      "date": "2026-02-11",
+      "active_fires": 10,
+      "acres_burned": 828
+    },
+    {
+      "date": "2026-02-12",
+      "active_fires": 8,
+      "acres_burned": 828
+    },
+    {
+      "date": "2026-02-13",
+      "active_fires": 3,
+      "acres_burned": 923
+    },
+    {
+      "date": "2026-02-17",
+      "active_fires": 4,
+      "acres_burned": 923
+    },
+    {
+      "date": "2026-02-18",
+      "active_fires": 9,
+      "acres_burned": 923
+    },
+    {
+      "date": "2026-02-19",
+      "active_fires": 11,
+      "acres_burned": 923
+    },
+    {
+      "date": "2026-02-20",
+      "active_fires": 9,
+      "acres_burned": 744
+    },
+    {
+      "date": "2026-02-23",
+      "active_fires": 2,
+      "acres_burned": 704
+    },
+    {
+      "date": "2026-02-24",
+      "active_fires": 5,
+      "acres_burned": 704
+    },
+    {
+      "date": "2026-02-25",
+      "active_fires": 3,
+      "acres_burned": 704
+    },
+    {
+      "date": "2026-02-26",
+      "active_fires": 4,
+      "acres_burned": 704
+    },
+    {
+      "date": "2026-02-27",
+      "active_fires": 3,
+      "acres_burned": 0
+    },
+    {
+      "date": "2026-03-02",
+      "active_fires": 1,
+      "acres_burned": 0
+    },
+    {
+      "date": "2026-03-03",
+      "active_fires": 2,
+      "acres_burned": 1
+    },
+    {
+      "date": "2026-03-04",
+      "active_fires": 3,
+      "acres_burned": 1
+    },
+    {
+      "date": "2026-03-05",
+      "active_fires": 4,
+      "acres_burned": 1
+    },
+    {
+      "date": "2026-03-06",
+      "active_fires": 4,
+      "acres_burned": 1
+    },
+    {
+      "date": "2026-03-09",
+      "active_fires": 1,
+      "acres_burned": 1
+    },
+    {
+      "date": "2026-03-10",
+      "active_fires": 1,
+      "acres_burned": 1
+    },
+    {
+      "date": "2026-03-11",
+      "active_fires": 1,
+      "acres_burned": 1
+    },
+    {
+      "date": "2026-03-12",
+      "active_fires": 2,
+      "acres_burned": 1
+    },
+    {
+      "date": "2026-03-13",
+      "active_fires": 1,
+      "acres_burned": 0
+    },
+    {
+      "date": "2026-03-16",
+      "active_fires": 0,
+      "acres_burned": 0
+    },
+    {
+      "date": "2026-03-17",
+      "active_fires": 6,
+      "acres_burned": 2
+    },
+    {
+      "date": "2026-03-18",
+      "active_fires": 9,
+      "acres_burned": 19
+    },
+    {
+      "date": "2026-03-19",
+      "active_fires": 11,
+      "acres_burned": 19
+    },
+    {
+      "date": "2026-03-20",
+      "active_fires": 14,
+      "acres_burned": 126
+    },
+    {
+      "date": "2026-03-26",
+      "active_fires": 13,
+      "acres_burned": 119
+    },
+    {
+      "date": "2026-03-27",
+      "active_fires": 13,
+      "acres_burned": 142
+    },
+    {
+      "date": "2026-03-30",
+      "active_fires": 8,
+      "acres_burned": 236.24
+    },
+    {
+      "date": "2026-03-31",
+      "active_fires": 8,
+      "acres_burned": 246.14
+    },
+    {
+      "date": "2026-04-01",
+      "active_fires": 9,
+      "acres_burned": 234.5
+    },
+    {
+      "date": "2026-04-02",
+      "active_fires": 8,
+      "acres_burned": 238.0
+    }
+  ]
+}
