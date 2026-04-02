@@ -13,8 +13,6 @@
       min-height: 100vh;
     }
     a { color: inherit; text-decoration: none; }
-
-    /* Header */
     header {
       background: linear-gradient(135deg, #1a2744 0%, #0f3460 100%);
       color: #fff;
@@ -42,120 +40,104 @@
       letter-spacing: 0.5px;
       white-space: nowrap;
     }
-
-    /* Hero */
     .hero-wrap {
       background: linear-gradient(135deg, #0f3460 0%, #1a2744 100%);
       padding: 0 2rem 2.5rem;
     }
-    .hero { max-width: 1100px; margin: 0 auto; }
+    .hero { max-width: 1100px; margin: 0 auto; padding-top: 2rem; }
     .hero-label {
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px;
-      text-transform: uppercase; color: rgba(255,255,255,0.55);
-      padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 1.5rem;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 0.9rem;
     }
     .hero-card {
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.07);
       border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 14px;
-      padding: 1.6rem 2rem;
-      display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
+      border-radius: 12px;
+      padding: 1.4rem 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      color: #fff;
     }
-    .hero-date-block { flex: 1 1 220px; }
-    .hero-date-block .report-date { font-size: 1.25rem; font-weight: 700; color: #fff; }
-    .hero-date-block .report-sub { font-size: 0.82rem; color: rgba(255,255,255,0.55); margin-top: 4px; }
-    .hero-stats { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .report-date { font-size: 1.35rem; font-weight: 700; }
+    .report-sub { font-size: 0.8rem; opacity: 0.6; margin-top: 3px; }
+    .hero-stats { display: flex; gap: 1.2rem; }
     .stat-pill {
-      background: rgba(255,255,255,0.1);
-      border-radius: 10px; padding: 0.7rem 1.2rem; text-align: center; min-width: 110px;
+      background: rgba(255,255,255,0.1); border-radius: 10px;
+      padding: 0.6rem 1rem; text-align: center; min-width: 80px;
     }
-    .stat-pill .val { font-size: 1.9rem; font-weight: 800; color: #ff7c20; line-height: 1; }
-    .stat-pill .lbl { font-size: 0.72rem; color: rgba(255,255,255,0.6); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
-    .hero-actions { display: flex; flex-direction: column; gap: 0.6rem; margin-left: auto; }
+    .stat-pill .val { font-size: 1.5rem; font-weight: 700; line-height: 1; }
+    .stat-pill .lbl { font-size: 0.68rem; opacity: 0.65; margin-top: 3px; text-transform: uppercase; letter-spacing: 0.4px; }
+    .hero-actions { margin-left: auto; display: flex; gap: 0.7rem; flex-direction: column; }
     .btn-primary {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: #ff7c20; color: #fff; padding: 0.65rem 1.3rem;
-      border-radius: 8px; font-size: 0.88rem; font-weight: 700; transition: background 0.18s; white-space: nowrap;
+      background: #e67e22; color: #fff; border-radius: 8px;
+      padding: 0.55rem 1.1rem; font-size: 0.85rem; font-weight: 600; white-space: nowrap;
     }
-    .btn-primary:hover { background: #e86910; }
     .btn-secondary {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); padding: 0.65rem 1.3rem;
-      border-radius: 8px; font-size: 0.88rem; font-weight: 600; transition: background 0.18s; white-space: nowrap;
+      background: rgba(255,255,255,0.12); color: #fff; border-radius: 8px;
+      padding: 0.55rem 1.1rem; font-size: 0.85rem; font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.22); white-space: nowrap;
     }
-    .btn-secondary:hover { background: rgba(255,255,255,0.2); }
-
-    /* Main */
-    main { max-width: 1100px; margin: 2rem auto; padding: 0 2rem; }
-
-    .section-header { display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 1rem; }
-    .section-header h2 { font-size: 1.05rem; font-weight: 700; color: #1a2744; }
-    .pill-count {
-      background: #e8edf5; color: #4a5568;
-      font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 10px;
-    }
-
-    /* Chart */
+    main { max-width: 1100px; margin: 0 auto; padding: 2rem; }
     .chart-card {
-      background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;
-      padding: 1.4rem 1.6rem 1rem; margin-bottom: 2rem;
+      background: #fff; border-radius: 12px; padding: 1.4rem 1.6rem;
+      margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.07);
     }
-    .chart-card h2 { font-size: 0.95rem; font-weight: 700; color: #1a2744; margin-bottom: 0.3rem; }
-    .chart-card .chart-sub { font-size: 0.78rem; color: #718096; margin-bottom: 1.2rem; }
-    .chart-legend { display: flex; gap: 1.2rem; margin-bottom: 0.8rem; flex-wrap: wrap; }
-    .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; color: #4a5568; }
-    .legend-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
-    svg.trend { width: 100%; overflow: visible; display: block; }
-
-    /* Table */
+    .chart-card h2 { font-size: 1rem; font-weight: 700; color: #1a2744; }
+    .chart-sub { font-size: 0.78rem; color: #718096; margin-top: 3px; margin-bottom: 1rem; }
+    .chart-legend { display: flex; gap: 1.2rem; margin-bottom: 0.6rem; }
+    .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; color: #4a5568; }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+    svg.trend { width: 100%; display: block; }
+    .section-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem; }
+    .section-header h2 { font-size: 1rem; font-weight: 700; color: #1a2744; }
+    .pill-count {
+      background: #e67e22; color: #fff; border-radius: 20px;
+      padding: 0.15rem 0.6rem; font-size: 0.72rem; font-weight: 700;
+    }
     .table-card {
-      background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;
-      overflow: hidden; margin-bottom: 2rem;
+      background: #fff; border-radius: 12px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      overflow: hidden; margin-bottom: 1.5rem;
     }
-    table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
-    thead { background: #1a2744; color: #fff; }
+    table { width: 100%; border-collapse: collapse; }
     thead th {
-      padding: 0.85rem 1.1rem; text-align: left;
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase;
+      background: #f8fafc; color: #718096;
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+      padding: 0.75rem 1.2rem; text-align: left; border-bottom: 1px solid #e2e8f0;
     }
-    tbody tr { border-bottom: 1px solid #edf2f7; transition: background 0.12s; }
+    tbody tr { border-bottom: 1px solid #f0f4f8; }
     tbody tr:last-child { border-bottom: none; }
-    tbody tr:hover { background: #f7faff; }
-    tbody tr.latest { background: #fffaf5; }
-    tbody td { padding: 0.8rem 1.1rem; vertical-align: middle; }
-    .date-cell { font-weight: 600; color: #1a2744; white-space: nowrap; }
-    .date-cell .iso { font-size: 0.75rem; color: #718096; font-weight: 400; }
-    .fires-val { font-weight: 700; font-size: 1rem; color: #c0392b; }
-    .acres-val { font-weight: 700; font-size: 1rem; color: #e67e22; }
+    tbody tr.latest { background: #fffbf5; }
+    tbody td { padding: 0.85rem 1.2rem; font-size: 0.88rem; }
+    .date-cell { font-weight: 600; }
+    .iso { font-size: 0.75rem; color: #a0aec0; font-weight: 400; }
     .badge-new {
-      display: inline-block; background: #ff7c20; color: #fff;
-      font-size: 0.65rem; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase;
-      padding: 2px 7px; border-radius: 8px; margin-left: 6px; vertical-align: middle;
+      background: #e67e22; color: #fff; border-radius: 4px;
+      padding: 0.1rem 0.4rem; font-size: 0.65rem; font-weight: 700;
+      vertical-align: middle; margin-left: 4px;
     }
+    .fires-val { font-weight: 700; color: #c0392b; }
+    .acres-val { font-weight: 700; color: #e67e22; }
     .action-link {
-      display: inline-flex; align-items: center; gap: 0.35rem;
-      background: #1a2744; color: #fff; font-size: 0.78rem; font-weight: 600;
-      padding: 0.38rem 0.85rem; border-radius: 6px; transition: background 0.15s; margin-right: 0.4rem;
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      background: #f0f4f8; border-radius: 6px;
+      padding: 0.3rem 0.65rem; font-size: 0.78rem; font-weight: 600;
+      color: #1a2744; margin-right: 4px;
     }
-    .action-link:hover { background: #0f3460; }
-    .action-link.dl { background: #f0f4f9; color: #1a2744; }
-    .action-link.dl:hover { background: #e2e8f0; }
-
-    /* Info box */
+    .action-link.dl { background: #fff3e6; color: #e67e22; }
     .info-box {
-      background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
-      padding: 1.2rem 1.6rem; margin-bottom: 2rem;
-      font-size: 0.84rem; color: #4a5568; line-height: 1.7;
+      background: #f0f6ff; border-left: 3px solid #3b82f6;
+      border-radius: 0 8px 8px 0; padding: 1rem 1.2rem;
+      font-size: 0.82rem; color: #4a5568; line-height: 1.6; margin-bottom: 1.5rem;
     }
-
-    /* Footer */
     footer {
       background: #1a2744; color: rgba(255,255,255,0.5);
       text-align: center; padding: 1.6rem 2rem; font-size: 0.78rem; line-height: 1.8;
     }
     footer a { color: rgba(255,255,255,0.7); text-decoration: underline; }
     footer strong { color: rgba(255,255,255,0.85); }
-
     @media (max-width: 700px) {
       .hero-card { flex-direction: column; gap: 1.2rem; }
       .hero-actions { margin-left: 0; flex-direction: row; flex-wrap: wrap; }
@@ -254,10 +236,11 @@
         </tr>
         <tr>
           <td class="date-cell">
-            Tuesday, March 31, 2026<br><span class="iso">2026-03-31</span>
+            Tuesday, March 31, 2026<br>
+            <span class="iso">2026-03-31</span>
           </td>
           <td class="fires-val">8</td>
-          <td class="acres-val">246.1</td>
+          <td class="acres-val">246.14</td>
           <td>
             <a class="action-link" href="oregon_wildfire_report_2026-03-31.pdf" target="_blank">&#128196; View</a>
             <a class="action-link dl" href="oregon_wildfire_report_2026-03-31.pdf" download>&#8595; Download</a>
@@ -265,10 +248,11 @@
         </tr>
         <tr>
           <td class="date-cell">
-            Monday, March 30, 2026<br><span class="iso">2026-03-30</span>
+            Monday, March 30, 2026<br>
+            <span class="iso">2026-03-30</span>
           </td>
           <td class="fires-val">8</td>
-          <td class="acres-val">236.2</td>
+          <td class="acres-val">236.24</td>
           <td>
             <a class="action-link" href="oregon_wildfire_report_2026-03-30.pdf" target="_blank">&#128196; View</a>
             <a class="action-link dl" href="oregon_wildfire_report_2026-03-30.pdf" download>&#8595; Download</a>
@@ -276,10 +260,11 @@
         </tr>
         <tr>
           <td class="date-cell">
-            Saturday, March 29, 2026<br><span class="iso">2026-03-29</span>
+            Sunday, March 29, 2026<br>
+            <span class="iso">2026-03-29</span>
           </td>
-          <td class="fires-val">13</td>
-          <td class="acres-val">142.0</td>
+          <td class="fires-val">—</td>
+          <td class="acres-val">—</td>
           <td>
             <a class="action-link" href="oregon_wildfire_report_2026-03-29.pdf" target="_blank">&#128196; View</a>
             <a class="action-link dl" href="oregon_wildfire_report_2026-03-29.pdf" download>&#8595; Download</a>
@@ -311,28 +296,7 @@
 </footer>
 
 <script>
-const data = [
-  {d:"2026-01-01",f:1,a:0},{d:"2026-01-02",f:1,a:0},{d:"2026-01-05",f:15,a:0},
-  {d:"2026-01-06",f:10,a:27},{d:"2026-01-07",f:19,a:176},{d:"2026-01-08",f:23,a:176},
-  {d:"2026-01-09",f:19,a:215},{d:"2026-01-12",f:3,a:215},{d:"2026-01-14",f:11,a:289},
-  {d:"2026-01-15",f:13,a:289},{d:"2026-01-16",f:19,a:603},{d:"2026-01-20",f:4,a:603},
-  {d:"2026-01-21",f:8,a:474},{d:"2026-01-22",f:10,a:474},{d:"2026-01-26",f:5,a:497},
-  {d:"2026-01-27",f:9,a:579},{d:"2026-01-28",f:15,a:589},{d:"2026-01-29",f:17,a:624},
-  {d:"2026-01-30",f:12,a:710},{d:"2026-02-02",f:6,a:705},{d:"2026-02-03",f:9,a:705},
-  {d:"2026-02-04",f:10,a:651},{d:"2026-02-05",f:12,a:686},{d:"2026-02-06",f:9,a:830},
-  {d:"2026-02-09",f:6,a:828},{d:"2026-02-10",f:10,a:828},{d:"2026-02-11",f:10,a:828},
-  {d:"2026-02-12",f:8,a:828},{d:"2026-02-13",f:3,a:923},{d:"2026-02-17",f:4,a:923},
-  {d:"2026-02-18",f:9,a:923},{d:"2026-02-19",f:11,a:923},{d:"2026-02-20",f:9,a:744},
-  {d:"2026-02-23",f:2,a:704},{d:"2026-02-24",f:5,a:704},{d:"2026-02-25",f:3,a:704},
-  {d:"2026-02-26",f:4,a:704},{d:"2026-02-27",f:3,a:0},{d:"2026-03-02",f:1,a:0},
-  {d:"2026-03-03",f:2,a:1},{d:"2026-03-04",f:3,a:1},{d:"2026-03-05",f:4,a:1},
-  {d:"2026-03-06",f:4,a:1},{d:"2026-03-09",f:1,a:1},{d:"2026-03-10",f:1,a:1},
-  {d:"2026-03-11",f:1,a:1},{d:"2026-03-12",f:2,a:1},{d:"2026-03-13",f:1,a:0},
-  {d:"2026-03-16",f:0,a:0},{d:"2026-03-17",f:6,a:2},{d:"2026-03-18",f:9,a:19},
-  {d:"2026-03-19",f:11,a:19},{d:"2026-03-20",f:14,a:126},{d:"2026-03-26",f:13,a:119},
-  {d:"2026-03-27",f:13,a:142},{d:"2026-03-30",f:8,a:236.24},{d:"2026-03-31",f:8,a:246.14},
-  {d:"2026-04-01",f:9,a:234.5}
-];
+const data = [{d:"2026-01-01",f:1,a:0},{d:"2026-01-02",f:1,a:0},{d:"2026-01-05",f:15,a:0},{d:"2026-01-06",f:10,a:27},{d:"2026-01-07",f:19,a:176},{d:"2026-01-08",f:23,a:176},{d:"2026-01-09",f:19,a:215},{d:"2026-01-12",f:3,a:215},{d:"2026-01-14",f:11,a:289},{d:"2026-01-15",f:13,a:289},{d:"2026-01-16",f:19,a:603},{d:"2026-01-20",f:4,a:603},{d:"2026-01-21",f:8,a:474},{d:"2026-01-22",f:10,a:474},{d:"2026-01-26",f:5,a:497},{d:"2026-01-27",f:9,a:579},{d:"2026-01-28",f:15,a:589},{d:"2026-01-29",f:17,a:624},{d:"2026-01-30",f:12,a:710},{d:"2026-02-02",f:6,a:705},{d:"2026-02-03",f:9,a:705},{d:"2026-02-04",f:10,a:651},{d:"2026-02-05",f:12,a:686},{d:"2026-02-06",f:9,a:830},{d:"2026-02-09",f:6,a:828},{d:"2026-02-10",f:10,a:828},{d:"2026-02-11",f:10,a:828},{d:"2026-02-12",f:8,a:828},{d:"2026-02-13",f:3,a:923},{d:"2026-02-17",f:4,a:923},{d:"2026-02-18",f:9,a:923},{d:"2026-02-19",f:11,a:923},{d:"2026-02-20",f:9,a:744},{d:"2026-02-23",f:2,a:704},{d:"2026-02-24",f:5,a:704},{d:"2026-02-25",f:3,a:704},{d:"2026-02-26",f:4,a:704},{d:"2026-02-27",f:3,a:0},{d:"2026-03-02",f:1,a:0},{d:"2026-03-03",f:2,a:1},{d:"2026-03-04",f:3,a:1},{d:"2026-03-05",f:4,a:1},{d:"2026-03-06",f:4,a:1},{d:"2026-03-09",f:1,a:1},{d:"2026-03-10",f:1,a:1},{d:"2026-03-11",f:1,a:1},{d:"2026-03-12",f:2,a:1},{d:"2026-03-13",f:1,a:0},{d:"2026-03-16",f:0,a:0},{d:"2026-03-17",f:6,a:2},{d:"2026-03-18",f:9,a:19},{d:"2026-03-19",f:11,a:19},{d:"2026-03-20",f:14,a:126},{d:"2026-03-26",f:13,a:119},{d:"2026-03-27",f:13,a:142},{d:"2026-03-30",f:8,a:236.24},{d:"2026-03-31",f:8,a:246.14},{d:"2026-04-01",f:9,a:234.5}];
 
 (function() {
   const svg = document.getElementById('trendChart');
@@ -375,14 +339,14 @@ const data = [
   fl.setAttribute('stroke-width','1.8'); fl.setAttribute('stroke-dasharray','4 2'); fl.setAttribute('stroke-linejoin','round');
   svg.appendChild(fl);
 
-  ['2026-01-01','2026-02-01','2026-03-01','2026-04-01'].forEach((ms,mi)=>{
+  [["2026-01-01","Jan"],["2026-02-01","Feb"],["2026-03-01","Mar"],["2026-04-01","Apr"]].forEach(([ms,name])=>{
     const idx=data.findIndex(d=>d.d>=ms);
     if(idx<0)return;
     const x=xS(idx);
     const lb=document.createElementNS('http://www.w3.org/2000/svg','text');
     lb.setAttribute('x',x); lb.setAttribute('y',H-4); lb.setAttribute('text-anchor','middle');
     lb.setAttribute('font-size','9'); lb.setAttribute('fill','#718096'); lb.setAttribute('font-weight','600');
-    lb.textContent=['Jan','Feb','Mar','Apr'][mi];
+    lb.textContent=name;
     svg.appendChild(lb);
     const tk=document.createElementNS('http://www.w3.org/2000/svg','line');
     Object.entries({x1:x,y1:PAD.t+cH,x2:x,y2:PAD.t+cH+4,stroke:'#cbd5e0','stroke-width':'1'}).forEach(([k,v])=>tk.setAttribute(k,v));
