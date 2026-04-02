@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">html = f"""&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Oregon Wildfire Daily Reports &amp;mdash; 2026 Archive&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>*, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f4f5f7; color: #1a1a2e; min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>a {{ color: inherit; text-decoration: none; }}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ── header ── */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>header {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, #1a2744 0%, #0f3460 100%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fff; padding: 0 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.header-inner {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 1100px; margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; gap: 1.25rem; padding: 1.4rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.header-flame {{ font-size: 2.4rem; line-height: 1; filter: drop-shadow(0 0 8px rgba(255,120,20,.7)); }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.header-text h1 {{ font-size: 1.45rem; font-weight: 700; letter-spacing: -.3px; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.header-text p {{ font-size: .82rem; opacity: .72; margin-top: 2px; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.header-badge {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-left: auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 20px; padding: .3rem .85rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: .78rem; font-weight: 600; letter-spacing: .5px; white-space: nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ── hero ── */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-wrap {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, #0f3460 0%, #1a2744 100%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0 2rem 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero {{ max-width: 1100px; margin: 0 auto; padding-top: 2rem; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-label {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: .72rem; font-weight: 700; letter-spacing: 1.2px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase; color: rgba(255,255,255,.55); margin-bottom: .9rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-card {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px; padding: 1.4rem 1.6rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.report-date {{ font-size: 1.35rem; font-weight: 700; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.report-sub {{ font-size: .8rem; opacity: .6; margin-top: 3px; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-stats {{ display: flex; gap: 1.2rem; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.stat-pill {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,.1); border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: .6rem 1rem; text-align: center; min-width: 80px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.stat-pill .val {{ font-size: 1.5rem; font-weight: 700; line-height: 1; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.stat-pill .lbl {{ font-size: .68rem; opacity: .65; margin-top: 3px; text-transform: uppercase; letter-spacing: .4px; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-actions {{ margin-left: auto; display: flex; gap: .7rem; flex-direction: column; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-primary {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #e67e22; color: #fff; border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: .55rem 1.1rem; font-size: .85rem; font-weight: 600; white-space: nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-secondary {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,.12); color: #fff; border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: .55rem 1.1rem; font-size: .85rem; font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255,255,255,.22); white-space: nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.loading-hero {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(255,255,255,.5); font-size: .9rem; padding: 1.5rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ── main ── */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>main {{ max-width: 1100px; margin: 0 auto; padding: 2rem; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.chart-card {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fff; border-radius: 12px; padding: 1.4rem 1.6rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,.07);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.chart-card h2 {{ font-size: 1rem; font-weight: 700; color: #1a2744; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.chart-sub {{ font-size: .78rem; color: #718096; margin-top: 3px; margin-bottom: 1rem; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.chart-legend {{ display: flex; gap: 1.2rem; margin-bottom: .6rem; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.legend-item {{ display: flex; align-items: center; gap: .4rem; font-size: .78rem; color: #4a5568; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.legend-dot {{ width: 10px; height: 10px; border-radius: 50%; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>svg.trend {{ width: 100%; display: block; }}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ── archive table ── */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-header {{ display: flex; align-items: center; gap: .8rem; margin-bottom: .8rem; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-header h2 {{ font-size: 1rem; font-weight: 700; color: #1a2744; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pill-count {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #e67e22; color: #fff; border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: .15rem .6rem; font-size: .72rem; font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.table-card {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fff; border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 1px 4px rgba(0,0,0,.07);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden; margin-bottom: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>table {{ width: 100%; border-collapse: collapse; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>thead th {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f8fafc; color: #718096;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: .75rem 1.2rem; text-align: left; border-bottom: 1px solid #e2e8f0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tbody tr {{ border-bottom: 1px solid #f0f4f8; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tbody tr:last-child {{ border-bottom: none; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tbody tr.latest {{ background: #fffbf5; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tbody td {{ padding: .85rem 1.2rem; font-size: .88rem; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.date-cell {{ font-weight: 600; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.iso {{ font-size: .75rem; color: #a0aec0; font-weight: 400; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.badge-new {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #e67e22; color: #fff; border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: .1rem .4rem; font-size: .65rem; font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>vertical-align: middle; margin-left: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.fires-val {{ font-weight: 700; color: #c0392b; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.acres-val {{ font-weight: 700; color: #e67e22; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.action-link {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: inline-flex; align-items: center; gap: .3rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f0f4f8; border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: .3rem .65rem; font-size: .78rem; font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #1a2744; margin-right: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.action-link.dl {{ background: #fff3e6; color: #e67e22; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.loading-row td {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center; padding: 2rem; color: #718096; font-size: .88rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.error-box {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fff5f5; border-left: 3px solid #e53e3e; border-radius: 0 8px 8px 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem 1.2rem; font-size: .82rem; color: #742a2a; margin-bottom: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.info-box {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f0f6ff; border-left: 3px solid #3b82f6;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 0 8px 8px 0; padding: 1rem 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: .82rem; color: #4a5568; line-height: 1.6; margin-bottom: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ── footer ── */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #1a2744; color: rgba(255,255,255,.5);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center; padding: 1.6rem 2rem; font-size: .78rem; line-height: 1.8;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer a {{ color: rgba(255,255,255,.7); text-decoration: underline; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer strong {{ color: rgba(255,255,255,.85); }}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 700px) {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.hero-card {{ flex-direction: column; gap: 1.2rem; }}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.hero-actions {{ margin-left: 0; flex-direction: row; flex-wrap: wrap; }}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>thead th:nth-child(3), tbody td:nth-child(3) {{ display: none; }}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="header-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="header-flame"&gt;&amp;#128293;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="header-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1&gt;Oregon Wildfire Daily Reports&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;2026 Season Archive &amp;mdash; Published daily by automated ODF/OEM data pipeline&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="header-badge"&gt;2026 Season&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="hero-wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-label"&gt;Latest Report&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="hero-card" class="hero-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="loading-hero"&gt;&amp;#9203; Loading latest report&amp;hellip;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;main&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="chart-card" id="chart-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;2026 Season Trend&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="chart-sub"&gt;Active fires &amp;amp; acres burned &amp;mdash; all reported days&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="chart-legend"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="legend-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="legend-dot" style="background:#e67e22;"&gt;&lt;/div&gt; Acres Burned (left axis)</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="legend-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="legend-dot" style="background:#1a2744;"&gt;&lt;/div&gt; Active Fires (right axis)</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;svg class="trend" viewBox="0 0 1000 180" preserveAspectRatio="none" id="trendChart"&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Report Archive&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="pill-count" id="pdf-count"&gt;&amp;#8230;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="error-area"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="table-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th&gt;Date&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th&gt;Active Fires&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th&gt;Acres Burned&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;th&gt;Report&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tbody id="archive-tbody"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr class="loading-row"&gt;&lt;td colspan="4"&gt;&amp;#9203; Loading reports&amp;hellip;&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="info-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;strong style="color:#1a2744;"&gt;About this archive:&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Daily PDF reports are published automatically each morning from the OEM ArcGIS Portfolio</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Dashboard and Oregon Department of Forestry data feeds. The PDF list is fetched live from</p>
+<p class="p1"><span class="Apple-converted-space">    </span>the repository &amp;mdash; any report added (automatically or manually) appears here immediately.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>PDFs are preserved indefinitely.</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;strong&gt;Oregon Wildfire Daily Reports &amp;mdash; 2026 Season&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>Data sourced from</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="https://geo.maps.arcgis.com/apps/instant/portfolio/index.html?appid=22d04c007866419c91ccf00d097526c8" target="_blank"&gt;OEM ArcGIS Dashboard&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&amp;nbsp;&amp;bull;&amp;nbsp;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="https://www.oregon.gov/odf/fire/pages/firestats.aspx" target="_blank"&gt;Oregon Dept. of Forestry&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&amp;nbsp;&amp;bull;&amp;nbsp;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="https://wildfire.oregon.gov" target="_blank"&gt;Oregon Wildfire Response&lt;/a&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>Reports generated automatically. Not an official State of Oregon publication.</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">// ── CONFIG ──────────────────────────────────────────────────────────────────</p>
+<p class="p1">const REPO<span class="Apple-converted-space">      </span>= '{REPO_SLUG}';</p>
+<p class="p1">const API_URL <span class="Apple-converted-space">  </span>= 'https://api.github.com/repos/' + REPO + '/contents/';</p>
+<p class="p1">const DATA_URL<span class="Apple-converted-space">  </span>= 'data.json'; <span class="Apple-converted-space">  </span>// relative: served from same GitHub Pages origin</p>
+<p class="p1">const PDF_RE<span class="Apple-converted-space">    </span>= /^oregon_wildfire_report_(\\d{{4}}-\\d{{2}}-\\d{{2}})\\.pdf$/;</p>
+<p class="p2"><br></p>
+<p class="p1">// ── UTILITIES ────────────────────────────────────────────────────────────────</p>
+<p class="p1">function fmtDate(iso) {{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>try {{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const [y,m,d] = iso.split('-').map(Number);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return new Date(y, m-1, d).toLocaleDateString('en-US',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{{weekday:'long', year:'numeric', month:'long', day:'numeric'}});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}} catch(e) {{ return iso; }}</p>
+<p class="p1">}}</p>
+<p class="p2"><br></p>
+<p class="p1">function fmtAcres(v) {{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (v == null || v === '—' || v === '') return '—';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const n = parseFloat(v);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return isNaN(n) ? v : n.toLocaleString('en-US', {{maximumFractionDigits: 1}});</p>
+<p class="p1">}}</p>
+<p class="p2"><br></p>
+<p class="p1">// ── CHART ────────────────────────────────────────────────────────────────────</p>
+<p class="p1">function drawChart(hist) {{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const svg = document.getElementById('trendChart');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (!svg || !hist || hist.length &lt; 2) return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const W=1000, H=180, P={{t:10,r:10,b:28,l:46}};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const cW=W-P.l-P.r, cH=H-P.t-P.b;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const maxA = Math.max(...hist.map(d=&gt;d.acres_burned||0)) || 1;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const maxF = Math.max(...hist.map(d=&gt;d.active_fires||0)) || 1;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const n = hist.length;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const xS = i =&gt; P.l + (i/(n-1))*cW;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const yA = v =&gt; P.t + cH - ((v||0)/maxA)*cH;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const yF = v =&gt; P.t + cH - ((v||0)/maxF)*cH;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const ns = 'http://www.w3.org/2000/svg';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const el = (tag, attrs) =&gt; {{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const e = document.createElementNS(ns, tag);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Object.entries(attrs).forEach(([k,v]) =&gt; e.setAttribute(k,v));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return e;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// grid lines</p>
+<p class="p1"><span class="Apple-converted-space">  </span>[0,.25,.5,.75,1].forEach(t =&gt; {{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const y = P.t + cH*(1-t);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>svg.appendChild(el('line', {{x1:P.l, y1:y, x2:P.l+cW, y2:y,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>stroke:'#e2e8f0', 'stroke-width':'0.6'}}));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const lb = el('text', {{x:P.l-5, y:y+4, 'text-anchor':'end',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'font-size':'8', fill:'#a0aec0'}});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>lb.textContent = Math.round(maxA*t);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>svg.appendChild(lb);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// acres area</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const ap = hist.map((d,i)=&gt;`${{i===0?'M':'L'}}${{xS(i)}},${{yA(d.acres_burned)}}`).join(' ')</p>
+<p class="p1"><span class="Apple-converted-space">    </span>+ ` L${{xS(n-1)}},${{P.t+cH}} L${{xS(0)}},${{P.t+cH}} Z`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>svg.appendChild(el('path', {{d:ap, fill:'rgba(230,126,34,.18)'}}));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// acres line</p>
+<p class="p1"><span class="Apple-converted-space">  </span>svg.appendChild(el('polyline', {{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>points: hist.map((d,i)=&gt;`${{xS(i)}},${{yA(d.acres_burned)}}`).join(' '),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>fill:'none', stroke:'#e67e22', 'stroke-width':'2', 'stroke-linejoin':'round'</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}}));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// fires line</p>
+<p class="p1"><span class="Apple-converted-space">  </span>svg.appendChild(el('polyline', {{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>points: hist.map((d,i)=&gt;`${{xS(i)}},${{yF(d.active_fires)}}`).join(' '),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>fill:'none', stroke:'#1a2744', 'stroke-width':'1.8',</p>
+<p class="p1"><span class="Apple-converted-space">    </span>'stroke-dasharray':'4 2', 'stroke-linejoin':'round'</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}}));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// month labels</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const months = [...new Set(hist.map(d=&gt;d.date.slice(0,7)))].sort();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>months.forEach(mo =&gt; {{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const idx = hist.findIndex(d =&gt; d.date &gt;= mo+'-01');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (idx &lt; 0) return;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const x = xS(idx);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const lb = el('text', {{x, y:H-4, 'text-anchor':'middle',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'font-size':'9', fill:'#718096', 'font-weight':'600'}});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>lb.textContent = new Date(mo+'-15').toLocaleDateString('en-US',{{month:'short'}});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>svg.appendChild(lb);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>svg.appendChild(el('line', {{x1:x, y1:P.t+cH, x2:x, y2:P.t+cH+4,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>stroke:'#cbd5e0', 'stroke-width':'1'}}));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// latest dot</p>
+<p class="p1"><span class="Apple-converted-space">  </span>svg.appendChild(el('circle', {{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cx:xS(n-1), cy:yA(hist[n-1].acres_burned),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>r:'4', fill:'#e67e22', stroke:'#fff', 'stroke-width':'2'</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}}));</p>
+<p class="p1">}}</p>
+<p class="p2"><br></p>
+<p class="p1">// ── RENDER ───────────────────────────────────────────────────────────────────</p>
+<p class="p1">function render(pdfs, data) {{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const histByDate = {{}};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (data &amp;&amp; data.historical_data) {{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>data.historical_data.forEach(r =&gt; {{ histByDate[r.date] = r; }});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Enrich PDFs with stats</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const enriched = pdfs.map(p =&gt; {{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const row = histByDate[p.date_iso] || {{}};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>...p,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>active_fires: row.active_fires != null ? row.active_fires : '—',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>acres_burned: row.acres_burned != null ? row.acres_burned : '—'</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const latest = enriched[0];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const nIncidents = data &amp;&amp; data.n_incidents != null ? data.n_incidents : '—';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// ── Hero card ──</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('hero-card').innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-date-block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="report-date"&gt;${{fmtDate(latest.date_iso)}}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="report-sub"&gt;Data sourced from OEM ArcGIS Dashboard &amp;amp; ODF&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-stats"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="stat-pill"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="val"&gt;${{latest.active_fires}}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="lbl"&gt;Active Fires&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="stat-pill"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="val"&gt;${{fmtAcres(latest.acres_burned)}}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="lbl"&gt;Acres Burned&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="stat-pill"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="val"&gt;${{nIncidents}}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="lbl"&gt;2026 Incidents&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-actions"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a class="btn-primary" href="${{latest.filename}}" target="_blank"&gt;&amp;#128196; View Report&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a class="btn-secondary" href="${{latest.filename}}" download&gt;&amp;#8595; Download PDF&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// ── Count pill ──</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('pdf-count').textContent = enriched.length + ' PDF' + (enriched.length !== 1 ? 's' : '') + ' available';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// ── Archive table ──</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('archive-tbody').innerHTML = enriched.map((r, i) =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;tr${{i === 0 ? ' class="latest"' : ''}}&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td class="date-cell"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>${{fmtDate(r.date_iso)}}${{i === 0 ? ' &lt;span class="badge-new"&gt;Latest&lt;/span&gt;' : ''}}&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="iso"&gt;${{r.date_iso}}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td class="fires-val"&gt;${{r.active_fires}}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td class="acres-val"&gt;${{fmtAcres(r.acres_burned)}}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="action-link" href="${{r.filename}}" target="_blank"&gt;&amp;#128196; View&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="action-link dl" href="${{r.filename}}" download&gt;&amp;#8595; Download&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/tr&gt;`).join('');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// ── Chart ──</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (data &amp;&amp; data.historical_data) drawChart(data.historical_data);</p>
+<p class="p1">}}</p>
+<p class="p2"><br></p>
+<p class="p1">// ── MAIN LOAD ────────────────────────────────────────────────────────────────</p>
+<p class="p1">(async function() {{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>try {{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Fetch PDF list from GitHub Contents API + data.json simultaneously</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const [apiResp, dataResp] = await Promise.allSettled([</p>
+<p class="p1"><span class="Apple-converted-space">      </span>fetch(API_URL + '?_=' + Date.now()).then(r =&gt; {{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!r.ok) throw new Error('GitHub API ' + r.status);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return r.json();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}}),</p>
+<p class="p1"><span class="Apple-converted-space">      </span>fetch(DATA_URL + '?_=' + Date.now()).then(r =&gt; r.ok ? r.json() : null)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>]);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const files = apiResp.status === 'fulfilled' ? apiResp.value : null;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const data<span class="Apple-converted-space">  </span>= dataResp.status === 'fulfilled' ? dataResp.value : null;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (!files || !Array.isArray(files)) {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// GitHub API failed (rate limit etc.) — show what we can</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('error-area').innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>'&lt;div class="error-box"&gt;&amp;#9888; Could not reach GitHub API to list reports. ' +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>'If you know the filename, you can access reports directly at: ' +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>'&lt;code&gt;https://mramage1207-ux.github.io/oregon-wildfire-reports/oregon_wildfire_report_YYYY-MM-DD.pdf&lt;/code&gt;&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Still try to render chart if we have data.json</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (data &amp;&amp; data.historical_data) drawChart(data.historical_data);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('hero-card').innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>'&lt;div style="color:rgba(255,255,255,.6);font-size:.9rem;"&gt;Unable to load report list &amp;mdash; see error above.&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('archive-tbody').innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>'&lt;tr class="loading-row"&gt;&lt;td colspan="4"&gt;Unable to load PDF list from GitHub API.&lt;/td&gt;&lt;/tr&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Filter and sort PDFs</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const pdfs = files</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.filter(f =&gt; PDF_RE.test(f.name))</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.sort((a, b) =&gt; b.name.localeCompare(a.name))</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.map(f =&gt; ({{ filename: f.name, date_iso: f.name.match(PDF_RE)[1] }}));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (pdfs.length === 0) {{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('archive-tbody').innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>'&lt;tr class="loading-row"&gt;&lt;td colspan="4"&gt;No reports found in repository yet.&lt;/td&gt;&lt;/tr&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>render(pdfs, data);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>}} catch(err) {{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('error-area').innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">      </span>'&lt;div class="error-box"&gt;&amp;#9888; Error loading page: ' + err.message + '&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>console.error(err);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}}</p>
+<p class="p1">}})();</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
