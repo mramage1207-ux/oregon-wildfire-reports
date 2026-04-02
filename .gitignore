@@ -1,0 +1,7 @@
+# Scripts and internal data — not published to the website
+generate_wildfire_report.py
+aqi_map_gen.py
+wildfire_data/
+report_copy.pdf
+_map_tmp.png
+.DS_Store
