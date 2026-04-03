@@ -304,6 +304,11 @@
       "date": "2026-04-02",
       "active_fires": 6,
       "acres_burned": 189.5
+    },
+    {
+      "date": "2026-04-03",
+      "active_fires": 6,
+      "acres_burned": 189.5
     }
   ]
 }
