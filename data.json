@@ -3,6 +3,12 @@
   "active_large_fires": 0,
   "total_large_fire_acres": 162,
   "structures_lost": 0,
+  "evac_triggering_fires": 0,
+  "evac_zones": {
+    "level3": [],
+    "level2": [],
+    "level1": []
+  },
   "historical_data": [
     {
       "date": "2026-01-01",
