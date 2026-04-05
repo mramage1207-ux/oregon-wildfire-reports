@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-04",
+  "last_updated": "2026-04-05",
   "active_large_fires": 0,
   "total_large_fire_acres": 162,
   "structures_lost": 0,
@@ -314,6 +314,11 @@
       "date": "2026-04-04",
       "active_fires": 5,
       "acres_burned": 104.5
+    },
+    {
+      "date": "2026-04-05",
+      "active_fires": 3,
+      "acres_burned": 31.5
     }
   ]
 }
