@@ -9,6 +9,28 @@
     "level2": [],
     "level1": []
   },
+  "struct_loss": {
+    "date": "2026-04-06",
+    "source": "NIFC WFIGS Current Incident Locations",
+    "incident_count": 0,
+    "has_type_breakdown": false,
+    "oregon_totals": {
+      "res_destroyed": 0,
+      "res_damaged": 0,
+      "res_threatened": 0,
+      "comm_destroyed": 0,
+      "comm_damaged": 0,
+      "comm_threatened": 0,
+      "minor_destroyed": 0,
+      "minor_damaged": 0,
+      "minor_threatened": 0,
+      "total_destroyed": 0,
+      "total_damaged": 0,
+      "total_threatened": 0
+    },
+    "incidents": [],
+    "note": "No active Oregon incidents in WFIGS"
+  },
   "historical_data": [
     {
       "date": "2026-01-01",
