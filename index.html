@@ -75,7 +75,7 @@
     }
     .evac-label {
       font-size: .7rem; font-weight: 700; letter-spacing: .8px;
-      text-transform: uppercase; color: rgba(255,255,255,.70);
+      text-transform: uppercase; color: rgba(255,255,255,.45);
       margin-bottom: .55rem;
     }
     .evac-grid {
@@ -107,41 +107,7 @@
     }
     .evac-box.level1 .evac-level { color: #68d391; }
     .evac-box.level1 .evac-zones { color: rgba(255,255,255,.8); }
-    .evac-none { color: rgba(255,255,255,.82); font-style: italic; }
-
-    /* ── structure loss table ── */
-    .struct-loss-section {
-      max-width: 1100px; margin: 1rem auto 0; padding: 0 0 .75rem;
-    }
-    .struct-loss-label {
-      font-size: .7rem; font-weight: 700; letter-spacing: .8px;
-      text-transform: uppercase; color: rgba(255,255,255,.70);
-      margin-bottom: .55rem;
-    }
-    .struct-loss-table {
-      width: 100%; border-collapse: collapse;
-      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
-      border-radius: 8px; overflow: hidden; color: #fff; font-size: .82rem;
-    }
-    .struct-loss-table th {
-      background: rgba(255,255,255,.1); color: rgba(255,255,255,.82);
-      font-size: .7rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .5px; padding: .55rem .9rem; text-align: center;
-      border-bottom: 1px solid rgba(255,255,255,.14);
-    }
-    .struct-loss-table th:first-child { text-align: left; }
-    .struct-loss-table td {
-      padding: .55rem .9rem; border-bottom: 1px solid rgba(255,255,255,.08);
-      text-align: center;
-    }
-    .struct-loss-table td:first-child { text-align: left; font-weight: 600; }
-    .struct-loss-table tr:last-child td {
-      border-bottom: none; font-weight: 700;
-      background: rgba(255,255,255,.05);
-    }
-    .sl-zero  { color: rgba(255,255,255,.4); }
-    .sl-warn  { color: #fbd38d; font-weight: 700; }
-    .sl-alert { color: #fc8181; font-weight: 700; }
+    .evac-none { color: rgba(255,255,255,.65); font-style: italic; }
 
     @media (max-width: 700px) {
       .evac-grid { grid-template-columns: 1fr; }
@@ -211,51 +177,6 @@
       font-size: .82rem; color: #4a5568; line-height: 1.6; margin-bottom: 1.5rem;
     }
 
-    /* ── historical seasons ── */
-    .seasons-section { max-width: 1100px; margin: 0 auto; padding: 2rem 2rem 0; }
-    .seasons-section h2 { font-size: 1rem; font-weight: 700; color: #1a2744; margin-bottom: .3rem; }
-    .seasons-sub { font-size: .78rem; color: #5a6473; margin-bottom: 1.1rem; }
-    .seasons-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1rem; margin-bottom: 1.5rem;
-    }
-    .season-card {
-      background: #fff; border-radius: 12px;
-      box-shadow: 0 1px 4px rgba(0,0,0,.07);
-      padding: 1.1rem 1.3rem; border-top: 4px solid #1a2744;
-    }
-    .season-year {
-      font-size: 1.4rem; font-weight: 800; color: #1a2744; line-height: 1;
-    }
-    .season-stats {
-      display: flex; gap: .6rem; flex-wrap: wrap; margin: .65rem 0 .75rem;
-    }
-    .season-stat {
-      background: #f4f5f7; border-radius: 8px;
-      padding: .35rem .65rem; font-size: .75rem; text-align: center;
-    }
-    .season-stat .sv { font-weight: 700; font-size: .95rem; color: #1a2744; display: block; }
-    .season-stat .sl { color: #5a6473; font-size: .68rem; text-transform: uppercase; letter-spacing: .3px; }
-    .season-fires-label {
-      font-size: .68rem; font-weight: 700; letter-spacing: .6px;
-      text-transform: uppercase; color: #5a6473; margin-bottom: .35rem;
-    }
-    .season-fire-row {
-      display: flex; justify-content: space-between;
-      font-size: .78rem; padding: .2rem 0;
-      border-bottom: 1px solid #f0f4f8; color: #2d3748;
-    }
-    .season-fire-row:last-child { border-bottom: none; }
-    .season-fire-name { font-weight: 600; flex: 1; padding-right: .5rem; }
-    .season-fire-acres { color: #b85c00; font-weight: 700; white-space: nowrap; }
-    .season-fire-county { color: #6b7280; font-size: .72rem; }
-    .season-alert { color: #c0392b; font-weight: 700; font-size: .78rem; margin-top: .4rem; }
-
-    @media (max-width: 700px) {
-      .seasons-grid { grid-template-columns: 1fr; }
-    }
-
     /* ── footer ── */
     footer {
       background: #1a2744; color: rgba(255,255,255,.5);
@@ -307,20 +228,6 @@
         </div>
       </div>
     </div>
-    <div class="struct-loss-section" id="struct-loss-section" style="display:none">
-      <div class="struct-loss-label">Structure Loss &mdash; All Reported Incidents YTD (WFIGS)</div>
-      <table class="struct-loss-table">
-        <thead>
-          <tr>
-            <th>Structure Type</th>
-            <th>Threatened</th>
-            <th>Damaged</th>
-            <th>Destroyed</th>
-          </tr>
-        </thead>
-        <tbody id="struct-loss-tbody"></tbody>
-      </table>
-    </div>
   </div>
 </div>
 
@@ -368,12 +275,6 @@
     PDFs are preserved indefinitely.
   </div>
 </main>
-
-<div class="seasons-section" id="seasons-section" style="display:none">
-  <h2>Historical Season Summaries</h2>
-  <div class="seasons-sub">Prior Oregon wildfire seasons &mdash; large fires</div>
-  <div class="seasons-grid" id="seasons-grid"></div>
-</div>
 
 <footer>
   <strong>Oregon Wildfire Daily Reports &mdash; 2026 Season</strong><br>
@@ -562,31 +463,6 @@ function render(pdfs, data) {
   const evacEl = document.getElementById('evac-section');
   if (evacEl) evacEl.style.display = '';
 
-  // ── Structure loss table ──
-  const sl = data && data.struct_loss && data.struct_loss.oregon_totals;
-  if (sl) {
-    const rows = [
-      ['Residences',   sl.res_threatened,   sl.res_damaged,   sl.res_destroyed],
-      ['Commercial',   sl.comm_threatened,  sl.comm_damaged,  sl.comm_destroyed],
-      ['Minor / Other',sl.minor_threatened, sl.minor_damaged, sl.minor_destroyed],
-      ['<strong>Total</strong>', sl.total_threatened, sl.total_damaged, sl.total_destroyed],
-    ];
-    function slClass(v) {
-      if (v == null || v === 0) return 'sl-zero';
-      if (v >= 10) return 'sl-alert';
-      return 'sl-warn';
-    }
-    document.getElementById('struct-loss-tbody').innerHTML = rows.map(r => `
-      <tr>
-        <td>${r[0]}</td>
-        <td class="${slClass(r[1])}">${r[1] != null ? r[1].toLocaleString() : '&mdash;'}</td>
-        <td class="${slClass(r[2])}">${r[2] != null ? r[2].toLocaleString() : '&mdash;'}</td>
-        <td class="${slClass(r[3])}">${r[3] != null ? r[3].toLocaleString() : '&mdash;'}</td>
-      </tr>`).join('');
-    const slEl = document.getElementById('struct-loss-section');
-    if (slEl) slEl.style.display = '';
-  }
-
   // ── Count pill ──
   document.getElementById('pdf-count').textContent = enriched.length + ' PDF' + (enriched.length !== 1 ? 's' : '') + ' available';
 
@@ -607,47 +483,6 @@ function render(pdfs, data) {
 
   // ── Chart ──
   if (data && data.historical_data) drawChart(data.historical_data);
-
-  // ── Historical seasons ──
-  const seasons = (data && data.historical_seasons) || [];
-  if (seasons.length) {
-    document.getElementById('seasons-grid').innerHTML = seasons.map(s => {
-      const acresStr = s.total_acres != null ? s.total_acres.toLocaleString() : '—';
-      const structs  = s.total_structures_destroyed || 0;
-      const fatStr   = s.fatalities ? `<div class="season-alert">&#9888; ${s.fatalities} fatali${s.fatalities === 1 ? 'ty' : 'ties'}</div>` : '';
-      const fireRows = (s.notable_fires || []).map(f => `
-        <div class="season-fire-row">
-          <span class="season-fire-name">${f.name}</span>
-          <span>
-            <span class="season-fire-county">${f.county}&nbsp;</span>
-            <span class="season-fire-acres">${f.acres.toLocaleString()} ac</span>
-          </span>
-        </div>`).join('');
-      return `
-        <div class="season-card">
-          <div class="season-year">${s.year} Season</div>
-          <div class="season-stats">
-            <div class="season-stat">
-              <span class="sv">${s.total_fires}</span>
-              <span class="sl">Fires Tracked</span>
-            </div>
-            <div class="season-stat">
-              <span class="sv">${acresStr}</span>
-              <span class="sl">Total Acres</span>
-            </div>
-            <div class="season-stat">
-              <span class="sv">${structs.toLocaleString()}</span>
-              <span class="sl">Structures Lost</span>
-            </div>
-          </div>
-          <div class="season-fires-label">Top Fires by Size</div>
-          ${fireRows}
-          ${fatStr}
-        </div>`;
-    }).join('');
-    const secEl = document.getElementById('seasons-section');
-    if (secEl) secEl.style.display = '';
-  }
 }
 
 // ── MAIN LOAD ────────────────────────────────────────────────────────────────
