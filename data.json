@@ -9,6 +9,28 @@
     "level2": [],
     "level1": []
   },
+  "struct_loss": {
+    "date": "2026-04-07",
+    "source": "NIFC WFIGS Current Incident Locations",
+    "incident_count": 0,
+    "has_type_breakdown": false,
+    "oregon_totals": {
+      "res_destroyed": 0,
+      "res_damaged": 0,
+      "res_threatened": 0,
+      "comm_destroyed": 0,
+      "comm_damaged": 0,
+      "comm_threatened": 0,
+      "minor_destroyed": 0,
+      "minor_damaged": 0,
+      "minor_threatened": 0,
+      "total_destroyed": 0,
+      "total_damaged": 0,
+      "total_threatened": 0
+    },
+    "incidents": [],
+    "note": "No active Oregon incidents in WFIGS"
+  },
   "historical_data": [
     {
       "date": "2026-01-01",
@@ -324,6 +346,296 @@
       "date": "2026-04-06",
       "active_fires": 3,
       "acres_burned": 31.5
+    },
+    {
+      "date": "2026-04-07",
+      "active_fires": 8,
+      "acres_burned": 31.51
+    }
+  ],
+  "historical_seasons": [
+    {
+      "year": 2026,
+      "total_fires": 2,
+      "total_acres": 162,
+      "total_structures_destroyed": 0,
+      "fatalities": 0,
+      "injuries": 0,
+      "largest_fire": {
+        "name": "Boardman Fire",
+        "county": "Morrow",
+        "acres": 150
+      },
+      "notable_fires": [
+        {
+          "name": "Boardman Fire",
+          "county": "Morrow",
+          "acres": 150
+        },
+        {
+          "name": "Riverview Fire",
+          "county": "Deschutes",
+          "acres": 12
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "total_fires": 65,
+      "total_acres": 330211,
+      "res_destroyed": 64,
+      "comm_destroyed": 0,
+      "minor_destroyed": 126,
+      "total_structures_destroyed": 190,
+      "fatalities": 0,
+      "injuries": 3,
+      "largest_fire": {
+        "name": "Cram",
+        "county": "Jefferson",
+        "acres": 95736
+      },
+      "notable_fires": [
+        {
+          "name": "Cram",
+          "county": "Jefferson",
+          "acres": 95736
+        },
+        {
+          "name": "Black Rock",
+          "county": "Wasco",
+          "acres": 42842
+        },
+        {
+          "name": "Emigrant",
+          "county": "Lane",
+          "acres": 33130
+        },
+        {
+          "name": "Rock Creek",
+          "county": "Malheur",
+          "acres": 31960
+        },
+        {
+          "name": "Flat",
+          "county": "Deschutes",
+          "acres": 23346
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "total_fires": 79,
+      "total_acres": 1884113,
+      "res_destroyed": 42,
+      "comm_destroyed": 2,
+      "minor_destroyed": 130,
+      "total_structures_destroyed": 174,
+      "fatalities": 1,
+      "injuries": 0,
+      "largest_fire": {
+        "name": "Durkee",
+        "county": "Baker",
+        "acres": 294265
+      },
+      "notable_fires": [
+        {
+          "name": "Durkee",
+          "county": "Baker",
+          "acres": 294265
+        },
+        {
+          "name": "Battle Mtn Complex",
+          "county": "Umatilla",
+          "acres": 183026
+        },
+        {
+          "name": "Rail Ridge",
+          "county": "Grant",
+          "acres": 176661
+        },
+        {
+          "name": "Falls",
+          "county": "Harney",
+          "acres": 151689
+        },
+        {
+          "name": "Lone Rock",
+          "county": "Gilliam",
+          "acres": 137222
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "total_fires": 18,
+      "total_acres": 210372,
+      "res_destroyed": 0,
+      "comm_destroyed": 0,
+      "minor_destroyed": 15,
+      "total_structures_destroyed": 15,
+      "fatalities": 0,
+      "injuries": 0,
+      "largest_fire": {
+        "name": "Smith River Complex",
+        "county": "Yamhill",
+        "acres": 85429
+      },
+      "notable_fires": [
+        {
+          "name": "Smith River Complex",
+          "county": "Yamhill",
+          "acres": 85429
+        },
+        {
+          "name": "Oak Flat",
+          "county": "Curry",
+          "acres": 34242
+        },
+        {
+          "name": "Bedrock",
+          "county": "Lane",
+          "acres": 31590
+        },
+        {
+          "name": "Lookout Fire",
+          "county": "Lane",
+          "acres": 24518
+        },
+        {
+          "name": "Anvil",
+          "county": "Curry",
+          "acres": 22167
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "total_fires": 10,
+      "total_acres": 344899,
+      "res_destroyed": 1,
+      "comm_destroyed": 0,
+      "minor_destroyed": 17,
+      "total_structures_destroyed": 18,
+      "fatalities": 0,
+      "injuries": 0,
+      "largest_fire": {
+        "name": "Double Creek",
+        "county": "Wallowa",
+        "acres": 171532
+      },
+      "notable_fires": [
+        {
+          "name": "Double Creek",
+          "county": "Wallowa",
+          "acres": 171532
+        },
+        {
+          "name": "Cedar Creek",
+          "county": "Lane",
+          "acres": 127311
+        },
+        {
+          "name": "Rum Creek",
+          "county": "Josephine",
+          "acres": 21347
+        },
+        {
+          "name": "Sturgill",
+          "county": "Wallowa",
+          "acres": 21148
+        },
+        {
+          "name": "Van Meter 351",
+          "county": "Klamath",
+          "acres": 2639
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "total_fires": 33,
+      "total_acres": 806788,
+      "res_destroyed": 28,
+      "comm_destroyed": 0,
+      "minor_destroyed": 48,
+      "total_structures_destroyed": 76,
+      "fatalities": 0,
+      "injuries": 0,
+      "largest_fire": {
+        "name": "Bootleg 321",
+        "county": "Klamath",
+        "acres": 413717
+      },
+      "notable_fires": [
+        {
+          "name": "Bootleg 321",
+          "county": "Klamath",
+          "acres": 413717
+        },
+        {
+          "name": "Cougar Peak 452",
+          "county": "Lake",
+          "acres": 91730
+        },
+        {
+          "name": "Devils Knob Complex",
+          "county": "Douglas",
+          "acres": 70000
+        },
+        {
+          "name": "Chaos-Rough Patch CMPLX",
+          "county": "Lane",
+          "acres": 50409
+        },
+        {
+          "name": "Rouigh Patch Complex",
+          "county": "Lane",
+          "acres": 50307
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "total_fires": 40,
+      "total_acres": 1148627,
+      "res_destroyed": 3944,
+      "comm_destroyed": 0,
+      "minor_destroyed": 548,
+      "total_structures_destroyed": 4492,
+      "fatalities": 0,
+      "injuries": 0,
+      "largest_fire": {
+        "name": "Lionshead",
+        "county": "Marion",
+        "acres": 204469
+      },
+      "notable_fires": [
+        {
+          "name": "Lionshead",
+          "county": "Marion",
+          "acres": 204469
+        },
+        {
+          "name": "Beachie",
+          "county": "Marion",
+          "acres": 193566
+        },
+        {
+          "name": "Holiday Farm",
+          "county": "Lane",
+          "acres": 173393
+        },
+        {
+          "name": "Illinois Valley Support",
+          "county": "Yamhill",
+          "acres": 152270
+        },
+        {
+          "name": "Riverside (ODF)",
+          "county": "Clackamas",
+          "acres": 138054
+        }
+      ]
     }
   ]
 }
