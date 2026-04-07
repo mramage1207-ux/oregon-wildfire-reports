@@ -350,6 +350,31 @@
   ],
   "historical_seasons": [
     {
+      "year": 2026,
+      "total_fires": 2,
+      "total_acres": 162,
+      "total_structures_destroyed": 0,
+      "fatalities": 0,
+      "injuries": 0,
+      "largest_fire": {
+        "name": "Boardman Fire",
+        "county": "Morrow",
+        "acres": 150
+      },
+      "notable_fires": [
+        {
+          "name": "Boardman Fire",
+          "county": "Morrow",
+          "acres": 150
+        },
+        {
+          "name": "Riverview Fire",
+          "county": "Deschutes",
+          "acres": 12
+        }
+      ]
+    },
+    {
       "year": 2025,
       "total_fires": 65,
       "total_acres": 330211,
