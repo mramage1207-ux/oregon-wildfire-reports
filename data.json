@@ -595,22 +595,26 @@
       "year": 2021,
       "total_fires": 33,
       "total_acres": 806788,
-      "res_destroyed": 28,
+      "res_destroyed": 161,
       "comm_destroyed": 0,
-      "minor_destroyed": 48,
-      "total_structures_destroyed": 76,
+      "minor_destroyed": 247,
+      "total_structures_destroyed": 408,
       "fatalities": 0,
       "injuries": 0,
       "largest_fire": {
         "name": "Bootleg 321",
         "county": "Klamath",
-        "acres": 413717
+        "acres": 413765,
+        "res_destroyed": 161,
+        "other_destroyed": 247
       },
       "notable_fires": [
         {
           "name": "Bootleg 321",
           "county": "Klamath",
-          "acres": 413717
+          "acres": 413765,
+          "res_destroyed": 161,
+          "other_destroyed": 247
         },
         {
           "name": "Cougar Peak 452",
