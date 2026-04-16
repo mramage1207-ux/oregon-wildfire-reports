@@ -130,6 +130,10 @@
       border-bottom: 1px solid rgba(255,255,255,.14);
     }
     .struct-loss-table th:first-child { text-align: left; }
+    .struct-loss-table th .th-sub {
+      display: block; font-size: .58rem; font-weight: 600;
+      letter-spacing: .4px; opacity: .62; margin-top: 2px;
+    }
     .struct-loss-table td {
       padding: .55rem .9rem; border-bottom: 1px solid rgba(255,255,255,.08);
       text-align: center;
@@ -308,14 +312,14 @@
       </div>
     </div>
     <div class="struct-loss-section" id="struct-loss-section" style="display:none">
-      <div class="struct-loss-label">Structure Loss &mdash; All Reported Incidents YTD (WFIGS)</div>
+      <div class="struct-loss-label">Structure Loss &mdash; All Reported Incidents (WFIGS)</div>
       <table class="struct-loss-table">
         <thead>
           <tr>
             <th>Structure Type</th>
-            <th>Threatened</th>
-            <th>Damaged</th>
-            <th>Destroyed</th>
+            <th>Threatened<span class="th-sub">Active</span></th>
+            <th>Damaged<span class="th-sub">YTD</span></th>
+            <th>Destroyed<span class="th-sub">YTD</span></th>
           </tr>
         </thead>
         <tbody id="struct-loss-tbody"></tbody>
