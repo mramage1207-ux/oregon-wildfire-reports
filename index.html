@@ -48,6 +48,13 @@
     }
     .report-date { font-size: 1.35rem; font-weight: 700; }
     .report-sub { font-size: .8rem; opacity: .6; margin-top: 3px; }
+    .report-time-badge {
+      display: inline-block; background: #fff; color: #2d3748;
+      border: 1px solid rgba(255,255,255,.35); border-radius: 5px;
+      padding: .15rem .55rem; font-size: .82rem; font-weight: 600;
+      margin-top: 6px; white-space: nowrap;
+    }
+    .report-time-badge .time-val { color: #e53e3e; font-weight: 700; }
     .hero-stats { display: flex; gap: 1.2rem; }
     .stat-pill {
       background: rgba(255,255,255,.1); border-radius: 10px;
@@ -559,9 +566,13 @@ function render(pdfs, data) {
   const evacZones     = (data && data.evac_zones) || {};
 
   // ── Hero card ──
+  const reportTimeBadge = data && data.report_time
+    ? `<div class="report-time-badge">Updated at <span class="time-val">${data.report_time}</span></div>`
+    : '';
   document.getElementById('hero-card').innerHTML = `
     <div class="hero-date-block">
       <div class="report-date">${fmtDate(latest.date_iso)}</div>
+      ${reportTimeBadge}
       <div class="report-sub">Data sourced from OEM ArcGIS Dashboard &amp; ODF</div>
     </div>
     <div class="hero-stats">
