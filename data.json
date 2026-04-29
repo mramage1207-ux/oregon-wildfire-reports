@@ -717,7 +717,7 @@
       "comm_destroyed": 0,
       "minor_destroyed": 548,
       "total_structures_destroyed": 4492,
-      "fatalities": 0,
+      "fatalities": "est. 9-11",
       "injuries": 0,
       "largest_fire": {
         "name": "Lionshead",
@@ -750,7 +750,8 @@
           "county": "Clackamas",
           "acres": 138054
         }
-      ]
+      ],
+      "fatalities_note": "Estimate reflects variance across reporting sources; official counts differ by agency and attribution method."
     }
   ]
 }
