@@ -265,6 +265,38 @@
       .hero-actions { margin-left: 0; flex-direction: row; flex-wrap: wrap; }
       thead th:nth-child(3), tbody td:nth-child(3) { display: none; }
     }
+
+    /* ── month accordion ── */
+    .month-section { margin-bottom: .6rem; }
+    .month-toggle {
+      width: 100%; display: flex; align-items: center; gap: .75rem;
+      background: #fff; border: none; border-radius: 12px;
+      padding: .85rem 1.2rem; cursor: pointer; text-align: left;
+      box-shadow: 0 1px 4px rgba(0,0,0,.07);
+      font-family: inherit; transition: background .15s, box-shadow .15s;
+    }
+    .month-toggle:hover { background: #f8fafc; box-shadow: 0 2px 6px rgba(0,0,0,.1); }
+    .month-section.month-current .month-toggle {
+      border-radius: 12px 12px 0 0;
+      border-bottom: 2px solid #e67e22;
+    }
+    .month-chevron {
+      font-size: .78rem; color: #a0aec0; width: 1rem;
+      flex-shrink: 0; transition: transform .2s;
+    }
+    .month-toggle[aria-expanded="true"] .month-chevron { transform: rotate(90deg); }
+    .month-name { font-size: .95rem; font-weight: 700; color: #1a2744; flex: 1; }
+    .month-badge {
+      background: #f0f4f8; color: #5a6473; border-radius: 20px;
+      padding: .15rem .65rem; font-size: .72rem; font-weight: 600; white-space: nowrap;
+    }
+    .month-section.month-current .month-badge { background: #fff3e6; color: #7a3800; }
+    .month-body .table-card {
+      border-radius: 0 0 12px 12px;
+      margin-bottom: 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,.07);
+    }
+    .month-body[hidden] { display: none; }
   </style>
 </head>
 <body>
@@ -340,20 +372,22 @@
     <span class="pill-count" id="pdf-count">&#8230;</span>
   </div>
   <div id="error-area"></div>
-  <div class="table-card">
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Active Fires</th>
-          <th>Acres Burned</th>
-          <th>Report</th>
-        </tr>
-      </thead>
-      <tbody id="archive-tbody">
-        <tr class="loading-row"><td colspan="4">&#9203; Loading reports&hellip;</td></tr>
-      </tbody>
-    </table>
+  <div id="archive-container">
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Active Fires</th>
+            <th>Acres Burned</th>
+            <th>Report</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="loading-row"><td colspan="4">&#9203; Loading reports&hellip;</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <div class="info-box">
@@ -389,6 +423,20 @@ const REPO      = 'mramage1207-ux/oregon-wildfire-reports';
 const API_URL   = 'https://api.github.com/repos/' + REPO + '/contents/';
 const DATA_URL  = 'data.json';   // relative: served from same GitHub Pages origin
 const PDF_RE    = /^oregon_wildfire_report_(\d{4}-\d{2}-\d{2})\.pdf$/;
+
+// ── ACCORDION ────────────────────────────────────────────────────────────────
+function toggleMonth(btn) {
+  const body = btn.nextElementSibling;
+  const isOpen = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', String(!isOpen));
+  if (isOpen) {
+    body.setAttribute('hidden', '');
+    btn.closest('.month-section').classList.remove('month-current');
+  } else {
+    body.removeAttribute('hidden');
+    btn.closest('.month-section').classList.add('month-current');
+  }
+}
 
 // ── UTILITIES ────────────────────────────────────────────────────────────────
 function fmtDate(iso) {
@@ -586,20 +634,68 @@ function render(pdfs, data) {
   // ── Count pill ──
   document.getElementById('pdf-count').textContent = enriched.length + ' PDF' + (enriched.length !== 1 ? 's' : '') + ' available';
 
-  // ── Archive table ──
-  document.getElementById('archive-tbody').innerHTML = enriched.map((r, i) => `
-    <tr${i === 0 ? ' class="latest"' : ''}>
-      <td class="date-cell">
-        ${fmtDate(r.date_iso)}${i === 0 ? ' <span class="badge-new">Latest</span>' : ''}<br>
-        <span class="iso">${r.date_iso}</span>
-      </td>
-      <td class="fires-val">${r.active_fires}</td>
-      <td class="acres-val">${fmtAcres(r.acres_burned)}</td>
-      <td>
-        <a class="action-link" href="${r.filename}" target="_blank">&#128196; View</a>
-        <a class="action-link dl" href="${r.filename}" download>&#8595; Download</a>
-      </td>
-    </tr>`).join('');
+  // ── Archive table — grouped by month with accordion for past months ──
+  const todayISO = new Date().toISOString().slice(0, 7); // "YYYY-MM"
+
+  const byMonth = {};
+  enriched.forEach(r => {
+    const mo = r.date_iso.slice(0, 7);
+    if (!byMonth[mo]) byMonth[mo] = [];
+    byMonth[mo].push(r);
+  });
+
+  const sortedMonths = Object.keys(byMonth).sort((a, b) => b.localeCompare(a));
+  let isVeryFirst = true;
+
+  document.getElementById('archive-container').innerHTML = sortedMonths.map(mo => {
+    const isCurrent = mo === todayISO;
+    const [y, m] = mo.split('-').map(Number);
+    const monthLabel = new Date(y, m - 1, 1)
+      .toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+    const reports = byMonth[mo];
+
+    const rows = reports.map(r => {
+      const markLatest = isVeryFirst;
+      if (isVeryFirst) isVeryFirst = false;
+      return `
+        <tr${markLatest ? ' class="latest"' : ''}>
+          <td class="date-cell">
+            ${fmtDate(r.date_iso)}${markLatest ? ' <span class="badge-new">Latest</span>' : ''}<br>
+            <span class="iso">${r.date_iso}</span>
+          </td>
+          <td class="fires-val">${r.active_fires}</td>
+          <td class="acres-val">${fmtAcres(r.acres_burned)}</td>
+          <td>
+            <a class="action-link" href="${r.filename}" target="_blank">&#128196; View</a>
+            <a class="action-link dl" href="${r.filename}" download>&#8595; Download</a>
+          </td>
+        </tr>`;
+    }).join('');
+
+    return `
+      <div class="month-section${isCurrent ? ' month-current' : ''}">
+        <button class="month-toggle" onclick="toggleMonth(this)" aria-expanded="${isCurrent}">
+          <span class="month-chevron">&#9658;</span>
+          <span class="month-name">${monthLabel}</span>
+          <span class="month-badge">${reports.length}&nbsp;report${reports.length !== 1 ? 's' : ''}</span>
+        </button>
+        <div class="month-body"${isCurrent ? '' : ' hidden'}>
+          <div class="table-card">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Active Fires</th>
+                  <th>Acres Burned</th>
+                  <th>Report</th>
+                </tr>
+              </thead>
+              <tbody>${rows}</tbody>
+            </table>
+          </div>
+        </div>
+      </div>`;
+  }).join('');
 
   // ── Chart ──
   if (data && data.historical_data) drawChart(data.historical_data);
@@ -671,8 +767,8 @@ function render(pdfs, data) {
       if (data && data.historical_data) drawChart(data.historical_data);
       document.getElementById('hero-card').innerHTML =
         '<div style="color:rgba(255,255,255,.6);font-size:.9rem;">Unable to load report list &mdash; see error above.</div>';
-      document.getElementById('archive-tbody').innerHTML =
-        '<tr class="loading-row"><td colspan="4">Unable to load PDF list from GitHub API.</td></tr>';
+      document.getElementById('archive-container').innerHTML =
+        '<div class="table-card"><table><tbody><tr class="loading-row"><td colspan="4">Unable to load PDF list from GitHub API.</td></tr></tbody></table></div>';
       return;
     }
 
@@ -683,8 +779,8 @@ function render(pdfs, data) {
       .map(f => ({ filename: f.name, date_iso: f.name.match(PDF_RE)[1] }));
 
     if (pdfs.length === 0) {
-      document.getElementById('archive-tbody').innerHTML =
-        '<tr class="loading-row"><td colspan="4">No reports found in repository yet.</td></tr>';
+      document.getElementById('archive-container').innerHTML =
+        '<div class="table-card"><table><tbody><tr class="loading-row"><td colspan="4">No reports found in repository yet.</td></tr></tbody></table></div>';
       return;
     }
 
