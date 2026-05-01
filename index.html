@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oregon Wildfire Daily Reports &mdash; Archive</title>
+  <title>Oregon Wildfire Daily Reports &mdash; 2026 Archive</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -48,13 +48,6 @@
     }
     .report-date { font-size: 1.35rem; font-weight: 700; }
     .report-sub { font-size: .8rem; opacity: .6; margin-top: 3px; }
-    .report-time-badge {
-      display: inline-block; background: #fff; color: #2d3748;
-      border: 1px solid rgba(255,255,255,.35); border-radius: 5px;
-      padding: .15rem .55rem; font-size: .82rem; font-weight: 600;
-      margin-top: 6px; white-space: nowrap;
-    }
-    .report-time-badge .time-val { color: #e53e3e; font-weight: 700; }
     .hero-stats { display: flex; gap: 1.2rem; }
     .stat-pill {
       background: rgba(255,255,255,.1); border-radius: 10px;
@@ -91,30 +84,26 @@
     }
     .evac-box {
       border-radius: 8px; padding: .75rem 1rem; border: 1px solid;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      min-height: 52px;
     }
     .evac-box .evac-level {
       font-size: .7rem; font-weight: 800; letter-spacing: .6px;
-      text-transform: uppercase; margin-bottom: .4rem;
+      text-transform: uppercase; flex: 1;
     }
-    .evac-box .evac-zones {
-      font-size: .8rem; line-height: 1.5;
+    .evac-box .evac-count {
+      font-size: 1.6rem; font-weight: 700; text-align: right; flex-shrink: 0; line-height: 1;
     }
-    .evac-box.level3 {
-      background: rgba(197,48,48,.18); border-color: rgba(197,48,48,.5);
-    }
+    .evac-box.level3 { background: rgba(197,48,48,.18); border-color: rgba(197,48,48,.5); }
     .evac-box.level3 .evac-level { color: #fc8181; }
-    .evac-box.level3 .evac-zones { color: rgba(255,255,255,.8); }
-    .evac-box.level2 {
-      background: rgba(221,107,32,.18); border-color: rgba(221,107,32,.5);
-    }
+    .evac-box.level3 .evac-count { color: #fc8181; }
+    .evac-box.level2 { background: rgba(221,107,32,.18); border-color: rgba(221,107,32,.5); }
     .evac-box.level2 .evac-level { color: #fbd38d; }
-    .evac-box.level2 .evac-zones { color: rgba(255,255,255,.8); }
-    .evac-box.level1 {
-      background: rgba(34,139,34,.2); border-color: rgba(34,139,34,.5);
-    }
+    .evac-box.level2 .evac-count { color: #fbd38d; }
+    .evac-box.level1 { background: rgba(34,139,34,.2); border-color: rgba(34,139,34,.5); }
     .evac-box.level1 .evac-level { color: #68d391; }
-    .evac-box.level1 .evac-zones { color: rgba(255,255,255,.8); }
-    .evac-none { color: rgba(255,255,255,.82); font-style: italic; }
+    .evac-box.level1 .evac-count { color: #68d391; }
+    @media (max-width: 700px) { .evac-grid { grid-template-columns: 1fr; } }
 
     /* ── structure loss table ── */
     .struct-loss-section {
@@ -137,10 +126,6 @@
       border-bottom: 1px solid rgba(255,255,255,.14);
     }
     .struct-loss-table th:first-child { text-align: left; }
-    .struct-loss-table th .th-sub {
-      display: block; font-size: .58rem; font-weight: 600;
-      letter-spacing: .4px; opacity: .62; margin-top: 2px;
-    }
     .struct-loss-table td {
       padding: .55rem .9rem; border-bottom: 1px solid rgba(255,255,255,.08);
       text-align: center;
@@ -267,38 +252,6 @@
       .seasons-grid { grid-template-columns: 1fr; }
     }
 
-    /* ── month accordion ── */
-    .month-section { margin-bottom: .6rem; }
-    .month-toggle {
-      width: 100%; display: flex; align-items: center; gap: .75rem;
-      background: #fff; border: none; border-radius: 12px;
-      padding: .85rem 1.2rem; cursor: pointer; text-align: left;
-      box-shadow: 0 1px 4px rgba(0,0,0,.07);
-      font-family: inherit; transition: background .15s, box-shadow .15s;
-    }
-    .month-toggle:hover { background: #f8fafc; box-shadow: 0 2px 6px rgba(0,0,0,.1); }
-    .month-section.month-current .month-toggle {
-      border-radius: 12px 12px 0 0;
-      border-bottom: 2px solid #e67e22;
-    }
-    .month-chevron {
-      font-size: .78rem; color: #a0aec0; width: 1rem;
-      flex-shrink: 0; transition: transform .2s;
-    }
-    .month-toggle[aria-expanded="true"] .month-chevron { transform: rotate(90deg); }
-    .month-name { font-size: .95rem; font-weight: 700; color: #1a2744; flex: 1; }
-    .month-badge {
-      background: #f0f4f8; color: #5a6473; border-radius: 20px;
-      padding: .15rem .65rem; font-size: .72rem; font-weight: 600; white-space: nowrap;
-    }
-    .month-section.month-current .month-badge { background: #fff3e6; color: #7a3800; }
-    .month-body .table-card {
-      border-radius: 0 0 12px 12px;
-      margin-bottom: 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,.07);
-    }
-    .month-body[hidden] { display: none; }
-
     /* ── footer ── */
     footer {
       background: #1a2744; color: rgba(255,255,255,.5);
@@ -321,7 +274,7 @@
     <div class="header-flame">&#128293;</div>
     <div class="header-text">
       <h1>Oregon Wildfire Daily Reports</h1>
-      <p>Daily Archive &mdash; Published automatically from ODF/OEM data feeds</p>
+      <p>2026 Season Archive &mdash; Published daily by automated ODF/OEM data pipeline</p>
     </div>
     <div class="header-badge">2026 Season</div>
   </div>
@@ -333,32 +286,32 @@
     <div id="hero-card" class="hero-card">
       <div class="loading-hero">&#9203; Loading latest report&hellip;</div>
     </div>
-    <div class="evac-section" id="evac-section" style="display:none">
-      <div class="evac-label">Current Evacuation Zones by Level &mdash; Active Large Fires Only</div>
+    <div class="evac-section">
+      <div class="evac-label">Evacuation Addresses by Level &mdash; Active Fires Only</div>
       <div class="evac-grid">
         <div class="evac-box level1">
           <div class="evac-level">Level 1 &mdash; Be Ready</div>
-          <div class="evac-zones" id="evac-l1"><span class="evac-none">None</span></div>
+          <div class="evac-count" id="evac-l1">0</div>
         </div>
         <div class="evac-box level2">
           <div class="evac-level">Level 2 &mdash; Be Set</div>
-          <div class="evac-zones" id="evac-l2"><span class="evac-none">None</span></div>
+          <div class="evac-count" id="evac-l2">0</div>
         </div>
         <div class="evac-box level3">
           <div class="evac-level">Level 3 &mdash; Go Now</div>
-          <div class="evac-zones" id="evac-l3"><span class="evac-none">None</span></div>
+          <div class="evac-count" id="evac-l3">0</div>
         </div>
       </div>
     </div>
     <div class="struct-loss-section" id="struct-loss-section" style="display:none">
-      <div class="struct-loss-label">Structure Loss &mdash; All Reported Incidents (WFIGS)</div>
+      <div class="struct-loss-label">Structure Loss &mdash; All Reported Incidents YTD (WFIGS)</div>
       <table class="struct-loss-table">
         <thead>
           <tr>
             <th>Structure Type</th>
-            <th>Threatened<span class="th-sub">Active</span></th>
-            <th>Damaged<span class="th-sub">YTD</span></th>
-            <th>Destroyed<span class="th-sub">YTD</span></th>
+            <th>Threatened</th>
+            <th>Damaged</th>
+            <th>Destroyed</th>
           </tr>
         </thead>
         <tbody id="struct-loss-tbody"></tbody>
@@ -387,12 +340,20 @@
     <span class="pill-count" id="pdf-count">&#8230;</span>
   </div>
   <div id="error-area"></div>
-  <div id="archive-container">
-    <div class="table-card">
-      <table><tbody>
+  <div class="table-card">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Active Fires</th>
+          <th>Acres Burned</th>
+          <th>Report</th>
+        </tr>
+      </thead>
+      <tbody id="archive-tbody">
         <tr class="loading-row"><td colspan="4">&#9203; Loading reports&hellip;</td></tr>
-      </tbody></table>
-    </div>
+      </tbody>
+    </table>
   </div>
 
   <div class="info-box">
@@ -411,7 +372,7 @@
 </div>
 
 <footer>
-  <strong>Oregon Wildfire Daily Reports</strong><br>
+  <strong>Oregon Wildfire Daily Reports &mdash; 2026 Season</strong><br>
   Data sourced from
   <a href="https://geo.maps.arcgis.com/apps/instant/portfolio/index.html?appid=22d04c007866419c91ccf00d097526c8" target="_blank">OEM ArcGIS Dashboard</a>
   &nbsp;&bull;&nbsp;
@@ -428,20 +389,6 @@ const REPO      = 'mramage1207-ux/oregon-wildfire-reports';
 const API_URL   = 'https://api.github.com/repos/' + REPO + '/contents/';
 const DATA_URL  = 'data.json';   // relative: served from same GitHub Pages origin
 const PDF_RE    = /^oregon_wildfire_report_(\d{4}-\d{2}-\d{2})\.pdf$/;
-
-// ── ACCORDION ────────────────────────────────────────────────────────────────
-function toggleMonth(btn) {
-  const body = btn.nextElementSibling;
-  const isOpen = btn.getAttribute('aria-expanded') === 'true';
-  btn.setAttribute('aria-expanded', String(!isOpen));
-  if (isOpen) {
-    body.setAttribute('hidden', '');
-    btn.closest('.month-section').classList.remove('month-current');
-  } else {
-    body.removeAttribute('hidden');
-    btn.closest('.month-section').classList.add('month-current');
-  }
-}
 
 // ── UTILITIES ────────────────────────────────────────────────────────────────
 function fmtDate(iso) {
@@ -566,13 +513,9 @@ function render(pdfs, data) {
   const evacZones     = (data && data.evac_zones) || {};
 
   // ── Hero card ──
-  const reportTimeBadge = data && data.report_time
-    ? `<div class="report-time-badge">Updated at <span class="time-val">${data.report_time}</span></div>`
-    : '';
   document.getElementById('hero-card').innerHTML = `
     <div class="hero-date-block">
       <div class="report-date">${fmtDate(latest.date_iso)}</div>
-      ${reportTimeBadge}
       <div class="report-sub">Data sourced from OEM ArcGIS Dashboard &amp; ODF</div>
     </div>
     <div class="hero-stats">
@@ -602,19 +545,18 @@ function render(pdfs, data) {
       <a class="btn-secondary" href="${latest.filename}" download>&#8595; Download PDF</a>
     </div>`;
 
-  // ── Evacuation zone boxes ──
-  function fillEvacBox(id, zones) {
+  // ── Evacuation address counts ──
+  function setEvacCount(id, zones) {
     const el = document.getElementById(id);
     if (!el) return;
-    el.innerHTML = zones && zones.length
-      ? zones.map(z => `<div>${z}</div>`).join('')
-      : '<span class="evac-none">None</span>';
+    const count = zones && zones.length
+      ? zones.reduce((acc, z) => acc + z.split(';').filter(a => a.trim()).length, 0)
+      : 0;
+    el.textContent = count;
   }
-  fillEvacBox('evac-l3', evacZones.level3);
-  fillEvacBox('evac-l2', evacZones.level2);
-  fillEvacBox('evac-l1', evacZones.level1);
-  const evacEl = document.getElementById('evac-section');
-  if (evacEl) evacEl.style.display = '';
+  setEvacCount('evac-l1', evacZones.level1);
+  setEvacCount('evac-l2', evacZones.level2);
+  setEvacCount('evac-l3', evacZones.level3);
 
   // ── Structure loss table ──
   const sl = data && data.struct_loss && data.struct_loss.oregon_totals;
@@ -644,68 +586,20 @@ function render(pdfs, data) {
   // ── Count pill ──
   document.getElementById('pdf-count').textContent = enriched.length + ' PDF' + (enriched.length !== 1 ? 's' : '') + ' available';
 
-  // ── Archive table — grouped by month with accordion for past months ──
-  const todayISO = new Date().toISOString().slice(0, 7); // "YYYY-MM"
-
-  const byMonth = {};
-  enriched.forEach(r => {
-    const mo = r.date_iso.slice(0, 7);
-    if (!byMonth[mo]) byMonth[mo] = [];
-    byMonth[mo].push(r);
-  });
-
-  const sortedMonths = Object.keys(byMonth).sort((a, b) => b.localeCompare(a));
-  let isVeryFirst = true;
-
-  document.getElementById('archive-container').innerHTML = sortedMonths.map(mo => {
-    const isCurrent = mo === todayISO;
-    const [y, m] = mo.split('-').map(Number);
-    const monthLabel = new Date(y, m - 1, 1)
-      .toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
-    const reports = byMonth[mo];
-
-    const rows = reports.map(r => {
-      const markLatest = isVeryFirst;
-      if (isVeryFirst) isVeryFirst = false;
-      return `
-        <tr${markLatest ? ' class="latest"' : ''}>
-          <td class="date-cell">
-            ${fmtDate(r.date_iso)}${markLatest ? ' <span class="badge-new">Latest</span>' : ''}<br>
-            <span class="iso">${r.date_iso}</span>
-          </td>
-          <td class="fires-val">${r.active_fires}</td>
-          <td class="acres-val">${fmtAcres(r.acres_burned)}</td>
-          <td>
-            <a class="action-link" href="${r.filename}" target="_blank">&#128196; View</a>
-            <a class="action-link dl" href="${r.filename}" download>&#8595; Download</a>
-          </td>
-        </tr>`;
-    }).join('');
-
-    return `
-      <div class="month-section${isCurrent ? ' month-current' : ''}">
-        <button class="month-toggle" onclick="toggleMonth(this)" aria-expanded="${isCurrent}">
-          <span class="month-chevron">&#9658;</span>
-          <span class="month-name">${monthLabel}</span>
-          <span class="month-badge">${reports.length}&nbsp;report${reports.length !== 1 ? 's' : ''}</span>
-        </button>
-        <div class="month-body"${isCurrent ? '' : ' hidden'}>
-          <div class="table-card">
-            <table>
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th>Active Fires</th>
-                  <th>Acres Burned</th>
-                  <th>Report</th>
-                </tr>
-              </thead>
-              <tbody>${rows}</tbody>
-            </table>
-          </div>
-        </div>
-      </div>`;
-  }).join('');
+  // ── Archive table ──
+  document.getElementById('archive-tbody').innerHTML = enriched.map((r, i) => `
+    <tr${i === 0 ? ' class="latest"' : ''}>
+      <td class="date-cell">
+        ${fmtDate(r.date_iso)}${i === 0 ? ' <span class="badge-new">Latest</span>' : ''}<br>
+        <span class="iso">${r.date_iso}</span>
+      </td>
+      <td class="fires-val">${r.active_fires}</td>
+      <td class="acres-val">${fmtAcres(r.acres_burned)}</td>
+      <td>
+        <a class="action-link" href="${r.filename}" target="_blank">&#128196; View</a>
+        <a class="action-link dl" href="${r.filename}" download>&#8595; Download</a>
+      </td>
+    </tr>`).join('');
 
   // ── Chart ──
   if (data && data.historical_data) drawChart(data.historical_data);
@@ -777,8 +671,8 @@ function render(pdfs, data) {
       if (data && data.historical_data) drawChart(data.historical_data);
       document.getElementById('hero-card').innerHTML =
         '<div style="color:rgba(255,255,255,.6);font-size:.9rem;">Unable to load report list &mdash; see error above.</div>';
-      document.getElementById('archive-container').innerHTML =
-        '<div class="table-card"><table><tbody><tr class="loading-row"><td colspan="4">Unable to load PDF list from GitHub API.</td></tr></tbody></table></div>';
+      document.getElementById('archive-tbody').innerHTML =
+        '<tr class="loading-row"><td colspan="4">Unable to load PDF list from GitHub API.</td></tr>';
       return;
     }
 
@@ -789,8 +683,8 @@ function render(pdfs, data) {
       .map(f => ({ filename: f.name, date_iso: f.name.match(PDF_RE)[1] }));
 
     if (pdfs.length === 0) {
-      document.getElementById('archive-container').innerHTML =
-        '<div class="table-card"><table><tbody><tr class="loading-row"><td colspan="4">No reports found in repository yet.</td></tr></tbody></table></div>';
+      document.getElementById('archive-tbody').innerHTML =
+        '<tr class="loading-row"><td colspan="4">No reports found in repository yet.</td></tr>';
       return;
     }
 
