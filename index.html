@@ -91,30 +91,26 @@
     }
     .evac-box {
       border-radius: 8px; padding: .75rem 1rem; border: 1px solid;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      min-height: 52px;
     }
     .evac-box .evac-level {
       font-size: .7rem; font-weight: 800; letter-spacing: .6px;
-      text-transform: uppercase; margin-bottom: .4rem;
+      text-transform: uppercase; flex: 1;
     }
-    .evac-box .evac-zones {
-      font-size: .8rem; line-height: 1.5;
+    .evac-box .evac-count {
+      font-size: 1.6rem; font-weight: 700; text-align: right; flex-shrink: 0; line-height: 1;
     }
-    .evac-box.level3 {
-      background: rgba(197,48,48,.18); border-color: rgba(197,48,48,.5);
-    }
+    .evac-box.level3 { background: rgba(197,48,48,.18); border-color: rgba(197,48,48,.5); }
     .evac-box.level3 .evac-level { color: #fc8181; }
-    .evac-box.level3 .evac-zones { color: rgba(255,255,255,.8); }
-    .evac-box.level2 {
-      background: rgba(221,107,32,.18); border-color: rgba(221,107,32,.5);
-    }
+    .evac-box.level3 .evac-count { color: #fc8181; }
+    .evac-box.level2 { background: rgba(221,107,32,.18); border-color: rgba(221,107,32,.5); }
     .evac-box.level2 .evac-level { color: #fbd38d; }
-    .evac-box.level2 .evac-zones { color: rgba(255,255,255,.8); }
-    .evac-box.level1 {
-      background: rgba(34,139,34,.2); border-color: rgba(34,139,34,.5);
-    }
+    .evac-box.level2 .evac-count { color: #fbd38d; }
+    .evac-box.level1 { background: rgba(34,139,34,.2); border-color: rgba(34,139,34,.5); }
     .evac-box.level1 .evac-level { color: #68d391; }
-    .evac-box.level1 .evac-zones { color: rgba(255,255,255,.8); }
-    .evac-none { color: rgba(255,255,255,.82); font-style: italic; }
+    .evac-box.level1 .evac-count { color: #68d391; }
+    @media (max-width: 700px) { .evac-grid { grid-template-columns: 1fr; } }
 
     /* ── structure loss table ── */
     .struct-loss-section {
@@ -333,20 +329,20 @@
     <div id="hero-card" class="hero-card">
       <div class="loading-hero">&#9203; Loading latest report&hellip;</div>
     </div>
-    <div class="evac-section" id="evac-section" style="display:none">
-      <div class="evac-label">Current Evacuation Zones by Level &mdash; Active Large Fires Only</div>
+    <div class="evac-section">
+      <div class="evac-label">Evacuation Addresses by Level &mdash; Active Fires Only</div>
       <div class="evac-grid">
         <div class="evac-box level1">
           <div class="evac-level">Level 1 &mdash; Be Ready</div>
-          <div class="evac-zones" id="evac-l1"><span class="evac-none">None</span></div>
+          <div class="evac-count" id="evac-l1">0</div>
         </div>
         <div class="evac-box level2">
           <div class="evac-level">Level 2 &mdash; Be Set</div>
-          <div class="evac-zones" id="evac-l2"><span class="evac-none">None</span></div>
+          <div class="evac-count" id="evac-l2">0</div>
         </div>
         <div class="evac-box level3">
           <div class="evac-level">Level 3 &mdash; Go Now</div>
-          <div class="evac-zones" id="evac-l3"><span class="evac-none">None</span></div>
+          <div class="evac-count" id="evac-l3">0</div>
         </div>
       </div>
     </div>
@@ -602,19 +598,18 @@ function render(pdfs, data) {
       <a class="btn-secondary" href="${latest.filename}" download>&#8595; Download PDF</a>
     </div>`;
 
-  // ── Evacuation zone boxes ──
-  function fillEvacBox(id, zones) {
+  // ── Evacuation address counts ──
+  function setEvacCount(id, zones) {
     const el = document.getElementById(id);
     if (!el) return;
-    el.innerHTML = zones && zones.length
-      ? zones.map(z => `<div>${z}</div>`).join('')
-      : '<span class="evac-none">None</span>';
+    const count = zones && zones.length
+      ? zones.reduce((acc, z) => acc + z.split(';').filter(a => a.trim()).length, 0)
+      : 0;
+    el.textContent = count;
   }
-  fillEvacBox('evac-l3', evacZones.level3);
-  fillEvacBox('evac-l2', evacZones.level2);
-  fillEvacBox('evac-l1', evacZones.level1);
-  const evacEl = document.getElementById('evac-section');
-  if (evacEl) evacEl.style.display = '';
+  setEvacCount('evac-l1', evacZones.level1);
+  setEvacCount('evac-l2', evacZones.level2);
+  setEvacCount('evac-l3', evacZones.level3);
 
   // ── Structure loss table ──
   const sl = data && data.struct_loss && data.struct_loss.oregon_totals;
