@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oregon Wildfire Daily Reports &mdash; 2026 Archive</title>
+  <title>Oregon Wildfire Daily Reports &mdash; Archive</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -48,6 +48,13 @@
     }
     .report-date { font-size: 1.35rem; font-weight: 700; }
     .report-sub { font-size: .8rem; opacity: .6; margin-top: 3px; }
+    .report-time-badge {
+      display: inline-block; background: #fff; color: #2d3748;
+      border: 1px solid rgba(255,255,255,.35); border-radius: 5px;
+      padding: .15rem .55rem; font-size: .82rem; font-weight: 600;
+      margin-top: 6px; white-space: nowrap;
+    }
+    .report-time-badge .time-val { color: #e53e3e; font-weight: 700; }
     .hero-stats { display: flex; gap: 1.2rem; }
     .stat-pill {
       background: rgba(255,255,255,.1); border-radius: 10px;
@@ -84,26 +91,30 @@
     }
     .evac-box {
       border-radius: 8px; padding: .75rem 1rem; border: 1px solid;
-      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-      min-height: 52px;
     }
     .evac-box .evac-level {
       font-size: .7rem; font-weight: 800; letter-spacing: .6px;
-      text-transform: uppercase; flex: 1;
+      text-transform: uppercase; margin-bottom: .4rem;
     }
-    .evac-box .evac-count {
-      font-size: 1.6rem; font-weight: 700; text-align: right; flex-shrink: 0; line-height: 1;
+    .evac-box .evac-zones {
+      font-size: .8rem; line-height: 1.5;
     }
-    .evac-box.level3 { background: rgba(197,48,48,.18); border-color: rgba(197,48,48,.5); }
+    .evac-box.level3 {
+      background: rgba(197,48,48,.18); border-color: rgba(197,48,48,.5);
+    }
     .evac-box.level3 .evac-level { color: #fc8181; }
-    .evac-box.level3 .evac-count { color: #fc8181; }
-    .evac-box.level2 { background: rgba(221,107,32,.18); border-color: rgba(221,107,32,.5); }
+    .evac-box.level3 .evac-zones { color: rgba(255,255,255,.8); }
+    .evac-box.level2 {
+      background: rgba(221,107,32,.18); border-color: rgba(221,107,32,.5);
+    }
     .evac-box.level2 .evac-level { color: #fbd38d; }
-    .evac-box.level2 .evac-count { color: #fbd38d; }
-    .evac-box.level1 { background: rgba(34,139,34,.2); border-color: rgba(34,139,34,.5); }
+    .evac-box.level2 .evac-zones { color: rgba(255,255,255,.8); }
+    .evac-box.level1 {
+      background: rgba(34,139,34,.2); border-color: rgba(34,139,34,.5);
+    }
     .evac-box.level1 .evac-level { color: #68d391; }
-    .evac-box.level1 .evac-count { color: #68d391; }
-    @media (max-width: 700px) { .evac-grid { grid-template-columns: 1fr; } }
+    .evac-box.level1 .evac-zones { color: rgba(255,255,255,.8); }
+    .evac-none { color: rgba(255,255,255,.82); font-style: italic; }
 
     /* ── structure loss table ── */
     .struct-loss-section {
@@ -126,6 +137,10 @@
       border-bottom: 1px solid rgba(255,255,255,.14);
     }
     .struct-loss-table th:first-child { text-align: left; }
+    .struct-loss-table th .th-sub {
+      display: block; font-size: .58rem; font-weight: 600;
+      letter-spacing: .4px; opacity: .62; margin-top: 2px;
+    }
     .struct-loss-table td {
       padding: .55rem .9rem; border-bottom: 1px solid rgba(255,255,255,.08);
       text-align: center;
@@ -252,20 +267,6 @@
       .seasons-grid { grid-template-columns: 1fr; }
     }
 
-    /* ── footer ── */
-    footer {
-      background: #1a2744; color: rgba(255,255,255,.5);
-      text-align: center; padding: 1.6rem 2rem; font-size: .78rem; line-height: 1.8;
-    }
-    footer a { color: rgba(255,255,255,.7); text-decoration: underline; }
-    footer strong { color: rgba(255,255,255,.85); }
-
-    @media (max-width: 700px) {
-      .hero-card { flex-direction: column; gap: 1.2rem; }
-      .hero-actions { margin-left: 0; flex-direction: row; flex-wrap: wrap; }
-      thead th:nth-child(3), tbody td:nth-child(3) { display: none; }
-    }
-
     /* ── month accordion ── */
     .month-section { margin-bottom: .6rem; }
     .month-toggle {
@@ -297,6 +298,20 @@
       box-shadow: 0 2px 4px rgba(0,0,0,.07);
     }
     .month-body[hidden] { display: none; }
+
+    /* ── footer ── */
+    footer {
+      background: #1a2744; color: rgba(255,255,255,.5);
+      text-align: center; padding: 1.6rem 2rem; font-size: .78rem; line-height: 1.8;
+    }
+    footer a { color: rgba(255,255,255,.7); text-decoration: underline; }
+    footer strong { color: rgba(255,255,255,.85); }
+
+    @media (max-width: 700px) {
+      .hero-card { flex-direction: column; gap: 1.2rem; }
+      .hero-actions { margin-left: 0; flex-direction: row; flex-wrap: wrap; }
+      thead th:nth-child(3), tbody td:nth-child(3) { display: none; }
+    }
   </style>
 </head>
 <body>
@@ -306,7 +321,7 @@
     <div class="header-flame">&#128293;</div>
     <div class="header-text">
       <h1>Oregon Wildfire Daily Reports</h1>
-      <p>2026 Season Archive &mdash; Published daily by automated ODF/OEM data pipeline</p>
+      <p>Daily Archive &mdash; Published automatically from ODF/OEM data feeds</p>
     </div>
     <div class="header-badge">2026 Season</div>
   </div>
@@ -318,32 +333,32 @@
     <div id="hero-card" class="hero-card">
       <div class="loading-hero">&#9203; Loading latest report&hellip;</div>
     </div>
-    <div class="evac-section">
-      <div class="evac-label">Evacuation Addresses by Level &mdash; Active Fires Only</div>
+    <div class="evac-section" id="evac-section" style="display:none">
+      <div class="evac-label">Current Evacuation Zones by Level &mdash; Active Large Fires Only</div>
       <div class="evac-grid">
         <div class="evac-box level1">
           <div class="evac-level">Level 1 &mdash; Be Ready</div>
-          <div class="evac-count" id="evac-l1">0</div>
+          <div class="evac-zones" id="evac-l1"><span class="evac-none">None</span></div>
         </div>
         <div class="evac-box level2">
           <div class="evac-level">Level 2 &mdash; Be Set</div>
-          <div class="evac-count" id="evac-l2">0</div>
+          <div class="evac-zones" id="evac-l2"><span class="evac-none">None</span></div>
         </div>
         <div class="evac-box level3">
           <div class="evac-level">Level 3 &mdash; Go Now</div>
-          <div class="evac-count" id="evac-l3">0</div>
+          <div class="evac-zones" id="evac-l3"><span class="evac-none">None</span></div>
         </div>
       </div>
     </div>
     <div class="struct-loss-section" id="struct-loss-section" style="display:none">
-      <div class="struct-loss-label">Structure Loss &mdash; All Reported Incidents YTD (WFIGS)</div>
+      <div class="struct-loss-label">Structure Loss &mdash; All Reported Incidents (WFIGS)</div>
       <table class="struct-loss-table">
         <thead>
           <tr>
             <th>Structure Type</th>
-            <th>Threatened</th>
-            <th>Damaged</th>
-            <th>Destroyed</th>
+            <th>Threatened<span class="th-sub">Active</span></th>
+            <th>Damaged<span class="th-sub">YTD</span></th>
+            <th>Destroyed<span class="th-sub">YTD</span></th>
           </tr>
         </thead>
         <tbody id="struct-loss-tbody"></tbody>
@@ -374,19 +389,9 @@
   <div id="error-area"></div>
   <div id="archive-container">
     <div class="table-card">
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Active Fires</th>
-            <th>Acres Burned</th>
-            <th>Report</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="loading-row"><td colspan="4">&#9203; Loading reports&hellip;</td></tr>
-        </tbody>
-      </table>
+      <table><tbody>
+        <tr class="loading-row"><td colspan="4">&#9203; Loading reports&hellip;</td></tr>
+      </tbody></table>
     </div>
   </div>
 
@@ -406,7 +411,7 @@
 </div>
 
 <footer>
-  <strong>Oregon Wildfire Daily Reports &mdash; 2026 Season</strong><br>
+  <strong>Oregon Wildfire Daily Reports</strong><br>
   Data sourced from
   <a href="https://geo.maps.arcgis.com/apps/instant/portfolio/index.html?appid=22d04c007866419c91ccf00d097526c8" target="_blank">OEM ArcGIS Dashboard</a>
   &nbsp;&bull;&nbsp;
@@ -561,9 +566,13 @@ function render(pdfs, data) {
   const evacZones     = (data && data.evac_zones) || {};
 
   // ── Hero card ──
+  const reportTimeBadge = data && data.report_time
+    ? `<div class="report-time-badge">Updated at <span class="time-val">${data.report_time}</span></div>`
+    : '';
   document.getElementById('hero-card').innerHTML = `
     <div class="hero-date-block">
       <div class="report-date">${fmtDate(latest.date_iso)}</div>
+      ${reportTimeBadge}
       <div class="report-sub">Data sourced from OEM ArcGIS Dashboard &amp; ODF</div>
     </div>
     <div class="hero-stats">
@@ -593,18 +602,19 @@ function render(pdfs, data) {
       <a class="btn-secondary" href="${latest.filename}" download>&#8595; Download PDF</a>
     </div>`;
 
-  // ── Evacuation address counts ──
-  function setEvacCount(id, zones) {
+  // ── Evacuation zone boxes ──
+  function fillEvacBox(id, zones) {
     const el = document.getElementById(id);
     if (!el) return;
-    const count = zones && zones.length
-      ? zones.reduce((acc, z) => acc + z.split(';').filter(a => a.trim()).length, 0)
-      : 0;
-    el.textContent = count;
+    el.innerHTML = zones && zones.length
+      ? zones.map(z => `<div>${z}</div>`).join('')
+      : '<span class="evac-none">None</span>';
   }
-  setEvacCount('evac-l1', evacZones.level1);
-  setEvacCount('evac-l2', evacZones.level2);
-  setEvacCount('evac-l3', evacZones.level3);
+  fillEvacBox('evac-l3', evacZones.level3);
+  fillEvacBox('evac-l2', evacZones.level2);
+  fillEvacBox('evac-l1', evacZones.level1);
+  const evacEl = document.getElementById('evac-section');
+  if (evacEl) evacEl.style.display = '';
 
   // ── Structure loss table ──
   const sl = data && data.struct_loss && data.struct_loss.oregon_totals;
