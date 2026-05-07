@@ -2,7 +2,7 @@
   "last_updated": "2026-05-07",
   "report_time": "8:40 AM PDT",
   "active_large_fires": 0,
-  "total_large_fire_acres": 252.04999999999998,
+  "total_large_fire_acres": 162,
   "structures_lost": 0,
   "evac_triggering_fires": 0,
   "evac_zones": {
@@ -511,7 +511,7 @@
     {
       "year": 2026,
       "total_fires": 35,
-      "total_acres": 252.04999999999998,
+      "total_acres": 162,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
