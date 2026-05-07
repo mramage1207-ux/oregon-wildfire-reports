@@ -1,12 +1,14 @@
 {
-  "last_updated": "2026-05-06",
-  "report_time": "2:59 PM PDT",
+  "last_updated": "2026-05-07",
+  "report_time": "7:37 PM PDT",
   "active_large_fires": 0,
-  "total_large_fire_acres": 162,
+  "total_large_fire_acres": 89.94999999999999,
   "structures_lost": 0,
-  "evac_triggering_fires": 0,
+  "evac_triggering_fires": 1,
   "evac_zones": {
-    "level3": [],
+    "level3": [
+      "Tanner Creek \u2014 Coos County \u2014 Tanner Creek drainage area"
+    ],
     "level2": [],
     "level1": []
   },
@@ -502,26 +504,41 @@
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 2,
-      "total_acres": 162,
+      "total_fires": 31,
+      "total_acres": 89.94999999999999,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
       "largest_fire": {
-        "name": "Boardman Fire",
-        "county": "Morrow",
-        "acres": 150
+        "name": "Tanner Creek",
+        "county": "Coos",
+        "acres": 50.0
       },
       "notable_fires": [
         {
-          "name": "Boardman Fire",
-          "county": "Morrow",
-          "acres": 150
+          "name": "Tanner Creek",
+          "county": "Coos",
+          "acres": 50.0
         },
         {
-          "name": "Riverview Fire",
-          "county": "Deschutes",
-          "acres": 12
+          "name": "Indian Henry Piles RX West",
+          "county": "Clackamas",
+          "acres": 12.0
+        },
+        {
+          "name": "TUB MT TUMBLEWEED RX",
+          "county": "Malheur",
+          "acres": 12.0
+        },
+        {
+          "name": "Pinehurst",
+          "county": "Jackson",
+          "acres": 5.0
+        },
+        {
+          "name": "Tyee Rd",
+          "county": "Douglas",
+          "acres": 2.0
         }
       ]
     },
