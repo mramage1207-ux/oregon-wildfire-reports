@@ -10,8 +10,13 @@
       "Tanner Creek \u2014 Coos County \u2014 Tanner Creek drainage area"
     ],
     "level2": [],
-    "level1": []
+    "level1": [
+      "Tanner Creek \u2014 Coos County \u2014 Tanner Creek drainage area"
+    ]
   },
+  "evac_addresses_l1": 114,
+  "evac_addresses_l2": 0,
+  "evac_addresses_l3": 11,
   "struct_loss": {
     "date": "2026-05-06",
     "source": "NIFC WFIGS Current Incident Locations",

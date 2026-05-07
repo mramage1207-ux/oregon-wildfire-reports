@@ -599,17 +599,26 @@ function render(pdfs, data) {
     </div>`;
 
   // ── Evacuation address counts ──
-  function setEvacCount(id, zones) {
+  // Use OEM address counts from data.json (authoritative, matches PDF report).
+  // Falls back to counting fire entries if address counts unavailable.
+  function setEvacCount(id, addrCount, zones) {
     const el = document.getElementById(id);
     if (!el) return;
-    const count = zones && zones.length
-      ? zones.reduce((acc, z) => acc + z.split(';').filter(a => a.trim()).length, 0)
-      : 0;
-    el.textContent = count;
+    if (addrCount != null && addrCount !== '') {
+      el.textContent = Number(addrCount).toLocaleString();
+    } else {
+      const count = zones && zones.length
+        ? zones.reduce((acc, z) => acc + z.split(';').filter(a => a.trim()).length, 0)
+        : 0;
+      el.textContent = count;
+    }
   }
-  setEvacCount('evac-l1', evacZones.level1);
-  setEvacCount('evac-l2', evacZones.level2);
-  setEvacCount('evac-l3', evacZones.level3);
+  const evacAddrL1 = data && data.evac_addresses_l1 != null ? data.evac_addresses_l1 : null;
+  const evacAddrL2 = data && data.evac_addresses_l2 != null ? data.evac_addresses_l2 : null;
+  const evacAddrL3 = data && data.evac_addresses_l3 != null ? data.evac_addresses_l3 : null;
+  setEvacCount('evac-l1', evacAddrL1, evacZones.level1);
+  setEvacCount('evac-l2', evacAddrL2, evacZones.level2);
+  setEvacCount('evac-l3', evacAddrL3, evacZones.level3);
 
   // ── Structure loss table ──
   const sl = data && data.struct_loss && data.struct_loss.oregon_totals;
