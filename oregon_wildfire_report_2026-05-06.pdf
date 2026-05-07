@@ -3,8 +3,8 @@
 1 0 obj
 <<
 /Type /Pages
-/Count 7
-/Kids [ 4 0 R 13 0 R 16 0 R 19 0 R 22 0 R 25 0 R 28 0 R ]
+/Count 5
+/Kids [ 4 0 R 14 0 R 18 0 R 22 0 R 26 0 R ]
 >>
 endobj
 2 0 obj
@@ -27,10 +27,11 @@ endobj
 /F1 6 0 R
 /F1-0 7 0 R
 /F2 8 0 R
-/F3 9 0 R
-/F4 10 0 R
-/F5 11 0 R
-/F6 12 0 R
+/F2-0 9 0 R
+/F3 10 0 R
+/F4 11 0 R
+/F5 12 0 R
+/F6 13 0 R
 >>
 /ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
 >>
@@ -44,7 +45,7 @@ endobj
 endobj
 5 0 obj
 <<
-/Length 11477
+/Length 11557
 >>
 stream
 q
@@ -64,7 +65,7 @@ Q
 q
 1 0 0 1 450.864 4 cm
 q
-BT 1 0 0 1 0 28 Tm 127.832 0 Td 12 TL /F2 8 Tf .352941 .392157 .45098 rg (Wednesday, May 6, 2026 \267 7:37 PM PDT) Tj /F1 8 Tf  T* 28.016 0 Td (Automated Fire Monitoring Report) Tj  T* -93.8 0 Td (Sources: ODF \267 OEM ArcGIS \267 InciWeb \267 NIFC \267 Local Media) Tj T* -62.048 0 Td ET
+BT 1 0 0 1 0 28 Tm 127.832 0 Td 12 TL /F2 8 Tf .352941 .392157 .45098 rg (Wednesday, May 6, 2026 \267 7:46 PM PDT) Tj /F1 8 Tf  T* 28.016 0 Td (Automated Fire Monitoring Report) Tj  T* -93.8 0 Td (Sources: ODF \267 OEM ArcGIS \267 InciWeb \267 NIFC \267 Local Media) Tj T* -62.048 0 Td ET
 Q
 Q
 q
@@ -111,15 +112,15 @@ BT /F1 10 Tf 12 TL ET
 q
 1 0 0 1 3 51.5 cm
 q
-.8 0 0 rg
-BT 1 0 0 1 0 -8 Tm /F2 20 Tf 12 TL 34.82286 0 Td (19) Tj T* -34.82286 0 Td ET
+.619608 .305882 0 rg
+BT 1 0 0 1 0 -8 Tm /F2 20 Tf 12 TL 40.38286 0 Td (1) Tj T* -40.38286 0 Td ET
 Q
 Q
 q
 1 0 0 1 3 11 cm
 q
 .184314 .309804 .309804 rg
-BT 1 0 0 1 0 11 Tm /F1 7 Tf 9 TL 13.27036 0 Td (ACTIVE WILDFIRES) Tj T* 6.222997 0 Td (\(WFIGS Oregon\)) Tj T* -19.49336 0 Td ET
+BT 1 0 0 1 0 11 Tm /F1 7 Tf 9 TL 5.101357 0 Td (LARGE FIRES TRACKED) Tj T* .6755 0 Td (YTD \(100+ acres or evac\)) Tj T* -5.776857 0 Td ET
 Q
 Q
 q
@@ -145,14 +146,14 @@ q
 1 0 0 1 3 51.5 cm
 q
 .619608 .305882 0 rg
-BT 1 0 0 1 0 -8 Tm /F2 20 Tf 12 TL 34.82286 0 Td (12) Tj T* -34.82286 0 Td ET
+BT 1 0 0 1 0 -8 Tm /F2 20 Tf 12 TL 40.38286 0 Td (1) Tj T* -40.38286 0 Td ET
 Q
 Q
 q
-1 0 0 1 3 11 cm
+1 0 0 1 3 15.5 cm
 q
 .184314 .309804 .309804 rg
-BT 1 0 0 1 0 11 Tm /F1 7 Tf 9 TL 9.966357 0 Td (PRESCRIBED BURNS) Tj T* -4.088 0 Td (ACTIVE \(WFIGS Oregon\)) Tj T* -5.878357 0 Td ET
+BT 1 0 0 1 0 2 Tm /F1 7 Tf 9 TL 9.182357 0 Td (ACTIVE LARGE FIRES) Tj T* -9.182357 0 Td ET
 Q
 Q
 q
@@ -185,7 +186,7 @@ q
 1 0 0 1 3 15.5 cm
 q
 .184314 .309804 .309804 rg
-BT 1 0 0 1 0 2 Tm /F1 7 Tf 9 TL 6.077857 0 Td (CONTAINED FIRES YTD) Tj T* -6.077857 0 Td ET
+BT 1 0 0 1 0 2 Tm /F1 7 Tf 9 TL 14.05086 0 Td (CONTAINED FIRES) Tj T* -14.05086 0 Td ET
 Q
 Q
 q
@@ -211,14 +212,14 @@ q
 1 0 0 1 3 51.5 cm
 q
 .545098 0 0 rg
-BT 1 0 0 1 0 -8 Tm /F2 20 Tf 12 TL 26.48286 0 Td (64.8) Tj T* -26.48286 0 Td ET
+BT 1 0 0 1 0 -8 Tm /F2 20 Tf 12 TL 26.48286 0 Td (50.0) Tj T* -26.48286 0 Td ET
 Q
 Q
 q
 1 0 0 1 3 11 cm
 q
 .184314 .309804 .309804 rg
-BT 1 0 0 1 0 11 Tm /F1 7 Tf 9 TL 1.989857 0 Td (TOTAL ACRES YTD \(Active) Tj T* 37.345 0 Td (WF\)) Tj T* -39.33486 0 Td ET
+BT 1 0 0 1 0 11 Tm /F1 7 Tf 9 TL 2.570857 0 Td (TOTAL ACRES YTD \(Large) Tj T* 34.4295 0 Td (Fires\)) Tj T* -37.00036 0 Td ET
 Q
 Q
 q
@@ -310,7 +311,7 @@ q
 1 0 0 1 3 51.5 cm
 q
 .8 0 0 rg
-BT 1 0 0 1 0 -8 Tm /F2 20 Tf 12 TL 34.82286 0 Td (19) Tj T* -34.82286 0 Td ET
+BT 1 0 0 1 0 -8 Tm /F2 20 Tf 12 TL 40.38286 0 Td (1) Tj T* -40.38286 0 Td ET
 Q
 Q
 q
@@ -770,7 +771,13 @@ ET
 0.4 0.4 0.4 rg
 BT
 1 0 0 1 18 10 Tm
-(Data\040sources\072\040OEM\040Fires\040Statistics\040Dashboard\040\050active\040fire\040counts\054\040acres\051\073\040NIFC\040WFIGS\040Current\040Incident\040Locations\040API\040\050all\040Oregon\040incidents\054\040auto\055fetched\051\073\040Open\055Meteo\040\050weather\051\073\040AirNow\056gov\040\050AQI\051\056\040Generated\072\040Wed\040May\0406\054\0402026\040\174\040v2\040\227\040WFIGS\040fire\040data\040integrated\056) Tj
+(Data\040sources\072\040OEM\040Fires\040Statistics\040Dashboard\040\050active\040fire\040counts\054\040acres\051\073\040NIFC\040WFIGS\040Current\040Incident\040Locations\040API\040\050large\040fire\040records\054\040auto\055fetched\051\073\040Open\055Meteo\040\050weather\051\073\040AirNow\056gov\040\050AQI\051\056\040Large\040fires\040per\040NWCC\040definition\040\050) Tj
+/F2-0 5.5 Tf
+6.6 TL
+(³) Tj
+/F1-0 5.5 Tf
+6.6 TL
+(100\040acres\040or\040evacuation\040order\051\056\040Generated\072\040Wed\040May\0406\054\0402026\040\174\040v3) Tj
 T*
 ET
 Q
@@ -807,6 +814,14 @@ endobj
 endobj
 9 0 obj
 <<
+/BaseFont /Symbol
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+10 0 obj
+<<
 /BaseFont /Helvetica-Oblique
 /Encoding /WinAnsiEncoding
 /Name /F3
@@ -814,7 +829,7 @@ endobj
 /Type /Font
 >>
 endobj
-10 0 obj
+11 0 obj
 <<
 /BaseFont /Symbol
 /Name /F4
@@ -822,7 +837,7 @@ endobj
 /Type /Font
 >>
 endobj
-11 0 obj
+12 0 obj
 <<
 /BaseFont /ZapfDingbats
 /Name /F5
@@ -830,7 +845,7 @@ endobj
 /Type /Font
 >>
 endobj
-12 0 obj
+13 0 obj
 <<
 /BaseFont /Times-Roman
 /Encoding /WinAnsiEncoding
@@ -839,19 +854,20 @@ endobj
 /Type /Font
 >>
 endobj
-13 0 obj
+14 0 obj
 <<
-/Contents 14 0 R
+/Contents 15 0 R
 /MediaBox [ 0 0 792 612 ]
 /Resources <<
 /Font <<
 /F1 6 0 R
-/F1-0 15 0 R
+/F1-0 16 0 R
 /F2 8 0 R
-/F3 9 0 R
-/F4 10 0 R
-/F5 11 0 R
-/F6 12 0 R
+/F2-0 17 0 R
+/F3 10 0 R
+/F4 11 0 R
+/F5 12 0 R
+/F6 13 0 R
 >>
 /ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
 >>
@@ -863,9 +879,9 @@ endobj
 /Parent 1 0 R
 >>
 endobj
-14 0 obj
+15 0 obj
 <<
-/Length 19253
+/Length 13871
 >>
 stream
 q
@@ -887,117 +903,107 @@ BT 1 0 0 1 0 1 Tm /F2 11 Tf 12 TL (2. LARGE FIRES LOG \227 YEAR TO DATE) Tj T* E
 Q
 Q
 q
-1 0 0 1 32.4 289.1 cm
+1 0 0 1 32.4 429.1 cm
 q
 .545098 0 0 rg
-n 0 260 727.2 -32 re f*
+n 0 120 727.2 -32 re f*
 1 1 1 rg
-n 0 228 727.2 -88 re f*
-.968627 .968627 .968627 rg
-n 0 140 727.2 -28 re f*
-1 1 1 rg
-n 0 112 727.2 -28 re f*
-.968627 .968627 .968627 rg
-n 0 84 727.2 -28 re f*
-1 1 1 rg
-n 0 56 727.2 -28 re f*
-.968627 .968627 .968627 rg
-n 0 28 727.2 -28 re f*
+n 0 88 727.2 -88 re f*
 1 1 1 rg
 BT /F1 10 Tf 12 TL ET
 q
-1 0 0 1 5 244 cm
+1 0 0 1 5 104 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL .956 0 Td (Status) Tj T* -0.956 0 Td ET
 Q
 Q
 q
-1 0 0 1 41.36 244 cm
+1 0 0 1 41.36 104 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 8.384 0 Td (Fire Name) Tj T* -8.384 0 Td ET
 Q
 Q
 q
-1 0 0 1 106.808 244 cm
+1 0 0 1 106.808 104 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 6.676 0 Td (County) Tj T* -6.676 0 Td ET
 Q
 Q
 q
-1 0 0 1 157.712 244 cm
+1 0 0 1 157.712 104 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 14.692 0 Td (Location) Tj T* -14.692 0 Td ET
 Q
 Q
 q
-1 0 0 1 230.432 232 cm
+1 0 0 1 230.432 92 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 16 Tm /F2 8 Tf 12 TL 1.332 0 Td (Discovere) Tj T* 16.676 0 Td (d) Tj T* -18.008 0 Td ET
 Q
 Q
 q
-1 0 0 1 281.336 244 cm
+1 0 0 1 281.336 104 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL .896 0 Td (Contained) Tj T* -0.896 0 Td ET
 Q
 Q
 q
-1 0 0 1 332.24 244 cm
+1 0 0 1 332.24 104 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 8.448 0 Td (Cause) Tj T* -8.448 0 Td ET
 Q
 Q
 q
-1 0 0 1 383.144 244 cm
+1 0 0 1 383.144 104 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 2.064 0 Td (Acres) Tj T* -2.064 0 Td ET
 Q
 Q
 q
-1 0 0 1 419.504 232 cm
+1 0 0 1 419.504 92 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 16 Tm /F2 8 Tf 12 TL .736 0 Td (Contai) Tj T* 5.332 0 Td (n %) Tj T* -6.068 0 Td ET
 Q
 Q
 q
-1 0 0 1 455.864 232 cm
+1 0 0 1 455.864 92 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 16 Tm /F2 8 Tf 12 TL 7.476 0 Td (Peak) Tj T* 0 0 Td (Evac) Tj T* -7.476 0 Td ET
 Q
 Q
 q
-1 0 0 1 499.496 244 cm
+1 0 0 1 499.496 104 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL .448 0 Td (Structures) Tj T* -0.448 0 Td ET
 Q
 Q
 q
-1 0 0 1 550.4 244 cm
+1 0 0 1 550.4 104 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 3.764 0 Td (Inj.) Tj T* -3.764 0 Td ET
 Q
 Q
 q
-1 0 0 1 579.488 232 cm
+1 0 0 1 579.488 92 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 16 Tm /F2 8 Tf 12 TL .208 0 Td (Fatal) Tj T* 8.224 0 Td (.) Tj T* -8.432 0 Td ET
 Q
 Q
 q
-1 0 0 1 608.576 244 cm
+1 0 0 1 608.576 104 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 45.7 0 Td (Notes) Tj T* -45.7 0 Td ET
@@ -1005,581 +1011,91 @@ Q
 Q
 0 0 0 rg
 q
-1 0 0 1 5 204 cm
+1 0 0 1 5 64 cm
 q
 .8 0 0 rg
 BT 1 0 0 1 0 12.5 Tm /F2 7.5 Tf 10 TL /F5 7.5 Tf 10 TL (l) Tj /F2 7.5 Tf 10 TL T* (Active) Tj T* ET
 Q
 Q
 q
-1 0 0 1 41.36 214 cm
+1 0 0 1 41.36 74 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Tanner Creek) Tj T* ET
 Q
 Q
 q
-1 0 0 1 106.808 214 cm
+1 0 0 1 106.808 74 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Coos) Tj T* ET
 Q
 Q
 q
-1 0 0 1 157.712 194 cm
+1 0 0 1 157.712 54 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 22.5 Tm /F1 7.5 Tf 10 TL (Coos County \227) Tj T* (Tanner Creek) Tj T* (drainage area) Tj T* ET
 Q
 Q
 q
-1 0 0 1 230.432 214 cm
+1 0 0 1 230.432 74 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (2026-02-04) Tj T* ET
 Q
 Q
 q
-1 0 0 1 281.336 214 cm
+1 0 0 1 281.336 74 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
 Q
 Q
 q
-1 0 0 1 332.24 214 cm
+1 0 0 1 332.24 74 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Human) Tj T* ET
 Q
 Q
 q
-1 0 0 1 383.144 214 cm
+1 0 0 1 383.144 74 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (50.0) Tj T* ET
 Q
 Q
 q
-1 0 0 1 419.504 214 cm
+1 0 0 1 419.504 74 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0%) Tj T* ET
 Q
 Q
 q
-1 0 0 1 455.864 214 cm
+1 0 0 1 455.864 74 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Level 3) Tj T* ET
 Q
 Q
 q
-1 0 0 1 499.496 214 cm
+1 0 0 1 499.496 74 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
 Q
 Q
 q
-1 0 0 1 550.4 214 cm
+1 0 0 1 550.4 74 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
 Q
 Q
 q
-1 0 0 1 579.488 214 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 608.576 144 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 72.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. Active) Tj T* (50-acre WF in Coos County since) Tj T* (Feb 4, 2026. OEM Population) Tj T* (Impacts dashboard confirms) Tj T* (active evacuation zones \(114) Tj T* (Level-1, 11 Level-3 addresses as) Tj T* (of 2026-05-06\). Largest active) Tj T* (wildfire in Oregon.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 116 cm
-q
-.8 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F2 7.5 Tf 10 TL /F5 7.5 Tf 10 TL (l) Tj /F2 7.5 Tf 10 TL T* (Active) Tj T* ET
-Q
-Q
-q
-1 0 0 1 41.36 126 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Pinehurst) Tj T* ET
-Q
-Q
-q
-1 0 0 1 106.808 126 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jackson) Tj T* ET
-Q
-Q
-q
-1 0 0 1 157.712 116 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Jackson County,) Tj T* (Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 230.432 126 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (2026-05-05) Tj T* ET
-Q
-Q
-q
-1 0 0 1 281.336 126 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 332.24 116 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Undetermin) Tj T* (ed) Tj T* ET
-Q
-Q
-q
-1 0 0 1 383.144 126 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (5.0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 126 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0%) Tj T* ET
-Q
-Q
-q
-1 0 0 1 455.864 126 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (None) Tj T* ET
-Q
-Q
-q
-1 0 0 1 499.496 126 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 126 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 579.488 126 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 608.576 116 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF) Tj T* (incident in Jackson County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 88 cm
-q
-.8 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F2 7.5 Tf 10 TL /F5 7.5 Tf 10 TL (l) Tj /F2 7.5 Tf 10 TL T* (Active) Tj T* ET
-Q
-Q
-q
-1 0 0 1 41.36 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Tyee Rd) Tj T* ET
-Q
-Q
-q
-1 0 0 1 106.808 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Douglas) Tj T* ET
-Q
-Q
-q
-1 0 0 1 157.712 88 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Douglas County,) Tj T* (Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 230.432 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (2026-04-09) Tj T* ET
-Q
-Q
-q
-1 0 0 1 281.336 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 332.24 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Human) Tj T* ET
-Q
-Q
-q
-1 0 0 1 383.144 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (2.0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0%) Tj T* ET
-Q
-Q
-q
-1 0 0 1 455.864 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (None) Tj T* ET
-Q
-Q
-q
-1 0 0 1 499.496 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 579.488 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 608.576 88 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF) Tj T* (incident in Douglas County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 60 cm
-q
-.8 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F2 7.5 Tf 10 TL /F5 7.5 Tf 10 TL (l) Tj /F2 7.5 Tf 10 TL T* (Active) Tj T* ET
-Q
-Q
-q
-1 0 0 1 41.36 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0136) Tj T* ET
-Q
-Q
-q
-1 0 0 1 106.808 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Wheeler) Tj T* ET
-Q
-Q
-q
-1 0 0 1 157.712 60 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Wheeler County,) Tj T* (Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 230.432 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (2026-05-02) Tj T* ET
-Q
-Q
-q
-1 0 0 1 281.336 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 332.24 60 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Undetermin) Tj T* (ed) Tj T* ET
-Q
-Q
-q
-1 0 0 1 383.144 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (2.0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0%) Tj T* ET
-Q
-Q
-q
-1 0 0 1 455.864 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (None) Tj T* ET
-Q
-Q
-q
-1 0 0 1 499.496 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 579.488 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 608.576 60 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF) Tj T* (incident in Wheeler County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 32 cm
-q
-.8 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F2 7.5 Tf 10 TL /F5 7.5 Tf 10 TL (l) Tj /F2 7.5 Tf 10 TL T* (Active) Tj T* ET
-Q
-Q
-q
-1 0 0 1 41.36 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Wells Creek) Tj T* ET
-Q
-Q
-q
-1 0 0 1 106.808 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jackson) Tj T* ET
-Q
-Q
-q
-1 0 0 1 157.712 32 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Jackson County,) Tj T* (Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 230.432 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (2026-05-04) Tj T* ET
-Q
-Q
-q
-1 0 0 1 281.336 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 332.24 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Natural) Tj T* ET
-Q
-Q
-q
-1 0 0 1 383.144 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (1.5) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0%) Tj T* ET
-Q
-Q
-q
-1 0 0 1 455.864 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (None) Tj T* ET
-Q
-Q
-q
-1 0 0 1 499.496 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 579.488 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 608.576 32 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF) Tj T* (incident in Jackson County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 4 cm
-q
-.8 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F2 7.5 Tf 10 TL /F5 7.5 Tf 10 TL (l) Tj /F2 7.5 Tf 10 TL T* (Active) Tj T* ET
-Q
-Q
-q
-1 0 0 1 41.36 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Boswell Fire) Tj T* ET
-Q
-Q
-q
-1 0 0 1 106.808 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Douglas) Tj T* ET
-Q
-Q
-q
-1 0 0 1 157.712 4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Douglas County,) Tj T* (Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 230.432 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (2026-05-05) Tj T* ET
-Q
-Q
-q
-1 0 0 1 281.336 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 332.24 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Human) Tj T* ET
-Q
-Q
-q
-1 0 0 1 383.144 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (1.5) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0%) Tj T* ET
-Q
-Q
-q
-1 0 0 1 455.864 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (None) Tj T* ET
-Q
-Q
-q
-1 0 0 1 499.496 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 579.488 14 cm
+1 0 0 1 579.488 74 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
@@ -1589,7 +1105,7 @@ q
 1 0 0 1 608.576 4 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF) Tj T* (incident in Douglas County.) Tj T* ET
+BT 1 0 0 1 0 72.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. Active) Tj T* (50-acre WF in Coos County since) Tj T* (Feb 4, 2026. OEM Population) Tj T* (Impacts dashboard confirms) Tj T* (active evacuation zones \(114) Tj T* (Level-1, 11 Level-3 addresses as) Tj T* (of 2026-05-06\). Largest active) Tj T* (wildfire in Oregon.) Tj T* ET
 Q
 Q
 q
@@ -1597,34 +1113,29 @@ q
 1 j
 .8 .8 .8 RG
 .4 w
-n 0 260 m 727.2 260 l S
+n 0 120 m 727.2 120 l S
 n 0 0 m 727.2 0 l S
-n 0 0 m 0 260 l S
-n 727.2 0 m 727.2 260 l S
-n 0 228 m 727.2 228 l S
-n 0 140 m 727.2 140 l S
-n 0 112 m 727.2 112 l S
-n 0 84 m 727.2 84 l S
-n 0 56 m 727.2 56 l S
-n 0 28 m 727.2 28 l S
-n 36.36 0 m 36.36 260 l S
-n 101.808 0 m 101.808 260 l S
-n 152.712 0 m 152.712 260 l S
-n 225.432 0 m 225.432 260 l S
-n 276.336 0 m 276.336 260 l S
-n 327.24 0 m 327.24 260 l S
-n 378.144 0 m 378.144 260 l S
-n 414.504 0 m 414.504 260 l S
-n 450.864 0 m 450.864 260 l S
-n 494.496 0 m 494.496 260 l S
-n 545.4 0 m 545.4 260 l S
-n 574.488 0 m 574.488 260 l S
-n 603.576 0 m 603.576 260 l S
+n 0 0 m 0 120 l S
+n 727.2 0 m 727.2 120 l S
+n 0 88 m 727.2 88 l S
+n 36.36 0 m 36.36 120 l S
+n 101.808 0 m 101.808 120 l S
+n 152.712 0 m 152.712 120 l S
+n 225.432 0 m 225.432 120 l S
+n 276.336 0 m 276.336 120 l S
+n 327.24 0 m 327.24 120 l S
+n 378.144 0 m 378.144 120 l S
+n 414.504 0 m 414.504 120 l S
+n 450.864 0 m 450.864 120 l S
+n 494.496 0 m 494.496 120 l S
+n 545.4 0 m 545.4 120 l S
+n 574.488 0 m 574.488 120 l S
+n 603.576 0 m 603.576 120 l S
 Q
 Q
 Q
 q
-1 0 0 1 38.4 286.6 cm
+1 0 0 1 38.4 426.6 cm
 q
 1.5 w
 1 J
@@ -1633,96 +1144,80 @@ n 0 0 m 715.2 0 l S
 Q
 Q
 q
-1 0 0 1 38.4 266.6 cm
+1 0 0 1 38.4 406.6 cm
 q
 BT 1 0 0 1 0 1 Tm 12 TL /F2 11 Tf .545098 0 0 rg (3. CURRENT EVACUATIONS & CLOSURES) Tj T* ET
 Q
 Q
 q
-1 0 0 1 32.4 61.6 cm
+1 0 0 1 32.4 313.6 cm
 q
 .8 0 0 rg
-n 0 202 727.2 -32 re f*
+n 0 90 727.2 -32 re f*
 1 1 1 rg
-n 0 170 727.2 -58 re f*
-.968627 .968627 .968627 rg
-n 0 112 727.2 -28 re f*
-1 1 1 rg
-n 0 84 727.2 -28 re f*
-.968627 .968627 .968627 rg
-n 0 56 727.2 -28 re f*
-1 1 1 rg
-n 0 28 727.2 -28 re f*
+n 0 58 727.2 -58 re f*
 1 .909804 .909804 rg
-n 0 170 727.2 -58 re f*
-1 1 1 rg
-n 0 112 727.2 -28 re f*
-1 1 1 rg
-n 0 84 727.2 -28 re f*
-1 1 1 rg
-n 0 56 727.2 -28 re f*
-1 1 1 rg
-n 0 28 727.2 -28 re f*
+n 0 58 727.2 -58 re f*
 1 1 1 rg
 BT /F1 10 Tf 12 TL ET
 q
-1 0 0 1 5 186 cm
+1 0 0 1 5 74 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 12.02 0 Td (Fire Name) Tj T* -12.02 0 Td ET
 Q
 Q
 q
-1 0 0 1 77.72 186 cm
+1 0 0 1 77.72 74 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 6.676 0 Td (County) Tj T* -6.676 0 Td ET
 Q
 Q
 q
-1 0 0 1 128.624 186 cm
+1 0 0 1 128.624 74 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 46.764 0 Td (Affected Areas) Tj T* -46.764 0 Td ET
 Q
 Q
 q
-1 0 0 1 288.608 186 cm
+1 0 0 1 288.608 74 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 3.408 0 Td (Evac Level) Tj T* -3.408 0 Td ET
 Q
 Q
 q
-1 0 0 1 346.784 186 cm
+1 0 0 1 346.784 74 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 19.136 0 Td (Status) Tj T* -19.136 0 Td ET
 Q
 Q
 q
-1 0 0 1 419.504 174 cm
+1 0 0 1 419.504 62 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 16 Tm /F2 8 Tf 12 TL 6.688 0 Td (Structures at) Tj T* 16.224 0 Td (Risk) Tj T* -22.912 0 Td ET
 Q
 Q
 q
-1 0 0 1 492.224 186 cm
+1 0 0 1 492.224 74 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 3.764 0 Td (Inj.) Tj T* -3.764 0 Td ET
 Q
 Q
 q
-1 0 0 1 521.312 174 cm
+1 0 0 1 521.312 62 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 16 Tm /F2 8 Tf 12 TL .208 0 Td (Fatal) Tj T* 8.224 0 Td (.) Tj T* -8.432 0 Td ET
 Q
 Q
 q
-1 0 0 1 550.4 186 cm
+1 0 0 1 550.4 74 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 74.788 0 Td (Notes) Tj T* -74.788 0 Td ET
@@ -1730,1467 +1225,91 @@ Q
 Q
 0 0 0 rg
 q
-1 0 0 1 5 156 cm
+1 0 0 1 5 44 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Tanner Creek) Tj T* ET
 Q
 Q
 q
-1 0 0 1 77.72 156 cm
+1 0 0 1 77.72 44 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Coos) Tj T* ET
 Q
 Q
 q
-1 0 0 1 128.624 156 cm
+1 0 0 1 128.624 44 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Coos County \227 Tanner Creek drainage area) Tj T* ET
 Q
 Q
 q
-1 0 0 1 288.608 156 cm
+1 0 0 1 288.608 44 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Level 3) Tj T* ET
 Q
 Q
 q
-1 0 0 1 346.784 156 cm
+1 0 0 1 346.784 44 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Active) Tj T* ET
 Q
 Q
 q
-1 0 0 1 419.504 156 cm
+1 0 0 1 419.504 44 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
 Q
 Q
 q
-1 0 0 1 492.224 156 cm
+1 0 0 1 492.224 44 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
 Q
 Q
 q
-1 0 0 1 521.312 156 cm
+1 0 0 1 521.312 44 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
 Q
 Q
 q
-1 0 0 1 550.4 116 cm
+1 0 0 1 550.4 4 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 42.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. Active 50-acre WF in Coos) Tj T* (County since Feb 4, 2026. OEM Population) Tj T* (Impacts dashboard confirms active evacuation) Tj T* (zones \(114 Level-1, 11 Level-3 addresses as of) Tj T* (2026-05-06\). Largest active wildfire in Oregon.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 5 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Pinehurst) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jackson) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jackson County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 98 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 88 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Jackson) Tj T* (County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Tyee Rd) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Douglas) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Douglas County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 70 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 60 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Douglas) Tj T* (County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0136) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Wheeler) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Wheeler County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 42 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 32 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Wheeler) Tj T* (County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Wells Creek) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jackson) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jackson County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Jackson) Tj T* (County.) Tj T* ET
-Q
-Q
-q
 1 J
 1 j
 .8 .8 .8 RG
 .4 w
-n 0 202 m 727.2 202 l S
-n 0 0 m 0 202 l S
-n 727.2 0 m 727.2 202 l S
+n 0 90 m 727.2 90 l S
 n 0 0 m 727.2 0 l S
-n 0 170 m 727.2 170 l S
-n 0 112 m 727.2 112 l S
-n 0 84 m 727.2 84 l S
-n 0 56 m 727.2 56 l S
-n 0 28 m 727.2 28 l S
-n 72.72 0 m 72.72 202 l S
-n 123.624 0 m 123.624 202 l S
-n 283.608 0 m 283.608 202 l S
-n 341.784 0 m 341.784 202 l S
-n 414.504 0 m 414.504 202 l S
-n 487.224 0 m 487.224 202 l S
-n 516.312 0 m 516.312 202 l S
-n 545.4 0 m 545.4 202 l S
+n 0 0 m 0 90 l S
+n 727.2 0 m 727.2 90 l S
+n 0 58 m 727.2 58 l S
+n 72.72 0 m 72.72 90 l S
+n 123.624 0 m 123.624 90 l S
+n 283.608 0 m 283.608 90 l S
+n 341.784 0 m 341.784 90 l S
+n 414.504 0 m 414.504 90 l S
+n 487.224 0 m 487.224 90 l S
+n 516.312 0 m 516.312 90 l S
+n 545.4 0 m 545.4 90 l S
 Q
 Q
 Q
- 
-Q
-
-q
-0.0 0.0 792 612 re
-W
-n
-1 0 0 1 0 0 cm
-BT
-/F1-0 12 Tf
-14.4 TL
-ET
-BT
-/F1-0 5.5 Tf
-6.6 TL
-ET
-0.4 0.4 0.4 rg
-BT
-1 0 0 1 18 10 Tm
-(Data\040sources\072\040OEM\040Fires\040Statistics\040Dashboard\040\050active\040fire\040counts\054\040acres\051\073\040NIFC\040WFIGS\040Current\040Incident\040Locations\040API\040\050all\040Oregon\040incidents\054\040auto\055fetched\051\073\040Open\055Meteo\040\050weather\051\073\040AirNow\056gov\040\050AQI\051\056\040Generated\072\040Wed\040May\0406\054\0402026\040\174\040v2\040\227\040WFIGS\040fire\040data\040integrated\056) Tj
-T*
-ET
-Q
-
-
-endstream
-endobj
-15 0 obj
-<<
-/BaseFont /Helvetica
-/Encoding /WinAnsiEncoding
-/Name /F1
-/Subtype /Type1
-/Type /Font
->>
-endobj
-16 0 obj
-<<
-/Contents 17 0 R
-/MediaBox [ 0 0 792 612 ]
-/Resources <<
-/Font <<
-/F1 6 0 R
-/F1-0 18 0 R
-/F2 8 0 R
-/F3 9 0 R
-/F4 10 0 R
-/F5 11 0 R
-/F6 12 0 R
->>
-/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
->>
-/Rotate 0
-/Trans <<
->>
-/Type /Page
-/Annots [ ]
-/Parent 1 0 R
->>
-endobj
-17 0 obj
-<<
-/Length 20329
->>
-stream
-q
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 32.4 169.6 cm
-q
-.8 0 0 rg
-n 0 404 727.2 -32 re f*
-1 1 1 rg
-n 0 372 727.2 -28 re f*
-.968627 .968627 .968627 rg
-n 0 344 727.2 -28 re f*
-1 1 1 rg
-n 0 316 727.2 -28 re f*
-.968627 .968627 .968627 rg
-n 0 288 727.2 -28 re f*
-1 1 1 rg
-n 0 260 727.2 -28 re f*
-.968627 .968627 .968627 rg
-n 0 232 727.2 -28 re f*
-1 1 1 rg
-n 0 204 727.2 -28 re f*
-.968627 .968627 .968627 rg
-n 0 176 727.2 -28 re f*
-1 1 1 rg
-n 0 148 727.2 -28 re f*
-.968627 .968627 .968627 rg
-n 0 120 727.2 -28 re f*
-1 1 1 rg
-n 0 92 727.2 -28 re f*
-.968627 .968627 .968627 rg
-n 0 64 727.2 -18 re f*
-1 1 1 rg
-n 0 46 727.2 -18 re f*
-.968627 .968627 .968627 rg
-n 0 28 727.2 -28 re f*
-1 1 1 rg
-n 0 372 727.2 -28 re f*
-1 1 1 rg
-n 0 344 727.2 -28 re f*
-1 1 1 rg
-n 0 316 727.2 -28 re f*
-1 1 1 rg
-n 0 288 727.2 -28 re f*
-1 1 1 rg
-n 0 260 727.2 -28 re f*
-1 1 1 rg
-n 0 232 727.2 -28 re f*
-1 1 1 rg
-n 0 204 727.2 -28 re f*
-1 1 1 rg
-n 0 176 727.2 -28 re f*
-1 1 1 rg
-n 0 148 727.2 -28 re f*
-1 1 1 rg
-n 0 120 727.2 -28 re f*
-1 1 1 rg
-n 0 92 727.2 -28 re f*
-1 1 1 rg
-n 0 64 727.2 -18 re f*
-1 1 1 rg
-n 0 46 727.2 -18 re f*
-1 1 1 rg
-n 0 28 727.2 -28 re f*
-1 1 1 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 5 388 cm
-q
-1 1 1 rg
-BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 12.02 0 Td (Fire Name) Tj T* -12.02 0 Td ET
-Q
-Q
-q
-1 0 0 1 77.72 388 cm
-q
-1 1 1 rg
-BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 6.676 0 Td (County) Tj T* -6.676 0 Td ET
-Q
-Q
-q
-1 0 0 1 128.624 388 cm
-q
-1 1 1 rg
-BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 46.764 0 Td (Affected Areas) Tj T* -46.764 0 Td ET
-Q
-Q
-q
-1 0 0 1 288.608 388 cm
-q
-1 1 1 rg
-BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 3.408 0 Td (Evac Level) Tj T* -3.408 0 Td ET
-Q
-Q
-q
-1 0 0 1 346.784 388 cm
-q
-1 1 1 rg
-BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 19.136 0 Td (Status) Tj T* -19.136 0 Td ET
-Q
-Q
-q
-1 0 0 1 419.504 376 cm
-q
-1 1 1 rg
-BT 1 0 0 1 0 16 Tm /F2 8 Tf 12 TL 6.688 0 Td (Structures at) Tj T* 16.224 0 Td (Risk) Tj T* -22.912 0 Td ET
-Q
-Q
-q
-1 0 0 1 492.224 388 cm
-q
-1 1 1 rg
-BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 3.764 0 Td (Inj.) Tj T* -3.764 0 Td ET
-Q
-Q
-q
-1 0 0 1 521.312 376 cm
-q
-1 1 1 rg
-BT 1 0 0 1 0 16 Tm /F2 8 Tf 12 TL .208 0 Td (Fatal) Tj T* 8.224 0 Td (.) Tj T* -8.432 0 Td ET
-Q
-Q
-q
-1 0 0 1 550.4 388 cm
-q
-1 1 1 rg
-BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 74.788 0 Td (Notes) Tj T* -74.788 0 Td ET
-Q
-Q
-0 0 0 rg
-q
-1 0 0 1 5 358 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Boswell Fire) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 358 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Douglas) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 358 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Douglas County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 358 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 358 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 358 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 358 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 358 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 348 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Douglas) Tj T* (County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 330 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Perry) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 330 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Douglas) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 330 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Douglas County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 330 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 330 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 330 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 330 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 330 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 320 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Douglas) Tj T* (County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 302 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Kerby Peak) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 302 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Josephine) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 302 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Josephine County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 302 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 302 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 302 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 302 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 302 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 292 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Josephine) Tj T* (County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 274 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Lower Deck Fire) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 274 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jefferson) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 274 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jefferson County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 274 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 274 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 274 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 274 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 274 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 264 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Jefferson) Tj T* (County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 246 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Kerbyline) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 246 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Josephine) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 246 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Josephine County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 246 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 246 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 246 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 246 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 246 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 236 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Josephine) Tj T* (County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 218 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0139 BEAR) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 218 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jefferson) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 218 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jefferson County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 218 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 218 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 218 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 218 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 218 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 208 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Jefferson) Tj T* (County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 180 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Acorn Woman) Tj T* (Lake) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 190 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jackson) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 190 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jackson County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 190 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 190 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 190 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 190 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 190 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 180 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Jackson) Tj T* (County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 162 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Paradise Creek) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 162 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jackson) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 162 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jackson County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 162 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 162 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 162 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 162 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 162 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 152 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Jackson) Tj T* (County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 134 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (R Fork Quartz Crk) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 134 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Josephine) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 134 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Josephine County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 134 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 134 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 134 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 134 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 134 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 124 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Josephine) Tj T* (County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Western Middle) Tj T* (Deck) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 106 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jefferson) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 106 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jefferson County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 106 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 106 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 106 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 106 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 106 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Jefferson) Tj T* (County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 78 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Spencer Creek Rd) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 78 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Josephine) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 78 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Josephine County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 78 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 78 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 78 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 78 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 78 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 68 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Josephine) Tj T* (County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 50 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Upper Rock Creek) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 50 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Coos) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 50 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Coos County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 50 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 50 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 50 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 50 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 50 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 50 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Coos County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 32 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Elk Ridge) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 32 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Coos) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 32 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Coos County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 32 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 32 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 32 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 32 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 32 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 32 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Coos County.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 5 4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (E Antelope Rd) Tj T* (8130) Tj T* ET
-Q
-Q
-q
-1 0 0 1 77.72 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jackson) Tj T* ET
-Q
-Q
-q
-1 0 0 1 128.624 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jackson County, Oregon) Tj T* ET
-Q
-Q
-q
-1 0 0 1 288.608 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 346.784 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Unknown) Tj T* ET
-Q
-Q
-q
-1 0 0 1 419.504 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
-Q
-Q
-q
-1 0 0 1 492.224 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 521.312 14 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (\227) Tj T* ET
-Q
-Q
-q
-1 0 0 1 550.4 4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Jackson) Tj T* (County.) Tj T* ET
-Q
-Q
-q
-1 J
-1 j
-.8 .8 .8 RG
-.4 w
-n 0 404 m 727.2 404 l S
-n 0 372 m 0 404 l S
-n 0 0 m 0 372 l S
-n 727.2 372 m 727.2 404 l S
-n 727.2 0 m 727.2 372 l S
-n 0 0 m 727.2 0 l S
-n 0 372 m 727.2 372 l S
-n 72.72 372 m 72.72 404 l S
-n 123.624 372 m 123.624 404 l S
-n 283.608 372 m 283.608 404 l S
-n 341.784 372 m 341.784 404 l S
-n 414.504 372 m 414.504 404 l S
-n 487.224 372 m 487.224 404 l S
-n 516.312 372 m 516.312 404 l S
-n 545.4 372 m 545.4 404 l S
-n 0 344 m 727.2 344 l S
-n 0 316 m 727.2 316 l S
-n 0 288 m 727.2 288 l S
-n 0 260 m 727.2 260 l S
-n 0 232 m 727.2 232 l S
-n 0 204 m 727.2 204 l S
-n 0 176 m 727.2 176 l S
-n 0 148 m 727.2 148 l S
-n 0 120 m 727.2 120 l S
-n 0 92 m 727.2 92 l S
-n 0 64 m 727.2 64 l S
-n 0 46 m 727.2 46 l S
-n 0 28 m 727.2 28 l S
-n 72.72 0 m 72.72 372 l S
-n 123.624 0 m 123.624 372 l S
-n 283.608 0 m 283.608 372 l S
-n 341.784 0 m 341.784 372 l S
-n 414.504 0 m 414.504 372 l S
-n 487.224 0 m 487.224 372 l S
-n 516.312 0 m 516.312 372 l S
-n 545.4 0 m 545.4 372 l S
-Q
-Q
-Q
 q
-1 0 0 1 38.4 167.1 cm
+1 0 0 1 38.4 311.1 cm
 q
 1.5 w
 1 J
@@ -3199,69 +1318,75 @@ n 0 0 m 715.2 0 l S
 Q
 Q
 q
-1 0 0 1 38.4 147.1 cm
+1 0 0 1 38.4 291.1 cm
 q
 .545098 0 0 rg
 BT 1 0 0 1 0 1 Tm /F2 11 Tf 12 TL (4. COUNTY-BY-COUNTY SUMMARY) Tj T* ET
 Q
 Q
 q
-1 0 0 1 32.4 48.1 cm
+1 0 0 1 32.4 138.1 cm
 q
 .184314 .309804 .309804 rg
-n 0 96 727.2 -32 re f*
+n 0 150 727.2 -32 re f*
 1 1 1 rg
-n 0 64 727.2 -28 re f*
+n 0 118 727.2 -28 re f*
 .968627 .968627 .968627 rg
-n 0 36 727.2 -18 re f*
+n 0 90 727.2 -18 re f*
 1 1 1 rg
+n 0 72 727.2 -18 re f*
+.968627 .968627 .968627 rg
+n 0 54 727.2 -18 re f*
+1 1 1 rg
+n 0 36 727.2 -18 re f*
+.968627 .968627 .968627 rg
 n 0 18 727.2 -18 re f*
 1 1 1 rg
 BT /F1 10 Tf 12 TL ET
 q
-1 0 0 1 5 80 cm
+1 0 0 1 5 134 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 32.128 0 Td (County) Tj T* -32.128 0 Td ET
 Q
 Q
 q
-1 0 0 1 106.808 68 cm
+1 0 0 1 106.808 122 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 16 Tm /F2 8 Tf 12 TL .62 0 Td (Total Fires \(Tracked) Tj T* 28.68 0 Td (YTD\)) Tj T* -29.3 0 Td ET
 Q
 Q
 q
-1 0 0 1 194.072 80 cm
+1 0 0 1 194.072 134 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 12.084 0 Td (Active) Tj T* -12.084 0 Td ET
 Q
 Q
 q
-1 0 0 1 252.248 80 cm
+1 0 0 1 252.248 134 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 11.804 0 Td (Contained) Tj T* -11.804 0 Td ET
 Q
 Q
 q
-1 0 0 1 324.968 80 cm
+1 0 0 1 324.968 134 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 9.576 0 Td (Total Acres) Tj T* -9.576 0 Td ET
 Q
 Q
 q
-1 0 0 1 397.688 68 cm
+1 0 0 1 397.688 122 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 16 Tm /F2 8 Tf 12 TL 17.292 0 Td (Evacuation) Tj T* 2.892 0 Td (Triggered) Tj T* -20.184 0 Td ET
 Q
 Q
 q
-1 0 0 1 484.952 80 cm
+1 0 0 1 484.952 134 cm
 q
 1 1 1 rg
 BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 107.512 0 Td (Notes) Tj T* -107.512 0 Td ET
@@ -3269,303 +1394,152 @@ Q
 Q
 0 0 0 rg
 q
-1 0 0 1 5 50 cm
+1 0 0 1 5 104 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Coos) Tj T* ET
 Q
 Q
 q
-1 0 0 1 106.808 50 cm
+1 0 0 1 106.808 104 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (3) Tj T* ET
 Q
 Q
 q
-1 0 0 1 194.072 50 cm
+1 0 0 1 194.072 104 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (3) Tj T* ET
 Q
 Q
 q
-1 0 0 1 252.248 50 cm
+1 0 0 1 252.248 104 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
 Q
 Q
 q
-1 0 0 1 324.968 40 cm
+1 0 0 1 324.968 94 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (50.019999999999) Tj T* (996) Tj T* ET
 Q
 Q
 q
-1 0 0 1 397.688 50 cm
+1 0 0 1 397.688 104 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Yes) Tj T* ET
 Q
 Q
 q
-1 0 0 1 484.952 40 cm
+1 0 0 1 484.952 94 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 12.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. Active 50-acre WF in Coos County since Feb 4,) Tj T* (2026. OEM Popu\205) Tj T* ET
 Q
 Q
 q
-1 0 0 1 5 22 cm
+1 0 0 1 5 76 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Douglas) Tj T* ET
 Q
 Q
 q
-1 0 0 1 106.808 22 cm
+1 0 0 1 106.808 76 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (3) Tj T* ET
 Q
 Q
 q
-1 0 0 1 194.072 22 cm
+1 0 0 1 194.072 76 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (3) Tj T* ET
 Q
 Q
 q
-1 0 0 1 252.248 22 cm
+1 0 0 1 252.248 76 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
 Q
 Q
 q
-1 0 0 1 324.968 22 cm
+1 0 0 1 324.968 76 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (4.1) Tj T* ET
 Q
 Q
 q
-1 0 0 1 397.688 22 cm
+1 0 0 1 397.688 76 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (No) Tj T* ET
 Q
 Q
 q
-1 0 0 1 484.952 22 cm
+1 0 0 1 484.952 76 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Douglas County.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 5 4 cm
+1 0 0 1 5 58 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Jackson) Tj T* ET
 Q
 Q
 q
-1 0 0 1 106.808 4 cm
+1 0 0 1 106.808 58 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (5) Tj T* ET
 Q
 Q
 q
-1 0 0 1 194.072 4 cm
+1 0 0 1 194.072 58 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (5) Tj T* ET
 Q
 Q
 q
-1 0 0 1 252.248 4 cm
+1 0 0 1 252.248 58 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (0) Tj T* ET
 Q
 Q
 q
-1 0 0 1 324.968 4 cm
+1 0 0 1 324.968 58 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (7.01) Tj T* ET
 Q
 Q
 q
-1 0 0 1 397.688 4 cm
+1 0 0 1 397.688 58 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (No) Tj T* ET
 Q
 Q
 q
-1 0 0 1 484.952 4 cm
+1 0 0 1 484.952 58 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2.5 Tm /F1 7.5 Tf 10 TL (Source: NIFC WFIGS. WF incident in Jackson County.) Tj T* ET
 Q
 Q
-q
-1 J
-1 j
-.8 .8 .8 RG
-.4 w
-n 0 96 m 727.2 96 l S
-n 0 0 m 0 96 l S
-n 727.2 0 m 727.2 96 l S
-n 0 0 m 727.2 0 l S
-n 0 64 m 727.2 64 l S
-n 0 36 m 727.2 36 l S
-n 0 18 m 727.2 18 l S
-n 101.808 0 m 101.808 96 l S
-n 189.072 0 m 189.072 96 l S
-n 247.248 0 m 247.248 96 l S
-n 319.968 0 m 319.968 96 l S
-n 392.688 0 m 392.688 96 l S
-n 479.952 0 m 479.952 96 l S
-Q
-Q
-Q
- 
-Q
-
-q
-0.0 0.0 792 612 re
-W
-n
-1 0 0 1 0 0 cm
-BT
-/F1-0 12 Tf
-14.4 TL
-ET
-BT
-/F1-0 5.5 Tf
-6.6 TL
-ET
-0.4 0.4 0.4 rg
-BT
-1 0 0 1 18 10 Tm
-(Data\040sources\072\040OEM\040Fires\040Statistics\040Dashboard\040\050active\040fire\040counts\054\040acres\051\073\040NIFC\040WFIGS\040Current\040Incident\040Locations\040API\040\050all\040Oregon\040incidents\054\040auto\055fetched\051\073\040Open\055Meteo\040\050weather\051\073\040AirNow\056gov\040\050AQI\051\056\040Generated\072\040Wed\040May\0406\054\0402026\040\174\040v2\040\227\040WFIGS\040fire\040data\040integrated\056) Tj
-T*
-ET
-Q
-
-
-endstream
-endobj
-18 0 obj
-<<
-/BaseFont /Helvetica
-/Encoding /WinAnsiEncoding
-/Name /F1
-/Subtype /Type1
-/Type /Font
->>
-endobj
-19 0 obj
-<<
-/Contents 20 0 R
-/MediaBox [ 0 0 792 612 ]
-/Resources <<
-/Font <<
-/F1 6 0 R
-/F1-0 21 0 R
-/F2 8 0 R
-/F3 9 0 R
-/F4 10 0 R
-/F5 11 0 R
-/F6 12 0 R
->>
-/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
->>
-/Rotate 0
-/Trans <<
->>
-/Type /Page
-/Annots [ ]
-/Parent 1 0 R
->>
-endobj
-20 0 obj
-<<
-/Length 4333
->>
-stream
-q
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 32.4 487.6 cm
-q
-.184314 .309804 .309804 rg
-n 0 86 727.2 -32 re f*
-1 1 1 rg
-n 0 54 727.2 -18 re f*
-.968627 .968627 .968627 rg
-n 0 36 727.2 -18 re f*
-1 1 1 rg
-n 0 18 727.2 -18 re f*
-1 1 1 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 5 70 cm
-q
-1 1 1 rg
-BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 32.128 0 Td (County) Tj T* -32.128 0 Td ET
-Q
-Q
-q
-1 0 0 1 106.808 58 cm
-q
-1 1 1 rg
-BT 1 0 0 1 0 16 Tm /F2 8 Tf 12 TL .62 0 Td (Total Fires \(Tracked) Tj T* 28.68 0 Td (YTD\)) Tj T* -29.3 0 Td ET
-Q
-Q
-q
-1 0 0 1 194.072 70 cm
-q
-1 1 1 rg
-BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 12.084 0 Td (Active) Tj T* -12.084 0 Td ET
-Q
-Q
-q
-1 0 0 1 252.248 70 cm
-q
-1 1 1 rg
-BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 11.804 0 Td (Contained) Tj T* -11.804 0 Td ET
-Q
-Q
-q
-1 0 0 1 324.968 70 cm
-q
-1 1 1 rg
-BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 9.576 0 Td (Total Acres) Tj T* -9.576 0 Td ET
-Q
-Q
-q
-1 0 0 1 397.688 58 cm
-q
-1 1 1 rg
-BT 1 0 0 1 0 16 Tm /F2 8 Tf 12 TL 17.292 0 Td (Evacuation) Tj T* 2.892 0 Td (Triggered) Tj T* -20.184 0 Td ET
-Q
-Q
-q
-1 0 0 1 484.952 70 cm
-q
-1 1 1 rg
-BT 1 0 0 1 0 4 Tm /F2 8 Tf 12 TL 107.512 0 Td (Notes) Tj T* -107.512 0 Td ET
-Q
-Q
-0 0 0 rg
 q
 1 0 0 1 5 40 cm
 q
@@ -3718,27 +1692,22 @@ q
 1 j
 .8 .8 .8 RG
 .4 w
-n 0 86 m 727.2 86 l S
-n 0 54 m 0 86 l S
-n 0 0 m 0 54 l S
-n 727.2 54 m 727.2 86 l S
-n 727.2 0 m 727.2 54 l S
+n 0 150 m 727.2 150 l S
 n 0 0 m 727.2 0 l S
+n 0 0 m 0 150 l S
+n 727.2 0 m 727.2 150 l S
+n 0 118 m 727.2 118 l S
+n 0 90 m 727.2 90 l S
+n 0 72 m 727.2 72 l S
 n 0 54 m 727.2 54 l S
-n 101.808 54 m 101.808 86 l S
-n 189.072 54 m 189.072 86 l S
-n 247.248 54 m 247.248 86 l S
-n 319.968 54 m 319.968 86 l S
-n 392.688 54 m 392.688 86 l S
-n 479.952 54 m 479.952 86 l S
 n 0 36 m 727.2 36 l S
 n 0 18 m 727.2 18 l S
-n 101.808 0 m 101.808 54 l S
-n 189.072 0 m 189.072 54 l S
-n 247.248 0 m 247.248 54 l S
-n 319.968 0 m 319.968 54 l S
-n 392.688 0 m 392.688 54 l S
-n 479.952 0 m 479.952 54 l S
+n 101.808 0 m 101.808 150 l S
+n 189.072 0 m 189.072 150 l S
+n 247.248 0 m 247.248 150 l S
+n 319.968 0 m 319.968 150 l S
+n 392.688 0 m 392.688 150 l S
+n 479.952 0 m 479.952 150 l S
 Q
 Q
 Q
@@ -3761,7 +1730,13 @@ ET
 0.4 0.4 0.4 rg
 BT
 1 0 0 1 18 10 Tm
-(Data\040sources\072\040OEM\040Fires\040Statistics\040Dashboard\040\050active\040fire\040counts\054\040acres\051\073\040NIFC\040WFIGS\040Current\040Incident\040Locations\040API\040\050all\040Oregon\040incidents\054\040auto\055fetched\051\073\040Open\055Meteo\040\050weather\051\073\040AirNow\056gov\040\050AQI\051\056\040Generated\072\040Wed\040May\0406\054\0402026\040\174\040v2\040\227\040WFIGS\040fire\040data\040integrated\056) Tj
+(Data\040sources\072\040OEM\040Fires\040Statistics\040Dashboard\040\050active\040fire\040counts\054\040acres\051\073\040NIFC\040WFIGS\040Current\040Incident\040Locations\040API\040\050large\040fire\040records\054\040auto\055fetched\051\073\040Open\055Meteo\040\050weather\051\073\040AirNow\056gov\040\050AQI\051\056\040Large\040fires\040per\040NWCC\040definition\040\050) Tj
+/F2-0 5.5 Tf
+6.6 TL
+(³) Tj
+/F1-0 5.5 Tf
+6.6 TL
+(100\040acres\040or\040evacuation\040order\051\056\040Generated\072\040Wed\040May\0406\054\0402026\040\174\040v3) Tj
 T*
 ET
 Q
@@ -3769,7 +1744,7 @@ Q
 
 endstream
 endobj
-21 0 obj
+16 0 obj
 <<
 /BaseFont /Helvetica
 /Encoding /WinAnsiEncoding
@@ -3778,9 +1753,17 @@ endobj
 /Type /Font
 >>
 endobj
-22 0 obj
+17 0 obj
 <<
-/Contents 23 0 R
+/BaseFont /Symbol
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+18 0 obj
+<<
+/Contents 19 0 R
 /MediaBox [ 0 0 792 612 ]
 /Resources <<
 /ExtGState <<
@@ -3793,12 +1776,13 @@ endobj
 >>
 /Font <<
 /F1 6 0 R
-/F1-0 24 0 R
+/F1-0 20 0 R
 /F2 8 0 R
-/F3 9 0 R
-/F4 10 0 R
-/F5 11 0 R
-/F6 12 0 R
+/F2-0 21 0 R
+/F3 10 0 R
+/F4 11 0 R
+/F5 12 0 R
+/F6 13 0 R
 >>
 /ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
 >>
@@ -3810,9 +1794,9 @@ endobj
 /Parent 1 0 R
 >>
 endobj
-23 0 obj
+19 0 obj
 <<
-/Length 55522
+/Length 55626
 >>
 stream
 q
@@ -7461,7 +5445,13 @@ ET
 0.4 0.4 0.4 rg
 BT
 1 0 0 1 18 10 Tm
-(Data\040sources\072\040OEM\040Fires\040Statistics\040Dashboard\040\050active\040fire\040counts\054\040acres\051\073\040NIFC\040WFIGS\040Current\040Incident\040Locations\040API\040\050all\040Oregon\040incidents\054\040auto\055fetched\051\073\040Open\055Meteo\040\050weather\051\073\040AirNow\056gov\040\050AQI\051\056\040Generated\072\040Wed\040May\0406\054\0402026\040\174\040v2\040\227\040WFIGS\040fire\040data\040integrated\056) Tj
+(Data\040sources\072\040OEM\040Fires\040Statistics\040Dashboard\040\050active\040fire\040counts\054\040acres\051\073\040NIFC\040WFIGS\040Current\040Incident\040Locations\040API\040\050large\040fire\040records\054\040auto\055fetched\051\073\040Open\055Meteo\040\050weather\051\073\040AirNow\056gov\040\050AQI\051\056\040Large\040fires\040per\040NWCC\040definition\040\050) Tj
+/F2-0 5.5 Tf
+6.6 TL
+(³) Tj
+/F1-0 5.5 Tf
+6.6 TL
+(100\040acres\040or\040evacuation\040order\051\056\040Generated\072\040Wed\040May\0406\054\0402026\040\174\040v3) Tj
 T*
 ET
 Q
@@ -7469,7 +5459,7 @@ Q
 
 endstream
 endobj
-24 0 obj
+20 0 obj
 <<
 /BaseFont /Helvetica
 /Encoding /WinAnsiEncoding
@@ -7478,19 +5468,28 @@ endobj
 /Type /Font
 >>
 endobj
-25 0 obj
+21 0 obj
 <<
-/Contents 26 0 R
+/BaseFont /Symbol
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+22 0 obj
+<<
+/Contents 23 0 R
 /MediaBox [ 0 0 792 612 ]
 /Resources <<
 /Font <<
 /F1 6 0 R
-/F1-0 27 0 R
+/F1-0 24 0 R
 /F2 8 0 R
-/F3 9 0 R
-/F4 10 0 R
-/F5 11 0 R
-/F6 12 0 R
+/F2-0 25 0 R
+/F3 10 0 R
+/F4 11 0 R
+/F5 12 0 R
+/F6 13 0 R
 >>
 /ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
 >>
@@ -7502,9 +5501,9 @@ endobj
 /Parent 1 0 R
 >>
 endobj
-26 0 obj
+23 0 obj
 <<
-/Length 32015
+/Length 32119
 >>
 stream
 q
@@ -9257,7 +7256,13 @@ ET
 0.4 0.4 0.4 rg
 BT
 1 0 0 1 18 10 Tm
-(Data\040sources\072\040OEM\040Fires\040Statistics\040Dashboard\040\050active\040fire\040counts\054\040acres\051\073\040NIFC\040WFIGS\040Current\040Incident\040Locations\040API\040\050all\040Oregon\040incidents\054\040auto\055fetched\051\073\040Open\055Meteo\040\050weather\051\073\040AirNow\056gov\040\050AQI\051\056\040Generated\072\040Wed\040May\0406\054\0402026\040\174\040v2\040\227\040WFIGS\040fire\040data\040integrated\056) Tj
+(Data\040sources\072\040OEM\040Fires\040Statistics\040Dashboard\040\050active\040fire\040counts\054\040acres\051\073\040NIFC\040WFIGS\040Current\040Incident\040Locations\040API\040\050large\040fire\040records\054\040auto\055fetched\051\073\040Open\055Meteo\040\050weather\051\073\040AirNow\056gov\040\050AQI\051\056\040Large\040fires\040per\040NWCC\040definition\040\050) Tj
+/F2-0 5.5 Tf
+6.6 TL
+(³) Tj
+/F1-0 5.5 Tf
+6.6 TL
+(100\040acres\040or\040evacuation\040order\051\056\040Generated\072\040Wed\040May\0406\054\0402026\040\174\040v3) Tj
 T*
 ET
 Q
@@ -9265,7 +7270,7 @@ Q
 
 endstream
 endobj
-27 0 obj
+24 0 obj
 <<
 /BaseFont /Helvetica
 /Encoding /WinAnsiEncoding
@@ -9274,19 +7279,28 @@ endobj
 /Type /Font
 >>
 endobj
-28 0 obj
+25 0 obj
 <<
-/Contents 29 0 R
+/BaseFont /Symbol
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+26 0 obj
+<<
+/Contents 27 0 R
 /MediaBox [ 0 0 792 612 ]
 /Resources <<
 /Font <<
 /F1 6 0 R
-/F1-0 30 0 R
+/F1-0 28 0 R
 /F2 8 0 R
-/F3 9 0 R
-/F4 10 0 R
-/F5 11 0 R
-/F6 12 0 R
+/F2-0 29 0 R
+/F3 10 0 R
+/F4 11 0 R
+/F5 12 0 R
+/F6 13 0 R
 >>
 /ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
 >>
@@ -9298,9 +7312,9 @@ endobj
 /Parent 1 0 R
 >>
 endobj
-29 0 obj
+27 0 obj
 <<
-/Length 61255
+/Length 61359
 >>
 stream
 q
@@ -11511,7 +9525,13 @@ ET
 0.4 0.4 0.4 rg
 BT
 1 0 0 1 18 10 Tm
-(Data\040sources\072\040OEM\040Fires\040Statistics\040Dashboard\040\050active\040fire\040counts\054\040acres\051\073\040NIFC\040WFIGS\040Current\040Incident\040Locations\040API\040\050all\040Oregon\040incidents\054\040auto\055fetched\051\073\040Open\055Meteo\040\050weather\051\073\040AirNow\056gov\040\050AQI\051\056\040Generated\072\040Wed\040May\0406\054\0402026\040\174\040v2\040\227\040WFIGS\040fire\040data\040integrated\056) Tj
+(Data\040sources\072\040OEM\040Fires\040Statistics\040Dashboard\040\050active\040fire\040counts\054\040acres\051\073\040NIFC\040WFIGS\040Current\040Incident\040Locations\040API\040\050large\040fire\040records\054\040auto\055fetched\051\073\040Open\055Meteo\040\050weather\051\073\040AirNow\056gov\040\050AQI\051\056\040Large\040fires\040per\040NWCC\040definition\040\050) Tj
+/F2-0 5.5 Tf
+6.6 TL
+(³) Tj
+/F1-0 5.5 Tf
+6.6 TL
+(100\040acres\040or\040evacuation\040order\051\056\040Generated\072\040Wed\040May\0406\054\0402026\040\174\040v3) Tj
 T*
 ET
 Q
@@ -11519,7 +9539,7 @@ Q
 
 endstream
 endobj
-30 0 obj
+28 0 obj
 <<
 /BaseFont /Helvetica
 /Encoding /WinAnsiEncoding
@@ -11528,45 +9548,52 @@ endobj
 /Type /Font
 >>
 endobj
+29 0 obj
+<<
+/BaseFont /Symbol
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
 xref
-0 31
+0 30
 0000000000 65535 f 
 0000000015 00000 n 
-0000000116 00000 n 
-0000000155 00000 n 
-0000000204 00000 n 
-0000000480 00000 n 
-0000012010 00000 n 
-0000012117 00000 n 
-0000012224 00000 n 
-0000012336 00000 n 
-0000012451 00000 n 
-0000012529 00000 n 
-0000012613 00000 n 
-0000012723 00000 n 
-0000013002 00000 n 
-0000032309 00000 n 
-0000032417 00000 n 
-0000032696 00000 n 
-0000053079 00000 n 
-0000053187 00000 n 
-0000053466 00000 n 
-0000057852 00000 n 
-0000057960 00000 n 
-0000058299 00000 n 
-0000113875 00000 n 
-0000113983 00000 n 
-0000114262 00000 n 
-0000146331 00000 n 
-0000146439 00000 n 
-0000146718 00000 n 
-0000208027 00000 n 
+0000000102 00000 n 
+0000000141 00000 n 
+0000000190 00000 n 
+0000000479 00000 n 
+0000012089 00000 n 
+0000012196 00000 n 
+0000012303 00000 n 
+0000012415 00000 n 
+0000012492 00000 n 
+0000012608 00000 n 
+0000012686 00000 n 
+0000012770 00000 n 
+0000012880 00000 n 
+0000013173 00000 n 
+0000027098 00000 n 
+0000027206 00000 n 
+0000027284 00000 n 
+0000027637 00000 n 
+0000083317 00000 n 
+0000083425 00000 n 
+0000083503 00000 n 
+0000083796 00000 n 
+0000115969 00000 n 
+0000116077 00000 n 
+0000116155 00000 n 
+0000116448 00000 n 
+0000177861 00000 n 
+0000177969 00000 n 
 trailer
 <<
-/Size 31
+/Size 30
 /Root 3 0 R
 /Info 2 0 R
 >>
 startxref
-208135
+178047
 %%EOF
