@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-09",
-  "report_time": "7:56 AM PDT",
+  "last_updated": "2026-05-10",
+  "report_time": "7:52 AM PDT",
   "active_large_fires": 1,
   "total_large_fire_acres": 2751.0,
   "structures_lost": 0,
@@ -14,7 +14,7 @@
   "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
   "struct_loss": {
-    "date": "2026-05-09",
+    "date": "2026-05-10",
     "source": "NIFC WFIGS Current Incident Locations",
     "incident_count": 0,
     "has_type_breakdown": false,
@@ -515,12 +515,17 @@
       "date": "2026-05-09",
       "active_fires": 20,
       "acres_burned": 2664.83
+    },
+    {
+      "date": "2026-05-10",
+      "active_fires": 22,
+      "acres_burned": 2667.95
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 44,
+      "total_fires": 48,
       "total_acres": 2751.0,
       "total_structures_destroyed": 0,
       "fatalities": 0,
@@ -547,14 +552,14 @@
           "acres": 50.0
         },
         {
-          "name": "Riverview Fire",
-          "county": "Deschutes",
-          "acres": 12
+          "name": "0159 DOOLITTLE FLAT",
+          "county": "Wheeler",
+          "acres": 25.0
         },
         {
-          "name": "Indian Henry Piles RX West",
-          "county": "Clackamas",
-          "acres": 12.0
+          "name": "Carney Flat",
+          "county": "Jackson",
+          "acres": 23.0
         }
       ]
     },
