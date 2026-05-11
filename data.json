@@ -530,7 +530,7 @@
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 48,
+      "total_fires": 3,
       "total_acres": 2751.0,
       "total_structures_destroyed": 0,
       "fatalities": 0,
@@ -552,19 +552,9 @@
           "acres": 150
         },
         {
-          "name": "Tanner Creek",
-          "county": "Coos",
-          "acres": 50.0
-        },
-        {
-          "name": "0159 DOOLITTLE FLAT",
-          "county": "Wheeler",
-          "acres": 25.0
-        },
-        {
-          "name": "Carney Flat",
-          "county": "Jackson",
-          "acres": 23.0
+          "name": "Riverview Fire",
+          "county": "Deschutes",
+          "acres": 12
         }
       ]
     },
