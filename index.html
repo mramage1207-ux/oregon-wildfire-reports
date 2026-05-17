@@ -427,7 +427,7 @@
 const REPO      = 'mramage1207-ux/oregon-wildfire-reports';
 const API_URL   = 'https://api.github.com/repos/' + REPO + '/contents/';
 const DATA_URL  = 'data.json';   // relative: served from same GitHub Pages origin
-const PDF_RE    = /^oregon_wildfire_report_(\d{4}-\d{2}-\d{2})\.pdf$/;
+const PDF_RE    = /^oregon_wildfire_report_(\d{4}-\d{2}-\d{2})(?:_(\d{4}))?\.pdf$/;
 
 // ── ACCORDION ────────────────────────────────────────────────────────────────
 function toggleMonth(btn) {
@@ -671,22 +671,68 @@ function render(pdfs, data) {
       .toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
     const reports = byMonth[mo];
 
-    const rows = reports.map(r => {
+    // Group by date — supports intraday update PDFs (_1400, _1800 suffixes)
+    const byDate = {};
+    reports.forEach(r => {
+      if (!byDate[r.date_iso]) byDate[r.date_iso] = { morning: null, updates: [] };
+      if (!r.time_suffix) byDate[r.date_iso].morning = r;
+      else byDate[r.date_iso].updates.push(r);
+    });
+    const sortedDates = Object.keys(byDate).sort((a, b) => b.localeCompare(a));
+    const TIME_LABELS = { '1400': '2:00 PM Update', '1800': '6:00 PM Update' };
+    const todayDateISO = new Date().toISOString().slice(0, 10);
+
+    const rows = sortedDates.map(dateIso => {
+      const { morning, updates } = byDate[dateIso];
       const markLatest = isVeryFirst;
       if (isVeryFirst) isVeryFirst = false;
-      return `
-        <tr${markLatest ? ' class="latest"' : ''}>
-          <td class="date-cell">
-            ${fmtDate(r.date_iso)}${markLatest ? ' <span class="badge-new">Latest</span>' : ''}<br>
-            <span class="iso">${r.date_iso}</span>
-          </td>
-          <td class="fires-val">${r.active_fires}</td>
-          <td class="acres-val">${fmtAcres(r.acres_burned)}</td>
-          <td>
-            <a class="action-link" href="${r.filename}" target="_blank">&#128196; View</a>
-            <a class="action-link dl" href="${r.filename}" download>&#8595; Download</a>
-          </td>
-        </tr>`;
+      const r = morning || updates[0];
+      if (!updates.length) {
+        // No intraday updates — plain row as before
+        return `
+          <tr${markLatest ? ' class="latest"' : ''}>
+            <td class="date-cell">
+              ${fmtDate(dateIso)}${markLatest ? ' <span class="badge-new">Latest</span>' : ''}<br>
+              <span class="iso">${dateIso}</span>
+            </td>
+            <td class="fires-val">${r.active_fires}</td>
+            <td class="acres-val">${fmtAcres(r.acres_burned)}</td>
+            <td>
+              <a class="action-link" href="${r.filename}" target="_blank">&#128196; View</a>
+              <a class="action-link dl" href="${r.filename}" download>&#8595; Download</a>
+            </td>
+          </tr>`;
+      } else {
+        // Has intraday updates — details/summary accordion, open for today
+        const isDateToday = dateIso === todayDateISO;
+        const updateLinks = updates.map(u => {
+          const lbl = TIME_LABELS[u.time_suffix] || u.time_suffix;
+          return `<a class="action-link" href="${u.filename}" target="_blank">&#128196; ${lbl}</a> <a class="action-link dl" href="${u.filename}" download>&#8595;</a>`;
+        }).join(' ');
+        const morningLinks = morning
+          ? `<a class="action-link" href="${morning.filename}" target="_blank">&#128196; Morning Report</a> <a class="action-link dl" href="${morning.filename}" download>&#8595;</a>`
+          : '';
+        return `
+          <tr${markLatest ? ' class="latest"' : ''}>
+            <td colspan="4" style="padding:0">
+              <details${isDateToday ? ' open' : ''}>
+                <summary style="display:flex;align-items:center;gap:1rem;padding:.85rem 1.2rem;cursor:pointer;list-style:none;">
+                  <div style="flex:1">
+                    <span style="font-weight:600">${fmtDate(dateIso)}</span>${markLatest ? ' <span class="badge-new">Latest</span>' : ''}<br>
+                    <span class="iso">${dateIso}</span>
+                  </div>
+                  <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap">
+                    ${morningLinks}
+                    <span style="font-size:.75rem;color:#6b7280">${updates.length} update${updates.length > 1 ? 's' : ''}</span>
+                  </div>
+                </summary>
+                <div style="padding:.5rem 1.2rem .85rem 1.2rem;display:flex;gap:.5rem;flex-wrap:wrap;background:#fffbf5">
+                  ${updateLinks}
+                </div>
+              </details>
+            </td>
+          </tr>`;
+      }
     }).join('');
 
     return `
@@ -793,7 +839,10 @@ function render(pdfs, data) {
     const pdfs = files
       .filter(f => PDF_RE.test(f.name))
       .sort((a, b) => b.name.localeCompare(a.name))
-      .map(f => ({ filename: f.name, date_iso: f.name.match(PDF_RE)[1] }));
+      .map(f => {
+        const m = f.name.match(PDF_RE);
+        return { filename: f.name, date_iso: m[1], time_suffix: m[2] || null };
+      });
 
     if (pdfs.length === 0) {
       document.getElementById('archive-container').innerHTML =
