@@ -703,33 +703,40 @@ function render(pdfs, data) {
             </td>
           </tr>`;
       } else {
-        // Has intraday updates — details/summary accordion, open for today
-        const isDateToday = dateIso === todayDateISO;
-        const updateLinks = updates.map(u => {
+        // Has intraday updates — show all reports in chronological order (morning → 2pm → 6pm)
+        // Sort updates ascending by time suffix so 1400 always appears before 1800
+        const sortedUpdates = [...updates].sort((a, b) => (a.time_suffix || '').localeCompare(b.time_suffix || ''));
+        const linkItems = [];
+        if (morning) {
+          linkItems.push(
+            `<div style="display:flex;gap:.4rem;align-items:center">` +
+            `<span style="font-size:.75rem;color:#6b7280;min-width:116px">Morning Report</span>` +
+            `<a class="action-link" href="${morning.filename}" target="_blank">&#128196; View</a>` +
+            `<a class="action-link dl" href="${morning.filename}" download>&#8595; Download</a></div>`
+          );
+        }
+        sortedUpdates.forEach(u => {
           const lbl = TIME_LABELS[u.time_suffix] || u.time_suffix;
-          return `<a class="action-link" href="${u.filename}" target="_blank">&#128196; ${lbl}</a> <a class="action-link dl" href="${u.filename}" download>&#8595;</a>`;
-        }).join(' ');
-        const morningLinks = morning
-          ? `<a class="action-link" href="${morning.filename}" target="_blank">&#128196; Morning Report</a> <a class="action-link dl" href="${morning.filename}" download>&#8595;</a>`
-          : '';
+          linkItems.push(
+            `<div style="display:flex;gap:.4rem;align-items:center">` +
+            `<span style="font-size:.75rem;color:#6b7280;min-width:116px">${lbl}</span>` +
+            `<a class="action-link" href="${u.filename}" target="_blank">&#128196; View</a>` +
+            `<a class="action-link dl" href="${u.filename}" download>&#8595; Download</a></div>`
+          );
+        });
         return `
           <tr${markLatest ? ' class="latest"' : ''}>
-            <td colspan="4" style="padding:0">
-              <details${isDateToday ? ' open' : ''}>
-                <summary style="display:flex;align-items:center;gap:1rem;padding:.85rem 1.2rem;cursor:pointer;list-style:none;">
-                  <div style="flex:1">
-                    <span style="font-weight:600">${fmtDate(dateIso)}</span>${markLatest ? ' <span class="badge-new">Latest</span>' : ''}<br>
-                    <span class="iso">${dateIso}</span>
-                  </div>
-                  <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap">
-                    ${morningLinks}
-                    <span style="font-size:.75rem;color:#6b7280">${updates.length} update${updates.length > 1 ? 's' : ''}</span>
-                  </div>
-                </summary>
-                <div style="padding:.5rem 1.2rem .85rem 1.2rem;display:flex;gap:.5rem;flex-wrap:wrap;background:#fffbf5">
-                  ${updateLinks}
-                </div>
-              </details>
+            <td class="date-cell">
+              ${fmtDate(dateIso)}${markLatest ? ' <span class="badge-new">Latest</span>' : ''}<br>
+              <span class="iso">${dateIso}</span>
+            </td>
+            <td class="fires-val">${morning ? r.active_fires : ''}</td>
+            <td class="acres-val">${morning ? fmtAcres(r.acres_burned) : ''}</td>
+            <td>
+              <div style="display:flex;flex-direction:column;gap:.3rem">
+                ${linkItems.join('
+                ')}
+              </div>
             </td>
           </tr>`;
       }
