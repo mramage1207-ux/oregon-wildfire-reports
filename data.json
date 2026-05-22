@@ -876,5 +876,11 @@
       ],
       "fatalities_note": "Estimate reflects variance across reporting sources; official counts differ by agency and attribution method."
     }
-  ]
+  ],
+  "intraday_updates": {
+    "2026-05-21_1800": {
+      "active_fires": 11,
+      "acres_burned": 42.1
+    }
+  }
 }
