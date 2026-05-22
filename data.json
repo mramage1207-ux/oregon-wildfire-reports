@@ -878,9 +878,15 @@
     }
   ],
   "intraday_updates": {
+    "2026-05-21_1800": {
+      "active_fires": 11,
+      "acres_burned": 42.1,
+      "should_update": true
+    },
     "2026-05-22_1400": {
       "active_fires": 18,
-      "acres_burned": 42.4
+      "acres_burned": 42.4,
+      "should_update": true
     }
   }
 }
