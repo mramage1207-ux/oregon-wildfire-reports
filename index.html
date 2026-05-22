@@ -595,7 +595,7 @@ function render(pdfs, data) {
       </div>
       <div class="stat-pill">
         <div class="val">${latest.active_fires}</div>
-        <div class="lbl">Active Fires</div>
+        <div class="lbl">Active Fires<br><span style="font-size:0.75em;opacity:0.8">WF + RX</span></div>
       </div>
       <div class="stat-pill">
         <div class="val">${nStructLost}</div>
@@ -706,7 +706,8 @@ function render(pdfs, data) {
       const rowCount = allReports.length;
       const rows = allReports.map((item, idx) => {
         const { rep, label } = item;
-        const fv = (rep.active_fires != null && rep.active_fires !== '—') ? rep.active_fires : '';
+        const fvRaw = (rep.active_fires != null && rep.active_fires !== '—') ? rep.active_fires : '';
+        const fv = fvRaw !== '' ? `${fvRaw}<div style="font-size:0.7em;font-weight:400;opacity:0.7;line-height:1.2">WF + RX</div>` : '';
         const av = (rep.acres_burned != null && rep.acres_burned !== '—') ? fmtAcres(rep.acres_burned) : '';
         if (idx === 0) {
           // First row: date cell with rowspan covering all sub-rows
@@ -747,7 +748,7 @@ function render(pdfs, data) {
               <thead>
                 <tr>
                   <th>Date</th>
-                  <th>Active Fires</th>
+                  <th>Active Fires<br><span style="font-weight:400;font-size:0.75em;opacity:0.75">WF + RX</span></th>
                   <th>Acres Burned</th>
                   <th>Report</th>
                 </tr>
