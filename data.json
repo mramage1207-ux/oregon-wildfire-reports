@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-22",
-  "report_time": "2:09 PM PDT",
+  "last_updated": "2026-05-23",
+  "report_time": "6:09 PM PDT",
   "active_large_fires": 0,
   "total_large_fire_acres": 2751.0,
   "structures_lost": 0,
@@ -883,9 +883,9 @@
       "acres_burned": 42.1,
       "should_update": true
     },
-    "2026-05-22_1400": {
-      "active_fires": 18,
-      "acres_burned": 42.4,
+    "2026-05-22_1800": {
+      "active_fires": 22,
+      "acres_burned": 43.1,
       "should_update": true
     }
   }
