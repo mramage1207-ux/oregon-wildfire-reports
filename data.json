@@ -1,8 +1,8 @@
 {
   "last_updated": "2026-05-26",
-  "report_time": "8:17 AM PDT",
+  "report_time": "2:08 PM PDT",
   "active_large_fires": 2,
-  "total_large_fire_acres": 3751.0,
+  "total_large_fire_acres": 4251.0,
   "structures_lost": 0,
   "evac_triggering_fires": 1,
   "evac_zones": {
@@ -14,8 +14,8 @@
       "Blackwell Rd 8087 \u2014 Jackson County, Oregon"
     ]
   },
-  "evac_addresses_l1": 730,
-  "evac_addresses_l2": 499,
+  "evac_addresses_l1": 499,
+  "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
   "struct_loss": {
     "date": "2026-05-26",
@@ -610,7 +610,7 @@
     {
       "year": 2026,
       "total_fires": 5,
-      "total_acres": 3751.0,
+      "total_acres": 4251.0,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -628,7 +628,7 @@
         {
           "name": "0231 ZEN",
           "county": "Wasco",
-          "acres": 1000.0
+          "acres": 1500.0
         },
         {
           "name": "Boardman Fire",
@@ -925,6 +925,11 @@
     "2026-05-25_1800": {
       "active_fires": 17,
       "acres_burned": 250.0,
+      "should_update": true
+    },
+    "2026-05-26_1400": {
+      "active_fires": 18,
+      "acres_burned": 1550.2,
       "should_update": true
     }
   }
