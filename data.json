@@ -1,17 +1,21 @@
 {
   "last_updated": "2026-05-26",
-  "report_time": "6:06 PM PDT",
+  "report_time": "7:15 PM PDT",
   "active_large_fires": 1,
   "total_large_fire_acres": 2951.0,
   "structures_lost": 0,
-  "evac_triggering_fires": 0,
+  "evac_triggering_fires": 1,
   "evac_zones": {
     "level3": [],
-    "level2": [],
-    "level1": []
+    "level2": [
+      "Blackwell Rd 8087 \u2014 Jackson County, Oregon"
+    ],
+    "level1": [
+      "Blackwell Rd 8087 \u2014 Jackson County, Oregon"
+    ]
   },
-  "evac_addresses_l1": 0,
-  "evac_addresses_l2": 0,
+  "evac_addresses_l1": 730,
+  "evac_addresses_l2": 499,
   "evac_addresses_l3": 0,
   "struct_loss": {
     "date": "2026-05-25",
@@ -600,7 +604,7 @@
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 4,
+      "total_fires": 5,
       "total_acres": 2951.0,
       "total_structures_destroyed": 0,
       "fatalities": 0,
@@ -630,6 +634,11 @@
           "name": "Riverview Fire",
           "county": "Deschutes",
           "acres": 12
+        },
+        {
+          "name": "Blackwell Rd 8087",
+          "county": "Jackson",
+          "acres": 0.0
         }
       ]
     },
