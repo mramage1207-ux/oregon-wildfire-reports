@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-05-25",
-  "report_time": "7:53 AM PDT",
-  "active_large_fires": 0,
-  "total_large_fire_acres": 2751.0,
+  "last_updated": "2026-05-26",
+  "report_time": "6:06 PM PDT",
+  "active_large_fires": 1,
+  "total_large_fire_acres": 2951.0,
   "structures_lost": 0,
   "evac_triggering_fires": 0,
   "evac_zones": {
@@ -600,8 +600,8 @@
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 3,
-      "total_acres": 2751.0,
+      "total_fires": 4,
+      "total_acres": 2951.0,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -615,6 +615,11 @@
           "name": "PINE MOUNTAIN",
           "county": "Deschutes",
           "acres": 2589.0
+        },
+        {
+          "name": "0231 ZEN",
+          "county": "Wasco",
+          "acres": 200.0
         },
         {
           "name": "Boardman Fire",
@@ -901,6 +906,11 @@
     "2026-05-22_1800": {
       "active_fires": 22,
       "acres_burned": 43.1,
+      "should_update": true
+    },
+    "2026-05-25_1800": {
+      "active_fires": 17,
+      "acres_burned": 250.0,
       "should_update": true
     }
   }
