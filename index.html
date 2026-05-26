@@ -568,7 +568,20 @@ function render(pdfs, data) {
     };
   });
 
-  const latest = enriched[0];
+  // Find the true latest PDF: highest date_iso, then highest time_suffix within that date.
+  // Do NOT use enriched[0] — localeCompare treats '_' and '.' as ignorable punctuation in
+  // many locales, so '2026-05-26_1800.pdf' can sort BELOW '2026-05-26.pdf' because
+  // localeCompare strips the underscore and compares '1800pdf' vs 'pdf', and '1' < 'p'.
+  const latest = enriched.reduce((best, p) => {
+    if (!best) return p;
+    if (p.date_iso > best.date_iso) return p;
+    if (p.date_iso === best.date_iso) {
+      const pSfx = p.time_suffix || '';
+      const bSfx = best.time_suffix || '';
+      if (pSfx > bSfx) return p;
+    }
+    return best;
+  }, null) || enriched[0];
   const nLargeFires   = data && data.active_large_fires      != null ? data.active_large_fires      : '—';
   const nLargeAcres   = data && data.total_large_fire_acres  != null ? data.total_large_fire_acres  : '—';
   const nStructLost   = data && data.structures_lost         != null ? data.structures_lost         : '—';
