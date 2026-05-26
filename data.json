@@ -1,24 +1,20 @@
 {
   "last_updated": "2026-05-26",
-  "report_time": "7:15 PM PDT",
-  "active_large_fires": 2,
-  "total_large_fire_acres": 2951.0,
+  "report_time": "7:58 AM PDT",
+  "active_large_fires": 1,
+  "total_large_fire_acres": 3751.0,
   "structures_lost": 0,
-  "evac_triggering_fires": 1,
+  "evac_triggering_fires": 0,
   "evac_zones": {
     "level3": [],
-    "level2": [
-      "Blackwell Rd 8087 \u2014 Jackson County, Oregon"
-    ],
-    "level1": [
-      "Blackwell Rd 8087 \u2014 Jackson County, Oregon"
-    ]
+    "level2": [],
+    "level1": []
   },
-  "evac_addresses_l1": 730,
-  "evac_addresses_l2": 499,
+  "evac_addresses_l1": 0,
+  "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
   "struct_loss": {
-    "date": "2026-05-25",
+    "date": "2026-05-26",
     "source": "NIFC WFIGS Current Incident Locations",
     "incident_count": 0,
     "has_type_breakdown": false,
@@ -599,13 +595,18 @@
       "date": "2026-05-25",
       "active_fires": 21,
       "acres_burned": 50.03
+    },
+    {
+      "date": "2026-05-26",
+      "active_fires": 17,
+      "acres_burned": 1049.95
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 5,
-      "total_acres": 2951.0,
+      "total_fires": 4,
+      "total_acres": 3751.0,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -623,7 +624,7 @@
         {
           "name": "0231 ZEN",
           "county": "Wasco",
-          "acres": 200.0
+          "acres": 1000.0
         },
         {
           "name": "Boardman Fire",
@@ -634,11 +635,6 @@
           "name": "Riverview Fire",
           "county": "Deschutes",
           "acres": 12
-        },
-        {
-          "name": "Blackwell Rd 8087",
-          "county": "Jackson",
-          "acres": 0.0
         }
       ]
     },
