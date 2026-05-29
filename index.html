@@ -774,7 +774,18 @@ function render(pdfs, data) {
   }).join('');
 
   // ── Chart ──
-  if (data && data.historical_data) drawChart(data.historical_data);
+  if (data && data.historical_data) {
+    drawChart(data.historical_data);
+    // Show when the chart data was last updated (morning runs only)
+    const hist = data.historical_data;
+    if (hist && hist.length) {
+      const lastDate = hist[hist.length - 1].date; // "YYYY-MM-DD"
+      const d = new Date(lastDate + 'T12:00:00');
+      const label = d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+      const sub = document.querySelector('.chart-sub');
+      if (sub) sub.innerHTML = `Active fires &amp; acres burned &mdash; all reported days &nbsp;&middot;&nbsp; <span style="color:#8a6a2a;font-style:italic;">Chart based on morning report (${label})</span>`;
+    }
+  }
 
   // ── Historical seasons ──
   const seasons = (data && data.historical_seasons) || [];
