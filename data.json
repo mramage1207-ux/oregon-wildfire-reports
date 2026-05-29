@@ -1,8 +1,8 @@
 {
   "last_updated": "2026-05-29",
-  "report_time": "7:51 AM PDT",
+  "report_time": "2:05 PM PDT",
   "active_large_fires": 1,
-  "total_large_fire_acres": 4385.0,
+  "total_large_fire_acres": 4433.2,
   "structures_lost": 0,
   "evac_triggering_fires": 0,
   "evac_zones": {
@@ -621,7 +621,7 @@
     {
       "year": 2026,
       "total_fires": 5,
-      "total_acres": 4385.0,
+      "total_acres": 4433.2,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -647,14 +647,14 @@
           "acres": 150
         },
         {
+          "name": "Blackwell Rd 8087",
+          "county": "Jackson",
+          "acres": 48.2
+        },
+        {
           "name": "Riverview Fire",
           "county": "Deschutes",
           "acres": 12
-        },
-        {
-          "name": "Blackwell Rd 8087",
-          "county": "Jackson",
-          "acres": 0.0
         }
       ]
     },
@@ -938,9 +938,9 @@
       "acres_burned": 1550.2,
       "should_update": true
     },
-    "2026-05-28_1800": {
-      "active_fires": 18,
-      "acres_burned": 1680.9,
+    "2026-05-29_1400": {
+      "active_fires": 23,
+      "acres_burned": 1728.7,
       "should_update": true
     }
   }
