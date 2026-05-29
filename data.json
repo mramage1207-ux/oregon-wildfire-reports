@@ -928,11 +928,6 @@
       "acres_burned": 43.1,
       "should_update": true
     },
-    "2026-05-25_1800": {
-      "active_fires": 17,
-      "acres_burned": 250.0,
-      "should_update": true
-    },
     "2026-05-26_1400": {
       "active_fires": 18,
       "acres_burned": 1550.2,
