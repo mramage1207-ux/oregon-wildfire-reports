@@ -1,22 +1,20 @@
 {
   "last_updated": "2026-06-02",
-  "report_time": "6:05 PM PDT",
-  "active_large_fires": 3,
-  "total_large_fire_acres": 4883.21,
+  "report_time": "7:52 AM PDT",
+  "active_large_fires": 1,
+  "total_large_fire_acres": 4893.0,
   "structures_lost": 0,
-  "evac_triggering_fires": 1,
+  "evac_triggering_fires": 0,
   "evac_zones": {
     "level3": [],
     "level2": [],
-    "level1": [
-      "HILT \u2014 Jackson County, Oregon"
-    ]
+    "level1": []
   },
-  "evac_addresses_l1": 69,
+  "evac_addresses_l1": 0,
   "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
   "struct_loss": {
-    "date": "2026-06-01",
+    "date": "2026-06-02",
     "source": "NIFC WFIGS Current Incident Locations",
     "incident_count": 0,
     "has_type_breakdown": false,
@@ -632,13 +630,18 @@
       "date": "2026-06-01",
       "active_fires": 17,
       "acres_burned": 514.41
+    },
+    {
+      "date": "2026-06-02",
+      "active_fires": 23,
+      "acres_burned": 548.67
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
       "total_fires": 7,
-      "total_acres": 4883.21,
+      "total_acres": 4893.0,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
