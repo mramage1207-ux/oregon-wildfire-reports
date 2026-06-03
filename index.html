@@ -6,6 +6,7 @@
   <title>Oregon Wildfire Daily Reports &mdash; Archive</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: #f4f5f7; color: #1a1a2e; min-height: 100vh;
@@ -320,7 +321,7 @@
 
 <header>
   <div class="header-inner">
-    <div class="header-flame">&#128293;</div>
+    <div class="header-flame" aria-hidden="true">&#128293;</div>
     <div class="header-text">
       <h1>Oregon Wildfire Daily Reports</h1>
       <p>Daily Archive &mdash; Published automatically from NIFC WFIGS, ODF &amp; OEM data feeds</p>
@@ -335,7 +336,7 @@
     <div id="hero-card" class="hero-card">
       <div class="loading-hero">&#9203; Loading latest report&hellip;</div>
     </div>
-    <div class="evac-section">
+    <div class="evac-section" role="region" aria-label="Evacuation zones by level">
       <div class="evac-label">Evacuation Addresses by Level &mdash; Active Fires Only</div>
       <div class="evac-grid">
         <div class="evac-box level1">
@@ -358,9 +359,9 @@
         <thead>
           <tr>
             <th>Structure Type</th>
-            <th>Threatened<span class="th-sub">Active</span></th>
-            <th>Damaged<span class="th-sub">YTD</span></th>
-            <th>Destroyed<span class="th-sub">YTD</span></th>
+            <th aria-label="Threatened (active fires)">Threatened<span class="th-sub" aria-hidden="true">Active</span></th>
+            <th aria-label="Damaged (year to date)">Damaged<span class="th-sub" aria-hidden="true">YTD</span></th>
+            <th aria-label="Destroyed (year to date)">Destroyed<span class="th-sub" aria-hidden="true">YTD</span></th>
           </tr>
         </thead>
         <tbody id="struct-loss-tbody"></tbody>
@@ -381,7 +382,12 @@
         <div class="legend-dot" style="background:#1a2744;"></div> Active Fires (right axis)
       </div>
     </div>
-    <svg class="trend" viewBox="0 0 1000 180" preserveAspectRatio="none" id="trendChart"></svg>
+    <svg class="trend" viewBox="0 0 1000 180" preserveAspectRatio="none" id="trendChart"
+      role="img" aria-labelledby="trendChartTitle" aria-describedby="trendChartDesc">
+      <title id="trendChartTitle">2026 Season Trend</title>
+      <desc id="trendChartDesc">Line chart showing active fires and acres burned over the 2026 fire season. A text table of the same data follows.</desc>
+    </svg>
+    <div class="sr-only" id="trendChartTable" aria-label="Season trend data table"></div>
   </div>
 
   <div class="section-header">
@@ -417,13 +423,13 @@
 <footer>
   <strong>Oregon Wildfire Daily Reports</strong><br>
   Data sourced from
-  <a href="https://www.nifc.gov/nicc/logistics/situation.htm" target="_blank">NIFC WFIGS</a>
+  <a href="https://www.nifc.gov/nicc/logistics/situation.htm" target="_blank" aria-label="NIFC WFIGS (opens in new tab)">NIFC WFIGS</a>
   &nbsp;&bull;&nbsp;
-  <a href="https://geo.maps.arcgis.com/apps/instant/portfolio/index.html?appid=22d04c007866419c91ccf00d097526c8" target="_blank">Oregon OEM ArcGIS</a>
+  <a href="https://geo.maps.arcgis.com/apps/instant/portfolio/index.html?appid=22d04c007866419c91ccf00d097526c8" target="_blank" aria-label="Oregon OEM ArcGIS (opens in new tab)">Oregon OEM ArcGIS</a>
   &nbsp;&bull;&nbsp;
-  <a href="https://www.oregon.gov/odf/fire/pages/firestats.aspx" target="_blank">Oregon Dept. of Forestry</a>
+  <a href="https://www.oregon.gov/odf/fire/pages/firestats.aspx" target="_blank" aria-label="Oregon Dept. of Forestry (opens in new tab)">Oregon Dept. of Forestry</a>
   &nbsp;&bull;&nbsp;
-  <a href="https://wildfire.oregon.gov" target="_blank">Oregon Wildfire Response</a><br>
+  <a href="https://wildfire.oregon.gov" target="_blank" aria-label="Oregon Wildfire Response (opens in new tab)">Oregon Wildfire Response</a><br>
   Reports generated automatically. Not an official State of Oregon publication.<br>
   Report assembly assisted by <strong style="color:rgba(255,255,255,.7);">Claude AI</strong> (Anthropic) &mdash; data sourced from public government feeds.
 </footer>
@@ -545,6 +551,15 @@ function drawChart(hist) {
     cx:xS(n-1), cy:yA(hist[n-1].acres_burned),
     r:'4', fill:'#e67e22', stroke:'#fff', 'stroke-width':'2'
   }));
+
+  // Accessible fallback table for screen readers
+  const tbl = document.getElementById('trendChartTable');
+  if (tbl) {
+    const rows = hist.map(d =>
+      `<tr><td>${d.date}</td><td>${(d.active_fires||0).toLocaleString()}</td><td>${(d.acres_burned||0).toLocaleString('en-US',{maximumFractionDigits:1})}</td></tr>`
+    ).join('');
+    tbl.innerHTML = `<table><caption>Season trend: active fires and acres burned by date</caption><thead><tr><th scope="col">Date</th><th scope="col">Active Fires</th><th scope="col">Acres Burned</th></tr></thead><tbody>${rows}</tbody></table>`;
+  }
 }
 
 // ── RENDER ───────────────────────────────────────────────────────────────────
@@ -620,8 +635,8 @@ function render(pdfs, data) {
       </div>
     </div>
     <div class="hero-actions">
-      <a class="btn-primary" href="${latest.filename}" target="_blank">&#128196; View Report</a>
-      <a class="btn-secondary" href="${latest.filename}" download>&#8595; Download PDF</a>
+      <a class="btn-primary" href="${latest.filename}" target="_blank" aria-label="View report for ${fmtDate(latest.date_iso)} (opens in new tab)">&#128196; View Report</a>
+      <a class="btn-secondary" href="${latest.filename}" download aria-label="Download PDF for ${fmtDate(latest.date_iso)}">&#8595; Download PDF</a>
     </div>`;
 
   // ── Evacuation address counts ──
@@ -732,7 +747,7 @@ function render(pdfs, data) {
             </td>
             <td class="fires-val">${fv}</td>
             <td class="acres-val">${av}</td>
-            <td><span class="report-lbl">${label}</span><a class="action-link" href="${rep.filename}" target="_blank">&#128196; View</a> <a class="action-link dl" href="${rep.filename}" download>&#8595; Download</a></td>
+            <td><span class="report-lbl" aria-hidden="true">${label}</span><a class="action-link" href="${rep.filename}" target="_blank" aria-label="View ${label} report for ${dateIso} (opens in new tab)">&#128196; View</a> <a class="action-link dl" href="${rep.filename}" download aria-label="Download ${label} PDF for ${dateIso}">&#8595; Download</a></td>
           </tr>`;
         } else {
           // Subsequent rows: no date cell (covered by rowspan above)
@@ -741,7 +756,7 @@ function render(pdfs, data) {
           <tr${subClass}>
             <td class="fires-val">${fv}</td>
             <td class="acres-val">${av}</td>
-            <td><span class="report-lbl">${label}</span><a class="action-link" href="${rep.filename}" target="_blank">&#128196; View</a> <a class="action-link dl" href="${rep.filename}" download>&#8595; Download</a></td>
+            <td><span class="report-lbl" aria-hidden="true">${label}</span><a class="action-link" href="${rep.filename}" target="_blank" aria-label="View ${label} report for ${dateIso} (opens in new tab)">&#128196; View</a> <a class="action-link dl" href="${rep.filename}" download aria-label="Download ${label} PDF for ${dateIso}">&#8595; Download</a></td>
           </tr>`;
         }
       }).join('');
@@ -761,7 +776,7 @@ function render(pdfs, data) {
               <thead>
                 <tr>
                   <th>Date</th>
-                  <th>Active Fires<br><span style="font-weight:400;font-size:0.75em;opacity:0.75">WF + RX</span></th>
+                  <th aria-label="Active Fires (WF and RX combined)">Active Fires<br><span style="font-weight:400;font-size:0.75em;opacity:0.75" aria-hidden="true">WF + RX</span></th>
                   <th>Acres Burned</th>
                   <th>Report</th>
                 </tr>
