@@ -640,6 +640,11 @@
       "date": "2026-06-03",
       "active_fires": 36,
       "acres_burned": 568.69
+    },
+    {
+      "date": "2026-06-04",
+      "active_fires": 37,
+      "acres_burned": 556.81
     }
   ],
   "historical_seasons": [
