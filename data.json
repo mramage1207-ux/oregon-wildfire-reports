@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-06-04",
-  "report_time": "7:55 AM PDT",
-  "active_large_fires": 1,
-  "total_large_fire_acres": 4893.0,
+  "last_updated": "2026-06-05",
+  "report_time": "6:06 PM PDT",
+  "active_large_fires": 2,
+  "total_large_fire_acres": 5043.0,
   "structures_lost": 0,
   "evac_triggering_fires": 0,
   "evac_zones": {
@@ -650,8 +650,8 @@
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 7,
-      "total_acres": 4893.0,
+      "total_fires": 8,
+      "total_acres": 5043.0,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -677,14 +677,14 @@
           "acres": 450.0
         },
         {
+          "name": "CLOVER",
+          "county": "Malheur",
+          "acres": 150.0
+        },
+        {
           "name": "Boardman Fire",
           "county": "Morrow",
           "acres": 150
-        },
-        {
-          "name": "Blackwell Rd 8087",
-          "county": "Jackson",
-          "acres": 48.2
         }
       ]
     },
@@ -981,6 +981,11 @@
     "2026-06-02_1800": {
       "active_fires": 34,
       "acres_burned": 558.2,
+      "should_update": true
+    },
+    "2026-06-04_1800": {
+      "active_fires": 32,
+      "acres_burned": 674.2,
       "should_update": true
     }
   }
