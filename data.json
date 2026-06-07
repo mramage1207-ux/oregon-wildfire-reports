@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-06-06",
-  "report_time": "7:52 AM PDT",
-  "active_large_fires": 1,
-  "total_large_fire_acres": 5146.0,
+  "last_updated": "2026-06-07",
+  "report_time": "7:51 AM PDT",
+  "active_large_fires": 2,
+  "total_large_fire_acres": 6646.0,
   "structures_lost": 0,
   "evac_triggering_fires": 0,
   "evac_zones": {
@@ -14,7 +14,7 @@
   "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
   "struct_loss": {
-    "date": "2026-06-06",
+    "date": "2026-06-07",
     "source": "NIFC WFIGS Current Incident Locations",
     "incident_count": 0,
     "has_type_breakdown": false,
@@ -655,13 +655,18 @@
       "date": "2026-06-06",
       "active_fires": 20,
       "acres_burned": 69.55
+    },
+    {
+      "date": "2026-06-07",
+      "active_fires": 17,
+      "acres_burned": 1517.39
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 8,
-      "total_acres": 5146.0,
+      "total_fires": 9,
+      "total_acres": 6646.0,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -682,6 +687,11 @@
           "acres": 1634.0
         },
         {
+          "name": "FRONTAGE",
+          "county": "Baker",
+          "acres": 1500.0
+        },
+        {
           "name": "0246 RHEA",
           "county": "Gilliam",
           "acres": 450.0
@@ -690,11 +700,6 @@
           "name": "CLOVER",
           "county": "Malheur",
           "acres": 253.0
-        },
-        {
-          "name": "Boardman Fire",
-          "county": "Morrow",
-          "acres": 150
         }
       ]
     },
