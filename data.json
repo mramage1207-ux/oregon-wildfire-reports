@@ -1,8 +1,8 @@
 {
   "last_updated": "2026-06-08",
-  "report_time": "7:55 AM PDT",
-  "active_large_fires": 2,
-  "total_large_fire_acres": 6646.0,
+  "report_time": "2:08 PM PDT",
+  "active_large_fires": 1,
+  "total_large_fire_acres": 7084.0,
   "structures_lost": 0,
   "evac_triggering_fires": 0,
   "evac_zones": {
@@ -671,7 +671,7 @@
     {
       "year": 2026,
       "total_fires": 9,
-      "total_acres": 6646.0,
+      "total_acres": 7084.0,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -687,14 +687,14 @@
           "acres": 2589.0
         },
         {
+          "name": "FRONTAGE",
+          "county": "Baker",
+          "acres": 1938.0
+        },
+        {
           "name": "0231 ZEN",
           "county": "Wasco",
           "acres": 1634.0
-        },
-        {
-          "name": "FRONTAGE",
-          "county": "Baker",
-          "acres": 1500.0
         },
         {
           "name": "0246 RHEA",
@@ -1006,6 +1006,11 @@
     "2026-06-04_1800": {
       "active_fires": 32,
       "acres_burned": 674.2,
+      "should_update": true
+    },
+    "2026-06-08_1400": {
+      "active_fires": 17,
+      "acres_burned": 54.4,
       "should_update": true
     }
   }
