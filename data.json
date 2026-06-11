@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-06-11",
-  "report_time": "8:00 AM PDT",
+  "report_time": "8:26 AM PDT",
   "active_large_fires": 0,
   "total_large_fire_acres": 7084.0,
   "structures_lost": 0,
@@ -678,8 +678,8 @@
     },
     {
       "date": "2026-06-11",
-      "active_fires": 48,
-      "acres_burned": 58.97
+      "active_fires": 46,
+      "acres_burned": 53.87
     }
   ],
   "historical_seasons": [
