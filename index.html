@@ -86,6 +86,12 @@
       text-transform: uppercase; color: rgba(255,255,255,.70);
       margin-bottom: .55rem;
     }
+    .evac-label-link {
+      color: inherit; text-decoration: none;
+    }
+    .evac-label-link:hover {
+      text-decoration: underline; color: rgba(255,255,255,.95);
+    }
     .evac-grid {
       display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .75rem;
       margin-bottom: .5rem;
@@ -377,7 +383,7 @@
       <div class="loading-hero">&#9203; Loading latest report&hellip;</div>
     </div>
     <div class="evac-section" role="region" aria-label="Evacuation zones by level">
-      <div class="evac-label">Evacuation Addresses by Level &mdash; Active Fires Only</div>
+      <div class="evac-label"><a href="https://geo.maps.arcgis.com/apps/instant/portfolio/index.html?appid=22d04c007866419c91ccf00d097526c8" target="_blank" rel="noopener noreferrer" class="evac-label-link">Evacuation Addresses by Level &mdash; Active Fires Only</a></div>
       <div class="evac-grid">
         <div class="evac-box level1">
           <div class="evac-level">Level 1 &mdash; Be Ready</div>
