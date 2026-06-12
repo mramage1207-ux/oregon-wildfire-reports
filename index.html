@@ -617,11 +617,11 @@ function drawChart(hist) {
   const fA = v => Math.round(v||0).toLocaleString('en-US');
   const fF = v => String(v||0);
 
-  // Peak acres (skip if peak == latest — no double label)
-  if (peakAIdx !== n-1)
+  // Peak acres — skip if peak is too close to the latest point (labels would collide)
+  if (peakAIdx !== n-1 && xS(n-1) - xS(peakAIdx) > 50)
     addLabel(xS(peakAIdx), yA(hist[peakAIdx].acres_burned), fA(hist[peakAIdx].acres_burned), '#e67e22');
-  // Peak fires (skip if peak == latest)
-  if (peakFIdx !== n-1)
+  // Peak fires — same proximity guard
+  if (peakFIdx !== n-1 && xS(n-1) - xS(peakFIdx) > 50)
     addLabel(xS(peakFIdx), yF(hist[peakFIdx].active_fires), fF(hist[peakFIdx].active_fires), '#1a2744');
   // Latest fires dot (navy) + label
   svg.appendChild(el('circle', {cx:xS(n-1), cy:yF(hist[n-1].active_fires),
