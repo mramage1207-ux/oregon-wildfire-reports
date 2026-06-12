@@ -163,6 +163,13 @@
 
     /* ── main ── */
     main { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+    .map-card {
+      background: #fff; border-radius: 12px; padding: 1.4rem 1.6rem;
+      margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,.07);
+    }
+    .map-card h2 { font-size: 1rem; font-weight: 700; color: #1a2744; }
+    .map-sub { font-size: .78rem; color: #5a6473; margin-top: 3px; margin-bottom: .8rem; }
+    svg.fire-map { width: 100%; display: block; }
     .chart-card {
       background: #fff; border-radius: 12px; padding: 1.4rem 1.6rem;
       margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,.07);
@@ -417,6 +424,14 @@
 </div>
 
 <main>
+  <div class="map-card" id="map-card">
+    <h2>Fire Locations &mdash; 2026 Season</h2>
+    <div class="map-sub">Large fires (&ge;100 ac) and fires with evacuation orders &mdash; active (red) and contained (green)</div>
+    <svg class="fire-map" viewBox="0 0 900 480" id="fireMap"
+      preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="fireMapTitle">
+      <title id="fireMapTitle">Oregon 2026 fire season locations map</title>
+    </svg>
+  </div>
   <div class="chart-card" id="chart-card">
     <h2>2026 Season Trend</h2>
     <div class="chart-sub">Active fires &amp; acres burned &mdash; all reported days</div>
@@ -520,6 +535,106 @@ function fmtAcres(v) {
 }
 
 // ── CHART ────────────────────────────────────────────────────────────────────
+function drawMap(fires) {
+  const svg = document.getElementById('fireMap');
+  if (!svg || !fires || !fires.length) return;
+  const W=900, H=480, LEGEND_W=115;
+  const LAT_MIN=41.95, LAT_MAX=46.30, LON_MIN=-124.70, LON_MAX=-116.35;
+  const LON_SPAN=LON_MAX-LON_MIN, LAT_SPAN=LAT_MAX-LAT_MIN;
+  const COS_MID=Math.cos((LAT_MIN+LAT_MAX)/2*Math.PI/180);
+  const ASPECT=(LON_SPAN*COS_MID)/LAT_SPAN;
+  const avW=W-LEGEND_W-10, avH=H-20;
+  let mw,mh,mx,my;
+  if(avW/avH>ASPECT){mh=avH;mw=mh*ASPECT;mx=LEGEND_W+(avW-mw)/2;my=10;}
+  else{mw=avW;mh=mw/ASPECT;mx=LEGEND_W;my=10+(avH-mh)/2;}
+
+  const ns='http://www.w3.org/2000/svg';
+  const el=(tag,a,txt)=>{
+    const e=document.createElementNS(ns,tag);
+    Object.entries(a).forEach(([k,v])=>e.setAttribute(k,v));
+    if(txt!=null) e.textContent=txt;
+    return e;
+  };
+  const proj=(lon,lat)=>[mx+(lon-LON_MIN)/LON_SPAN*mw, my+mh-(lat-LAT_MIN)/LAT_SPAN*mh];
+
+  // Backgrounds
+  svg.appendChild(el('rect',{x:0,y:0,width:W,height:H,fill:'#f8f9fa'}));
+  svg.appendChild(el('rect',{x:LEGEND_W,y:10,width:avW,height:avH,fill:'#D6EAF8'}));
+  svg.appendChild(el('rect',{x:mx,y:my,width:mw,height:mh,fill:'#F0EDE8'}));
+
+  // Oregon boundary
+  const OR_POLY=[[-124.07,46.25],[-124.10,46.08],[-124.08,45.86],[-124.05,45.73],[-123.98,45.46],[-123.97,45.14],[-124.01,44.97],[-124.06,44.84],[-124.08,44.56],[-124.11,44.28],[-124.18,44.05],[-124.22,43.94],[-124.24,43.67],[-124.32,43.46],[-124.33,43.36],[-124.41,42.99],[-124.43,42.72],[-124.43,42.56],[-124.37,42.35],[-124.28,42.00],[-122.50,42.00],[-121.00,42.00],[-119.00,42.00],[-117.50,42.00],[-117.02,42.00],[-117.02,42.80],[-117.02,43.60],[-116.95,44.10],[-117.06,44.48],[-117.14,44.75],[-117.10,45.03],[-116.85,45.53],[-116.68,45.85],[-116.92,46.08],[-116.96,46.25],[-118.20,46.25],[-119.50,46.25],[-121.00,46.10],[-121.72,45.67],[-122.07,45.54],[-122.20,45.54],[-122.73,45.54],[-122.82,45.80],[-123.10,46.17],[-123.50,46.25],[-124.07,46.25]];
+  svg.appendChild(el('polygon',{points:OR_POLY.map(([lo,la])=>proj(lo,la).join(',')).join(' '),fill:'#E8E0D0',stroke:'#666644','stroke-width':'1'}));
+
+  // Latitude graticule lines
+  for(let lat=42;lat<=46;lat++){
+    const [x0,y0]=proj(LON_MIN,lat),[x1]=proj(LON_MAX,lat);
+    svg.appendChild(el('line',{x1:x0,y1:y0,x2:x1,y2:y0,stroke:'#ccc','stroke-width':'0.3','stroke-dasharray':'3,4'}));
+  }
+
+  // Neighbor state labels
+  const nb=(lon,lat,txt,anchor,sz)=>{
+    const [x,y]=proj(lon,lat);
+    svg.appendChild(el('text',{'text-anchor':anchor||'middle','font-size':sz||7,'font-weight':'bold',fill:'#aaa',x,y},txt));
+  };
+  nb(-119.5,46.65,'WASHINGTON'); nb(-116.05,44.5,'IDAHO','start');
+  nb(-121.5,41.72,'CALIFORNIA','middle',6); nb(-118.5,41.72,'NEVADA','middle',6);
+
+  // Reference cities
+  [["Portland",-122.68,45.52,4,2],["Salem",-123.04,44.94,4,2],["Eugene",-123.09,44.05,4,2],["Corvallis",-123.26,44.56,4,2],["Medford",-122.87,42.33,4,2],["Ashland",-122.70,42.19,4,-7],["Roseburg",-123.35,43.22,4,2],["Astoria",-123.83,46.19,4,2],["Newport",-124.06,44.64,-30,-7],["Brookings",-124.28,42.05,4,-7],["Bend",-121.31,44.06,4,2],["Redmond",-121.15,44.27,4,2],["La Pine",-121.50,43.67,4,2],["Prineville",-120.84,44.30,4,2],["Madras",-121.13,44.63,4,2],["Pendleton",-118.79,45.67,4,2],["La Grande",-118.09,45.33,4,2],["Baker City",-117.83,44.77,4,2],["Burns",-119.05,43.59,4,2],["Ontario",-116.97,44.03,4,2],["Klamath Falls",-121.78,42.22,4,2],["Lakeview",-120.35,42.19,4,2]].forEach(([name,lon,lat,ox,oy])=>{
+    const [cx,cy]=proj(lon,lat);
+    svg.appendChild(el('circle',{cx,cy,r:'2',fill:'#555',stroke:'white','stroke-width':'0.4'}));
+    svg.appendChild(el('text',{x:cx+ox,y:cy+oy,'font-size':'5.5',fill:'#333'},name));
+  });
+
+  // County centroids (lat/lon fallback when fire has no coordinates)
+  const CC={"Morrow":[-119.60,45.40],"Deschutes":[-121.20,43.90],"Jackson":[-122.70,42.50],"Klamath":[-121.50,42.60],"Lane":[-122.80,43.90],"Douglas":[-123.10,43.20],"Marion":[-122.90,44.90],"Clackamas":[-122.20,45.10],"Multnomah":[-122.50,45.55],"Jefferson":[-121.10,44.60],"Wasco":[-121.00,45.30],"Crook":[-120.50,44.30],"Harney":[-118.90,43.00],"Lake":[-120.30,42.70],"Grant":[-118.90,44.50],"Union":[-117.90,45.30],"Wallowa":[-117.30,45.60],"Baker":[-117.60,44.80],"Malheur":[-117.70,43.40],"Umatilla":[-118.70,45.60],"Gilliam":[-120.00,45.40],"Wheeler":[-120.00,44.70],"Sherman":[-120.70,45.40],"Hood River":[-121.60,45.50],"Columbia":[-123.20,46.00],"Washington":[-123.00,45.50],"Yamhill":[-123.30,45.30],"Polk":[-123.40,44.90],"Lincoln":[-124.00,44.60],"Tillamook":[-123.80,45.45],"Clatsop":[-123.80,46.10],"Benton":[-123.40,44.50],"Linn":[-122.50,44.50],"Coos":[-124.10,43.20],"Curry":[-124.20,42.50]};
+
+  // Fire markers (drawn last so they sit above city labels)
+  fires.forEach(f=>{
+    let lon=f.lon, lat=f.lat;
+    if((!lon||!lat)&&CC[f.county]) [lon,lat]=CC[f.county];
+    if(!lon||!lat) return;
+    const [fx,fy]=proj(lon,lat);
+    const isActive=f.status==='Active', hasEvac=f.triggered_evacuation;
+    const fill=isActive?'#CC2200':'#228B22';
+    if(hasEvac){
+      svg.appendChild(el('circle',{cx:fx,cy:fy,r:'10',fill:'none',stroke:'#FF8C00','stroke-width':'2'}));
+      svg.appendChild(el('circle',{cx:fx,cy:fy,r:'11.5',fill:'none',stroke:'#FF8C00','stroke-width':'0.6','stroke-dasharray':'3,2'}));
+    }
+    svg.appendChild(el('circle',{cx:fx,cy:fy,r:'6.5',fill:'none',stroke:fill,'stroke-width':'0.8'}));
+    svg.appendChild(el('circle',{cx:fx,cy:fy,r:'4.5',fill,stroke:'white','stroke-width':'0.8'}));
+    if(hasEvac){
+      svg.appendChild(el('rect',{x:fx+3,y:fy-10,width:8,height:7,fill:'#FF8C00'}));
+      svg.appendChild(el('text',{x:fx+7,y:fy-4,'text-anchor':'middle','font-size':'5','font-weight':'bold',fill:'white'},'E'));
+    }
+    const lw=f.name.length*4.2+6;
+    svg.appendChild(el('rect',{x:fx+13,y:fy-1,width:lw,height:9,fill:'white',stroke:fill,'stroke-width':'0.5'}));
+    svg.appendChild(el('text',{x:fx+15,y:fy+7,'font-size':'5.5','font-weight':'bold',fill},f.name));
+  });
+
+  // Legend panel (left strip)
+  const lx=5, ly=Math.round(H/2)-46;
+  svg.appendChild(el('rect',{x:lx,y:ly,width:LEGEND_W-10,height:100,fill:'white',stroke:'#ccc','stroke-width':'0.6','rx':'3'}));
+  svg.appendChild(el('circle',{cx:lx+10,cy:ly+14,r:'4',fill:'#CC2200',stroke:'white','stroke-width':'0.6'}));
+  svg.appendChild(el('text',{x:lx+19,y:ly+18,'font-size':'6.5',fill:'#334'},'Active Fire'));
+  svg.appendChild(el('circle',{cx:lx+10,cy:ly+30,r:'4',fill:'#228B22',stroke:'white','stroke-width':'0.6'}));
+  svg.appendChild(el('text',{x:lx+19,y:ly+34,'font-size':'6.5',fill:'#334'},'Contained Fire'));
+  svg.appendChild(el('circle',{cx:lx+10,cy:ly+47,r:'6',fill:'none',stroke:'#FF8C00','stroke-width':'2'}));
+  svg.appendChild(el('rect',{x:lx+13,y:ly+43,width:6,height:5,fill:'#FF8C00'}));
+  svg.appendChild(el('text',{x:lx+16,y:ly+47,'text-anchor':'middle','font-size':'4.5','font-weight':'bold',fill:'white'},'E'));
+  svg.appendChild(el('text',{x:lx+22,y:ly+51,'font-size':'6.5',fill:'#334'},'Evac. Triggered'));
+  svg.appendChild(el('circle',{cx:lx+10,cy:ly+64,r:'2',fill:'#555',stroke:'white','stroke-width':'0.4'}));
+  svg.appendChild(el('text',{x:lx+19,y:ly+68,'font-size':'6.5',fill:'#334'},'Reference City'));
+  svg.appendChild(el('text',{x:lx+5,y:ly+82,'font-size':'5.5',fill:'#888'},'Fires ≥100 ac or'));
+  svg.appendChild(el('text',{x:lx+5,y:ly+92,'font-size':'5.5',fill:'#888'},'with evac. order'));
+
+  // North arrow (top of legend strip)
+  const ax=LEGEND_W-10, ay=28;
+  svg.appendChild(el('polygon',{points:`${ax},${ay-10} ${ax-4},${ay} ${ax+4},${ay}`,fill:'#CC2200'}));
+  svg.appendChild(el('text',{x:ax,y:ay-12,'text-anchor':'middle','font-size':'7','font-weight':'bold',fill:'#CC2200'},'N'));
+}
+
 function drawChart(hist) {
   const svg = document.getElementById('trendChart');
   if (!svg || !hist || hist.length < 2) return;
@@ -865,6 +980,9 @@ function render(pdfs, data) {
         </div>
       </div>`;
   }).join('');
+
+  // ── Map ──
+  if (data && data.map_fires) drawMap(data.map_fires);
 
   // ── Chart ──
   if (data && data.historical_data) {

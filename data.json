@@ -1048,5 +1048,88 @@
       "acres_burned": 161.2,
       "should_update": true
     }
-  }
+  },
+  "map_fires": [
+    {
+      "name": "PINE MOUNTAIN",
+      "county": "Deschutes",
+      "lat": 43.810294,
+      "lon": -120.917759,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 2589.0
+    },
+    {
+      "name": "FRONTAGE",
+      "county": "Baker",
+      "lat": 44.304831,
+      "lon": -117.232704,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 1938.0
+    },
+    {
+      "name": "0231 ZEN",
+      "county": "Wasco",
+      "lat": 44.85604,
+      "lon": -120.44317,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 1634.0
+    },
+    {
+      "name": "0246 RHEA",
+      "county": "Gilliam",
+      "lat": 45.721667,
+      "lon": -120.028117,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 450.0
+    },
+    {
+      "name": "CLOVER",
+      "county": "Malheur",
+      "lat": 43.744072,
+      "lon": -117.138636,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 253.0
+    },
+    {
+      "name": "Boardman Fire",
+      "county": "Morrow",
+      "lat": null,
+      "lon": null,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 150
+    },
+    {
+      "name": "Blackwell Rd 8087",
+      "county": "Jackson",
+      "lat": 42.41786667,
+      "lon": -122.96661667,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 48.2
+    },
+    {
+      "name": "Riverview Fire",
+      "county": "Deschutes",
+      "lat": null,
+      "lon": null,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 12
+    },
+    {
+      "name": "HILT",
+      "county": "Jackson",
+      "lat": 42.004946,
+      "lon": -122.646264,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 9.8
+    }
+  ]
 }
