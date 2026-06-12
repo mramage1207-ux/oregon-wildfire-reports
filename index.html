@@ -595,11 +595,40 @@ function drawChart(hist) {
       stroke:'#cbd5e0', 'stroke-width':'1'}));
   });
 
-  // latest dot
+  // latest acres dot
   svg.appendChild(el('circle', {
     cx:xS(n-1), cy:yA(hist[n-1].acres_burned),
     r:'4', fill:'#e67e22', stroke:'#fff', 'stroke-width':'2'
   }));
+
+  // ── Peak + latest data labels ────────────────────────────────────────────
+  const peakAIdx = hist.reduce((mi,_,i,a)=>(a[i].acres_burned||0)>(a[mi].acres_burned||0)?i:mi, 0);
+  const peakFIdx = hist.reduce((mi,_,i,a)=>(a[i].active_fires||0)>(a[mi].active_fires||0)?i:mi, 0);
+  const addLabel = (x, y, text, color, anchor) => {
+    const a = anchor||'middle', ly = Math.max(P.t+9, y-7);
+    // white halo pass
+    const h = el('text', {x, y:ly, 'text-anchor':a, 'font-size':'8.5', 'font-weight':'700',
+      fill:'white', stroke:'white', 'stroke-width':'3.5', 'stroke-linejoin':'round'});
+    h.textContent = text; svg.appendChild(h);
+    // colored label
+    const l = el('text', {x, y:ly, 'text-anchor':a, 'font-size':'8.5', 'font-weight':'700', fill:color});
+    l.textContent = text; svg.appendChild(l);
+  };
+  const fA = v => Math.round(v||0).toLocaleString('en-US');
+  const fF = v => String(v||0);
+
+  // Peak acres (skip if peak == latest — no double label)
+  if (peakAIdx !== n-1)
+    addLabel(xS(peakAIdx), yA(hist[peakAIdx].acres_burned), fA(hist[peakAIdx].acres_burned), '#e67e22');
+  // Peak fires (skip if peak == latest)
+  if (peakFIdx !== n-1)
+    addLabel(xS(peakFIdx), yF(hist[peakFIdx].active_fires), fF(hist[peakFIdx].active_fires), '#1a2744');
+  // Latest fires dot (navy) + label
+  svg.appendChild(el('circle', {cx:xS(n-1), cy:yF(hist[n-1].active_fires),
+    r:'4', fill:'#1a2744', stroke:'#fff', 'stroke-width':'2'}));
+  addLabel(xS(n-1), yF(hist[n-1].active_fires), fF(hist[n-1].active_fires), '#1a2744', 'end');
+  // Latest acres label (dot already rendered above)
+  addLabel(xS(n-1), yA(hist[n-1].acres_burned), fA(hist[n-1].acres_burned), '#e67e22', 'end');
 
   // Accessible fallback table for screen readers
   const tbl = document.getElementById('trendChartTable');
