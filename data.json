@@ -1,22 +1,20 @@
 {
-  "last_updated": "2026-06-15",
-  "report_time": "8:07 AM PDT",
-  "active_large_fires": 1,
+  "last_updated": "2026-06-16",
+  "report_time": "8:02 AM PDT",
+  "active_large_fires": 0,
   "total_large_fire_acres": 7084.01,
   "structures_lost": 0,
-  "evac_triggering_fires": 1,
+  "evac_triggering_fires": 0,
   "evac_zones": {
     "level3": [],
     "level2": [],
-    "level1": [
-      "PP# 342802 UPPER APPLEGATE RD \u2014 Jackson County, Oregon"
-    ]
+    "level1": []
   },
-  "evac_addresses_l1": 531,
+  "evac_addresses_l1": 624,
   "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
   "struct_loss": {
-    "date": "2026-06-15",
+    "date": "2026-06-16",
     "source": "NIFC WFIGS Current Incident Locations",
     "incident_count": 0,
     "has_type_breakdown": false,
@@ -702,6 +700,11 @@
       "date": "2026-06-15",
       "active_fires": 33,
       "acres_burned": 58.56
+    },
+    {
+      "date": "2026-06-16",
+      "active_fires": 38,
+      "acres_burned": 69.04
     }
   ],
   "historical_seasons": [
@@ -1082,7 +1085,7 @@
       "county": "Jackson",
       "lat": 42.22611667,
       "lon": -123.0478,
-      "status": "Active",
+      "status": "Contained",
       "triggered_evacuation": true,
       "acres": 0.01
     },
