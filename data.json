@@ -1,8 +1,8 @@
 {
   "last_updated": "2026-06-16",
-  "report_time": "9:49 AM PDT",
-  "active_large_fires": 0,
-  "total_large_fire_acres": 7084.01,
+  "report_time": "2:13 PM PDT",
+  "active_large_fires": 1,
+  "total_large_fire_acres": 7184.01,
   "structures_lost": 0,
   "evac_triggering_fires": 0,
   "evac_zones": {
@@ -710,8 +710,8 @@
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 10,
-      "total_acres": 7084.01,
+      "total_fires": 11,
+      "total_acres": 7184.01,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -1077,17 +1077,22 @@
       "active_fires": 27,
       "acres_burned": 55.4,
       "should_update": true
+    },
+    "2026-06-16_1400": {
+      "active_fires": 38,
+      "acres_burned": 208.7,
+      "should_update": true
     }
   },
   "map_fires": [
     {
-      "name": "PP# 342802 UPPER APPLEGATE RD",
-      "county": "Jackson",
-      "lat": 42.22611667,
-      "lon": -123.0478,
-      "status": "Contained",
-      "triggered_evacuation": true,
-      "acres": 0.01
+      "name": "Old Immigrant",
+      "county": "Umatilla",
+      "lat": 45.600122,
+      "lon": -118.62366,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 100.0
     },
     {
       "name": "PINE MOUNTAIN",
@@ -1169,6 +1174,15 @@
       "status": "Contained",
       "triggered_evacuation": true,
       "acres": 9.8
+    },
+    {
+      "name": "PP# 342802 UPPER APPLEGATE RD",
+      "county": "Jackson",
+      "lat": 42.22611667,
+      "lon": -123.0478,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 0.01
     }
   ]
 }
