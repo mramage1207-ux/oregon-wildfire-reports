@@ -1,14 +1,16 @@
 {
   "last_updated": "2026-06-17",
-  "report_time": "8:30 AM PDT",
+  "report_time": "8:41 AM PDT",
   "active_large_fires": 2,
   "total_large_fire_acres": 8295.01,
   "structures_lost": 0,
-  "evac_triggering_fires": 0,
+  "evac_triggering_fires": 1,
   "evac_zones": {
     "level3": [],
     "level2": [],
-    "level1": []
+    "level1": [
+      "Old Emigrant \u2014 Umatilla County, Oregon"
+    ]
   },
   "evac_addresses_l1": 640,
   "evac_addresses_l2": 0,
@@ -1096,7 +1098,7 @@
       "lat": 45.600122,
       "lon": -118.62366,
       "status": "Active",
-      "triggered_evacuation": false,
+      "triggered_evacuation": true,
       "acres": 1000.0
     },
     {
