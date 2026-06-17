@@ -1,8 +1,8 @@
 {
   "last_updated": "2026-06-17",
-  "report_time": "7:56 AM PDT",
-  "active_large_fires": 3,
-  "total_large_fire_acres": 8395.01,
+  "report_time": "8:30 AM PDT",
+  "active_large_fires": 2,
+  "total_large_fire_acres": 8295.01,
   "structures_lost": 0,
   "evac_triggering_fires": 0,
   "evac_zones": {
@@ -715,8 +715,8 @@
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 13,
-      "total_acres": 8395.01,
+      "total_fires": 12,
+      "total_acres": 8295.01,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -1107,15 +1107,6 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 211.0
-    },
-    {
-      "name": "Old Immigrant",
-      "county": "Umatilla",
-      "lat": 45.600122,
-      "lon": -118.62366,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 100.0
     },
     {
       "name": "PINE MOUNTAIN",
