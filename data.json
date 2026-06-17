@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-06-16",
-  "report_time": "2:13 PM PDT",
-  "active_large_fires": 1,
-  "total_large_fire_acres": 7184.01,
+  "last_updated": "2026-06-17",
+  "report_time": "7:56 AM PDT",
+  "active_large_fires": 3,
+  "total_large_fire_acres": 8395.01,
   "structures_lost": 0,
   "evac_triggering_fires": 0,
   "evac_zones": {
@@ -10,11 +10,11 @@
     "level2": [],
     "level1": []
   },
-  "evac_addresses_l1": 624,
+  "evac_addresses_l1": 640,
   "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
   "struct_loss": {
-    "date": "2026-06-16",
+    "date": "2026-06-17",
     "source": "NIFC WFIGS Current Incident Locations",
     "incident_count": 0,
     "has_type_breakdown": false,
@@ -705,13 +705,18 @@
       "date": "2026-06-16",
       "active_fires": 38,
       "acres_burned": 69.04
+    },
+    {
+      "date": "2026-06-17",
+      "active_fires": 44,
+      "acres_burned": 1410.92
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 11,
-      "total_acres": 7184.01,
+      "total_fires": 13,
+      "total_acres": 8395.01,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -737,14 +742,14 @@
           "acres": 1634.0
         },
         {
+          "name": "Old Emigrant",
+          "county": "Umatilla",
+          "acres": 1000.0
+        },
+        {
           "name": "0246 RHEA",
           "county": "Gilliam",
           "acres": 450.0
-        },
-        {
-          "name": "CLOVER",
-          "county": "Malheur",
-          "acres": 253.0
         }
       ]
     },
@@ -1085,6 +1090,24 @@
     }
   },
   "map_fires": [
+    {
+      "name": "Old Emigrant",
+      "county": "Umatilla",
+      "lat": 45.600122,
+      "lon": -118.62366,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 1000.0
+    },
+    {
+      "name": "MILLER CREEK",
+      "county": "Malheur",
+      "lat": 43.769012,
+      "lon": -117.790135,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 211.0
+    },
     {
       "name": "Old Immigrant",
       "county": "Umatilla",
