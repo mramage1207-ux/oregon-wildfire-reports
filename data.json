@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-06-17",
-  "report_time": "11:01 AM PDT",
-  "active_large_fires": 2,
-  "total_large_fire_acres": 8295.01,
+  "last_updated": "2026-06-18",
+  "report_time": "6:13 PM PDT",
+  "active_large_fires": 3,
+  "total_large_fire_acres": 9295.01,
   "structures_lost": 0,
   "evac_triggering_fires": 1,
   "evac_zones": {
@@ -12,7 +12,7 @@
       "Old Emigrant \u2014 Umatilla County, Oregon"
     ]
   },
-  "evac_addresses_l1": 640,
+  "evac_addresses_l1": 19,
   "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
   "struct_loss": {
@@ -717,8 +717,8 @@
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 12,
-      "total_acres": 8295.01,
+      "total_fires": 13,
+      "total_acres": 9295.01,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -746,12 +746,12 @@
         {
           "name": "Old Emigrant",
           "county": "Umatilla",
-          "acres": 1000.0
+          "acres": 1500.0
         },
         {
-          "name": "0246 RHEA",
-          "county": "Gilliam",
-          "acres": 450.0
+          "name": "Cable Creek",
+          "county": "Umatilla",
+          "acres": 500.0
         }
       ]
     },
@@ -1089,6 +1089,11 @@
       "active_fires": 38,
       "acres_burned": 208.7,
       "should_update": true
+    },
+    "2026-06-17_1800": {
+      "active_fires": 50,
+      "acres_burned": 2171.7,
+      "should_update": true
     }
   },
   "map_fires": [
@@ -1099,7 +1104,16 @@
       "lon": -118.62366,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 1000.0
+      "acres": 1500.0
+    },
+    {
+      "name": "Cable Creek",
+      "county": "Umatilla",
+      "lat": 45.134003,
+      "lon": -118.807271,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 500.0
     },
     {
       "name": "MILLER CREEK",
