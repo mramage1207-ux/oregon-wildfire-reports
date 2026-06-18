@@ -1,8 +1,8 @@
 {
   "last_updated": "2026-06-18",
-  "report_time": "6:13 PM PDT",
+  "report_time": "7:59 AM PDT",
   "active_large_fires": 3,
-  "total_large_fire_acres": 9295.01,
+  "total_large_fire_acres": 9495.01,
   "structures_lost": 0,
   "evac_triggering_fires": 1,
   "evac_zones": {
@@ -16,7 +16,7 @@
   "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
   "struct_loss": {
-    "date": "2026-06-17",
+    "date": "2026-06-18",
     "source": "NIFC WFIGS Current Incident Locations",
     "incident_count": 0,
     "has_type_breakdown": false,
@@ -712,13 +712,18 @@
       "date": "2026-06-17",
       "active_fires": 44,
       "acres_burned": 1410.92
+    },
+    {
+      "date": "2026-06-18",
+      "active_fires": 48,
+      "acres_burned": 2379.18
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
       "total_fires": 13,
-      "total_acres": 9295.01,
+      "total_acres": 9495.01,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -744,14 +749,14 @@
           "acres": 1634.0
         },
         {
-          "name": "Old Emigrant",
-          "county": "Umatilla",
-          "acres": 1500.0
-        },
-        {
           "name": "Cable Creek",
           "county": "Umatilla",
-          "acres": 500.0
+          "acres": 1200.0
+        },
+        {
+          "name": "Old Emigrant",
+          "county": "Umatilla",
+          "acres": 1000.0
         }
       ]
     },
@@ -1098,22 +1103,22 @@
   },
   "map_fires": [
     {
-      "name": "Old Emigrant",
-      "county": "Umatilla",
-      "lat": 45.600122,
-      "lon": -118.62366,
-      "status": "Active",
-      "triggered_evacuation": true,
-      "acres": 1500.0
-    },
-    {
       "name": "Cable Creek",
       "county": "Umatilla",
       "lat": 45.134003,
       "lon": -118.807271,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 500.0
+      "acres": 1200.0
+    },
+    {
+      "name": "Old Emigrant",
+      "county": "Umatilla",
+      "lat": 45.600122,
+      "lon": -118.62366,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 1000.0
     },
     {
       "name": "MILLER CREEK",
