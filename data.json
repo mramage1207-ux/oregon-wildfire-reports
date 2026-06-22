@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-21",
-  "report_time": "4:24 PM PDT",
+  "last_updated": "2026-06-22",
+  "report_time": "7:46 AM PDT",
   "active_large_fires": 2,
   "total_large_fire_acres": 9400.01,
   "structures_lost": 0,
@@ -14,7 +14,7 @@
   "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
   "struct_loss": {
-    "date": "2026-06-21",
+    "date": "2026-06-22",
     "source": "NIFC WFIGS Current Incident Locations",
     "incident_count": 0,
     "has_type_breakdown": false,
@@ -730,6 +730,11 @@
       "date": "2026-06-21",
       "active_fires": 23,
       "acres_burned": 168.94
+    },
+    {
+      "date": "2026-06-22",
+      "active_fires": 28,
+      "acres_burned": 168.25
     }
   ],
   "historical_seasons": [
