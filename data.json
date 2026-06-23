@@ -1,7 +1,7 @@
 {
   "last_updated": "2026-06-23",
-  "report_time": "8:58 AM PDT",
-  "active_large_fires": 3,
+  "report_time": "9:03 AM PDT",
+  "active_large_fires": 1,
   "total_large_fire_acres": 15900.01,
   "structures_lost": 0,
   "evac_triggering_fires": 0,
@@ -1140,24 +1140,6 @@
       "acres": 6500.0
     },
     {
-      "name": "Cable Creek",
-      "county": "Umatilla",
-      "lat": 45.134003,
-      "lon": -118.807271,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 610.0
-    },
-    {
-      "name": "MILLER CREEK",
-      "county": "Malheur",
-      "lat": 43.769012,
-      "lon": -117.790135,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 211.0
-    },
-    {
       "name": "PINE MOUNTAIN",
       "county": "Deschutes",
       "lat": 43.810294,
@@ -1194,6 +1176,15 @@
       "acres": 1495.0
     },
     {
+      "name": "Cable Creek",
+      "county": "Umatilla",
+      "lat": 45.134003,
+      "lon": -118.807271,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 610.0
+    },
+    {
       "name": "0246 RHEA",
       "county": "Gilliam",
       "lat": 45.721667,
@@ -1210,6 +1201,15 @@
       "status": "Contained",
       "triggered_evacuation": false,
       "acres": 253.0
+    },
+    {
+      "name": "MILLER CREEK",
+      "county": "Malheur",
+      "lat": 43.769012,
+      "lon": -117.790135,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 211.0
     },
     {
       "name": "Boardman Fire",
