@@ -1,8 +1,8 @@
 {
   "last_updated": "2026-06-23",
-  "report_time": "6:01 PM PDT",
-  "active_large_fires": 2,
-  "total_large_fire_acres": 9400.01,
+  "report_time": "8:36 AM PDT",
+  "active_large_fires": 3,
+  "total_large_fire_acres": 15900.01,
   "structures_lost": 0,
   "evac_triggering_fires": 0,
   "evac_zones": {
@@ -735,22 +735,32 @@
       "date": "2026-06-22",
       "active_fires": 25,
       "acres_burned": 167.04
+    },
+    {
+      "date": "2026-06-23",
+      "active_fires": 31,
+      "acres_burned": 6673.33
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 13,
-      "total_acres": 9400.01,
+      "total_fires": 14,
+      "total_acres": 15900.01,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
       "largest_fire": {
-        "name": "PINE MOUNTAIN",
-        "county": "Deschutes",
-        "acres": 2589.0
+        "name": "LYTLE",
+        "county": "Malheur",
+        "acres": 6500.0
       },
       "notable_fires": [
+        {
+          "name": "LYTLE",
+          "county": "Malheur",
+          "acres": 6500.0
+        },
         {
           "name": "PINE MOUNTAIN",
           "county": "Deschutes",
@@ -770,11 +780,6 @@
           "name": "Old Emigrant",
           "county": "Umatilla",
           "acres": 1495.0
-        },
-        {
-          "name": "Cable Creek",
-          "county": "Umatilla",
-          "acres": 610.0
         }
       ]
     },
@@ -1125,6 +1130,15 @@
     }
   },
   "map_fires": [
+    {
+      "name": "LYTLE",
+      "county": "Malheur",
+      "lat": 43.960372,
+      "lon": -117.210388,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 6500.0
+    },
     {
       "name": "Cable Creek",
       "county": "Umatilla",
