@@ -1,8 +1,8 @@
 {
   "last_updated": "2026-06-23",
-  "report_time": "9:17 AM PDT",
-  "active_large_fires": 1,
-  "total_large_fire_acres": 15900.01,
+  "report_time": "11:01 AM PDT",
+  "active_large_fires": 2,
+  "total_large_fire_acres": 16000.01,
   "structures_lost": 0,
   "evac_triggering_fires": 0,
   "evac_zones": {
@@ -745,8 +745,8 @@
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 14,
-      "total_acres": 15900.01,
+      "total_fires": 15,
+      "total_acres": 16000.01,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -1127,6 +1127,11 @@
       "active_fires": 33,
       "acres_burned": 288.6,
       "should_update": true
+    },
+    "2026-06-23_1100": {
+      "active_fires": 39,
+      "acres_burned": 6785.6,
+      "should_update": true
     }
   },
   "map_fires": [
@@ -1138,6 +1143,15 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 6500.0
+    },
+    {
+      "name": "MM 85",
+      "county": "Malheur",
+      "lat": 42.489694,
+      "lon": -117.883423,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 100.0
     },
     {
       "name": "PINE MOUNTAIN",
