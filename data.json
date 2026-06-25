@@ -1,7 +1,7 @@
 {
   "last_updated": "2026-06-25",
   "report_time": "8:37 AM PDT",
-  "active_large_fires": 2,
+  "active_large_fires": 1,
   "total_large_fire_acres": 15552.01,
   "structures_lost": 0,
   "evac_triggering_fires": 0,
@@ -10,7 +10,7 @@
     "level2": [],
     "level1": []
   },
-  "evac_addresses_l1": 3,
+  "evac_addresses_l1": 0,
   "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
   "struct_loss": {
@@ -745,6 +745,11 @@
       "date": "2026-06-24",
       "active_fires": 40,
       "acres_burned": 6240.23
+    },
+    {
+      "date": "2026-06-25",
+      "active_fires": 37,
+      "acres_burned": 6224.7
     }
   ],
   "historical_seasons": [
@@ -1150,15 +1155,6 @@
       "acres": 6052.0
     },
     {
-      "name": "MM 85",
-      "county": "Malheur",
-      "lat": 42.489694,
-      "lon": -117.883423,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 100.0
-    },
-    {
       "name": "PINE MOUNTAIN",
       "county": "Deschutes",
       "lat": 43.810294,
@@ -1238,6 +1234,15 @@
       "status": "Contained",
       "triggered_evacuation": false,
       "acres": 150
+    },
+    {
+      "name": "MM 85",
+      "county": "Malheur",
+      "lat": 42.489694,
+      "lon": -117.883423,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 100.0
     },
     {
       "name": "Blackwell Rd 8087",
