@@ -1,7 +1,7 @@
 {
   "last_updated": "2026-06-26",
   "report_time": "8:37 AM PDT",
-  "active_large_fires": 1,
+  "active_large_fires": 0,
   "total_large_fire_acres": 15552.01,
   "structures_lost": 0,
   "evac_triggering_fires": 0,
@@ -750,6 +750,11 @@
       "date": "2026-06-25",
       "active_fires": 37,
       "acres_burned": 6224.7
+    },
+    {
+      "date": "2026-06-26",
+      "active_fires": 34,
+      "acres_burned": 241.09
     }
   ],
   "historical_seasons": [
@@ -1150,7 +1155,7 @@
       "county": "Malheur",
       "lat": 43.960372,
       "lon": -117.210388,
-      "status": "Active",
+      "status": "Contained",
       "triggered_evacuation": false,
       "acres": 6052.0
     },
