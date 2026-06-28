@@ -503,7 +503,13 @@
 const REPO      = 'mramage1207-ux/oregon-wildfire-reports';
 const API_URL   = 'https://api.github.com/repos/' + REPO + '/contents/';
 const DATA_URL  = 'data.json';   // relative: served from same GitHub Pages origin
-const PDF_RE    = /^oregon_wildfire_report_(\d{4}-\d{2}-\d{2})(?:_(\d{4}))?\.pdf$/;
+const PDF_RE    = /^oregon_wildfire_report_(\d{4}-\d{2}-\d{2})(?:_(m?\d{4}))?\.pdf$/;
+// Suffix conventions:
+//   (none)   → Morning Report (scheduled 7:40 AM run)
+//   _1100    → 11:00 AM Intraday Update
+//   _1400    → 2:00 PM Intraday Update
+//   _1800    → 6:00 PM Intraday Update
+//   _mHHMM  → Manual Report (on-demand run, HHMM = Pacific time)
 
 // ── ACCORDION ────────────────────────────────────────────────────────────────
 function toggleMonth(btn) {
@@ -902,7 +908,7 @@ function render(pdfs, data) {
       .toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
     const reports = byMonth[mo];
 
-    // Group by date — supports intraday update PDFs (_1400, _1800 suffixes)
+    // Group by date — supports intraday (_1400, _1800) and manual (_mHHMM) PDFs
     const byDate = {};
     reports.forEach(r => {
       if (!byDate[r.date_iso]) byDate[r.date_iso] = { morning: null, updates: [] };
@@ -910,18 +916,35 @@ function render(pdfs, data) {
       else byDate[r.date_iso].updates.push(r);
     });
     const sortedDates = Object.keys(byDate).sort((a, b) => b.localeCompare(a));
-    const TIME_LABELS = { '1400': '2:00 PM Update', '1800': '6:00 PM Update' };
+
+    // Format a time_suffix into a human label.
+    // _mHHMM → "Manual Report (H:MM AM/PM PDT)"
+    // _1400  → "2:00 PM Update"  etc.
+    function fmtSuffix(sfx) {
+      if (!sfx) return 'Morning Report';
+      if (sfx.startsWith('m')) {
+        const hhmm = sfx.slice(1);
+        const h = parseInt(hhmm.slice(0, 2), 10);
+        const mi = hhmm.slice(2);
+        const ampm = h >= 12 ? 'PM' : 'AM';
+        const h12 = h > 12 ? h - 12 : (h === 0 ? 12 : h);
+        return `Manual Report (${h12}:${mi} ${ampm} PDT)`;
+      }
+      const INTRADAY = { '1100': '11:00 AM Update', '1400': '2:00 PM Update', '1800': '6:00 PM Update' };
+      return INTRADAY[sfx] || sfx;
+    }
+
     const todayDateISO = new Date().toISOString().slice(0, 10);
 
     const rows = sortedDates.map(dateIso => {
       const { morning, updates } = byDate[dateIso];
       const markLatest = isVeryFirst;
       if (isVeryFirst) isVeryFirst = false;
-      // Build ordered list of all reports for this date: morning first, then updates ascending
+      // Build ordered list: morning first, then updates/manuals ascending by suffix
       const sortedUpdates = [...updates].sort((a, b) => (a.time_suffix || '').localeCompare(b.time_suffix || ''));
       const allReports = [];
       if (morning) allReports.push({ rep: morning, label: 'Morning Report' });
-      sortedUpdates.forEach(u => allReports.push({ rep: u, label: TIME_LABELS[u.time_suffix] || u.time_suffix }));
+      sortedUpdates.forEach(u => allReports.push({ rep: u, label: fmtSuffix(u.time_suffix) }));
       if (!allReports.length) return '';
 
       const rowCount = allReports.length;
