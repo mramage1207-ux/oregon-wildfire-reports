@@ -596,8 +596,8 @@ function drawMap(fires) {
   // County centroids (lat/lon fallback when fire has no coordinates)
   const CC={"Morrow":[-119.60,45.40],"Deschutes":[-121.20,43.90],"Jackson":[-122.70,42.50],"Klamath":[-121.50,42.60],"Lane":[-122.80,43.90],"Douglas":[-123.10,43.20],"Marion":[-122.90,44.90],"Clackamas":[-122.20,45.10],"Multnomah":[-122.50,45.55],"Jefferson":[-121.10,44.60],"Wasco":[-121.00,45.30],"Crook":[-120.50,44.30],"Harney":[-118.90,43.00],"Lake":[-120.30,42.70],"Grant":[-118.90,44.50],"Union":[-117.90,45.30],"Wallowa":[-117.30,45.60],"Baker":[-117.60,44.80],"Malheur":[-117.70,43.40],"Umatilla":[-118.70,45.60],"Gilliam":[-120.00,45.40],"Wheeler":[-120.00,44.70],"Sherman":[-120.70,45.40],"Hood River":[-121.60,45.50],"Columbia":[-123.20,46.00],"Washington":[-123.00,45.50],"Yamhill":[-123.30,45.30],"Polk":[-123.40,44.90],"Lincoln":[-124.00,44.60],"Tillamook":[-123.80,45.45],"Clatsop":[-123.80,46.10],"Benton":[-123.40,44.50],"Linn":[-122.50,44.50],"Coos":[-124.10,43.20],"Curry":[-124.20,42.50]};
 
-  // Fire markers (drawn last so they sit above city labels)
-  fires.forEach(f=>{
+  // Fire markers — two passes so active fires render on top of contained fires
+  const drawFireMarker=f=>{
     let lon=f.lon, lat=f.lat;
     if((!lon||!lat)&&CC[f.county]) [lon,lat]=CC[f.county];
     if(!lon||!lat) return;
@@ -617,7 +617,11 @@ function drawMap(fires) {
     const lw=f.name.length*4.2+6;
     svg.appendChild(el('rect',{x:fx+13,y:fy-1,width:lw,height:9,fill:'white',stroke:fill,'stroke-width':'0.5'}));
     svg.appendChild(el('text',{x:fx+15,y:fy+7,'font-size':'5.5','font-weight':'bold',fill},f.name));
-  });
+  };
+  // Pass 1: contained fires (underneath)
+  fires.filter(f=>f.status!=='Active').forEach(drawFireMarker);
+  // Pass 2: active fires (on top)
+  fires.filter(f=>f.status==='Active').forEach(drawFireMarker);
 
   // Legend panel (left strip)
   const lx=5, ly=Math.round(H/2)-46;
