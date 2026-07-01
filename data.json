@@ -1,8 +1,8 @@
 {
   "last_updated": "2026-07-01",
-  "report_time": "2:01 PM PDT",
-  "active_large_fires": 1,
-  "total_large_fire_acres": 15652.01,
+  "report_time": "8:36 AM PDT",
+  "active_large_fires": 2,
+  "total_large_fire_acres": 16092.01,
   "structures_lost": 0,
   "evac_triggering_fires": 0,
   "evac_zones": {
@@ -775,13 +775,18 @@
       "date": "2026-06-30",
       "active_fires": 15,
       "acres_burned": 254.9
+    },
+    {
+      "date": "2026-07-01",
+      "active_fires": 22,
+      "acres_burned": 569.97
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 16,
-      "total_acres": 15652.01,
+      "total_fires": 17,
+      "total_acres": 16092.01,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -1175,6 +1180,15 @@
     }
   },
   "map_fires": [
+    {
+      "name": "0366 CEDAR",
+      "county": "Gilliam",
+      "lat": 45.632852,
+      "lon": -120.167974,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 440.0
+    },
     {
       "name": "Reith Road OSFM",
       "county": "Umatilla",
