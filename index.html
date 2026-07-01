@@ -426,7 +426,7 @@
 <main>
   <div class="map-card" id="map-card">
     <h2>Fire Locations &mdash; 2026 Season</h2>
-    <div class="map-sub">NWCG large fires (timber &ge;100 ac, grassland/rangeland &ge;300 ac, IMT assigned, or any evacuation triggered) &mdash; active (red) and contained (green)</div>
+    <div class="map-sub">NWCC large fires (timber &ge;100 ac, grassland/rangeland &ge;300 ac, IMT assigned, or any evacuation triggered) &mdash; active (red) and contained (green)</div>
     <svg class="fire-map" viewBox="0 0 900 480" id="fireMap"
       preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="fireMapTitle">
       <title id="fireMapTitle">Oregon 2026 fire season locations map</title>
@@ -636,7 +636,7 @@ function drawMap(fires) {
   svg.appendChild(el('text',{x:lx+22,y:ly+51,'font-size':'6.5',fill:'#334'},'Evac. Triggered'));
   svg.appendChild(el('circle',{cx:lx+10,cy:ly+64,r:'2',fill:'#555',stroke:'white','stroke-width':'0.4'}));
   svg.appendChild(el('text',{x:lx+19,y:ly+68,'font-size':'6.5',fill:'#334'},'Reference City'));
-  svg.appendChild(el('text',{x:lx+5,y:ly+82,'font-size':'5.5',fill:'#888'},'NWCG large fire'));
+  svg.appendChild(el('text',{x:lx+5,y:ly+82,'font-size':'5.5',fill:'#888'},'NWCC large fire'));
   svg.appendChild(el('text',{x:lx+5,y:ly+92,'font-size':'5.5',fill:'#888'},'definition applies'));
 
   // North arrow (top of legend strip)
