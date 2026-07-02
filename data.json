@@ -1,14 +1,16 @@
 {
   "last_updated": "2026-07-02",
-  "report_time": "8:37 AM PDT",
-  "active_large_fires": 1,
-  "total_large_fire_acres": 16093.0,
+  "report_time": "8:46 AM PDT",
+  "active_large_fires": 2,
+  "total_large_fire_acres": 18843.0,
   "structures_lost": 0,
-  "evac_triggering_fires": 0,
+  "evac_triggering_fires": 1,
   "evac_zones": {
     "level3": [],
     "level2": [],
-    "level1": []
+    "level1": [
+      "Butterfield Spring Fire \u2014 Malheur County, Oregon"
+    ]
   },
   "evac_addresses_l1": 0,
   "evac_addresses_l2": 0,
@@ -783,15 +785,15 @@
     },
     {
       "date": "2026-07-02",
-      "active_fires": 22,
-      "acres_burned": 129.68
+      "active_fires": 23,
+      "acres_burned": 2879.68
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 17,
-      "total_acres": 16093.0,
+      "total_fires": 18,
+      "total_acres": 18843.0,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -807,6 +809,11 @@
           "acres": 6052.0
         },
         {
+          "name": "Butterfield Spring Fire",
+          "county": "Malheur",
+          "acres": 2750.0
+        },
+        {
           "name": "PINE MOUNTAIN",
           "county": "Deschutes",
           "acres": 2589.0
@@ -820,11 +827,6 @@
           "name": "0231 ZEN",
           "county": "Wasco",
           "acres": 1634.0
-        },
-        {
-          "name": "Old Emigrant",
-          "county": "Umatilla",
-          "acres": 1495.0
         }
       ]
     },
@@ -1185,6 +1187,15 @@
     }
   },
   "map_fires": [
+    {
+      "name": "Butterfield Spring Fire",
+      "county": "Malheur",
+      "lat": 44.0,
+      "lon": -117.05,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 2750.0
+    },
     {
       "name": "Reith Road OSFM",
       "county": "Umatilla",
