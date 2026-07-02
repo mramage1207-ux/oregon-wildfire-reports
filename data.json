@@ -1,16 +1,14 @@
 {
   "last_updated": "2026-07-02",
-  "report_time": "1:43 PM PDT",
+  "report_time": "2:01 PM PDT",
   "active_large_fires": 2,
   "total_large_fire_acres": 18843.0,
   "structures_lost": 0,
-  "evac_triggering_fires": 1,
+  "evac_triggering_fires": 0,
   "evac_zones": {
     "level3": [],
     "level2": [],
-    "level1": [
-      "Butterfield Spring Fire \u2014 Malheur County, Oregon"
-    ]
+    "level1": []
   },
   "evac_addresses_l1": 0,
   "evac_addresses_l2": 0,
@@ -1183,6 +1181,11 @@
     "2026-06-30_1400": {
       "active_fires": 20,
       "acres_burned": 254.5,
+      "should_update": true
+    },
+    "2026-07-02_1400": {
+      "active_fires": 27,
+      "acres_burned": 131.9,
       "should_update": true
     }
   },
