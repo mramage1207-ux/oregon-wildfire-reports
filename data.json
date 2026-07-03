@@ -1,7 +1,7 @@
 {
   "last_updated": "2026-07-03",
-  "report_time": "2:11 PM PDT",
-  "active_large_fires": 2,
+  "report_time": "8:36 AM PDT",
+  "active_large_fires": 1,
   "total_large_fire_acres": 18843.0,
   "structures_lost": 0,
   "evac_triggering_fires": 0,
@@ -785,6 +785,11 @@
       "date": "2026-07-02",
       "active_fires": 23,
       "acres_burned": 2879.68
+    },
+    {
+      "date": "2026-07-03",
+      "active_fires": 32,
+      "acres_burned": 134.04
     }
   ],
   "historical_seasons": [
@@ -1191,15 +1196,6 @@
   },
   "map_fires": [
     {
-      "name": "Butterfield Spring Fire",
-      "county": "Malheur",
-      "lat": 44.0,
-      "lon": -117.05,
-      "status": "Active",
-      "triggered_evacuation": true,
-      "acres": 2750.0
-    },
-    {
       "name": "Reith Road OSFM",
       "county": "Umatilla",
       "lat": 45.663833,
@@ -1216,6 +1212,15 @@
       "status": "Contained",
       "triggered_evacuation": false,
       "acres": 6052.0
+    },
+    {
+      "name": "Butterfield Spring Fire",
+      "county": "Malheur",
+      "lat": 44.0,
+      "lon": -117.05,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 2750.0
     },
     {
       "name": "PINE MOUNTAIN",
