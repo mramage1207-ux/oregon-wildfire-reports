@@ -1,7 +1,7 @@
 {
   "last_updated": "2026-07-04",
-  "report_time": "8:36 AM PDT",
-  "active_large_fires": 1,
+  "report_time": "8:37 AM PDT",
+  "active_large_fires": 0,
   "total_large_fire_acres": 18843.0,
   "structures_lost": 0,
   "evac_triggering_fires": 0,
@@ -790,6 +790,11 @@
       "date": "2026-07-03",
       "active_fires": 32,
       "acres_burned": 134.04
+    },
+    {
+      "date": "2026-07-04",
+      "active_fires": 26,
+      "acres_burned": 12.09
     }
   ],
   "historical_seasons": [
@@ -1196,15 +1201,6 @@
   },
   "map_fires": [
     {
-      "name": "Reith Road OSFM",
-      "county": "Umatilla",
-      "lat": 45.663833,
-      "lon": -119.020167,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 100.0
-    },
-    {
       "name": "LYTLE",
       "county": "Malheur",
       "lat": 43.960372,
@@ -1311,6 +1307,15 @@
       "status": "Contained",
       "triggered_evacuation": false,
       "acres": 150
+    },
+    {
+      "name": "Reith Road OSFM",
+      "county": "Umatilla",
+      "lat": 45.663833,
+      "lon": -119.020167,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 100.0
     },
     {
       "name": "MM 85",
