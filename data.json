@@ -1,20 +1,24 @@
 {
   "last_updated": "2026-07-05",
-  "report_time": "6:11 PM PDT",
-  "active_large_fires": 1,
-  "total_large_fire_acres": 20104.0,
+  "report_time": "8:36 AM PDT",
+  "active_large_fires": 3,
+  "total_large_fire_acres": 20731.0,
   "structures_lost": 0,
-  "evac_triggering_fires": 1,
+  "evac_triggering_fires": 2,
   "evac_zones": {
     "level3": [
       "0380 ANTELOPE CREEK \u2014 Wasco County, Oregon"
     ],
-    "level2": [],
-    "level1": []
+    "level2": [
+      "0380 ANTELOPE CREEK \u2014 Wasco County, Oregon"
+    ],
+    "level1": [
+      "North Cayuse \u2014 Umatilla County, Oregon"
+    ]
   },
-  "evac_addresses_l1": 0,
-  "evac_addresses_l2": 0,
-  "evac_addresses_l3": 184,
+  "evac_addresses_l1": 21,
+  "evac_addresses_l2": 192,
+  "evac_addresses_l3": 2,
   "struct_loss": {
     "date": "2026-07-05",
     "source": "NIFC WFIGS Current Incident Locations",
@@ -797,13 +801,18 @@
       "date": "2026-07-04",
       "active_fires": 26,
       "acres_burned": 12.09
+    },
+    {
+      "date": "2026-07-05",
+      "active_fires": 42,
+      "acres_burned": 1909.19
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 19,
-      "total_acres": 20104.0,
+      "total_fires": 21,
+      "total_acres": 20731.0,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -1215,6 +1224,24 @@
       "status": "Active",
       "triggered_evacuation": true,
       "acres": 1261.0
+    },
+    {
+      "name": "North Cayuse",
+      "county": "Umatilla",
+      "lat": 45.688538,
+      "lon": -118.5985,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 500.0
+    },
+    {
+      "name": "0383",
+      "county": "Lake",
+      "lat": 43.405326,
+      "lon": -121.229455,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 127.0
     },
     {
       "name": "LYTLE",
