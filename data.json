@@ -1,25 +1,23 @@
 {
   "last_updated": "2026-07-06",
-  "report_time": "8:17 AM PDT",
-  "active_large_fires": 4,
-  "total_large_fire_acres": 20738.0,
+  "report_time": "8:33 AM PDT",
+  "active_large_fires": 3,
+  "total_large_fire_acres": 24124.5,
   "structures_lost": 0,
   "evac_triggering_fires": 3,
   "evac_zones": {
-    "level3": [
-      "0380 ANTELOPE CREEK \u2014 Wasco County, Oregon"
-    ],
+    "level3": [],
     "level2": [
-      "0380 ANTELOPE CREEK \u2014 Wasco County, Oregon",
       "0384 COYNER \u2014 Deschutes County, Oregon"
     ],
     "level1": [
-      "North Cayuse \u2014 Umatilla County, Oregon"
+      "North Cayuse \u2014 Umatilla County, Oregon",
+      "0380 ANTELOPE CREEK \u2014 Wasco County, Oregon"
     ]
   },
-  "evac_addresses_l1": 21,
-  "evac_addresses_l2": 192,
-  "evac_addresses_l3": 2,
+  "evac_addresses_l1": 205,
+  "evac_addresses_l2": 10,
+  "evac_addresses_l3": 0,
   "struct_loss": {
     "date": "2026-07-06",
     "source": "NIFC WFIGS Current Incident Locations",
@@ -810,15 +808,15 @@
     },
     {
       "date": "2026-07-06",
-      "active_fires": 42,
-      "acres_burned": 1909.19
+      "active_fires": 40,
+      "acres_burned": 5381.82
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 22,
-      "total_acres": 20738.0,
+      "total_fires": 21,
+      "total_acres": 24124.5,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -834,6 +832,11 @@
           "acres": 6052.0
         },
         {
+          "name": "North Cayuse",
+          "county": "Umatilla",
+          "acres": 4000.0
+        },
+        {
           "name": "Butterfield Spring Fire",
           "county": "Malheur",
           "acres": 2750.0
@@ -847,11 +850,6 @@
           "name": "FRONTAGE",
           "county": "Baker",
           "acres": 1938.0
-        },
-        {
-          "name": "0231 ZEN",
-          "county": "Wasco",
-          "acres": 1634.0
         }
       ]
     },
@@ -1223,6 +1221,15 @@
   },
   "map_fires": [
     {
+      "name": "North Cayuse",
+      "county": "Umatilla",
+      "lat": 45.688538,
+      "lon": -118.5985,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 4000.0
+    },
+    {
       "name": "0380 ANTELOPE CREEK",
       "county": "Wasco",
       "lat": 44.927454,
@@ -1232,31 +1239,13 @@
       "acres": 1261.0
     },
     {
-      "name": "North Cayuse",
-      "county": "Umatilla",
-      "lat": 45.688538,
-      "lon": -118.5985,
-      "status": "Active",
-      "triggered_evacuation": true,
-      "acres": 500.0
-    },
-    {
-      "name": "0383",
-      "county": "Lake",
-      "lat": 43.405326,
-      "lon": -121.229455,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 127.0
-    },
-    {
       "name": "0384 COYNER",
       "county": "Deschutes",
       "lat": 44.317913,
       "lon": -121.218767,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 7.0
+      "acres": 20.5
     },
     {
       "name": "LYTLE",
