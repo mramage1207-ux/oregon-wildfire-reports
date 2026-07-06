@@ -1,16 +1,17 @@
 {
   "last_updated": "2026-07-06",
-  "report_time": "8:47 AM PDT",
-  "active_large_fires": 3,
-  "total_large_fire_acres": 20731.0,
+  "report_time": "8:17 AM PDT",
+  "active_large_fires": 4,
+  "total_large_fire_acres": 20738.0,
   "structures_lost": 0,
-  "evac_triggering_fires": 2,
+  "evac_triggering_fires": 3,
   "evac_zones": {
     "level3": [
       "0380 ANTELOPE CREEK \u2014 Wasco County, Oregon"
     ],
     "level2": [
-      "0380 ANTELOPE CREEK \u2014 Wasco County, Oregon"
+      "0380 ANTELOPE CREEK \u2014 Wasco County, Oregon",
+      "0384 COYNER \u2014 Deschutes County, Oregon"
     ],
     "level1": [
       "North Cayuse \u2014 Umatilla County, Oregon"
@@ -806,13 +807,18 @@
       "date": "2026-07-05",
       "active_fires": 42,
       "acres_burned": 1909.19
+    },
+    {
+      "date": "2026-07-06",
+      "active_fires": 42,
+      "acres_burned": 1909.19
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 21,
-      "total_acres": 20731.0,
+      "total_fires": 22,
+      "total_acres": 20738.0,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -1242,6 +1248,15 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 127.0
+    },
+    {
+      "name": "0384 COYNER",
+      "county": "Deschutes",
+      "lat": 44.317913,
+      "lon": -121.218767,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 7.0
     },
     {
       "name": "LYTLE",
