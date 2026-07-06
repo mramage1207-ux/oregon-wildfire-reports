@@ -1,7 +1,7 @@
 {
   "last_updated": "2026-07-06",
   "report_time": "10:30 AM PDT",
-  "active_large_fires": 2,
+  "active_large_fires": 3,
   "total_large_fire_acres": 24124.5,
   "structures_lost": 0,
   "evac_triggering_fires": 3,
@@ -1115,6 +1115,299 @@
         }
       ],
       "fatalities_note": "Estimate reflects variance across reporting sources; official counts differ by agency and attribution method."
+    }
+  ],
+  "intraday_updates": {
+    "2026-05-21_1800": {
+      "active_fires": 11,
+      "acres_burned": 42.1,
+      "should_update": true
+    },
+    "2026-05-22_1800": {
+      "active_fires": 22,
+      "acres_burned": 43.1,
+      "should_update": true
+    },
+    "2026-05-26_1400": {
+      "active_fires": 18,
+      "acres_burned": 1550.2,
+      "should_update": true
+    },
+    "2026-05-29_1400": {
+      "active_fires": 23,
+      "acres_burned": 1728.7,
+      "should_update": true
+    },
+    "2026-06-01_1800": {
+      "active_fires": 21,
+      "acres_burned": 521.3,
+      "should_update": true
+    },
+    "2026-06-02_1800": {
+      "active_fires": 34,
+      "acres_burned": 558.2,
+      "should_update": true
+    },
+    "2026-06-04_1800": {
+      "active_fires": 32,
+      "acres_burned": 674.2,
+      "should_update": true
+    },
+    "2026-06-08_1400": {
+      "active_fires": 17,
+      "acres_burned": 54.4,
+      "should_update": true
+    },
+    "2026-06-08_1800": {
+      "active_fires": 24,
+      "acres_burned": 125.4,
+      "should_update": true
+    },
+    "2026-06-09_1400": {
+      "active_fires": 33,
+      "acres_burned": 153.3,
+      "should_update": true
+    },
+    "2026-06-09_1800": {
+      "active_fires": 48,
+      "acres_burned": 161.2,
+      "should_update": true
+    },
+    "2026-06-13_1400": {
+      "active_fires": 27,
+      "acres_burned": 55.3,
+      "should_update": true
+    },
+    "2026-06-14_1800": {
+      "active_fires": 27,
+      "acres_burned": 55.4,
+      "should_update": true
+    },
+    "2026-06-16_1400": {
+      "active_fires": 38,
+      "acres_burned": 208.7,
+      "should_update": true
+    },
+    "2026-06-17_1800": {
+      "active_fires": 50,
+      "acres_burned": 2171.7,
+      "should_update": true
+    },
+    "2026-06-22_1800": {
+      "active_fires": 33,
+      "acres_burned": 288.6,
+      "should_update": true
+    },
+    "2026-06-23_1100": {
+      "active_fires": 39,
+      "acres_burned": 6785.6,
+      "should_update": true
+    },
+    "2026-06-30_1400": {
+      "active_fires": 20,
+      "acres_burned": 254.5,
+      "should_update": true
+    },
+    "2026-07-02_1400": {
+      "active_fires": 27,
+      "acres_burned": 131.9,
+      "should_update": true
+    },
+    "2026-07-04_1800": {
+      "active_fires": 29,
+      "acres_burned": 1304.0,
+      "should_update": true
+    }
+  },
+  "map_fires": [
+    {
+      "name": "North Cayuse",
+      "county": "Umatilla",
+      "lat": 45.688538,
+      "lon": -118.5985,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 4000.0
+    },
+    {
+      "name": "0380 ANTELOPE CREEK",
+      "county": "Wasco",
+      "lat": 44.927454,
+      "lon": -120.722447,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 1261.0
+    },
+    {
+      "name": "0384 COYNER",
+      "county": "Deschutes",
+      "lat": 44.317913,
+      "lon": -121.218767,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 20.5
+    },
+    {
+      "name": "LYTLE",
+      "county": "Malheur",
+      "lat": 43.960372,
+      "lon": -117.210388,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 6052.0
+    },
+    {
+      "name": "Butterfield Spring Fire",
+      "county": "Malheur",
+      "lat": 44.0,
+      "lon": -117.05,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 2750.0
+    },
+    {
+      "name": "PINE MOUNTAIN",
+      "county": "Deschutes",
+      "lat": 43.810294,
+      "lon": -120.917759,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 2589.0
+    },
+    {
+      "name": "FRONTAGE",
+      "county": "Baker",
+      "lat": 44.304831,
+      "lon": -117.232704,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 1938.0
+    },
+    {
+      "name": "0231 ZEN",
+      "county": "Wasco",
+      "lat": 44.85604,
+      "lon": -120.44317,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 1634.0
+    },
+    {
+      "name": "Old Emigrant",
+      "county": "Umatilla",
+      "lat": 45.600122,
+      "lon": -118.62366,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 1495.0
+    },
+    {
+      "name": "Cable Creek",
+      "county": "Umatilla",
+      "lat": 45.134003,
+      "lon": -118.807271,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 610.0
+    },
+    {
+      "name": "0246 RHEA",
+      "county": "Gilliam",
+      "lat": 45.721667,
+      "lon": -120.028117,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 450.0
+    },
+    {
+      "name": "0366 CEDAR",
+      "county": "Gilliam",
+      "lat": 45.632852,
+      "lon": -120.167974,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 440.0
+    },
+    {
+      "name": "CLOVER",
+      "county": "Malheur",
+      "lat": 43.744072,
+      "lon": -117.138636,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 253.0
+    },
+    {
+      "name": "MILLER CREEK",
+      "county": "Malheur",
+      "lat": 43.769012,
+      "lon": -117.790135,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 211.0
+    },
+    {
+      "name": "Boardman Fire",
+      "county": "Morrow",
+      "lat": null,
+      "lon": null,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 150
+    },
+    {
+      "name": "Reith Road OSFM",
+      "county": "Umatilla",
+      "lat": 45.663833,
+      "lon": -119.020167,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 100.0
+    },
+    {
+      "name": "MM 85",
+      "county": "Malheur",
+      "lat": 42.489694,
+      "lon": -117.883423,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 100.0
+    },
+    {
+      "name": "Blackwell Rd 8087",
+      "county": "Jackson",
+      "lat": 42.41786667,
+      "lon": -122.96661667,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 48.2
+    },
+    {
+      "name": "Riverview Fire",
+      "county": "Deschutes",
+      "lat": null,
+      "lon": null,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 12
+    },
+    {
+      "name": "HILT",
+      "county": "Jackson",
+      "lat": 42.004946,
+      "lon": -122.646264,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 9.8
+    },
+    {
+      "name": "PP# 342802 UPPER APPLEGATE RD",
+      "county": "Jackson",
+      "lat": 42.22611667,
+      "lon": -123.0478,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 1.0
     }
   ]
 }

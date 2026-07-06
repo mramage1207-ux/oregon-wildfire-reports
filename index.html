@@ -6,6 +6,7 @@
   <title>Oregon Wildfire Daily Reports &mdash; Archive</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: #f4f5f7; color: #1a1a2e; min-height: 100vh;
@@ -85,6 +86,12 @@
       text-transform: uppercase; color: rgba(255,255,255,.70);
       margin-bottom: .55rem;
     }
+    .evac-label-link {
+      color: inherit; text-decoration: none;
+    }
+    .evac-label-link:hover {
+      text-decoration: underline; color: rgba(255,255,255,.95);
+    }
     .evac-grid {
       display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .75rem;
       margin-bottom: .5rem;
@@ -156,6 +163,13 @@
 
     /* ── main ── */
     main { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+    .map-card {
+      background: #fff; border-radius: 12px; padding: 1.4rem 1.6rem;
+      margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,.07);
+    }
+    .map-card h2 { font-size: 1rem; font-weight: 700; color: #1a2744; }
+    .map-sub { font-size: .78rem; color: #5a6473; margin-top: 3px; margin-bottom: .8rem; }
+    svg.fire-map { width: 100%; display: block; }
     .chart-card {
       background: #fff; border-radius: 12px; padding: 1.4rem 1.6rem;
       margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,.07);
@@ -198,6 +212,12 @@
     }
     .fires-val { font-weight: 700; color: #c0392b; }
     .acres-val { font-weight: 700; color: #b85c00; }
+    .report-lbl {
+      display: inline-block; font-size: .72rem; color: #6b7280;
+      min-width: 112px; margin-right: .25rem; font-weight: 500;
+    }
+    tr.sub-row td { border-top: 1px dashed #f0f0f0; padding-top: .5rem; padding-bottom: .5rem; }
+    tr.sub-row.latest td { background: #fffbf5; }
     .action-link {
       display: inline-flex; align-items: center; gap: .3rem;
       background: #f0f4f8; border-radius: 6px;
@@ -304,9 +324,49 @@
     footer strong { color: rgba(255,255,255,.85); }
 
     @media (max-width: 700px) {
-      .hero-card { flex-direction: column; gap: 1.2rem; }
+      /* Header */
+      .header-inner { gap: .75rem; padding: 1rem 0; }
+      .header-text h1 { font-size: 1.1rem; }
+      .header-text p { display: none; }
+      .header-badge { display: none; }
+
+      /* Hero wrap / sections padding */
+      .hero-wrap { padding: 0 1rem 1.5rem; }
+      .hero { padding-top: 1.25rem; }
+      .hero-card { flex-direction: column; gap: 1rem; padding: 1rem; }
       .hero-actions { margin-left: 0; flex-direction: row; flex-wrap: wrap; }
-      thead th:nth-child(3), tbody td:nth-child(3) { display: none; }
+
+      /* Stats pills — wrap and shrink on narrow screens */
+      .hero-stats { flex-wrap: wrap; gap: .65rem; }
+      .stat-pill { min-width: 70px; padding: .5rem .7rem; }
+      .stat-pill .val { font-size: 1.25rem; }
+      .stat-pill .lbl { font-size: .62rem; }
+
+      /* Evac / struct sections */
+      .evac-section { padding: 0; }
+      .evac-grid { grid-template-columns: 1fr; }
+      .struct-loss-section { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .struct-loss-table { font-size: .75rem; min-width: 340px; }
+      .struct-loss-table th, .struct-loss-table td { padding: .45rem .65rem; }
+
+      /* Main content */
+      main { padding: 1rem; }
+      header { padding: 0 1rem; }
+
+      /* Chart */
+      .chart-card { padding: 1rem; }
+      .chart-legend { flex-wrap: wrap; gap: .6rem; }
+
+      /* Archive table — scrollable container, all columns visible */
+      .table-card { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      thead th { padding: .6rem .75rem; font-size: .68rem; }
+      tbody td { padding: .7rem .75rem; font-size: .82rem; }
+      .action-link { padding: .25rem .45rem; font-size: .72rem; }
+      .report-lbl { min-width: unset; display: block; margin-bottom: 2px; }
+
+      /* Seasons */
+      .seasons-section { padding: 1rem 1rem 0; }
+      .seasons-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -314,7 +374,7 @@
 
 <header>
   <div class="header-inner">
-    <div class="header-flame">&#128293;</div>
+    <div class="header-flame" aria-hidden="true">&#128293;</div>
     <div class="header-text">
       <h1>Oregon Wildfire Daily Reports</h1>
       <p>Daily Archive &mdash; Published automatically from NIFC WFIGS, ODF &amp; OEM data feeds</p>
@@ -329,8 +389,8 @@
     <div id="hero-card" class="hero-card">
       <div class="loading-hero">&#9203; Loading latest report&hellip;</div>
     </div>
-    <div class="evac-section">
-      <div class="evac-label">Evacuation Addresses by Level &mdash; Active Fires Only</div>
+    <div class="evac-section" role="region" aria-label="Evacuation zones by level">
+      <div class="evac-label"><a href="https://geo.maps.arcgis.com/apps/instant/portfolio/index.html?appid=22d04c007866419c91ccf00d097526c8" target="_blank" rel="noopener noreferrer" class="evac-label-link">Evacuation Addresses by Level &mdash; Active Fires Only</a></div>
       <div class="evac-grid">
         <div class="evac-box level1">
           <div class="evac-level">Level 1 &mdash; Be Ready</div>
@@ -352,9 +412,9 @@
         <thead>
           <tr>
             <th>Structure Type</th>
-            <th>Threatened<span class="th-sub">Active</span></th>
-            <th>Damaged<span class="th-sub">YTD</span></th>
-            <th>Destroyed<span class="th-sub">YTD</span></th>
+            <th aria-label="Threatened (active fires)">Threatened<span class="th-sub" aria-hidden="true">Active</span></th>
+            <th aria-label="Damaged (year to date)">Damaged<span class="th-sub" aria-hidden="true">YTD</span></th>
+            <th aria-label="Destroyed (year to date)">Destroyed<span class="th-sub" aria-hidden="true">YTD</span></th>
           </tr>
         </thead>
         <tbody id="struct-loss-tbody"></tbody>
@@ -364,6 +424,14 @@
 </div>
 
 <main>
+  <div class="map-card" id="map-card">
+    <h2>Fire Locations &mdash; 2026 Season</h2>
+    <div class="map-sub">NWCC large fires (timber &ge;100 ac, grassland/rangeland &ge;300 ac, IMT assigned, or any evacuation triggered) &mdash; active (red) and contained (green)</div>
+    <svg class="fire-map" viewBox="0 0 900 480" id="fireMap"
+      preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="fireMapTitle">
+      <title id="fireMapTitle">Oregon 2026 fire season locations map</title>
+    </svg>
+  </div>
   <div class="chart-card" id="chart-card">
     <h2>2026 Season Trend</h2>
     <div class="chart-sub">Active fires &amp; acres burned &mdash; all reported days</div>
@@ -375,7 +443,12 @@
         <div class="legend-dot" style="background:#1a2744;"></div> Active Fires (right axis)
       </div>
     </div>
-    <svg class="trend" viewBox="0 0 1000 180" preserveAspectRatio="none" id="trendChart"></svg>
+    <svg class="trend" viewBox="0 0 1000 180" preserveAspectRatio="none" id="trendChart"
+      role="img" aria-labelledby="trendChartTitle" aria-describedby="trendChartDesc">
+      <title id="trendChartTitle">2026 Season Trend</title>
+      <desc id="trendChartDesc">Line chart showing active fires and acres burned over the 2026 fire season. A text table of the same data follows.</desc>
+    </svg>
+    <div class="sr-only" id="trendChartTable" aria-label="Season trend data table"></div>
   </div>
 
   <div class="section-header">
@@ -393,11 +466,14 @@
 
   <div class="info-box">
     <strong style="color:#1a2744;">About this archive:</strong>
-    Daily PDF reports are published automatically each morning using three live data feeds:
+    A morning report is published automatically each day using three live data feeds:
     <strong>NIFC WFIGS</strong> (fire incident locations &amp; acreage),
     <strong>Oregon OEM ArcGIS</strong> (evacuation zones), and
-    <strong>Oregon Dept. of Forestry</strong> records. The PDF list is fetched live from
-    the repository &mdash; any report added (automatically or manually) appears here immediately.
+    <strong>Oregon Dept. of Forestry</strong> records.
+    Data is reviewed automatically at <strong>11&nbsp;AM, 2&nbsp;PM, and 6&nbsp;PM&nbsp;PDT</strong> &mdash;
+    an additional report is published if any threshold is crossed: active fire count up &ge;&nbsp;20%,
+    total acres burning up &ge;&nbsp;20%, or a new wildfire evacuation order issued.
+    The PDF list is fetched live from the repository &mdash; any report added appears here immediately.
     PDFs are preserved indefinitely.
   </div>
 </main>
@@ -411,13 +487,13 @@
 <footer>
   <strong>Oregon Wildfire Daily Reports</strong><br>
   Data sourced from
-  <a href="https://www.nifc.gov/nicc/logistics/situation.htm" target="_blank">NIFC WFIGS</a>
+  <a href="https://www.nifc.gov/nicc/logistics/situation.htm" target="_blank" aria-label="NIFC WFIGS (opens in new tab)">NIFC WFIGS</a>
   &nbsp;&bull;&nbsp;
-  <a href="https://geo.maps.arcgis.com/apps/instant/portfolio/index.html?appid=22d04c007866419c91ccf00d097526c8" target="_blank">Oregon OEM ArcGIS</a>
+  <a href="https://geo.maps.arcgis.com/apps/instant/portfolio/index.html?appid=22d04c007866419c91ccf00d097526c8" target="_blank" aria-label="Oregon OEM ArcGIS (opens in new tab)">Oregon OEM ArcGIS</a>
   &nbsp;&bull;&nbsp;
-  <a href="https://www.oregon.gov/odf/fire/pages/firestats.aspx" target="_blank">Oregon Dept. of Forestry</a>
+  <a href="https://www.oregon.gov/odf/fire/pages/firestats.aspx" target="_blank" aria-label="Oregon Dept. of Forestry (opens in new tab)">Oregon Dept. of Forestry</a>
   &nbsp;&bull;&nbsp;
-  <a href="https://wildfire.oregon.gov" target="_blank">Oregon Wildfire Response</a><br>
+  <a href="https://wildfire.oregon.gov" target="_blank" aria-label="Oregon Wildfire Response (opens in new tab)">Oregon Wildfire Response</a><br>
   Reports generated automatically. Not an official State of Oregon publication.<br>
   Report assembly assisted by <strong style="color:rgba(255,255,255,.7);">Claude AI</strong> (Anthropic) &mdash; data sourced from public government feeds.
 </footer>
@@ -427,7 +503,13 @@
 const REPO      = 'mramage1207-ux/oregon-wildfire-reports';
 const API_URL   = 'https://api.github.com/repos/' + REPO + '/contents/';
 const DATA_URL  = 'data.json';   // relative: served from same GitHub Pages origin
-const PDF_RE    = /^oregon_wildfire_report_(\d{4}-\d{2}-\d{2})\.pdf$/;
+const PDF_RE    = /^oregon_wildfire_report_(\d{4}-\d{2}-\d{2})(?:_(m?\d{4}))?\.pdf$/;
+// Suffix conventions:
+//   (none)   → Morning Report (scheduled 7:40 AM run)
+//   _1100    → 11:00 AM Intraday Update
+//   _1400    → 2:00 PM Intraday Update
+//   _1800    → 6:00 PM Intraday Update
+//   _mHHMM  → Manual Report (on-demand run, HHMM = Pacific time)
 
 // ── ACCORDION ────────────────────────────────────────────────────────────────
 function toggleMonth(btn) {
@@ -455,10 +537,114 @@ function fmtDate(iso) {
 function fmtAcres(v) {
   if (v == null || v === '—' || v === '') return '—';
   const n = parseFloat(v);
-  return isNaN(n) ? v : n.toLocaleString('en-US', {maximumFractionDigits: 1});
+  return isNaN(n) ? v : n.toLocaleString('en-US', {maximumFractionDigits: 0});
 }
 
 // ── CHART ────────────────────────────────────────────────────────────────────
+function drawMap(fires) {
+  const svg = document.getElementById('fireMap');
+  if (!svg || !fires || !fires.length) return;
+  const W=900, H=480, LEGEND_W=115;
+  const LAT_MIN=41.95, LAT_MAX=46.30, LON_MIN=-124.70, LON_MAX=-116.35;
+  const LON_SPAN=LON_MAX-LON_MIN, LAT_SPAN=LAT_MAX-LAT_MIN;
+  const COS_MID=Math.cos((LAT_MIN+LAT_MAX)/2*Math.PI/180);
+  const ASPECT=(LON_SPAN*COS_MID)/LAT_SPAN;
+  const avW=W-LEGEND_W-10, avH=H-20;
+  let mw,mh,mx,my;
+  if(avW/avH>ASPECT){mh=avH;mw=mh*ASPECT;mx=LEGEND_W+(avW-mw)/2;my=10;}
+  else{mw=avW;mh=mw/ASPECT;mx=LEGEND_W;my=10+(avH-mh)/2;}
+
+  const ns='http://www.w3.org/2000/svg';
+  const el=(tag,a,txt)=>{
+    const e=document.createElementNS(ns,tag);
+    Object.entries(a).forEach(([k,v])=>e.setAttribute(k,v));
+    if(txt!=null) e.textContent=txt;
+    return e;
+  };
+  const proj=(lon,lat)=>[mx+(lon-LON_MIN)/LON_SPAN*mw, my+mh-(lat-LAT_MIN)/LAT_SPAN*mh];
+
+  // Backgrounds
+  svg.appendChild(el('rect',{x:0,y:0,width:W,height:H,fill:'#f8f9fa'}));
+  svg.appendChild(el('rect',{x:LEGEND_W,y:10,width:avW,height:avH,fill:'#D6EAF8'}));
+  svg.appendChild(el('rect',{x:mx,y:my,width:mw,height:mh,fill:'#F0EDE8'}));
+
+  // Oregon boundary
+  const OR_POLY=[[-124.07,46.25],[-124.10,46.08],[-124.08,45.86],[-124.05,45.73],[-123.98,45.46],[-123.97,45.14],[-124.01,44.97],[-124.06,44.84],[-124.08,44.56],[-124.11,44.28],[-124.18,44.05],[-124.22,43.94],[-124.24,43.67],[-124.32,43.46],[-124.33,43.36],[-124.41,42.99],[-124.43,42.72],[-124.43,42.56],[-124.37,42.35],[-124.28,42.00],[-122.50,42.00],[-121.00,42.00],[-119.00,42.00],[-117.50,42.00],[-117.02,42.00],[-117.02,42.80],[-117.02,43.60],[-116.95,44.10],[-117.06,44.48],[-117.14,44.75],[-117.10,45.03],[-116.85,45.53],[-116.68,45.85],[-116.92,46.08],[-116.96,46.25],[-118.20,46.25],[-119.50,46.25],[-121.00,46.10],[-121.72,45.67],[-122.07,45.54],[-122.20,45.54],[-122.73,45.54],[-122.82,45.80],[-123.10,46.17],[-123.50,46.25],[-124.07,46.25]];
+  svg.appendChild(el('polygon',{points:OR_POLY.map(([lo,la])=>proj(lo,la).join(',')).join(' '),fill:'#E8E0D0',stroke:'#666644','stroke-width':'1'}));
+
+  // Latitude graticule lines
+  for(let lat=42;lat<=46;lat++){
+    const [x0,y0]=proj(LON_MIN,lat),[x1]=proj(LON_MAX,lat);
+    svg.appendChild(el('line',{x1:x0,y1:y0,x2:x1,y2:y0,stroke:'#ccc','stroke-width':'0.3','stroke-dasharray':'3,4'}));
+  }
+
+  // Neighbor state labels
+  const nb=(lon,lat,txt,anchor,sz)=>{
+    const [x,y]=proj(lon,lat);
+    svg.appendChild(el('text',{'text-anchor':anchor||'middle','font-size':sz||7,'font-weight':'bold',fill:'#aaa',x,y},txt));
+  };
+  nb(-119.5,46.65,'WASHINGTON'); nb(-116.05,44.5,'IDAHO','start');
+  nb(-121.5,41.72,'CALIFORNIA','middle',6); nb(-118.5,41.72,'NEVADA','middle',6);
+
+  // Reference cities
+  [["Portland",-122.68,45.52,4,2],["Salem",-123.04,44.94,4,2],["Eugene",-123.09,44.05,4,2],["Corvallis",-123.26,44.56,4,2],["Medford",-122.87,42.33,4,2],["Ashland",-122.70,42.19,4,-7],["Roseburg",-123.35,43.22,4,2],["Astoria",-123.83,46.19,4,2],["Newport",-124.06,44.64,-30,-7],["Brookings",-124.28,42.05,4,-7],["Bend",-121.31,44.06,4,2],["Redmond",-121.15,44.27,4,2],["La Pine",-121.50,43.67,4,2],["Prineville",-120.84,44.30,4,2],["Madras",-121.13,44.63,4,2],["Pendleton",-118.79,45.67,4,2],["La Grande",-118.09,45.33,4,2],["Baker City",-117.83,44.77,4,2],["Burns",-119.05,43.59,4,2],["Ontario",-116.97,44.03,4,2],["Klamath Falls",-121.78,42.22,4,2],["Lakeview",-120.35,42.19,4,2]].forEach(([name,lon,lat,ox,oy])=>{
+    const [cx,cy]=proj(lon,lat);
+    svg.appendChild(el('circle',{cx,cy,r:'2',fill:'#555',stroke:'white','stroke-width':'0.4'}));
+    svg.appendChild(el('text',{x:cx+ox,y:cy+oy,'font-size':'5.5',fill:'#333'},name));
+  });
+
+  // County centroids (lat/lon fallback when fire has no coordinates)
+  const CC={"Morrow":[-119.60,45.40],"Deschutes":[-121.20,43.90],"Jackson":[-122.70,42.50],"Klamath":[-121.50,42.60],"Lane":[-122.80,43.90],"Douglas":[-123.10,43.20],"Marion":[-122.90,44.90],"Clackamas":[-122.20,45.10],"Multnomah":[-122.50,45.55],"Jefferson":[-121.10,44.60],"Wasco":[-121.00,45.30],"Crook":[-120.50,44.30],"Harney":[-118.90,43.00],"Lake":[-120.30,42.70],"Grant":[-118.90,44.50],"Union":[-117.90,45.30],"Wallowa":[-117.30,45.60],"Baker":[-117.60,44.80],"Malheur":[-117.70,43.40],"Umatilla":[-118.70,45.60],"Gilliam":[-120.00,45.40],"Wheeler":[-120.00,44.70],"Sherman":[-120.70,45.40],"Hood River":[-121.60,45.50],"Columbia":[-123.20,46.00],"Washington":[-123.00,45.50],"Yamhill":[-123.30,45.30],"Polk":[-123.40,44.90],"Lincoln":[-124.00,44.60],"Tillamook":[-123.80,45.45],"Clatsop":[-123.80,46.10],"Benton":[-123.40,44.50],"Linn":[-122.50,44.50],"Coos":[-124.10,43.20],"Curry":[-124.20,42.50]};
+
+  // Fire markers — two passes so active fires render on top of contained fires
+  const drawFireMarker=f=>{
+    let lon=f.lon, lat=f.lat;
+    if((!lon||!lat)&&CC[f.county]) [lon,lat]=CC[f.county];
+    if(!lon||!lat) return;
+    const [fx,fy]=proj(lon,lat);
+    const isActive=f.status==='Active', hasEvac=f.triggered_evacuation;
+    const fill=isActive?'#CC2200':'#228B22';
+    if(hasEvac){
+      svg.appendChild(el('circle',{cx:fx,cy:fy,r:'10',fill:'none',stroke:'#FF8C00','stroke-width':'2'}));
+      svg.appendChild(el('circle',{cx:fx,cy:fy,r:'11.5',fill:'none',stroke:'#FF8C00','stroke-width':'0.6','stroke-dasharray':'3,2'}));
+    }
+    svg.appendChild(el('circle',{cx:fx,cy:fy,r:'6.5',fill:'none',stroke:fill,'stroke-width':'0.8'}));
+    svg.appendChild(el('circle',{cx:fx,cy:fy,r:'4.5',fill,stroke:'white','stroke-width':'0.8'}));
+    if(hasEvac){
+      svg.appendChild(el('rect',{x:fx+3,y:fy-10,width:8,height:7,fill:'#FF8C00'}));
+      svg.appendChild(el('text',{x:fx+7,y:fy-4,'text-anchor':'middle','font-size':'5','font-weight':'bold',fill:'white'},'E'));
+    }
+    const lw=f.name.length*4.2+6;
+    svg.appendChild(el('rect',{x:fx+13,y:fy-1,width:lw,height:9,fill:'white',stroke:fill,'stroke-width':'0.5'}));
+    svg.appendChild(el('text',{x:fx+15,y:fy+7,'font-size':'5.5','font-weight':'bold',fill},f.name));
+  };
+  // Pass 1: contained fires (underneath)
+  fires.filter(f=>f.status!=='Active').forEach(drawFireMarker);
+  // Pass 2: active fires (on top)
+  fires.filter(f=>f.status==='Active').forEach(drawFireMarker);
+
+  // Legend panel (left strip)
+  const lx=5, ly=Math.round(H/2)-46;
+  svg.appendChild(el('rect',{x:lx,y:ly,width:LEGEND_W-10,height:100,fill:'white',stroke:'#ccc','stroke-width':'0.6','rx':'3'}));
+  svg.appendChild(el('circle',{cx:lx+10,cy:ly+14,r:'4',fill:'#CC2200',stroke:'white','stroke-width':'0.6'}));
+  svg.appendChild(el('text',{x:lx+19,y:ly+18,'font-size':'6.5',fill:'#334'},'Active Fire'));
+  svg.appendChild(el('circle',{cx:lx+10,cy:ly+30,r:'4',fill:'#228B22',stroke:'white','stroke-width':'0.6'}));
+  svg.appendChild(el('text',{x:lx+19,y:ly+34,'font-size':'6.5',fill:'#334'},'Contained Fire'));
+  svg.appendChild(el('circle',{cx:lx+10,cy:ly+47,r:'6',fill:'none',stroke:'#FF8C00','stroke-width':'2'}));
+  svg.appendChild(el('rect',{x:lx+13,y:ly+43,width:6,height:5,fill:'#FF8C00'}));
+  svg.appendChild(el('text',{x:lx+16,y:ly+47,'text-anchor':'middle','font-size':'4.5','font-weight':'bold',fill:'white'},'E'));
+  svg.appendChild(el('text',{x:lx+22,y:ly+51,'font-size':'6.5',fill:'#334'},'Evac. Triggered'));
+  svg.appendChild(el('circle',{cx:lx+10,cy:ly+64,r:'2',fill:'#555',stroke:'white','stroke-width':'0.4'}));
+  svg.appendChild(el('text',{x:lx+19,y:ly+68,'font-size':'6.5',fill:'#334'},'Reference City'));
+  svg.appendChild(el('text',{x:lx+5,y:ly+82,'font-size':'5.5',fill:'#888'},'NWCC large fire'));
+  svg.appendChild(el('text',{x:lx+5,y:ly+92,'font-size':'5.5',fill:'#888'},'definition applies'));
+
+  // North arrow (top of legend strip)
+  const ax=LEGEND_W-10, ay=28;
+  svg.appendChild(el('polygon',{points:`${ax},${ay-10} ${ax-4},${ay} ${ax+4},${ay}`,fill:'#CC2200'}));
+  svg.appendChild(el('text',{x:ax,y:ay-12,'text-anchor':'middle','font-size':'7','font-weight':'bold',fill:'#CC2200'},'N'));
+}
+
 function drawChart(hist) {
   const svg = document.getElementById('trendChart');
   if (!svg || !hist || hist.length < 2) return;
@@ -534,11 +720,49 @@ function drawChart(hist) {
       stroke:'#cbd5e0', 'stroke-width':'1'}));
   });
 
-  // latest dot
+  // latest acres dot
   svg.appendChild(el('circle', {
     cx:xS(n-1), cy:yA(hist[n-1].acres_burned),
     r:'4', fill:'#e67e22', stroke:'#fff', 'stroke-width':'2'
   }));
+
+  // ── Peak + latest data labels ────────────────────────────────────────────
+  const peakAIdx = hist.reduce((mi,_,i,a)=>(a[i].acres_burned||0)>(a[mi].acres_burned||0)?i:mi, 0);
+  const peakFIdx = hist.reduce((mi,_,i,a)=>(a[i].active_fires||0)>(a[mi].active_fires||0)?i:mi, 0);
+  const addLabel = (x, y, text, color, anchor) => {
+    const a = anchor||'middle', ly = Math.max(P.t+9, y-7);
+    // white halo pass
+    const h = el('text', {x, y:ly, 'text-anchor':a, 'font-size':'8.5', 'font-weight':'700',
+      fill:'white', stroke:'white', 'stroke-width':'3.5', 'stroke-linejoin':'round'});
+    h.textContent = text; svg.appendChild(h);
+    // colored label
+    const l = el('text', {x, y:ly, 'text-anchor':a, 'font-size':'8.5', 'font-weight':'700', fill:color});
+    l.textContent = text; svg.appendChild(l);
+  };
+  const fA = v => Math.round(v||0).toLocaleString('en-US');
+  const fF = v => String(v||0);
+
+  // Peak acres — skip if peak is too close to the latest point (labels would collide)
+  if (peakAIdx !== n-1 && xS(n-1) - xS(peakAIdx) > 50)
+    addLabel(xS(peakAIdx), yA(hist[peakAIdx].acres_burned), fA(hist[peakAIdx].acres_burned), '#e67e22');
+  // Peak fires — same proximity guard
+  if (peakFIdx !== n-1 && xS(n-1) - xS(peakFIdx) > 50)
+    addLabel(xS(peakFIdx), yF(hist[peakFIdx].active_fires), fF(hist[peakFIdx].active_fires), '#1a2744');
+  // Latest fires dot (navy) + label
+  svg.appendChild(el('circle', {cx:xS(n-1), cy:yF(hist[n-1].active_fires),
+    r:'4', fill:'#1a2744', stroke:'#fff', 'stroke-width':'2'}));
+  addLabel(xS(n-1), yF(hist[n-1].active_fires), fF(hist[n-1].active_fires), '#1a2744', 'end');
+  // Latest acres label (dot already rendered above)
+  addLabel(xS(n-1), yA(hist[n-1].acres_burned), fA(hist[n-1].acres_burned), '#e67e22', 'end');
+
+  // Accessible fallback table for screen readers
+  const tbl = document.getElementById('trendChartTable');
+  if (tbl) {
+    const rows = hist.map(d =>
+      `<tr><td>${d.date}</td><td>${(d.active_fires||0).toLocaleString()}</td><td>${(d.acres_burned||0).toLocaleString('en-US',{maximumFractionDigits:0})}</td></tr>`
+    ).join('');
+    tbl.innerHTML = `<table><caption>Season trend: active fires and acres burned by date</caption><thead><tr><th scope="col">Date</th><th scope="col">Active Fires</th><th scope="col">Acres Burned</th></tr></thead><tbody>${rows}</tbody></table>`;
+  }
 }
 
 // ── RENDER ───────────────────────────────────────────────────────────────────
@@ -547,18 +771,35 @@ function render(pdfs, data) {
   if (data && data.historical_data) {
     data.historical_data.forEach(r => { histByDate[r.date] = r; });
   }
+  const intradayUpdates = (data && data.intraday_updates) || {};
 
-  // Enrich PDFs with stats
+  // Enrich PDFs with stats — update PDFs get their own fires/acres from intraday_updates
   const enriched = pdfs.map(p => {
-    const row = histByDate[p.date_iso] || {};
+    const dayRow = histByDate[p.date_iso] || {};
+    const updateKey = p.time_suffix ? (p.date_iso + '_' + p.time_suffix) : null;
+    const updateRow = (updateKey && intradayUpdates[updateKey]) ? intradayUpdates[updateKey] : null;
+    const src = updateRow || dayRow;
     return {
       ...p,
-      active_fires: row.active_fires != null ? row.active_fires : '—',
-      acres_burned: row.acres_burned != null ? row.acres_burned : '—'
+      active_fires: src.active_fires != null ? src.active_fires : '—',
+      acres_burned: src.acres_burned != null ? src.acres_burned : '—'
     };
   });
 
-  const latest = enriched[0];
+  // Find the true latest PDF: highest date_iso, then highest time_suffix within that date.
+  // Do NOT use enriched[0] — localeCompare treats '_' and '.' as ignorable punctuation in
+  // many locales, so '2026-05-26_1800.pdf' can sort BELOW '2026-05-26.pdf' because
+  // localeCompare strips the underscore and compares '1800pdf' vs 'pdf', and '1' < 'p'.
+  const latest = enriched.reduce((best, p) => {
+    if (!best) return p;
+    if (p.date_iso > best.date_iso) return p;
+    if (p.date_iso === best.date_iso) {
+      const pSfx = p.time_suffix || '';
+      const bSfx = best.time_suffix || '';
+      if (pSfx > bSfx) return p;
+    }
+    return best;
+  }, null) || enriched[0];
   const nLargeFires   = data && data.active_large_fires      != null ? data.active_large_fires      : '—';
   const nLargeAcres   = data && data.total_large_fire_acres  != null ? data.total_large_fire_acres  : '—';
   const nStructLost   = data && data.structures_lost         != null ? data.structures_lost         : '—';
@@ -580,12 +821,12 @@ function render(pdfs, data) {
         <div class="lbl">Active Large Fires</div>
       </div>
       <div class="stat-pill">
-        <div class="val">${latest.active_fires}</div>
-        <div class="lbl">Active Fires</div>
-      </div>
-      <div class="stat-pill">
         <div class="val">${fmtAcres(nLargeAcres)}</div>
         <div class="lbl">Total Acres YTD<br><span style="font-size:0.75em;opacity:0.8">(Large Fires)</span></div>
+      </div>
+      <div class="stat-pill">
+        <div class="val">${latest.active_fires}</div>
+        <div class="lbl">Active Fires<br><span style="font-size:0.75em;opacity:0.8">WF + RX</span></div>
       </div>
       <div class="stat-pill">
         <div class="val">${nStructLost}</div>
@@ -593,12 +834,12 @@ function render(pdfs, data) {
       </div>
       <div class="stat-pill">
         <div class="val">${nEvacFires}</div>
-        <div class="lbl">Evac-Triggering Fires</div>
+        <div class="lbl">Active Evac-Triggering Fires</div>
       </div>
     </div>
     <div class="hero-actions">
-      <a class="btn-primary" href="${latest.filename}" target="_blank">&#128196; View Report</a>
-      <a class="btn-secondary" href="${latest.filename}" download>&#8595; Download PDF</a>
+      <a class="btn-primary" href="${latest.filename}" target="_blank" aria-label="View report for ${fmtDate(latest.date_iso)} (opens in new tab)">&#128196; View Report</a>
+      <a class="btn-secondary" href="${latest.filename}" download aria-label="Download PDF for ${fmtDate(latest.date_iso)}">&#8595; Download PDF</a>
     </div>`;
 
   // ── Evacuation address counts ──
@@ -671,22 +912,75 @@ function render(pdfs, data) {
       .toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
     const reports = byMonth[mo];
 
-    const rows = reports.map(r => {
+    // Group by date — supports intraday (_1400, _1800) and manual (_mHHMM) PDFs
+    const byDate = {};
+    reports.forEach(r => {
+      if (!byDate[r.date_iso]) byDate[r.date_iso] = { morning: null, updates: [] };
+      if (!r.time_suffix) byDate[r.date_iso].morning = r;
+      else byDate[r.date_iso].updates.push(r);
+    });
+    const sortedDates = Object.keys(byDate).sort((a, b) => b.localeCompare(a));
+
+    // Format a time_suffix into a human label.
+    // _mHHMM → "Manual Report (H:MM AM/PM PDT)"
+    // _1400  → "2:00 PM Update"  etc.
+    function fmtSuffix(sfx) {
+      if (!sfx) return 'Morning Report';
+      if (sfx.startsWith('m')) {
+        const hhmm = sfx.slice(1);
+        const h = parseInt(hhmm.slice(0, 2), 10);
+        const mi = hhmm.slice(2);
+        const ampm = h >= 12 ? 'PM' : 'AM';
+        const h12 = h > 12 ? h - 12 : (h === 0 ? 12 : h);
+        return `Manual Report (${h12}:${mi} ${ampm} PDT)`;
+      }
+      const INTRADAY = { '1100': '11:00 AM Update', '1400': '2:00 PM Update', '1800': '6:00 PM Update' };
+      return INTRADAY[sfx] || sfx;
+    }
+
+    const todayDateISO = new Date().toISOString().slice(0, 10);
+
+    const rows = sortedDates.map(dateIso => {
+      const { morning, updates } = byDate[dateIso];
       const markLatest = isVeryFirst;
       if (isVeryFirst) isVeryFirst = false;
-      return `
-        <tr${markLatest ? ' class="latest"' : ''}>
-          <td class="date-cell">
-            ${fmtDate(r.date_iso)}${markLatest ? ' <span class="badge-new">Latest</span>' : ''}<br>
-            <span class="iso">${r.date_iso}</span>
-          </td>
-          <td class="fires-val">${r.active_fires}</td>
-          <td class="acres-val">${fmtAcres(r.acres_burned)}</td>
-          <td>
-            <a class="action-link" href="${r.filename}" target="_blank">&#128196; View</a>
-            <a class="action-link dl" href="${r.filename}" download>&#8595; Download</a>
-          </td>
-        </tr>`;
+      // Build ordered list: morning first, then updates/manuals ascending by suffix
+      const sortedUpdates = [...updates].sort((a, b) => (a.time_suffix || '').localeCompare(b.time_suffix || ''));
+      const allReports = [];
+      if (morning) allReports.push({ rep: morning, label: 'Morning Report' });
+      sortedUpdates.forEach(u => allReports.push({ rep: u, label: fmtSuffix(u.time_suffix) }));
+      if (!allReports.length) return '';
+
+      const rowCount = allReports.length;
+      const rows = allReports.map((item, idx) => {
+        const { rep, label } = item;
+        const fvRaw = (rep.active_fires != null && rep.active_fires !== '—') ? rep.active_fires : '';
+        const fv = fvRaw !== '' ? `${fvRaw}<div style="font-size:0.7em;font-weight:400;opacity:0.7;line-height:1.2">WF + RX</div>` : '';
+        const av = (rep.acres_burned != null && rep.acres_burned !== '—') ? fmtAcres(rep.acres_burned) : '';
+        if (idx === 0) {
+          // First row: date cell with rowspan covering all sub-rows
+          return `
+          <tr${markLatest ? ' class="latest"' : ''}>
+            <td class="date-cell" rowspan="${rowCount}">
+              ${fmtDate(dateIso)}${markLatest ? ' <span class="badge-new">Latest</span>' : ''}<br>
+              <span class="iso">${dateIso}</span>
+            </td>
+            <td class="fires-val">${fv}</td>
+            <td class="acres-val">${av}</td>
+            <td><span class="report-lbl" aria-hidden="true">${label}</span><a class="action-link" href="${rep.filename}" target="_blank" aria-label="View ${label} report for ${dateIso} (opens in new tab)">&#128196; View</a> <a class="action-link dl" href="${rep.filename}" download aria-label="Download ${label} PDF for ${dateIso}">&#8595; Download</a></td>
+          </tr>`;
+        } else {
+          // Subsequent rows: no date cell (covered by rowspan above)
+          const subClass = markLatest ? ' class="sub-row latest"' : ' class="sub-row"';
+          return `
+          <tr${subClass}>
+            <td class="fires-val">${fv}</td>
+            <td class="acres-val">${av}</td>
+            <td><span class="report-lbl" aria-hidden="true">${label}</span><a class="action-link" href="${rep.filename}" target="_blank" aria-label="View ${label} report for ${dateIso} (opens in new tab)">&#128196; View</a> <a class="action-link dl" href="${rep.filename}" download aria-label="Download ${label} PDF for ${dateIso}">&#8595; Download</a></td>
+          </tr>`;
+        }
+      }).join('');
+      return rows;
     }).join('');
 
     return `
@@ -702,7 +996,7 @@ function render(pdfs, data) {
               <thead>
                 <tr>
                   <th>Date</th>
-                  <th>Active Fires</th>
+                  <th aria-label="Active Fires (WF and RX combined)">Active Fires<br><span style="font-weight:400;font-size:0.75em;opacity:0.75" aria-hidden="true">WF + RX</span></th>
                   <th>Acres Burned</th>
                   <th>Report</th>
                 </tr>
@@ -714,14 +1008,28 @@ function render(pdfs, data) {
       </div>`;
   }).join('');
 
+  // ── Map ──
+  if (data && data.map_fires) drawMap(data.map_fires);
+
   // ── Chart ──
-  if (data && data.historical_data) drawChart(data.historical_data);
+  if (data && data.historical_data) {
+    drawChart(data.historical_data);
+    // Show when the chart data was last updated (morning runs only)
+    const hist = data.historical_data;
+    if (hist && hist.length) {
+      const lastDate = hist[hist.length - 1].date; // "YYYY-MM-DD"
+      const d = new Date(lastDate + 'T12:00:00');
+      const label = d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+      const sub = document.querySelector('.chart-sub');
+      if (sub) sub.innerHTML = `Active fires &amp; acres burned &mdash; all reported days &nbsp;&middot;&nbsp; <span style="color:#8a6a2a;font-style:italic;">Chart based on morning report (${label})</span>`;
+    }
+  }
 
   // ── Historical seasons ──
   const seasons = (data && data.historical_seasons) || [];
   if (seasons.length) {
     document.getElementById('seasons-grid').innerHTML = seasons.map(s => {
-      const acresStr = s.total_acres != null ? s.total_acres.toLocaleString() : '—';
+      const acresStr = s.total_acres != null ? s.total_acres.toLocaleString('en-US', {maximumFractionDigits: 0}) : '—';
       const structs  = s.total_structures_destroyed || 0;
       const fatStr   = s.fatalities ? `<div class="season-alert">&#9888; ${s.fatalities} fatali${s.fatalities === 1 ? 'ty' : 'ties'}</div>` : '';
       const fireRows = (s.notable_fires || []).map(f => `
@@ -729,7 +1037,7 @@ function render(pdfs, data) {
           <span class="season-fire-name">${f.name}</span>
           <span>
             <span class="season-fire-county">${f.county}&nbsp;</span>
-            <span class="season-fire-acres">${f.acres.toLocaleString()} ac</span>
+            <span class="season-fire-acres">${f.acres.toLocaleString('en-US', {maximumFractionDigits: 0})} ac</span>
           </span>
         </div>`).join('');
       return `
@@ -793,7 +1101,10 @@ function render(pdfs, data) {
     const pdfs = files
       .filter(f => PDF_RE.test(f.name))
       .sort((a, b) => b.name.localeCompare(a.name))
-      .map(f => ({ filename: f.name, date_iso: f.name.match(PDF_RE)[1] }));
+      .map(f => {
+        const m = f.name.match(PDF_RE);
+        return { filename: f.name, date_iso: m[1], time_suffix: m[2] || null };
+      });
 
     if (pdfs.length === 0) {
       document.getElementById('archive-container').innerHTML =
