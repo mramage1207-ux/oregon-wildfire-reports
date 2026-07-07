@@ -1,8 +1,8 @@
 {
   "last_updated": "2026-07-07",
-  "report_time": "6:01 PM PDT",
+  "report_time": "8:36 AM PDT",
   "active_large_fires": 2,
-  "total_large_fire_acres": 24124.5,
+  "total_large_fire_acres": 24787.5,
   "structures_lost": 0,
   "evac_triggering_fires": 2,
   "evac_zones": {
@@ -808,13 +808,18 @@
       "date": "2026-07-06",
       "active_fires": 40,
       "acres_burned": 5381.82
+    },
+    {
+      "date": "2026-07-07",
+      "active_fires": 54,
+      "acres_burned": 4705.39
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
       "total_fires": 21,
-      "total_acres": 24124.5,
+      "total_acres": 24787.5,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -832,7 +837,7 @@
         {
           "name": "North Cayuse",
           "county": "Umatilla",
-          "acres": 4000.0
+          "acres": 4663.0
         },
         {
           "name": "Butterfield Spring Fire",
@@ -1230,7 +1235,7 @@
       "lon": -118.5985,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 4000.0
+      "acres": 4663.0
     },
     {
       "name": "0384 COYNER",
