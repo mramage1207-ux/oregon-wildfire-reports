@@ -1,22 +1,20 @@
 {
   "last_updated": "2026-07-06",
-  "report_time": "10:30 AM PDT",
-  "active_large_fires": 3,
+  "report_time": "6:01 PM PDT",
+  "active_large_fires": 2,
   "total_large_fire_acres": 24124.5,
   "structures_lost": 0,
-  "evac_triggering_fires": 3,
+  "evac_triggering_fires": 2,
   "evac_zones": {
     "level3": [],
-    "level2": [
-      "0384 COYNER \u2014 Deschutes County, Oregon"
-    ],
+    "level2": [],
     "level1": [
       "North Cayuse \u2014 Umatilla County, Oregon",
-      "0380 ANTELOPE CREEK \u2014 Wasco County, Oregon"
+      "0384 COYNER \u2014 Deschutes County, Oregon"
     ]
   },
-  "evac_addresses_l1": 205,
-  "evac_addresses_l2": 10,
+  "evac_addresses_l1": 31,
+  "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
   "struct_loss": {
     "date": "2026-07-06",
@@ -1217,6 +1215,11 @@
       "active_fires": 29,
       "acres_burned": 1304.0,
       "should_update": true
+    },
+    "2026-07-06_1800": {
+      "active_fires": 59,
+      "acres_burned": 4125.7,
+      "should_update": true
     }
   },
   "map_fires": [
@@ -1228,15 +1231,6 @@
       "status": "Active",
       "triggered_evacuation": true,
       "acres": 4000.0
-    },
-    {
-      "name": "0380 ANTELOPE CREEK",
-      "county": "Wasco",
-      "lat": 44.927454,
-      "lon": -120.722447,
-      "status": "Active",
-      "triggered_evacuation": true,
-      "acres": 1261.0
     },
     {
       "name": "0384 COYNER",
@@ -1300,6 +1294,15 @@
       "status": "Contained",
       "triggered_evacuation": true,
       "acres": 1495.0
+    },
+    {
+      "name": "0380 ANTELOPE CREEK",
+      "county": "Wasco",
+      "lat": 44.927454,
+      "lon": -120.722447,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 1261.0
     },
     {
       "name": "Cable Creek",
