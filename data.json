@@ -1,8 +1,8 @@
 {
   "last_updated": "2026-07-07",
-  "report_time": "8:36 AM PDT",
+  "report_time": "8:42 AM PDT",
   "active_large_fires": 2,
-  "total_large_fire_acres": 24787.5,
+  "total_large_fire_acres": 24873.5,
   "structures_lost": 0,
   "evac_triggering_fires": 2,
   "evac_zones": {
@@ -819,7 +819,7 @@
     {
       "year": 2026,
       "total_fires": 21,
-      "total_acres": 24787.5,
+      "total_acres": 24873.5,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -1307,7 +1307,7 @@
       "lon": -120.722447,
       "status": "Contained",
       "triggered_evacuation": true,
-      "acres": 1261.0
+      "acres": 1347.0
     },
     {
       "name": "Cable Creek",
