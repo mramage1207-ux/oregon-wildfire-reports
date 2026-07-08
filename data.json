@@ -1,8 +1,8 @@
 {
   "last_updated": "2026-07-08",
-  "report_time": "9:36 AM PDT",
-  "active_large_fires": 2,
-  "total_large_fire_acres": 25942.5,
+  "report_time": "2:01 PM PDT",
+  "active_large_fires": 3,
+  "total_large_fire_acres": 26151.5,
   "structures_lost": 0,
   "evac_triggering_fires": 1,
   "evac_zones": {
@@ -822,8 +822,8 @@
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 22,
-      "total_acres": 25942.5,
+      "total_fires": 23,
+      "total_acres": 26151.5,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -1229,6 +1229,11 @@
       "active_fires": 59,
       "acres_burned": 4125.7,
       "should_update": true
+    },
+    "2026-07-08_1400": {
+      "active_fires": 71,
+      "acres_burned": 6499.3,
+      "should_update": true
     }
   },
   "map_fires": [
@@ -1248,7 +1253,16 @@
       "lon": -118.6947,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 885.0
+      "acres": 960.0
+    },
+    {
+      "name": "Skull Creek",
+      "county": "Harney",
+      "lat": 42.415067,
+      "lon": -118.742,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 134.0
     },
     {
       "name": "0384 COYNER",
