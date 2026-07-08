@@ -617,10 +617,11 @@ function drawMap(fires) {
       svg.appendChild(el('text',{x:fx,y:fy+1.9,'text-anchor':'middle','font-size':'5.8','font-weight':'bold',fill:'white'},'E'));
     }
     const labelFontSize=5.5;
-    const lw=measureTextWidth(f.name, labelFontSize, 'bold')+6;
-    const labelBg=hasEvac?'#FF8C00':'white';
-    svg.appendChild(el('rect',{x:fx+13,y:fy-1,width:lw,height:9,fill:labelBg,stroke:fill,'stroke-width':'0.5'}));
-    svg.appendChild(el('text',{x:fx+15,y:fy+7,'font-size':labelFontSize,'font-weight':'bold','font-family':'Arial, sans-serif',fill},f.name));
+    const lw=measureTextWidth(f.name, labelFontSize, 'bold')+4;
+    const labelBg=hasEvac?'#FFE3BC':'white';
+    const boxX=fx+13, boxY=fy-1, boxH=9;
+    svg.appendChild(el('rect',{x:boxX,y:boxY,width:lw,height:boxH,fill:labelBg,stroke:fill,'stroke-width':'0.5'}));
+    svg.appendChild(el('text',{x:boxX+lw/2,y:boxY+boxH/2,'text-anchor':'middle','dominant-baseline':'central','font-size':labelFontSize,'font-weight':'bold','font-family':'Arial, sans-serif',fill},f.name));
   };
   // Pass 1: contained fires (underneath)
   fires.filter(f=>f.status!=='Active').forEach(drawFireMarker);
