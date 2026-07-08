@@ -604,15 +604,9 @@ function drawMap(fires) {
     const [fx,fy]=proj(lon,lat);
     const isActive=f.status==='Active', hasEvac=f.triggered_evacuation;
     const fill=isActive?'#CC2200':'#228B22';
-    if(hasEvac){
-      svg.appendChild(el('circle',{cx:fx,cy:fy,r:'10',fill:'none',stroke:'#FF8C00','stroke-width':'2'}));
-      svg.appendChild(el('circle',{cx:fx,cy:fy,r:'11.5',fill:'none',stroke:'#FF8C00','stroke-width':'0.6','stroke-dasharray':'3,2'}));
-    }
-    svg.appendChild(el('circle',{cx:fx,cy:fy,r:'6.5',fill:'none',stroke:fill,'stroke-width':'0.8'}));
     svg.appendChild(el('circle',{cx:fx,cy:fy,r:'4.5',fill,stroke:'white','stroke-width':'0.8'}));
     if(hasEvac){
-      svg.appendChild(el('rect',{x:fx+3,y:fy-10,width:8,height:7,fill:'#FF8C00'}));
-      svg.appendChild(el('text',{x:fx+7,y:fy-4,'text-anchor':'middle','font-size':'5','font-weight':'bold',fill:'white'},'E'));
+      svg.appendChild(el('text',{x:fx,y:fy+1.9,'text-anchor':'middle','font-size':'5.8','font-weight':'bold',fill:'white'},'E'));
     }
     const lw=f.name.length*4.2+6;
     svg.appendChild(el('rect',{x:fx+13,y:fy-1,width:lw,height:9,fill:'white',stroke:fill,'stroke-width':'0.5'}));
@@ -630,10 +624,9 @@ function drawMap(fires) {
   svg.appendChild(el('text',{x:lx+19,y:ly+18,'font-size':'6.5',fill:'#334'},'Active Fire'));
   svg.appendChild(el('circle',{cx:lx+10,cy:ly+30,r:'4',fill:'#228B22',stroke:'white','stroke-width':'0.6'}));
   svg.appendChild(el('text',{x:lx+19,y:ly+34,'font-size':'6.5',fill:'#334'},'Contained Fire'));
-  svg.appendChild(el('circle',{cx:lx+10,cy:ly+47,r:'6',fill:'none',stroke:'#FF8C00','stroke-width':'2'}));
-  svg.appendChild(el('rect',{x:lx+13,y:ly+43,width:6,height:5,fill:'#FF8C00'}));
-  svg.appendChild(el('text',{x:lx+16,y:ly+47,'text-anchor':'middle','font-size':'4.5','font-weight':'bold',fill:'white'},'E'));
-  svg.appendChild(el('text',{x:lx+22,y:ly+51,'font-size':'6.5',fill:'#334'},'Evac. Triggered'));
+  svg.appendChild(el('circle',{cx:lx+10,cy:ly+47,r:'4',fill:'#CC2200',stroke:'white','stroke-width':'0.6'}));
+  svg.appendChild(el('text',{x:lx+10,y:ly+48.8,'text-anchor':'middle','font-size':'5','font-weight':'bold',fill:'white'},'E'));
+  svg.appendChild(el('text',{x:lx+19,y:ly+51,'font-size':'6.5',fill:'#334'},'Evac. Triggered'));
   svg.appendChild(el('circle',{cx:lx+10,cy:ly+64,r:'2',fill:'#555',stroke:'white','stroke-width':'0.4'}));
   svg.appendChild(el('text',{x:lx+19,y:ly+68,'font-size':'6.5',fill:'#334'},'Reference City'));
   svg.appendChild(el('text',{x:lx+5,y:ly+82,'font-size':'5.5',fill:'#888'},'NWCC large fire'));
