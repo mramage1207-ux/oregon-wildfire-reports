@@ -618,7 +618,8 @@ function drawMap(fires) {
     }
     const labelFontSize=5.5;
     const lw=measureTextWidth(f.name, labelFontSize, 'bold')+6;
-    svg.appendChild(el('rect',{x:fx+13,y:fy-1,width:lw,height:9,fill:'white',stroke:fill,'stroke-width':'0.5'}));
+    const labelBg=hasEvac?'#FF8C00':'white';
+    svg.appendChild(el('rect',{x:fx+13,y:fy-1,width:lw,height:9,fill:labelBg,stroke:fill,'stroke-width':'0.5'}));
     svg.appendChild(el('text',{x:fx+15,y:fy+7,'font-size':labelFontSize,'font-weight':'bold','font-family':'Arial, sans-serif',fill},f.name));
   };
   // Pass 1: contained fires (underneath)
