@@ -563,6 +563,14 @@ function drawMap(fires) {
   };
   const proj=(lon,lat)=>[mx+(lon-LON_MIN)/LON_SPAN*mw, my+mh-(lat-LAT_MIN)/LAT_SPAN*mh];
 
+  // Measure actual rendered text width (no fixed per-character estimate,
+  // no trailing whitespace in label boxes). Cached canvas context.
+  const _measureCanvas = document.createElement('canvas').getContext('2d');
+  const measureTextWidth = (text, fontPx, weight) => {
+    _measureCanvas.font = `${weight||'normal'} ${fontPx}px Arial, sans-serif`;
+    return _measureCanvas.measureText(text).width;
+  };
+
   // Backgrounds
   svg.appendChild(el('rect',{x:0,y:0,width:W,height:H,fill:'#f8f9fa'}));
   svg.appendChild(el('rect',{x:LEGEND_W,y:10,width:avW,height:avH,fill:'#D6EAF8'}));
@@ -608,9 +616,10 @@ function drawMap(fires) {
     if(hasEvac){
       svg.appendChild(el('text',{x:fx,y:fy+1.9,'text-anchor':'middle','font-size':'5.8','font-weight':'bold',fill:'white'},'E'));
     }
-    const lw=f.name.length*4.2+6;
+    const labelFontSize=5.5;
+    const lw=measureTextWidth(f.name, labelFontSize, 'bold')+6;
     svg.appendChild(el('rect',{x:fx+13,y:fy-1,width:lw,height:9,fill:'white',stroke:fill,'stroke-width':'0.5'}));
-    svg.appendChild(el('text',{x:fx+15,y:fy+7,'font-size':'5.5','font-weight':'bold',fill},f.name));
+    svg.appendChild(el('text',{x:fx+15,y:fy+7,'font-size':labelFontSize,'font-weight':'bold','font-family':'Arial, sans-serif',fill},f.name));
   };
   // Pass 1: contained fires (underneath)
   fires.filter(f=>f.status!=='Active').forEach(drawFireMarker);
