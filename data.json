@@ -1,8 +1,8 @@
 {
   "last_updated": "2026-07-08",
-  "report_time": "8:38 AM PDT",
-  "active_large_fires": 4,
-  "total_large_fire_acres": 26192.5,
+  "report_time": "8:49 AM PDT",
+  "active_large_fires": 2,
+  "total_large_fire_acres": 25942.5,
   "structures_lost": 0,
   "evac_triggering_fires": 1,
   "evac_zones": {
@@ -822,8 +822,8 @@
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 24,
-      "total_acres": 26192.5,
+      "total_fires": 22,
+      "total_acres": 25942.5,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -1249,24 +1249,6 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 885.0
-    },
-    {
-      "name": "Carlson Creek",
-      "county": "Harney",
-      "lat": 42.428469,
-      "lon": -118.673968,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 150.0
-    },
-    {
-      "name": "BOWDEN",
-      "county": "Malheur",
-      "lat": 42.640968,
-      "lon": -117.791511,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 100.0
     },
     {
       "name": "0384 COYNER",
