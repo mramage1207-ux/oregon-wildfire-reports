@@ -1,19 +1,18 @@
 {
-  "last_updated": "2026-07-07",
-  "report_time": "8:53 AM PDT",
-  "active_large_fires": 2,
-  "total_large_fire_acres": 24873.5,
+  "last_updated": "2026-07-08",
+  "report_time": "8:38 AM PDT",
+  "active_large_fires": 4,
+  "total_large_fire_acres": 26192.5,
   "structures_lost": 0,
-  "evac_triggering_fires": 2,
+  "evac_triggering_fires": 1,
   "evac_zones": {
     "level3": [],
     "level2": [],
     "level1": [
-      "North Cayuse \u2014 Umatilla County, Oregon",
-      "0384 COYNER \u2014 Deschutes County, Oregon"
+      "North Cayuse \u2014 Umatilla County, Oregon"
     ]
   },
-  "evac_addresses_l1": 31,
+  "evac_addresses_l1": 21,
   "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
   "struct_loss": {
@@ -813,13 +812,18 @@
       "date": "2026-07-07",
       "active_fires": 54,
       "acres_burned": 4705.39
+    },
+    {
+      "date": "2026-07-08",
+      "active_fires": 58,
+      "acres_burned": 6143.61
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 21,
-      "total_acres": 24873.5,
+      "total_fires": 24,
+      "total_acres": 26192.5,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -837,7 +841,7 @@
         {
           "name": "North Cayuse",
           "county": "Umatilla",
-          "acres": 4663.0
+          "acres": 4847.0
         },
         {
           "name": "Butterfield Spring Fire",
@@ -1235,14 +1239,41 @@
       "lon": -118.5985,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 4663.0
+      "acres": 4847.0
+    },
+    {
+      "name": "Hoop",
+      "county": "Harney",
+      "lat": 42.6736,
+      "lon": -118.6947,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 885.0
+    },
+    {
+      "name": "Carlson Creek",
+      "county": "Harney",
+      "lat": 42.428469,
+      "lon": -118.673968,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 150.0
+    },
+    {
+      "name": "BOWDEN",
+      "county": "Malheur",
+      "lat": 42.640968,
+      "lon": -117.791511,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 100.0
     },
     {
       "name": "0384 COYNER",
       "county": "Deschutes",
       "lat": 44.317913,
       "lon": -121.218767,
-      "status": "Active",
+      "status": "Contained",
       "triggered_evacuation": true,
       "acres": 20.5
     },
