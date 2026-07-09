@@ -1,7 +1,7 @@
 {
   "last_updated": "2026-07-09",
   "report_time": "8:36 AM PDT",
-  "active_large_fires": 6,
+  "active_large_fires": 7,
   "total_large_fire_acres": 28588.8,
   "structures_lost": 0,
   "evac_triggering_fires": 2,
@@ -821,8 +821,8 @@
     },
     {
       "date": "2026-07-09",
-      "active_fires": 54,
-      "acres_burned": 8782.69
+      "active_fires": 83,
+      "acres_burned": 8804.75
     }
   ],
   "historical_seasons": [
@@ -1303,6 +1303,15 @@
       "acres": 134.0
     },
     {
+      "name": "0384 COYNER",
+      "county": "Deschutes",
+      "lat": 44.317913,
+      "lon": -121.218767,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 20.5
+    },
+    {
       "name": "LYTLE",
       "county": "Malheur",
       "lat": 43.960372,
@@ -1445,15 +1454,6 @@
       "status": "Contained",
       "triggered_evacuation": true,
       "acres": 48.2
-    },
-    {
-      "name": "0384 COYNER",
-      "county": "Deschutes",
-      "lat": 44.317913,
-      "lon": -121.218767,
-      "status": "Contained",
-      "triggered_evacuation": true,
-      "acres": 20.5
     },
     {
       "name": "Riverview Fire",
