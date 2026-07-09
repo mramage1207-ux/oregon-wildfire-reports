@@ -1,18 +1,19 @@
 {
   "last_updated": "2026-07-08",
-  "report_time": "2:01 PM PDT",
-  "active_large_fires": 3,
-  "total_large_fire_acres": 26151.5,
+  "report_time": "6:01 PM PDT",
+  "active_large_fires": 6,
+  "total_large_fire_acres": 28191.5,
   "structures_lost": 0,
-  "evac_triggering_fires": 1,
+  "evac_triggering_fires": 2,
   "evac_zones": {
     "level3": [],
     "level2": [],
     "level1": [
-      "North Cayuse \u2014 ~4 miles east of Mission, Oregon"
+      "North Cayuse \u2014 ~4 miles east of Mission, Oregon",
+      "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
     ]
   },
-  "evac_addresses_l1": 21,
+  "evac_addresses_l1": 45,
   "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
   "struct_loss": {
@@ -822,8 +823,8 @@
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 23,
-      "total_acres": 26151.5,
+      "total_fires": 26,
+      "total_acres": 28191.5,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -1234,6 +1235,11 @@
       "active_fires": 71,
       "acres_burned": 6499.3,
       "should_update": true
+    },
+    "2026-07-08_1800": {
+      "active_fires": 73,
+      "acres_burned": 8517.9,
+      "should_update": true
     }
   },
   "map_fires": [
@@ -1245,6 +1251,24 @@
       "status": "Active",
       "triggered_evacuation": true,
       "acres": 4847.0
+    },
+    {
+      "name": "Salmon",
+      "county": "Grant",
+      "lat": 44.713292,
+      "lon": -118.536644,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 1000.0
+    },
+    {
+      "name": "WHISKEY",
+      "county": "Malheur",
+      "lat": 43.355809,
+      "lon": -118.187393,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 1000.0
     },
     {
       "name": "Hoop",
@@ -1263,6 +1287,15 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 134.0
+    },
+    {
+      "name": "Anthony",
+      "county": "Baker",
+      "lat": 44.992651,
+      "lon": -118.099469,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 40.0
     },
     {
       "name": "0384 COYNER",
