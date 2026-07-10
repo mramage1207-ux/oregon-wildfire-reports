@@ -1,21 +1,22 @@
 {
   "last_updated": "2026-07-10",
   "report_time": "8:36 AM PDT",
-  "active_large_fires": 7,
-  "total_large_fire_acres": 28588.8,
+  "active_large_fires": 5,
+  "total_large_fire_acres": 28640.8,
   "structures_lost": 0,
-  "evac_triggering_fires": 2,
+  "evac_triggering_fires": 1,
   "evac_zones": {
     "level3": [],
-    "level2": [],
+    "level2": [
+      "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
+    ],
     "level1": [
-      "North Cayuse \u2014 ~4 miles east of Mission, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
     ]
   },
-  "evac_addresses_l1": 45,
-  "evac_addresses_l2": 0,
-  "evac_addresses_l3": 19,
+  "evac_addresses_l1": 26,
+  "evac_addresses_l2": 18,
+  "evac_addresses_l3": 20,
   "struct_loss": {
     "date": "2026-07-10",
     "source": "NIFC WFIGS Current Incident Locations",
@@ -823,13 +824,18 @@
       "date": "2026-07-09",
       "active_fires": 83,
       "acres_burned": 8804.75
+    },
+    {
+      "date": "2026-07-10",
+      "active_fires": 44,
+      "acres_burned": 7703.13
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
       "total_fires": 26,
-      "total_acres": 28588.8,
+      "total_acres": 28640.8,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -847,7 +853,7 @@
         {
           "name": "North Cayuse",
           "county": "Umatilla",
-          "acres": 4885.0
+          "acres": 4887.0
         },
         {
           "name": "Butterfield Spring Fire",
@@ -1255,7 +1261,7 @@
       "lon": -118.5985,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 4885.0
+      "acres": 4887.0
     },
     {
       "name": "Salmon",
@@ -1265,15 +1271,6 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 1000.0
-    },
-    {
-      "name": "WHISKEY",
-      "county": "Malheur",
-      "lat": 43.355809,
-      "lon": -118.187393,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 999.3
     },
     {
       "name": "Hoop",
@@ -1291,7 +1288,7 @@
       "lon": -118.099469,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 400.0
+      "acres": 450.0
     },
     {
       "name": "Skull Creek",
@@ -1307,7 +1304,7 @@
       "county": "Deschutes",
       "lat": 44.317913,
       "lon": -121.218767,
-      "status": "Active",
+      "status": "Contained",
       "triggered_evacuation": true,
       "acres": 20.5
     },
@@ -1373,6 +1370,15 @@
       "status": "Contained",
       "triggered_evacuation": true,
       "acres": 1347.0
+    },
+    {
+      "name": "WHISKEY",
+      "county": "Malheur",
+      "lat": 43.355809,
+      "lon": -118.187393,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 999.3
     },
     {
       "name": "Cable Creek",
