@@ -1,26 +1,29 @@
 {
   "last_updated": "2026-07-11",
-  "report_time": "7:58 PM PDT",
-  "active_large_fires": 5,
-  "total_large_fire_acres": 28640.8,
+  "report_time": "8:36 AM PDT",
+  "active_large_fires": 6,
+  "total_large_fire_acres": 29798.8,
   "structures_lost": 0,
-  "evac_triggering_fires": 2,
+  "evac_triggering_fires": 3,
   "evac_zones": {
     "level3": [
+      "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
       "Salmon \u2014 ~2 miles west of Greenhorn, Oregon"
     ],
     "level2": [
+      "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
       "Salmon \u2014 ~2 miles west of Greenhorn, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
     ],
     "level1": [
+      "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
       "Salmon \u2014 ~2 miles west of Greenhorn, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
     ]
   },
-  "evac_addresses_l1": 154,
-  "evac_addresses_l2": 112,
-  "evac_addresses_l3": 20,
+  "evac_addresses_l1": 121,
+  "evac_addresses_l2": 184,
+  "evac_addresses_l3": 57,
   "struct_loss": {
     "date": "2026-07-11",
     "source": "NIFC WFIGS Current Incident Locations",
@@ -833,13 +836,18 @@
       "date": "2026-07-10",
       "active_fires": 44,
       "acres_burned": 7703.13
+    },
+    {
+      "date": "2026-07-11",
+      "active_fires": 40,
+      "acres_burned": 8821.22
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 26,
-      "total_acres": 28640.8,
+      "total_fires": 27,
+      "total_acres": 29798.8,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -1273,13 +1281,13 @@
       "acres": 4887.0
     },
     {
-      "name": "Salmon",
-      "county": "Grant",
-      "lat": 44.713292,
-      "lon": -118.536644,
+      "name": "E Evans Creek Rd 18000",
+      "county": "Jackson",
+      "lat": 42.60395,
+      "lon": -123.00183333,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 1000.0
+      "acres": 1550.0
     },
     {
       "name": "Hoop",
@@ -1291,13 +1299,22 @@
       "acres": 960.0
     },
     {
+      "name": "Salmon",
+      "county": "Grant",
+      "lat": 44.713292,
+      "lon": -118.536644,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 533.0
+    },
+    {
       "name": "Anthony",
       "county": "Baker",
       "lat": 44.992651,
       "lon": -118.099469,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 450.0
+      "acres": 525.0
     },
     {
       "name": "Skull Creek",
@@ -1307,15 +1324,6 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 134.0
-    },
-    {
-      "name": "0384 COYNER",
-      "county": "Deschutes",
-      "lat": 44.317913,
-      "lon": -121.218767,
-      "status": "Contained",
-      "triggered_evacuation": true,
-      "acres": 20.5
     },
     {
       "name": "LYTLE",
@@ -1469,6 +1477,15 @@
       "status": "Contained",
       "triggered_evacuation": true,
       "acres": 48.2
+    },
+    {
+      "name": "0384 COYNER",
+      "county": "Deschutes",
+      "lat": 44.317913,
+      "lon": -121.218767,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 20.5
     },
     {
       "name": "Riverview Fire",
