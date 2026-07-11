@@ -1,21 +1,25 @@
 {
   "last_updated": "2026-07-10",
-  "report_time": "8:36 AM PDT",
+  "report_time": "7:58 PM PDT",
   "active_large_fires": 5,
   "total_large_fire_acres": 28640.8,
   "structures_lost": 0,
-  "evac_triggering_fires": 1,
+  "evac_triggering_fires": 2,
   "evac_zones": {
-    "level3": [],
+    "level3": [
+      "Salmon \u2014 ~2 miles west of Greenhorn, Oregon"
+    ],
     "level2": [
+      "Salmon \u2014 ~2 miles west of Greenhorn, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
     ],
     "level1": [
+      "Salmon \u2014 ~2 miles west of Greenhorn, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
     ]
   },
-  "evac_addresses_l1": 26,
-  "evac_addresses_l2": 18,
+  "evac_addresses_l1": 154,
+  "evac_addresses_l2": 112,
   "evac_addresses_l3": 20,
   "struct_loss": {
     "date": "2026-07-10",
@@ -1269,7 +1273,7 @@
       "lat": 44.713292,
       "lon": -118.536644,
       "status": "Active",
-      "triggered_evacuation": false,
+      "triggered_evacuation": true,
       "acres": 1000.0
     },
     {
