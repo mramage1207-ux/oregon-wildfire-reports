@@ -1,14 +1,14 @@
 {
   "last_updated": "2026-07-11",
-  "report_time": "11:01 AM PDT",
-  "active_large_fires": 6,
-  "total_large_fire_acres": 29798.8,
+  "report_time": "2:01 PM PDT",
+  "active_large_fires": 7,
+  "total_large_fire_acres": 29871.8,
   "structures_lost": 0,
-  "evac_triggering_fires": 3,
+  "evac_triggering_fires": 4,
   "evac_zones": {
     "level3": [
       "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
-      "Salmon \u2014 ~2 miles west of Greenhorn, Oregon"
+      "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon"
     ],
     "level2": [
       "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
@@ -17,13 +17,12 @@
     ],
     "level1": [
       "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
-      "Salmon \u2014 ~2 miles west of Greenhorn, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
     ]
   },
   "evac_addresses_l1": 121,
-  "evac_addresses_l2": 184,
-  "evac_addresses_l3": 57,
+  "evac_addresses_l2": 189,
+  "evac_addresses_l3": 68,
   "struct_loss": {
     "date": "2026-07-11",
     "source": "NIFC WFIGS Current Incident Locations",
@@ -846,8 +845,8 @@
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 27,
-      "total_acres": 29798.8,
+      "total_fires": 28,
+      "total_acres": 29871.8,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -1268,6 +1267,11 @@
       "active_fires": 42,
       "acres_burned": 8821.4,
       "should_update": true
+    },
+    "2026-07-11_1400": {
+      "active_fires": 42,
+      "acres_burned": 8830.6,
+      "should_update": true
     }
   },
   "map_fires": [
@@ -1324,6 +1328,15 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 134.0
+    },
+    {
+      "name": "Olive Butte",
+      "county": "Grant",
+      "lat": 44.746208,
+      "lon": -118.449893,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 73.0
     },
     {
       "name": "LYTLE",
