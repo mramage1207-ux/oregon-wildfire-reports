@@ -1,8 +1,8 @@
 {
   "last_updated": "2026-07-12",
-  "report_time": "6:01 PM PDT",
+  "report_time": "8:36 AM PDT",
   "active_large_fires": 7,
-  "total_large_fire_acres": 29871.8,
+  "total_large_fire_acres": 31785.8,
   "structures_lost": 0,
   "evac_triggering_fires": 4,
   "evac_zones": {
@@ -13,16 +13,17 @@
     ],
     "level2": [
       "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
-      "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
+      "Anthony \u2014 ~6 miles west of Hutchinson, Oregon",
+      "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon"
     ],
     "level1": [
       "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
     ]
   },
-  "evac_addresses_l1": 213,
+  "evac_addresses_l1": 121,
   "evac_addresses_l2": 188,
-  "evac_addresses_l3": 71,
+  "evac_addresses_l3": 163,
   "struct_loss": {
     "date": "2026-07-12",
     "source": "NIFC WFIGS Current Incident Locations",
@@ -840,13 +841,18 @@
       "date": "2026-07-11",
       "active_fires": 40,
       "acres_burned": 8821.22
+    },
+    {
+      "date": "2026-07-12",
+      "active_fires": 43,
+      "acres_burned": 10741.73
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
       "total_fires": 28,
-      "total_acres": 29871.8,
+      "total_acres": 31785.8,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -872,14 +878,14 @@
           "acres": 2750.0
         },
         {
+          "name": "E Evans Creek Rd 18000",
+          "county": "Jackson",
+          "acres": 2656.0
+        },
+        {
           "name": "PINE MOUNTAIN",
           "county": "Deschutes",
           "acres": 2589.0
-        },
-        {
-          "name": "FRONTAGE",
-          "county": "Baker",
-          "acres": 1938.0
         }
       ]
     },
@@ -1296,7 +1302,7 @@
       "lon": -123.00183333,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 1550.0
+      "acres": 2656.0
     },
     {
       "name": "Hoop",
@@ -1314,7 +1320,7 @@
       "lon": -118.536644,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 533.0
+      "acres": 803.0
     },
     {
       "name": "Anthony",
@@ -1323,7 +1329,16 @@
       "lon": -118.099469,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 525.0
+      "acres": 750.0
+    },
+    {
+      "name": "Olive Butte",
+      "county": "Grant",
+      "lat": 44.746208,
+      "lon": -118.449893,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 386.0
     },
     {
       "name": "Skull Creek",
@@ -1333,15 +1348,6 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 134.0
-    },
-    {
-      "name": "Olive Butte",
-      "county": "Grant",
-      "lat": 44.746208,
-      "lon": -118.449893,
-      "status": "Active",
-      "triggered_evacuation": true,
-      "acres": 73.0
     },
     {
       "name": "LYTLE",
