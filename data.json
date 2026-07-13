@@ -2,19 +2,20 @@
   "last_updated": "2026-07-13",
   "report_time": "8:36 AM PDT",
   "active_large_fires": 7,
-  "total_large_fire_acres": 31785.8,
+  "total_large_fire_acres": 34798.8,
   "structures_lost": 0,
   "evac_triggering_fires": 4,
   "evac_zones": {
     "level3": [
       "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
-      "Salmon \u2014 ~2 miles west of Greenhorn, Oregon",
-      "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon"
+      "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon",
+      "Salmon \u2014 ~2 miles west of Greenhorn, Oregon"
     ],
     "level2": [
       "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon",
-      "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon"
+      "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon",
+      "Salmon \u2014 ~2 miles west of Greenhorn, Oregon"
     ],
     "level1": [
       "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
@@ -22,8 +23,8 @@
     ]
   },
   "evac_addresses_l1": 121,
-  "evac_addresses_l2": 188,
-  "evac_addresses_l3": 163,
+  "evac_addresses_l2": 192,
+  "evac_addresses_l3": 175,
   "struct_loss": {
     "date": "2026-07-13",
     "source": "NIFC WFIGS Current Incident Locations",
@@ -846,13 +847,18 @@
       "date": "2026-07-12",
       "active_fires": 43,
       "acres_burned": 10741.73
+    },
+    {
+      "date": "2026-07-13",
+      "active_fires": 42,
+      "acres_burned": 13778.47
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
       "total_fires": 28,
-      "total_acres": 31785.8,
+      "total_acres": 34798.8,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -873,14 +879,14 @@
           "acres": 4887.0
         },
         {
+          "name": "E Evans Creek Rd 18000",
+          "county": "Jackson",
+          "acres": 3152.0
+        },
+        {
           "name": "Butterfield Spring Fire",
           "county": "Malheur",
           "acres": 2750.0
-        },
-        {
-          "name": "E Evans Creek Rd 18000",
-          "county": "Jackson",
-          "acres": 2656.0
         },
         {
           "name": "PINE MOUNTAIN",
@@ -1302,7 +1308,34 @@
       "lon": -123.00183333,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 2656.0
+      "acres": 3152.0
+    },
+    {
+      "name": "Anthony",
+      "county": "Baker",
+      "lat": 44.992651,
+      "lon": -118.099469,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 1643.0
+    },
+    {
+      "name": "Olive Butte",
+      "county": "Grant",
+      "lat": 44.746208,
+      "lon": -118.449893,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 1642.0
+    },
+    {
+      "name": "Salmon",
+      "county": "Grant",
+      "lat": 44.713292,
+      "lon": -118.536644,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 1171.0
     },
     {
       "name": "Hoop",
@@ -1312,33 +1345,6 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 960.0
-    },
-    {
-      "name": "Salmon",
-      "county": "Grant",
-      "lat": 44.713292,
-      "lon": -118.536644,
-      "status": "Active",
-      "triggered_evacuation": true,
-      "acres": 803.0
-    },
-    {
-      "name": "Anthony",
-      "county": "Baker",
-      "lat": 44.992651,
-      "lon": -118.099469,
-      "status": "Active",
-      "triggered_evacuation": true,
-      "acres": 750.0
-    },
-    {
-      "name": "Olive Butte",
-      "county": "Grant",
-      "lat": 44.746208,
-      "lon": -118.449893,
-      "status": "Active",
-      "triggered_evacuation": true,
-      "acres": 386.0
     },
     {
       "name": "Skull Creek",
