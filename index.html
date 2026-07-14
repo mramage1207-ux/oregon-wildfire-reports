@@ -179,6 +179,7 @@
     .chart-legend { display: flex; gap: 1.2rem; margin-bottom: .6rem; }
     .legend-item { display: flex; align-items: center; gap: .4rem; font-size: .78rem; color: #4a5568; }
     .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .legend-dot.sq { border-radius: 2px; }
     svg.trend { width: 100%; display: block; }
 
     /* ── archive table ── */
@@ -449,6 +450,31 @@
       <desc id="trendChartDesc">Line chart showing active fires and acres burned over the 2026 fire season. A text table of the same data follows.</desc>
     </svg>
     <div class="sr-only" id="trendChartTable" aria-label="Season trend data table"></div>
+  </div>
+
+  <div class="chart-card" id="county-chart-card">
+    <h2>County-by-County &mdash; Large Fires</h2>
+    <div class="chart-sub">Total acres burned (left axis) &amp; structures destroyed by type (right axis), sorted descending by acres</div>
+    <div class="chart-legend">
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#e67e22;"></div> Total Acres
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot sq" style="background:#1a2744;"></div> Residential
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot sq" style="background:#4C7EA8;"></div> Commercial
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot sq" style="background:#A9C6DE;"></div> Other
+      </div>
+    </div>
+    <svg class="trend" viewBox="0 0 1000 220" preserveAspectRatio="none" id="countyChart"
+      role="img" aria-labelledby="countyChartTitle" aria-describedby="countyChartDesc">
+      <title id="countyChartTitle">County-by-county acres burned and structures destroyed</title>
+      <desc id="countyChartDesc">Bar chart showing total acres burned by large fires and structures destroyed by type, for each Oregon county with a large fire this season. A text table of the same data follows.</desc>
+    </svg>
+    <div class="sr-only" id="countyChartTable" aria-label="County-by-county data table"></div>
   </div>
 
   <div class="section-header">
@@ -769,6 +795,122 @@ function drawChart(hist) {
   }
 }
 
+// ── COUNTY ACRES + STRUCTURE LOSS CHART ────────────────────────────────────────
+function niceStep(raw) {
+  if (raw <= 0) return 1;
+  const exp = Math.floor(Math.log10(raw));
+  const base = Math.pow(10, exp);
+  for (const m of [1,2,5,10]) { if (raw <= m*base) return m*base; }
+  return 10*base;
+}
+function niceTicks(maxVal, target) {
+  target = target || 5;
+  if (maxVal <= 0) return {ticks:[0], axisMax:1};
+  const step = niceStep(maxVal/target);
+  const axisMax = Math.ceil(maxVal/step)*step;
+  const ticks = [];
+  for (let v=0; v<=axisMax+1e-9; v+=step) ticks.push(v);
+  return {ticks, axisMax};
+}
+
+function drawCountyChart(rows) {
+  const svg = document.getElementById('countyChart');
+  if (!svg || !rows || !rows.length) return;
+  const W=1000, H=220, P={t:14, r:78, b:34, l:52};
+  const cW=W-P.l-P.r, cH=H-P.t-P.b;
+  const n = rows.length;
+  const CATS = [['res','#1a2744'],['comm','#4C7EA8'],['other','#A9C6DE']];
+  const maxAcres = Math.max(...rows.map(r=>r.acres||0)) || 1;
+  const allCatVals = rows.flatMap(r => CATS.map(([k])=>r[k]||0));
+  const maxCatRaw = Math.max(...allCatVals, 0);
+  const nt = niceTicks(maxCatRaw);
+  const lostTicks = nt.ticks, maxLost = nt.axisMax;
+  const anyLoss = maxCatRaw > 0;
+
+  const ns='http://www.w3.org/2000/svg';
+  const el=(tag,a,txt)=>{
+    const e=document.createElementNS(ns,tag);
+    Object.entries(a).forEach(([k,v])=>e.setAttribute(k,v));
+    if (txt!=null) e.textContent=txt;
+    return e;
+  };
+
+  // Background + plot area
+  svg.appendChild(el('rect',{x:0,y:0,width:W,height:H,fill:'#fff'}));
+  svg.appendChild(el('rect',{x:P.l,y:P.t,width:cW,height:cH,fill:'#FAFAFA',stroke:'#e2e8f0','stroke-width':'0.6'}));
+
+  // Gridlines + left axis labels (acres)
+  for (let k=0;k<=5;k++) {
+    const y = P.t + cH - (k/5)*cH;
+    svg.appendChild(el('line',{x1:P.l,y1:y,x2:P.l+cW,y2:y,stroke:'#e2e8f0','stroke-width':'0.6'}));
+    const lb = el('text',{x:P.l-5,y:y+3,'text-anchor':'end','font-size':'8',fill:'#e67e22'});
+    lb.textContent = Math.round(maxAcres*k/5).toLocaleString();
+    svg.appendChild(lb);
+  }
+
+  // Right axis ticks (structures lost) — nice round-number spacing
+  lostTicks.forEach(v => {
+    const y = P.t + cH - (v/maxLost)*cH;
+    const lb = el('text',{x:P.l+cW+6,y:y+3,'text-anchor':'start','font-size':'8',fill:'#1a2744','font-weight':'600'});
+    lb.textContent = String(Math.round(v));
+    svg.appendChild(lb);
+  });
+  svg.appendChild(el('line',{x1:P.l+cW,y1:P.t,x2:P.l+cW,y2:P.t+cH,stroke:'#cbd5e0','stroke-width':'0.8'}));
+
+  const slot = cW/n;
+  const barW = slot*0.60;
+  const ovW  = barW*0.80;
+  const catGap = 1.6;
+  const catW = (ovW - 2*catGap)/3;
+
+  rows.forEach((r,i) => {
+    const cx = P.l + slot*i + slot/2;
+    const bx = cx - barW/2;
+    const barTop = P.t + cH - ((r.acres||0)/maxAcres)*cH;
+    svg.appendChild(el('rect',{x:bx,y:barTop,width:barW,height:(P.t+cH-barTop),fill:'#e67e22',stroke:'#fff','stroke-width':'0.8'}));
+
+    const groupLeft = cx - ovW/2;
+    let tallestTop = P.t+cH;
+    CATS.forEach(([key,color],j) => {
+      const v = r[key]||0;
+      const ox = groupLeft + j*(catW+catGap);
+      if (v>0) {
+        const top = P.t + cH - (v/maxLost)*cH;
+        tallestTop = Math.min(tallestTop, top);
+        svg.appendChild(el('rect',{x:ox,y:top,width:catW,height:(P.t+cH-top),fill:color,stroke:'#fff','stroke-width':'0.6'}));
+        const lb = el('text',{x:ox+catW/2,y:top-3,'text-anchor':'middle','font-size':'6.5','font-weight':'700',fill:color});
+        lb.textContent = String(v);
+        svg.appendChild(lb);
+      }
+    });
+
+    const overlayTallerThanBar = tallestTop < barTop;
+    const labelY = overlayTallerThanBar ? tallestTop - 11 : barTop - 5;
+    const albl = el('text',{x:cx,y:labelY,'text-anchor':'middle','font-size':'8','font-weight':'700',fill:'#e67e22'});
+    albl.textContent = Math.round(r.acres||0).toLocaleString();
+    svg.appendChild(albl);
+
+    const clbl = el('text',{x:cx,y:P.t+cH+13,'text-anchor':'middle','font-size':'8','font-weight':'700',fill:'#1a2744'});
+    clbl.textContent = r.county;
+    svg.appendChild(clbl);
+  });
+
+  if (!anyLoss) {
+    const note = el('text',{x:P.l+cW/2,y:P.t+16,'text-anchor':'middle','font-size':'9','font-style':'italic',fill:'#1a2744'});
+    note.textContent = 'No structures lost reported for any county so far this season';
+    svg.appendChild(note);
+  }
+
+  // Accessible fallback table
+  const tbl = document.getElementById('countyChartTable');
+  if (tbl) {
+    const bodyRows = rows.map(r =>
+      `<tr><td>${r.county}</td><td>${Math.round(r.acres||0).toLocaleString()}</td><td>${r.res||0}</td><td>${r.comm||0}</td><td>${r.other||0}</td></tr>`
+    ).join('');
+    tbl.innerHTML = `<table><caption>County-by-county acres burned and structures destroyed</caption><thead><tr><th scope="col">County</th><th scope="col">Acres Burned</th><th scope="col">Residential Lost</th><th scope="col">Commercial Lost</th><th scope="col">Other Lost</th></tr></thead><tbody>${bodyRows}</tbody></table>`;
+  }
+}
+
 // ── RENDER ───────────────────────────────────────────────────────────────────
 function render(pdfs, data) {
   const histByDate = {};
@@ -1015,6 +1157,9 @@ function render(pdfs, data) {
   // ── Map ──
   if (data && data.map_fires) drawMap(data.map_fires);
 
+  // ── County acres + structure loss chart ──
+  if (data && data.county_structure_data) drawCountyChart(data.county_structure_data);
+
   // ── Chart ──
   if (data && data.historical_data) {
     drawChart(data.historical_data);
@@ -1092,8 +1237,9 @@ function render(pdfs, data) {
         '<div class="error-box">&#9888; Could not reach GitHub API to list reports. ' +
         'If you know the filename, you can access reports directly at: ' +
         '<code>https://mramage1207-ux.github.io/oregon-wildfire-reports/oregon_wildfire_report_YYYY-MM-DD.pdf</code></div>';
-      // Still try to render chart if we have data.json
+      // Still try to render charts if we have data.json
       if (data && data.historical_data) drawChart(data.historical_data);
+      if (data && data.county_structure_data) drawCountyChart(data.county_structure_data);
       document.getElementById('hero-card').innerHTML =
         '<div style="color:rgba(255,255,255,.6);font-size:.9rem;">Unable to load report list &mdash; see error above.</div>';
       document.getElementById('archive-container').innerHTML =

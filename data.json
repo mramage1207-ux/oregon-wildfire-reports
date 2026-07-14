@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-07-14",
-  "report_time": "8:36 AM PDT",
+  "report_time": "9:13 AM PDT",
   "active_large_fires": 6,
   "total_large_fire_acres": 35667.8,
   "structures_lost": 0,
@@ -45,6 +45,78 @@
     "incidents": [],
     "note": "No active Oregon incidents in WFIGS"
   },
+  "county_structure_data": [
+    {
+      "county": "Malheur",
+      "acres": 10365.3,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
+      "county": "Umatilla",
+      "acres": 7092.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
+      "county": "Baker",
+      "acres": 3763.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
+      "county": "Jackson",
+      "acres": 3687.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
+      "county": "Grant",
+      "acres": 3024.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
+      "county": "Wasco",
+      "acres": 2981.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
+      "county": "Deschutes",
+      "acres": 2621.5,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
+      "county": "Harney",
+      "acres": 1094.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
+      "county": "Gilliam",
+      "acres": 890.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
+      "county": "Morrow",
+      "acres": 150,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    }
+  ],
   "historical_data": [
     {
       "date": "2026-01-01",
