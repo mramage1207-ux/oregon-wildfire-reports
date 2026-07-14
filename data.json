@@ -1,21 +1,19 @@
 {
   "last_updated": "2026-07-13",
-  "report_time": "8:36 AM PDT",
+  "report_time": "6:01 PM PDT",
   "active_large_fires": 7,
   "total_large_fire_acres": 34798.8,
   "structures_lost": 0,
-  "evac_triggering_fires": 4,
+  "evac_triggering_fires": 3,
   "evac_zones": {
     "level3": [
       "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
-      "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon",
-      "Salmon \u2014 ~2 miles west of Greenhorn, Oregon"
+      "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon"
     ],
     "level2": [
       "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon",
-      "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon",
-      "Salmon \u2014 ~2 miles west of Greenhorn, Oregon"
+      "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon"
     ],
     "level1": [
       "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
@@ -1288,6 +1286,11 @@
     "2026-07-11_1800": {
       "active_fires": 40,
       "acres_burned": 8830.3,
+      "should_update": true
+    },
+    "2026-07-13_1800": {
+      "active_fires": 46,
+      "acres_burned": 13775.4,
       "should_update": true
     }
   },
