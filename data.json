@@ -1,8 +1,8 @@
 {
   "last_updated": "2026-07-14",
-  "report_time": "6:01 PM PDT",
-  "active_large_fires": 7,
-  "total_large_fire_acres": 34798.8,
+  "report_time": "8:36 AM PDT",
+  "active_large_fires": 6,
+  "total_large_fire_acres": 35667.8,
   "structures_lost": 0,
   "evac_triggering_fires": 3,
   "evac_zones": {
@@ -21,8 +21,8 @@
     ]
   },
   "evac_addresses_l1": 121,
-  "evac_addresses_l2": 192,
-  "evac_addresses_l3": 175,
+  "evac_addresses_l2": 164,
+  "evac_addresses_l3": 203,
   "struct_loss": {
     "date": "2026-07-14",
     "source": "NIFC WFIGS Current Incident Locations",
@@ -850,13 +850,18 @@
       "date": "2026-07-13",
       "active_fires": 42,
       "acres_burned": 13778.47
+    },
+    {
+      "date": "2026-07-14",
+      "active_fires": 46,
+      "acres_burned": 13683.78
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
       "total_fires": 28,
-      "total_acres": 34798.8,
+      "total_acres": 35667.8,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -879,7 +884,7 @@
         {
           "name": "E Evans Creek Rd 18000",
           "county": "Jackson",
-          "acres": 3152.0
+          "acres": 3628.0
         },
         {
           "name": "Butterfield Spring Fire",
@@ -1311,7 +1316,7 @@
       "lon": -123.00183333,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 3152.0
+      "acres": 3628.0
     },
     {
       "name": "Anthony",
@@ -1320,7 +1325,7 @@
       "lon": -118.099469,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 1643.0
+      "acres": 1825.0
     },
     {
       "name": "Olive Butte",
@@ -1329,7 +1334,7 @@
       "lon": -118.449893,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 1642.0
+      "acres": 1720.0
     },
     {
       "name": "Salmon",
@@ -1338,16 +1343,7 @@
       "lon": -118.536644,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 1171.0
-    },
-    {
-      "name": "Hoop",
-      "county": "Harney",
-      "lat": 42.6736,
-      "lon": -118.6947,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 960.0
+      "acres": 1304.0
     },
     {
       "name": "Skull Creek",
@@ -1429,6 +1425,15 @@
       "status": "Contained",
       "triggered_evacuation": false,
       "acres": 999.3
+    },
+    {
+      "name": "Hoop",
+      "county": "Harney",
+      "lat": 42.6736,
+      "lon": -118.6947,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 960.0
     },
     {
       "name": "Cable Creek",
