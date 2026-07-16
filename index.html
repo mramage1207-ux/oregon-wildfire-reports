@@ -68,6 +68,12 @@
     .change-badge.down { background: #C0DD97; color: #173404; }
     .change-badge.flat { background: #e0e0e0; color: #444441; }
     .change-caption { font-size: .62rem; color: rgba(255,255,255,.70); margin-top: 4px; }
+    /* 7D/30D trend toggle — added 2026-07-16 at Matt's request. Default view
+       is always 1D (the existing change-badge above); these tabs are opt-in. */
+    .trend-tabs { display: flex; gap: 6px; margin-top: 7px; justify-content: center; }
+    .trend-tab { font-size: .6rem; font-weight: 700; color: rgba(255,255,255,.4); cursor: pointer; padding: 1px 6px; border-radius: 8px; }
+    .trend-tab:hover { color: rgba(255,255,255,.8); }
+    .trend-tab.active { color: #fff; background: rgba(255,255,255,.16); }
     .hero-actions { margin-left: auto; display: flex; gap: .7rem; flex-direction: column; }
     .btn-primary {
       background: #e67e22; color: #fff; border-radius: 8px;
@@ -1047,17 +1053,77 @@ function render(pdfs, data) {
   // report for Active Large Fires, Active Evac-Triggering Fires, and Level 1/2/3
   // evac addresses. Renders nothing if no prior-morning snapshot exists yet
   // (e.g. the day after this feature ships, before two mornings of data exist).
+  //
+  // Extended same-day (2026-07-16) with a 7D/30D toggle per Matt's follow-up
+  // request. Default displayed range is always 1D — 7D/30D are opt-in via
+  // small tabs, matching Option B of the proposal Matt approved. Selecting
+  // 7D/30D also shows a tiny sparkline of the daily series so the trend's
+  // *shape* is visible, not just the two endpoints.
   const changeData = (data && data.change_vs_prior_morning) || null;
-  function changeBadgeHtml(metric) {
-    if (!changeData || !changeData[metric]) return '';
-    const c = changeData[metric];
-    if (c.delta == null) return '';
+  const change7dData  = (data && data.change_vs_7d_ago)  || null;
+  const change30dData = (data && data.change_vs_30d_ago) || null;
+  const trendHistory  = (data && data.trend_history) || {};
+  const rangeData  = { '1d': changeData, '7d': change7dData, '30d': change30dData };
+  const rangeLabel = { '1d': '1D', '7d': '7D', '30d': '30D' };
+  const rangePriorDate = {
+    '1d':  changeData    ? changeData.prior_date    : null,
+    '7d':  change7dData  ? change7dData.prior_date  : null,
+    '30d': change30dData ? change30dData.prior_date : null,
+  };
+
+  function sparklineSvg(metric, range) {
+    const hist = trendHistory[metric];
+    if (!hist || !hist.values || hist.values.length < 2) return '';
+    const n = range === '7d' ? 7 : 30;
+    const vals = hist.values.slice(-n).filter(v => v != null);
+    if (vals.length < 2) return '';
+    const w = 68, h = 18, pad = 2;
+    const min = Math.min(...vals), max = Math.max(...vals);
+    const span = (max - min) || 1;
+    const step = (w - pad * 2) / (vals.length - 1);
+    const pts = vals.map((v, i) => {
+      const x = pad + i * step;
+      const y = h - pad - ((v - min) / span) * (h - pad * 2);
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    }).join(' ');
+    const trendUp = vals[vals.length - 1] >= vals[0];
+    const stroke = trendUp ? '#F7C1C1' : '#C0DD97';
+    return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" style="display:block;margin:5px auto 0;" aria-hidden="true"><polyline points="${pts}" fill="none" stroke="${stroke}" stroke-width="1.6"/></svg>`;
+  }
+
+  function trendContentHtml(metric, range) {
+    const rd = rangeData[range];
+    const c = rd && rd[metric];
+    if (!c || c.delta == null) {
+      return `<div class="change-caption">No ${rangeLabel[range]} data yet</div>`;
+    }
     const dir = c.delta > 0 ? 'up' : c.delta < 0 ? 'down' : 'flat';
     const arrow = dir === 'up' ? '&#9650;' : dir === 'down' ? '&#9660;' : '&#8722;';
     const sign = c.delta > 0 ? '+' : '';
     const pctStr = c.pct != null ? ` (${sign}${c.pct}%)` : '';
-    return `<div class="change-badge ${dir}">${arrow} ${sign}${c.delta}${pctStr}</div>` +
-           `<div class="change-caption">vs ${c.prior} on ${fmtDate(changeData.prior_date)}</div>`;
+    const badge = `<div class="change-badge ${dir}">${arrow} ${sign}${c.delta}${pctStr}</div>`;
+    const caption = `<div class="change-caption">vs ${c.prior} on ${fmtDate(rangePriorDate[range])}</div>`;
+    const spark = range === '1d' ? '' : sparklineSvg(metric, range);
+    return badge + caption + spark;
+  }
+
+  window.__wfSetTrendRange = function(metric, uid, range) {
+    const content = document.getElementById(`trend-content-${uid}`);
+    if (content) content.innerHTML = trendContentHtml(metric, range);
+    ['1d', '7d', '30d'].forEach(r => {
+      const tab = document.getElementById(`trend-tab-${uid}-${r}`);
+      if (tab) tab.classList.toggle('active', r === range);
+    });
+  };
+
+  function changeBadgeHtml(metric, uid) {
+    const hasAny = (changeData && changeData[metric]) || (change7dData && change7dData[metric]) || (change30dData && change30dData[metric]);
+    if (!hasAny) return '';
+    const tabs = ['1d', '7d', '30d'].map(r =>
+      `<span id="trend-tab-${uid}-${r}" class="trend-tab${r === '1d' ? ' active' : ''}" onclick="window.__wfSetTrendRange('${metric}','${uid}','${r}')">${rangeLabel[r]}</span>`
+    ).join('');
+    return `<div class="trend-tabs">${tabs}</div>` +
+           `<div id="trend-content-${uid}">${trendContentHtml(metric, '1d')}</div>`;
   }
 
   // ── Hero card ──
@@ -1073,7 +1139,7 @@ function render(pdfs, data) {
       <div class="stat-pill">
         <div class="val">${nLargeFires}</div>
         <div class="lbl">Active Large Fires</div>
-        ${changeBadgeHtml('active_large_fires')}
+        ${changeBadgeHtml('active_large_fires', 'alf')}
       </div>
       <div class="stat-pill">
         <div class="val">${fmtAcres(nLargeAcres)}</div>
@@ -1090,7 +1156,7 @@ function render(pdfs, data) {
       <div class="stat-pill">
         <div class="val">${nEvacFires}</div>
         <div class="lbl">Active Evac-Triggering Fires</div>
-        ${changeBadgeHtml('active_evac_fires')}
+        ${changeBadgeHtml('active_evac_fires', 'aef')}
       </div>
     </div>
     <div class="hero-actions">
@@ -1122,9 +1188,9 @@ function render(pdfs, data) {
   const evacL1ChangeEl = document.getElementById('evac-l1-change');
   const evacL2ChangeEl = document.getElementById('evac-l2-change');
   const evacL3ChangeEl = document.getElementById('evac-l3-change');
-  if (evacL1ChangeEl) evacL1ChangeEl.innerHTML = changeBadgeHtml('evac_addresses_l1');
-  if (evacL2ChangeEl) evacL2ChangeEl.innerHTML = changeBadgeHtml('evac_addresses_l2');
-  if (evacL3ChangeEl) evacL3ChangeEl.innerHTML = changeBadgeHtml('evac_addresses_l3');
+  if (evacL1ChangeEl) evacL1ChangeEl.innerHTML = changeBadgeHtml('evac_addresses_l1', 'l1');
+  if (evacL2ChangeEl) evacL2ChangeEl.innerHTML = changeBadgeHtml('evac_addresses_l2', 'l2');
+  if (evacL3ChangeEl) evacL3ChangeEl.innerHTML = changeBadgeHtml('evac_addresses_l3', 'l3');
 
   // ── Structure loss table ──
   const sl = data && data.struct_loss && data.struct_loss.oregon_totals;
