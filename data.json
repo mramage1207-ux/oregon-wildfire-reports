@@ -1,25 +1,30 @@
 {
   "last_updated": "2026-07-16",
-  "report_time": "6:01 PM PDT",
-  "active_large_fires": 7,
-  "total_large_fire_acres": 38528.8,
+  "report_time": "8:36 AM PDT",
+  "active_large_fires": 15,
+  "total_large_fire_acres": 52554.8,
   "structures_lost": 0,
-  "evac_triggering_fires": 2,
+  "evac_triggering_fires": 4,
   "evac_zones": {
     "level3": [
+      "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
       "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon"
     ],
     "level2": [
+      "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
       "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon",
-      "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
+      "Anthony \u2014 ~6 miles west of Hutchinson, Oregon",
+      "0445 CROSSWHITE \u2014 ~4 miles north of Twickenham, Oregon"
     ],
     "level1": [
-      "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
+      "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
+      "Anthony \u2014 ~6 miles west of Hutchinson, Oregon",
+      "0445 CROSSWHITE \u2014 ~4 miles north of Twickenham, Oregon"
     ]
   },
-  "evac_addresses_l1": 25,
-  "evac_addresses_l2": 26,
-  "evac_addresses_l3": 138,
+  "evac_addresses_l1": 2188,
+  "evac_addresses_l2": 883,
+  "evac_addresses_l3": 996,
   "struct_loss": {
     "date": "2026-07-16",
     "source": "NIFC WFIGS Current Incident Locations",
@@ -44,6 +49,13 @@
   },
   "county_structure_data": [
     {
+      "county": "Umatilla",
+      "acres": 12092.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
       "county": "Malheur",
       "acres": 10365.3,
       "res": 0,
@@ -51,29 +63,29 @@
       "other": 0
     },
     {
-      "county": "Umatilla",
-      "acres": 7092.0,
+      "county": "Jackson",
+      "acres": 7902.0,
       "res": 0,
       "comm": 0,
       "other": 0
     },
     {
-      "county": "Jackson",
-      "acres": 5429.0,
+      "county": "Gilliam",
+      "acres": 4390.0,
       "res": 0,
       "comm": 0,
       "other": 0
     },
     {
       "county": "Grant",
-      "acres": 3951.0,
+      "acres": 3980.0,
       "res": 0,
       "comm": 0,
       "other": 0
     },
     {
       "county": "Baker",
-      "acres": 3855.0,
+      "acres": 3877.0,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -81,6 +93,13 @@
     {
       "county": "Wasco",
       "acres": 2981.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
+      "county": "Wheeler",
+      "acres": 2852.0,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -94,14 +113,7 @@
     },
     {
       "county": "Harney",
-      "acres": 1194.0,
-      "res": 0,
-      "comm": 0,
-      "other": 0
-    },
-    {
-      "county": "Gilliam",
-      "acres": 890.0,
+      "acres": 1344.0,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -929,31 +941,41 @@
       "date": "2026-07-15",
       "active_fires": 50,
       "acres_burned": 16455.35
+    },
+    {
+      "date": "2026-07-16",
+      "active_fires": 101,
+      "acres_burned": 30724.81
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 29,
-      "total_acres": 38528.8,
+      "total_fires": 37,
+      "total_acres": 52554.8,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
       "largest_fire": {
-        "name": "LYTLE",
-        "county": "Malheur",
-        "acres": 6052.0
+        "name": "E Evans Creek Rd 18000",
+        "county": "Jackson",
+        "acres": 7843.0
       },
       "notable_fires": [
+        {
+          "name": "E Evans Creek Rd 18000",
+          "county": "Jackson",
+          "acres": 7843.0
+        },
         {
           "name": "LYTLE",
           "county": "Malheur",
           "acres": 6052.0
         },
         {
-          "name": "E Evans Creek Rd 18000",
-          "county": "Jackson",
-          "acres": 5370.0
+          "name": "Lower Dry Creek Mutual Aid",
+          "county": "Umatilla",
+          "acres": 5000.0
         },
         {
           "name": "North Cayuse",
@@ -964,11 +986,6 @@
           "name": "Butterfield Spring Fire",
           "county": "Malheur",
           "acres": 2750.0
-        },
-        {
-          "name": "PINE MOUNTAIN",
-          "county": "Deschutes",
-          "acres": 2589.0
         }
       ]
     },
@@ -1386,7 +1403,16 @@
       "lon": -123.00183333,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 5370.0
+      "acres": 7843.0
+    },
+    {
+      "name": "Lower Dry Creek Mutual Aid",
+      "county": "Umatilla",
+      "lat": 45.89477,
+      "lon": -118.416733,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 5000.0
     },
     {
       "name": "North Cayuse",
@@ -1398,13 +1424,22 @@
       "acres": 4887.0
     },
     {
+      "name": "0460 HOPKIN",
+      "county": "Gilliam",
+      "lat": 45.336333,
+      "lon": -120.24295,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 2500.0
+    },
+    {
       "name": "Olive Butte",
       "county": "Grant",
       "lat": 44.746208,
       "lon": -118.449893,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 2411.0
+      "acres": 2461.0
     },
     {
       "name": "Anthony",
@@ -1413,7 +1448,7 @@
       "lon": -118.099469,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 1917.0
+      "acres": 1939.0
     },
     {
       "name": "Salmon",
@@ -1422,7 +1457,70 @@
       "lon": -118.536644,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 1540.0
+      "acres": 1519.0
+    },
+    {
+      "name": "0445 CROSSWHITE",
+      "county": "Wheeler",
+      "lat": 44.803333,
+      "lon": -120.199167,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 1000.0
+    },
+    {
+      "name": "0449 PORCUPINE RIDGE",
+      "county": "Gilliam",
+      "lat": 45.18894,
+      "lon": -120.350257,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 1000.0
+    },
+    {
+      "name": "0450 COVE CREEK",
+      "county": "Wheeler",
+      "lat": 44.88679,
+      "lon": -120.336253,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 1000.0
+    },
+    {
+      "name": "0444 TWICKINGHAM",
+      "county": "Wheeler",
+      "lat": 44.7585,
+      "lon": -120.179833,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 400.0
+    },
+    {
+      "name": "0442 REDROCK",
+      "county": "Wheeler",
+      "lat": 44.759376,
+      "lon": -120.214254,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 252.0
+    },
+    {
+      "name": "Riddle",
+      "county": "Harney",
+      "lat": 43.055966,
+      "lon": -118.482985,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 250.0
+    },
+    {
+      "name": "0446 CAMEL HUMP",
+      "county": "Wheeler",
+      "lat": 44.761667,
+      "lon": -120.052,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 200.0
     },
     {
       "name": "Skull Creek",
@@ -1432,15 +1530,6 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 134.0
-    },
-    {
-      "name": "Riddle",
-      "county": "Harney",
-      "lat": 43.055966,
-      "lon": -118.482985,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 100.0
     },
     {
       "name": "LYTLE",
