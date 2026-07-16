@@ -1,8 +1,8 @@
 {
   "last_updated": "2026-07-16",
-  "report_time": "11:01 AM PDT",
-  "active_large_fires": 15,
-  "total_large_fire_acres": 52554.8,
+  "report_time": "2:24 PM PDT",
+  "active_large_fires": 17,
+  "total_large_fire_acres": 54154.8,
   "structures_lost": 0,
   "evac_triggering_fires": 4,
   "evac_zones": {
@@ -112,6 +112,13 @@
       "other": 0
     },
     {
+      "county": "Sherman",
+      "acres": 1500.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
       "county": "Harney",
       "acres": 1344.0,
       "res": 0,
@@ -121,6 +128,13 @@
     {
       "county": "Morrow",
       "acres": 150,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
+      "county": "Crook",
+      "acres": 100.0,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -951,8 +965,8 @@
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 37,
-      "total_acres": 52554.8,
+      "total_fires": 39,
+      "total_acres": 54154.8,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -1465,6 +1479,15 @@
       "acres": 1519.0
     },
     {
+      "name": "0480 WILCOX",
+      "county": "Sherman",
+      "lat": 45.119131,
+      "lon": -120.575101,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 1500.0
+    },
+    {
       "name": "0445 CROSSWHITE",
       "county": "Wheeler",
       "lat": 44.803333,
@@ -1535,6 +1558,15 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 134.0
+    },
+    {
+      "name": "0477 PILOT",
+      "county": "Crook",
+      "lat": 44.217428,
+      "lon": -120.641448,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 100.0
     },
     {
       "name": "LYTLE",
