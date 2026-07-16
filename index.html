@@ -706,7 +706,9 @@ function drawMap(fires) {
     let labelEl=null;
     marker.addEventListener('mouseenter',()=>{
       if(labelEl) return;
-      labelEl=drawLabelBox(fx,fy,f.name,fill,hasEvac);
+      const labelFontSize=5.5, boxH=9;
+      const lw=measureTextWidth(f.name,labelFontSize,'bold')+4;
+      labelEl=drawLabelBox(fx+13,fy-1,lw,boxH,f.name,fill,hasEvac);
       svg.appendChild(labelEl);
     });
     marker.addEventListener('mouseleave',()=>{
