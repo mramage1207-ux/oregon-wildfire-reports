@@ -1,28 +1,25 @@
 {
   "last_updated": "2026-07-15",
-  "report_time": "8:36 AM PDT",
-  "active_large_fires": 6,
-  "total_large_fire_acres": 38428.8,
+  "report_time": "6:01 PM PDT",
+  "active_large_fires": 7,
+  "total_large_fire_acres": 38528.8,
   "structures_lost": 0,
-  "evac_triggering_fires": 3,
+  "evac_triggering_fires": 2,
   "evac_zones": {
     "level3": [
-      "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
       "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon"
     ],
     "level2": [
-      "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
       "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
     ],
     "level1": [
-      "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
     ]
   },
-  "evac_addresses_l1": 587,
-  "evac_addresses_l2": 269,
-  "evac_addresses_l3": 166,
+  "evac_addresses_l1": 25,
+  "evac_addresses_l2": 26,
+  "evac_addresses_l3": 138,
   "struct_loss": {
     "date": "2026-07-15",
     "source": "NIFC WFIGS Current Incident Locations",
@@ -97,7 +94,7 @@
     },
     {
       "county": "Harney",
-      "acres": 1094.0,
+      "acres": 1194.0,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -937,8 +934,8 @@
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 28,
-      "total_acres": 38428.8,
+      "total_fires": 29,
+      "total_acres": 38528.8,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -1374,6 +1371,11 @@
       "active_fires": 46,
       "acres_burned": 13775.4,
       "should_update": true
+    },
+    "2026-07-15_1800": {
+      "active_fires": 63,
+      "acres_burned": 16586.9,
+      "should_update": true
     }
   },
   "map_fires": [
@@ -1430,6 +1432,15 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 134.0
+    },
+    {
+      "name": "Riddle",
+      "county": "Harney",
+      "lat": 43.055966,
+      "lon": -118.482985,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 100.0
     },
     {
       "name": "LYTLE",
