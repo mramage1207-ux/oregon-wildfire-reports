@@ -952,9 +952,19 @@ function render(pdfs, data) {
   const nEvacFires    = data && data.evac_triggering_fires   != null ? data.evac_triggering_fires   : '—';
   const evacZones     = (data && data.evac_zones) || {};
 
+  // Added 2026-07-16: prefer data.current_active_fires (written unconditionally by
+  // generate_wildfire_report.py on every single run) over latest.active_fires (reconstructed
+  // by matching the newest PDF's filename suffix against intraday_updates). The reconstruction
+  // silently fell back to a stale historical_data row whenever the newest PDF was a manual
+  // ("_mHHMM" suffix) run, since intraday_updates is only populated for scheduled
+  // "_1100"/"_1400"/"_1800" runs — causing the hero tile to show hours-old numbers next to a
+  // same-day PDF with the correct current count. data.current_active_fires has no such gap.
+  const heroActiveFires = (data && data.current_active_fires != null) ? data.current_active_fires : latest.active_fires;
+  const heroReportTime  = (data && data.current_report_time) ? data.current_report_time : data.report_time;
+
   // ── Hero card ──
-  const reportTimeBadge = data && data.report_time
-    ? `<div class="report-time-badge">Updated at <span class="time-val">${data.report_time}</span></div>`
+  const reportTimeBadge = data && heroReportTime
+    ? `<div class="report-time-badge">Updated at <span class="time-val">${heroReportTime}</span></div>`
     : '';
   document.getElementById('hero-card').innerHTML = `
     <div class="hero-date-block">
@@ -971,7 +981,7 @@ function render(pdfs, data) {
         <div class="lbl">Total Acres YTD<br><span style="font-size:0.75em;opacity:0.8">(Large Fires)</span></div>
       </div>
       <div class="stat-pill">
-        <div class="val">${latest.active_fires}</div>
+        <div class="val">${heroActiveFires}</div>
         <div class="lbl">Active Fires<br><span style="font-size:0.75em;opacity:0.8">WF + RX</span></div>
       </div>
       <div class="stat-pill">
