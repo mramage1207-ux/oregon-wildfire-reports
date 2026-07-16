@@ -1107,20 +1107,29 @@ function render(pdfs, data) {
     return badge + caption + spark;
   }
 
-  window.__wfSetTrendRange = function(metric, uid, range) {
-    const content = document.getElementById(`trend-content-${uid}`);
-    if (content) content.innerHTML = trendContentHtml(metric, range);
-    ['1d', '7d', '30d'].forEach(r => {
-      const tab = document.getElementById(`trend-tab-${uid}-${r}`);
-      if (tab) tab.classList.toggle('active', r === range);
+  // All 5 metric boxes share ONE range selection — clicking 1D/7D/30D on any
+  // box switches every box at once (added 2026-07-16 per Matt's follow-up:
+  // "make the data points ALL switch if a 1D, 7D or 30D selection is made").
+  // __wfTrendTargets is populated as each box's tabs are rendered below, so
+  // this works regardless of which boxes actually end up on the page.
+  window.__wfTrendTargets = window.__wfTrendTargets || [];
+  window.__wfSetTrendRange = function(range) {
+    window.__wfTrendTargets.forEach(({metric, uid}) => {
+      const content = document.getElementById(`trend-content-${uid}`);
+      if (content) content.innerHTML = trendContentHtml(metric, range);
+      ['1d', '7d', '30d'].forEach(r => {
+        const tab = document.getElementById(`trend-tab-${uid}-${r}`);
+        if (tab) tab.classList.toggle('active', r === range);
+      });
     });
   };
 
   function changeBadgeHtml(metric, uid) {
     const hasAny = (changeData && changeData[metric]) || (change7dData && change7dData[metric]) || (change30dData && change30dData[metric]);
     if (!hasAny) return '';
+    window.__wfTrendTargets.push({metric, uid});
     const tabs = ['1d', '7d', '30d'].map(r =>
-      `<span id="trend-tab-${uid}-${r}" class="trend-tab${r === '1d' ? ' active' : ''}" onclick="window.__wfSetTrendRange('${metric}','${uid}','${r}')">${rangeLabel[r]}</span>`
+      `<span id="trend-tab-${uid}-${r}" class="trend-tab${r === '1d' ? ' active' : ''}" onclick="window.__wfSetTrendRange('${r}')">${rangeLabel[r]}</span>`
     ).join('');
     return `<div class="trend-tabs">${tabs}</div>` +
            `<div id="trend-content-${uid}">${trendContentHtml(metric, '1d')}</div>`;
