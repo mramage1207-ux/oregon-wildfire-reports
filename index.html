@@ -645,14 +645,41 @@ function drawMap(fires) {
   // tapping, on touch) reveals the same styled label box on demand instead.
   // Active fires are unchanged — their labels stay always-on since there are
   // far fewer of them and they're the ones that matter at a glance.
-  const drawLabelBox=(fx,fy,name,fill,hasEvac)=>{
+  const drawLabelBox=(boxX,boxY,lw,boxH,name,fill,hasEvac)=>{
     const labelFontSize=5.5;
-    const lw=measureTextWidth(name, labelFontSize, 'bold')+4;
     const labelBg=hasEvac?'#FFE3BC':'white';
-    const boxX=fx+13, boxY=fy-1, boxH=9;
     const g=el('g',{});
     g.appendChild(el('rect',{x:boxX,y:boxY,width:lw,height:boxH,fill:labelBg,stroke:fill,'stroke-width':'0.5'}));
     g.appendChild(el('text',{x:boxX+lw/2,y:boxY+boxH/2,'text-anchor':'middle','dominant-baseline':'central','font-size':labelFontSize,'font-weight':'bold','font-family':'Arial, sans-serif',fill},name));
+    return g;
+  };
+  // Greedy collision-avoidance for always-on active-fire labels — added
+  // 2026-07-16. Dense lightning-bust clusters (e.g. 8 small fires within
+  // ~30px of each other near the Wheeler/Gilliam county line) were placing
+  // every label at a fixed fx+13 offset, so their boxes piled on top of each
+  // other and names became unreadable. Each new label now checks against
+  // every already-placed active-fire label box and, on overlap, is pushed
+  // down (and slightly right per step, so a tall stack doesn't look like a
+  // single vertical bar) until it finds a free spot. A thin leader line
+  // connects each label back to its actual marker so a stacked label a few
+  // rows down doesn't look orphaned from its fire.
+  const placedLabelBoxes=[];
+  const boxesOverlap=(a,b)=>!(a.x+a.w<b.x-1||b.x+b.w<a.x-1||a.y+a.h<b.y-1||b.y+b.h<a.y-1);
+  const placeActiveLabel=(fx,fy,name,fill,hasEvac)=>{
+    const labelFontSize=5.5, boxH=9;
+    const lw=measureTextWidth(name,labelFontSize,'bold')+4;
+    let boxX=fx+13, boxY=fy-1, tries=0;
+    while(tries<40 && placedLabelBoxes.some(b=>boxesOverlap({x:boxX,y:boxY,w:lw,h:boxH},b))){
+      boxY+=boxH+1.5;
+      if(tries%2===1) boxX+=1;
+      tries++;
+    }
+    placedLabelBoxes.push({x:boxX,y:boxY,w:lw,h:boxH});
+    const g=el('g',{});
+    if(Math.abs(boxY-(fy-1))>0.5||Math.abs(boxX-(fx+13))>0.5){
+      g.appendChild(el('line',{x1:fx+4.5,y1:fy,x2:boxX,y2:boxY+boxH/2,stroke:fill,'stroke-width':'0.4','stroke-dasharray':'1.5,1'}));
+    }
+    g.appendChild(drawLabelBox(boxX,boxY,lw,boxH,name,fill,hasEvac));
     return g;
   };
   const drawFireMarker=f=>{
@@ -669,7 +696,7 @@ function drawMap(fires) {
     }
     svg.appendChild(marker);
     if(isActive){
-      svg.appendChild(drawLabelBox(fx,fy,f.name,fill,hasEvac));
+      svg.appendChild(placeActiveLabel(fx,fy,f.name,fill,hasEvac));
       return;
     }
     // Contained fire: hover/tap-to-reveal label, wider invisible hit target
