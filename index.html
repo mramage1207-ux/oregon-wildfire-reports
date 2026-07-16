@@ -638,7 +638,23 @@ function drawMap(fires) {
   // County centroids (lat/lon fallback when fire has no coordinates)
   const CC={"Morrow":[-119.60,45.40],"Deschutes":[-121.20,43.90],"Jackson":[-122.70,42.50],"Klamath":[-121.50,42.60],"Lane":[-122.80,43.90],"Douglas":[-123.10,43.20],"Marion":[-122.90,44.90],"Clackamas":[-122.20,45.10],"Multnomah":[-122.50,45.55],"Jefferson":[-121.10,44.60],"Wasco":[-121.00,45.30],"Crook":[-120.50,44.30],"Harney":[-118.90,43.00],"Lake":[-120.30,42.70],"Grant":[-118.90,44.50],"Union":[-117.90,45.30],"Wallowa":[-117.30,45.60],"Baker":[-117.60,44.80],"Malheur":[-117.70,43.40],"Umatilla":[-118.70,45.60],"Gilliam":[-120.00,45.40],"Wheeler":[-120.00,44.70],"Sherman":[-120.70,45.40],"Hood River":[-121.60,45.50],"Columbia":[-123.20,46.00],"Washington":[-123.00,45.50],"Yamhill":[-123.30,45.30],"Polk":[-123.40,44.90],"Lincoln":[-124.00,44.60],"Tillamook":[-123.80,45.45],"Clatsop":[-123.80,46.10],"Benton":[-123.40,44.50],"Linn":[-122.50,44.50],"Coos":[-124.10,43.20],"Curry":[-124.20,42.50]};
 
-  // Fire markers — two passes so active fires render on top of contained fires
+  // Fire markers — two passes so active fires render on top of contained fires.
+  // Added 2026-07-16 at Matt's request: the map was getting cluttered with name
+  // labels on every contained fire. Contained fires now keep their marker dot
+  // and "E" evac indicator but lose the always-on label box; hovering (or
+  // tapping, on touch) reveals the same styled label box on demand instead.
+  // Active fires are unchanged — their labels stay always-on since there are
+  // far fewer of them and they're the ones that matter at a glance.
+  const drawLabelBox=(fx,fy,name,fill,hasEvac)=>{
+    const labelFontSize=5.5;
+    const lw=measureTextWidth(name, labelFontSize, 'bold')+4;
+    const labelBg=hasEvac?'#FFE3BC':'white';
+    const boxX=fx+13, boxY=fy-1, boxH=9;
+    const g=el('g',{});
+    g.appendChild(el('rect',{x:boxX,y:boxY,width:lw,height:boxH,fill:labelBg,stroke:fill,'stroke-width':'0.5'}));
+    g.appendChild(el('text',{x:boxX+lw/2,y:boxY+boxH/2,'text-anchor':'middle','dominant-baseline':'central','font-size':labelFontSize,'font-weight':'bold','font-family':'Arial, sans-serif',fill},name));
+    return g;
+  };
   const drawFireMarker=f=>{
     let lon=f.lon, lat=f.lat;
     if((!lon||!lat)&&CC[f.county]) [lon,lat]=CC[f.county];
@@ -646,16 +662,30 @@ function drawMap(fires) {
     const [fx,fy]=proj(lon,lat);
     const isActive=f.status==='Active', hasEvac=f.triggered_evacuation;
     const fill=isActive?'#CC2200':'#228B22';
-    svg.appendChild(el('circle',{cx:fx,cy:fy,r:'4.5',fill,stroke:'white','stroke-width':'0.8'}));
+    const marker=el('g',{});
+    marker.appendChild(el('circle',{cx:fx,cy:fy,r:'4.5',fill,stroke:'white','stroke-width':'0.8'}));
     if(hasEvac){
-      svg.appendChild(el('text',{x:fx,y:fy+1.9,'text-anchor':'middle','font-size':'5.8','font-weight':'bold',fill:'white'},'E'));
+      marker.appendChild(el('text',{x:fx,y:fy+1.9,'text-anchor':'middle','font-size':'5.8','font-weight':'bold',fill:'white'},'E'));
     }
-    const labelFontSize=5.5;
-    const lw=measureTextWidth(f.name, labelFontSize, 'bold')+4;
-    const labelBg=hasEvac?'#FFE3BC':'white';
-    const boxX=fx+13, boxY=fy-1, boxH=9;
-    svg.appendChild(el('rect',{x:boxX,y:boxY,width:lw,height:boxH,fill:labelBg,stroke:fill,'stroke-width':'0.5'}));
-    svg.appendChild(el('text',{x:boxX+lw/2,y:boxY+boxH/2,'text-anchor':'middle','dominant-baseline':'central','font-size':labelFontSize,'font-weight':'bold','font-family':'Arial, sans-serif',fill},f.name));
+    svg.appendChild(marker);
+    if(isActive){
+      svg.appendChild(drawLabelBox(fx,fy,f.name,fill,hasEvac));
+      return;
+    }
+    // Contained fire: hover/tap-to-reveal label, wider invisible hit target
+    // so the label is easy to trigger without pinpointing the small dot.
+    const hit=el('circle',{cx:fx,cy:fy,r:'8',fill:'transparent'});
+    hit.style.cursor='pointer';
+    marker.appendChild(hit);
+    let labelEl=null;
+    marker.addEventListener('mouseenter',()=>{
+      if(labelEl) return;
+      labelEl=drawLabelBox(fx,fy,f.name,fill,hasEvac);
+      svg.appendChild(labelEl);
+    });
+    marker.addEventListener('mouseleave',()=>{
+      if(labelEl){ labelEl.remove(); labelEl=null; }
+    });
   };
   // Pass 1: contained fires (underneath)
   fires.filter(f=>f.status!=='Active').forEach(drawFireMarker);
