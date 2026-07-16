@@ -671,7 +671,6 @@ function drawMap(fires) {
     let boxX=fx+13, boxY=fy-1, tries=0;
     while(tries<40 && placedLabelBoxes.some(b=>boxesOverlap({x:boxX,y:boxY,w:lw,h:boxH},b))){
       boxY+=boxH+1.5;
-      if(tries%2===1) boxX+=1;
       tries++;
     }
     placedLabelBoxes.push({x:boxX,y:boxY,w:lw,h:boxH});
@@ -716,8 +715,23 @@ function drawMap(fires) {
   };
   // Pass 1: contained fires (underneath)
   fires.filter(f=>f.status!=='Active').forEach(drawFireMarker);
-  // Pass 2: active fires (on top)
-  fires.filter(f=>f.status==='Active').forEach(drawFireMarker);
+  // Pass 2: active fires (on top). Sorted top-to-bottom by projected map
+  // position (fixed 2026-07-16) — the label collision-avoidance above stacks
+  // overlapping labels vertically as it goes, so if fires were drawn in raw
+  // data order (which has no relation to their screen position), a cluster's
+  // labels landed in a scrambled order with leader lines crossing each other.
+  // Processing top-to-bottom makes each new stacked label fall in naturally
+  // below the ones already placed near it, so lines fan out cleanly instead
+  // of crisscrossing.
+  const activeWithPos=fires.filter(f=>f.status==='Active').map(f=>{
+    let lon=f.lon, lat=f.lat;
+    if((!lon||!lat)&&CC[f.county]) [lon,lat]=CC[f.county];
+    if(!lon||!lat) return {f,fy:1e9,fx:1e9};
+    const [fx,fy]=proj(lon,lat);
+    return {f,fx,fy};
+  });
+  activeWithPos.sort((a,b)=>a.fy-b.fy||a.fx-b.fx);
+  activeWithPos.forEach(({f})=>drawFireMarker(f));
 
   // Legend panel (left strip)
   const lx=5, ly=Math.round(H/2)-46;
