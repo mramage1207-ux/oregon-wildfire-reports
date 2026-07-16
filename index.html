@@ -63,6 +63,11 @@
     }
     .stat-pill .val { font-size: 1.5rem; font-weight: 700; line-height: 1; }
     .stat-pill .lbl { font-size: .68rem; opacity: .65; margin-top: 3px; text-transform: uppercase; letter-spacing: .4px; }
+    .change-badge { display: inline-flex; align-items: center; gap: 3px; border-radius: 20px; padding: .15rem .55rem; font-size: .72rem; font-weight: 700; margin-top: 8px; }
+    .change-badge.up { background: #F7C1C1; color: #791F1F; }
+    .change-badge.down { background: #C0DD97; color: #173404; }
+    .change-badge.flat { background: #e0e0e0; color: #444441; }
+    .change-caption { font-size: .62rem; opacity: .45; margin-top: 4px; }
     .hero-actions { margin-left: auto; display: flex; gap: .7rem; flex-direction: column; }
     .btn-primary {
       background: #e67e22; color: #fff; border-radius: 8px;
@@ -396,14 +401,17 @@
         <div class="evac-box level1">
           <div class="evac-level">Level 1 &mdash; Be Ready</div>
           <div class="evac-count" id="evac-l1">0</div>
+          <div id="evac-l1-change"></div>
         </div>
         <div class="evac-box level2">
           <div class="evac-level">Level 2 &mdash; Be Set</div>
           <div class="evac-count" id="evac-l2">0</div>
+          <div id="evac-l2-change"></div>
         </div>
         <div class="evac-box level3">
           <div class="evac-level">Level 3 &mdash; Go Now</div>
           <div class="evac-count" id="evac-l3">0</div>
+          <div id="evac-l3-change"></div>
         </div>
       </div>
     </div>
@@ -962,6 +970,23 @@ function render(pdfs, data) {
   const heroActiveFires = (data && data.current_active_fires != null) ? data.current_active_fires : latest.active_fires;
   const heroReportTime  = (data && data.current_report_time) ? data.current_report_time : data.report_time;
 
+  // Added 2026-07-16 at Matt's request: change badges vs the prior day's MORNING
+  // report for Active Large Fires, Active Evac-Triggering Fires, and Level 1/2/3
+  // evac addresses. Renders nothing if no prior-morning snapshot exists yet
+  // (e.g. the day after this feature ships, before two mornings of data exist).
+  const changeData = (data && data.change_vs_prior_morning) || null;
+  function changeBadgeHtml(metric) {
+    if (!changeData || !changeData[metric]) return '';
+    const c = changeData[metric];
+    if (c.delta == null) return '';
+    const dir = c.delta > 0 ? 'up' : c.delta < 0 ? 'down' : 'flat';
+    const arrow = dir === 'up' ? '&#9650;' : dir === 'down' ? '&#9660;' : '&#8722;';
+    const sign = c.delta > 0 ? '+' : '';
+    const pctStr = c.pct != null ? ` (${sign}${c.pct}%)` : '';
+    return `<div class="change-badge ${dir}">${arrow} ${sign}${c.delta}${pctStr}</div>` +
+           `<div class="change-caption">vs ${c.prior} on ${fmtDate(changeData.prior_date)}</div>`;
+  }
+
   // ── Hero card ──
   const reportTimeBadge = data && heroReportTime
     ? `<div class="report-time-badge">Updated at <span class="time-val">${heroReportTime}</span></div>`
@@ -975,6 +1000,7 @@ function render(pdfs, data) {
       <div class="stat-pill">
         <div class="val">${nLargeFires}</div>
         <div class="lbl">Active Large Fires</div>
+        ${changeBadgeHtml('active_large_fires')}
       </div>
       <div class="stat-pill">
         <div class="val">${fmtAcres(nLargeAcres)}</div>
@@ -991,6 +1017,7 @@ function render(pdfs, data) {
       <div class="stat-pill">
         <div class="val">${nEvacFires}</div>
         <div class="lbl">Active Evac-Triggering Fires</div>
+        ${changeBadgeHtml('active_evac_fires')}
       </div>
     </div>
     <div class="hero-actions">
@@ -1019,6 +1046,12 @@ function render(pdfs, data) {
   setEvacCount('evac-l1', evacAddrL1, evacZones.level1);
   setEvacCount('evac-l2', evacAddrL2, evacZones.level2);
   setEvacCount('evac-l3', evacAddrL3, evacZones.level3);
+  const evacL1ChangeEl = document.getElementById('evac-l1-change');
+  const evacL2ChangeEl = document.getElementById('evac-l2-change');
+  const evacL3ChangeEl = document.getElementById('evac-l3-change');
+  if (evacL1ChangeEl) evacL1ChangeEl.innerHTML = changeBadgeHtml('evac_addresses_l1');
+  if (evacL2ChangeEl) evacL2ChangeEl.innerHTML = changeBadgeHtml('evac_addresses_l2');
+  if (evacL3ChangeEl) evacL3ChangeEl.innerHTML = changeBadgeHtml('evac_addresses_l3');
 
   // ── Structure loss table ──
   const sl = data && data.struct_loss && data.struct_loss.oregon_totals;

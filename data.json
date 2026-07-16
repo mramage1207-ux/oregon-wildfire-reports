@@ -1,9 +1,42 @@
 {
   "last_updated": "2026-07-16",
-  "report_time": "2:58 PM PDT",
+  "report_time": "3:45 PM PDT",
   "current_active_fires": 110,
   "current_acres_burned": 32319.68,
-  "current_report_time": "2:58 PM PDT",
+  "current_report_time": "3:45 PM PDT",
+  "change_vs_prior_morning": {
+    "prior_date": "2026-07-15",
+    "active_large_fires": {
+      "current": 17,
+      "prior": 6,
+      "delta": 11,
+      "pct": 183.3
+    },
+    "active_evac_fires": {
+      "current": 4,
+      "prior": 3,
+      "delta": 1,
+      "pct": 33.3
+    },
+    "evac_addresses_l1": {
+      "current": 2176,
+      "prior": 587,
+      "delta": 1589,
+      "pct": 270.7
+    },
+    "evac_addresses_l2": {
+      "current": 949,
+      "prior": 269,
+      "delta": 680,
+      "pct": 252.8
+    },
+    "evac_addresses_l3": {
+      "current": 942,
+      "prior": 166,
+      "delta": 776,
+      "pct": 467.5
+    }
+  },
   "active_large_fires": 17,
   "total_large_fire_acres": 54154.8,
   "structures_lost": 0,
