@@ -608,6 +608,16 @@ function toggleMonth(btn) {
     localStorage.setItem(KEY, visible);
     applyState();
   };
+
+  // Bug fixed 2026-07-16: this whole IIFE runs at script-parse time, BEFORE
+  // render() has fetched data.json and built the archive table — so this
+  // first applyState() call above operates on an empty DOM (no .intraday-row
+  // or .date-cell elements exist yet) and does nothing. Every date-cell kept
+  // its full original rowSpan while its intraday sub-rows sat CSS-hidden,
+  // which visually stretched each date label down over unrelated rows below
+  // it — this is the "listing is f'd up" bug Matt reported. Exposing
+  // applyState so render() can re-run it once the real rows exist fixes it.
+  window.__wfApplyIntradayState = applyState;
 })();
 
 // ── UTILITIES ────────────────────────────────────────────────────────────────
@@ -1395,6 +1405,10 @@ function render(pdfs, data) {
         </div>
       </div>`;
   }).join('');
+
+  // Re-run the intraday-toggle rowspan fix-up now that the archive table
+  // actually exists in the DOM (see the bug note in initIntradayToggle above).
+  if (window.__wfApplyIntradayState) window.__wfApplyIntradayState();
 
   // ── Map ──
   if (data && data.map_fires) drawMap(data.map_fires);
