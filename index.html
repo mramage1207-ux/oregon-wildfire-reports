@@ -1217,8 +1217,8 @@ function render(pdfs, data) {
     const arrow = dir === 'up' ? '&#9650;' : dir === 'down' ? '&#9660;' : '&#8722;';
     const sign = c.delta > 0 ? '+' : '';
     const pctStr = c.pct != null ? ` (${sign}${c.pct}%)` : '';
-    const badge = `<div class="change-badge ${dir}">${arrow} ${sign}${c.delta}${pctStr}</div>`;
-    const caption = `<div class="change-caption">vs ${c.prior} on ${fmtDate(rangePriorDate[range])}</div>`;
+    const badge = `<div class="change-badge ${dir}">${arrow} ${sign}${Number(c.delta).toLocaleString()}${pctStr}</div>`;
+    const caption = `<div class="change-caption">vs ${Number(c.prior).toLocaleString()} on ${fmtDate(rangePriorDate[range])}</div>`;
     const spark = range === '1d' ? '' : sparklineSvg(metric, range);
     return badge + caption + spark;
   }
@@ -1269,14 +1269,17 @@ function render(pdfs, data) {
       <div class="stat-pill">
         <div class="val">${fmtAcres(nLargeAcres)}</div>
         <div class="lbl">Total Acres YTD<br><span style="font-size:0.75em;opacity:0.8">(Large Fires)</span></div>
+        ${changeBadgeHtml('total_acres_ytd', 'tay')}
       </div>
       <div class="stat-pill">
         <div class="val">${heroActiveFires}</div>
         <div class="lbl">Active Fires<br><span style="font-size:0.75em;opacity:0.8">WF + RX</span></div>
+        ${changeBadgeHtml('active_fires', 'af')}
       </div>
       <div class="stat-pill">
         <div class="val">${nStructLost}</div>
         <div class="lbl">Structures Lost</div>
+        ${changeBadgeHtml('structures_lost', 'stl')}
       </div>
       <div class="stat-pill">
         <div class="val">${nEvacFires}</div>
