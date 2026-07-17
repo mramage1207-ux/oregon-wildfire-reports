@@ -196,6 +196,8 @@
     /* ── archive table ── */
     .section-header { display: flex; align-items: center; gap: .8rem; margin-bottom: .8rem; }
     .section-header h2 { font-size: 1rem; font-weight: 700; color: #1a2744; }
+    /* Intraday rows hidden by default; JS toggle + localStorage controls visibility */
+    tr.intraday-row { display: none; }
     .pill-count {
       background: #b85c00; color: #fff; border-radius: 20px;
       padding: .15rem .6rem; font-size: .72rem; font-weight: 700;
@@ -494,6 +496,7 @@
   <div class="section-header">
     <h2>Report Archive</h2>
     <span class="pill-count" id="pdf-count">&#8230;</span>
+    <button id="intraday-toggle" onclick="toggleIntraday()" style="margin-left:auto;font-size:.72rem;padding:.2rem .65rem;border-radius:20px;border:1px solid #b85c00;background:transparent;color:#b85c00;cursor:pointer;font-weight:600;">Show intraday updates</button>
   </div>
   <div id="error-area"></div>
   <div id="archive-container">
@@ -545,10 +548,8 @@ const API_URL   = 'https://api.github.com/repos/' + REPO + '/contents/';
 const DATA_URL  = 'data.json';   // relative: served from same GitHub Pages origin
 const PDF_RE    = /^oregon_wildfire_report_(\d{4}-\d{2}-\d{2})(?:_(m?\d{4}))?\.pdf$/;
 // Suffix conventions:
-//   (none)   → Morning Report (scheduled 7:40 AM run)
-//   _1100    → 11:00 AM Intraday Update
-//   _1400    → 2:00 PM Intraday Update
-//   _1800    → 6:00 PM Intraday Update
+//   (none)   → Morning Report (scheduled 8:10 AM run)
+//   _1600    → 4:00 PM Intraday Update
 //   _mHHMM  → Manual Report (on-demand run, HHMM = Pacific time)
 
 // ── ACCORDION ────────────────────────────────────────────────────────────────
@@ -564,6 +565,51 @@ function toggleMonth(btn) {
     btn.closest('.month-section').classList.add('month-current');
   }
 }
+
+// ── INTRADAY TOGGLE ──────────────────────────────────────────────────────────
+(function initIntradayToggle() {
+  // Default: hidden. Persisted in localStorage under key 'showIntraday'.
+  const KEY = 'showIntraday';
+  const btn = document.getElementById('intraday-toggle');
+  let visible = localStorage.getItem(KEY) === 'true'; // default false
+
+  function applyState() {
+    const rows = document.querySelectorAll('tr.intraday-row');
+    rows.forEach(r => { r.style.display = visible ? '' : 'none'; });
+
+    // Adjust rowspan on date cells so hidden rows don't leave gaps.
+    document.querySelectorAll('td.date-cell[data-rowspan]').forEach(cell => {
+      const full = parseInt(cell.getAttribute('data-rowspan'), 10);
+      if (visible) {
+        cell.rowSpan = full;
+      } else {
+        // Count only the non-intraday sibling rows in this date group.
+        // The date cell's own row is always a morning row (rowspan anchor),
+        // so we start at 1 and add 1 for each non-intraday sibling.
+        let visibleCount = 1;
+        let sibling = cell.closest('tr').nextElementSibling;
+        for (let i = 1; i < full; i++) {
+          if (sibling && !sibling.classList.contains('intraday-row')) {
+            visibleCount++;
+          }
+          sibling = sibling ? sibling.nextElementSibling : null;
+        }
+        cell.rowSpan = visibleCount;
+      }
+    });
+
+    if (btn) btn.textContent = visible ? 'Hide intraday updates' : 'Show intraday updates';
+  }
+
+  // Apply immediately on page load (rows start display:none via CSS).
+  applyState();
+
+  window.toggleIntraday = function() {
+    visible = !visible;
+    localStorage.setItem(KEY, visible);
+    applyState();
+  };
+})();
 
 // ── UTILITIES ────────────────────────────────────────────────────────────────
 function fmtDate(iso) {
@@ -1260,7 +1306,7 @@ function render(pdfs, data) {
 
     // Format a time_suffix into a human label.
     // _mHHMM → "Manual Report (H:MM AM/PM PDT)"
-    // _1400  → "2:00 PM Update"  etc.
+    // _1600  → "4:00 PM Update"  etc.
     function fmtSuffix(sfx) {
       if (!sfx) return 'Morning Report';
       if (sfx.startsWith('m')) {
@@ -1271,7 +1317,7 @@ function render(pdfs, data) {
         const h12 = h > 12 ? h - 12 : (h === 0 ? 12 : h);
         return `Manual Report (${h12}:${mi} ${ampm} PDT)`;
       }
-      const INTRADAY = { '1100': '11:00 AM Update', '1400': '2:00 PM Update', '1800': '6:00 PM Update' };
+      const INTRADAY = { '1100': '11:00 AM Update', '1400': '2:00 PM Update', '1600': '4:00 PM Update', '1800': '6:00 PM Update' };
       return INTRADAY[sfx] || sfx;
     }
 
@@ -1289,16 +1335,21 @@ function render(pdfs, data) {
       if (!allReports.length) return '';
 
       const rowCount = allReports.length;
+      // Count morning rows (idx 0 if it's the morning report, otherwise 0)
+      // Track how many non-intraday rows exist for rowspan adjustment
+      const morningCount = morning ? 1 : 0;
       const rows = allReports.map((item, idx) => {
         const { rep, label } = item;
+        const isIntraday = idx >= morningCount; // non-morning reports
         const fvRaw = (rep.active_fires != null && rep.active_fires !== '—') ? rep.active_fires : '';
         const fv = fvRaw !== '' ? `${fvRaw}<div style="font-size:0.7em;font-weight:400;opacity:0.7;line-height:1.2">WF + RX</div>` : '';
         const av = (rep.acres_burned != null && rep.acres_burned !== '—') ? fmtAcres(rep.acres_burned) : '';
+        const intradayAttr = isIntraday ? ' data-intraday="true"' : '';
         if (idx === 0) {
           // First row: date cell with rowspan covering all sub-rows
           return `
-          <tr${markLatest ? ' class="latest"' : ''}>
-            <td class="date-cell" rowspan="${rowCount}">
+          <tr${markLatest ? ' class="latest"' : ''}${intradayAttr}>
+            <td class="date-cell" rowspan="${rowCount}" data-rowspan="${rowCount}">
               ${fmtDate(dateIso)}${markLatest ? ' <span class="badge-new">Latest</span>' : ''}<br>
               <span class="iso">${dateIso}</span>
             </td>
@@ -1308,9 +1359,10 @@ function render(pdfs, data) {
           </tr>`;
         } else {
           // Subsequent rows: no date cell (covered by rowspan above)
-          const subClass = markLatest ? ' class="sub-row latest"' : ' class="sub-row"';
+          const baseClass = (markLatest && !isIntraday) ? 'sub-row latest' : 'sub-row';
+          const rowClass = isIntraday ? baseClass + ' intraday-row' : baseClass;
           return `
-          <tr${subClass}>
+          <tr class="${rowClass}"${intradayAttr}>
             <td class="fires-val">${fv}</td>
             <td class="acres-val">${av}</td>
             <td><span class="report-lbl" aria-hidden="true">${label}</span><a class="action-link" href="${rep.filename}" target="_blank" aria-label="View ${label} report for ${dateIso} (opens in new tab)">&#128196; View</a> <a class="action-link dl" href="${rep.filename}" download aria-label="Download ${label} PDF for ${dateIso}">&#8595; Download</a></td>
