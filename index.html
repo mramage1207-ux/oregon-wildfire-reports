@@ -574,7 +574,12 @@ function toggleMonth(btn) {
 
   function applyState() {
     const rows = document.querySelectorAll('tr.intraday-row');
-    rows.forEach(r => { r.style.display = visible ? '' : 'none'; });
+    // Bug fixed 2026-07-16: setting style.display = '' does NOT show the row —
+    // it just removes the inline override, so the CSS rule that hides
+    // intraday rows by default (needed so they start hidden before this
+    // script runs) takes back over and the row stays hidden even when
+    // visible=true. Must set an explicit non-empty display value to show.
+    rows.forEach(r => { r.style.display = visible ? 'table-row' : 'none'; });
 
     // Adjust rowspan on date cells so hidden rows don't leave gaps.
     document.querySelectorAll('td.date-cell[data-rowspan]').forEach(cell => {
