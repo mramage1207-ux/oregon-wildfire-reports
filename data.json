@@ -1,73 +1,73 @@
 {
   "last_updated": "2026-07-17",
-  "report_time": "6:02 PM PDT",
-  "current_active_fires": 129,
-  "current_acres_burned": 36957.67,
-  "current_report_time": "6:02 PM PDT",
+  "report_time": "8:26 AM PDT",
+  "current_active_fires": 139,
+  "current_acres_burned": 74119.51,
+  "current_report_time": "8:26 AM PDT",
   "change_vs_prior_morning": null,
   "change_vs_7d_ago": {
     "prior_date": "2026-07-10",
     "active_large_fires": {
-      "current": 19,
+      "current": 31,
       "prior": 5,
-      "delta": 14,
-      "pct": 280.0
+      "delta": 26,
+      "pct": 520.0
     },
     "active_evac_fires": {
-      "current": 5,
+      "current": 9,
       "prior": 2,
-      "delta": 3,
-      "pct": 150.0
+      "delta": 7,
+      "pct": 350.0
     },
     "evac_addresses_l1": {
-      "current": 2174,
+      "current": 2187,
       "prior": 154,
-      "delta": 2020,
-      "pct": 1311.7
+      "delta": 2033,
+      "pct": 1320.1
     },
     "evac_addresses_l2": {
-      "current": 996,
+      "current": 1512,
       "prior": 112,
-      "delta": 884,
-      "pct": 789.3
+      "delta": 1400,
+      "pct": 1250.0
     },
     "evac_addresses_l3": {
-      "current": 1150,
+      "current": 825,
       "prior": 20,
-      "delta": 1130,
-      "pct": 5650.0
+      "delta": 805,
+      "pct": 4025.0
     }
   },
   "change_vs_30d_ago": {
     "prior_date": "2026-06-17",
     "active_large_fires": {
-      "current": 19,
+      "current": 31,
       "prior": 2,
-      "delta": 17,
-      "pct": 850.0
+      "delta": 29,
+      "pct": 1450.0
     },
     "active_evac_fires": {
-      "current": 5,
+      "current": 9,
       "prior": 1,
-      "delta": 4,
-      "pct": 400.0
+      "delta": 8,
+      "pct": 800.0
     },
     "evac_addresses_l1": {
-      "current": 2174,
+      "current": 2187,
       "prior": 640,
-      "delta": 1534,
-      "pct": 239.7
+      "delta": 1547,
+      "pct": 241.7
     },
     "evac_addresses_l2": {
-      "current": 996,
+      "current": 1512,
       "prior": 0,
-      "delta": 996,
+      "delta": 1512,
       "pct": null
     },
     "evac_addresses_l3": {
-      "current": 1150,
+      "current": 825,
       "prior": 0,
-      "delta": 1150,
+      "delta": 825,
       "pct": null
     }
   },
@@ -133,7 +133,7 @@
         7,
         6,
         6,
-        19
+        31
       ]
     },
     "active_evac_fires": {
@@ -197,7 +197,7 @@
         4,
         3,
         3,
-        5
+        9
       ]
     },
     "evac_addresses_l1": {
@@ -261,7 +261,7 @@
         121,
         121,
         587,
-        2174
+        2187
       ]
     },
     "evac_addresses_l2": {
@@ -325,7 +325,7 @@
         192,
         164,
         269,
-        996
+        1512
       ]
     },
     "evac_addresses_l3": {
@@ -389,41 +389,49 @@
         175,
         203,
         166,
-        1150
+        825
       ]
     }
   },
   "exec_summary": {
     "status": "elevated",
-    "headline": "Over the past 7 days, the number of Level 3 (Go Now) evacuation addresses is up more than 58x (20 \u2192 1,150).",
+    "headline": "Over the past 7 days, the number of Level 3 (Go Now) evacuation addresses is up more than 41x (20 \u2192 825).",
     "escalation": null,
     "closing": "No structures destroyed or injuries reported as of this report. Full details, county-by-county, are in the sections below."
   },
-  "active_large_fires": 19,
-  "total_large_fire_acres": 58454.9,
+  "active_large_fires": 31,
+  "total_large_fire_acres": 95686.8,
   "structures_lost": 0,
-  "evac_triggering_fires": 5,
+  "evac_triggering_fires": 9,
   "evac_zones": {
     "level3": [
       "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
+      "Lower Dry Creek Mutual Aid \u2014 ~3 miles southwest of Milton-Freewater, Oregon",
+      "0485 \u2014 ~7 miles west of Antelope, Oregon",
       "0445 CROSSWHITE \u2014 ~4 miles north of Twickenham, Oregon",
+      "0449 PORCUPINE RIDGE \u2014 ~9 miles west of Condon, Oregon",
       "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon"
     ],
     "level2": [
       "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
+      "Lower Dry Creek Mutual Aid \u2014 ~3 miles southwest of Milton-Freewater, Oregon",
+      "0485 \u2014 ~7 miles west of Antelope, Oregon",
       "0445 CROSSWHITE \u2014 ~4 miles north of Twickenham, Oregon",
+      "0494 AKAWA BUTTE \u2014 ~10 miles east of Camp Sherman, Oregon",
       "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon",
-      "Anthony \u2014 ~6 miles west of Hutchinson, Oregon",
-      "0494 AKAWA BUTTE \u2014 ~10 miles east of Camp Sherman, Oregon"
+      "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
     ],
     "level1": [
       "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
+      "BREWER \u2014 ~11 miles east of Madras, Oregon",
+      "0449 PORCUPINE RIDGE \u2014 ~9 miles west of Condon, Oregon",
+      "0494 AKAWA BUTTE \u2014 ~10 miles east of Camp Sherman, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
     ]
   },
-  "evac_addresses_l1": 2174,
-  "evac_addresses_l2": 996,
-  "evac_addresses_l3": 1150,
+  "evac_addresses_l1": 2187,
+  "evac_addresses_l2": 1512,
+  "evac_addresses_l3": 825,
   "struct_loss": {
     "date": "2026-07-17",
     "source": "NIFC WFIGS Current Incident Locations",
@@ -448,8 +456,22 @@
   },
   "county_structure_data": [
     {
+      "county": "Gilliam",
+      "acres": 17390.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
       "county": "Umatilla",
-      "acres": 12092.0,
+      "acres": 14095.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
+      "county": "Jackson",
+      "acres": 11610.0,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -462,43 +484,43 @@
       "other": 0
     },
     {
-      "county": "Jackson",
-      "acres": 7902.0,
-      "res": 0,
-      "comm": 0,
-      "other": 0
-    },
-    {
       "county": "Wheeler",
-      "acres": 5852.0,
+      "acres": 8952.0,
       "res": 0,
       "comm": 0,
       "other": 0
     },
     {
-      "county": "Gilliam",
-      "acres": 4390.0,
-      "res": 0,
-      "comm": 0,
-      "other": 0
-    },
-    {
-      "county": "Grant",
-      "acres": 3980.0,
-      "res": 0,
-      "comm": 0,
-      "other": 0
-    },
-    {
-      "county": "Baker",
-      "acres": 3877.0,
+      "county": "Jefferson",
+      "acres": 8200.0,
       "res": 0,
       "comm": 0,
       "other": 0
     },
     {
       "county": "Wasco",
-      "acres": 2981.0,
+      "acres": 7981.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
+      "county": "Baker",
+      "acres": 4486.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
+      "county": "Grant",
+      "acres": 4092.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
+    {
+      "county": "Sherman",
+      "acres": 2650.0,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -511,22 +533,15 @@
       "other": 0
     },
     {
-      "county": "Sherman",
-      "acres": 2500.0,
-      "res": 0,
-      "comm": 0,
-      "other": 0
-    },
-    {
       "county": "Harney",
-      "acres": 1344.0,
+      "acres": 1594.0,
       "res": 0,
       "comm": 0,
       "other": 0
     },
     {
       "county": "Crook",
-      "acres": 400.0,
+      "acres": 1500.0,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -534,13 +549,6 @@
     {
       "county": "Morrow",
       "acres": 150,
-      "res": 0,
-      "comm": 0,
-      "other": 0
-    },
-    {
-      "county": "Jefferson",
-      "acres": 0.1,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -1366,26 +1374,41 @@
       "date": "2026-07-16",
       "active_fires": 101,
       "acres_burned": 30724.81
+    },
+    {
+      "date": "2026-07-17",
+      "active_fires": 139,
+      "acres_burned": 74119.51
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 41,
-      "total_acres": 58454.9,
+      "total_fires": 53,
+      "total_acres": 95686.8,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
       "largest_fire": {
         "name": "E Evans Creek Rd 18000",
         "county": "Jackson",
-        "acres": 7843.0
+        "acres": 11551.0
       },
       "notable_fires": [
         {
           "name": "E Evans Creek Rd 18000",
           "county": "Jackson",
-          "acres": 7843.0
+          "acres": 11551.0
+        },
+        {
+          "name": "0476",
+          "county": "Gilliam",
+          "acres": 10000.0
+        },
+        {
+          "name": "Lower Dry Creek Mutual Aid",
+          "county": "Umatilla",
+          "acres": 6753.0
         },
         {
           "name": "LYTLE",
@@ -1393,19 +1416,9 @@
           "acres": 6052.0
         },
         {
-          "name": "Lower Dry Creek Mutual Aid",
-          "county": "Umatilla",
+          "name": "BREWER",
+          "county": "Jefferson",
           "acres": 5000.0
-        },
-        {
-          "name": "North Cayuse",
-          "county": "Umatilla",
-          "acres": 4887.0
-        },
-        {
-          "name": "0445 CROSSWHITE",
-          "county": "Wheeler",
-          "acres": 4000.0
         }
       ]
     },
@@ -1833,7 +1846,16 @@
       "lon": -123.00183333,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 7843.0
+      "acres": 11551.0
+    },
+    {
+      "name": "0476",
+      "county": "Gilliam",
+      "lat": 45.585568,
+      "lon": -120.383722,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 10000.0
     },
     {
       "name": "Lower Dry Creek Mutual Aid",
@@ -1841,7 +1863,25 @@
       "lat": 45.89477,
       "lon": -118.416733,
       "status": "Active",
-      "triggered_evacuation": false,
+      "triggered_evacuation": true,
+      "acres": 6753.0
+    },
+    {
+      "name": "BREWER",
+      "county": "Jefferson",
+      "lat": 44.588568,
+      "lon": -120.907094,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 5000.0
+    },
+    {
+      "name": "0485",
+      "county": "Wasco",
+      "lat": 44.894667,
+      "lon": -120.87,
+      "status": "Active",
+      "triggered_evacuation": true,
       "acres": 5000.0
     },
     {
@@ -1863,6 +1903,42 @@
       "acres": 4000.0
     },
     {
+      "name": "0449 PORCUPINE RIDGE",
+      "county": "Gilliam",
+      "lat": 45.18894,
+      "lon": -120.350257,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 4000.0
+    },
+    {
+      "name": "0494 AKAWA BUTTE",
+      "county": "Jefferson",
+      "lat": 44.501797,
+      "lon": -121.442875,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 3200.0
+    },
+    {
+      "name": "0450 COVE CREEK",
+      "county": "Wheeler",
+      "lat": 44.88679,
+      "lon": -120.336253,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 3000.0
+    },
+    {
+      "name": "Olive Butte",
+      "county": "Grant",
+      "lat": 44.746208,
+      "lon": -118.449893,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 2584.0
+    },
+    {
       "name": "0460 HOPKIN",
       "county": "Gilliam",
       "lat": 45.336333,
@@ -1881,22 +1957,13 @@
       "acres": 2500.0
     },
     {
-      "name": "Olive Butte",
-      "county": "Grant",
-      "lat": 44.746208,
-      "lon": -118.449893,
-      "status": "Active",
-      "triggered_evacuation": true,
-      "acres": 2461.0
-    },
-    {
       "name": "Anthony",
       "county": "Baker",
       "lat": 44.992651,
       "lon": -118.099469,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 1939.0
+      "acres": 1948.0
     },
     {
       "name": "Salmon",
@@ -1905,25 +1972,34 @@
       "lon": -118.536644,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 1519.0
+      "acres": 1508.0
     },
     {
-      "name": "0449 PORCUPINE RIDGE",
-      "county": "Gilliam",
-      "lat": 45.18894,
-      "lon": -120.350257,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 1000.0
-    },
-    {
-      "name": "0450 COVE CREEK",
+      "name": "0446 CAMEL HUMP",
       "county": "Wheeler",
-      "lat": 44.88679,
-      "lon": -120.336253,
+      "lat": 44.761667,
+      "lon": -120.052,
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 1000.0
+    },
+    {
+      "name": "0497 HENRY",
+      "county": "Crook",
+      "lat": 44.097222,
+      "lon": -119.952351,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 1000.0
+    },
+    {
+      "name": "POWDER RIVER",
+      "county": "Baker",
+      "lat": 44.754699,
+      "lon": -117.274933,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 600.0
     },
     {
       "name": "0444 TWICKINGHAM",
@@ -1962,13 +2038,40 @@
       "acres": 250.0
     },
     {
-      "name": "0446 CAMEL HUMP",
+      "name": "Horse Ridge",
+      "county": "Umatilla",
+      "lat": 45.543054,
+      "lon": -118.335458,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 250.0
+    },
+    {
+      "name": "0489 PARRISH",
       "county": "Wheeler",
-      "lat": 44.761667,
-      "lon": -120.052,
+      "lat": 44.77574,
+      "lon": -119.826947,
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 200.0
+    },
+    {
+      "name": "0462",
+      "county": "Sherman",
+      "lat": 45.175344,
+      "lon": -120.49015,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 150.0
+    },
+    {
+      "name": "Egypt",
+      "county": "Harney",
+      "lat": 43.727167,
+      "lon": -119.468417,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 150.0
     },
     {
       "name": "Skull Creek",
@@ -1980,6 +2083,24 @@
       "acres": 134.0
     },
     {
+      "name": "Stone Creek",
+      "county": "Harney",
+      "lat": 43.966584,
+      "lon": -119.567484,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 100.0
+    },
+    {
+      "name": "0475",
+      "county": "Wheeler",
+      "lat": 44.81628,
+      "lon": -119.75049,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 100.0
+    },
+    {
       "name": "0477 PILOT",
       "county": "Crook",
       "lat": 44.217428,
@@ -1989,13 +2110,13 @@
       "acres": 100.0
     },
     {
-      "name": "0494 AKAWA BUTTE",
-      "county": "Jefferson",
-      "lat": 44.501797,
-      "lon": -121.442875,
+      "name": "0493",
+      "county": "Crook",
+      "lat": 44.156833,
+      "lon": -120.580667,
       "status": "Active",
-      "triggered_evacuation": true,
-      "acres": 0.1
+      "triggered_evacuation": false,
+      "acres": 100.0
     },
     {
       "name": "LYTLE",
