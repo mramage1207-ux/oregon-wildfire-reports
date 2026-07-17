@@ -38,6 +38,35 @@
       padding: 0 2rem 2.5rem;
     }
     .hero { max-width: 1100px; margin: 0 auto; padding-top: 2rem; }
+    /* Executive summary card — added 2026-07-16 at Matt's request. Sits above
+       the hero stats so non-technical readers see the plain-English takeaway
+       before any raw numbers. */
+    .exec-summary {
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
+      border-left: 5px solid #718096; border-radius: 12px;
+      padding: 1.1rem 1.4rem; margin-bottom: 1.1rem; color: #fff;
+    }
+    .exec-summary.status-critical { border-left-color: #e53e3e; }
+    .exec-summary.status-serious  { border-left-color: #dd6b20; }
+    .exec-summary.status-elevated { border-left-color: #d69e2e; }
+    .exec-summary.status-calm     { border-left-color: #38a169; }
+    .exec-summary-tag {
+      display: inline-block; font-size: .68rem; font-weight: 800; letter-spacing: .5px;
+      text-transform: uppercase; padding: .22rem .6rem; border-radius: 20px; margin-right: .6rem;
+    }
+    .exec-summary-tag.status-critical { background: #e53e3e; color: #fff; }
+    .exec-summary-tag.status-serious  { background: #dd6b20; color: #fff; }
+    .exec-summary-tag.status-elevated { background: #d69e2e; color: #3b2e00; }
+    .exec-summary-tag.status-calm     { background: #38a169; color: #fff; }
+    .exec-summary-label { font-size: .72rem; color: rgba(255,255,255,.55); }
+    .exec-summary-headline { font-size: 1rem; font-weight: 600; line-height: 1.5; margin-top: .7rem; }
+    .exec-summary-escalation {
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18);
+      border-radius: 8px; padding: .7rem .9rem; margin-top: .8rem; font-size: .85rem; line-height: 1.5;
+    }
+    .exec-summary-escalation-label { font-size: .75rem; font-weight: 700; margin-bottom: .25rem; color: #fc8181; }
+    .exec-summary.status-serious .exec-summary-escalation-label { color: #f6ad55; }
+    .exec-summary-closing { font-size: .78rem; color: rgba(255,255,255,.6); margin-top: .7rem; line-height: 1.5; }
     .hero-label {
       font-size: .72rem; font-weight: 700; letter-spacing: 1.2px;
       text-transform: uppercase; color: rgba(255,255,255,.55); margin-bottom: .9rem;
@@ -399,6 +428,7 @@
 
 <div class="hero-wrap">
   <div class="hero">
+    <div id="exec-summary-card"></div>
     <div class="hero-label">Latest Report</div>
     <div id="hero-card" class="hero-card">
       <div class="loading-hero">&#9203; Loading latest report&hellip;</div>
@@ -1058,8 +1088,34 @@ function drawCountyChart(rows) {
   }
 }
 
+// ── EXECUTIVE SUMMARY ───────────────────────────────────────────────────────
+// Added 2026-07-16 at Matt's request ("my customers are not data savvy").
+// The card's text is fully generated server-side (see push_to_github.py's
+// exec_summary block) so all the materiality/escalation logic lives in one
+// place; this function just paints whatever data.exec_summary contains.
+function renderExecSummary(es) {
+  const container = document.getElementById('exec-summary-card');
+  if (!container) return;
+  if (!es || !es.headline) { container.innerHTML = ''; return; }
+  const statusLabel = { critical: 'Critical', serious: 'Serious', elevated: 'Elevated', calm: 'Calm' }[es.status] || 'Update';
+  const escalationHtml = es.escalation
+    ? `<div class="exec-summary-escalation">
+         <div class="exec-summary-escalation-label">&#9888;&nbsp; ${es.status === 'critical' ? 'Real loss reported' : 'Escalating risk to residents'}</div>
+         <div>${es.escalation}</div>
+       </div>`
+    : '';
+  container.innerHTML = `
+    <div class="exec-summary status-${es.status}">
+      <div><span class="exec-summary-tag status-${es.status}">${statusLabel}</span><span class="exec-summary-label">Executive Summary &middot; updated with this report</span></div>
+      <div class="exec-summary-headline">${es.headline}</div>
+      ${escalationHtml}
+      <div class="exec-summary-closing">${es.closing || ''}</div>
+    </div>`;
+}
+
 // ── RENDER ───────────────────────────────────────────────────────────────────
 function render(pdfs, data) {
+  renderExecSummary(data && data.exec_summary);
   const histByDate = {};
   if (data && data.historical_data) {
     data.historical_data.forEach(r => { histByDate[r.date] = r; });
