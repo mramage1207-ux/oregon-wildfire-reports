@@ -691,7 +691,7 @@
     "status": "serious",
     "headline": "The number of Level 3 (Go Now) evacuation addresses is up 6% (701 \u2192 745) since yesterday morning. Over the past 7 days, it is up more than 5x (163 \u2192 745).",
     "escalation": "Level 3 (Go Now) evacuation addresses have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (701 \u2192 745 since yesterday morning). This is the highest-urgency evacuation tier and reflects real, immediate risk to homes.",
-    "closing": "No structures destroyed or injuries reported as of this report. Full details, county-by-county, are in the sections below."
+    "closing": "Structure loss figures reflect incident management team reports and may lag actual losses \u2014 zero does not confirm no impact has occurred. Consult OSFM news releases and local media for current information. Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 29,
   "total_large_fire_acres": 251463.9,
