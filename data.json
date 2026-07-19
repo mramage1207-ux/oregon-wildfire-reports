@@ -7,10 +7,10 @@
   "change_vs_prior_morning": {
     "prior_date": "2026-07-18",
     "active_large_fires": {
-      "current": 36,
+      "current": 34,
       "prior": 37,
-      "delta": -1,
-      "pct": -2.7
+      "delta": -3,
+      "pct": -8.1
     },
     "active_evac_fires": {
       "current": 11,
@@ -43,10 +43,10 @@
       "pct": -16.5
     },
     "total_acres_ytd": {
-      "current": 381977,
+      "current": 253656,
       "prior": 179456,
-      "delta": 202521,
-      "pct": 112.9
+      "delta": 74200,
+      "pct": 41.3
     },
     "structures_lost": {
       "current": 0,
@@ -58,10 +58,10 @@
   "change_vs_7d_ago": {
     "prior_date": "2026-07-12",
     "active_large_fires": {
-      "current": 36,
+      "current": 34,
       "prior": 7,
-      "delta": 29,
-      "pct": 414.3
+      "delta": 27,
+      "pct": 385.7
     },
     "active_evac_fires": {
       "current": 11,
@@ -94,10 +94,10 @@
       "pct": 134.9
     },
     "total_acres_ytd": {
-      "current": 381977,
+      "current": 253656,
       "prior": 31786,
-      "delta": 350191,
-      "pct": 1101.7
+      "delta": 221870,
+      "pct": 698.0
     },
     "structures_lost": {
       "current": 0,
@@ -109,10 +109,10 @@
   "change_vs_30d_ago": {
     "prior_date": "2026-06-19",
     "active_large_fires": {
-      "current": 36,
+      "current": 34,
       "prior": 3,
-      "delta": 33,
-      "pct": 1100.0
+      "delta": 31,
+      "pct": 1033.3
     },
     "active_evac_fires": {
       "current": 11,
@@ -145,10 +145,10 @@
       "pct": 110.4
     },
     "total_acres_ytd": {
-      "current": 381977,
+      "current": 253656,
       "prior": 9400,
-      "delta": 372577,
-      "pct": 3963.6
+      "delta": 244256,
+      "pct": 2598.5
     },
     "structures_lost": {
       "current": 0,
@@ -221,7 +221,7 @@
         15,
         31,
         37,
-        36
+        34
       ]
     },
     "active_evac_fires": {
@@ -617,7 +617,7 @@
         52555,
         95687,
         179456,
-        381977
+        253656
       ]
     },
     "structures_lost": {
@@ -693,8 +693,8 @@
     "escalation": "Level 3 (Go Now) evacuation addresses have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (701 \u2192 745 since yesterday morning). This is the highest-urgency evacuation tier and reflects real, immediate risk to homes.",
     "closing": "No structures destroyed or injuries reported as of this report. Full details, county-by-county, are in the sections below."
   },
-  "active_large_fires": 36,
-  "total_large_fire_acres": 381977.0,
+  "active_large_fires": 34,
+  "total_large_fire_acres": 253655.9,
   "structures_lost": 0,
   "evac_triggering_fires": 11,
   "evac_zones": {
@@ -755,14 +755,14 @@
   "county_structure_data": [
     {
       "county": "Gilliam",
-      "acres": 169794.0,
+      "acres": 77583.0,
       "res": 0,
       "comm": 0,
       "other": 0
     },
     {
       "county": "Wheeler",
-      "acres": 66209.1,
+      "acres": 30099.0,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -1713,31 +1713,21 @@
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 64,
-      "total_acres": 381977.0,
+      "total_fires": 62,
+      "total_acres": 253655.9,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
       "largest_fire": {
-        "name": "HAY CREEK COMPLEX",
+        "name": "0476",
         "county": "Gilliam",
-        "acres": 92211.0
+        "acres": 50403.0
       },
       "notable_fires": [
-        {
-          "name": "HAY CREEK COMPLEX",
-          "county": "Gilliam",
-          "acres": 92211.0
-        },
         {
           "name": "0476",
           "county": "Gilliam",
           "acres": 50403.0
-        },
-        {
-          "name": "ROWE CREEK COMPLEX",
-          "county": "Wheeler",
-          "acres": 36110.1
         },
         {
           "name": "0449 PORCUPINE RIDGE",
@@ -1748,6 +1738,16 @@
           "name": "0500 COYOTE",
           "county": "Crook",
           "acres": 15000.0
+        },
+        {
+          "name": "POWDER RIVER",
+          "county": "Baker",
+          "acres": 14000.0
+        },
+        {
+          "name": "E Evans Creek Rd 18000",
+          "county": "Jackson",
+          "acres": 13999.0
         }
       ]
     },
@@ -2730,24 +2730,6 @@
       "status": "Contained",
       "triggered_evacuation": true,
       "acres": 0.1
-    },
-    {
-      "name": "HAY CREEK COMPLEX",
-      "county": "Gilliam",
-      "lat": 43.6167,
-      "lon": -116.2,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 92211.0
-    },
-    {
-      "name": "ROWE CREEK COMPLEX",
-      "county": "Wheeler",
-      "lat": 43.6167,
-      "lon": -116.2,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 36110.1
     }
   ]
 }
