@@ -7,10 +7,10 @@
   "change_vs_prior_morning": {
     "prior_date": "2026-07-18",
     "active_large_fires": {
-      "current": 34,
+      "current": 29,
       "prior": 32,
-      "delta": 2,
-      "pct": 6.2
+      "delta": -3,
+      "pct": -9.4
     },
     "active_evac_fires": {
       "current": 11,
@@ -43,10 +43,10 @@
       "pct": -16.5
     },
     "total_acres_ytd": {
-      "current": 253656,
+      "current": 251464,
       "prior": 179456,
-      "delta": 74200,
-      "pct": 41.3
+      "delta": 72008,
+      "pct": 40.1
     },
     "structures_lost": {
       "current": 0,
@@ -58,10 +58,10 @@
   "change_vs_7d_ago": {
     "prior_date": "2026-07-12",
     "active_large_fires": {
-      "current": 34,
+      "current": 29,
       "prior": 6,
-      "delta": 28,
-      "pct": 466.7
+      "delta": 23,
+      "pct": 383.3
     },
     "active_evac_fires": {
       "current": 11,
@@ -94,10 +94,10 @@
       "pct": 134.9
     },
     "total_acres_ytd": {
-      "current": 253656,
+      "current": 251464,
       "prior": 31786,
-      "delta": 221870,
-      "pct": 698.0
+      "delta": 219678,
+      "pct": 691.1
     },
     "structures_lost": {
       "current": 0,
@@ -109,10 +109,10 @@
   "change_vs_30d_ago": {
     "prior_date": "2026-06-19",
     "active_large_fires": {
-      "current": 34,
+      "current": 29,
       "prior": 3,
-      "delta": 31,
-      "pct": 1033.3
+      "delta": 26,
+      "pct": 866.7
     },
     "active_evac_fires": {
       "current": 11,
@@ -145,10 +145,10 @@
       "pct": 110.4
     },
     "total_acres_ytd": {
-      "current": 253656,
+      "current": 251464,
       "prior": 9400,
-      "delta": 244256,
-      "pct": 2598.5
+      "delta": 242064,
+      "pct": 2575.1
     },
     "structures_lost": {
       "current": 0,
@@ -221,7 +221,7 @@
         13,
         27,
         32,
-        34
+        29
       ]
     },
     "active_evac_fires": {
@@ -617,7 +617,7 @@
         52555,
         95687,
         179456,
-        253656
+        251464
       ]
     },
     "structures_lost": {
