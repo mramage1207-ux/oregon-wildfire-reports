@@ -693,8 +693,8 @@
     "escalation": "Level 3 (Go Now) evacuation addresses have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (701 \u2192 745 since yesterday morning). This is the highest-urgency evacuation tier and reflects real, immediate risk to homes.",
     "closing": "No structures destroyed or injuries reported as of this report. Full details, county-by-county, are in the sections below."
   },
-  "active_large_fires": 34,
-  "total_large_fire_acres": 253655.9,
+  "active_large_fires": 29,
+  "total_large_fire_acres": 251463.9,
   "structures_lost": 0,
   "evac_triggering_fires": 11,
   "evac_zones": {
@@ -762,14 +762,14 @@
     },
     {
       "county": "Wheeler",
-      "acres": 30099.0,
+      "acres": 29647.0,
       "res": 0,
       "comm": 0,
       "other": 0
     },
     {
       "county": "Crook",
-      "acres": 25580.0,
+      "acres": 25350.0,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -790,7 +790,7 @@
     },
     {
       "county": "Umatilla",
-      "acres": 16541.0,
+      "acres": 16171.0,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -811,7 +811,7 @@
     },
     {
       "county": "Malheur",
-      "acres": 10365.4,
+      "acres": 9801.4,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -832,7 +832,7 @@
     },
     {
       "county": "Harney",
-      "acres": 5911.0,
+      "acres": 5485.0,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -861,13 +861,6 @@
     {
       "county": "Klamath",
       "acres": 247.0,
-      "res": 0,
-      "comm": 0,
-      "other": 0
-    },
-    {
-      "county": "Morrow",
-      "acres": 150,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -1713,8 +1706,8 @@
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 62,
-      "total_acres": 253655.9,
+      "total_fires": 50,
+      "total_acres": 251463.9,
       "total_structures_destroyed": 0,
       "fatalities": 0,
       "injuries": 0,
@@ -2417,24 +2410,6 @@
       "acres": 300.0
     },
     {
-      "name": "Riddle",
-      "county": "Harney",
-      "lat": 43.055966,
-      "lon": -118.482985,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 292.0
-    },
-    {
-      "name": "Bradley Flats",
-      "county": "Umatilla",
-      "lat": 45.3138,
-      "lon": -118.8616,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 270.0
-    },
-    {
       "name": "Loveless",
       "county": "Klamath",
       "lat": 42.541323,
@@ -2444,15 +2419,6 @@
       "acres": 247.0
     },
     {
-      "name": "0489 PARRISH",
-      "county": "Wheeler",
-      "lat": 44.77574,
-      "lon": -119.826947,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 200.0
-    },
-    {
       "name": "518 SULLY",
       "county": "Gilliam",
       "lat": 45.75568,
@@ -2460,24 +2426,6 @@
       "status": "Active",
       "triggered_evacuation": true,
       "acres": 200.0
-    },
-    {
-      "name": "Skull Creek",
-      "county": "Harney",
-      "lat": 42.415067,
-      "lon": -118.742,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 134.0
-    },
-    {
-      "name": "0477 PILOT",
-      "county": "Crook",
-      "lat": 44.217428,
-      "lon": -120.641448,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 120.0
     },
     {
       "name": "0462",
@@ -2613,69 +2561,6 @@
       "status": "Contained",
       "triggered_evacuation": false,
       "acres": 440.0
-    },
-    {
-      "name": "CLOVER",
-      "county": "Malheur",
-      "lat": 43.744072,
-      "lon": -117.138636,
-      "status": "Contained",
-      "triggered_evacuation": false,
-      "acres": 253.0
-    },
-    {
-      "name": "0442 REDROCK",
-      "county": "Wheeler",
-      "lat": 44.759376,
-      "lon": -120.214254,
-      "status": "Contained",
-      "triggered_evacuation": false,
-      "acres": 252.0
-    },
-    {
-      "name": "MILLER CREEK",
-      "county": "Malheur",
-      "lat": 43.769012,
-      "lon": -117.790135,
-      "status": "Contained",
-      "triggered_evacuation": false,
-      "acres": 211.0
-    },
-    {
-      "name": "Boardman Fire",
-      "county": "Morrow",
-      "lat": null,
-      "lon": null,
-      "status": "Contained",
-      "triggered_evacuation": false,
-      "acres": 150
-    },
-    {
-      "name": "0493",
-      "county": "Crook",
-      "lat": 44.156833,
-      "lon": -120.580667,
-      "status": "Contained",
-      "triggered_evacuation": false,
-      "acres": 110.0
-    },
-    {
-      "name": "Reith Road OSFM",
-      "county": "Umatilla",
-      "lat": 45.663833,
-      "lon": -119.020167,
-      "status": "Contained",
-      "triggered_evacuation": false,
-      "acres": 100.0
-    },
-    {
-      "name": "MM 85",
-      "county": "Malheur",
-      "lat": 42.489694,
-      "lon": -117.883423,
-      "status": "Contained",
-      "triggered_evacuation": false,
-      "acres": 100.0
     },
     {
       "name": "Blackwell Rd 8087",
