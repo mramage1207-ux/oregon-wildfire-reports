@@ -8,9 +8,9 @@
     "prior_date": "2026-07-18",
     "active_large_fires": {
       "current": 34,
-      "prior": 37,
-      "delta": -3,
-      "pct": -8.1
+      "prior": 32,
+      "delta": 2,
+      "pct": 6.2
     },
     "active_evac_fires": {
       "current": 11,
@@ -59,9 +59,9 @@
     "prior_date": "2026-07-12",
     "active_large_fires": {
       "current": 34,
-      "prior": 7,
-      "delta": 27,
-      "pct": 385.7
+      "prior": 6,
+      "delta": 28,
+      "pct": 466.7
     },
     "active_evac_fires": {
       "current": 11,
@@ -214,13 +214,13 @@
         7,
         5,
         6,
-        7,
-        7,
         6,
         6,
-        15,
-        31,
-        37,
+        5,
+        5,
+        13,
+        27,
+        32,
         34
       ]
     },
