@@ -730,26 +730,20 @@
   "evac_addresses_l2": 1555,
   "evac_addresses_l3": 872,
   "struct_loss": {
-    "date": "2026-07-20",
-    "source": "NIFC WFIGS Current Incident Locations",
-    "incident_count": 0,
-    "has_type_breakdown": false,
     "oregon_totals": {
-      "res_destroyed": 0,
-      "res_damaged": 0,
-      "res_threatened": 0,
-      "comm_destroyed": 0,
-      "comm_damaged": 0,
+      "res_threatened": 7216,
+      "res_damaged": 1,
+      "res_destroyed": 7,
       "comm_threatened": 0,
-      "minor_destroyed": 0,
-      "minor_damaged": 0,
+      "comm_damaged": 0,
+      "comm_destroyed": 0,
       "minor_threatened": 0,
-      "total_destroyed": 0,
-      "total_damaged": 0,
-      "total_threatened": 0
-    },
-    "incidents": [],
-    "note": "No active Oregon incidents in WFIGS"
+      "minor_damaged": 8,
+      "minor_destroyed": 12,
+      "total_threatened": 7216,
+      "total_damaged": 9,
+      "total_destroyed": 19
+    }
   },
   "county_structure_data": [
     {
