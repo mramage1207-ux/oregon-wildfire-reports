@@ -1139,12 +1139,23 @@ function render(pdfs, data) {
   // Do NOT use enriched[0] — localeCompare treats '_' and '.' as ignorable punctuation in
   // many locales, so '2026-05-26_1800.pdf' can sort BELOW '2026-05-26.pdf' because
   // localeCompare strips the underscore and compares '1800pdf' vs 'pdf', and '1' < 'p'.
+  //
+  // Fixed 2026-07-20: comparing raw time_suffix strings ("1600" vs "m0922") is WRONG for
+  // manual reports — the leading 'm' (char code 109) sorts ABOVE every digit character
+  // (48-57), so ANY manual report from ANY time of day always outranked same-day scheduled
+  // "_1100"/"_1400"/"_1600"/"_1800" reports regardless of actual chronological time. Caught
+  // because "View Report" was linking to a 9:22 AM manual report instead of the 4:00 PM
+  // scheduled update. Fix: strip the leading 'm' before comparing so both suffix styles
+  // compare on their actual HHMM value (manual reports are always exactly 4 digits after
+  // the 'm', same width as scheduled suffixes, so plain string comparison of the digits is
+  // chronologically correct — no manual report has ever used a non-4-digit HHMM).
+  const sfxTimeKey = sfx => (sfx || '').replace(/^m/, '');
   const latest = enriched.reduce((best, p) => {
     if (!best) return p;
     if (p.date_iso > best.date_iso) return p;
     if (p.date_iso === best.date_iso) {
-      const pSfx = p.time_suffix || '';
-      const bSfx = best.time_suffix || '';
+      const pSfx = sfxTimeKey(p.time_suffix);
+      const bSfx = sfxTimeKey(best.time_suffix);
       if (pSfx > bSfx) return p;
     }
     return best;
@@ -1400,8 +1411,11 @@ function render(pdfs, data) {
       const { morning, updates } = byDate[dateIso];
       const markLatest = isVeryFirst;
       if (isVeryFirst) isVeryFirst = false;
-      // Build ordered list: morning first, then updates/manuals ascending by suffix
-      const sortedUpdates = [...updates].sort((a, b) => (a.time_suffix || '').localeCompare(b.time_suffix || ''));
+      // Build ordered list: morning first, then updates/manuals ascending by suffix.
+      // Same 'm' > digit fix as the `latest` picker above — sort by the numeric HHMM
+      // value with any leading 'm' stripped, not the raw suffix string.
+      const sortedUpdates = [...updates].sort((a, b) =>
+        sfxTimeKey(a.time_suffix).localeCompare(sfxTimeKey(b.time_suffix)));
       const allReports = [];
       if (morning) allReports.push({ rep: morning, label: 'Morning Report' });
       sortedUpdates.forEach(u => allReports.push({ rep: u, label: fmtSuffix(u.time_suffix) }));
