@@ -1414,8 +1414,10 @@ function render(pdfs, data) {
       const rows = allReports.map((item, idx) => {
         const { rep, label } = item;
         const isIntraday = idx >= morningCount; // non-morning reports
-        const fvRaw = (rep.active_fires != null && rep.active_fires !== '—') ? rep.active_fires : '';
-        const fv = fvRaw !== '' ? `${fvRaw}<div style="font-size:0.7em;font-weight:400;opacity:0.7;line-height:1.2">WF + RX</div>` : '';
+        // "WF + RX" is already labeled once in the column header (see the
+        // <th> below) — repeating it under every row's number was redundant
+        // clutter (Matt, 2026-07-19). Just the value now.
+        const fv = (rep.active_fires != null && rep.active_fires !== '—') ? rep.active_fires : '';
         const av = (rep.acres_burned != null && rep.acres_burned !== '—') ? fmtAcres(rep.acres_burned) : '';
         const intradayAttr = isIntraday ? ' data-intraday="true"' : '';
         if (idx === 0) {
