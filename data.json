@@ -1,8 +1,8 @@
 {
   "last_updated": "2026-07-20",
   "report_time": "8:26 AM PDT",
-  "current_active_fires": 95,
-  "current_acres_burned": 207968.48,
+  "current_active_fires": 91,
+  "current_acres_burned": 331331.57,
   "current_report_time": "8:26 AM PDT",
   "change_vs_prior_morning": {
     "prior_date": "2026-07-19",
@@ -13,40 +13,40 @@
       "pct": -24.1
     },
     "active_evac_fires": {
-      "current": 7,
+      "current": 6,
       "prior": 11,
-      "delta": -4,
-      "pct": -36.4
+      "delta": -5,
+      "pct": -45.5
     },
     "evac_addresses_l1": {
-      "current": 3120,
+      "current": 4453,
       "prior": 2904,
-      "delta": 216,
-      "pct": 7.4
+      "delta": 1549,
+      "pct": 53.3
     },
     "evac_addresses_l2": {
-      "current": 1555,
+      "current": 2657,
       "prior": 1360,
-      "delta": 195,
-      "pct": 14.3
+      "delta": 1297,
+      "pct": 95.4
     },
     "evac_addresses_l3": {
-      "current": 872,
+      "current": 840,
       "prior": 745,
-      "delta": 127,
-      "pct": 17.0
+      "delta": 95,
+      "pct": 12.8
     },
     "active_fires": {
-      "current": 95,
+      "current": 91,
       "prior": 101,
-      "delta": -6,
-      "pct": -5.9
+      "delta": -10,
+      "pct": -9.9
     },
     "total_acres_ytd": {
-      "current": 253098,
+      "current": 371077,
       "prior": 251464,
-      "delta": 1634,
-      "pct": 0.6
+      "delta": 119613,
+      "pct": 47.6
     },
     "structures_lost": {
       "current": 19,
@@ -64,40 +64,40 @@
       "pct": 266.7
     },
     "active_evac_fires": {
-      "current": 7,
+      "current": 6,
       "prior": 4,
-      "delta": 3,
-      "pct": 75.0
+      "delta": 2,
+      "pct": 50.0
     },
     "evac_addresses_l1": {
-      "current": 3120,
+      "current": 4453,
       "prior": 121,
-      "delta": 2999,
-      "pct": 2478.5
+      "delta": 4332,
+      "pct": 3580.2
     },
     "evac_addresses_l2": {
-      "current": 1555,
+      "current": 2657,
       "prior": 192,
-      "delta": 1363,
-      "pct": 709.9
+      "delta": 2465,
+      "pct": 1283.9
     },
     "evac_addresses_l3": {
-      "current": 872,
+      "current": 840,
       "prior": 175,
-      "delta": 697,
-      "pct": 398.3
+      "delta": 665,
+      "pct": 380.0
     },
     "active_fires": {
-      "current": 95,
+      "current": 91,
       "prior": 42,
-      "delta": 53,
-      "pct": 126.2
+      "delta": 49,
+      "pct": 116.7
     },
     "total_acres_ytd": {
-      "current": 253098,
+      "current": 371077,
       "prior": 33851,
-      "delta": 219247,
-      "pct": 647.7
+      "delta": 337226,
+      "pct": 996.2
     },
     "structures_lost": {
       "current": 19,
@@ -115,40 +115,40 @@
       "pct": 1000.0
     },
     "active_evac_fires": {
-      "current": 7,
+      "current": 6,
       "prior": 0,
-      "delta": 7,
+      "delta": 6,
       "pct": null
     },
     "evac_addresses_l1": {
-      "current": 3120,
+      "current": 4453,
       "prior": 3,
-      "delta": 3117,
-      "pct": 103900.0
+      "delta": 4450,
+      "pct": 148333.3
     },
     "evac_addresses_l2": {
-      "current": 1555,
+      "current": 2657,
       "prior": 0,
-      "delta": 1555,
+      "delta": 2657,
       "pct": null
     },
     "evac_addresses_l3": {
-      "current": 872,
+      "current": 840,
       "prior": 0,
-      "delta": 872,
+      "delta": 840,
       "pct": null
     },
     "active_fires": {
-      "current": 95,
+      "current": 91,
       "prior": 23,
-      "delta": 72,
-      "pct": 313.0
+      "delta": 68,
+      "pct": 295.7
     },
     "total_acres_ytd": {
-      "current": 253098,
+      "current": 371077,
       "prior": 8786,
-      "delta": 244312,
-      "pct": 2780.7
+      "delta": 362291,
+      "pct": 4123.5
     },
     "structures_lost": {
       "current": 19,
@@ -287,7 +287,7 @@
         9,
         11,
         11,
-        7
+        6
       ]
     },
     "evac_addresses_l1": {
@@ -353,7 +353,7 @@
         2187,
         2785,
         2904,
-        3120
+        4453
       ]
     },
     "evac_addresses_l2": {
@@ -419,7 +419,7 @@
         1512,
         1363,
         1360,
-        1555
+        2657
       ]
     },
     "evac_addresses_l3": {
@@ -485,7 +485,7 @@
         825,
         701,
         745,
-        872
+        840
       ]
     },
     "active_fires": {
@@ -551,7 +551,7 @@
         139,
         121,
         101,
-        95
+        91
       ]
     },
     "total_acres_ytd": {
@@ -617,7 +617,7 @@
         93765,
         177264,
         251464,
-        253098
+        371077
       ]
     },
     "structures_lost": {
@@ -689,49 +689,49 @@
   },
   "exec_summary": {
     "status": "critical",
-    "headline": "The number of Level 3 (Go Now) evacuation addresses is up 17% (745 \u2192 872) since yesterday morning. Over the past 7 days, it is up more than 5x (175 \u2192 872).",
-    "escalation": "Level 3 (Go Now) evacuation addresses have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (745 \u2192 872 since yesterday morning). This is the highest-urgency evacuation tier and reflects real, immediate risk to homes.",
+    "headline": "The number of Level 3 (Go Now) evacuation addresses is up 13% (745 \u2192 840) since yesterday morning. Over the past 7 days, it is up more than 5x (175 \u2192 840).",
+    "escalation": "Level 3 (Go Now) evacuation addresses have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (745 \u2192 840 since yesterday morning). This is the highest-urgency evacuation tier and reflects real, immediate risk to homes.",
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 22,
-  "total_large_fire_acres": 253098.00000000003,
+  "total_large_fire_acres": 371076.9,
   "structures_lost": 19,
   "evac_triggering_fires": 11,
   "evac_zones": {
     "level3": [
-      "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
       "0445 CROSSWHITE \u2014 ~4 miles north of Twickenham, Oregon",
-      "0485 \u2014 ~7 miles west of Antelope, Oregon",
       "BREWER \u2014 ~11 miles east of Madras, Oregon",
+      "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
+      "0485 \u2014 ~7 miles west of Antelope, Oregon",
+      "0494 AKAWA BUTTE \u2014 ~10 miles east of Camp Sherman, Oregon",
       "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon"
     ],
     "level2": [
+      "0445 CROSSWHITE \u2014 ~4 miles north of Twickenham, Oregon",
+      "BREWER \u2014 ~11 miles east of Madras, Oregon",
       "0449 PORCUPINE RIDGE \u2014 ~9 miles west of Condon, Oregon",
       "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
-      "0445 CROSSWHITE \u2014 ~4 miles north of Twickenham, Oregon",
-      "0494 AKAWA BUTTE \u2014 ~10 miles east of Camp Sherman, Oregon",
       "0485 \u2014 ~7 miles west of Antelope, Oregon",
-      "BREWER \u2014 ~11 miles east of Madras, Oregon",
+      "0494 AKAWA BUTTE \u2014 ~10 miles east of Camp Sherman, Oregon",
       "0480 WILCOX \u2014 ~8 miles southeast of Kent, Oregon",
       "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon",
-      "518 SULLY \u2014 ~9 miles east of Arlington, Oregon"
+      "518 SULLY \u2014 ~9 miles east of Arlington, Oregon",
+      "0501 PAT'S CABIN \u2014 ~8 miles east of Horseheaven, Oregon"
     ],
     "level1": [
       "0449 PORCUPINE RIDGE \u2014 ~9 miles west of Condon, Oregon",
       "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
       "0485 \u2014 ~7 miles west of Antelope, Oregon",
-      "BREWER \u2014 ~11 miles east of Madras, Oregon",
-      "Anthony \u2014 ~6 miles west of Hutchinson, Oregon",
-      "Loveless \u2014 ~8 miles northeast of Sprague River, Oregon"
+      "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
     ]
   },
-  "evac_addresses_l1": 3120,
-  "evac_addresses_l2": 1555,
-  "evac_addresses_l3": 872,
+  "evac_addresses_l1": 4453,
+  "evac_addresses_l2": 2657,
+  "evac_addresses_l3": 840,
   "struct_loss": {
     "oregon_totals": {
-      "res_threatened": 7216,
+      "res_threatened": 7215,
       "res_damaged": 1,
       "res_destroyed": 7,
       "comm_threatened": 0,
@@ -740,12 +740,19 @@
       "minor_threatened": 0,
       "minor_damaged": 8,
       "minor_destroyed": 12,
-      "total_threatened": 7216,
+      "total_threatened": 7215,
       "total_damaged": 9,
       "total_destroyed": 19
     }
   },
   "county_structure_data": [
+    {
+      "county": "Wheeler",
+      "acres": 126009.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0
+    },
     {
       "county": "Gilliam",
       "acres": 93301.0,
@@ -754,22 +761,22 @@
       "other": 9
     },
     {
-      "county": "Wheeler",
-      "acres": 36110.1,
+      "county": "Crook",
+      "acres": 41350.0,
       "res": 0,
       "comm": 0,
       "other": 0
     },
     {
-      "county": "Crook",
-      "acres": 35350.0,
+      "county": "Jefferson",
+      "acres": 28729.0,
       "res": 0,
       "comm": 0,
       "other": 0
     },
     {
       "county": "Baker",
-      "acres": 17921.0,
+      "acres": 22266.0,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -783,17 +790,10 @@
     },
     {
       "county": "Jackson",
-      "acres": 14058.0,
+      "acres": 14501.0,
       "res": 0,
       "comm": 0,
       "other": 1
-    },
-    {
-      "county": "Jefferson",
-      "acres": 12157.0,
-      "res": 0,
-      "comm": 0,
-      "other": 0
     },
     {
       "county": "Malheur",
@@ -804,14 +804,14 @@
     },
     {
       "county": "Grant",
-      "acres": 6294.0,
+      "acres": 6777.0,
       "res": 1,
       "comm": 0,
       "other": 2
     },
     {
       "county": "Harney",
-      "acres": 5485.0,
+      "acres": 5645.0,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -832,7 +832,7 @@
     },
     {
       "county": "Wallowa",
-      "acres": 300.0,
+      "acres": 377.0,
       "res": 0,
       "comm": 0,
       "other": 0
@@ -1687,31 +1687,41 @@
       "date": "2026-07-19",
       "active_fires": 101,
       "acres_burned": 206884.04
+    },
+    {
+      "date": "2026-07-20",
+      "active_fires": 91,
+      "acres_burned": 331331.57
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
       "total_fires": 41,
-      "total_acres": 253098.00000000003,
+      "total_acres": 371076.9,
       "total_structures_destroyed": 19,
       "fatalities": 0,
       "injuries": 0,
       "largest_fire": {
-        "name": "HAY CREEK COMPLEX",
-        "county": "Gilliam",
-        "acres": 92211.0
+        "name": "ROWE CREEK COMPLEX",
+        "county": "Wheeler",
+        "acres": 126009.0
       },
       "notable_fires": [
+        {
+          "name": "ROWE CREEK COMPLEX",
+          "county": "Wheeler",
+          "acres": 126009.0
+        },
         {
           "name": "HAY CREEK COMPLEX",
           "county": "Gilliam",
           "acres": 92211.0
         },
         {
-          "name": "ROWE CREEK COMPLEX",
-          "county": "Wheeler",
-          "acres": 36110.1
+          "name": "0500 COYOTE",
+          "county": "Crook",
+          "acres": 21000.0
         },
         {
           "name": "0497 HENRY",
@@ -1719,14 +1729,9 @@
           "acres": 20000.0
         },
         {
-          "name": "0500 COYOTE",
-          "county": "Crook",
-          "acres": 15000.0
-        },
-        {
           "name": "POWDER RIVER",
           "county": "Baker",
-          "acres": 14000.0
+          "acres": 18345.0
         }
       ]
     },
@@ -2153,6 +2158,15 @@
   },
   "map_fires": [
     {
+      "name": "0500 COYOTE",
+      "county": "Crook",
+      "lat": 44.063333,
+      "lon": -120.549833,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 21000.0
+    },
+    {
       "name": "0497 HENRY",
       "county": "Crook",
       "lat": 44.097222,
@@ -2162,40 +2176,13 @@
       "acres": 20000.0
     },
     {
-      "name": "0500 COYOTE",
-      "county": "Crook",
-      "lat": 44.063333,
-      "lon": -120.549833,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 15000.0
-    },
-    {
       "name": "POWDER RIVER",
       "county": "Baker",
       "lat": 44.754699,
       "lon": -117.274933,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 14000.0
-    },
-    {
-      "name": "E Evans Creek Rd 18000",
-      "county": "Jackson",
-      "lat": 42.60395,
-      "lon": -123.00183333,
-      "status": "Active",
-      "triggered_evacuation": true,
-      "acres": 13999.0
-    },
-    {
-      "name": "0494 AKAWA BUTTE",
-      "county": "Jefferson",
-      "lat": 44.501797,
-      "lon": -121.442875,
-      "status": "Active",
-      "triggered_evacuation": true,
-      "acres": 6207.0
+      "acres": 18345.0
     },
     {
       "name": "BREWER",
@@ -2204,7 +2191,25 @@
       "lon": -120.907094,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 5000.0
+      "acres": 17873.0
+    },
+    {
+      "name": "E Evans Creek Rd 18000",
+      "county": "Jackson",
+      "lat": 42.60395,
+      "lon": -123.00183333,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 14442.0
+    },
+    {
+      "name": "0494 AKAWA BUTTE",
+      "county": "Jefferson",
+      "lat": 44.501797,
+      "lon": -121.442875,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 6856.0
     },
     {
       "name": "North Cayuse",
@@ -2222,7 +2227,16 @@
       "lon": -119.468417,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 4525.0
+      "acres": 4685.0
+    },
+    {
+      "name": "0512 BOX SPRINGS",
+      "county": "Jefferson",
+      "lat": 44.635333,
+      "lon": -120.4985,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 4000.0
     },
     {
       "name": "Olive Butte",
@@ -2231,7 +2245,7 @@
       "lon": -118.449893,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 2801.0
+      "acres": 2747.0
     },
     {
       "name": "BOLOGNA",
@@ -2240,7 +2254,7 @@
       "lon": -119.576973,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 2000.0
+      "acres": 2600.0
     },
     {
       "name": "Anthony",
@@ -2258,16 +2272,7 @@
       "lon": -118.536644,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 1493.0
-    },
-    {
-      "name": "0512 BOX SPRINGS",
-      "county": "Jefferson",
-      "lat": 44.635333,
-      "lon": -120.4985,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 950.0
+      "acres": 1430.0
     },
     {
       "name": "Hagen",
@@ -2288,6 +2293,15 @@
       "acres": 383.0
     },
     {
+      "name": "INC 302",
+      "county": "Wallowa",
+      "lat": 45.975728,
+      "lon": -118.007951,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 377.0
+    },
+    {
       "name": "0496",
       "county": "Crook",
       "lat": 44.005081,
@@ -2295,15 +2309,6 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 350.0
-    },
-    {
-      "name": "INC 302",
-      "county": "Wallowa",
-      "lat": 45.975728,
-      "lon": -118.007951,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 300.0
     },
     {
       "name": "Burnt Creek",
