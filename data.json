@@ -688,10 +688,10 @@
     }
   },
   "exec_summary": {
-    "status": "serious",
+    "status": "critical",
     "headline": "The number of Level 3 (Go Now) evacuation addresses is up 17% (745 \u2192 872) since yesterday morning. Over the past 7 days, it is up more than 5x (175 \u2192 872).",
     "escalation": "Level 3 (Go Now) evacuation addresses have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (745 \u2192 872 since yesterday morning). This is the highest-urgency evacuation tier and reflects real, immediate risk to homes.",
-    "closing": "Structure loss data reflects incident management team filings and may not yet capture all losses. Consult OSFM news releases and local media for current figures. Full details, county-by-county, are in the sections below."
+    "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 22,
   "total_large_fire_acres": 253098.00000000003,
@@ -755,9 +755,9 @@
     {
       "county": "Gilliam",
       "acres": 93301.0,
-      "res": 0,
+      "res": 6,
       "comm": 0,
-      "other": 0
+      "other": 9
     },
     {
       "county": "Wheeler",
@@ -792,7 +792,7 @@
       "acres": 14058.0,
       "res": 0,
       "comm": 0,
-      "other": 0
+      "other": 1
     },
     {
       "county": "Jefferson",
@@ -811,9 +811,9 @@
     {
       "county": "Grant",
       "acres": 6294.0,
-      "res": 0,
+      "res": 1,
       "comm": 0,
-      "other": 0
+      "other": 2
     },
     {
       "county": "Harney",
@@ -1700,7 +1700,7 @@
       "year": 2026,
       "total_fires": 41,
       "total_acres": 253098.00000000003,
-      "total_structures_destroyed": 0,
+      "total_structures_destroyed": 19,
       "fatalities": 0,
       "injuries": 0,
       "largest_fire": {
