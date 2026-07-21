@@ -88,7 +88,7 @@
     .hero-stats { display: flex; gap: 1.2rem; }
     .stat-pill {
       background: rgba(255,255,255,.1); border-radius: 10px;
-      padding: .6rem 1rem; text-align: center; min-width: 80px;
+      padding: .6rem 1rem; text-align: center; min-width: 80px; position: relative;
     }
     .stat-pill .val { font-size: 1.5rem; font-weight: 700; line-height: 1; }
     .stat-pill .lbl { font-size: .68rem; opacity: .65; margin-top: 3px; text-transform: uppercase; letter-spacing: .4px; }
@@ -97,6 +97,48 @@
     .change-badge.down { background: #C0DD97; color: #173404; }
     .change-badge.flat { background: #e0e0e0; color: #444441; }
     .change-caption { font-size: .62rem; color: rgba(255,255,255,.70); margin-top: 4px; }
+
+    /* ── county map "visualize" icon + modal ── */
+    .pill-viz-btn {
+      position: absolute; top: 5px; right: 5px; width: 20px; height: 20px;
+      padding: 0; border: none; border-radius: 5px; background: rgba(255,255,255,.14);
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+    }
+    .pill-viz-btn:hover { background: rgba(255,255,255,.28); }
+    .wf-map-modal-overlay {
+      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(15,20,35,.6); z-index: 1000; align-items: center; justify-content: center;
+      padding: 1.2rem;
+    }
+    .wf-map-modal-overlay.open { display: flex; }
+    .wf-map-modal-card {
+      background: #fff; border-radius: 12px; padding: 1.3rem 1.5rem; max-width: 660px;
+      width: 100%; max-height: 90vh; overflow-y: auto; position: relative;
+    }
+    .wf-map-modal-close {
+      position: absolute; top: 12px; right: 12px; width: 28px; height: 28px;
+      border: none; border-radius: 6px; background: #f0f4f8; color: #5a6473;
+      font-size: 1rem; cursor: pointer; line-height: 1;
+    }
+    .wf-map-modal-close:hover { background: #e2e8f0; }
+    .wf-map-title { font-size: .95rem; font-weight: 700; color: #1a2744; margin-bottom: .9rem; padding-right: 1.6rem; }
+    .wf-map-toggle { display: flex; gap: 6px; margin-bottom: .8rem; }
+    .wf-map-toggle button {
+      font-size: .75rem; font-weight: 600; padding: .4rem .75rem; border-radius: 6px;
+      border: 1px solid #e2e8f0; background: #f8fafc; color: #5a6473; cursor: pointer;
+    }
+    .wf-map-toggle button.active { border-color: #e67e22; background: #e67e22; color: #fff; }
+    .wf-map-wrap { position: relative; }
+    .wf-map-tooltip {
+      position: absolute; pointer-events: none; display: none; background: #1a2744;
+      color: #fff; font-size: .72rem; padding: 8px 11px; border-radius: 6px;
+      line-height: 1.6; white-space: nowrap; z-index: 5;
+    }
+    .wf-map-legend { display: flex; align-items: center; gap: 10px; margin-top: .9rem; font-size: .72rem; color: #5a6473; flex-wrap: wrap; }
+    .wf-map-footnote { font-size: .7rem; color: #a0aec0; margin-top: .6rem; border-top: 1px solid #f0f4f8; padding-top: .6rem; line-height: 1.5; }
+    @media (max-width: 700px) {
+      .wf-map-modal-card { padding: 1rem; }
+    }
     /* 7D/30D trend toggle — added 2026-07-16 at Matt's request. Default view
        is always 1D (the existing change-badge above); these tabs are opt-in. */
     .trend-tabs { display: flex; gap: 6px; margin-top: 7px; justify-content: center; }
@@ -470,6 +512,20 @@
   </div>
 </div>
 
+<div class="wf-map-modal-overlay" id="wf-map-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="wf-map-title" onclick="if(event.target===this) window.__wfCloseCountyMap()">
+  <div class="wf-map-modal-card">
+    <button class="wf-map-modal-close" aria-label="Close" onclick="window.__wfCloseCountyMap()">&times;</button>
+    <div class="wf-map-title" id="wf-map-title"></div>
+    <div class="wf-map-toggle" id="wf-map-toggle" style="display:none"></div>
+    <div class="wf-map-wrap" id="wf-map-wrap">
+      <svg id="wf-county-map" viewBox="0 0 960 900" role="img" aria-label="Choropleth map of Oregon counties" style="width:100%;height:auto;display:block;"></svg>
+      <div class="wf-map-tooltip" id="wf-map-tooltip"></div>
+    </div>
+    <div class="wf-map-legend" id="wf-map-legend"></div>
+    <div class="wf-map-footnote" id="wf-map-footnote"></div>
+  </div>
+</div>
+
 <main>
   <div class="map-card" id="map-card">
     <h2>Fire Locations &mdash; 2026 Season</h2>
@@ -580,6 +636,162 @@ const PDF_RE    = /^oregon_wildfire_report_(\d{4}-\d{2}-\d{2})(?:_(m?\d{4}))?\.p
 //   (none)   → Morning Report (scheduled 8:10 AM run)
 //   _1600    → 4:00 PM Intraday Update
 //   _mHHMM  → Manual Report (on-demand run, HHMM = Pacific time)
+
+const OR_COUNTIES = [{name:"Baker",path:"M880,420L880,433L885,444L850,452L849,437L839,430L818,429L803,429L792,432L783,442L773,452L766,462L747,462L730,463L733,449L737,437L746,426L748,411L743,398L731,395L738,384L753,380L750,368L758,354L761,340L769,332L781,337L796,333L809,333L836,337L836,323L871,322L899,321L927,320L920,333L922,345L917,356L912,369L899,376L895,388L891,403L884,413L880,420Z",cx:807,cy:393},{name:"Benton",path:"M169,415L174,429L171,441L175,455L153,455L127,454L113,454L101,448L111,441L113,429L128,429L128,411L129,393L136,382L164,383L178,384L188,391L179,400L169,407L169,415Z",cx:156,cy:424},{name:"Clackamas",path:"M263,263L276,264L289,264L309,264L340,265L351,276L355,291L354,304L352,316L359,327L349,336L343,350L287,359L272,359L261,352L251,342L241,333L231,323L231,309L232,296L220,296L221,281L233,277L241,267L253,263L263,263Z",cx:283,cy:302},{name:"Clatsop",path:"M109,143L121,134L134,135L145,129L158,133L162,146L164,165L164,193L163,208L149,207L129,207L93,204L94,184L98,172L99,157L97,144L92,131L103,139L109,143ZM89,121L89,121Z",cx:120,cy:154},{name:"Columbia",path:"M165,147L183,143L195,143L206,151L218,159L223,171L228,184L230,197L232,210L219,219L206,216L192,209L166,208L164,193L165,169L165,147Z",cx:204,cy:185},{name:"Coos",path:"M100,622L107,635L106,651L99,666L91,677L90,694L77,702L70,714L57,716L49,706L49,693L46,680L38,670L19,669L16,656L18,643L23,631L26,617L30,605L40,587L46,570L62,563L77,563L89,564L88,579L95,594L101,606L100,622Z",cx:61,cy:656},{name:"Crook",path:"M540,435L550,443L564,443L564,457L593,457L593,471L594,514L580,514L580,557L565,557L525,558L522,543L508,543L508,529L464,529L464,515L443,514L435,495L422,485L421,471L421,443L436,443L436,429L455,429L455,415L482,415L507,415L507,429L540,435Z",cx:496,cy:477},{name:"Curry",path:"M30,820L20,810L20,798L14,785L12,773L14,759L15,745L19,732L17,720L10,706L3,692L9,675L19,669L37,670L46,680L51,692L49,706L53,718L68,716L77,707L87,700L101,702L88,726L84,738L75,748L65,756L62,770L75,773L87,787L86,799L84,812L83,825L63,830L48,829L36,827L30,820Z",cx:54,cy:745},{name:"Deschutes",path:"M317,530L326,520L333,510L337,498L342,484L341,471L336,460L335,447L355,442L386,442L400,442L416,443L421,464L422,479L435,485L435,514L464,515L464,529L508,529L508,543L522,543L522,558L565,557L566,572L508,572L449,571L436,571L393,571L378,571L313,570L316,558L319,545L317,530Z",cx:373,cy:508},{name:"Douglas",path:"M107,635L100,623L101,608L101,595L95,580L89,564L77,563L62,563L48,562L52,546L57,520L82,522L92,513L108,509L122,514L132,523L153,533L176,539L178,561L181,579L195,579L220,579L224,597L238,597L252,597L281,598L297,598L306,608L313,620L312,633L306,643L301,659L278,660L263,671L244,680L234,689L222,696L215,706L196,706L176,709L164,716L145,711L129,716L119,709L105,706L94,699L91,684L91,666L99,652L107,637L107,635Z",cx:178,cy:633},{name:"Gilliam",path:"M476,221L493,227L513,225L527,222L543,212L551,229L551,257L551,278L551,300L565,300L565,314L580,314L580,329L562,331L548,332L536,331L494,331L499,318L489,307L488,292L492,280L495,267L509,260L505,248L494,236L485,228L476,221Z",cx:507,cy:273},{name:"Grant",path:"M590,343L605,343L633,342L650,342L675,341L707,340L725,340L736,345L748,343L760,349L756,361L751,373L742,381L732,388L739,398L750,404L746,416L744,429L737,439L734,452L747,462L762,461L763,497L749,498L721,498L695,498L694,512L680,513L599,514L593,471L593,457L593,443L593,419L593,381L590,343Z",cx:718,cy:405},{name:"Harney",path:"M566,579L565,557L580,557L580,514L594,514L680,513L694,512L693,498L721,497L749,498L763,497L765,541L765,568L766,612L768,684L773,789L777,835L739,836L715,838L678,838L652,839L634,839L633,815L632,757L631,714L590,714L561,715L561,687L562,643L566,614L566,579Z",cx:665,cy:645},{name:"Hood River",path:"M371,223L385,227L384,254L379,275L379,290L364,299L353,285L347,275L337,262L329,251L329,234L342,224L354,227L371,223Z",cx:353,cy:254},{name:"Jackson",path:"M236,687L256,680L278,671L277,687L276,719L275,758L275,771L274,789L274,815L273,835L257,835L241,834L221,834L190,834L168,832L158,812L159,785L160,764L161,729L161,717L171,708L188,710L207,706L217,698L229,692L236,687Z",cx:221,cy:727},{name:"Jefferson",path:"M346,369L393,371L424,371L471,372L508,372L507,415L482,415L455,415L455,429L436,429L436,443L421,443L407,442L386,442L359,442L335,442L334,429L340,415L341,399L341,387L339,373L346,369Z",cx:389,cy:403},{name:"Josephine",path:"M160,764L159,785L158,812L157,832L143,833L131,832L116,831L96,831L84,829L85,816L87,802L87,790L84,778L73,770L60,765L66,749L80,747L85,734L97,712L119,709L129,716L144,713L159,713L161,729L160,764Z",cx:101,cy:760},{name:"Klamath",path:"M416,715L433,715L447,715L447,759L447,783L446,840L429,840L410,839L393,839L368,838L330,837L314,837L289,835L273,835L273,815L274,789L275,771L275,758L276,719L277,687L278,671L303,660L304,647L312,633L313,620L306,608L297,598L295,585L305,576L378,571L393,571L393,614L391,654L390,686L390,715L416,715Z",cx:331,cy:676},{name:"Lake",path:"M391,654L391,614L393,571L436,571L449,571L508,571L566,572L566,614L566,643L562,687L561,715L590,715L631,714L632,757L633,815L634,839L589,839L570,839L555,839L535,840L515,840L495,840L479,840L446,840L447,783L447,768L447,715L433,715L416,715L390,715L390,686L391,654Z",cx:509,cy:715},{name:"Lane",path:"M108,509L94,513L85,521L68,521L58,513L60,499L63,483L64,470L65,458L86,453L103,453L127,455L143,455L163,455L176,456L177,470L190,470L208,470L213,456L225,456L239,460L252,466L264,468L277,467L312,464L326,464L339,464L342,476L342,492L336,504L331,517L320,526L318,543L316,558L313,570L302,576L297,587L281,598L259,597L238,597L224,597L224,579L206,579L181,579L178,561L178,543L153,538L139,533L126,523L117,513L108,509Z",cx:221,cy:507},{name:"Lincoln",path:"M74,396L75,377L75,361L81,346L83,331L117,328L115,354L115,378L129,382L128,411L128,429L113,429L111,441L101,448L86,452L71,453L69,437L71,416L73,400L74,396Z",cx:88,cy:402},{name:"Linn",path:"M219,458L208,470L190,470L177,470L177,457L169,448L171,434L173,419L169,407L179,400L191,394L182,385L195,381L207,385L217,378L229,374L242,374L256,379L270,380L283,381L291,391L308,390L322,393L340,394L341,408L339,422L334,435L335,447L334,459L312,463L284,464L272,471L259,469L245,464L230,457L219,458Z",cx:239,cy:419},{name:"Malheur",path:"M912,491L913,503L913,516L907,527L909,571L913,660L915,696L916,726L918,767L921,830L862,832L848,833L816,834L777,835L776,789L770,683L767,612L765,568L764,541L763,497L762,469L771,459L778,444L787,435L803,429L818,429L837,428L847,437L850,452L881,450L893,454L911,459L920,469L917,481L912,491Z",cx:855,cy:517},{name:"Marion",path:"M196,342L193,325L198,312L202,301L214,296L227,293L231,309L231,321L240,331L248,340L257,351L271,356L287,359L349,360L342,371L340,386L322,393L308,390L296,389L283,381L270,380L256,380L245,374L233,374L220,376L207,385L195,383L183,379L189,368L180,360L188,351L196,342Z",cx:239,cy:353},{name:"Morrow",path:"M551,229L551,208L574,202L589,200L597,190L610,192L616,208L616,242L638,242L638,256L650,270L651,299L651,327L650,342L633,342L605,343L590,343L576,343L576,331L580,314L565,314L565,300L551,300L551,278L551,257L551,229Z",cx:598,cy:258},{name:"Multnomah",path:"M213,219L230,220L235,232L245,238L265,244L279,246L291,250L303,244L319,239L331,249L337,262L321,265L289,264L276,264L264,263L251,263L238,267L233,255L224,245L215,236L213,219Z",cx:263,cy:250},{name:"Polk",path:"M196,346L184,356L189,368L183,379L164,383L136,382L117,381L115,354L117,328L143,324L155,324L180,325L193,325L193,339L196,346Z",cx:173,cy:355},{name:"Sherman",path:"M445,236L460,229L471,224L485,228L494,236L503,244L507,257L494,266L489,279L490,292L488,304L495,314L497,326L466,329L462,317L451,310L436,309L432,297L441,289L449,277L454,264L449,253L447,240L445,236Z",cx:472,cy:278},{name:"Tillamook",path:"M161,234L162,246L152,255L149,275L149,290L113,299L110,322L90,326L88,307L90,287L90,275L92,263L94,244L95,227L96,214L122,206L149,208L163,208L149,219L155,231L161,234Z",cx:124,cy:256},{name:"Umatilla",path:"M616,208L616,190L630,187L643,188L655,185L667,175L690,175L732,174L766,173L783,172L784,196L776,210L774,224L769,239L769,253L760,268L741,268L734,281L721,281L708,284L703,298L721,307L721,326L725,340L707,340L675,341L650,342L649,327L651,299L650,270L650,256L638,242L616,242L616,217L616,208Z",cx:702,cy:246},{name:"Union",path:"M774,216L776,203L810,195L811,209L806,223L812,235L814,252L820,266L825,281L837,287L840,301L864,308L871,322L836,323L836,337L812,338L804,329L792,337L777,335L764,335L757,346L745,341L731,341L725,326L721,307L708,307L703,283L721,281L734,281L734,268L752,268L769,261L769,239L768,225L774,216Z",cx:779,cy:294},{name:"Wallowa",path:"M870,310L846,308L840,292L832,280L822,266L819,252L814,235L809,223L806,209L810,195L784,196L783,172L813,172L841,171L855,171L885,169L905,169L911,181L920,191L931,196L944,203L951,217L960,229L953,240L950,252L946,263L938,279L935,292L933,309L899,321L871,322L870,310Z",cx:892,cy:242},{name:"Wasco",path:"M384,254L385,227L396,225L411,231L420,241L432,235L445,236L446,250L455,258L453,272L447,282L439,291L432,306L444,309L459,315L468,324L493,329L495,341L497,357L503,367L471,372L424,371L393,371L350,370L351,358L341,344L351,335L359,325L351,315L355,303L379,299L379,275L379,258L384,254Z",cx:419,cy:304},{name:"Washington",path:"M179,265L149,264L152,250L162,241L155,229L163,208L191,209L206,214L212,233L222,243L231,253L233,266L233,280L220,284L206,281L191,271L179,265Z",cx:198,cy:252},{name:"Wheeler",path:"M494,331L530,331L548,332L562,331L576,331L576,343L590,343L590,371L593,419L593,443L593,457L564,457L564,443L550,443L540,435L509,436L507,415L507,382L503,367L497,357L495,341L494,331Z",cx:527,cy:373},{name:"Yamhill",path:"M149,264L179,265L190,271L202,273L213,281L218,295L205,292L198,301L198,314L191,325L164,324L143,324L117,322L111,299L146,300L149,275L149,264Z",cx:188,cy:296}];
+// ── County map (hero stat-pill "visualize" icons) ────────────────────────────
+const WF_MAP_RAMP = ["#fdf1e2","#fbd9ab","#f3ad55","#e67e22","#b85c00","#7a3800"];
+const WF_MAP_NO_DATA = "#eef1f5";
+const WF_MAP_DARK_STOPS = 3;
+
+function wfVizIconHtml(kind) {
+  const label = kind === 'acres' ? 'Visualize acres burned by county' : 'Visualize structures lost by county';
+  return '<button class="pill-viz-btn" aria-label="' + label + '" onclick="event.stopPropagation();window.__wfOpenCountyMap(\'' + kind + '\')">' +
+    '<svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true">' +
+    '<rect x="1" y="7" width="2.4" height="4" rx=".5" fill="#fbd38d"/>' +
+    '<rect x="4.8" y="4" width="2.4" height="7" rx=".5" fill="#fbd38d"/>' +
+    '<rect x="8.6" y="1.5" width="2.4" height="9.5" rx=".5" fill="#fbd38d"/>' +
+    '</svg></button>';
+}
+
+function wfColorFor(val, max) {
+  if (!val) return WF_MAP_NO_DATA;
+  const t = max > 0 ? Math.sqrt(val / max) : 0;
+  const idx = Math.min(WF_MAP_RAMP.length - 1, Math.floor(t * (WF_MAP_RAMP.length - 1)));
+  return WF_MAP_RAMP[idx];
+}
+
+window.__wfMapMetric = 'destroyed';
+
+window.__wfCloseCountyMap = function() {
+  const overlay = document.getElementById('wf-map-modal-overlay');
+  overlay.classList.remove('open');
+  document.getElementById('wf-county-map').innerHTML = '';
+  document.getElementById('wf-map-toggle').innerHTML = '';
+  document.getElementById('wf-map-toggle').style.display = 'none';
+  document.getElementById('wf-map-legend').innerHTML = '';
+  document.getElementById('wf-map-tooltip').style.display = 'none';
+};
+
+window.__wfOpenCountyMap = function(kind) {
+  const overlay = document.getElementById('wf-map-modal-overlay');
+  const data = window.__wfData;
+  document.getElementById('wf-map-title').textContent =
+    kind === 'acres' ? 'Acres burned by county (large fires, season YTD)' : 'Structures lost by county';
+  const toggleEl = document.getElementById('wf-map-toggle');
+  if (kind === 'structures') {
+    window.__wfMapMetric = 'destroyed';
+    toggleEl.style.display = 'flex';
+    toggleEl.innerHTML = ['threatened','damaged','destroyed'].map(function(m) {
+      const active = m === window.__wfMapMetric;
+      return '<button class="' + (active ? 'active' : '') + '" onclick="window.__wfSetMapMetric(\'' + m + '\')">' +
+        m.charAt(0).toUpperCase() + m.slice(1) + '</button>';
+    }).join('');
+  } else {
+    toggleEl.style.display = 'none';
+    toggleEl.innerHTML = '';
+  }
+  document.getElementById('wf-map-footnote').textContent = kind === 'acres'
+    ? 'Source: WFIGS, large fires only (matches the Total Acres YTD tile), excludes complex-fire child records to avoid double counting. Complex fires are attributed to a single administrative county even though their perimeters can cross into neighboring counties.'
+    : 'Source: NWCC Large Fire Public Information, matched to WFIGS incidents by fire name. Threatened reflects active fires only; damaged and destroyed are season-to-date.';
+  overlay.classList.add('open');
+  wfDrawCountyMap(kind);
+};
+
+window.__wfSetMapMetric = function(m) {
+  window.__wfMapMetric = m;
+  document.querySelectorAll('#wf-map-toggle button').forEach(function(b) {
+    b.classList.toggle('active', b.textContent.toLowerCase() === m);
+  });
+  wfDrawCountyMap('structures');
+};
+
+function wfDrawCountyMap(kind) {
+  const svg = document.getElementById('wf-county-map');
+  svg.innerHTML = '';
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const g = document.createElementNS(svgNS, 'g');
+  const labelLayer = document.createElementNS(svgNS, 'g');
+  svg.appendChild(g);
+  svg.appendChild(labelLayer);
+  const tooltip = document.getElementById('wf-map-tooltip');
+  const wrap = document.getElementById('wf-map-wrap');
+  const data = window.__wfData || {};
+  const acresMap = data.county_acres_map || {};
+  const structMap = data.county_structures_map || {};
+  const metric = window.__wfMapMetric;
+
+  function valueFor(name) {
+    if (kind === 'acres') return acresMap[name] || 0;
+    const rec = structMap[name];
+    return rec ? (rec[metric] || 0) : 0;
+  }
+
+  let max = 0;
+  OR_COUNTIES.forEach(function(c) { max = Math.max(max, valueFor(c.name)); });
+
+  OR_COUNTIES.forEach(function(c) {
+    const val = valueFor(c.name);
+    const path = document.createElementNS(svgNS, 'path');
+    path.setAttribute('d', c.path);
+    path.setAttribute('fill', wfColorFor(val, max));
+    path.setAttribute('stroke', '#fff');
+    path.setAttribute('stroke-width', '1.2');
+    path.style.cursor = 'pointer';
+    path.addEventListener('mousemove', function(event) {
+      const rect = wrap.getBoundingClientRect();
+      tooltip.style.left = (event.clientX - rect.left + 14) + 'px';
+      tooltip.style.top = (event.clientY - rect.top - 10) + 'px';
+      tooltip.style.display = 'block';
+      if (kind === 'acres') {
+        tooltip.innerHTML = '<strong>' + c.name + ' county</strong><br>' + val.toLocaleString() + ' ac';
+      } else {
+        const rec = structMap[c.name] || {threatened:0,damaged:0,destroyed:0,fires:[]};
+        const fireLine = rec.fires && rec.fires.length ? rec.fires.join(', ') : 'no reported impact';
+        tooltip.innerHTML = '<strong>' + c.name + ' county</strong><br>Threatened: ' + rec.threatened.toLocaleString() +
+          '<br>Damaged: ' + rec.damaged.toLocaleString() + '<br>Destroyed: ' + rec.destroyed.toLocaleString() +
+          '<br><span style="color:#a0b0c8">' + fireLine + '</span>';
+      }
+    });
+    path.addEventListener('mouseleave', function() { tooltip.style.display = 'none'; });
+    g.appendChild(path);
+
+    if (val > 0) {
+      const t = max > 0 ? Math.sqrt(val / max) : 0;
+      const idx = Math.min(WF_MAP_RAMP.length - 1, Math.floor(t * (WF_MAP_RAMP.length - 1)));
+      const text = document.createElementNS(svgNS, 'text');
+      text.setAttribute('x', c.cx);
+      text.setAttribute('y', c.cy);
+      text.setAttribute('text-anchor', 'middle');
+      text.setAttribute('dominant-baseline', 'central');
+      text.setAttribute('font-weight', '700');
+      text.setAttribute('font-family', "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif");
+      text.setAttribute('font-size', '12px');
+      text.setAttribute('fill', idx >= WF_MAP_DARK_STOPS ? '#fff' : '#4a2c00');
+      text.style.pointerEvents = 'none';
+      text.textContent = val.toLocaleString();
+      labelLayer.appendChild(text);
+    }
+  });
+
+  const legend = document.getElementById('wf-map-legend');
+  legend.innerHTML = '';
+  const noDataSw = document.createElement('div');
+  noDataSw.style.cssText = 'display:flex;align-items:center;gap:5px;';
+  noDataSw.innerHTML = '<span style="width:12px;height:12px;border-radius:3px;background:' + WF_MAP_NO_DATA + ';border:1px solid #c7d0da;display:inline-block;"></span>No data reported';
+  legend.appendChild(noDataSw);
+  WF_MAP_RAMP.forEach(function(c, i) {
+    if (i !== 0 && i !== WF_MAP_RAMP.length - 1) return;
+    const sw = document.createElement('div');
+    sw.style.cssText = 'display:flex;align-items:center;gap:5px;';
+    const labelText = i === WF_MAP_RAMP.length - 1 ? (max.toLocaleString() + (kind === 'acres' ? ' ac max' : ' max')) : '1';
+    sw.innerHTML = '<span style="width:12px;height:12px;border-radius:3px;background:' + c + ';display:inline-block;"></span>' + labelText;
+    legend.appendChild(sw);
+  });
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') window.__wfCloseCountyMap();
+});
 
 // ── ACCORDION ────────────────────────────────────────────────────────────────
 function toggleMonth(btn) {
@@ -1115,6 +1327,7 @@ function renderExecSummary(es) {
 
 // ── RENDER ───────────────────────────────────────────────────────────────────
 function render(pdfs, data) {
+  window.__wfData = data;   // exposed so the county-map modal (opened later, on click) can read it
   renderExecSummary(data && data.exec_summary);
   const histByDate = {};
   if (data && data.historical_data) {
@@ -1278,6 +1491,7 @@ function render(pdfs, data) {
         ${changeBadgeHtml('active_large_fires', 'alf')}
       </div>
       <div class="stat-pill">
+        ${wfVizIconHtml('acres')}
         <div class="val">${fmtAcres(nLargeAcres)}</div>
         <div class="lbl">Total Acres YTD<br><span style="font-size:0.75em;opacity:0.8">(Large Fires)</span></div>
         ${changeBadgeHtml('total_acres_ytd', 'tay')}
@@ -1288,6 +1502,7 @@ function render(pdfs, data) {
         ${changeBadgeHtml('active_fires', 'af')}
       </div>
       <div class="stat-pill">
+        ${wfVizIconHtml('structures')}
         <div class="val">${nStructLost}</div>
         <div class="lbl">Structures Lost<br><span style="font-size:0.72em;opacity:0.75;font-weight:400">May lag news reports</span></div>
         ${changeBadgeHtml('structures_lost', 'stl')}
