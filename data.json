@@ -696,7 +696,7 @@
   "active_large_fires": 22,
   "total_large_fire_acres": 399606.9,
   "structures_lost": 63,
-  "evac_triggering_fires": 12,
+  "evac_triggering_fires": 8,
   "evac_zones": {
     "level3": [
       "0445 CROSSWHITE \u2014 ~4 miles north of Twickenham, Oregon",
