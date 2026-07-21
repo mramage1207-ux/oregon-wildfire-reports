@@ -752,105 +752,463 @@
       "acres": 142936.0,
       "res": 1,
       "comm": 0,
-      "other": 0
+      "other": 0,
+      "fires": [
+        {
+          "name": "ROWE CREEK COMPLEX",
+          "acres": 142936,
+          "status": "Active",
+          "res": 1,
+          "comm": 0,
+          "other": 0
+        }
+      ]
     },
     {
       "county": "Gilliam",
       "acres": 114228.0,
       "res": 51,
       "comm": 0,
-      "other": 0
+      "other": 0,
+      "fires": [
+        {
+          "name": "HAY CREEK COMPLEX",
+          "acres": 112698,
+          "status": "Active",
+          "res": 51,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "518 SULLY",
+          "acres": 640,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "0246 RHEA",
+          "acres": 450,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "0366 CEDAR",
+          "acres": 440,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        }
+      ]
     },
     {
       "county": "Crook",
       "acres": 31373.0,
       "res": 0,
       "comm": 0,
-      "other": 0
+      "other": 0,
+      "fires": [
+        {
+          "name": "0500 COYOTE",
+          "acres": 16688,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "0497 HENRY",
+          "acres": 14335,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "0496",
+          "acres": 350,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        }
+      ]
     },
     {
       "county": "Baker",
       "acres": 24998.0,
       "res": 0,
       "comm": 0,
-      "other": 0
+      "other": 0,
+      "fires": [
+        {
+          "name": "POWDER RIVER",
+          "acres": 20727,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "Anthony",
+          "acres": 2333,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "FRONTAGE",
+          "acres": 1938,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        }
+      ]
     },
     {
       "county": "Umatilla",
       "acres": 20811.0,
       "res": 0,
       "comm": 0,
-      "other": 0
+      "other": 0,
+      "fires": [
+        {
+          "name": "Lower Dry Creek Mutual Aid",
+          "acres": 8096,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "Hagen",
+          "acres": 5121,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "North Cayuse",
+          "acres": 4887,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "Old Emigrant",
+          "acres": 1495,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "Cable Creek",
+          "acres": 610,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "Horse Ridge",
+          "acres": 602,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        }
+      ]
     },
     {
       "county": "Jefferson",
       "acres": 19565.0,
       "res": 1,
       "comm": 0,
-      "other": 0
+      "other": 0,
+      "fires": [
+        {
+          "name": "0494 AKAWA BUTTE",
+          "acres": 10326,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "BREWER",
+          "acres": 5000,
+          "status": "Active",
+          "res": 1,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "0512 BOX SPRINGS",
+          "acres": 4239,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        }
+      ]
     },
     {
       "county": "Jackson",
       "acres": 15074.0,
       "res": 7,
       "comm": 0,
-      "other": 0
+      "other": 0,
+      "fires": [
+        {
+          "name": "E Evans Creek Rd 18000",
+          "acres": 15015,
+          "status": "Active",
+          "res": 7,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "Blackwell Rd 8087",
+          "acres": 48,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "HILT",
+          "acres": 10,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "PP# 342802 UPPER APPLEGATE RD",
+          "acres": 1,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        }
+      ]
     },
     {
       "county": "Malheur",
       "acres": 9801.4,
       "res": 0,
       "comm": 0,
-      "other": 0
+      "other": 0,
+      "fires": [
+        {
+          "name": "LYTLE",
+          "acres": 6052,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "Butterfield Spring Fire",
+          "acres": 2750,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "WHISKEY",
+          "acres": 999,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "AIRPORT",
+          "acres": 0,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        }
+      ]
     },
     {
       "county": "Grant",
       "acres": 7158.0,
       "res": 1,
       "comm": 0,
-      "other": 2
+      "other": 2,
+      "fires": [
+        {
+          "name": "Olive Butte",
+          "acres": 3017,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "BOLOGNA",
+          "acres": 2700,
+          "status": "Active",
+          "res": 1,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "Salmon",
+          "acres": 1441,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 2
+        }
+      ]
     },
     {
       "county": "Harney",
       "acres": 5652.0,
       "res": 0,
       "comm": 0,
-      "other": 0
+      "other": 0,
+      "fires": [
+        {
+          "name": "Egypt",
+          "acres": 4692,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "Hoop",
+          "acres": 960,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        }
+      ]
     },
     {
       "county": "Wasco",
       "acres": 2981.0,
       "res": 0,
       "comm": 0,
-      "other": 0
+      "other": 0,
+      "fires": [
+        {
+          "name": "0231 ZEN",
+          "acres": 1634,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "0380 ANTELOPE CREEK",
+          "acres": 1347,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        }
+      ]
     },
     {
       "county": "Deschutes",
       "acres": 2621.5,
       "res": 0,
       "comm": 0,
-      "other": 0
+      "other": 0,
+      "fires": [
+        {
+          "name": "PINE MOUNTAIN",
+          "acres": 2589,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "0384 COYNER",
+          "acres": 20,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "Riverview Fire",
+          "acres": 12,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        }
+      ]
     },
     {
       "county": "Lake",
       "acres": 1650.0,
       "res": 0,
       "comm": 0,
-      "other": 0
+      "other": 0,
+      "fires": [
+        {
+          "name": "Burnt Creek",
+          "acres": 1650,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        }
+      ]
     },
     {
       "county": "Wallowa",
       "acres": 511.0,
       "res": 0,
       "comm": 0,
-      "other": 0
+      "other": 0,
+      "fires": [
+        {
+          "name": "INC 302",
+          "acres": 511,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        }
+      ]
     },
     {
       "county": "Klamath",
       "acres": 247.0,
       "res": 0,
       "comm": 0,
-      "other": 0
+      "other": 0,
+      "fires": [
+        {
+          "name": "Loveless",
+          "acres": 247,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        }
+      ]
     }
   ],
   "county_acres_map": {
