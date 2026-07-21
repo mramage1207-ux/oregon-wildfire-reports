@@ -676,7 +676,7 @@ window.__wfOpenCountyMap = function(kind) {
   const overlay = document.getElementById('wf-map-modal-overlay');
   const data = window.__wfData;
   document.getElementById('wf-map-title').textContent =
-    kind === 'acres' ? 'Acres burned by county (large fires, season YTD)' : 'Structures lost by county';
+    kind === 'acres' ? 'Acres burned by county (large fires, season YTD)' : 'Structure impact by county';
   const toggleEl = document.getElementById('wf-map-toggle');
   if (kind === 'structures') {
     window.__wfMapMetric = 'destroyed';
