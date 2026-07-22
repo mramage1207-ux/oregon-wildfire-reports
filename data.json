@@ -1,9 +1,9 @@
 {
   "last_updated": "2026-07-22",
-  "report_time": "9:21 AM PDT",
+  "report_time": "9:46 AM PDT",
   "current_active_fires": 77,
   "current_acres_burned": 410181.65,
-  "current_report_time": "9:21 AM PDT",
+  "current_report_time": "9:46 AM PDT",
   "change_vs_prior_morning": {
     "prior_date": "2026-07-21",
     "active_large_fires": {
@@ -49,10 +49,10 @@
       "pct": 21.9
     },
     "structures_lost": {
-      "current": 63,
+      "current": 93,
       "prior": 20,
-      "delta": 43,
-      "pct": 215.0
+      "delta": 73,
+      "pct": 365.0
     }
   },
   "change_vs_7d_ago": {
@@ -100,9 +100,9 @@
       "pct": 1098.8
     },
     "structures_lost": {
-      "current": 63,
+      "current": 93,
       "prior": 0,
-      "delta": 63,
+      "delta": 93,
       "pct": null
     }
   },
@@ -151,9 +151,9 @@
       "pct": 5014.1
     },
     "structures_lost": {
-      "current": 63,
+      "current": 93,
       "prior": 0,
-      "delta": 63,
+      "delta": 93,
       "pct": null
     }
   },
@@ -683,7 +683,7 @@
         0,
         19,
         20,
-        63
+        93
       ]
     }
   },
@@ -695,7 +695,7 @@
   },
   "active_large_fires": 23,
   "total_large_fire_acres": 449321.9,
-  "structures_lost": 63,
+  "structures_lost": 93,
   "evac_triggering_fires": 8,
   "evac_zones": {
     "level3": [
@@ -736,18 +736,18 @@
   "evac_addresses_l3": 471,
   "struct_loss": {
     "oregon_totals": {
-      "res_threatened": 12022,
+      "res_threatened": 12767,
       "res_damaged": 0,
-      "res_destroyed": 61,
+      "res_destroyed": 49,
       "comm_threatened": 0,
       "comm_damaged": 0,
-      "comm_destroyed": 0,
+      "comm_destroyed": 2,
       "minor_threatened": 0,
       "minor_damaged": 0,
-      "minor_destroyed": 2,
-      "total_threatened": 12022,
+      "minor_destroyed": 42,
+      "total_threatened": 12767,
       "total_damaged": 0,
-      "total_destroyed": 63
+      "total_destroyed": 93
     }
   },
   "county_structure_data": [
@@ -771,7 +771,7 @@
     {
       "county": "Gilliam",
       "acres": 117661.0,
-      "res": 51,
+      "res": 32,
       "comm": 0,
       "other": 0,
       "fires": [
@@ -779,7 +779,7 @@
           "name": "HAY CREEK COMPLEX",
           "acres": 116131,
           "status": "Active",
-          "res": 51,
+          "res": 32,
           "comm": 0,
           "other": 0
         },
@@ -812,7 +812,7 @@
     {
       "county": "Jefferson",
       "acres": 53880.0,
-      "res": 1,
+      "res": 2,
       "comm": 0,
       "other": 0,
       "fires": [
@@ -836,7 +836,7 @@
           "name": "0512 BOX SPRINGS",
           "acres": 12343,
           "status": "Active",
-          "res": 0,
+          "res": 1,
           "comm": 0,
           "other": 0
         }
@@ -911,17 +911,17 @@
     {
       "county": "Umatilla",
       "acres": 21384.0,
-      "res": 0,
-      "comm": 0,
-      "other": 0,
+      "res": 6,
+      "comm": 2,
+      "other": 40,
       "fires": [
         {
           "name": "Lower Dry Creek Mutual Aid",
           "acres": 8096,
           "status": "Contained",
-          "res": 0,
-          "comm": 0,
-          "other": 0
+          "res": 6,
+          "comm": 2,
+          "other": 40
         },
         {
           "name": "Hagen",
@@ -1242,16 +1242,17 @@
   },
   "county_structures_map": {
     "Jefferson": {
-      "threatened": 1186,
+      "threatened": 1884,
       "damaged": 0,
-      "destroyed": 1,
+      "destroyed": 2,
       "fires": [
         "0494 AKAWA BUTTE",
+        "0512 BOX SPRINGS",
         "BREWER"
       ]
     },
     "Baker": {
-      "threatened": 366,
+      "threatened": 365,
       "damaged": 0,
       "destroyed": 0,
       "fires": [
@@ -1269,7 +1270,7 @@
       ]
     },
     "Jackson": {
-      "threatened": 9589,
+      "threatened": 9689,
       "damaged": 0,
       "destroyed": 7,
       "fires": [
@@ -1277,23 +1278,17 @@
       ]
     },
     "Umatilla": {
-      "threatened": 532,
+      "threatened": 592,
       "damaged": 0,
-      "destroyed": 0,
+      "destroyed": 48,
       "fires": [
-        "Hagen"
-      ]
-    },
-    "Harney": {
-      "threatened": 15,
-      "damaged": 0,
-      "destroyed": 0,
-      "fires": [
-        "Egypt"
+        "Hagen",
+        "Horse Ridge",
+        "Lower Dry Creek Mutual Aid"
       ]
     },
     "Grant": {
-      "threatened": 161,
+      "threatened": 123,
       "damaged": 0,
       "destroyed": 3,
       "fires": [
@@ -1303,7 +1298,7 @@
       ]
     },
     "Lake": {
-      "threatened": 1,
+      "threatened": 6,
       "damaged": 0,
       "destroyed": 0,
       "fires": [
@@ -1311,16 +1306,15 @@
       ]
     },
     "Gilliam": {
-      "threatened": 55,
+      "threatened": 0,
       "damaged": 0,
-      "destroyed": 51,
+      "destroyed": 32,
       "fires": [
-        "518 SULLY",
         "HAY CREEK COMPLEX"
       ]
     },
     "Wheeler": {
-      "threatened": 9,
+      "threatened": 0,
       "damaged": 0,
       "destroyed": 1,
       "fires": [
@@ -2185,7 +2179,7 @@
       "year": 2026,
       "total_fires": 42,
       "total_acres": 449321.9,
-      "total_structures_destroyed": 63,
+      "total_structures_destroyed": 93,
       "fatalities": 0,
       "injuries": 0,
       "largest_fire": {
