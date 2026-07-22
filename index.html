@@ -1451,7 +1451,16 @@ function render(pdfs, data) {
   // "_1100"/"_1400"/"_1800" runs — causing the hero tile to show hours-old numbers next to a
   // same-day PDF with the correct current count. data.current_active_fires has no such gap.
   const heroActiveFires = (data && data.current_active_fires != null) ? data.current_active_fires : latest.active_fires;
-  const heroReportTime  = (data && data.current_report_time) ? data.current_report_time : data.report_time;
+  // Fixed 2026-07-22: only show report time when data.json's last_updated matches the
+  // latest PDF's date. During GitHub Pages CDN propagation (~1-3 min after a push),
+  // the GitHub Contents API immediately reflects the new PDF while the CDN still serves
+  // the old data.json. If we unconditionally used data.current_report_time, the hero
+  // would briefly show yesterday's PM time alongside today's date (the bug Matt
+  // screenshotted at 8:33 AM July 22 — "July 22, 2026 · Updated at 4:01 PM PDT").
+  // When the dates don't match, suppress the time badge; it'll appear once CDN catches up.
+  const heroReportTime  = (data && data.last_updated === latest.date_iso)
+    ? (data.current_report_time || data.report_time || null)
+    : null;
 
   // Added 2026-07-16 at Matt's request: change badges vs the prior day's MORNING
   // report for Active Large Fires, Active Evac-Triggering Fires, and Level 1/2/3
@@ -1478,7 +1487,22 @@ function render(pdfs, data) {
   function sparklineSvg(metric, range) {
     const hist = trendHistory[metric];
     if (!hist || !hist.values || hist.values.length < 2) return '';
-    const n = range === '7d' ? 7 : 30;
+    // Fixed 2026-07-22 (Matt flagged "something looks off with the 7D sparklines"):
+    // two bugs, both stemming from the same off-by-one. (1) window size: a
+    // "7D" span running from 7-days-ago through today is 8 calendar days of
+    // data, not 7 — the old `n = 7` sliced only the last 6 days of movement
+    // (today back through 6 days ago), so the sparkline's leftmost point never
+    // actually lined up with the "vs X on [7-days-ago date]" caption right
+    // below it. Same bug for 30D (`n = 30` should be 31). (2) trend color: the
+    // line's up/down color was computed from its own visible endpoints
+    // (vals[last] vs vals[0]) instead of the SAME delta already shown in the
+    // badge above it. Those can disagree — e.g. a metric that spiked mid-week
+    // then eased off can show a declining (green) line right next to a rising
+    // (red, "+27") badge for the full 7-day comparison, which reads as a
+    // contradiction/error. Fix: size the window to N+1 points, and color by
+    // rangeData's own delta sign (falling back to the endpoint comparison
+    // only if that delta isn't available).
+    const n = range === '7d' ? 8 : 31;
     const vals = hist.values.slice(-n).filter(v => v != null);
     if (vals.length < 2) return '';
     const w = 68, h = 18, pad = 2;
@@ -1490,7 +1514,9 @@ function render(pdfs, data) {
       const y = h - pad - ((v - min) / span) * (h - pad * 2);
       return `${x.toFixed(1)},${y.toFixed(1)}`;
     }).join(' ');
-    const trendUp = vals[vals.length - 1] >= vals[0];
+    const rd = rangeData[range];
+    const c = rd && rd[metric];
+    const trendUp = (c && c.delta != null) ? c.delta > 0 : (vals[vals.length - 1] >= vals[0]);
     const stroke = trendUp ? '#F7C1C1' : '#C0DD97';
     return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" style="display:block;margin:5px auto 0;" aria-hidden="true"><polyline points="${pts}" fill="none" stroke="${stroke}" stroke-width="1.6"/></svg>`;
   }
