@@ -727,6 +727,13 @@ function wfDrawCountyMap(kind) {
     return rec ? (rec[metric] || 0) : 0;
   }
 
+  // All displayed values are whole numbers — county acre sums (and structure
+  // counts) can carry fractional acreage from individual fire records, but a
+  // choropleth label showing "7,099.2 ac" reads as false precision. Round at
+  // the point of display only; the underlying data/tooltip math elsewhere is
+  // untouched. Added 2026-07-24 per Matt.
+  function fmt(n) { return Math.round(n).toLocaleString(); }
+
   let max = 0;
   OR_COUNTIES.forEach(function(c) { max = Math.max(max, valueFor(c.name)); });
 
@@ -744,12 +751,12 @@ function wfDrawCountyMap(kind) {
       tooltip.style.top = (event.clientY - rect.top - 10) + 'px';
       tooltip.style.display = 'block';
       if (kind === 'acres') {
-        tooltip.innerHTML = '<strong>' + c.name + ' county</strong><br>' + val.toLocaleString() + ' ac';
+        tooltip.innerHTML = '<strong>' + c.name + ' county</strong><br>' + fmt(val) + ' ac';
       } else {
         const rec = structMap[c.name] || {threatened:0,damaged:0,destroyed:0,fires:[]};
         const fireLine = rec.fires && rec.fires.length ? rec.fires.join(', ') : 'no reported impact';
-        tooltip.innerHTML = '<strong>' + c.name + ' county</strong><br>Threatened: ' + rec.threatened.toLocaleString() +
-          '<br>Damaged: ' + rec.damaged.toLocaleString() + '<br>Destroyed: ' + rec.destroyed.toLocaleString() +
+        tooltip.innerHTML = '<strong>' + c.name + ' county</strong><br>Threatened: ' + fmt(rec.threatened) +
+          '<br>Damaged: ' + fmt(rec.damaged) + '<br>Destroyed: ' + fmt(rec.destroyed) +
           '<br><span style="color:#a0b0c8">' + fireLine + '</span>';
       }
     });
@@ -759,17 +766,41 @@ function wfDrawCountyMap(kind) {
     if (val > 0) {
       const t = max > 0 ? Math.sqrt(val / max) : 0;
       const idx = Math.min(WF_MAP_RAMP.length - 1, Math.floor(t * (WF_MAP_RAMP.length - 1)));
+      const label = fmt(val);
+      // Center + size the label against the county SHAPE's actual rendered
+      // bounding box (getBBox), not the hand-picked c.cx/c.cy centroid — for
+      // irregular/narrow counties (e.g. Wasco, which has a reservation-shaped
+      // notch) the nominal centroid can sit close enough to an edge that a
+      // wide label spills across the county line into a neighbor. The bbox
+      // center is always inside the shape's own extent, and the font size is
+      // shrunk to fit the label within ~80% of the shape's rendered width (and
+      // ~55% of its height) so longer numbers stay contained. Added 2026-07-24
+      // per Matt after "151,202"-style labels were seen overflowing.
+      let bx = c.cx, by = c.cy, bw = 40, bh = 40;
+      try {
+        const bbox = path.getBBox();
+        if (bbox && bbox.width > 0 && bbox.height > 0) {
+          bx = bbox.x + bbox.width / 2;
+          by = bbox.y + bbox.height / 2;
+          bw = bbox.width;
+          bh = bbox.height;
+        }
+      } catch (e) {}
+      const charWidthFactor = 0.62;
+      const fontSizeForWidth = (bw * 0.8) / Math.max(1, label.length * charWidthFactor);
+      const fontSizeForHeight = bh * 0.55;
+      const fontSize = Math.max(7, Math.min(12, fontSizeForWidth, fontSizeForHeight));
       const text = document.createElementNS(svgNS, 'text');
-      text.setAttribute('x', c.cx);
-      text.setAttribute('y', c.cy);
+      text.setAttribute('x', bx);
+      text.setAttribute('y', by);
       text.setAttribute('text-anchor', 'middle');
       text.setAttribute('dominant-baseline', 'central');
       text.setAttribute('font-weight', '700');
       text.setAttribute('font-family', "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif");
-      text.setAttribute('font-size', '12px');
+      text.setAttribute('font-size', fontSize.toFixed(1) + 'px');
       text.setAttribute('fill', idx >= WF_MAP_DARK_STOPS ? '#fff' : '#4a2c00');
       text.style.pointerEvents = 'none';
-      text.textContent = val.toLocaleString();
+      text.textContent = label;
       labelLayer.appendChild(text);
     }
   });
@@ -784,7 +815,7 @@ function wfDrawCountyMap(kind) {
     if (i !== 0 && i !== WF_MAP_RAMP.length - 1) return;
     const sw = document.createElement('div');
     sw.style.cssText = 'display:flex;align-items:center;gap:5px;';
-    const labelText = i === WF_MAP_RAMP.length - 1 ? (max.toLocaleString() + (kind === 'acres' ? ' ac max' : ' max')) : '1';
+    const labelText = i === WF_MAP_RAMP.length - 1 ? (fmt(max) + (kind === 'acres' ? ' ac max' : ' max')) : '1';
     sw.innerHTML = '<span style="width:12px;height:12px;border-radius:3px;background:' + c + ';display:inline-block;"></span>' + labelText;
     legend.appendChild(sw);
   });
