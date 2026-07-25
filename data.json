@@ -2751,6 +2751,33 @@
   },
   "map_fires": [
     {
+      "name": "0445 CROSSWHITE",
+      "county": "Wheeler",
+      "lat": 44.803333,
+      "lon": -120.199167,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 123822.0
+    },
+    {
+      "name": "0449 PORCUPINE RIDGE",
+      "county": "Gilliam",
+      "lat": 45.18894,
+      "lon": -120.350257,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 80055.0
+    },
+    {
+      "name": "HOAG (0476)",
+      "county": "Gilliam",
+      "lat": 45.585568,
+      "lon": -120.383722,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 50224.0
+    },
+    {
       "name": "BREWER",
       "county": "Jefferson",
       "lat": 44.588568,
@@ -2805,6 +2832,15 @@
       "acres": 15705.0
     },
     {
+      "name": "0460 HOPKIN",
+      "county": "Gilliam",
+      "lat": 45.336333,
+      "lon": -120.24295,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 11366.0
+    },
+    {
       "name": "Stubble",
       "county": "Harney",
       "lat": 43.18,
@@ -2812,6 +2848,24 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 10230.0
+    },
+    {
+      "name": "0446 CAMEL HUMP",
+      "county": "Wheeler",
+      "lat": 44.761667,
+      "lon": -120.052,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 6611.0
+    },
+    {
+      "name": "COW",
+      "county": "Malheur",
+      "lat": 44.361667,
+      "lon": -117.5103,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 5997.0
     },
     {
       "name": "0494 AKAWA BUTTE",
@@ -2904,6 +2958,15 @@
       "acres": 2426.0
     },
     {
+      "name": "188",
+      "county": "Malheur",
+      "lat": 44.352533,
+      "lon": -117.621967,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 1500.0
+    },
+    {
       "name": "Salmon",
       "county": "Grant",
       "lat": 44.713292,
@@ -2994,6 +3057,33 @@
       "acres": 8096.0
     },
     {
+      "name": "0485",
+      "county": "Wasco",
+      "lat": 44.894667,
+      "lon": -120.87,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 8089.0
+    },
+    {
+      "name": "0584 COTTONWOOD",
+      "county": "Gilliam",
+      "lat": 45.453167,
+      "lon": -120.427583,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 8000.0
+    },
+    {
+      "name": "0450 COVE CREEK",
+      "county": "Wheeler",
+      "lat": 44.88679,
+      "lon": -120.336253,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 7208.0
+    },
+    {
       "name": "LYTLE",
       "county": "Malheur",
       "lat": 43.960372,
@@ -3030,6 +3120,15 @@
       "acres": 2589.0
     },
     {
+      "name": "0432",
+      "county": "Wasco",
+      "lat": 45.0036,
+      "lon": -120.752,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 2183.0
+    },
+    {
       "name": "FRONTAGE",
       "county": "Baker",
       "lat": 44.304831,
@@ -3037,6 +3136,15 @@
       "status": "Contained",
       "triggered_evacuation": false,
       "acres": 1938.0
+    },
+    {
+      "name": "0502",
+      "county": "Wheeler",
+      "lat": 44.829331,
+      "lon": -120.297013,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 1816.0
     },
     {
       "name": "0231 ZEN",
@@ -3084,6 +3192,15 @@
       "acres": 960.0
     },
     {
+      "name": "0501 PAT'S CABIN",
+      "county": "Wheeler",
+      "lat": 44.744019,
+      "lon": -120.356115,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 772.0
+    },
+    {
       "name": "518 SULLY",
       "county": "Gilliam",
       "lat": 45.75568,
@@ -3118,6 +3235,15 @@
       "status": "Contained",
       "triggered_evacuation": false,
       "acres": 440.0
+    },
+    {
+      "name": "0489 PARRISH",
+      "county": "Wheeler",
+      "lat": 44.77574,
+      "lon": -119.826947,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 404.0
     },
     {
       "name": "0496",
@@ -3172,6 +3298,15 @@
       "status": "Contained",
       "triggered_evacuation": true,
       "acres": 9.8
+    },
+    {
+      "name": "0480 WILCOX",
+      "county": "Sherman",
+      "lat": 45.119131,
+      "lon": -120.575101,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 1.0
     },
     {
       "name": "PP# 342802 UPPER APPLEGATE RD",

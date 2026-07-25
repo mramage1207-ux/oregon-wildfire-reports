@@ -1005,21 +1005,41 @@ function drawMap(fires) {
   // rows down doesn't look orphaned from its fire.
   const placedLabelBoxes=[];
   const boxesOverlap=(a,b)=>!(a.x+a.w<b.x-1||b.x+b.w<a.x-1||a.y+a.h<b.y-1||b.y+b.h<a.y-1);
-  const placeActiveLabel=(fx,fy,name,fill,hasEvac)=>{
+  const placeActiveLabel=(fx,fy,name,fill,hasEvac,r)=>{
     const labelFontSize=5.5, boxH=9;
     const lw=measureTextWidth(name,labelFontSize,'bold')+4;
-    let boxX=fx+13, boxY=fy-1, tries=0;
+    let boxX=fx+r+8.5, boxY=fy-1, tries=0;
     while(tries<40 && placedLabelBoxes.some(b=>boxesOverlap({x:boxX,y:boxY,w:lw,h:boxH},b))){
       boxY+=boxH+1.5;
       tries++;
     }
     placedLabelBoxes.push({x:boxX,y:boxY,w:lw,h:boxH});
     const g=el('g',{});
-    if(Math.abs(boxY-(fy-1))>0.5||Math.abs(boxX-(fx+13))>0.5){
-      g.appendChild(el('line',{x1:fx+4.5,y1:fy,x2:boxX,y2:boxY+boxH/2,stroke:fill,'stroke-width':'0.4','stroke-dasharray':'1.5,1'}));
+    if(Math.abs(boxY-(fy-1))>0.5||Math.abs(boxX-(fx+r+8.5))>0.5){
+      g.appendChild(el('line',{x1:fx+r,y1:fy,x2:boxX,y2:boxY+boxH/2,stroke:fill,'stroke-width':'0.4','stroke-dasharray':'1.5,1'}));
     }
     g.appendChild(drawLabelBox(boxX,boxY,lw,boxH,name,fill,hasEvac));
     return g;
+  };
+  // Marker radius scaled to fire acreage (proportional-symbol map: radius
+  // scaled by sqrt(acres) so rendered AREA — the visual quantity a reader
+  // actually perceives — is proportional to acreage, not radius itself; a
+  // straight linear-radius scale would make a fire 100x the size of another
+  // look ~100x bigger on screen instead of the correct ~10x). Floor is the
+  // pre-2026-07-24 fixed radius (4.5) so no fire ever renders smaller than it
+  // used to; capped at 13 so a single very large individual fire can't start
+  // to swallow its county and its neighbors on this small a map. Complex (CX)
+  // records never reach this function — map_fires excludes them entirely
+  // (they share a placeholder off-map lat/lon, see the comment where
+  // map_fires is built) — so this is really only ever bounding one real large
+  // fire, not a multi-hundred-thousand-acre complex total. Added 2026-07-24
+  // per Matt.
+  const MARKER_R_MIN=4.5, MARKER_R_MAX=13;
+  const maxFireAcres=Math.max(1, ...fires.map(f=>f.acres||0));
+  const radiusFor=acres=>{
+    const a=Math.max(0, acres||0);
+    const t=Math.sqrt(a/maxFireAcres);
+    return MARKER_R_MIN+(MARKER_R_MAX-MARKER_R_MIN)*t;
   };
   const drawFireMarker=f=>{
     let lon=f.lon, lat=f.lat;
@@ -1028,19 +1048,23 @@ function drawMap(fires) {
     const [fx,fy]=proj(lon,lat);
     const isActive=f.status==='Active', hasEvac=f.triggered_evacuation;
     const fill=isActive?'#CC2200':'#228B22';
+    const r=radiusFor(f.acres);
     const marker=el('g',{});
-    marker.appendChild(el('circle',{cx:fx,cy:fy,r:'4.5',fill,stroke:'white','stroke-width':'0.8'}));
+    marker.appendChild(el('circle',{cx:fx,cy:fy,r:r.toFixed(1),fill,stroke:'white','stroke-width':'0.8'}));
     if(hasEvac){
-      marker.appendChild(el('text',{x:fx,y:fy+1.9,'text-anchor':'middle','font-size':'5.8','font-weight':'bold',fill:'white'},'E'));
+      const evacFs=Math.min(9, 5.8*(r/MARKER_R_MIN));
+      marker.appendChild(el('text',{x:fx,y:fy+evacFs*0.33,'text-anchor':'middle','font-size':evacFs.toFixed(1),'font-weight':'bold',fill:'white'},'E'));
     }
     svg.appendChild(marker);
     if(isActive){
-      svg.appendChild(placeActiveLabel(fx,fy,f.name,fill,hasEvac));
+      svg.appendChild(placeActiveLabel(fx,fy,f.name,fill,hasEvac,r));
       return;
     }
     // Contained fire: hover/tap-to-reveal label, wider invisible hit target
-    // so the label is easy to trigger without pinpointing the small dot.
-    const hit=el('circle',{cx:fx,cy:fy,r:'8',fill:'transparent'});
+    // (scales with marker size, floor 8 — same as the pre-scaling fixed
+    // value) so the label is easy to trigger without pinpointing the dot.
+    const hitR=Math.max(8, r+3.5);
+    const hit=el('circle',{cx:fx,cy:fy,r:hitR.toFixed(1),fill:'transparent'});
     hit.style.cursor='pointer';
     marker.appendChild(hit);
     let labelEl=null;
@@ -1048,7 +1072,7 @@ function drawMap(fires) {
       if(labelEl) return;
       const labelFontSize=5.5, boxH=9;
       const lw=measureTextWidth(f.name,labelFontSize,'bold')+4;
-      labelEl=drawLabelBox(fx+13,fy-1,lw,boxH,f.name,fill,hasEvac);
+      labelEl=drawLabelBox(fx+r+8.5,fy-1,lw,boxH,f.name,fill,hasEvac);
       svg.appendChild(labelEl);
     });
     marker.addEventListener('mouseleave',()=>{
@@ -1077,7 +1101,7 @@ function drawMap(fires) {
 
   // Legend panel (left strip)
   const lx=5, ly=Math.round(H/2)-46;
-  svg.appendChild(el('rect',{x:lx,y:ly,width:LEGEND_W-10,height:100,fill:'white',stroke:'#ccc','stroke-width':'0.6','rx':'3'}));
+  svg.appendChild(el('rect',{x:lx,y:ly,width:LEGEND_W-10,height:112,fill:'white',stroke:'#ccc','stroke-width':'0.6','rx':'3'}));
   svg.appendChild(el('circle',{cx:lx+10,cy:ly+14,r:'4',fill:'#CC2200',stroke:'white','stroke-width':'0.6'}));
   svg.appendChild(el('text',{x:lx+19,y:ly+18,'font-size':'6.5',fill:'#334'},'Active Fire'));
   svg.appendChild(el('circle',{cx:lx+10,cy:ly+30,r:'4',fill:'#228B22',stroke:'white','stroke-width':'0.6'}));
@@ -1089,6 +1113,7 @@ function drawMap(fires) {
   svg.appendChild(el('text',{x:lx+19,y:ly+68,'font-size':'6.5',fill:'#334'},'Reference City'));
   svg.appendChild(el('text',{x:lx+5,y:ly+82,'font-size':'5.5',fill:'#888'},'NWCC large fire'));
   svg.appendChild(el('text',{x:lx+5,y:ly+92,'font-size':'5.5',fill:'#888'},'definition applies'));
+  svg.appendChild(el('text',{x:lx+5,y:ly+104,'font-size':'5.5',fill:'#888'},'Pin size = acres'));
 
   // North arrow (top of legend strip)
   const ax=LEGEND_W-10, ay=28;
