@@ -1,16 +1,16 @@
 {
   "last_updated": "2026-07-25",
-  "report_time": "4:01 PM PDT",
-  "current_active_fires": 146,
-  "current_acres_burned": 592980.18,
-  "current_report_time": "4:01 PM PDT",
+  "report_time": "7:14 PM PDT",
+  "current_active_fires": 145,
+  "current_acres_burned": 592979.18,
+  "current_report_time": "7:14 PM PDT",
   "change_vs_prior_morning": {
     "prior_date": "2026-07-24",
     "active_large_fires": {
-      "current": 34,
+      "current": 35,
       "prior": 27,
-      "delta": 7,
-      "pct": 25.9
+      "delta": 8,
+      "pct": 29.6
     },
     "active_evac_fires": {
       "current": 10,
@@ -37,10 +37,10 @@
       "pct": 76.7
     },
     "active_fires": {
-      "current": 146,
+      "current": 145,
       "prior": 155,
-      "delta": -9,
-      "pct": -5.8
+      "delta": -10,
+      "pct": -6.5
     },
     "total_acres_ytd": {
       "current": 669927,
@@ -58,10 +58,10 @@
   "change_vs_7d_ago": {
     "prior_date": "2026-07-18",
     "active_large_fires": {
-      "current": 34,
+      "current": 35,
       "prior": 32,
-      "delta": 2,
-      "pct": 6.2
+      "delta": 3,
+      "pct": 9.4
     },
     "active_evac_fires": {
       "current": 10,
@@ -88,10 +88,10 @@
       "pct": 230.5
     },
     "active_fires": {
-      "current": 146,
+      "current": 145,
       "prior": 121,
-      "delta": 25,
-      "pct": 20.7
+      "delta": 24,
+      "pct": 19.8
     },
     "total_acres_ytd": {
       "current": 669927,
@@ -109,10 +109,10 @@
   "change_vs_30d_ago": {
     "prior_date": "2026-06-25",
     "active_large_fires": {
-      "current": 34,
+      "current": 35,
       "prior": 1,
-      "delta": 33,
-      "pct": 3300.0
+      "delta": 34,
+      "pct": 3400.0
     },
     "active_evac_fires": {
       "current": 10,
@@ -139,10 +139,10 @@
       "pct": null
     },
     "active_fires": {
-      "current": 146,
+      "current": 145,
       "prior": 37,
-      "delta": 109,
-      "pct": 294.6
+      "delta": 108,
+      "pct": 291.9
     },
     "total_acres_ytd": {
       "current": 669927,
@@ -221,7 +221,7 @@
         23,
         25,
         27,
-        34
+        35
       ]
     },
     "active_evac_fires": {
@@ -551,7 +551,7 @@
         77,
         140,
         155,
-        146
+        145
       ]
     },
     "total_acres_ytd": {
@@ -693,7 +693,7 @@
     "escalation": "Level 3 (Go Now) evacuation addresses have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (1,311 \u2192 2,317 since yesterday morning). This is the highest-urgency evacuation tier and reflects real, immediate risk to homes.",
     "closing": "Full details, county-by-county, are in the sections below."
   },
-  "active_large_fires": 34,
+  "active_large_fires": 35,
   "total_large_fire_acres": 669927.2,
   "structures_lost": 90,
   "evac_triggering_fires": 10,
@@ -727,8 +727,7 @@
       "Bench \u2014 ~9 miles west of Metolius, Oregon",
       "Burnt Creek \u2014 ~9 miles southeast of Lakeview, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon",
-      "0586 \u2014 ~6 miles northeast of Gateway, Oregon",
-      "0480 WILCOX \u2014 ~8 miles southeast of Kent, Oregon"
+      "0586 \u2014 ~6 miles northeast of Gateway, Oregon"
     ]
   },
   "evac_addresses_l1": 5724,
@@ -1361,7 +1360,7 @@
         {
           "name": "Riverside OSFM Support",
           "acres": 0,
-          "status": "Contained",
+          "status": "Active",
           "res": 0,
           "comm": 0,
           "other": 0
@@ -2324,8 +2323,8 @@
     },
     {
       "date": "2026-07-25",
-      "active_fires": 155,
-      "acres_burned": 466759.92
+      "active_fires": 145,
+      "acres_burned": 592979.18
     }
   ],
   "historical_seasons": [
@@ -3172,7 +3171,7 @@
       "county": "Linn",
       "lat": null,
       "lon": null,
-      "status": "Contained",
+      "status": "Active",
       "triggered_evacuation": true,
       "acres": 0.0
     },
@@ -3442,7 +3441,7 @@
       "county": "Sherman",
       "lat": 45.119131,
       "lon": -120.575101,
-      "status": "Active",
+      "status": "Contained",
       "triggered_evacuation": true,
       "acres": 1.0
     },
