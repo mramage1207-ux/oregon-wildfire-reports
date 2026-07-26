@@ -1,9 +1,9 @@
 {
   "last_updated": "2026-07-26",
-  "report_time": "8:20 AM PDT",
-  "current_active_fires": 117,
-  "current_acres_burned": 968150.78,
-  "current_report_time": "8:20 AM PDT",
+  "report_time": "4:01 PM PDT",
+  "current_active_fires": 98,
+  "current_acres_burned": 967630.12,
+  "current_report_time": "4:01 PM PDT",
   "change_vs_prior_morning": {
     "prior_date": "2026-07-25",
     "active_large_fires": {
@@ -19,40 +19,40 @@
       "pct": 0.0
     },
     "evac_addresses_l1": {
-      "current": 5858,
+      "current": 6054,
       "prior": 5724,
-      "delta": 134,
-      "pct": 2.3
+      "delta": 330,
+      "pct": 5.8
     },
     "evac_addresses_l2": {
-      "current": 2580,
+      "current": 3082,
       "prior": 2726,
-      "delta": -146,
-      "pct": -5.4
+      "delta": 356,
+      "pct": 13.1
     },
     "evac_addresses_l3": {
-      "current": 2759,
+      "current": 2519,
       "prior": 2317,
-      "delta": 442,
-      "pct": 19.1
+      "delta": 202,
+      "pct": 8.7
     },
     "active_fires": {
-      "current": 117,
+      "current": 98,
       "prior": 145,
-      "delta": -28,
-      "pct": -19.3
+      "delta": -47,
+      "pct": -32.4
     },
     "total_acres_ytd": {
-      "current": 1053674,
+      "current": 1053174,
       "prior": 669927,
-      "delta": 383747,
-      "pct": 57.3
+      "delta": 383247,
+      "pct": 57.2
     },
     "structures_lost": {
-      "current": 90,
+      "current": 97,
       "prior": 90,
-      "delta": 0,
-      "pct": 0.0
+      "delta": 7,
+      "pct": 7.8
     }
   },
   "change_vs_7d_ago": {
@@ -70,39 +70,39 @@
       "pct": -9.1
     },
     "evac_addresses_l1": {
-      "current": 5858,
+      "current": 6054,
       "prior": 2904,
-      "delta": 2954,
-      "pct": 101.7
+      "delta": 3150,
+      "pct": 108.5
     },
     "evac_addresses_l2": {
-      "current": 2580,
+      "current": 3082,
       "prior": 1360,
-      "delta": 1220,
-      "pct": 89.7
+      "delta": 1722,
+      "pct": 126.6
     },
     "evac_addresses_l3": {
-      "current": 2759,
+      "current": 2519,
       "prior": 745,
-      "delta": 2014,
-      "pct": 270.3
+      "delta": 1774,
+      "pct": 238.1
     },
     "active_fires": {
-      "current": 117,
+      "current": 98,
       "prior": 101,
-      "delta": 16,
-      "pct": 15.8
+      "delta": -3,
+      "pct": -3.0
     },
     "total_acres_ytd": {
-      "current": 1053674,
+      "current": 1053174,
       "prior": 251464,
-      "delta": 802210,
-      "pct": 319.0
+      "delta": 801710,
+      "pct": 318.8
     },
     "structures_lost": {
-      "current": 90,
+      "current": 97,
       "prior": 0,
-      "delta": 90,
+      "delta": 97,
       "pct": null
     }
   },
@@ -121,39 +121,39 @@
       "pct": null
     },
     "evac_addresses_l1": {
-      "current": 5858,
+      "current": 6054,
       "prior": 0,
-      "delta": 5858,
+      "delta": 6054,
       "pct": null
     },
     "evac_addresses_l2": {
-      "current": 2580,
+      "current": 3082,
       "prior": 0,
-      "delta": 2580,
+      "delta": 3082,
       "pct": null
     },
     "evac_addresses_l3": {
-      "current": 2759,
+      "current": 2519,
       "prior": 0,
-      "delta": 2759,
+      "delta": 2519,
       "pct": null
     },
     "active_fires": {
-      "current": 117,
+      "current": 98,
       "prior": 34,
-      "delta": 83,
-      "pct": 244.1
+      "delta": 64,
+      "pct": 188.2
     },
     "total_acres_ytd": {
-      "current": 1053674,
+      "current": 1053174,
       "prior": 14838,
-      "delta": 1038836,
-      "pct": 7001.2
+      "delta": 1038336,
+      "pct": 6997.8
     },
     "structures_lost": {
-      "current": 90,
+      "current": 97,
       "prior": 0,
-      "delta": 90,
+      "delta": 97,
       "pct": null
     }
   },
@@ -353,7 +353,7 @@
         6567,
         5563,
         5724,
-        5858
+        6054
       ]
     },
     "evac_addresses_l2": {
@@ -419,7 +419,7 @@
         1495,
         1489,
         2726,
-        2580
+        3082
       ]
     },
     "evac_addresses_l3": {
@@ -485,7 +485,7 @@
         1276,
         1311,
         2317,
-        2759
+        2519
       ]
     },
     "active_fires": {
@@ -551,7 +551,7 @@
         140,
         155,
         145,
-        117
+        98
       ]
     },
     "total_acres_ytd": {
@@ -617,7 +617,7 @@
         498376,
         550472,
         669927,
-        1053674
+        1053174
       ]
     },
     "structures_lost": {
@@ -683,19 +683,19 @@
         71,
         71,
         90,
-        90
+        97
       ]
     }
   },
   "exec_summary": {
     "status": "critical",
-    "headline": "The number of Level 3 (Go Now) evacuation addresses is up 19% (2,317 \u2192 2,759) since yesterday morning. Over the past 7 days, it is up 270% (745 \u2192 2,759).",
-    "escalation": "Level 3 (Go Now) evacuation addresses have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (2,317 \u2192 2,759 since yesterday morning). This is the highest-urgency evacuation tier and reflects real, immediate risk to homes.",
+    "headline": "The number of Level 3 (Go Now) evacuation addresses is up 9% (2,317 \u2192 2,519) since yesterday morning. Over the past 7 days, it is up 238% (745 \u2192 2,519).",
+    "escalation": "Level 3 (Go Now) evacuation addresses have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (2,317 \u2192 2,519 since yesterday morning). This is the highest-urgency evacuation tier and reflects real, immediate risk to homes.",
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 37,
-  "total_large_fire_acres": 1053674.2,
-  "structures_lost": 90,
+  "total_large_fire_acres": 1053174.2,
+  "structures_lost": 97,
   "evac_triggering_fires": 10,
   "evac_zones": {
     "level3": [
@@ -733,23 +733,23 @@
       "0480 WILCOX \u2014 ~8 miles southeast of Kent, Oregon"
     ]
   },
-  "evac_addresses_l1": 5858,
-  "evac_addresses_l2": 2580,
-  "evac_addresses_l3": 2759,
+  "evac_addresses_l1": 6054,
+  "evac_addresses_l2": 3082,
+  "evac_addresses_l3": 2519,
   "struct_loss": {
     "oregon_totals": {
-      "res_threatened": 10748,
-      "res_damaged": 1,
-      "res_destroyed": 22,
+      "res_threatened": 13523,
+      "res_damaged": 2,
+      "res_destroyed": 25,
       "comm_threatened": 0,
       "comm_damaged": 0,
       "comm_destroyed": 0,
       "minor_threatened": 0,
       "minor_damaged": 0,
-      "minor_destroyed": 68,
-      "total_threatened": 10748,
-      "total_damaged": 1,
-      "total_destroyed": 90
+      "minor_destroyed": 72,
+      "total_threatened": 13523,
+      "total_damaged": 2,
+      "total_destroyed": 97
     }
   },
   "county_structure_data": [
@@ -829,7 +829,7 @@
     {
       "county": "Wheeler",
       "acres": 229047.0,
-      "res": 0,
+      "res": 3,
       "comm": 0,
       "other": 0,
       "fires": [
@@ -845,7 +845,7 @@
           "name": "0587 SHINGLE",
           "acres": 30000,
           "status": "Active",
-          "res": 0,
+          "res": 3,
           "comm": 0,
           "other": 0
         }
@@ -897,7 +897,7 @@
       "acres": 101493.0,
       "res": 0,
       "comm": 0,
-      "other": 0,
+      "other": 4,
       "fires": [
         {
           "name": "Coleman Creek",
@@ -913,7 +913,7 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 2
         },
         {
           "name": "Stubble",
@@ -929,7 +929,7 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 2
         },
         {
           "name": "Bald Mountain",
@@ -1237,7 +1237,7 @@
     },
     {
       "county": "Douglas",
-      "acres": 5900.0,
+      "acres": 5400.0,
       "res": 0,
       "comm": 0,
       "other": 0,
@@ -1252,7 +1252,7 @@
         },
         {
           "name": "Castle",
-          "acres": 1400,
+          "acres": 900,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1413,7 +1413,7 @@
     "Umatilla": 35600.0,
     "Jackson": 15639.0,
     "Grant": 13974.0,
-    "Douglas": 5900.0,
+    "Douglas": 5400.0,
     "Lake": 2900.0,
     "Wallowa": 720.0,
     "Wasco": 3704.0,
@@ -1430,6 +1430,25 @@
         "0494 AKAWA BUTTE",
         "0579 TEN MILE",
         "BREWER"
+      ]
+    },
+    "Harney": {
+      "threatened": 1935,
+      "damaged": 1,
+      "destroyed": 4,
+      "fires": [
+        "Bald Mountain",
+        "Jackass Butte",
+        "Second Flat",
+        "Stubble"
+      ]
+    },
+    "Wheeler": {
+      "threatened": 0,
+      "damaged": 0,
+      "destroyed": 3,
+      "fires": [
+        "0587 SHINGLE"
       ]
     },
     "Crook": {
@@ -1478,8 +1497,16 @@
         "Salmon"
       ]
     },
+    "Douglas": {
+      "threatened": 800,
+      "damaged": 0,
+      "destroyed": 0,
+      "fires": [
+        "Grasshopper"
+      ]
+    },
     "Lake": {
-      "threatened": 6,
+      "threatened": 46,
       "damaged": 0,
       "destroyed": 0,
       "fires": [
@@ -2371,8 +2398,8 @@
     {
       "year": 2026,
       "total_fires": 62,
-      "total_acres": 1053674.2,
-      "total_structures_destroyed": 90,
+      "total_acres": 1053174.2,
+      "total_structures_destroyed": 97,
       "fatalities": 0,
       "injuries": 0,
       "largest_fire": {
@@ -2852,6 +2879,11 @@
       "active_fires": 146,
       "acres_burned": 592980.2,
       "should_update": true
+    },
+    "2026-07-26_1600": {
+      "active_fires": 98,
+      "acres_burned": 967630.1,
+      "should_update": true
     }
   },
   "map_fires": [
@@ -3168,7 +3200,7 @@
       "lon": -122.566,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 1400.0
+      "acres": 900.0
     },
     {
       "name": "Horse Ridge",
