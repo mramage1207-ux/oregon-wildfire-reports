@@ -1035,6 +1035,16 @@ function drawMap(fires) {
   // fire, not a multi-hundred-thousand-acre complex total. Added 2026-07-24
   // per Matt.
   const MARKER_R_MIN=4.5, MARKER_R_MAX=13;
+  // Mega-fire blue tier — added 2026-07-27 at Matt's request to flag active
+  // fires >= 100,000 ac. Blue (#0072B2) rather than the originally-requested
+  // bright orange: a deuteranopia/protanopia simulation (Machado-Oliveira-
+  // Fernandes 2009, the standard model) showed orange collapsing toward the
+  // same muted olive/tan as the red and green tiers, making the three-way
+  // distinction unreliable for the ~8% of men with red-green color blindness.
+  // Blue stays clearly distinct from both under every common form of CVD.
+  // Keep in sync with generate_wildfire_report.py's MEGA_FIRE_BLUE color.
+  const MEGA_FIRE_ACRES=100000;
+  const MEGA_FIRE_FILL_HEX='#0072B2';
   const maxFireAcres=Math.max(1, ...fires.map(f=>f.acres||0));
   const radiusFor=acres=>{
     const a=Math.max(0, acres||0);
@@ -1047,7 +1057,8 @@ function drawMap(fires) {
     if(!lon||!lat) return;
     const [fx,fy]=proj(lon,lat);
     const isActive=f.status==='Active', hasEvac=f.triggered_evacuation;
-    const fill=isActive?'#CC2200':'#228B22';
+    const isMega=isActive&&(f.acres||0)>=MEGA_FIRE_ACRES;
+    const fill=isMega?MEGA_FIRE_FILL_HEX:(isActive?'#CC2200':'#228B22');
     const r=radiusFor(f.acres);
     const marker=el('g',{});
     marker.appendChild(el('circle',{cx:fx,cy:fy,r:r.toFixed(1),fill,stroke:'white','stroke-width':'0.8'}));
@@ -1099,21 +1110,25 @@ function drawMap(fires) {
   activeWithPos.sort((a,b)=>a.fy-b.fy||a.fx-b.fx);
   activeWithPos.forEach(({f})=>drawFireMarker(f));
 
-  // Legend panel (left strip)
+  // Legend panel (left strip) — grew by 17px and gained a Mega Fire row on
+  // 2026-07-27 alongside the mega-fire blue tier added above (see
+  // MEGA_FIRE_FILL_HEX). Every row below it shifted down by 17 to make room.
   const lx=5, ly=Math.round(H/2)-46;
-  svg.appendChild(el('rect',{x:lx,y:ly,width:LEGEND_W-10,height:112,fill:'white',stroke:'#ccc','stroke-width':'0.6','rx':'3'}));
-  svg.appendChild(el('circle',{cx:lx+10,cy:ly+14,r:'4',fill:'#CC2200',stroke:'white','stroke-width':'0.6'}));
-  svg.appendChild(el('text',{x:lx+19,y:ly+18,'font-size':'6.5',fill:'#334'},'Active Fire'));
-  svg.appendChild(el('circle',{cx:lx+10,cy:ly+30,r:'4',fill:'#228B22',stroke:'white','stroke-width':'0.6'}));
-  svg.appendChild(el('text',{x:lx+19,y:ly+34,'font-size':'6.5',fill:'#334'},'Contained Fire'));
-  svg.appendChild(el('circle',{cx:lx+10,cy:ly+47,r:'4',fill:'#CC2200',stroke:'white','stroke-width':'0.6'}));
-  svg.appendChild(el('text',{x:lx+10,y:ly+48.8,'text-anchor':'middle','font-size':'5','font-weight':'bold',fill:'white'},'E'));
-  svg.appendChild(el('text',{x:lx+19,y:ly+51,'font-size':'6.5',fill:'#334'},'Evac. Triggered'));
-  svg.appendChild(el('circle',{cx:lx+10,cy:ly+64,r:'2',fill:'#555',stroke:'white','stroke-width':'0.4'}));
-  svg.appendChild(el('text',{x:lx+19,y:ly+68,'font-size':'6.5',fill:'#334'},'Reference City'));
-  svg.appendChild(el('text',{x:lx+5,y:ly+82,'font-size':'5.5',fill:'#888'},'NWCC large fire'));
-  svg.appendChild(el('text',{x:lx+5,y:ly+92,'font-size':'5.5',fill:'#888'},'definition applies'));
-  svg.appendChild(el('text',{x:lx+5,y:ly+104,'font-size':'5.5',fill:'#888'},'Pin size = acres'));
+  svg.appendChild(el('rect',{x:lx,y:ly,width:LEGEND_W-10,height:129,fill:'white',stroke:'#ccc','stroke-width':'0.6','rx':'3'}));
+  svg.appendChild(el('circle',{cx:lx+10,cy:ly+14,r:'4',fill:MEGA_FIRE_FILL_HEX,stroke:'white','stroke-width':'0.6'}));
+  svg.appendChild(el('text',{x:lx+19,y:ly+18,'font-size':'6.5',fill:'#334'},'Mega Fire (100k+ ac)'));
+  svg.appendChild(el('circle',{cx:lx+10,cy:ly+31,r:'4',fill:'#CC2200',stroke:'white','stroke-width':'0.6'}));
+  svg.appendChild(el('text',{x:lx+19,y:ly+35,'font-size':'6.5',fill:'#334'},'Active Fire'));
+  svg.appendChild(el('circle',{cx:lx+10,cy:ly+47,r:'4',fill:'#228B22',stroke:'white','stroke-width':'0.6'}));
+  svg.appendChild(el('text',{x:lx+19,y:ly+51,'font-size':'6.5',fill:'#334'},'Contained Fire'));
+  svg.appendChild(el('circle',{cx:lx+10,cy:ly+64,r:'4',fill:'#CC2200',stroke:'white','stroke-width':'0.6'}));
+  svg.appendChild(el('text',{x:lx+10,y:ly+65.8,'text-anchor':'middle','font-size':'5','font-weight':'bold',fill:'white'},'E'));
+  svg.appendChild(el('text',{x:lx+19,y:ly+68,'font-size':'6.5',fill:'#334'},'Evac. Triggered'));
+  svg.appendChild(el('circle',{cx:lx+10,cy:ly+81,r:'2',fill:'#555',stroke:'white','stroke-width':'0.4'}));
+  svg.appendChild(el('text',{x:lx+19,y:ly+85,'font-size':'6.5',fill:'#334'},'Reference City'));
+  svg.appendChild(el('text',{x:lx+5,y:ly+99,'font-size':'5.5',fill:'#888'},'NWCC large fire'));
+  svg.appendChild(el('text',{x:lx+5,y:ly+109,'font-size':'5.5',fill:'#888'},'definition applies'));
+  svg.appendChild(el('text',{x:lx+5,y:ly+121,'font-size':'5.5',fill:'#888'},'Pin size = acres'));
 
   // North arrow (top of legend strip)
   const ax=LEGEND_W-10, ay=28;
