@@ -1088,6 +1088,43 @@ function drawMap(fires) {
     const t=Math.sqrt(a/maxFireAcres);
     return MARKER_R_MIN+(MARKER_R_MAX-MARKER_R_MIN)*t;
   };
+  // Rich hover tooltip (name / acres / structures-lost breakdown / complex
+  // membership) — added 2026-07-28 per Matt's request, for EVERY fire marker
+  // (active and contained alike), not just the name-only hover that contained
+  // fires already had. Single reusable SVG group, created and appended on
+  // mouseenter and removed on mouseleave — same "no external library"
+  // convention as the rest of this map, positioned near the hovered marker
+  // and clamped to the drawn map rectangle (mx/my/mw/mh) so it can't render
+  // off-canvas near an edge, same clamping idea as placeActiveLabel above.
+  let hoverTooltip=null;
+  const fmtNum=n=>(n||0).toLocaleString();
+  const hideFireTooltip=()=>{ if(hoverTooltip){ hoverTooltip.remove(); hoverTooltip=null; } };
+  const showFireTooltip=(fx,fy,f)=>{
+    hideFireTooltip();
+    const lines=[
+      {text:f.name, bold:true},
+      {text:`${fmtNum(f.acres)} acres · ${f.status}`, bold:false},
+    ];
+    if(f.cpx_name) lines.push({text:`Part of: ${f.cpx_name}`, bold:false});
+    lines.push({text:`Structures lost — Res: ${fmtNum(f.structures_lost_res)}  Comm: ${fmtNum(f.structures_lost_comm)}  Other: ${fmtNum(f.structures_lost_other)}`, bold:false});
+    const fs=6.5, lineH=9, padX=6, padY=6;
+    const w=Math.max(...lines.map(l=>measureTextWidth(l.text,fs,l.bold?'bold':'normal')))+padX*2;
+    const h=lineH*lines.length+padY*2-2;
+    let bx=fx+10, by=fy-h/2;
+    bx=Math.max(mx+2, Math.min(bx, mx+mw-w-2));
+    by=Math.max(my+2, Math.min(by, my+mh-h-2));
+    const g=el('g',{});
+    g.appendChild(el('rect',{x:bx,y:by,width:w,height:h,fill:'#1f2937',opacity:'0.95',rx:'3'}));
+    lines.forEach((l,i)=>{
+      g.appendChild(el('text',{
+        x:bx+padX, y:by+padY+lineH*i+fs*0.85,
+        'font-size':fs, 'font-weight':l.bold?'bold':'normal',
+        fill:'white', 'font-family':'Arial, sans-serif'
+      },l.text));
+    });
+    svg.appendChild(g);
+    hoverTooltip=g;
+  };
   const drawFireMarker=f=>{
     let lon=f.lon, lat=f.lat;
     if((!lon||!lat)&&CC[f.county]) [lon,lat]=CC[f.county];
@@ -1103,29 +1140,20 @@ function drawMap(fires) {
       const evacFs=Math.min(9, 5.8*(r/MARKER_R_MIN));
       marker.appendChild(el('text',{x:fx,y:fy+evacFs*0.33,'text-anchor':'middle','font-size':evacFs.toFixed(1),'font-weight':'bold',fill:'white'},'E'));
     }
-    svg.appendChild(marker);
-    if(isActive){
-      svg.appendChild(placeActiveLabel(fx,fy,f.name,fill,hasEvac,r));
-      return;
-    }
-    // Contained fire: hover/tap-to-reveal label, wider invisible hit target
-    // (scales with marker size, floor 8 — same as the pre-scaling fixed
-    // value) so the label is easy to trigger without pinpointing the dot.
+    // Wider invisible hit target (scales with marker size, floor 8) so hover
+    // is easy to trigger without pinpointing the dot — applies to every fire
+    // now, not just contained ones (was contained-only before the tooltip
+    // above existed).
     const hitR=Math.max(8, r+3.5);
     const hit=el('circle',{cx:fx,cy:fy,r:hitR.toFixed(1),fill:'transparent'});
     hit.style.cursor='pointer';
     marker.appendChild(hit);
-    let labelEl=null;
-    marker.addEventListener('mouseenter',()=>{
-      if(labelEl) return;
-      const labelFontSize=5.5, boxH=9;
-      const lw=measureTextWidth(f.name,labelFontSize,'bold')+4;
-      labelEl=drawLabelBox(fx+r+8.5,fy-1,lw,boxH,f.name,fill,hasEvac);
-      svg.appendChild(labelEl);
-    });
-    marker.addEventListener('mouseleave',()=>{
-      if(labelEl){ labelEl.remove(); labelEl=null; }
-    });
+    marker.addEventListener('mouseenter',()=>showFireTooltip(fx,fy,f));
+    marker.addEventListener('mouseleave',hideFireTooltip);
+    svg.appendChild(marker);
+    if(isActive){
+      svg.appendChild(placeActiveLabel(fx,fy,f.name,fill,hasEvac,r));
+    }
   };
   // Pass 1: contained fires (underneath)
   fires.filter(f=>f.status!=='Active').forEach(drawFireMarker);
