@@ -584,6 +584,7 @@
     <div class="sr-only" id="countyChartTable" aria-label="County-by-county data table"></div>
   </div>
   <div id="county-tooltip" style="position:fixed;pointer-events:none;display:none;background:#fff;border:1px solid #cbd5e0;border-radius:8px;padding:10px 14px;font-size:12px;line-height:1.5;box-shadow:0 4px 16px rgba(0,0,0,0.13);z-index:9999;max-width:300px;min-width:180px;"></div>
+  <div id="fire-tooltip" style="position:fixed;pointer-events:none;display:none;background:#fff;border:1px solid #cbd5e0;border-radius:8px;padding:10px 14px;font-size:12px;line-height:1.5;box-shadow:0 4px 16px rgba(0,0,0,0.13);z-index:9999;max-width:300px;min-width:180px;"></div>
 
   <div class="section-header">
     <h2>Report Archive</h2>
@@ -1096,39 +1097,47 @@ function drawMap(fires) {
   // Rich hover tooltip (name / acres / structures-lost breakdown / complex
   // membership) — added 2026-07-28 per Matt's request, for EVERY fire marker
   // (active and contained alike), not just the name-only hover that contained
-  // fires already had. Single reusable SVG group, created and appended on
-  // mouseenter and removed on mouseleave — same "no external library"
-  // convention as the rest of this map, positioned near the hovered marker
-  // and clamped to the drawn map rectangle (mx/my/mw/mh) so it can't render
-  // off-canvas near an edge, same clamping idea as placeActiveLabel above.
-  let hoverTooltip=null;
+  // fires already had.
+  // Reworked 2026-07-28 (same day, follow-up request): the original version
+  // drew this as tiny 6.5px SVG text in a cramped fixed-position box — Matt
+  // found it hard to read and asked for it to match the county-by-county
+  // chart's hover format instead. Now reuses that exact same pattern: a
+  // real HTML div (#fire-tooltip, styled identically to #county-tooltip —
+  // white card, border, shadow, 12px text, 1.5 line-height), positioned via
+  // `mousemove` to follow the cursor and flip near viewport edges, with
+  // structured innerHTML (bold header + orange acres, colored structure-loss
+  // rows) instead of plain SVG text lines.
   const fmtNum=n=>(n||0).toLocaleString();
-  const hideFireTooltip=()=>{ if(hoverTooltip){ hoverTooltip.remove(); hoverTooltip=null; } };
-  const showFireTooltip=(fx,fy,f)=>{
-    hideFireTooltip();
-    const lines=[
-      {text:f.name, bold:true},
-      {text:`${fmtNum(f.acres)} acres · ${f.status}`, bold:false},
-    ];
-    if(f.cpx_name) lines.push({text:`Part of: ${f.cpx_name}`, bold:false});
-    lines.push({text:`Structures lost — Res: ${fmtNum(f.structures_lost_res)}  Comm: ${fmtNum(f.structures_lost_comm)}  Other: ${fmtNum(f.structures_lost_other)}`, bold:false});
-    const fs=6.5, lineH=9, padX=6, padY=6;
-    const w=Math.max(...lines.map(l=>measureTextWidth(l.text,fs,l.bold?'bold':'normal')))+padX*2;
-    const h=lineH*lines.length+padY*2-2;
-    let bx=fx+10, by=fy-h/2;
-    bx=Math.max(mx+2, Math.min(bx, mx+mw-w-2));
-    by=Math.max(my+2, Math.min(by, my+mh-h-2));
-    const g=el('g',{});
-    g.appendChild(el('rect',{x:bx,y:by,width:w,height:h,fill:'#1f2937',opacity:'0.95',rx:'3'}));
-    lines.forEach((l,i)=>{
-      g.appendChild(el('text',{
-        x:bx+padX, y:by+padY+lineH*i+fs*0.85,
-        'font-size':fs, 'font-weight':l.bold?'bold':'normal',
-        fill:'white', 'font-family':'Arial, sans-serif'
-      },l.text));
-    });
-    svg.appendChild(g);
-    hoverTooltip=g;
+  const fireTip=document.getElementById('fire-tooltip');
+  const showFireTooltip=f=>{
+    if(!fireTip) return;
+    const totalLost=(f.structures_lost_res||0)+(f.structures_lost_comm||0)+(f.structures_lost_other||0);
+    let html=`<div style="font-weight:700;color:#1a2744;font-size:13px;border-bottom:1px solid #e2e8f0;padding-bottom:5px;margin-bottom:5px;">
+      ${f.name} &nbsp;<span style="color:#e67e22;">${fmtNum(f.acres)} acres</span>
+    </div>`;
+    html+=`<div style="color:#666;">${f.status}</div>`;
+    if(f.cpx_name) html+=`<div style="color:#666;">Part of: <b>${f.cpx_name}</b></div>`;
+    if(totalLost>0) {
+      html+=`<div style="font-weight:600;color:#1a2744;margin-top:6px;margin-bottom:2px;">Structures Lost — ${totalLost} total</div>`;
+      if(f.structures_lost_res)   html+=`<div style="color:#1a2744;">Residential: <b>${fmtNum(f.structures_lost_res)}</b></div>`;
+      if(f.structures_lost_comm)  html+=`<div style="color:#4C7EA8;">Commercial: <b>${fmtNum(f.structures_lost_comm)}</b></div>`;
+      if(f.structures_lost_other) html+=`<div style="color:#7799bb;">Other: <b>${fmtNum(f.structures_lost_other)}</b></div>`;
+    } else {
+      html+=`<div style="color:#888;font-style:italic;font-size:11px;margin-top:4px;">No structure losses reported</div>`;
+    }
+    fireTip.innerHTML=html;
+    fireTip.style.display='block';
+  };
+  const hideFireTooltip=()=>{ if(fireTip) fireTip.style.display='none'; };
+  const moveFireTooltip=e=>{
+    if(!fireTip || fireTip.style.display==='none') return;
+    const tipW=fireTip.offsetWidth, tipH=fireTip.offsetHeight;
+    const vw=window.innerWidth, vh=window.innerHeight;
+    let lx=e.clientX+14, ly=e.clientY-20;
+    if(lx+tipW>vw-8) lx=e.clientX-tipW-14;
+    if(ly+tipH>vh-8) ly=e.clientY-tipH-10;
+    fireTip.style.left=lx+'px';
+    fireTip.style.top=ly+'px';
   };
   const drawFireMarker=f=>{
     let lon=f.lon, lat=f.lat;
@@ -1153,7 +1162,8 @@ function drawMap(fires) {
     const hit=el('circle',{cx:fx,cy:fy,r:hitR.toFixed(1),fill:'transparent'});
     hit.style.cursor='pointer';
     marker.appendChild(hit);
-    marker.addEventListener('mouseenter',()=>showFireTooltip(fx,fy,f));
+    marker.addEventListener('mouseenter',()=>showFireTooltip(f));
+    marker.addEventListener('mousemove',moveFireTooltip);
     marker.addEventListener('mouseleave',hideFireTooltip);
     svg.appendChild(marker);
     if(isActive){
