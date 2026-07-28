@@ -19,22 +19,22 @@
       "pct": 0.0
     },
     "evac_addresses_l1": {
-      "current": 7165,
+      "current": 3675,
       "prior": 7487,
-      "delta": -322,
-      "pct": -4.3
+      "delta": -3812,
+      "pct": -50.9
     },
     "evac_addresses_l2": {
-      "current": 3129,
+      "current": 3687,
       "prior": 2932,
-      "delta": 197,
-      "pct": 6.7
+      "delta": 755,
+      "pct": 25.8
     },
     "evac_addresses_l3": {
-      "current": 2517,
+      "current": 1922,
       "prior": 2795,
-      "delta": -278,
-      "pct": -9.9
+      "delta": -873,
+      "pct": -31.2
     },
     "active_fires": {
       "current": 74,
@@ -43,10 +43,10 @@
       "pct": -19.6
     },
     "total_acres_ytd": {
-      "current": 1501501,
+      "current": 1375501.2,
       "prior": 1372091,
-      "delta": 129410,
-      "pct": 9.4
+      "delta": 3410.1999999999534,
+      "pct": 0.2
     },
     "structures_lost": {
       "current": 106,
@@ -70,22 +70,22 @@
       "pct": 42.9
     },
     "evac_addresses_l1": {
-      "current": 7165,
+      "current": 3675,
       "prior": 5230,
-      "delta": 1935,
-      "pct": 37.0
+      "delta": -1555,
+      "pct": -29.7
     },
     "evac_addresses_l2": {
-      "current": 3129,
+      "current": 3687,
       "prior": 1789,
-      "delta": 1340,
-      "pct": 74.9
+      "delta": 1898,
+      "pct": 106.1
     },
     "evac_addresses_l3": {
-      "current": 2517,
+      "current": 1922,
       "prior": 583,
-      "delta": 1934,
-      "pct": 331.7
+      "delta": 1339,
+      "pct": 229.7
     },
     "active_fires": {
       "current": 74,
@@ -94,10 +94,10 @@
       "pct": -12.9
     },
     "total_acres_ytd": {
-      "current": 1501501,
+      "current": 1375501.2,
       "prior": 368661,
-      "delta": 1132840,
-      "pct": 307.3
+      "delta": 1006840.2,
+      "pct": 273.1
     },
     "structures_lost": {
       "current": 106,
@@ -121,21 +121,21 @@
       "pct": null
     },
     "evac_addresses_l1": {
-      "current": 7165,
+      "current": 3675,
       "prior": 0,
-      "delta": 7165,
+      "delta": 3675,
       "pct": null
     },
     "evac_addresses_l2": {
-      "current": 3129,
+      "current": 3687,
       "prior": 0,
-      "delta": 3129,
+      "delta": 3687,
       "pct": null
     },
     "evac_addresses_l3": {
-      "current": 2517,
+      "current": 1922,
       "prior": 0,
-      "delta": 2517,
+      "delta": 1922,
       "pct": null
     },
     "active_fires": {
@@ -145,10 +145,10 @@
       "pct": 174.1
     },
     "total_acres_ytd": {
-      "current": 1501501,
+      "current": 1375501.2,
       "prior": 14938,
-      "delta": 1486563,
-      "pct": 9951.6
+      "delta": 1360563.2,
+      "pct": 9108.1
     },
     "structures_lost": {
       "current": 106,
@@ -359,7 +359,7 @@
         5724,
         5858,
         7487,
-        7165
+        3675
       ]
     },
     "evac_addresses_l2": {
@@ -427,7 +427,7 @@
         2726,
         2580,
         2932,
-        3129
+        3687
       ]
     },
     "evac_addresses_l3": {
@@ -495,7 +495,7 @@
         2317,
         2759,
         2795,
-        2517
+        1922
       ]
     },
     "active_fires": {
@@ -631,7 +631,7 @@
         669927,
         1053674,
         1372091,
-        1501501
+        1375501.2
       ]
     },
     "structures_lost": {
@@ -705,8 +705,8 @@
   },
   "exec_summary": {
     "status": "critical",
-    "headline": "The number of Level 3 (Go Now) evacuation addresses is down 10% (2,795 \u2192 2,517) since yesterday morning. Over the past 7 days, it is up more than 4x (583 \u2192 2,517).",
-    "escalation": "Level 2 (Be Set) evacuation addresses have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (2,932 \u2192 3,129 since yesterday morning).",
+    "headline": "The number of Level 3 (Go Now) evacuation addresses is down 31% (2,795 \u2192 1,922) since yesterday morning. Over the past 7 days, it is up 230% (583 \u2192 1,922).",
+    "escalation": "Level 2 (Be Set) evacuation addresses have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (2,932 \u2192 3,687 since yesterday morning).",
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 34,
