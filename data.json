@@ -1,9 +1,9 @@
 {
   "last_updated": "2026-07-28",
-  "report_time": "4:01 PM PDT",
+  "report_time": "8:26 AM PDT",
   "current_active_fires": 79,
   "current_acres_burned": 964806.78,
-  "current_report_time": "4:01 PM PDT",
+  "current_report_time": "8:26 AM PDT",
   "change_vs_prior_morning": {
     "prior_date": "2026-07-27",
     "active_large_fires": {
@@ -13,28 +13,28 @@
       "pct": 0.0
     },
     "active_evac_fires": {
-      "current": 10,
+      "current": 11,
       "prior": 10,
-      "delta": 0,
-      "pct": 0.0
+      "delta": 1,
+      "pct": 10.0
     },
     "evac_addresses_l1": {
-      "current": 7216,
+      "current": 7165,
       "prior": 7487,
-      "delta": -271,
-      "pct": -3.6
+      "delta": -322,
+      "pct": -4.3
     },
     "evac_addresses_l2": {
-      "current": 3148,
+      "current": 3129,
       "prior": 2932,
-      "delta": 216,
-      "pct": 7.4
+      "delta": 197,
+      "pct": 6.7
     },
     "evac_addresses_l3": {
-      "current": 2497,
+      "current": 2517,
       "prior": 2795,
-      "delta": -298,
-      "pct": -10.7
+      "delta": -278,
+      "pct": -9.9
     },
     "active_fires": {
       "current": 79,
@@ -64,28 +64,28 @@
       "pct": 68.2
     },
     "active_evac_fires": {
-      "current": 10,
+      "current": 11,
       "prior": 7,
-      "delta": 3,
-      "pct": 42.9
+      "delta": 4,
+      "pct": 57.1
     },
     "evac_addresses_l1": {
-      "current": 7216,
+      "current": 7165,
       "prior": 5230,
-      "delta": 1986,
-      "pct": 38.0
+      "delta": 1935,
+      "pct": 37.0
     },
     "evac_addresses_l2": {
-      "current": 3148,
+      "current": 3129,
       "prior": 1789,
-      "delta": 1359,
-      "pct": 76.0
+      "delta": 1340,
+      "pct": 74.9
     },
     "evac_addresses_l3": {
-      "current": 2497,
+      "current": 2517,
       "prior": 583,
-      "delta": 1914,
-      "pct": 328.3
+      "delta": 1934,
+      "pct": 331.7
     },
     "active_fires": {
       "current": 79,
@@ -115,27 +115,27 @@
       "pct": 3600.0
     },
     "active_evac_fires": {
-      "current": 10,
+      "current": 11,
       "prior": 0,
-      "delta": 10,
+      "delta": 11,
       "pct": null
     },
     "evac_addresses_l1": {
-      "current": 7216,
+      "current": 7165,
       "prior": 0,
-      "delta": 7216,
+      "delta": 7165,
       "pct": null
     },
     "evac_addresses_l2": {
-      "current": 3148,
+      "current": 3129,
       "prior": 0,
-      "delta": 3148,
+      "delta": 3129,
       "pct": null
     },
     "evac_addresses_l3": {
-      "current": 2497,
+      "current": 2517,
       "prior": 0,
-      "delta": 2497,
+      "delta": 2517,
       "pct": null
     },
     "active_fires": {
@@ -291,7 +291,7 @@
         10,
         10,
         10,
-        10
+        11
       ]
     },
     "evac_addresses_l1": {
@@ -359,7 +359,7 @@
         5724,
         5858,
         7487,
-        7216
+        7165
       ]
     },
     "evac_addresses_l2": {
@@ -427,7 +427,7 @@
         2726,
         2580,
         2932,
-        3148
+        3129
       ]
     },
     "evac_addresses_l3": {
@@ -495,7 +495,7 @@
         2317,
         2759,
         2795,
-        2497
+        2517
       ]
     },
     "active_fires": {
@@ -705,17 +705,18 @@
   },
   "exec_summary": {
     "status": "critical",
-    "headline": "The number of Level 3 (Go Now) evacuation addresses is down 11% (2,795 \u2192 2,497) since yesterday morning. Over the past 7 days, it is up more than 4x (583 \u2192 2,497).",
-    "escalation": "Level 2 (Be Set) evacuation addresses have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (2,932 \u2192 3,148 since yesterday morning).",
+    "headline": "The number of Level 3 (Go Now) evacuation addresses is down 10% (2,795 \u2192 2,517) since yesterday morning. Over the past 7 days, it is up more than 4x (583 \u2192 2,517).",
+    "escalation": "Fires with active evacuations have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (10 \u2192 11 since yesterday morning).",
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 37,
   "total_large_fire_acres": 1196269.2,
   "structures_lost": 106,
-  "evac_triggering_fires": 10,
+  "evac_triggering_fires": 11,
   "evac_zones": {
     "level3": [
       "0445 CROSSWHITE \u2014 ~4 miles north of Twickenham, Oregon",
+      "BREWER \u2014 ~11 miles east of Madras, Oregon",
       "Bench \u2014 ~9 miles west of Metolius, Oregon",
       "Grasshopper \u2014 ~16 miles south of Clearwater Village, Oregon",
       "0494 AKAWA BUTTE \u2014 ~10 miles east of Camp Sherman, Oregon",
@@ -746,13 +747,13 @@
       "0480 WILCOX \u2014 ~8 miles southeast of Kent, Oregon"
     ]
   },
-  "evac_addresses_l1": 7216,
-  "evac_addresses_l2": 3148,
-  "evac_addresses_l3": 2497,
+  "evac_addresses_l1": 7165,
+  "evac_addresses_l2": 3129,
+  "evac_addresses_l3": 2517,
   "struct_loss": {
     "oregon_totals": {
-      "res_threatened": 14843,
-      "res_damaged": 2,
+      "res_threatened": 15776,
+      "res_damaged": 3,
       "res_destroyed": 26,
       "comm_threatened": 0,
       "comm_damaged": 0,
@@ -760,8 +761,8 @@
       "minor_threatened": 0,
       "minor_damaged": 0,
       "minor_destroyed": 80,
-      "total_threatened": 14843,
-      "total_damaged": 2,
+      "total_threatened": 15776,
+      "total_damaged": 3,
       "total_destroyed": 106
     }
   },
@@ -1445,7 +1446,7 @@
       ]
     },
     "Harney": {
-      "threatened": 1950,
+      "threatened": 2058,
       "damaged": 1,
       "destroyed": 4,
       "fires": [
@@ -1517,7 +1518,7 @@
       ]
     },
     "Douglas": {
-      "threatened": 800,
+      "threatened": 1252,
       "damaged": 0,
       "destroyed": 0,
       "fires": [
@@ -1533,8 +1534,8 @@
       ]
     },
     "Wheeler": {
-      "threatened": 0,
-      "damaged": 0,
+      "threatened": 373,
+      "damaged": 1,
       "destroyed": 3,
       "fires": [
         "0587 SHINGLE"
@@ -2424,6 +2425,11 @@
       "date": "2026-07-27",
       "active_fires": 92,
       "acres_burned": 1145733.03
+    },
+    {
+      "date": "2026-07-28",
+      "active_fires": 79,
+      "acres_burned": 964806.78
     }
   ],
   "historical_seasons": [
