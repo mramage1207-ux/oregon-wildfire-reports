@@ -747,6 +747,7 @@
   "evac_addresses_l1": 3675,
   "evac_addresses_l2": 3687,
   "evac_addresses_l3": 1922,
+  "evac_data_as_of": "3:45 PM PDT",
   "struct_loss": {
     "oregon_totals": {
       "res_threatened": 13851,

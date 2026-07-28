@@ -174,6 +174,12 @@
     .evac-label-link:hover {
       text-decoration: underline; color: rgba(255,255,255,.95);
     }
+    .evac-as-of-note {
+      font-size: .68rem; font-weight: 600; color: #ffd8a8;
+      background: rgba(230,126,34,.16); border: 1px solid rgba(230,126,34,.4);
+      border-radius: 5px; padding: .3rem .6rem; margin: -.15rem 0 .6rem;
+      display: inline-block;
+    }
     .evac-grid {
       display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .75rem;
       margin-bottom: .5rem;
@@ -477,6 +483,7 @@
     </div>
     <div class="evac-section" role="region" aria-label="Evacuation zones by level">
       <div class="evac-label"><a href="https://geo.maps.arcgis.com/apps/instant/portfolio/index.html?appid=22d04c007866419c91ccf00d097526c8" target="_blank" rel="noopener noreferrer" class="evac-label-link">Evacuation Addresses by Level &mdash; Active Fires Only</a></div>
+      <div id="evac-as-of-note" class="evac-as-of-note" style="display:none"></div>
       <div class="evac-grid">
         <div class="evac-box level1">
           <div class="evac-level">Level 1 &mdash; Be Ready</div>
@@ -1769,6 +1776,23 @@ function render(pdfs, data) {
   if (evacL1ChangeEl) evacL1ChangeEl.innerHTML = changeBadgeHtml('evac_addresses_l1', 'l1');
   if (evacL2ChangeEl) evacL2ChangeEl.innerHTML = changeBadgeHtml('evac_addresses_l2', 'l2');
   if (evacL3ChangeEl) evacL3ChangeEl.innerHTML = changeBadgeHtml('evac_addresses_l3', 'l3');
+
+  // ── Evac-specific "as of" note — added 2026-07-28 at Matt's request ──
+  // Only show this when evac data was refreshed at a genuinely different time
+  // than the header's overall report freshness time (e.g. a 3:45 PM prefetch
+  // updated evac zones but no new full report has been generated since the
+  // morning run) — avoids redundant clutter on the common case where they match.
+  const evacAsOfEl = document.getElementById('evac-as-of-note');
+  if (evacAsOfEl) {
+    const evacAsOf = data && data.evac_data_as_of;
+    const reportAsOf = data && (data.current_report_time || data.report_time);
+    if (evacAsOf && reportAsOf && evacAsOf !== reportAsOf) {
+      evacAsOfEl.textContent = `⚠ Evac addresses updated ${evacAsOf} — more recent than the ${reportAsOf} report above`;
+      evacAsOfEl.style.display = 'inline-block';
+    } else {
+      evacAsOfEl.style.display = 'none';
+    }
+  }
 
   // ── Structure loss table ──
   const sl = data && data.struct_loss && data.struct_loss.oregon_totals;
