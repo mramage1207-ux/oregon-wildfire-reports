@@ -710,7 +710,7 @@
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 34,
-  "total_large_fire_acres": 1501501.2000000002,
+  "total_large_fire_acres": 1375501.2,
   "structures_lost": 106,
   "evac_triggering_fires": 10,
   "evac_zones": {
@@ -737,7 +737,6 @@
     "level1": [
       "Bench \u2014 ~9 miles west of Metolius, Oregon",
       "0494 AKAWA BUTTE \u2014 ~10 miles east of Camp Sherman, Oregon",
-      "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
       "Grasshopper \u2014 ~16 miles south of Clearwater Village, Oregon",
       "Burnt Creek \u2014 ~9 miles southeast of Lakeview, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon",
@@ -745,21 +744,21 @@
       "0480 WILCOX \u2014 ~8 miles southeast of Kent, Oregon"
     ]
   },
-  "evac_addresses_l1": 7165,
-  "evac_addresses_l2": 3129,
-  "evac_addresses_l3": 2517,
+  "evac_addresses_l1": 3675,
+  "evac_addresses_l2": 3687,
+  "evac_addresses_l3": 1922,
   "struct_loss": {
     "oregon_totals": {
-      "res_threatened": 13854,
-      "res_damaged": 3,
+      "res_threatened": 13851,
+      "res_damaged": 2,
       "res_destroyed": 26,
       "comm_threatened": 0,
       "comm_damaged": 0,
       "comm_destroyed": 0,
       "minor_threatened": 0,
-      "minor_damaged": 0,
+      "minor_damaged": 1,
       "minor_destroyed": 80,
-      "total_threatened": 13854,
+      "total_threatened": 13851,
       "total_damaged": 3,
       "total_destroyed": 106
     }
@@ -767,14 +766,14 @@
   "county_structure_data": [
     {
       "county": "Malheur",
-      "acres": 365345.7,
+      "acres": 345345.7,
       "res": 0,
       "comm": 0,
       "other": 0,
       "fires": [
         {
           "name": "BIG GRASS",
-          "acres": 300000,
+          "acres": 280000,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -839,20 +838,37 @@
       ]
     },
     {
-      "county": "Harney",
-      "acres": 299111.0,
-      "res": 0,
+      "county": "Wheeler",
+      "acres": 276002.0,
+      "res": 3,
       "comm": 0,
-      "other": 4,
+      "other": 0,
       "fires": [
         {
-          "name": "Coleman Creek",
-          "acres": 140000,
+          "name": "ROWE CREEK COMPLEX",
+          "acres": 215225,
           "status": "Active",
           "res": 0,
           "comm": 0,
           "other": 0
         },
+        {
+          "name": "0587 SHINGLE",
+          "acres": 60777,
+          "status": "Active",
+          "res": 3,
+          "comm": 0,
+          "other": 0
+        }
+      ]
+    },
+    {
+      "county": "Harney",
+      "acres": 193111.0,
+      "res": 0,
+      "comm": 0,
+      "other": 4,
+      "fires": [
         {
           "name": "Second Flat",
           "acres": 86504,
@@ -860,6 +876,14 @@
           "res": 0,
           "comm": 0,
           "other": 2
+        },
+        {
+          "name": "Coleman Creek",
+          "acres": 34000,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
         },
         {
           "name": "Bald Mountain",
@@ -906,31 +930,6 @@
           "acres": 745,
           "status": "Active",
           "res": 0,
-          "comm": 0,
-          "other": 0
-        }
-      ]
-    },
-    {
-      "county": "Wheeler",
-      "acres": 276002.0,
-      "res": 3,
-      "comm": 0,
-      "other": 0,
-      "fires": [
-        {
-          "name": "ROWE CREEK COMPLEX",
-          "acres": 215225,
-          "status": "Active",
-          "res": 0,
-          "comm": 0,
-          "other": 0
-        },
-        {
-          "name": "0587 SHINGLE",
-          "acres": 60777,
-          "status": "Active",
-          "res": 3,
           "comm": 0,
           "other": 0
         }
@@ -1416,8 +1415,8 @@
     }
   ],
   "county_acres_map": {
-    "Malheur": 365345.7,
-    "Harney": 299111.0,
+    "Malheur": 345345.7,
+    "Harney": 193111.0,
     "Wheeler": 276002.0,
     "Grant": 54700.0,
     "Jefferson": 156908.0,
@@ -1505,13 +1504,12 @@
       ]
     },
     "Baker": {
-      "threatened": 56,
+      "threatened": 53,
       "damaged": 0,
       "destroyed": 0,
       "fires": [
         "Anthony",
-        "Bob Creek",
-        "POWDER RIVER"
+        "Bob Creek"
       ]
     },
     "Jackson": {
@@ -2433,20 +2431,20 @@
     {
       "year": 2026,
       "total_fires": 62,
-      "total_acres": 1501501.2000000002,
+      "total_acres": 1375501.2,
       "total_structures_destroyed": 106,
       "fatalities": 0,
       "injuries": 0,
       "largest_fire": {
         "name": "BIG GRASS",
         "county": "Malheur",
-        "acres": 300000.0
+        "acres": 280000.0
       },
       "notable_fires": [
         {
           "name": "BIG GRASS",
           "county": "Malheur",
-          "acres": 300000.0
+          "acres": 280000.0
         },
         {
           "name": "ROWE CREEK COMPLEX",
@@ -2459,14 +2457,14 @@
           "acres": 186727.0
         },
         {
-          "name": "Coleman Creek",
-          "county": "Harney",
-          "acres": 140000.0
-        },
-        {
           "name": "Second Flat",
           "county": "Harney",
           "acres": 86504.0
+        },
+        {
+          "name": "BREWER",
+          "county": "Jefferson",
+          "acres": 70821.0
         }
       ]
     },
@@ -2934,7 +2932,7 @@
       "lon": -117.335,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 300000.0,
+      "acres": 280000.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -2952,19 +2950,6 @@
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
       "cpx_name": "ROWE CREEK COMPLEX"
-    },
-    {
-      "name": "Coleman Creek",
-      "county": "Harney",
-      "lat": 43.558834,
-      "lon": -118.381211,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 140000.0,
-      "structures_lost_res": 0,
-      "structures_lost_comm": 0,
-      "structures_lost_other": 0,
-      "cpx_name": null
     },
     {
       "name": "Second Flat",
@@ -3029,6 +3014,19 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 3,
+      "cpx_name": null
+    },
+    {
+      "name": "Coleman Creek",
+      "county": "Harney",
+      "lat": 43.558834,
+      "lon": -118.381211,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 34000.0,
+      "structures_lost_res": 0,
+      "structures_lost_comm": 0,
+      "structures_lost_other": 0,
       "cpx_name": null
     },
     {
