@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Oregon Wildfire Evacuations by ZIP Code</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f4f5f7; color: #1a1a2e; min-height: 100vh;
+  }
+  a { color: inherit; }
+  header {
+    background: linear-gradient(135deg, #1a2744 0%, #0f3460 100%);
+    color: #fff; padding: 0 2rem;
+  }
+  .header-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; align-items: center; gap: 1.25rem; padding: 1.4rem 0; flex-wrap: wrap;
+  }
+  .header-flame { font-size: 2rem; line-height: 1; filter: drop-shadow(0 0 8px rgba(255,120,20,.7)); }
+  .header-text h1 { font-size: 1.3rem; font-weight: 700; letter-spacing: -.3px; }
+  .header-text p { font-size: .8rem; opacity: .72; margin-top: 2px; }
+  .back-link {
+    margin-left: auto; font-size: .78rem; font-weight: 600; text-decoration: none;
+    color: rgba(255,255,255,.85); background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.22); border-radius: 20px; padding: .4rem .9rem;
+  }
+  .back-link:hover { background: rgba(255,255,255,.2); }
+
+  .hero-wrap { background: linear-gradient(135deg, #0f3460 0%, #1a2744 100%); padding: 1.6rem 2rem 2rem; }
+  .hero { max-width: 1100px; margin: 0 auto; color: #fff; }
+  .hero-asof { font-size: .78rem; opacity: .65; margin-bottom: 1rem; }
+  .totals-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .8rem; }
+  .total-box {
+    border-radius: 10px; padding: .9rem 1rem; border: 1px solid; text-align: center;
+  }
+  .total-box .tv { font-size: 1.7rem; font-weight: 700; line-height: 1; }
+  .total-box .tl { font-size: .68rem; opacity: .75; text-transform: uppercase; letter-spacing: .5px; margin-top: .35rem; }
+  .total-box.l1 { background: rgba(34,139,34,.2); border-color: rgba(34,139,34,.5); }
+  .total-box.l1 .tv { color: #68d391; }
+  .total-box.l2 { background: rgba(221,107,32,.18); border-color: rgba(221,107,32,.5); }
+  .total-box.l2 .tv { color: #fbd38d; }
+  .total-box.l3 { background: rgba(197,48,48,.18); border-color: rgba(197,48,48,.5); }
+  .total-box.l3 .tv { color: #fc8181; }
+  .total-box.all { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.25); }
+  .total-box.all .tv { color: #fff; }
+  @media (max-width: 700px) { .totals-grid { grid-template-columns: 1fr 1fr; } }
+
+  main { max-width: 1100px; margin: 0 auto; padding: 1.6rem 2rem 3rem; }
+  .card { background: #fff; border: 1px solid #e2e5ea; border-radius: 12px; padding: 1.2rem 1.3rem; margin-bottom: 1.4rem; }
+  .card h2 { font-size: 1.05rem; margin-bottom: .3rem; }
+  .card .sub { font-size: .78rem; color: #667; margin-bottom: .9rem; }
+  .table-card { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table { width: 100%; border-collapse: collapse; font-size: .84rem; }
+  thead th {
+    background: #1a2744; color: #fff; text-align: center; padding: .6rem .7rem;
+    font-size: .68rem; text-transform: uppercase; letter-spacing: .4px; white-space: nowrap;
+  }
+  tbody td { padding: .55rem .7rem; text-align: center; border-bottom: 1px solid #eef0f3; }
+  tbody td.left { text-align: left; }
+  tbody tr.peak-3 { background: #FF6B6B26; }
+  tbody tr.peak-2 { background: #FFD96626; }
+  tbody tr.peak-1 { background: #FFF2CC55; }
+  .peak-pill {
+    display: inline-block; border-radius: 20px; padding: .12rem .55rem; font-size: .68rem; font-weight: 700;
+  }
+  .peak-pill.p3 { background: #FF6B6B; color: #4a0000; }
+  .peak-pill.p2 { background: #FFD966; color: #4a2e00; }
+  .peak-pill.p1 { background: #FFF2CC; color: #4a3c00; }
+  .action-link {
+    display: inline-block; margin: 2px 4px 2px 0; padding: .3rem .6rem; border-radius: 6px;
+    font-size: .72rem; font-weight: 600; text-decoration: none; border: 1px solid #cbd5e0;
+    color: #2d3748; background: #f7fafc;
+  }
+  .action-link:hover { background: #edf2f7; }
+  .action-link.dl { background: #fff3e6; color: #7a3800; border-color: #f0c98a; }
+  .action-link.active { background: #1a2744; color: #fff; border-color: #1a2744; }
+  .empty-row td { text-align: center; color: #999; padding: 1.2rem; }
+
+  .chart-wrap { position: relative; }
+  .chart-legend { display: flex; gap: 1.2rem; font-size: .74rem; margin-bottom: .6rem; flex-wrap: wrap; }
+  .chart-legend span { display: inline-flex; align-items: center; gap: .35rem; }
+  .chart-dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+
+  #current-report-label { font-weight: 700; }
+
+  .info-box {
+    background: #fffaf0; border: 1px solid #f0dca8; border-radius: 10px;
+    padding: .9rem 1.1rem; font-size: .8rem; line-height: 1.55; color: #6b4e00;
+  }
+
+  footer {
+    text-align: center; padding: 1.6rem 1rem 2.5rem; font-size: .74rem; color: #8a8fa3; line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-flame" aria-hidden="true">&#128231;</div>
+    <div class="header-text">
+      <h1>Oregon Wildfire Evacuations by ZIP Code</h1>
+      <p>Daily archive &amp; trend &mdash; addresses under active evacuation orders, aggregated to ZIP code</p>
+    </div>
+    <a class="back-link" href="index.html">&larr; Back to main report</a>
+  </div>
+</header>
+
+<div class="hero-wrap">
+  <div class="hero">
+    <div class="hero-asof" id="hero-asof">Loading&hellip;</div>
+    <div class="totals-grid">
+      <div class="total-box l1"><div class="tv" id="tot-l1">&mdash;</div><div class="tl">Level 1 &mdash; Be Ready</div></div>
+      <div class="total-box l2"><div class="tv" id="tot-l2">&mdash;</div><div class="tl">Level 2 &mdash; Be Set</div></div>
+      <div class="total-box l3"><div class="tv" id="tot-l3">&mdash;</div><div class="tl">Level 3 &mdash; Go Now</div></div>
+      <div class="total-box all"><div class="tv" id="tot-zips">&mdash;</div><div class="tl">ZIP Codes Affected</div></div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="card">
+    <h2>Trend &mdash; Addresses Under Evacuation Order</h2>
+    <div class="sub">Statewide totals by evacuation level, one point per day the pipeline has run.</div>
+    <div class="chart-wrap">
+      <div class="chart-legend">
+        <span><i class="chart-dot" style="background:#38a169"></i> Level 1</span>
+        <span><i class="chart-dot" style="background:#dd6b20"></i> Level 2</span>
+        <span><i class="chart-dot" style="background:#c53030"></i> Level 3</span>
+        <span><i class="chart-dot" style="background:#2d3748"></i> Total</span>
+      </div>
+      <svg id="trendChart" viewBox="0 0 1000 260" preserveAspectRatio="none" style="width:100%;height:220px;" role="img" aria-label="Trend of evacuation addresses by level over time"></svg>
+      <div id="trendEmpty" style="display:none;font-size:.82rem;color:#888;padding:1rem 0;">Not enough history yet &mdash; check back after a few more daily runs.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 id="current-report-label">Current Report</h2>
+    <div class="sub" id="current-report-sub">&nbsp;</div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>ZIP Code</th><th>Level 1</th><th>Level 2</th><th>Level 3</th>
+            <th>Total</th><th>Peak Level</th><th>Counties</th><th>Fire(s)</th>
+          </tr>
+        </thead>
+        <tbody id="zip-tbody"><tr class="empty-row"><td colspan="8">Loading&hellip;</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Report Archive</h2>
+    <div class="sub">One report per day the pipeline has run. &ldquo;View&rdquo; loads that day's data into the table above; &ldquo;Download&rdquo; gets the full formatted Excel workbook (ZIP summary + zone-level detail).</div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr><th>Date</th><th>Total Addresses</th><th>ZIP Codes</th><th>Report</th></tr>
+        </thead>
+        <tbody id="archive-tbody"><tr class="empty-row"><td colspan="4">Loading&hellip;</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <strong>About this report:</strong> Address counts come from Oregon OEM's
+    <code>Fire_Evacuation_Areas_Public</code> feed. Each evacuation zone is mapped to its most
+    likely ZIP code via the Census Bureau's geocoder (zone centroid &rarr; ZCTA). A ZIP with
+    residents under multiple evacuation levels is listed once, at its <strong>peak</strong> level,
+    with the address breakdown shown per level. This report is generated once daily as part of the
+    morning wildfire pipeline; it is a supplementary geographic view of the same evacuation data
+    shown by fire on the main report.
+  </div>
+</main>
+
+<footer>
+  Data sourced from Oregon OEM ArcGIS (evacuation zones) and the U.S. Census Bureau geocoder (ZIP mapping).<br>
+  Generated automatically as part of the Oregon Wildfire Daily Reports pipeline. Not an official State of Oregon publication.<br>
+  Report assembly assisted by <strong style="color:#4a5568;">Claude AI</strong> (Anthropic) &mdash; data sourced from public government feeds.
+</footer>
+
+<script>
+const LATEST  = {"date": "2026-07-29", "generated_at": "2026-07-29T21:42:40Z", "totals": {"l1": 4343, "l2": 3067, "l3": 1814, "total": 9224, "zip_count": 36}, "zips": [{"zip": "97759", "l1": 809, "l2": 681, "l3": 86, "total": 1576, "peak_level": 3, "counties": "Deschutes, Jefferson", "fires": "Akawa Butte"}, {"zip": "97063", "l1": 0, "l2": 295, "l3": 881, "total": 1176, "peak_level": 3, "counties": "Wasco", "fires": "Grasshopper"}, {"zip": "97720", "l1": 782, "l2": 126, "l3": 183, "total": 1091, "peak_level": 3, "counties": "Harney", "fires": ""}, {"zip": "97738", "l1": 802, "l2": 122, "l3": 8, "total": 932, "peak_level": 3, "counties": "Harney", "fires": ""}, {"zip": "97734", "l1": 459, "l2": 274, "l3": 1, "total": 734, "peak_level": 3, "counties": "Jefferson", "fires": "Akawa Butte; Bench Fire"}, {"zip": "97754", "l1": 435, "l2": 139, "l3": 128, "total": 702, "peak_level": 3, "counties": "Crook", "fires": "Box Springs; Brewer Fire; Rowe Creek Complex West Zone"}, {"zip": "97886", "l1": 12, "l2": 650, "l3": 1, "total": 663, "peak_level": 3, "counties": "Umatilla", "fires": ""}, {"zip": "97741", "l1": 164, "l2": 56, "l3": 119, "total": 339, "peak_level": 3, "counties": "Jefferson", "fires": "10 mile fire; Bench Fire; Brewer Fire; Rowe Creek Complex West Zone"}, {"zip": "97907", "l1": 0, "l2": 291, "l3": 44, "total": 335, "peak_level": 3, "counties": "Baker", "fires": ""}, {"zip": "97750", "l1": 139, "l2": 18, "l3": 141, "total": 298, "peak_level": 3, "counties": "Wheeler", "fires": "Crosswhite; Rowe Creek Complex West Zone; Shingle"}, {"zip": "97021", "l1": 128, "l2": 32, "l3": 5, "total": 165, "peak_level": 3, "counties": "Wasco", "fires": "Grasshopper"}, {"zip": "97810", "l1": 44, "l2": 17, "l3": 101, "total": 162, "peak_level": 3, "counties": "Umatilla", "fires": ""}, {"zip": "97877", "l1": 6, "l2": 119, "l3": 19, "total": 144, "peak_level": 3, "counties": "Baker, Grant", "fires": "Olive Butte; Salmon; Salmon/Olive Butte Fires"}, {"zip": "97825", "l1": 0, "l2": 111, "l3": 24, "total": 135, "peak_level": 3, "counties": "Grant", "fires": "Shingle"}, {"zip": "97905", "l1": 0, "l2": 39, "l3": 33, "total": 72, "peak_level": 3, "counties": "Baker", "fires": ""}, {"zip": "97761", "l1": 0, "l2": 0, "l3": 24, "total": 24, "peak_level": 3, "counties": "Jefferson", "fires": "Bench Fire"}, {"zip": "97711", "l1": 5, "l2": 4, "l3": 3, "total": 12, "peak_level": 3, "counties": "Jefferson", "fires": "Brewer Fire; Rowe Creek Complex West Zone"}, {"zip": "97840", "l1": 0, "l2": 8, "l3": 2, "total": 10, "peak_level": 3, "counties": "Baker", "fires": ""}, {"zip": "97817", "l1": 0, "l2": 0, "l3": 8, "total": 8, "peak_level": 3, "counties": "Baker, Grant", "fires": "Salmon; Salmon/Olive Butte Fires"}, {"zip": "97870", "l1": 0, "l2": 0, "l3": 3, "total": 3, "peak_level": 3, "counties": "Baker", "fires": ""}, {"zip": "97001", "l1": 241, "l2": 7, "l3": 0, "total": 248, "peak_level": 2, "counties": "Wasco, Wheeler", "fires": ""}, {"zip": "97827", "l1": 0, "l2": 42, "l3": 0, "total": 42, "peak_level": 2, "counties": "Union", "fires": ""}, {"zip": "97751", "l1": 24, "l2": 4, "l3": 0, "total": 28, "peak_level": 2, "counties": "Crook", "fires": "Shingle"}, {"zip": "97830", "l1": 22, "l2": 1, "l3": 0, "total": 23, "peak_level": 2, "counties": "Wheeler", "fires": ""}, {"zip": "97848", "l1": 5, "l2": 8, "l3": 0, "total": 13, "peak_level": 2, "counties": "Grant", "fires": "Shingle"}, {"zip": "97867", "l1": 0, "l2": 12, "l3": 0, "total": 12, "peak_level": 2, "counties": "Baker", "fires": "Anthony Fire"}, {"zip": "97752", "l1": 0, "l2": 10, "l3": 0, "total": 10, "peak_level": 2, "counties": "Crook", "fires": ""}, {"zip": "97814", "l1": 0, "l2": 1, "l3": 0, "total": 1, "peak_level": 2, "counties": "Baker", "fires": ""}, {"zip": "97910", "l1": 185, "l2": 0, "l3": 0, "total": 185, "peak_level": 1, "counties": "", "fires": ""}, {"zip": "97874", "l1": 24, "l2": 0, "l3": 0, "total": 24, "peak_level": 1, "counties": "Wheeler", "fires": ""}, {"zip": "97758", "l1": 18, "l2": 0, "l3": 0, "total": 18, "peak_level": 1, "counties": "Harney", "fires": ""}, {"zip": "97828", "l1": 18, "l2": 0, "l3": 0, "total": 18, "peak_level": 1, "counties": "Wallowa", "fires": "Burnt Creek Fire"}, {"zip": "97721", "l1": 8, "l2": 0, "l3": 0, "total": 8, "peak_level": 1, "counties": "Harney", "fires": ""}, {"zip": "97823", "l1": 8, "l2": 0, "l3": 0, "total": 8, "peak_level": 1, "counties": "Gilliam", "fires": "Cottonwood"}, {"zip": "97058", "l1": 4, "l2": 0, "l3": 0, "total": 4, "peak_level": 1, "counties": "Wasco", "fires": ""}, {"zip": "97833", "l1": 1, "l2": 0, "l3": 0, "total": 1, "peak_level": 1, "counties": "Baker, Union", "fires": "Anthony Fire"}], "note": "Reconstructed from evac_by_zip_2026-07-29.xlsx (generated on Matt's Mac before JSON/history export existed in the script) rather than re-fetched, since the Census/ArcGIS APIs are not reachable from the Cowork sandbox."};
+const HISTORY = [{"date": "2026-07-29", "l1": 4343, "l2": 3067, "l3": 1814, "total": 9224, "zip_count": 36}];
+const DATES   = ["2026-07-29"];
+
+function fmtInt(n) { return (n == null) ? '\u2014' : n.toLocaleString('en-US'); }
+
+function fmtDate(iso) {
+  const d = new Date(iso + 'T12:00:00');
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+function peakClass(p) { return 'p' + p; }
+
+function renderReport(data, labelSuffix) {
+  const label = document.getElementById('current-report-label');
+  const sub = document.getElementById('current-report-sub');
+  if (!data) {
+    label.textContent = 'No Report Available';
+    sub.textContent = '';
+    document.getElementById('hero-asof').textContent = 'No evacuation-by-ZIP data has been generated yet.';
+    document.getElementById('zip-tbody').innerHTML = '<tr class="empty-row"><td colspan="8">No data.</td></tr>';
+    ['tot-l1','tot-l2','tot-l3','tot-zips'].forEach(id => document.getElementById(id).textContent = '\u2014');
+    return;
+  }
+  label.textContent = labelSuffix ? ('Report for ' + fmtDate(data.date)) : 'Current Report';
+  sub.textContent = 'As of ' + fmtDate(data.date) + (labelSuffix || '') + '.';
+  document.getElementById('hero-asof').textContent = 'Statewide totals \u2014 as of ' + fmtDate(data.date) + (labelSuffix || '');
+  document.getElementById('tot-l1').textContent = fmtInt(data.totals.l1);
+  document.getElementById('tot-l2').textContent = fmtInt(data.totals.l2);
+  document.getElementById('tot-l3').textContent = fmtInt(data.totals.l3);
+  document.getElementById('tot-zips').textContent = fmtInt(data.totals.zip_count);
+
+  const rows = (data.zips || []).map(z => {
+    return '<tr class="peak-' + z.peak_level + '">' +
+      '<td>' + z.zip + '</td>' +
+      '<td>' + (z.l1 || '\u2014') + '</td>' +
+      '<td>' + (z.l2 || '\u2014') + '</td>' +
+      '<td>' + (z.l3 || '\u2014') + '</td>' +
+      '<td><strong>' + z.total + '</strong></td>' +
+      '<td><span class="peak-pill ' + peakClass(z.peak_level) + '">Level ' + z.peak_level + '</span></td>' +
+      '<td class="left">' + (z.counties || '') + '</td>' +
+      '<td class="left">' + (z.fires || '') + '</td>' +
+      '</tr>';
+  }).join('');
+  document.getElementById('zip-tbody').innerHTML = rows || '<tr class="empty-row"><td colspan="8">No ZIP codes with active evacuations.</td></tr>';
+}
+
+function renderArchive() {
+  const histByDate = {};
+  HISTORY.forEach(h => { histByDate[h.date] = h; });
+  const tbody = document.getElementById('archive-tbody');
+  if (!DATES.length) {
+    tbody.innerHTML = '<tr class="empty-row"><td colspan="4">No reports archived yet.</td></tr>';
+    return;
+  }
+  tbody.innerHTML = DATES.map((d, idx) => {
+    const h = histByDate[d] || {};
+    const isLatest = idx === 0;
+    return '<tr>' +
+      '<td class="left">' + fmtDate(d) + (isLatest ? ' <span style="color:#38a169;font-weight:700;font-size:.7rem;">&bull; Latest</span>' : '') + '</td>' +
+      '<td>' + fmtInt(h.total) + '</td>' +
+      '<td>' + fmtInt(h.zip_count) + '</td>' +
+      '<td>' +
+        '<a class="action-link view-link" data-date="' + d + '" href="#current-report-label">&#128196; View</a> ' +
+        '<a class="action-link dl" href="evac_by_zip/evac_by_zip_' + d + '.xlsx" download>&#8595; Download</a>' +
+      '</td>' +
+    '</tr>';
+  }).join('');
+
+  tbody.querySelectorAll('.view-link').forEach(el => {
+    el.addEventListener('click', async (ev) => {
+      ev.preventDefault();
+      const d = el.getAttribute('data-date');
+      tbody.querySelectorAll('.view-link').forEach(x => x.classList.remove('active'));
+      el.classList.add('active');
+      if (d === DATES[0] && LATEST) {
+        renderReport(LATEST, '');
+        el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        return;
+      }
+      try {
+        const r = await fetch('evac_by_zip/evac_by_zip_' + d + '.json?_=' + Date.now());
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        const data = await r.json();
+        renderReport(data, ' (archived)');
+      } catch (e) {
+        document.getElementById('current-report-sub').textContent = 'Could not load report for ' + d + ': ' + e.message;
+      }
+    });
+  });
+}
+
+function drawTrendChart() {
+  const svg = document.getElementById('trendChart');
+  if (!HISTORY.length) {
+    document.getElementById('trendEmpty').style.display = 'block';
+    return;
+  }
+  const W = 1000, H = 260, padL = 46, padR = 12, padT = 12, padB = 30;
+  const plotW = W - padL - padR, plotH = H - padT - padB;
+  const maxVal = Math.max(10, ...HISTORY.map(h => h.total || 0));
+  const n = HISTORY.length;
+  const xAt = i => padL + (n === 1 ? plotW / 2 : (i / (n - 1)) * plotW);
+  const yAt = v => padT + plotH - (v / maxVal) * plotH;
+
+  function pathFor(key, color) {
+    const pts = HISTORY.map((h, i) => xAt(i) + ',' + yAt(h[key] || 0)).join(' ');
+    return '<polyline points="' + pts + '" fill="none" stroke="' + color + '" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" />' +
+      HISTORY.map((h, i) => '<circle cx="' + xAt(i) + '" cy="' + yAt(h[key] || 0) + '" r="2.6" fill="' + color + '"><title>' + h.date + ': ' + (h[key]||0).toLocaleString() + '</title></circle>').join('');
+  }
+
+  let gridLines = '';
+  for (let g = 0; g <= 4; g++) {
+    const y = padT + (plotH / 4) * g;
+    const val = Math.round(maxVal - (maxVal / 4) * g);
+    gridLines += '<line x1="' + padL + '" y1="' + y + '" x2="' + (W - padR) + '" y2="' + y + '" stroke="#e6e9ee" stroke-width="1"/>' +
+      '<text x="' + (padL - 8) + '" y="' + (y + 4) + '" font-size="10" fill="#8a8fa3" text-anchor="end">' + val.toLocaleString() + '</text>';
+  }
+
+  const firstLabel = fmtDate(HISTORY[0].date);
+  const lastLabel = fmtDate(HISTORY[n - 1].date);
+
+  svg.innerHTML = gridLines +
+    pathFor('l1', '#38a169') + pathFor('l2', '#dd6b20') + pathFor('l3', '#c53030') + pathFor('total', '#2d3748') +
+    '<text x="' + padL + '" y="' + (H - 8) + '" font-size="10" fill="#8a8fa3">' + firstLabel + '</text>' +
+    '<text x="' + (W - padR) + '" y="' + (H - 8) + '" font-size="10" fill="#8a8fa3" text-anchor="end">' + lastLabel + '</text>';
+}
+
+renderReport(LATEST, '');
+renderArchive();
+drawTrendChart();
+</script>
+</body>
+</html>

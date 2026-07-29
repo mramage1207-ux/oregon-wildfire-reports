@@ -207,6 +207,16 @@
     .evac-box.level1 .evac-count { color: #68d391; }
     @media (max-width: 700px) { .evac-grid { grid-template-columns: 1fr; } }
 
+    .evac-zip-linkwrap { text-align: center; margin-top: .65rem; }
+    .evac-zip-link {
+      display: inline-flex; align-items: center; gap: .35rem;
+      font-size: .72rem; font-weight: 700; letter-spacing: .3px;
+      color: #ffd8a8; background: rgba(230,126,34,.16);
+      border: 1px solid rgba(230,126,34,.45); border-radius: 20px;
+      padding: .4rem 1.05rem; text-decoration: none; transition: background .15s;
+    }
+    .evac-zip-link:hover { background: rgba(230,126,34,.3); color: #fff; }
+
     /* ── structure loss table ── */
     .struct-loss-section {
       max-width: 1100px; margin: 1rem auto 0; padding: 0 0 .75rem;
@@ -500,6 +510,9 @@
           <div class="evac-count" id="evac-l3">0</div>
           <div id="evac-l3-change"></div>
         </div>
+      </div>
+      <div class="evac-zip-linkwrap">
+        <a href="evacuations-by-zip.html" target="_blank" rel="noopener noreferrer" class="evac-zip-link">&#128231; View evacuations by ZIP code &rarr;</a>
       </div>
     </div>
     <div class="struct-loss-section" id="struct-loss-section" style="display:none">
