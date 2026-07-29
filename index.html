@@ -1800,16 +1800,32 @@ function render(pdfs, data) {
   if (evacL2ChangeEl) evacL2ChangeEl.innerHTML = changeBadgeHtml('evac_addresses_l2', 'l2');
   if (evacL3ChangeEl) evacL3ChangeEl.innerHTML = changeBadgeHtml('evac_addresses_l3', 'l3');
 
-  // ── Evac-specific "as of" note — added 2026-07-28 at Matt's request ──
-  // Only show this when evac data was refreshed at a genuinely different time
-  // than the header's overall report freshness time (e.g. a 3:45 PM prefetch
-  // updated evac zones but no new full report has been generated since the
-  // morning run) — avoids redundant clutter on the common case where they match.
+  // ── Evac-specific "as of" note — added 2026-07-28, fixed 2026-07-29 ──
+  // Bug (caught by Matt 2026-07-29): this used to compare the two 12-hour
+  // DISPLAY STRINGS with `!==` and then unconditionally word the note as
+  // "evac addresses updated X — more recent than Y" —
+  // which is only true if evacAsOf is actually later. On an ordinary morning
+  // run, evac data is fetched at ~8:05 AM and the full report/PDF generates
+  // ~14 minutes later at ~8:19 AM, so evacAsOf (8:05) is EARLIER than
+  // reportAsOf (8:19) — the note was live nearly every day and always
+  // backwards. Fixed by comparing real timestamps (the *_iso UTC companion
+  // fields added alongside the display strings) and only showing the note
+  // for the one case it was actually meant for: evac data refreshed AFTER
+  // the last full report run (e.g. a standalone afternoon prefetch with no
+  // accompanying PDF regeneration) — never when evac is merely earlier in
+  // the same pipeline run, which is the normal, unremarkable case.
   const evacAsOfEl = document.getElementById('evac-as-of-note');
   if (evacAsOfEl) {
     const evacAsOf = data && data.evac_data_as_of;
     const reportAsOf = data && (data.current_report_time || data.report_time);
-    if (evacAsOf && reportAsOf && evacAsOf !== reportAsOf) {
+    const evacAsOfIso = data && data.evac_data_as_of_iso;
+    const reportAsOfIso = data && (data.current_report_time_iso || data.report_time_iso);
+    const evacDt = evacAsOfIso ? new Date(evacAsOfIso) : null;
+    const reportDt = reportAsOfIso ? new Date(reportAsOfIso) : null;
+    const evacIsNewer = evacDt && reportDt && !isNaN(evacDt) && !isNaN(reportDt)
+      && (evacDt.getTime() - reportDt.getTime()) > 60000; // >1 min, ignore clock-skew noise
+
+    if (evacIsNewer && evacAsOf && reportAsOf) {
       evacAsOfEl.textContent = `⚠ Evac addresses updated ${evacAsOf} — more recent than the ${reportAsOf} report above`;
       evacAsOfEl.style.display = 'inline-block';
     } else {

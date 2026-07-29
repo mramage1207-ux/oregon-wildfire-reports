@@ -1,9 +1,11 @@
 {
   "last_updated": "2026-07-29",
   "report_time": "8:19 AM PDT",
+  "report_time_iso": "2026-07-29T22:32:47Z",
   "current_active_fires": 65,
   "current_acres_burned": 1259271.66,
   "current_report_time": "8:19 AM PDT",
+  "current_report_time_iso": "2026-07-29T22:32:47Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-07-28",
     "active_large_fires": {
@@ -747,6 +749,7 @@
   "evac_addresses_l2": 3716,
   "evac_addresses_l3": 1915,
   "evac_data_as_of": "8:05 AM PDT",
+  "evac_data_as_of_iso": "2026-07-29T15:05:03Z",
   "struct_loss": {
     "oregon_totals": {
       "res_threatened": 15859,
