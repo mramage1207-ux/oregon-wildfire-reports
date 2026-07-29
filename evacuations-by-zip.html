@@ -79,11 +79,6 @@
   .action-link.active { background: #1a2744; color: #fff; border-color: #1a2744; }
   .empty-row td { text-align: center; color: #999; padding: 1.2rem; }
 
-  .chart-wrap { position: relative; }
-  .chart-legend { display: flex; gap: 1.2rem; font-size: .74rem; margin-bottom: .6rem; flex-wrap: wrap; }
-  .chart-legend span { display: inline-flex; align-items: center; gap: .35rem; }
-  .chart-dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
-
   #current-report-label { font-weight: 700; }
 
   .info-box {
@@ -122,21 +117,6 @@
 </div>
 
 <main>
-  <div class="card">
-    <h2>Trend &mdash; Addresses Under Evacuation Order</h2>
-    <div class="sub">Statewide totals by evacuation level, one point per day the pipeline has run.</div>
-    <div class="chart-wrap">
-      <div class="chart-legend">
-        <span><i class="chart-dot" style="background:#38a169"></i> Level 1</span>
-        <span><i class="chart-dot" style="background:#dd6b20"></i> Level 2</span>
-        <span><i class="chart-dot" style="background:#c53030"></i> Level 3</span>
-        <span><i class="chart-dot" style="background:#2d3748"></i> Total</span>
-      </div>
-      <svg id="trendChart" viewBox="0 0 1000 260" preserveAspectRatio="none" style="width:100%;height:220px;" role="img" aria-label="Trend of evacuation addresses by level over time"></svg>
-      <div id="trendEmpty" style="display:none;font-size:.82rem;color:#888;padding:1rem 0;">Not enough history yet &mdash; check back after a few more daily runs.</div>
-    </div>
-  </div>
-
   <div class="card">
     <h2 id="current-report-label">Current Report</h2>
     <div class="sub" id="current-report-sub">&nbsp;</div>
@@ -276,45 +256,8 @@ function renderArchive() {
   });
 }
 
-function drawTrendChart() {
-  const svg = document.getElementById('trendChart');
-  if (!HISTORY.length) {
-    document.getElementById('trendEmpty').style.display = 'block';
-    return;
-  }
-  const W = 1000, H = 260, padL = 46, padR = 12, padT = 12, padB = 30;
-  const plotW = W - padL - padR, plotH = H - padT - padB;
-  const maxVal = Math.max(10, ...HISTORY.map(h => h.total || 0));
-  const n = HISTORY.length;
-  const xAt = i => padL + (n === 1 ? plotW / 2 : (i / (n - 1)) * plotW);
-  const yAt = v => padT + plotH - (v / maxVal) * plotH;
-
-  function pathFor(key, color) {
-    const pts = HISTORY.map((h, i) => xAt(i) + ',' + yAt(h[key] || 0)).join(' ');
-    return '<polyline points="' + pts + '" fill="none" stroke="' + color + '" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" />' +
-      HISTORY.map((h, i) => '<circle cx="' + xAt(i) + '" cy="' + yAt(h[key] || 0) + '" r="2.6" fill="' + color + '"><title>' + h.date + ': ' + (h[key]||0).toLocaleString() + '</title></circle>').join('');
-  }
-
-  let gridLines = '';
-  for (let g = 0; g <= 4; g++) {
-    const y = padT + (plotH / 4) * g;
-    const val = Math.round(maxVal - (maxVal / 4) * g);
-    gridLines += '<line x1="' + padL + '" y1="' + y + '" x2="' + (W - padR) + '" y2="' + y + '" stroke="#e6e9ee" stroke-width="1"/>' +
-      '<text x="' + (padL - 8) + '" y="' + (y + 4) + '" font-size="10" fill="#8a8fa3" text-anchor="end">' + val.toLocaleString() + '</text>';
-  }
-
-  const firstLabel = fmtDate(HISTORY[0].date);
-  const lastLabel = fmtDate(HISTORY[n - 1].date);
-
-  svg.innerHTML = gridLines +
-    pathFor('l1', '#38a169') + pathFor('l2', '#dd6b20') + pathFor('l3', '#c53030') + pathFor('total', '#2d3748') +
-    '<text x="' + padL + '" y="' + (H - 8) + '" font-size="10" fill="#8a8fa3">' + firstLabel + '</text>' +
-    '<text x="' + (W - padR) + '" y="' + (H - 8) + '" font-size="10" fill="#8a8fa3" text-anchor="end">' + lastLabel + '</text>';
-}
-
 renderReport(LATEST, '');
 renderArchive();
-drawTrendChart();
 </script>
 </body>
 </html>
