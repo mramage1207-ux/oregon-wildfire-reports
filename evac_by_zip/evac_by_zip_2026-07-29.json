@@ -1,24 +1,14 @@
 {
   "date": "2026-07-29",
-  "generated_at": "2026-07-29T21:42:40Z",
+  "generated_at": "2026-07-29T22:22:45Z",
   "totals": {
-    "l1": 4343,
-    "l2": 3067,
-    "l3": 1814,
-    "total": 9224,
-    "zip_count": 36
+    "l1": 3256,
+    "l2": 3455,
+    "l3": 1754,
+    "total": 8465,
+    "zip_count": 34
   },
   "zips": [
-    {
-      "zip": "97759",
-      "l1": 809,
-      "l2": 681,
-      "l3": 86,
-      "total": 1576,
-      "peak_level": 3,
-      "counties": "Deschutes, Jefferson",
-      "fires": "Akawa Butte"
-    },
     {
       "zip": "97063",
       "l1": 0,
@@ -28,6 +18,16 @@
       "peak_level": 3,
       "counties": "Wasco",
       "fires": "Grasshopper"
+    },
+    {
+      "zip": "97759",
+      "l1": 340,
+      "l2": 681,
+      "l3": 86,
+      "total": 1107,
+      "peak_level": 3,
+      "counties": "Deschutes, Jefferson",
+      "fires": "Akawa Butte"
     },
     {
       "zip": "97720",
@@ -50,23 +50,13 @@
       "fires": "No named fire"
     },
     {
-      "zip": "97734",
-      "l1": 459,
-      "l2": 274,
-      "l3": 1,
-      "total": 734,
-      "peak_level": 3,
-      "counties": "Jefferson",
-      "fires": "Akawa Butte; Bench Fire"
-    },
-    {
       "zip": "97754",
-      "l1": 435,
-      "l2": 139,
-      "l3": 128,
-      "total": 702,
+      "l1": 114,
+      "l2": 461,
+      "l3": 135,
+      "total": 710,
       "peak_level": 3,
-      "counties": "Crook",
+      "counties": "Crook, Jefferson",
       "fires": "Box Springs; Brewer Fire; Rowe Creek Complex West Zone"
     },
     {
@@ -80,14 +70,14 @@
       "fires": "No named fire"
     },
     {
-      "zip": "97741",
-      "l1": 164,
-      "l2": 56,
-      "l3": 119,
-      "total": 339,
+      "zip": "97734",
+      "l1": 459,
+      "l2": 86,
+      "l3": 1,
+      "total": 546,
       "peak_level": 3,
       "counties": "Jefferson",
-      "fires": "10 mile fire; Bench Fire; Brewer Fire; Rowe Creek Complex West Zone"
+      "fires": "Akawa Butte; Bench Fire"
     },
     {
       "zip": "97907",
@@ -107,7 +97,17 @@
       "total": 298,
       "peak_level": 3,
       "counties": "Wheeler",
-      "fires": "Crosswhite; Rowe Creek Complex West Zone; Shingle"
+      "fires": "Rowe Creek Complex West Zone; Shingle"
+    },
+    {
+      "zip": "97741",
+      "l1": 154,
+      "l2": 62,
+      "l3": 63,
+      "total": 279,
+      "peak_level": 3,
+      "counties": "Jefferson",
+      "fires": "10 mile fire; Bench Fire; Rowe Creek Complex West Zone"
     },
     {
       "zip": "97021",
@@ -160,24 +160,14 @@
       "fires": "No named fire"
     },
     {
-      "zip": "97761",
+      "zip": "97751",
       "l1": 0,
-      "l2": 0,
-      "l3": 24,
-      "total": 24,
+      "l2": 24,
+      "l3": 6,
+      "total": 30,
       "peak_level": 3,
-      "counties": "Jefferson",
-      "fires": "Bench Fire"
-    },
-    {
-      "zip": "97711",
-      "l1": 5,
-      "l2": 4,
-      "l3": 3,
-      "total": 12,
-      "peak_level": 3,
-      "counties": "Jefferson",
-      "fires": "Brewer Fire; Rowe Creek Complex West Zone"
+      "counties": "Crook",
+      "fires": "No named fire"
     },
     {
       "zip": "97840",
@@ -190,14 +180,24 @@
       "fires": "No named fire"
     },
     {
+      "zip": "97752",
+      "l1": 0,
+      "l2": 0,
+      "l3": 10,
+      "total": 10,
+      "peak_level": 3,
+      "counties": "Crook",
+      "fires": "No named fire"
+    },
+    {
       "zip": "97817",
       "l1": 0,
       "l2": 0,
       "l3": 8,
       "total": 8,
       "peak_level": 3,
-      "counties": "Baker, Grant",
-      "fires": "Salmon; Salmon/Olive Butte Fires"
+      "counties": "Grant",
+      "fires": "Salmon/Olive Butte Fires"
     },
     {
       "zip": "97870",
@@ -211,12 +211,12 @@
     },
     {
       "zip": "97001",
-      "l1": 241,
-      "l2": 7,
+      "l1": 0,
+      "l2": 248,
       "l3": 0,
       "total": 248,
       "peak_level": 2,
-      "counties": "Wasco, Wheeler",
+      "counties": "Wasco",
       "fires": "No named fire"
     },
     {
@@ -228,16 +228,6 @@
       "peak_level": 2,
       "counties": "Union",
       "fires": "No named fire"
-    },
-    {
-      "zip": "97751",
-      "l1": 24,
-      "l2": 4,
-      "l3": 0,
-      "total": 28,
-      "peak_level": 2,
-      "counties": "Crook",
-      "fires": "Shingle"
     },
     {
       "zip": "97830",
@@ -270,14 +260,14 @@
       "fires": "Anthony Fire"
     },
     {
-      "zip": "97752",
-      "l1": 0,
-      "l2": 10,
+      "zip": "97711",
+      "l1": 1,
+      "l2": 1,
       "l3": 0,
-      "total": 10,
+      "total": 2,
       "peak_level": 2,
-      "counties": "Crook",
-      "fires": "No named fire"
+      "counties": "Jefferson",
+      "fires": "Rowe Creek Complex West Zone"
     },
     {
       "zip": "97814",
@@ -307,16 +297,6 @@
       "total": 24,
       "peak_level": 1,
       "counties": "Wheeler",
-      "fires": "No named fire"
-    },
-    {
-      "zip": "97758",
-      "l1": 18,
-      "l2": 0,
-      "l3": 0,
-      "total": 18,
-      "peak_level": 1,
-      "counties": "Harney",
       "fires": "No named fire"
     },
     {
@@ -366,9 +346,9 @@
       "l3": 0,
       "total": 1,
       "peak_level": 1,
-      "counties": "Baker, Union",
+      "counties": "Baker",
       "fires": "Anthony Fire"
     }
   ],
-  "note": "Reconstructed from evac_by_zip_2026-07-29.xlsx (generated on Matt's Mac before JSON/history export existed in the script) rather than re-fetched, since the Census/ArcGIS APIs are not reachable from the Cowork sandbox."
+  "note": "Reconciled 2026-07-29 to match the morning report's evac_raw.json snapshot (fetched 2026-07-29T15:05:03Z) rather than a separate live pull, per Matt's request that the two reports stay in sync. 285 of 330 canonical evacuation zones (88.5% of 9,561 total addresses) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 45 zones/1,096 addresses have no cached geometry and are not reflected in this ZIP breakdown. Going forward, the dedicated wildfire-evac-zip LaunchAgent's own live geometry pull is reconciled the same way against evac_raw.json every run (see generate_evac_zip_report.py's reconcile_with_evac_raw())."
 }
