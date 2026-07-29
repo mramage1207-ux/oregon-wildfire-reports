@@ -1,12 +1,27 @@
 {
   "date": "2026-07-29",
-  "generated_at": "2026-07-29T22:22:45Z",
+  "generated_at": "2026-07-29T22:43:54Z",
+  "as_of_iso": "2026-07-29T15:05:03.000Z",
+  "as_of_display": "July 29, 2026, 8:05 AM PDT",
   "totals": {
     "l1": 3256,
     "l2": 3455,
     "l3": 1754,
     "total": 8465,
     "zip_count": 34
+  },
+  "unmatched": {
+    "l1": 674,
+    "l2": 261,
+    "l3": 161,
+    "total": 1096,
+    "zone_count": 45
+  },
+  "reconciled_total": {
+    "l1": 3930,
+    "l2": 3716,
+    "l3": 1915,
+    "total": 9561
   },
   "zips": [
     {
@@ -350,5 +365,5 @@
       "fires": "Anthony Fire"
     }
   ],
-  "note": "Reconciled 2026-07-29 to match the morning report's evac_raw.json snapshot (fetched 2026-07-29T15:05:03Z) rather than a separate live pull, per Matt's request that the two reports stay in sync. 285 of 330 canonical evacuation zones (88.5% of 9,561 total addresses) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 45 zones/1,096 addresses have no cached geometry and are not reflected in this ZIP breakdown. Going forward, the dedicated wildfire-evac-zip LaunchAgent's own live geometry pull is reconciled the same way against evac_raw.json every run (see generate_evac_zip_report.py's reconcile_with_evac_raw())."
+  "note": "Reconciled 2026-07-29 to match the morning report's evac_raw.json snapshot (fetched 2026-07-29T15:05:03Z / 8:05 AM PDT) rather than a separate live pull. 285 of 330 canonical evacuation zones (88.5% of 9,561 total addresses) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 45 zones/1,096 addresses (L1:674 L2:261 L3:161) are shown as a single 'unmatched' summary row on the website so the table's own totals tie to the morning report. Going forward, the dedicated wildfire-evac-zip LaunchAgent's own live geometry pull is reconciled the same way against evac_raw.json every run."
 }
