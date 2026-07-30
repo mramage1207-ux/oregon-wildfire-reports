@@ -328,16 +328,25 @@ async function main() {
   }
   renderUnmatchedPanel();
 
-  // Bounds used to decide which ZIP polygons get a permanent text label —
-  // added 2026-07-30 per Matt, so a ZIP overlapping an "Unmatched zones"
-  // dashed outline can be identified by sight instead of clicking each
-  // polygon. Labeling all ~568 statewide ZCTAs unconditionally would be
-  // unreadable clutter at any reasonable zoom, so labels are scoped to
-  // ZIPs whose polygon intersects the zone layer's own bounding box (the
-  // report's actual fire-affected region) — this naturally covers every
-  // ZIP relevant to an unmatched zone, since those zones are a subset of
-  // the same zoneGeo the bounds are computed from.
-  const labelBounds = (zoneGeo && zoneGeo.features.length) ? fitBounds : null;
+  // Which ZIP polygons get a permanent text label — added 2026-07-30 per
+  // Matt, so a ZIP overlapping an "Unmatched zones" dashed outline can be
+  // identified by sight instead of clicking each polygon.
+  //
+  // First attempt used ONE bounding box for the whole zone layer, but this
+  // fire season's zones are scattered statewide, so that single rectangle
+  // covered nearly all of Oregon (165 of 568 ZCTAs got labeled, including
+  // out-of-state ones whose bbox happened to overlap the giant rectangle).
+  // Fixed by checking each ZIP against every INDIVIDUAL unmatched zone's own
+  // (much tighter) bounding box instead of one merged statewide box — a ZIP
+  // is labeled only if it's actually near a specific unmatched zone, or
+  // already has evacuation data of its own.
+  const unmatchedZoneBoundsList = unmatchedFeatures.map(f => {
+    try { const b = L.geoJSON(f).getBounds(); return b.isValid() ? b : null; }
+    catch (e) { return null; }
+  }).filter(b => b);
+  function nearAnyUnmatchedZone(zipBounds) {
+    return unmatchedZoneBoundsList.some(b => b.intersects(zipBounds));
+  }
 
   if (zctaGeo && zctaGeo.features.length) {
     const zipLayer = L.geoJSON(zctaGeo, {
@@ -370,7 +379,8 @@ async function main() {
         } else {
           layer.bindPopup('<div class="popup-title">ZIP ' + zc + '</div><div class="popup-row">No evacuation addresses this run.</div>');
         }
-        if (!labelBounds || (layer.getBounds && layer.getBounds().isValid() && labelBounds.intersects(layer.getBounds()))) {
+        const zipBounds = layer.getBounds && layer.getBounds();
+        if (row || (zipBounds && zipBounds.isValid() && nearAnyUnmatchedZone(zipBounds))) {
           layer.bindTooltip(zc, { permanent: true, direction: 'center', className: 'zip-label' });
         }
       },
