@@ -1129,7 +1129,20 @@ function drawMap(fires) {
       ${f.name} &nbsp;<span style="color:#e67e22;">${fmtNum(f.acres)} acres</span>
     </div>`;
     html+=`<div style="color:#666;">${f.status}</div>`;
-    if(f.cpx_name) html+=`<div style="color:#666;">Part of: <b>${f.cpx_name}</b></div>`;
+    if(f.cpx_name) {
+      // Complex name renders in mega-fire blue once the COMBINED complex
+      // acreage crosses 100k — added 2026-07-30 per Matt, even when this
+      // individual fire's own acreage doesn't cross the threshold (e.g. Hay
+      // Creek Complex is 200,292 ac combined but no single member reaches
+      // 100k alone). Reuses MEGA_FIRE_FILL_HEX/MEGA_FIRE_ACRES defined above
+      // so the tooltip and the marker-coloring logic can never drift apart.
+      const cpxIsMega=(f.cpx_total_acres||0)>=MEGA_FIRE_ACRES;
+      const cpxNameColor=cpxIsMega?MEGA_FIRE_FILL_HEX:'#1a2744';
+      html+=`<div style="color:#666;">Part of: <b style="color:${cpxNameColor};">${f.cpx_name}</b></div>`;
+      if(f.cpx_total_acres) {
+        html+=`<div style="color:#666;">Complex total: <b style="color:${cpxNameColor};">${fmtNum(f.cpx_total_acres)} acres</b>${cpxIsMega?' &mdash; MEGAFIRE':''}</div>`;
+      }
+    }
     if(totalLost>0) {
       html+=`<div style="font-weight:600;color:#1a2744;margin-top:6px;margin-bottom:2px;">Structures Lost — ${totalLost} total</div>`;
       if(f.structures_lost_res)   html+=`<div style="color:#1a2744;">Residential: <b>${fmtNum(f.structures_lost_res)}</b></div>`;

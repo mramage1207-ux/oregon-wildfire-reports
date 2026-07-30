@@ -2941,7 +2941,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Coleman Creek",
@@ -2954,7 +2955,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0445 CROSSWHITE",
@@ -2967,7 +2969,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": "ROWE CREEK COMPLEX"
+      "cpx_name": "ROWE CREEK COMPLEX",
+      "cpx_total_acres": 300592.0
     },
     {
       "name": "Second Flat",
@@ -2980,7 +2983,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 2,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Bald Mountain",
@@ -2993,7 +2997,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "FOX",
@@ -3006,7 +3011,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 5,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0587 SHINGLE",
@@ -3019,7 +3025,8 @@
       "structures_lost_res": 3,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Bench",
@@ -3032,7 +3039,8 @@
       "structures_lost_res": 13,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "HAT",
@@ -3045,7 +3053,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0567",
@@ -3058,7 +3067,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": "HAY CREEK COMPLEX"
+      "cpx_name": "HAY CREEK COMPLEX",
+      "cpx_total_acres": 200292.0
     },
     {
       "name": "Hagen",
@@ -3071,7 +3081,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0497 HENRY",
@@ -3084,7 +3095,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0494 AKAWA BUTTE",
@@ -3097,7 +3109,8 @@
       "structures_lost_res": 2,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Jackass Butte",
@@ -3110,7 +3123,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 2,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "POWDER RIVER",
@@ -3123,7 +3137,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0500 COYOTE",
@@ -3136,7 +3151,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Stubble",
@@ -3149,7 +3165,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "E Evans Creek Rd 18000",
@@ -3162,7 +3179,8 @@
       "structures_lost_res": 1,
       "structures_lost_comm": 0,
       "structures_lost_other": 6,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Grasshopper",
@@ -3175,7 +3193,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0446 CAMEL HUMP",
@@ -3188,7 +3207,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": "ROWE CREEK COMPLEX"
+      "cpx_name": "ROWE CREEK COMPLEX",
+      "cpx_total_acres": 300592.0
     },
     {
       "name": "North Cayuse",
@@ -3201,7 +3221,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 1,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Egypt",
@@ -3214,7 +3235,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Burnt Creek",
@@ -3227,7 +3249,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Olive Butte",
@@ -3240,7 +3263,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Anthony",
@@ -3253,7 +3277,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "BOLOGNA",
@@ -3266,7 +3291,8 @@
       "structures_lost_res": 1,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Castle",
@@ -3279,7 +3305,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Salmon",
@@ -3292,7 +3319,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 2,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Bob Creek",
@@ -3305,7 +3333,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Horse Ridge",
@@ -3318,7 +3347,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "INC 302",
@@ -3331,7 +3361,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "2680 - Diamond Craters",
@@ -3344,7 +3375,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0449 PORCUPINE RIDGE",
@@ -3357,7 +3389,8 @@
       "structures_lost_res": 11,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": "HAY CREEK COMPLEX"
+      "cpx_name": "HAY CREEK COMPLEX",
+      "cpx_total_acres": 200292.0
     },
     {
       "name": "BREWER",
@@ -3370,7 +3403,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 15,
-      "cpx_name": "ROWE CREEK COMPLEX"
+      "cpx_name": "ROWE CREEK COMPLEX",
+      "cpx_total_acres": 300592.0
     },
     {
       "name": "HOAG (0476)",
@@ -3383,7 +3417,8 @@
       "structures_lost_res": 2,
       "structures_lost_comm": 0,
       "structures_lost_other": 5,
-      "cpx_name": "HAY CREEK COMPLEX"
+      "cpx_name": "HAY CREEK COMPLEX",
+      "cpx_total_acres": 200292.0
     },
     {
       "name": "0512 BOX SPRINGS",
@@ -3396,7 +3431,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": "ROWE CREEK COMPLEX"
+      "cpx_name": "ROWE CREEK COMPLEX",
+      "cpx_total_acres": 300592.0
     },
     {
       "name": "0584 COTTONWOOD",
@@ -3409,7 +3445,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": "HAY CREEK COMPLEX"
+      "cpx_name": "HAY CREEK COMPLEX",
+      "cpx_total_acres": 200292.0
     },
     {
       "name": "Beachcomb",
@@ -3422,7 +3459,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0460 HOPKIN",
@@ -3435,7 +3473,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": "HAY CREEK COMPLEX"
+      "cpx_name": "HAY CREEK COMPLEX",
+      "cpx_total_acres": 200292.0
     },
     {
       "name": "Lower Dry Creek Mutual Aid",
@@ -3448,7 +3487,8 @@
       "structures_lost_res": 6,
       "structures_lost_comm": 0,
       "structures_lost_other": 42,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0485",
@@ -3461,7 +3501,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": "ROWE CREEK COMPLEX"
+      "cpx_name": "ROWE CREEK COMPLEX",
+      "cpx_total_acres": 300592.0
     },
     {
       "name": "0450 COVE CREEK",
@@ -3474,7 +3515,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": "ROWE CREEK COMPLEX"
+      "cpx_name": "ROWE CREEK COMPLEX",
+      "cpx_total_acres": 300592.0
     },
     {
       "name": "LYTLE",
@@ -3487,7 +3529,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "COW",
@@ -3500,7 +3543,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": "COW CAMP COMPLEX"
+      "cpx_name": "COW CAMP COMPLEX",
+      "cpx_total_acres": 8044.3
     },
     {
       "name": "CROWLEY",
@@ -3513,7 +3557,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0579 TEN MILE",
@@ -3526,7 +3571,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Butterfield Spring Fire",
@@ -3539,7 +3585,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "PINE MOUNTAIN",
@@ -3552,7 +3599,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0432",
@@ -3565,7 +3613,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": "ROWE CREEK COMPLEX"
+      "cpx_name": "ROWE CREEK COMPLEX",
+      "cpx_total_acres": 300592.0
     },
     {
       "name": "0611",
@@ -3578,7 +3627,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "FRONTAGE",
@@ -3591,7 +3641,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0502",
@@ -3604,7 +3655,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": "ROWE CREEK COMPLEX"
+      "cpx_name": "ROWE CREEK COMPLEX",
+      "cpx_total_acres": 300592.0
     },
     {
       "name": "0231 ZEN",
@@ -3617,7 +3669,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "188",
@@ -3630,7 +3683,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": "COW CAMP COMPLEX"
+      "cpx_name": "COW CAMP COMPLEX",
+      "cpx_total_acres": 8044.3
     },
     {
       "name": "Old Emigrant",
@@ -3643,7 +3697,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0380 ANTELOPE CREEK",
@@ -3656,7 +3711,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "WHISKEY",
@@ -3669,7 +3725,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Hoop",
@@ -3682,7 +3739,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0501 PAT'S CABIN",
@@ -3695,7 +3753,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": "ROWE CREEK COMPLEX"
+      "cpx_name": "ROWE CREEK COMPLEX",
+      "cpx_total_acres": 300592.0
     },
     {
       "name": "518 SULLY",
@@ -3708,7 +3767,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Cable Creek",
@@ -3721,7 +3781,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "8 MILE",
@@ -3734,7 +3795,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0246 RHEA",
@@ -3747,7 +3809,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0366 CEDAR",
@@ -3760,7 +3823,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0489 PARRISH",
@@ -3773,7 +3837,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": "ROWE CREEK COMPLEX"
+      "cpx_name": "ROWE CREEK COMPLEX",
+      "cpx_total_acres": 300592.0
     },
     {
       "name": "0496",
@@ -3786,7 +3851,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Loveless",
@@ -3799,7 +3865,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0586",
@@ -3812,7 +3879,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Blackwell Rd 8087",
@@ -3825,7 +3893,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0384 COYNER",
@@ -3838,7 +3907,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Riverview Fire",
@@ -3851,7 +3921,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "HILT",
@@ -3864,7 +3935,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "PP# 342802 UPPER APPLEGATE RD",
@@ -3877,7 +3949,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "0480 WILCOX",
@@ -3890,7 +3963,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": "HAY CREEK COMPLEX"
+      "cpx_name": "HAY CREEK COMPLEX",
+      "cpx_total_acres": 200292.0
     },
     {
       "name": "AIRPORT",
@@ -3903,7 +3977,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     },
     {
       "name": "Riverside OSFM Support",
@@ -3916,7 +3991,8 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
-      "cpx_name": null
+      "cpx_name": null,
+      "cpx_total_acres": null
     }
   ]
 }
