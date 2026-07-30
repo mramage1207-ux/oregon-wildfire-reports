@@ -9,10 +9,10 @@
   "change_vs_prior_morning": {
     "prior_date": "2026-07-28",
     "active_large_fires": {
-      "current": 32,
+      "current": 31,
       "prior": 34,
-      "delta": -2,
-      "pct": -5.9
+      "delta": -3,
+      "pct": -8.8
     },
     "active_evac_fires": {
       "current": 8,
@@ -45,25 +45,25 @@
       "pct": -12.2
     },
     "total_acres_ytd": {
-      "current": 1589419.2000000002,
+      "current": 1579000.2000000002,
       "prior": 1501501,
-      "delta": 87918.20000000019,
-      "pct": 5.9
+      "delta": 77499.20000000019,
+      "pct": 5.2
     },
     "structures_lost": {
-      "current": 114,
+      "current": 116,
       "prior": 106,
-      "delta": 8,
-      "pct": 7.5
+      "delta": 10,
+      "pct": 9.4
     }
   },
   "change_vs_7d_ago": {
     "prior_date": "2026-07-22",
     "active_large_fires": {
-      "current": 32,
+      "current": 31,
       "prior": 23,
-      "delta": 9,
-      "pct": 39.1
+      "delta": 8,
+      "pct": 34.8
     },
     "active_evac_fires": {
       "current": 8,
@@ -96,25 +96,25 @@
       "pct": -15.6
     },
     "total_acres_ytd": {
-      "current": 1589419.2000000002,
+      "current": 1579000.2000000002,
       "prior": 449322,
-      "delta": 1140097.2000000002,
-      "pct": 253.7
+      "delta": 1129678.2000000002,
+      "pct": 251.4
     },
     "structures_lost": {
-      "current": 114,
+      "current": 116,
       "prior": 93,
-      "delta": 21,
-      "pct": 22.6
+      "delta": 23,
+      "pct": 24.7
     }
   },
   "change_vs_30d_ago": {
     "prior_date": "2026-06-29",
     "active_large_fires": {
-      "current": 32,
+      "current": 31,
       "prior": 1,
-      "delta": 31,
-      "pct": 3100.0
+      "delta": 30,
+      "pct": 3000.0
     },
     "active_evac_fires": {
       "current": 8,
@@ -147,15 +147,15 @@
       "pct": 140.7
     },
     "total_acres_ytd": {
-      "current": 1589419.2000000002,
+      "current": 1579000.2000000002,
       "prior": 14838,
-      "delta": 1574581.2000000002,
-      "pct": 10611.8
+      "delta": 1564162.2000000002,
+      "pct": 10541.6
     },
     "structures_lost": {
-      "current": 114,
+      "current": 116,
       "prior": 0,
-      "delta": 114,
+      "delta": 116,
       "pct": null
     }
   },
@@ -225,7 +225,7 @@
         37,
         37,
         34,
-        32
+        31
       ]
     },
     "active_evac_fires": {
@@ -633,7 +633,7 @@
         1053674,
         1372091,
         1501501,
-        1589419.2000000002
+        1579000.2000000002
       ]
     },
     "structures_lost": {
@@ -701,7 +701,7 @@
         90,
         98,
         106,
-        114
+        116
       ]
     }
   },
@@ -711,9 +711,9 @@
     "escalation": "Level 2 (Be Set) evacuation addresses have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (3,129 \u2192 3,716 since yesterday morning).",
     "closing": "Full details, county-by-county, are in the sections below."
   },
-  "active_large_fires": 32,
-  "total_large_fire_acres": 1589419.2000000002,
-  "structures_lost": 114,
+  "active_large_fires": 31,
+  "total_large_fire_acres": 1579000.2000000002,
+  "structures_lost": 116,
   "evac_triggering_fires": 8,
   "evac_zones": {
     "level3": [
@@ -741,8 +741,7 @@
       "0494 AKAWA BUTTE \u2014 ~10 miles east of Camp Sherman, Oregon",
       "Grasshopper \u2014 ~16 miles south of Clearwater Village, Oregon",
       "Burnt Creek \u2014 ~9 miles southeast of Lakeview, Oregon",
-      "Anthony \u2014 ~6 miles west of Hutchinson, Oregon",
-      "0480 WILCOX \u2014 ~8 miles southeast of Kent, Oregon"
+      "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
     ]
   },
   "evac_addresses_l1": 3930,
@@ -752,7 +751,7 @@
   "evac_data_as_of_iso": "2026-07-29T15:05:03Z",
   "struct_loss": {
     "oregon_totals": {
-      "res_threatened": 15859,
+      "res_threatened": 13981,
       "res_damaged": 2,
       "res_destroyed": 37,
       "comm_threatened": 0,
@@ -760,10 +759,10 @@
       "comm_destroyed": 0,
       "minor_threatened": 0,
       "minor_damaged": 1,
-      "minor_destroyed": 77,
-      "total_threatened": 15859,
+      "minor_destroyed": 79,
+      "total_threatened": 13981,
       "total_damaged": 3,
-      "total_destroyed": 114
+      "total_destroyed": 116
     }
   },
   "county_structure_data": [
@@ -867,14 +866,14 @@
     },
     {
       "county": "Malheur",
-      "acres": 355087.7,
+      "acres": 344845.7,
       "res": 0,
       "comm": 0,
       "other": 0,
       "fires": [
         {
           "name": "BIG GRASS",
-          "acres": 288120,
+          "acres": 280000,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -882,7 +881,7 @@
         },
         {
           "name": "HAT",
-          "acres": 44122,
+          "acres": 42000,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1013,7 +1012,7 @@
         {
           "name": "0579 TEN MILE",
           "acres": 4834,
-          "status": "Active",
+          "status": "Contained",
           "res": 0,
           "comm": 0,
           "other": 0
@@ -1107,7 +1106,7 @@
       "acres": 45157.0,
       "res": 6,
       "comm": 0,
-      "other": 40,
+      "other": 42,
       "fires": [
         {
           "name": "Hagen",
@@ -1123,7 +1122,7 @@
           "status": "Contained",
           "res": 6,
           "comm": 0,
-          "other": 40
+          "other": 42
         },
         {
           "name": "North Cayuse",
@@ -1202,7 +1201,7 @@
     },
     {
       "county": "Douglas",
-      "acres": 16727.0,
+      "acres": 16550.0,
       "res": 0,
       "comm": 0,
       "other": 0,
@@ -1217,7 +1216,7 @@
         },
         {
           "name": "Castle",
-          "acres": 1727,
+          "acres": 1550,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1410,7 +1409,7 @@
     }
   ],
   "county_acres_map": {
-    "Malheur": 355087.7,
+    "Malheur": 344845.7,
     "Harney": 360409.0,
     "Wheeler": 358385.0,
     "Grant": 66013.0,
@@ -1419,7 +1418,7 @@
     "Umatilla": 45157.0,
     "Baker": 26415.0,
     "Jackson": 15639.0,
-    "Douglas": 16727.0,
+    "Douglas": 16550.0,
     "Lake": 3118.0,
     "Wallowa": 762.0,
     "Deschutes": 2621.5,
@@ -1451,7 +1450,7 @@
       ]
     },
     "Wheeler": {
-      "threatened": 2251,
+      "threatened": 373,
       "damaged": 1,
       "destroyed": 18,
       "fires": [
@@ -1491,7 +1490,7 @@
     "Umatilla": {
       "threatened": 1527,
       "damaged": 0,
-      "destroyed": 46,
+      "destroyed": 48,
       "fires": [
         "Hagen",
         "Horse Ridge",
@@ -2431,8 +2430,8 @@
     {
       "year": 2026,
       "total_fires": 61,
-      "total_acres": 1589419.2000000002,
-      "total_structures_destroyed": 114,
+      "total_acres": 1579000.2000000002,
+      "total_structures_destroyed": 116,
       "fatalities": 0,
       "injuries": 0,
       "largest_fire": {
@@ -2449,7 +2448,7 @@
         {
           "name": "BIG GRASS",
           "county": "Malheur",
-          "acres": 288120.0
+          "acres": 280000.0
         },
         {
           "name": "HAY CREEK COMPLEX",
@@ -2932,7 +2931,7 @@
       "lon": -117.335,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 288120.0,
+      "acres": 280000.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3036,7 +3035,7 @@
       "lon": -118.16,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 44122.0,
+      "acres": 42000.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3199,19 +3198,6 @@
       "cpx_name": null
     },
     {
-      "name": "0579 TEN MILE",
-      "county": "Jefferson",
-      "lat": 44.803196,
-      "lon": -121.063671,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 4834.0,
-      "structures_lost_res": 0,
-      "structures_lost_comm": 0,
-      "structures_lost_other": 0,
-      "cpx_name": null
-    },
-    {
       "name": "Egypt",
       "county": "Harney",
       "lat": 43.727167,
@@ -3283,7 +3269,7 @@
       "lon": -122.566,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 1727.0,
+      "acres": 1550.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3455,7 +3441,7 @@
       "acres": 8096.0,
       "structures_lost_res": 6,
       "structures_lost_comm": 0,
-      "structures_lost_other": 40,
+      "structures_lost_other": 42,
       "cpx_name": null
     },
     {
@@ -3518,6 +3504,19 @@
       "status": "Contained",
       "triggered_evacuation": false,
       "acres": 5000.0,
+      "structures_lost_res": 0,
+      "structures_lost_comm": 0,
+      "structures_lost_other": 0,
+      "cpx_name": null
+    },
+    {
+      "name": "0579 TEN MILE",
+      "county": "Jefferson",
+      "lat": 44.803196,
+      "lon": -121.063671,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 4834.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3879,7 +3878,7 @@
       "county": "Sherman",
       "lat": 45.119131,
       "lon": -120.575101,
-      "status": "Active",
+      "status": "Contained",
       "triggered_evacuation": true,
       "acres": 0.5,
       "structures_lost_res": 0,
