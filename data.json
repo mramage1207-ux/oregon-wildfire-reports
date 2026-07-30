@@ -51,10 +51,10 @@
       "pct": 7.4
     },
     "structures_lost": {
-      "current": 118,
+      "current": 119,
       "prior": 116,
-      "delta": 2,
-      "pct": 1.7
+      "delta": 3,
+      "pct": 2.6
     }
   },
   "change_vs_7d_ago": {
@@ -102,10 +102,10 @@
       "pct": 240.3
     },
     "structures_lost": {
-      "current": 118,
+      "current": 119,
       "prior": 71,
-      "delta": 47,
-      "pct": 66.2
+      "delta": 48,
+      "pct": 67.6
     }
   },
   "change_vs_30d_ago": {
@@ -153,9 +153,9 @@
       "pct": 11330.9
     },
     "structures_lost": {
-      "current": 118,
+      "current": 119,
       "prior": 0,
-      "delta": 118,
+      "delta": 119,
       "pct": null
     }
   },
@@ -701,19 +701,19 @@
         98,
         106,
         116,
-        118
+        119
       ]
     }
   },
   "exec_summary": {
     "status": "critical",
     "headline": "The number of fires with active evacuations is holding steady at 8 since yesterday morning. Over the past 7 days, it is down 11% (9 \u2192 8).",
-    "escalation": "This season has recorded 118 structures destroyed so far.",
+    "escalation": "This season has recorded 119 structures destroyed so far.",
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 31,
   "total_large_fire_acres": 1696112.2000000002,
-  "structures_lost": 118,
+  "structures_lost": 119,
   "evac_triggering_fires": 8,
   "evac_zones": {
     "level3": [
@@ -759,10 +759,10 @@
       "comm_destroyed": 0,
       "minor_threatened": 0,
       "minor_damaged": 1,
-      "minor_destroyed": 79,
+      "minor_destroyed": 80,
       "total_threatened": 18067,
       "total_damaged": 3,
-      "total_destroyed": 118
+      "total_destroyed": 119
     }
   },
   "county_structure_data": [
@@ -1106,7 +1106,7 @@
       "acres": 47788.0,
       "res": 6,
       "comm": 0,
-      "other": 42,
+      "other": 43,
       "fires": [
         {
           "name": "Hagen",
@@ -1130,7 +1130,7 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 1
         },
         {
           "name": "Old Emigrant",
@@ -1481,11 +1481,12 @@
     "Umatilla": {
       "threatened": 1527,
       "damaged": 0,
-      "destroyed": 48,
+      "destroyed": 49,
       "fires": [
         "Hagen",
         "Horse Ridge",
-        "Lower Dry Creek Mutual Aid"
+        "Lower Dry Creek Mutual Aid",
+        "North Cayuse"
       ]
     },
     "Crook": {
@@ -2436,7 +2437,7 @@
       "year": 2026,
       "total_fires": 61,
       "total_acres": 1696112.2000000002,
-      "total_structures_destroyed": 118,
+      "total_structures_destroyed": 119,
       "fatalities": 0,
       "injuries": 0,
       "largest_fire": {
@@ -3199,7 +3200,7 @@
       "acres": 4887.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
-      "structures_lost_other": 0,
+      "structures_lost_other": 1,
       "cpx_name": null
     },
     {
