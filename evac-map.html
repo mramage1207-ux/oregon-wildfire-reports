@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evacuation Map &mdash; Oregon Wildfire Reports</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f4f5f7; color: #1a1a2e;
+  }
+  header {
+    background: linear-gradient(135deg, #1a2744 0%, #0f3460 100%);
+    color: #fff; padding: 1.1rem 1.4rem;
+  }
+  header .top-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .6rem; }
+  header h1 { font-size: 1.15rem; margin: 0; font-weight: 700; }
+  header .sub { font-size: .8rem; opacity: .75; margin-top: .15rem; }
+  a.back-link {
+    color: #fff; text-decoration: none; font-size: .8rem; opacity: .85;
+    background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25);
+    padding: .35rem .7rem; border-radius: 6px;
+  }
+  a.back-link:hover { background: rgba(255,255,255,.22); }
+  .hero-totals {
+    display: flex; gap: .6rem; margin-top: .8rem; flex-wrap: wrap;
+  }
+  .total-box {
+    flex: 1; min-width: 100px; border-radius: 8px; padding: .5rem .7rem;
+    border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.07);
+  }
+  .total-box .tv { font-size: 1.25rem; font-weight: 800; }
+  .total-box .tl { font-size: .68rem; opacity: .75; text-transform: uppercase; letter-spacing: .03em; }
+  .total-box.l1 { background: rgba(34,139,34,.2); border-color: rgba(34,139,34,.5); }
+  .total-box.l1 .tv { color: #68d391; }
+  .total-box.l2 { background: rgba(221,107,32,.18); border-color: rgba(221,107,32,.5); }
+  .total-box.l2 .tv { color: #fbd38d; }
+  .total-box.l3 { background: rgba(197,48,48,.18); border-color: rgba(197,48,48,.5); }
+  .total-box.l3 .tv { color: #fc8181; }
+  .total-box.all .tv { color: #90cdf4; }
+
+  .date-nav {
+    display: flex; align-items: center; gap: .5rem; margin-top: .8rem; font-size: .82rem;
+  }
+  .date-nav input[type=date] {
+    padding: .3rem .5rem; border-radius: 6px; border: 1px solid rgba(255,255,255,.3);
+    background: rgba(255,255,255,.1); color: #fff;
+  }
+  .date-nav button {
+    padding: .32rem .8rem; border-radius: 6px; border: none; background: #e67e22; color: #fff;
+    font-weight: 600; cursor: pointer; font-size: .8rem;
+  }
+  .date-nav button:hover { background: #d3701a; }
+
+  .banner {
+    padding: .6rem 1.4rem; font-size: .82rem; background: #fffbea; color: #7c5e00;
+    border-bottom: 1px solid #f0e2a0;
+  }
+  .banner.error { background: #fff5f5; color: #822727; border-bottom-color: #fbb; }
+
+  #map { height: calc(100vh - 210px); min-height: 420px; width: 100%; }
+
+  .legend {
+    background: #fff; padding: .5rem .7rem; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,.25);
+    font-size: .75rem; line-height: 1.5;
+  }
+  .legend .row { display: flex; align-items: center; gap: .4rem; }
+  .legend .swatch { width: 14px; height: 14px; border-radius: 3px; display: inline-block; border: 1px solid rgba(0,0,0,.2); }
+  .legend .swatch.l1 { background: #38a169; }
+  .legend .swatch.l2 { background: #dd6b20; }
+  .legend .swatch.l3 { background: #c53030; }
+  .legend .swatch.zip-outline { background: transparent; border: 2px solid #4a5568; }
+
+  .popup-title { font-weight: 700; margin-bottom: .2rem; }
+  .popup-row { font-size: .82rem; }
+
+  footer {
+    text-align: center; font-size: .72rem; color: #8a8f9c; padding: .9rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="top-row">
+    <div>
+      <h1>Evacuation Map</h1>
+      <div class="sub" id="header-sub">Loading&hellip;</div>
+    </div>
+    <a class="back-link" href="evacuations-by-zip.html">&larr; Back to ZIP report</a>
+  </div>
+  <div class="hero-totals">
+    <div class="total-box l1"><div class="tv" id="tot-l1">&mdash;</div><div class="tl">Level 1 &mdash; Be Ready</div></div>
+    <div class="total-box l2"><div class="tv" id="tot-l2">&mdash;</div><div class="tl">Level 2 &mdash; Be Set</div></div>
+    <div class="total-box l3"><div class="tv" id="tot-l3">&mdash;</div><div class="tl">Level 3 &mdash; Go Now</div></div>
+    <div class="total-box all"><div class="tv" id="tot-zones">&mdash;</div><div class="tl">Zones Mapped</div></div>
+  </div>
+  <div class="date-nav">
+    <label for="date-input">Date:</label>
+    <input type="date" id="date-input">
+    <button id="date-go">Go</button>
+  </div>
+</header>
+
+<div id="banner-area"></div>
+<div id="map"></div>
+
+<footer>
+  Zone polygons: Oregon OEM Fire_Evacuation_Areas_Public. ZIP boundaries: U.S. Census Bureau TIGERweb ZCTA.
+  Both layers can be toggled independently (top-right control) to visually check that a zone's shape
+  actually falls within the ZIP code(s) it's credited to in the report.
+</footer>
+
+<script>
+function getDateParam() {
+  const p = new URLSearchParams(window.location.search);
+  return p.get('date');
+}
+
+function showBanner(msg, isError) {
+  const area = document.getElementById('banner-area');
+  const div = document.createElement('div');
+  div.className = 'banner' + (isError ? ' error' : '');
+  div.textContent = msg;
+  area.appendChild(div);
+}
+
+function fmtInt(n) { return (n == null) ? '—' : n.toLocaleString('en-US'); }
+
+const LEVEL_COLOR = { 1: '#38a169', 2: '#dd6b20', 3: '#c53030' };
+
+async function fetchJsonOrNull(url) {
+  try {
+    const r = await fetch(url + '?_=' + Date.now());
+    if (!r.ok) return null;
+    return await r.json();
+  } catch (e) {
+    return null;
+  }
+}
+
+async function main() {
+  let date = getDateParam();
+  document.getElementById('date-go').addEventListener('click', () => {
+    const v = document.getElementById('date-input').value;
+    if (v) window.location.search = '?date=' + v;
+  });
+
+  if (!date) {
+    // No date given — fall back to the most recent date in history, if any.
+    const hist = await fetchJsonOrNull('evac_by_zip_history.json');
+    if (hist && hist.length) {
+      date = hist[hist.length - 1].date;
+      const url = new URL(window.location.href);
+      url.searchParams.set('date', date);
+      window.history.replaceState({}, '', url);
+    } else {
+      document.getElementById('header-sub').textContent = 'No date specified and no report history found.';
+      showBanner('Add ?date=YYYY-MM-DD to the URL, or open this page via the “🗺️ Map” link next to a report.', true);
+      return;
+    }
+  }
+  document.getElementById('date-input').value = date;
+
+  const [zipReport, zoneGeo, zctaGeo] = await Promise.all([
+    fetchJsonOrNull('evac_by_zip/evac_by_zip_' + date + '.json'),
+    fetchJsonOrNull('evac_zone_geometry/evac_zones_' + date + '.geojson'),
+    fetchJsonOrNull('evac_zone_geometry/oregon_zcta_boundaries.geojson'),
+  ]);
+
+  const dateLabel = new Date(date + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+
+  if (!zipReport) {
+    document.getElementById('header-sub').textContent = 'No evacuation-by-ZIP report found for ' + dateLabel + '.';
+    showBanner('No report exists for this date yet.', true);
+  } else {
+    const asOf = zipReport.as_of_display || dateLabel;
+    document.getElementById('header-sub').textContent = 'As of ' + asOf;
+    const rt = zipReport.reconciled_total || zipReport.totals || {};
+    document.getElementById('tot-l1').textContent = fmtInt(rt.l1);
+    document.getElementById('tot-l2').textContent = fmtInt(rt.l2);
+    document.getElementById('tot-l3').textContent = fmtInt(rt.l3);
+  }
+
+  if (!zoneGeo) {
+    showBanner('Zone polygon layer isn’t available for this date (map data collection began July 30, 2026 — earlier reports predate it).');
+  }
+  if (!zctaGeo) {
+    showBanner('ZIP boundary layer isn’t available for this date.');
+  }
+
+  // Build ZIP -> report-row lookup for coloring/popups on the ZCTA layer.
+  const zipByCode = {};
+  if (zipReport && zipReport.zips) {
+    zipReport.zips.forEach(z => { zipByCode[z.zip] = z; });
+  }
+  document.getElementById('tot-zones').textContent = fmtInt(zoneGeo ? zoneGeo.features.length : null);
+
+  const map = L.map('map', { scrollWheelZoom: true }).setView([44.0, -120.5], 7);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors', maxZoom: 18,
+  }).addTo(map);
+
+  const overlays = {};
+  let fitBounds = null;
+
+  if (zoneGeo && zoneGeo.features.length) {
+    const zoneLayer = L.geoJSON(zoneGeo, {
+      style: (feature) => {
+        const lvl = feature.properties.level;
+        return {
+          color: LEVEL_COLOR[lvl] || '#4a5568',
+          weight: 2,
+          fillColor: LEVEL_COLOR[lvl] || '#4a5568',
+          fillOpacity: 0.45,
+        };
+      },
+      onEachFeature: (feature, layer) => {
+        const p = feature.properties;
+        layer.bindPopup(
+          '<div class="popup-title">' + (p.zone_name || 'Zone') + '</div>' +
+          '<div class="popup-row"><strong>Fire:</strong> ' + (p.fire_name || 'No named fire') + '</div>' +
+          '<div class="popup-row"><strong>County:</strong> ' + (p.county || '—') + '</div>' +
+          '<div class="popup-row"><strong>Level:</strong> ' + (p.level || '—') + '</div>' +
+          '<div class="popup-row"><strong>Addresses:</strong> ' + fmtInt(p.addresses) + '</div>'
+        );
+      },
+    }).addTo(map);
+    overlays['Evacuation Zones (OEM)'] = zoneLayer;
+    fitBounds = zoneLayer.getBounds();
+  }
+
+  if (zctaGeo && zctaGeo.features.length) {
+    const zipLayer = L.geoJSON(zctaGeo, {
+      style: (feature) => {
+        const zc = feature.properties.zip;
+        const row = zipByCode[zc];
+        if (!row) {
+          return { color: '#a0aec0', weight: 1, fillOpacity: 0, dashArray: '3,3' };
+        }
+        const c = LEVEL_COLOR[row.peak_level] || '#4a5568';
+        return { color: c, weight: 1.5, fillColor: c, fillOpacity: 0.25 };
+      },
+      onEachFeature: (feature, layer) => {
+        const zc = feature.properties.zip;
+        const row = zipByCode[zc];
+        if (row) {
+          layer.bindPopup(
+            '<div class="popup-title">ZIP ' + zc + '</div>' +
+            '<div class="popup-row"><strong>Level 1:</strong> ' + fmtInt(row.l1) + '</div>' +
+            '<div class="popup-row"><strong>Level 2:</strong> ' + fmtInt(row.l2) + '</div>' +
+            '<div class="popup-row"><strong>Level 3:</strong> ' + fmtInt(row.l3) + '</div>' +
+            '<div class="popup-row"><strong>Total:</strong> ' + fmtInt(row.total) + '</div>' +
+            '<div class="popup-row"><strong>Counties:</strong> ' + (row.counties || '—') + '</div>' +
+            '<div class="popup-row"><strong>Fire(s):</strong> ' + (row.fires || '—') + '</div>'
+          );
+        } else {
+          layer.bindPopup('<div class="popup-title">ZIP ' + zc + '</div><div class="popup-row">No evacuation addresses this run.</div>');
+        }
+      },
+    }).addTo(map);
+    overlays['ZIP Codes (Census ZCTA)'] = zipLayer;
+    if (!fitBounds) fitBounds = zipLayer.getBounds();
+  }
+
+  if (Object.keys(overlays).length) {
+    L.control.layers({}, overlays, { collapsed: false }).addTo(map);
+  }
+
+  const legend = L.control({ position: 'bottomleft' });
+  legend.onAdd = function () {
+    const div = L.DomUtil.create('div', 'legend');
+    div.innerHTML =
+      '<div class="row"><span class="swatch l1"></span> Level 1 — Be Ready</div>' +
+      '<div class="row"><span class="swatch l2"></span> Level 2 — Be Set</div>' +
+      '<div class="row"><span class="swatch l3"></span> Level 3 — Go Now</div>' +
+      '<div class="row"><span class="swatch zip-outline"></span> ZIP, no evacuations</div>';
+    return div;
+  };
+  legend.addTo(map);
+
+  if (fitBounds && fitBounds.isValid()) {
+    map.fitBounds(fitBounds, { padding: [20, 20] });
+  }
+}
+
+main();
+</script>
+</body>
+</html>

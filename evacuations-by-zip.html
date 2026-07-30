@@ -120,6 +120,7 @@
   <div class="card">
     <h2 id="current-report-label">Current Report</h2>
     <div class="sub" id="current-report-sub">&nbsp;</div>
+    <div style="margin-top:.4rem;"><a class="action-link" id="current-report-map-link" href="evac-map.html">&#128506; View Map</a></div>
     <div class="table-card">
       <table>
         <thead>
@@ -197,6 +198,7 @@ function renderReport(data, labelSuffix) {
   label.textContent = labelSuffix ? ('Report for ' + fmtDate(data.date)) : 'Current Report';
   sub.textContent = 'As of ' + asOfText + (labelSuffix || '') + '.';
   document.getElementById('hero-asof').textContent = 'Statewide totals \u2014 as of ' + asOfText + (labelSuffix || '');
+  document.getElementById('current-report-map-link').href = 'evac-map.html?date=' + data.date;
 
   // Hero totals show the RECONCILED total (ZIP-mapped + unmatched) — i.e.
   // exactly what the morning report shows — not just the subset placed on a
@@ -261,7 +263,8 @@ function renderArchive() {
       '<td>' + fmtInt(h.zip_count) + '</td>' +
       '<td>' +
         '<a class="action-link view-link" data-date="' + d + '" href="#current-report-label">&#128196; View</a> ' +
-        '<a class="action-link dl" href="evac_by_zip/evac_by_zip_' + d + '.xlsx" download>&#8595; Download</a>' +
+        '<a class="action-link dl" href="evac_by_zip/evac_by_zip_' + d + '.xlsx" download>&#8595; Download</a> ' +
+        '<a class="action-link" href="evac-map.html?date=' + d + '">&#128506; Map</a>' +
       '</td>' +
     '</tr>';
   }).join('');
