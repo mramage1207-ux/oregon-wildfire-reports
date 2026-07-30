@@ -1,99 +1,29 @@
 {
   "date": "2026-07-30",
-  "generated_at": "2026-07-30T16:58:46Z",
+  "generated_at": "2026-07-30T17:17:55Z",
   "as_of_iso": "2026-07-30T15:05:02.000Z",
   "as_of_display": "July 30, 2026, 8:05 AM PDT",
   "totals": {
-    "l1": 3498,
-    "l2": 3408,
-    "l3": 1744,
-    "total": 8650,
-    "zip_count": 45
+    "l1": 3799,
+    "l2": 3598,
+    "l3": 1821,
+    "total": 9218,
+    "zip_count": 48
   },
   "unmatched": {
-    "l1": 511,
-    "l2": 259,
-    "l3": 176,
-    "total": 946,
-    "zone_count": 11
+    "l1": 210,
+    "l2": 69,
+    "l3": 99,
+    "total": 378,
+    "zone_count": 1
   },
   "unmatched_zones": [
-    {
-      "zone_name": "Camp Sherman Basin ",
-      "level": 1,
-      "addresses": 469,
-      "fire_name": "Akawa Butte",
-      "county": ""
-    },
-    {
-      "zone_name": "Bench-South ",
-      "level": 2,
-      "addresses": 188,
-      "fire_name": "Bench Fire",
-      "county": "Jefferson"
-    },
-    {
-      "zone_name": "NW 13- W ",
-      "level": 3,
-      "addresses": 16,
-      "fire_name": "Bench Fire",
-      "county": "Jefferson"
-    },
-    {
-      "zone_name": "Pelton Regulating Dam ",
-      "level": 3,
-      "addresses": 17,
-      "fire_name": "Bench Fire",
-      "county": "Jefferson"
-    },
-    {
-      "zone_name": "Lake Simtustus ",
-      "level": 3,
-      "addresses": 2,
-      "fire_name": "Bench Fire",
-      "county": "Jefferson"
-    },
-    {
-      "zone_name": "NW 17-W ",
-      "level": 3,
-      "addresses": 24,
-      "fire_name": "Bench Fire",
-      "county": "Jefferson"
-    },
     {
       "zone_name": "Cottonwood L1 GILL",
       "level": 1,
       "addresses": 8,
       "fire_name": "Cottonwood",
       "county": "Gilliam"
-    },
-    {
-      "zone_name": "NE 15-16 East ",
-      "level": 1,
-      "addresses": 4,
-      "fire_name": "Rowe Creek Complex West Zone",
-      "county": ""
-    },
-    {
-      "zone_name": "NE 17 ",
-      "level": 2,
-      "addresses": 3,
-      "fire_name": "Rowe Creek Complex West Zone",
-      "county": "Jefferson"
-    },
-    {
-      "zone_name": "SE 16 ",
-      "level": 3,
-      "addresses": 21,
-      "fire_name": "Rowe Creek Complex West Zone",
-      "county": "Jefferson"
-    },
-    {
-      "zone_name": "NE 15 S East ",
-      "level": 3,
-      "addresses": 3,
-      "fire_name": "Rowe Creek Complex West Zone",
-      "county": "Jefferson"
     }
   ],
   "reconciled_total": {
@@ -103,6 +33,16 @@
     "total": 9596
   },
   "zips": [
+    {
+      "zip": "97759",
+      "l1": 584,
+      "l2": 681,
+      "l3": 83,
+      "total": 1348,
+      "peak_level": 3,
+      "counties": "Deschutes, Jefferson",
+      "fires": "Akawa Butte"
+    },
     {
       "zip": "97063",
       "l1": 1,
@@ -122,16 +62,6 @@
       "peak_level": 3,
       "counties": "Harney",
       "fires": "No named fire"
-    },
-    {
-      "zip": "97759",
-      "l1": 340,
-      "l2": 681,
-      "l3": 83,
-      "total": 1104,
-      "peak_level": 3,
-      "counties": "Deschutes, Jefferson",
-      "fires": "Akawa Butte"
     },
     {
       "zip": "97738",
@@ -154,6 +84,16 @@
       "fires": "Box Springs; Brewer Fire; No named fire; Rowe Creek Complex West Zone"
     },
     {
+      "zip": "97734",
+      "l1": 7,
+      "l2": 669,
+      "l3": 13,
+      "total": 689,
+      "peak_level": 3,
+      "counties": "Jefferson",
+      "fires": "Akawa Butte; Bench Fire"
+    },
+    {
       "zip": "97886",
       "l1": 12,
       "l2": 621,
@@ -164,14 +104,14 @@
       "fires": "No named fire"
     },
     {
-      "zip": "97734",
-      "l1": 6,
-      "l2": 482,
-      "l3": 13,
-      "total": 501,
+      "zip": "97741",
+      "l1": 166,
+      "l2": 91,
+      "l3": 136,
+      "total": 393,
       "peak_level": 3,
-      "counties": "Jefferson",
-      "fires": "Akawa Butte; Bench Fire"
+      "counties": "Crook, Jefferson",
+      "fires": "10 mile fire; Bench Fire; Rowe Creek Complex West Zone"
     },
     {
       "zip": "97907",
@@ -184,23 +124,13 @@
       "fires": "No named fire"
     },
     {
-      "zip": "97741",
-      "l1": 166,
-      "l2": 91,
-      "l3": 63,
-      "total": 320,
-      "peak_level": 3,
-      "counties": "Crook, Jefferson",
-      "fires": "10 mile fire; Bench Fire; Rowe Creek Complex West Zone"
-    },
-    {
       "zip": "97750",
       "l1": 139,
       "l2": 19,
       "l3": 140,
       "total": 298,
       "peak_level": 3,
-      "counties": "Grant, Wasco, Wheeler",
+      "counties": "Grant, Jefferson, Wasco, Wheeler",
       "fires": "No named fire; Rowe Creek Complex West Zone; Shingle"
     },
     {
@@ -284,6 +214,16 @@
       "fires": "No named fire"
     },
     {
+      "zip": "97711",
+      "l1": 5,
+      "l2": 4,
+      "l3": 3,
+      "total": 12,
+      "peak_level": 3,
+      "counties": "Jefferson, Wasco",
+      "fires": "No named fire; Rowe Creek Complex West Zone"
+    },
+    {
       "zip": "97840",
       "l1": 0,
       "l2": 8,
@@ -332,6 +272,16 @@
       "peak_level": 2,
       "counties": "Baker",
       "fires": "No named fire"
+    },
+    {
+      "zip": "97761",
+      "l1": 0,
+      "l2": 0,
+      "l3": 1,
+      "total": 1,
+      "peak_level": 3,
+      "counties": "Jefferson",
+      "fires": "Bench Fire"
     },
     {
       "zip": "97760",
@@ -454,16 +404,6 @@
       "fires": "Grasshopper; No named fire"
     },
     {
-      "zip": "97711",
-      "l1": 1,
-      "l2": 1,
-      "l3": 0,
-      "total": 2,
-      "peak_level": 2,
-      "counties": "Jefferson, Wasco",
-      "fires": "No named fire; Rowe Creek Complex West Zone"
-    },
-    {
       "zip": "97910",
       "l1": 185,
       "l2": 0,
@@ -472,6 +412,16 @@
       "peak_level": 1,
       "counties": "Harney, Malheur",
       "fires": "No named fire"
+    },
+    {
+      "zip": "97730",
+      "l1": 51,
+      "l2": 0,
+      "l3": 0,
+      "total": 51,
+      "peak_level": 1,
+      "counties": "",
+      "fires": "Akawa Butte"
     },
     {
       "zip": "97758",
@@ -544,6 +494,16 @@
       "fires": "No named fire"
     },
     {
+      "zip": "97350",
+      "l1": 1,
+      "l2": 0,
+      "l3": 0,
+      "total": 1,
+      "peak_level": 1,
+      "counties": "",
+      "fires": "Akawa Butte"
+    },
+    {
       "zip": "97904",
       "l1": 1,
       "l2": 0,
@@ -554,5 +514,5 @@
       "fires": "No named fire"
     }
   ],
-  "note": "Reconciled 2026-07-30 to match the morning report's evac_raw.json snapshot (fetched 2026-07-30T15:05:02.000Z / July 30, 2026, 8:05 AM PDT) rather than a separate live pull. 90.1% of 9,596 total addresses (8,650) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 946 addresses (L1:511 L2:259 L3:176, spanning 11+ zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+  "note": "Reconciled 2026-07-30 to match the morning report's evac_raw.json snapshot (fetched 2026-07-30T15:05:02.000Z / July 30, 2026, 8:05 AM PDT) rather than a separate live pull. 96.1% of 9,596 total addresses (9,218) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 378 addresses (L1:210 L2:69 L3:99, spanning 1+ zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
 }
