@@ -73,8 +73,22 @@
   .legend .swatch.l1 { background: #38a169; }
   .legend .swatch.l2 { background: #dd6b20; }
   .legend .swatch.l3 { background: #c53030; }
-  .legend .swatch.zip-outline { background: transparent; border: 2px solid #4a5568; }
+  .legend .swatch.zip-outline { background: #cbd5e0; border: 1px solid #a0aec0; }
   .legend .swatch.unmatched { background: transparent; border: 2px dashed #1a1a2e; }
+
+  /* ZIP-code text labels — added 2026-07-30 so a ZIP can be identified by
+     sight (esp. over an "Unmatched zones" dashed outline) without clicking
+     each polygon for its popup. Deliberately borderless/background-free
+     (unlike Leaflet's default tooltip box) with a white text-shadow halo
+     instead, so dozens of labels stay legible without visually competing
+     with the zone/ZIP fill colors underneath. */
+  .zip-label {
+    background: transparent !important; border: none !important; box-shadow: none !important;
+    font-size: 10px; font-weight: 700; color: #1a1a2e; padding: 0 !important;
+    text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff;
+    pointer-events: none;
+  }
+  .zip-label::before { display: none; }
 
   .popup-title { font-weight: 700; margin-bottom: .2rem; }
   .popup-row { font-size: .82rem; }
@@ -138,7 +152,8 @@
   that a zone's shape actually falls within the ZIP code(s) it's credited to; "Unmatched zones" highlights
   zones whose addresses aren't fully reflected in the ZIP breakdown above (either no cached geometry at all,
   or only partial ZIP-boundary coverage) — the same shortfall the report's own "unmatched" summary row
-  accounts for.
+  accounts for. ZIP codes near the fire-affected area are labeled directly on the map (and shaded even
+  with zero evacuation addresses) so you can see exactly which ZIP an unmatched zone physically overlaps.
 </footer>
 
 <script>
@@ -313,13 +328,28 @@ async function main() {
   }
   renderUnmatchedPanel();
 
+  // Bounds used to decide which ZIP polygons get a permanent text label —
+  // added 2026-07-30 per Matt, so a ZIP overlapping an "Unmatched zones"
+  // dashed outline can be identified by sight instead of clicking each
+  // polygon. Labeling all ~568 statewide ZCTAs unconditionally would be
+  // unreadable clutter at any reasonable zoom, so labels are scoped to
+  // ZIPs whose polygon intersects the zone layer's own bounding box (the
+  // report's actual fire-affected region) — this naturally covers every
+  // ZIP relevant to an unmatched zone, since those zones are a subset of
+  // the same zoneGeo the bounds are computed from.
+  const labelBounds = (zoneGeo && zoneGeo.features.length) ? fitBounds : null;
+
   if (zctaGeo && zctaGeo.features.length) {
     const zipLayer = L.geoJSON(zctaGeo, {
       style: (feature) => {
         const zc = feature.properties.zip;
         const row = zipByCode[zc];
         if (!row) {
-          return { color: '#a0aec0', weight: 1, fillOpacity: 0, dashArray: '3,3' };
+          // Visible fill (not fillOpacity:0) — added 2026-07-30 per Matt:
+          // previously a "no evacuation data" ZIP was fully transparent, so
+          // it was indistinguishable from bare basemap and gave no visual
+          // cue that a ZIP polygon was even there, let alone which one.
+          return { color: '#a0aec0', weight: 1, fillColor: '#cbd5e0', fillOpacity: 0.35, dashArray: '3,3' };
         }
         const c = LEVEL_COLOR[row.peak_level] || '#4a5568';
         return { color: c, weight: 1.5, fillColor: c, fillOpacity: 0.25 };
@@ -339,6 +369,9 @@ async function main() {
           );
         } else {
           layer.bindPopup('<div class="popup-title">ZIP ' + zc + '</div><div class="popup-row">No evacuation addresses this run.</div>');
+        }
+        if (!labelBounds || (layer.getBounds && layer.getBounds().isValid() && labelBounds.intersects(layer.getBounds()))) {
+          layer.bindTooltip(zc, { permanent: true, direction: 'center', className: 'zip-label' });
         }
       },
     }).addTo(map);
@@ -373,7 +406,8 @@ async function main() {
       '<div class="row"><span class="swatch l2"></span> Level 2 — Be Set</div>' +
       '<div class="row"><span class="swatch l3"></span> Level 3 — Go Now</div>' +
       '<div class="row"><span class="swatch zip-outline"></span> ZIP, no evacuations</div>' +
-      '<div class="row"><span class="swatch unmatched"></span> Unmatched zone (toggle above)</div>';
+      '<div class="row"><span class="swatch unmatched"></span> Unmatched zone (toggle above)</div>' +
+      '<div class="row" style="opacity:.75;">ZIP codes labeled near the fire area</div>';
     return div;
   };
   legend.addTo(map);
