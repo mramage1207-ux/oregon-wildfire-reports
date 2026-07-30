@@ -1,20 +1,20 @@
 {
   "date": "2026-07-30",
-  "generated_at": "2026-07-30T17:17:55Z",
+  "generated_at": "2026-07-30T17:57:33Z",
   "as_of_iso": "2026-07-30T15:05:02.000Z",
   "as_of_display": "July 30, 2026, 8:05 AM PDT",
   "totals": {
-    "l1": 3799,
+    "l1": 3798,
     "l2": 3598,
     "l3": 1821,
-    "total": 9218,
+    "total": 9217,
     "zip_count": 48
   },
   "unmatched": {
-    "l1": 210,
+    "l1": 211,
     "l2": 69,
     "l3": 99,
-    "total": 378,
+    "total": 379,
     "zone_count": 1
   },
   "unmatched_zones": [
@@ -105,10 +105,10 @@
     },
     {
       "zip": "97741",
-      "l1": 166,
+      "l1": 165,
       "l2": 91,
       "l3": 136,
-      "total": 393,
+      "total": 392,
       "peak_level": 3,
       "counties": "Crook, Jefferson",
       "fires": "10 mile fire; Bench Fire; Rowe Creek Complex West Zone"
@@ -514,5 +514,5 @@
       "fires": "No named fire"
     }
   ],
-  "note": "Reconciled 2026-07-30 to match the morning report's evac_raw.json snapshot (fetched 2026-07-30T15:05:02.000Z / July 30, 2026, 8:05 AM PDT) rather than a separate live pull. 96.1% of 9,596 total addresses (9,218) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 378 addresses (L1:210 L2:69 L3:99, spanning 1+ zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+  "note": "Reconciled 2026-07-30 to match the morning report's evac_raw.json snapshot (fetched 2026-07-30T15:05:02.000Z / July 30, 2026, 8:05 AM PDT) rather than a separate live pull. 96.1% of 9,596 total addresses (9,217) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 379 addresses (L1:211 L2:69 L3:99, spanning 1+ zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
 }
