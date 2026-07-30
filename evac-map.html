@@ -61,6 +61,7 @@
   }
   .banner.error { background: #fff5f5; color: #822727; border-bottom-color: #fbb; }
 
+  #map-wrap { position: relative; }
   #map { height: calc(100vh - 210px); min-height: 420px; width: 100%; }
 
   .legend {
@@ -73,9 +74,25 @@
   .legend .swatch.l2 { background: #dd6b20; }
   .legend .swatch.l3 { background: #c53030; }
   .legend .swatch.zip-outline { background: transparent; border: 2px solid #4a5568; }
+  .legend .swatch.unmatched { background: transparent; border: 2px dashed #1a1a2e; }
 
   .popup-title { font-weight: 700; margin-bottom: .2rem; }
   .popup-row { font-size: .82rem; }
+
+  #unmatched-panel {
+    position: absolute; top: 90px; left: 12px; z-index: 999; display: none;
+    background: #fff; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,.25);
+    padding: .7rem .8rem; font-size: .78rem; max-width: 280px; max-height: 60vh;
+    overflow-y: auto;
+  }
+  #unmatched-panel.visible { display: block; }
+  #unmatched-panel h3 { font-size: .82rem; margin: 0 0 .4rem; }
+  #unmatched-panel .sub { color: #718096; margin-bottom: .5rem; }
+  #unmatched-panel .zone-row {
+    border-top: 1px solid #edf2f7; padding: .35rem 0; line-height: 1.4;
+  }
+  #unmatched-panel .zone-row .zn { font-weight: 700; }
+  #unmatched-panel .zone-row .lvl { color: #fff; border-radius: 3px; padding: 0 .3rem; font-size: .68rem; }
 
   footer {
     text-align: center; font-size: .72rem; color: #8a8f9c; padding: .9rem;
@@ -106,12 +123,22 @@
 </header>
 
 <div id="banner-area"></div>
-<div id="map"></div>
+<div id="map-wrap">
+  <div id="map"></div>
+  <div id="unmatched-panel">
+    <h3>Unmatched zones</h3>
+    <div class="sub" id="unmatched-panel-sub"></div>
+    <div id="unmatched-panel-list"></div>
+  </div>
+</div>
 
 <footer>
   Zone polygons: Oregon OEM Fire_Evacuation_Areas_Public. ZIP boundaries: U.S. Census Bureau TIGERweb ZCTA.
-  Both layers can be toggled independently (top-right control) to visually check that a zone's shape
-  actually falls within the ZIP code(s) it's credited to in the report.
+  All three layers can be toggled independently (top-right control). Zones and ZIPs let you visually check
+  that a zone's shape actually falls within the ZIP code(s) it's credited to; "Unmatched zones" highlights
+  zones whose addresses aren't fully reflected in the ZIP breakdown above (either no cached geometry at all,
+  or only partial ZIP-boundary coverage) — the same shortfall the report's own "unmatched" summary row
+  accounts for.
 </footer>
 
 <script>
@@ -233,6 +260,59 @@ async function main() {
     fitBounds = zoneLayer.getBounds();
   }
 
+  // "Unmatched zones" layer — zones with geometry that only got PARTIAL ZIP
+  // placement (properties.unmatched_addresses > 0), styled as a bold dashed
+  // outline on top of whatever else is shown. Off by default: it's a QA
+  // overlay, not something you'd want cluttering the map on every visit.
+  const unmatchedFeatures = (zoneGeo && zoneGeo.features || []).filter(
+    f => (f.properties.unmatched_addresses || 0) > 0
+  );
+  let unmatchedLayer = null;
+  if (unmatchedFeatures.length) {
+    unmatchedLayer = L.geoJSON({ type: 'FeatureCollection', features: unmatchedFeatures }, {
+      style: () => ({ color: '#1a1a2e', weight: 3, dashArray: '6,4', fillOpacity: 0 }),
+      onEachFeature: (feature, layer) => {
+        const p = feature.properties;
+        layer.bindPopup(
+          '<div class="popup-title">' + (p.zone_name || 'Zone') + '</div>' +
+          '<div class="popup-row"><strong>Fire:</strong> ' + (p.fire_name || 'No named fire') + '</div>' +
+          '<div class="popup-row"><strong>County:</strong> ' + (p.county || '—') + '</div>' +
+          '<div class="popup-row"><strong>Level:</strong> ' + (p.level || '—') + '</div>' +
+          '<div class="popup-row"><strong>' + (p.unmatched_fraction_pct || 0) + '% of this zone (' +
+            fmtInt(p.unmatched_addresses) + ' addresses) isn\'t reflected in any ZIP code\'s total.</strong></div>'
+        );
+      },
+    });
+  }
+
+  const noGeometryZones = (zipReport && zipReport.unmatched_zones) || [];
+  const panel = document.getElementById('unmatched-panel');
+  const panelSub = document.getElementById('unmatched-panel-sub');
+  const panelList = document.getElementById('unmatched-panel-list');
+  function renderUnmatchedPanel() {
+    const partialCount = unmatchedFeatures.length;
+    const partialAddr = unmatchedFeatures.reduce((s, f) => s + (f.properties.unmatched_addresses || 0), 0);
+    const noGeomAddr = noGeometryZones.reduce((s, z) => s + (z.addresses || 0), 0);
+    panelSub.textContent = (partialCount + noGeometryZones.length) + ' zone(s), ' +
+      fmtInt(partialAddr + noGeomAddr) + ' addresses not fully reflected in the ZIP breakdown.';
+    let html = '';
+    if (partialCount) {
+      html += '<div style="font-weight:700;margin-top:.3rem;">Partially covered (' + partialCount + ', shown as dashed outlines on the map)</div>';
+    }
+    if (noGeometryZones.length) {
+      html += '<div style="font-weight:700;margin-top:.5rem;">No cached geometry this run (' + noGeometryZones.length + ', can\'t be drawn)</div>';
+      noGeometryZones.forEach(z => {
+        const c = LEVEL_COLOR[z.level] || '#4a5568';
+        html += '<div class="zone-row"><span class="zn">' + (z.zone_name || 'Zone') + '</span> ' +
+          '<span class="lvl" style="background:' + c + '">L' + z.level + '</span><br>' +
+          (z.fire_name || 'No named fire') + ' &middot; ' + (z.county || '—') + ' &middot; ' +
+          fmtInt(z.addresses) + ' addresses</div>';
+      });
+    }
+    panelList.innerHTML = html;
+  }
+  renderUnmatchedPanel();
+
   if (zctaGeo && zctaGeo.features.length) {
     const zipLayer = L.geoJSON(zctaGeo, {
       style: (feature) => {
@@ -266,9 +346,24 @@ async function main() {
     if (!fitBounds) fitBounds = zipLayer.getBounds();
   }
 
+  // Attach the "Unmatched zones" toggle even when there's nothing to draw as
+  // polygons (e.g. every gap this run is a no-geometry zone) — an empty
+  // layer group still gives the checkbox something to add/remove, which is
+  // what drives the info panel's visibility below.
+  if (unmatchedFeatures.length || noGeometryZones.length) {
+    overlays['Unmatched zones'] = unmatchedLayer || L.layerGroup();
+  }
+
   if (Object.keys(overlays).length) {
     L.control.layers({}, overlays, { collapsed: false }).addTo(map);
   }
+
+  map.on('overlayadd', (e) => {
+    if (e.name === 'Unmatched zones') panel.classList.add('visible');
+  });
+  map.on('overlayremove', (e) => {
+    if (e.name === 'Unmatched zones') panel.classList.remove('visible');
+  });
 
   const legend = L.control({ position: 'bottomleft' });
   legend.onAdd = function () {
@@ -277,7 +372,8 @@ async function main() {
       '<div class="row"><span class="swatch l1"></span> Level 1 — Be Ready</div>' +
       '<div class="row"><span class="swatch l2"></span> Level 2 — Be Set</div>' +
       '<div class="row"><span class="swatch l3"></span> Level 3 — Go Now</div>' +
-      '<div class="row"><span class="swatch zip-outline"></span> ZIP, no evacuations</div>';
+      '<div class="row"><span class="swatch zip-outline"></span> ZIP, no evacuations</div>' +
+      '<div class="row"><span class="swatch unmatched"></span> Unmatched zone (toggle above)</div>';
     return div;
   };
   legend.addTo(map);

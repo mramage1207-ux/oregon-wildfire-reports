@@ -1,6 +1,6 @@
 {
   "date": "2026-07-30",
-  "generated_at": "2026-07-30T16:42:23Z",
+  "generated_at": "2026-07-30T16:58:46Z",
   "as_of_iso": "2026-07-30T15:05:02.000Z",
   "as_of_display": "July 30, 2026, 8:05 AM PDT",
   "totals": {
@@ -17,6 +17,85 @@
     "total": 946,
     "zone_count": 11
   },
+  "unmatched_zones": [
+    {
+      "zone_name": "Camp Sherman Basin ",
+      "level": 1,
+      "addresses": 469,
+      "fire_name": "Akawa Butte",
+      "county": ""
+    },
+    {
+      "zone_name": "Bench-South ",
+      "level": 2,
+      "addresses": 188,
+      "fire_name": "Bench Fire",
+      "county": "Jefferson"
+    },
+    {
+      "zone_name": "NW 13- W ",
+      "level": 3,
+      "addresses": 16,
+      "fire_name": "Bench Fire",
+      "county": "Jefferson"
+    },
+    {
+      "zone_name": "Pelton Regulating Dam ",
+      "level": 3,
+      "addresses": 17,
+      "fire_name": "Bench Fire",
+      "county": "Jefferson"
+    },
+    {
+      "zone_name": "Lake Simtustus ",
+      "level": 3,
+      "addresses": 2,
+      "fire_name": "Bench Fire",
+      "county": "Jefferson"
+    },
+    {
+      "zone_name": "NW 17-W ",
+      "level": 3,
+      "addresses": 24,
+      "fire_name": "Bench Fire",
+      "county": "Jefferson"
+    },
+    {
+      "zone_name": "Cottonwood L1 GILL",
+      "level": 1,
+      "addresses": 8,
+      "fire_name": "Cottonwood",
+      "county": "Gilliam"
+    },
+    {
+      "zone_name": "NE 15-16 East ",
+      "level": 1,
+      "addresses": 4,
+      "fire_name": "Rowe Creek Complex West Zone",
+      "county": ""
+    },
+    {
+      "zone_name": "NE 17 ",
+      "level": 2,
+      "addresses": 3,
+      "fire_name": "Rowe Creek Complex West Zone",
+      "county": "Jefferson"
+    },
+    {
+      "zone_name": "SE 16 ",
+      "level": 3,
+      "addresses": 21,
+      "fire_name": "Rowe Creek Complex West Zone",
+      "county": "Jefferson"
+    },
+    {
+      "zone_name": "NE 15 S East ",
+      "level": 3,
+      "addresses": 3,
+      "fire_name": "Rowe Creek Complex West Zone",
+      "county": "Jefferson"
+    }
+  ],
   "reconciled_total": {
     "l1": 4009,
     "l2": 3667,
