@@ -1,11 +1,11 @@
 {
   "last_updated": "2026-07-31",
-  "report_time": "8:58 AM PDT",
-  "report_time_iso": "2026-07-31T15:58:55Z",
+  "report_time": "9:00 AM PDT",
+  "report_time_iso": "2026-07-31T16:00:20Z",
   "current_active_fires": 48,
   "current_acres_burned": 1414290.69,
-  "current_report_time": "8:58 AM PDT",
-  "current_report_time_iso": "2026-07-31T15:58:55Z",
+  "current_report_time": "9:00 AM PDT",
+  "current_report_time_iso": "2026-07-31T16:00:20Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-07-30",
     "active_large_fires": {
@@ -51,10 +51,10 @@
       "pct": 3.1
     },
     "structures_lost": {
-      "current": 118,
+      "current": 119,
       "prior": 118,
-      "delta": 0,
-      "pct": 0.0
+      "delta": 1,
+      "pct": 0.8
     }
   },
   "change_vs_7d_ago": {
@@ -102,10 +102,10 @@
       "pct": 217.8
     },
     "structures_lost": {
-      "current": 118,
+      "current": 119,
       "prior": 71,
-      "delta": 47,
-      "pct": 66.2
+      "delta": 48,
+      "pct": 67.6
     }
   },
   "change_vs_30d_ago": {
@@ -153,9 +153,9 @@
       "pct": 11349.5
     },
     "structures_lost": {
-      "current": 118,
+      "current": 119,
       "prior": 0,
-      "delta": 118,
+      "delta": 119,
       "pct": null
     }
   },
@@ -701,19 +701,19 @@
         106,
         116,
         118,
-        118
+        119
       ]
     }
   },
   "exec_summary": {
     "status": "critical",
     "headline": "The number of Level 3 (Go Now) evacuation addresses is down 3% (1,920 \u2192 1,864) since yesterday morning. Over the past 7 days, it is up 42% (1,311 \u2192 1,864).",
-    "escalation": "This season has recorded 118 structures destroyed so far.",
+    "escalation": "This season has recorded 119 structures destroyed so far.",
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 31,
   "total_large_fire_acres": 1749261.2000000002,
-  "structures_lost": 118,
+  "structures_lost": 119,
   "evac_triggering_fires": 8,
   "evac_zones": {
     "level3": [
@@ -758,10 +758,10 @@
       "comm_destroyed": 0,
       "minor_threatened": 0,
       "minor_damaged": 1,
-      "minor_destroyed": 79,
+      "minor_destroyed": 80,
       "total_threatened": 15427,
       "total_damaged": 3,
-      "total_destroyed": 118
+      "total_destroyed": 119
     }
   },
   "county_structure_data": [
@@ -1105,7 +1105,7 @@
       "acres": 49430.0,
       "res": 6,
       "comm": 0,
-      "other": 42,
+      "other": 43,
       "fires": [
         {
           "name": "Hagen",
@@ -1129,7 +1129,7 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 1
         },
         {
           "name": "Old Emigrant",
@@ -1480,11 +1480,12 @@
     "Umatilla": {
       "threatened": 1527,
       "damaged": 0,
-      "destroyed": 48,
+      "destroyed": 49,
       "fires": [
         "Hagen",
         "Horse Ridge",
-        "Lower Dry Creek Mutual Aid"
+        "Lower Dry Creek Mutual Aid",
+        "North Cayuse"
       ]
     },
     "Crook": {
@@ -2440,7 +2441,7 @@
       "year": 2026,
       "total_fires": 61,
       "total_acres": 1749261.2000000002,
-      "total_structures_destroyed": 118,
+      "total_structures_destroyed": 119,
       "fatalities": 0,
       "injuries": 0,
       "largest_fire": {
@@ -3223,7 +3224,7 @@
       "acres": 4887.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
-      "structures_lost_other": 0,
+      "structures_lost_other": 1,
       "cpx_name": null,
       "cpx_total_acres": null
     },
