@@ -156,11 +156,13 @@
   that a zone's shape actually falls within the ZIP code(s) it's credited to; "Unmatched zones" highlights
   zones whose addresses aren't fully reflected in the ZIP breakdown above (either no cached geometry at all,
   or only partial ZIP-boundary coverage) — the same shortfall the report's own "unmatched" summary row
-  accounts for. "No ZIP Code Assigned" (purple hatch) shows real gaps in ZIP coverage within Oregon's
-  borders — mostly uninhabited public land with no Census ZCTA at all, which is often the underlying
-  reason a zone shows up as unmatched. ZIP codes near the fire-affected area are labeled directly on the
-  map (and shaded even with zero evacuation addresses) so you can see exactly which ZIP an unmatched zone
-  physically overlaps.
+  accounts for. "No Census ZCTA Coverage" (purple hatch) shows areas the Census Bureau hasn't drawn a
+  ZCTA polygon for — usually sparsely populated public land — which is often the underlying reason a
+  zone shows up as unmatched. This is a gap in the Census Bureau's own ZIP-area approximation, not proof
+  of missing mail service; these areas can still receive real USPS delivery (e.g. rural route out of a
+  neighboring town). ZIP codes near the fire-affected area are labeled directly on the map (and shaded
+  even with zero evacuation addresses) so you can see exactly which ZIP an unmatched zone physically
+  overlaps.
 </footer>
 
 <script>
@@ -426,14 +428,21 @@ async function main() {
     if (!fitBounds) fitBounds = zipLayer.getBounds();
   }
 
-  // "No ZIP Code Assigned" layer — added 2026-07-31 per Matt: highlights
-  // real gaps in Census ZIP-code (ZCTA) coverage within Oregon's borders.
-  // These are expected, not an error — ZCTAs are built from populated
-  // Census blocks, so uninhabited public land (national forest, high
-  // desert, wilderness, rangeland) commonly has no ZCTA at all, even though
-  // a wildfire evacuation zone can still fall there (see the "no cached
-  // geometry" / "unmatched" cases above — this layer is the geographic
-  // reason some of those happen). Off by default, same treatment as
+  // "No Census ZCTA Coverage" layer — added 2026-07-31 per Matt, renamed the
+  // same day after he (correctly) pushed back on the original name ("No ZIP
+  // Code Assigned") implying these areas have no mail service. They don't
+  // necessarily — ZCTAs are the CENSUS BUREAU'S OWN approximation of ZIP
+  // delivery areas, built only from populated Census blocks. They are NOT
+  // the actual USPS ZIP boundaries. Land with too little population to
+  // generate a Census block (national forest, wilderness, high desert,
+  // large ranches) commonly gets no ZCTA polygon at all, even though it may
+  // still receive real USPS service — typically rural-route delivery out of
+  // a neighboring town's post office, or a PO Box tied to a ZIP whose
+  // populated center is elsewhere. So this layer means "no Census ZCTA
+  // polygon here," not "no ZIP code" or "no mail service" — a real and
+  // useful distinction for interpreting the "no cached geometry" / matched"
+  // cases above (this layer is the geographic reason some of those happen),
+  // but not proof of an actual postal gap. Off by default, same treatment as
   // "Unmatched zones": informational, not something to clutter the default
   // view with. Precomputed server-side by compute_no_zip_gap.py (Oregon's
   // outline minus the union of all ZCTA polygons) rather than computed here
@@ -446,14 +455,18 @@ async function main() {
       }),
       onEachFeature: (feature, layer) => {
         layer.bindPopup(
-          '<div class="popup-title">No ZIP code assigned</div>' +
-          '<div class="popup-row">This area falls within Oregon but isn\'t covered by any Census ' +
-          'ZCTA (ZIP Code Tabulation Area) — typically uninhabited public land. Evacuation addresses ' +
-          'here can\'t be attributed to a ZIP code in the report above.</div>'
+          '<div class="popup-title">No Census ZCTA coverage</div>' +
+          '<div class="popup-row">The Census Bureau hasn\'t drawn a ZIP Code Tabulation Area (ZCTA) ' +
+          'polygon here — typically because there\'s too little population to generate one (public ' +
+          'land, wilderness, rangeland). <strong>This does not mean there\'s no mail service</strong> — ' +
+          'ZCTAs are the Census Bureau\'s own approximation of ZIP areas, not actual USPS boundaries; ' +
+          'this area may still get rural-route delivery from a neighboring town\'s post office. It ' +
+          'just means evacuation addresses here can\'t be attributed to a specific ZIP in the report ' +
+          'above.</div>'
         );
       },
     });
-    overlays['No ZIP Code Assigned'] = noZipLayer;
+    overlays['No Census ZCTA Coverage'] = noZipLayer;
   }
 
   // Attach the "Unmatched zones" toggle even when there's nothing to draw as
@@ -484,7 +497,7 @@ async function main() {
       '<div class="row"><span class="swatch l3"></span> Level 3 — Go Now</div>' +
       '<div class="row"><span class="swatch zip-outline"></span> ZIP, no evacuations</div>' +
       '<div class="row"><span class="swatch unmatched"></span> Unmatched zone (toggle above)</div>' +
-      '<div class="row"><span class="swatch no-zip"></span> No ZIP assigned (toggle above)</div>' +
+      '<div class="row"><span class="swatch no-zip"></span> No Census ZCTA (may still have mail service — toggle above)</div>' +
       '<div class="row" style="opacity:.75;">ZIP codes labeled near the fire area</div>';
     return div;
   };
