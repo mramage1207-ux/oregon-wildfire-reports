@@ -171,6 +171,16 @@ function showBanner(msg, isError) {
 }
 
 function fmtInt(n) { return (n == null) ? '—' : n.toLocaleString('en-US'); }
+// Renders a zone's real overlapping-ZIP list (server-computed via the same
+// area-weighted polygon intersection used for address placement — see
+// generate_evac_zip_report.py's zone_overlaps, added 2026-07-30 round 7).
+// Each entry: {zip, fraction_pct, nearest_centroid_fallback?}.
+function fmtZips(list) {
+  if (!list || !list.length) return 'none found (no geometry / no overlapping ZCTA)';
+  return list.map(o => o.zip + (o.nearest_centroid_fallback
+    ? ' (nearest ZIP, no direct overlap)'
+    : ' (' + o.fraction_pct + '%)')).join(', ');
+}
 
 const LEVEL_COLOR = { 1: '#38a169', 2: '#dd6b20', 3: '#c53030' };
 
@@ -267,7 +277,8 @@ async function main() {
           '<div class="popup-row"><strong>Fire:</strong> ' + (p.fire_name || 'No named fire') + '</div>' +
           '<div class="popup-row"><strong>County:</strong> ' + (p.county || '—') + '</div>' +
           '<div class="popup-row"><strong>Level:</strong> ' + (p.level || '—') + '</div>' +
-          '<div class="popup-row"><strong>Addresses:</strong> ' + fmtInt(p.addresses) + '</div>'
+          '<div class="popup-row"><strong>Addresses:</strong> ' + fmtInt(p.addresses) + '</div>' +
+          '<div class="popup-row"><strong>Overlaps ZIP(s):</strong> ' + fmtZips(p.overlapping_zips) + '</div>'
         );
       },
     }).addTo(map);
@@ -294,7 +305,8 @@ async function main() {
           '<div class="popup-row"><strong>County:</strong> ' + (p.county || '—') + '</div>' +
           '<div class="popup-row"><strong>Level:</strong> ' + (p.level || '—') + '</div>' +
           '<div class="popup-row"><strong>' + (p.unmatched_fraction_pct || 0) + '% of this zone (' +
-            fmtInt(p.unmatched_addresses) + ' addresses) isn\'t reflected in any ZIP code\'s total.</strong></div>'
+            fmtInt(p.unmatched_addresses) + ' addresses) isn\'t reflected in any ZIP code\'s total.</strong></div>' +
+          '<div class="popup-row"><strong>Overlaps ZIP(s):</strong> ' + fmtZips(p.overlapping_zips) + '</div>'
         );
       },
     });
@@ -313,6 +325,15 @@ async function main() {
     let html = '';
     if (partialCount) {
       html += '<div style="font-weight:700;margin-top:.3rem;">Partially covered (' + partialCount + ', shown as dashed outlines on the map)</div>';
+      unmatchedFeatures.forEach(f => {
+        const p = f.properties;
+        const c = LEVEL_COLOR[p.level] || '#4a5568';
+        html += '<div class="zone-row"><span class="zn">' + (p.zone_name || 'Zone') + '</span> ' +
+          '<span class="lvl" style="background:' + c + '">L' + p.level + '</span><br>' +
+          (p.fire_name || 'No named fire') + ' &middot; ' + (p.county || '—') + ' &middot; ' +
+          (p.unmatched_fraction_pct || 0) + '% (' + fmtInt(p.unmatched_addresses) + ' addresses) not on any ZIP<br>' +
+          '<span style="color:#4a5568;">Overlaps ZIP(s): ' + fmtZips(p.overlapping_zips) + '</span></div>';
+      });
     }
     if (noGeometryZones.length) {
       html += '<div style="font-weight:700;margin-top:.5rem;">No cached geometry this run (' + noGeometryZones.length + ', can\'t be drawn)</div>';
@@ -321,7 +342,8 @@ async function main() {
         html += '<div class="zone-row"><span class="zn">' + (z.zone_name || 'Zone') + '</span> ' +
           '<span class="lvl" style="background:' + c + '">L' + z.level + '</span><br>' +
           (z.fire_name || 'No named fire') + ' &middot; ' + (z.county || '—') + ' &middot; ' +
-          fmtInt(z.addresses) + ' addresses</div>';
+          fmtInt(z.addresses) + ' addresses<br>' +
+          '<span style="color:#4a5568;">No geometry this run — can\'t determine an overlapping ZIP.</span></div>';
       });
     }
     panelList.innerHTML = html;
