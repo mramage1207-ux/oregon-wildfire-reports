@@ -75,6 +75,10 @@
   .legend .swatch.l3 { background: #c53030; }
   .legend .swatch.zip-outline { background: #cbd5e0; border: 1px solid #a0aec0; }
   .legend .swatch.unmatched { background: transparent; border: 2px dashed #1a1a2e; }
+  .legend .swatch.no-zip {
+    background: repeating-linear-gradient(45deg, #805ad5, #805ad5 3px, transparent 3px, transparent 6px);
+    border: 1px solid #6b46c1;
+  }
 
   /* ZIP-code text labels — added 2026-07-30 so a ZIP can be identified by
      sight (esp. over an "Unmatched zones" dashed outline) without clicking
@@ -148,12 +152,15 @@
 
 <footer>
   Zone polygons: Oregon OEM Fire_Evacuation_Areas_Public. ZIP boundaries: U.S. Census Bureau TIGERweb ZCTA.
-  All three layers can be toggled independently (top-right control). Zones and ZIPs let you visually check
+  All layers can be toggled independently (top-right control). Zones and ZIPs let you visually check
   that a zone's shape actually falls within the ZIP code(s) it's credited to; "Unmatched zones" highlights
   zones whose addresses aren't fully reflected in the ZIP breakdown above (either no cached geometry at all,
   or only partial ZIP-boundary coverage) — the same shortfall the report's own "unmatched" summary row
-  accounts for. ZIP codes near the fire-affected area are labeled directly on the map (and shaded even
-  with zero evacuation addresses) so you can see exactly which ZIP an unmatched zone physically overlaps.
+  accounts for. "No ZIP Code Assigned" (purple hatch) shows real gaps in ZIP coverage within Oregon's
+  borders — mostly uninhabited public land with no Census ZCTA at all, which is often the underlying
+  reason a zone shows up as unmatched. ZIP codes near the fire-affected area are labeled directly on the
+  map (and shaded even with zero evacuation addresses) so you can see exactly which ZIP an unmatched zone
+  physically overlaps.
 </footer>
 
 <script>
@@ -217,10 +224,11 @@ async function main() {
   }
   document.getElementById('date-input').value = date;
 
-  const [zipReport, zoneGeo, zctaGeo] = await Promise.all([
+  const [zipReport, zoneGeo, zctaGeo, noZipGeo] = await Promise.all([
     fetchJsonOrNull('evac_by_zip/evac_by_zip_' + date + '.json'),
     fetchJsonOrNull('evac_zone_geometry/evac_zones_' + date + '.geojson'),
     fetchJsonOrNull('evac_zone_geometry/oregon_zcta_boundaries.geojson'),
+    fetchJsonOrNull('evac_zone_geometry/oregon_no_zip_gap.geojson'),
   ]);
 
   const dateLabel = new Date(date + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
@@ -252,8 +260,15 @@ async function main() {
   document.getElementById('tot-zones').textContent = fmtInt(zoneGeo ? zoneGeo.features.length : null);
 
   const map = L.map('map', { scrollWheelZoom: true }).setView([44.0, -120.5], 7);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors', maxZoom: 18,
+  // Muted single-tone basemap — added 2026-07-31 per Matt: the default OSM
+  // tiles' greens/yellows/blues (parks, highways, water) visually competed
+  // with the L1/L2/L3 evac-level colors and the ZIP/gap overlay fills.
+  // CartoDB Positron is near-monochrome (whites/light grays) but keeps city
+  // and town labels for reference, per Matt's explicit "leave reference
+  // cities" follow-up — a fully blank basemap would lose that orientation.
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; OpenStreetMap contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    maxZoom: 18, subdomains: 'abcd',
   }).addTo(map);
 
   const overlays = {};
@@ -411,6 +426,36 @@ async function main() {
     if (!fitBounds) fitBounds = zipLayer.getBounds();
   }
 
+  // "No ZIP Code Assigned" layer — added 2026-07-31 per Matt: highlights
+  // real gaps in Census ZIP-code (ZCTA) coverage within Oregon's borders.
+  // These are expected, not an error — ZCTAs are built from populated
+  // Census blocks, so uninhabited public land (national forest, high
+  // desert, wilderness, rangeland) commonly has no ZCTA at all, even though
+  // a wildfire evacuation zone can still fall there (see the "no cached
+  // geometry" / "unmatched" cases above — this layer is the geographic
+  // reason some of those happen). Off by default, same treatment as
+  // "Unmatched zones": informational, not something to clutter the default
+  // view with. Precomputed server-side by compute_no_zip_gap.py (Oregon's
+  // outline minus the union of all ZCTA polygons) rather than computed here
+  // client-side, since a real boolean polygon difference over 568 ZCTAs is
+  // too heavy to redo in the browser on every page load.
+  if (noZipGeo && noZipGeo.features && noZipGeo.features.length) {
+    const noZipLayer = L.geoJSON(noZipGeo, {
+      style: () => ({
+        color: '#6b46c1', weight: 1, fillColor: '#805ad5', fillOpacity: 0.35,
+      }),
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(
+          '<div class="popup-title">No ZIP code assigned</div>' +
+          '<div class="popup-row">This area falls within Oregon but isn\'t covered by any Census ' +
+          'ZCTA (ZIP Code Tabulation Area) — typically uninhabited public land. Evacuation addresses ' +
+          'here can\'t be attributed to a ZIP code in the report above.</div>'
+        );
+      },
+    });
+    overlays['No ZIP Code Assigned'] = noZipLayer;
+  }
+
   // Attach the "Unmatched zones" toggle even when there's nothing to draw as
   // polygons (e.g. every gap this run is a no-geometry zone) — an empty
   // layer group still gives the checkbox something to add/remove, which is
@@ -439,6 +484,7 @@ async function main() {
       '<div class="row"><span class="swatch l3"></span> Level 3 — Go Now</div>' +
       '<div class="row"><span class="swatch zip-outline"></span> ZIP, no evacuations</div>' +
       '<div class="row"><span class="swatch unmatched"></span> Unmatched zone (toggle above)</div>' +
+      '<div class="row"><span class="swatch no-zip"></span> No ZIP assigned (toggle above)</div>' +
       '<div class="row" style="opacity:.75;">ZIP codes labeled near the fire area</div>';
     return div;
   };
