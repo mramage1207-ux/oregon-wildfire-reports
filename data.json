@@ -1,11 +1,11 @@
 {
   "last_updated": "2026-08-01",
-  "report_time": "8:17 AM PDT",
-  "report_time_iso": "2026-08-01T15:17:52Z",
-  "current_active_fires": 45,
-  "current_acres_burned": 1433751.19,
-  "current_report_time": "8:17 AM PDT",
-  "current_report_time_iso": "2026-08-01T15:17:52Z",
+  "report_time": "4:01 PM PDT",
+  "report_time_iso": "2026-08-01T23:01:54Z",
+  "current_active_fires": 47,
+  "current_acres_burned": 1254832.19,
+  "current_report_time": "4:01 PM PDT",
+  "current_report_time_iso": "2026-08-01T23:01:54Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-07-31",
     "active_large_fires": {
@@ -21,34 +21,34 @@
       "pct": 0.0
     },
     "evac_addresses_l1": {
-      "current": 4331,
+      "current": 4710,
       "prior": 4126,
-      "delta": 205,
-      "pct": 5.0
-    },
-    "evac_addresses_l2": {
-      "current": 3518,
-      "prior": 3598,
-      "delta": -80,
-      "pct": -2.2
-    },
-    "evac_addresses_l3": {
-      "current": 2129,
-      "prior": 1864,
-      "delta": 265,
+      "delta": 584,
       "pct": 14.2
     },
+    "evac_addresses_l2": {
+      "current": 2845,
+      "prior": 3598,
+      "delta": -753,
+      "pct": -20.9
+    },
+    "evac_addresses_l3": {
+      "current": 2108,
+      "prior": 1864,
+      "delta": 244,
+      "pct": 13.1
+    },
     "active_fires": {
-      "current": 45,
+      "current": 47,
       "prior": 48,
-      "delta": -3,
-      "pct": -6.2
+      "delta": -1,
+      "pct": -2.1
     },
     "total_acres_ytd": {
-      "current": 1765630.2000000002,
+      "current": 1586703.2000000002,
       "prior": 1749261,
-      "delta": 16369.200000000186,
-      "pct": 0.9
+      "delta": -162557.7999999998,
+      "pct": -9.3
     },
     "structures_lost": {
       "current": 142,
@@ -72,34 +72,34 @@
       "pct": -20.0
     },
     "evac_addresses_l1": {
-      "current": 4331,
+      "current": 4710,
       "prior": 5724,
-      "delta": -1393,
-      "pct": -24.3
+      "delta": -1014,
+      "pct": -17.7
     },
     "evac_addresses_l2": {
-      "current": 3518,
+      "current": 2845,
       "prior": 2726,
-      "delta": 792,
-      "pct": 29.1
+      "delta": 119,
+      "pct": 4.4
     },
     "evac_addresses_l3": {
-      "current": 2129,
+      "current": 2108,
       "prior": 2317,
-      "delta": -188,
-      "pct": -8.1
+      "delta": -209,
+      "pct": -9.0
     },
     "active_fires": {
-      "current": 45,
+      "current": 47,
       "prior": 145,
-      "delta": -100,
-      "pct": -69.0
+      "delta": -98,
+      "pct": -67.6
     },
     "total_acres_ytd": {
-      "current": 1765630.2000000002,
+      "current": 1586703.2000000002,
       "prior": 669927,
-      "delta": 1095703.2000000002,
-      "pct": 163.6
+      "delta": 916776.2000000002,
+      "pct": 136.8
     },
     "structures_lost": {
       "current": 142,
@@ -123,34 +123,34 @@
       "pct": 700.0
     },
     "evac_addresses_l1": {
-      "current": 4331,
+      "current": 4710,
       "prior": 0,
-      "delta": 4331,
+      "delta": 4710,
       "pct": null
     },
     "evac_addresses_l2": {
-      "current": 3518,
+      "current": 2845,
       "prior": 0,
-      "delta": 3518,
+      "delta": 2845,
       "pct": null
     },
     "evac_addresses_l3": {
-      "current": 2129,
+      "current": 2108,
       "prior": 0,
-      "delta": 2129,
+      "delta": 2108,
       "pct": null
     },
     "active_fires": {
-      "current": 45,
+      "current": 47,
       "prior": 22,
-      "delta": 23,
-      "pct": 104.5
+      "delta": 25,
+      "pct": 113.6
     },
     "total_acres_ytd": {
-      "current": 1765630.2000000002,
+      "current": 1586703.2000000002,
       "prior": 18029,
-      "delta": 1747601.2000000002,
-      "pct": 9693.3
+      "delta": 1568674.2000000002,
+      "pct": 8700.8
     },
     "structures_lost": {
       "current": 142,
@@ -361,7 +361,7 @@
         3930,
         4009,
         4126,
-        4331
+        4710
       ]
     },
     "evac_addresses_l2": {
@@ -429,7 +429,7 @@
         3716,
         3667,
         3598,
-        3518
+        2845
       ]
     },
     "evac_addresses_l3": {
@@ -497,7 +497,7 @@
         1915,
         1920,
         1864,
-        2129
+        2108
       ]
     },
     "active_fires": {
@@ -565,7 +565,7 @@
         60,
         55,
         48,
-        45
+        47
       ]
     },
     "total_acres_ytd": {
@@ -633,7 +633,7 @@
         1579000,
         1696112,
         1749261,
-        1765630.2000000002
+        1586703.2000000002
       ]
     },
     "structures_lost": {
@@ -707,12 +707,12 @@
   },
   "exec_summary": {
     "status": "critical",
-    "headline": "The number of Level 3 (Go Now) evacuation addresses is up 14% (1,864 \u2192 2,129) since yesterday morning. Over the past 7 days, it is down 8% (2,317 \u2192 2,129).",
+    "headline": "The number of Level 3 (Go Now) evacuation addresses is up 13% (1,864 \u2192 2,108) since yesterday morning. Over the past 7 days, it is down 9% (2,317 \u2192 2,108).",
     "escalation": "This season has recorded 142 structures destroyed so far.",
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 31,
-  "total_large_fire_acres": 1765630.2000000002,
+  "total_large_fire_acres": 1586703.2000000002,
   "structures_lost": 142,
   "evac_triggering_fires": 8,
   "evac_zones": {
@@ -743,11 +743,11 @@
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon"
     ]
   },
-  "evac_addresses_l1": 4331,
-  "evac_addresses_l2": 3518,
-  "evac_addresses_l3": 2129,
-  "evac_data_as_of": "8:05 AM PDT",
-  "evac_data_as_of_iso": "2026-08-01T15:05:02Z",
+  "evac_addresses_l1": 4710,
+  "evac_addresses_l2": 2845,
+  "evac_addresses_l3": 2108,
+  "evac_data_as_of": "3:45 PM PDT",
+  "evac_data_as_of_iso": "2026-08-01T22:45:04Z",
   "struct_loss": {
     "oregon_totals": {
       "res_threatened": 12311,
@@ -765,79 +765,6 @@
     }
   },
   "county_structure_data": [
-    {
-      "county": "Harney",
-      "acres": 447631.0,
-      "res": 0,
-      "comm": 0,
-      "other": 3,
-      "fires": [
-        {
-          "name": "Coleman Creek",
-          "acres": 212182,
-          "status": "Active",
-          "res": 0,
-          "comm": 0,
-          "other": 0
-        },
-        {
-          "name": "Second Flat",
-          "acres": 103459,
-          "status": "Active",
-          "res": 0,
-          "comm": 0,
-          "other": 1
-        },
-        {
-          "name": "Bald Mountain",
-          "acres": 85357,
-          "status": "Active",
-          "res": 0,
-          "comm": 0,
-          "other": 0
-        },
-        {
-          "name": "Jackass Butte",
-          "acres": 24742,
-          "status": "Active",
-          "res": 0,
-          "comm": 0,
-          "other": 2
-        },
-        {
-          "name": "Stubble",
-          "acres": 15673,
-          "status": "Active",
-          "res": 0,
-          "comm": 0,
-          "other": 0
-        },
-        {
-          "name": "Egypt",
-          "acres": 4553,
-          "status": "Active",
-          "res": 0,
-          "comm": 0,
-          "other": 0
-        },
-        {
-          "name": "Hoop",
-          "acres": 960,
-          "status": "Contained",
-          "res": 0,
-          "comm": 0,
-          "other": 0
-        },
-        {
-          "name": "2680 - Diamond Craters",
-          "acres": 705,
-          "status": "Active",
-          "res": 0,
-          "comm": 0,
-          "other": 0
-        }
-      ]
-    },
     {
       "county": "Wheeler",
       "acres": 376256.0,
@@ -930,6 +857,79 @@
           "name": "AIRPORT",
           "acres": 0,
           "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        }
+      ]
+    },
+    {
+      "county": "Harney",
+      "acres": 269449.0,
+      "res": 0,
+      "comm": 0,
+      "other": 3,
+      "fires": [
+        {
+          "name": "Second Flat",
+          "acres": 103459,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 1
+        },
+        {
+          "name": "Bald Mountain",
+          "acres": 85357,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "Coleman Creek",
+          "acres": 34000,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "Jackass Butte",
+          "acres": 24742,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 2
+        },
+        {
+          "name": "Stubble",
+          "acres": 15673,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "Egypt",
+          "acres": 4553,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "Hoop",
+          "acres": 960,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0
+        },
+        {
+          "name": "2680 - Diamond Craters",
+          "acres": 705,
+          "status": "Active",
           "res": 0,
           "comm": 0,
           "other": 0
@@ -1200,7 +1200,7 @@
     },
     {
       "county": "Douglas",
-      "acres": 25967.0,
+      "acres": 25222.0,
       "res": 0,
       "comm": 0,
       "other": 0,
@@ -1215,7 +1215,7 @@
         },
         {
           "name": "Castle",
-          "acres": 2295,
+          "acres": 1550,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1409,13 +1409,13 @@
   ],
   "county_acres_map": {
     "Malheur": 371196.7,
-    "Harney": 447631.0,
+    "Harney": 269449.0,
     "Grant": 83189.0,
     "Jefferson": 112671.0,
     "Wheeler": 376256.0,
     "Umatilla": 48324.0,
     "Crook": 44950.0,
-    "Douglas": 25967.0,
+    "Douglas": 25222.0,
     "Baker": 26478.0,
     "Jackson": 15639.0,
     "Lake": 4169.0,
@@ -2444,7 +2444,7 @@
     {
       "year": 2026,
       "total_fires": 61,
-      "total_acres": 1765630.2000000002,
+      "total_acres": 1586703.2000000002,
       "total_structures_destroyed": 142,
       "fatalities": 0,
       "injuries": 0,
@@ -2465,11 +2465,6 @@
           "acres": 304229.0
         },
         {
-          "name": "Coleman Creek",
-          "county": "Harney",
-          "acres": 212182.0
-        },
-        {
           "name": "HAY CREEK COMPLEX",
           "county": "Gilliam",
           "acres": 200292.0
@@ -2478,6 +2473,11 @@
           "name": "Second Flat",
           "county": "Harney",
           "acres": 103459.0
+        },
+        {
+          "name": "Bald Mountain",
+          "county": "Harney",
+          "acres": 85357.0
         }
       ]
     },
@@ -2935,6 +2935,11 @@
       "active_fires": 79,
       "acres_burned": 964806.8,
       "should_update": true
+    },
+    "2026-08-01_1600": {
+      "active_fires": 47,
+      "acres_burned": 1254832.2,
+      "should_update": true
     }
   },
   "map_fires": [
@@ -2946,20 +2951,6 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 304229.0,
-      "structures_lost_res": 0,
-      "structures_lost_comm": 0,
-      "structures_lost_other": 0,
-      "cpx_name": null,
-      "cpx_total_acres": null
-    },
-    {
-      "name": "Coleman Creek",
-      "county": "Harney",
-      "lat": 43.558834,
-      "lon": -118.381211,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 212182.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3086,6 +3077,20 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 35472.0,
+      "structures_lost_res": 0,
+      "structures_lost_comm": 0,
+      "structures_lost_other": 0,
+      "cpx_name": null,
+      "cpx_total_acres": null
+    },
+    {
+      "name": "Coleman Creek",
+      "county": "Harney",
+      "lat": 43.558834,
+      "lon": -118.381211,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 34000.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3309,7 +3314,7 @@
       "lon": -122.566,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 2295.0,
+      "acres": 1550.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
