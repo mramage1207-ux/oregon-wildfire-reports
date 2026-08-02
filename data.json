@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-08-01",
-  "report_time": "6:23 PM PDT",
-  "report_time_iso": "2026-08-02T01:23:36Z",
+  "last_updated": "2026-08-02",
+  "report_time": "7:53 AM PDT",
+  "report_time_iso": "2026-08-02T14:53:56Z",
   "current_active_fires": 47,
   "current_acres_burned": 1430425.19,
-  "current_report_time": "6:23 PM PDT",
-  "current_report_time_iso": "2026-08-02T01:23:36Z",
+  "current_report_time": "7:53 AM PDT",
+  "current_report_time_iso": "2026-08-02T14:53:56Z",
   "change_vs_prior_morning": {
-    "prior_date": "2026-07-31",
+    "prior_date": "2026-08-01",
     "active_large_fires": {
       "current": 31,
       "prior": 31,
@@ -22,48 +22,48 @@
     },
     "evac_addresses_l1": {
       "current": 4710,
-      "prior": 4126,
-      "delta": 584,
-      "pct": 14.2
+      "prior": 4710,
+      "delta": 0,
+      "pct": 0.0
     },
     "evac_addresses_l2": {
       "current": 2845,
-      "prior": 3598,
-      "delta": -753,
-      "pct": -20.9
+      "prior": 2845,
+      "delta": 0,
+      "pct": 0.0
     },
     "evac_addresses_l3": {
       "current": 2108,
-      "prior": 1864,
-      "delta": 244,
-      "pct": 13.1
+      "prior": 2108,
+      "delta": 0,
+      "pct": 0.0
     },
     "active_fires": {
       "current": 47,
-      "prior": 48,
-      "delta": -1,
-      "pct": -2.1
+      "prior": 47,
+      "delta": 0,
+      "pct": 0.0
     },
     "total_acres_ytd": {
       "current": 1765392.2000000002,
-      "prior": 1749261,
-      "delta": 16131.200000000186,
-      "pct": 0.9
+      "prior": 1765392,
+      "delta": 0.20000000018626451,
+      "pct": 0.0
     },
     "structures_lost": {
       "current": 143,
-      "prior": 119,
-      "delta": 24,
-      "pct": 20.2
+      "prior": 143,
+      "delta": 0,
+      "pct": 0.0
     }
   },
   "change_vs_7d_ago": {
-    "prior_date": "2026-07-25",
+    "prior_date": "2026-07-26",
     "active_large_fires": {
       "current": 31,
-      "prior": 35,
-      "delta": -4,
-      "pct": -11.4
+      "prior": 37,
+      "delta": -6,
+      "pct": -16.2
     },
     "active_evac_fires": {
       "current": 8,
@@ -73,33 +73,33 @@
     },
     "evac_addresses_l1": {
       "current": 4710,
-      "prior": 5724,
-      "delta": -1014,
-      "pct": -17.7
+      "prior": 5858,
+      "delta": -1148,
+      "pct": -19.6
     },
     "evac_addresses_l2": {
       "current": 2845,
-      "prior": 2726,
-      "delta": 119,
-      "pct": 4.4
+      "prior": 2580,
+      "delta": 265,
+      "pct": 10.3
     },
     "evac_addresses_l3": {
       "current": 2108,
-      "prior": 2317,
-      "delta": -209,
-      "pct": -9.0
+      "prior": 2759,
+      "delta": -651,
+      "pct": -23.6
     },
     "active_fires": {
       "current": 47,
-      "prior": 145,
-      "delta": -98,
-      "pct": -67.6
+      "prior": 117,
+      "delta": -70,
+      "pct": -59.8
     },
     "total_acres_ytd": {
       "current": 1765392.2000000002,
-      "prior": 669927,
-      "delta": 1095465.2000000002,
-      "pct": 163.5
+      "prior": 1053674,
+      "delta": 711718.2000000002,
+      "pct": 67.5
     },
     "structures_lost": {
       "current": 143,
@@ -109,18 +109,18 @@
     }
   },
   "change_vs_30d_ago": {
-    "prior_date": "2026-07-02",
+    "prior_date": "2026-07-03",
     "active_large_fires": {
       "current": 31,
-      "prior": 2,
-      "delta": 29,
-      "pct": 1450.0
+      "prior": 1,
+      "delta": 30,
+      "pct": 3000.0
     },
     "active_evac_fires": {
       "current": 8,
-      "prior": 1,
-      "delta": 7,
-      "pct": 700.0
+      "prior": 0,
+      "delta": 8,
+      "pct": null
     },
     "evac_addresses_l1": {
       "current": 4710,
@@ -142,9 +142,9 @@
     },
     "active_fires": {
       "current": 47,
-      "prior": 22,
-      "delta": 25,
-      "pct": 113.6
+      "prior": 31,
+      "delta": 16,
+      "pct": 51.6
     },
     "total_acres_ytd": {
       "current": 1765392.2000000002,
@@ -162,7 +162,6 @@
   "trend_history": {
     "active_large_fires": {
       "dates": [
-        "2026-07-02",
         "2026-07-03",
         "2026-07-04",
         "2026-07-05",
@@ -192,10 +191,10 @@
         "2026-07-29",
         "2026-07-30",
         "2026-07-31",
-        "2026-08-01"
+        "2026-08-01",
+        "2026-08-02"
       ],
       "values": [
-        2,
         1,
         0,
         3,
@@ -225,12 +224,12 @@
         31,
         31,
         31,
+        31,
         31
       ]
     },
     "active_evac_fires": {
       "dates": [
-        "2026-07-02",
         "2026-07-03",
         "2026-07-04",
         "2026-07-05",
@@ -260,10 +259,10 @@
         "2026-07-29",
         "2026-07-30",
         "2026-07-31",
-        "2026-08-01"
+        "2026-08-01",
+        "2026-08-02"
       ],
       "values": [
-        1,
         0,
         0,
         2,
@@ -293,12 +292,12 @@
         8,
         8,
         8,
+        8,
         8
       ]
     },
     "evac_addresses_l1": {
       "dates": [
-        "2026-07-02",
         "2026-07-03",
         "2026-07-04",
         "2026-07-05",
@@ -328,10 +327,10 @@
         "2026-07-29",
         "2026-07-30",
         "2026-07-31",
-        "2026-08-01"
+        "2026-08-01",
+        "2026-08-02"
       ],
       "values": [
-        0,
         0,
         0,
         21,
@@ -361,12 +360,12 @@
         3930,
         4009,
         4126,
+        4710,
         4710
       ]
     },
     "evac_addresses_l2": {
       "dates": [
-        "2026-07-02",
         "2026-07-03",
         "2026-07-04",
         "2026-07-05",
@@ -396,10 +395,10 @@
         "2026-07-29",
         "2026-07-30",
         "2026-07-31",
-        "2026-08-01"
+        "2026-08-01",
+        "2026-08-02"
       ],
       "values": [
-        0,
         0,
         0,
         192,
@@ -429,12 +428,12 @@
         3716,
         3667,
         3598,
+        2845,
         2845
       ]
     },
     "evac_addresses_l3": {
       "dates": [
-        "2026-07-02",
         "2026-07-03",
         "2026-07-04",
         "2026-07-05",
@@ -464,10 +463,10 @@
         "2026-07-29",
         "2026-07-30",
         "2026-07-31",
-        "2026-08-01"
+        "2026-08-01",
+        "2026-08-02"
       ],
       "values": [
-        0,
         0,
         0,
         2,
@@ -497,12 +496,12 @@
         1915,
         1920,
         1864,
+        2108,
         2108
       ]
     },
     "active_fires": {
       "dates": [
-        "2026-07-02",
         "2026-07-03",
         "2026-07-04",
         "2026-07-05",
@@ -532,10 +531,10 @@
         "2026-07-29",
         "2026-07-30",
         "2026-07-31",
-        "2026-08-01"
+        "2026-08-01",
+        "2026-08-02"
       ],
       "values": [
-        22,
         31,
         27,
         46,
@@ -565,12 +564,12 @@
         60,
         55,
         48,
+        47,
         47
       ]
     },
     "total_acres_ytd": {
       "dates": [
-        "2026-07-02",
         "2026-07-03",
         "2026-07-04",
         "2026-07-05",
@@ -600,10 +599,10 @@
         "2026-07-29",
         "2026-07-30",
         "2026-07-31",
-        "2026-08-01"
+        "2026-08-01",
+        "2026-08-02"
       ],
       "values": [
-        18029,
         18029,
         18029,
         19917,
@@ -633,12 +632,12 @@
         1579000,
         1696112,
         1749261,
+        1765392,
         1765392.2000000002
       ]
     },
     "structures_lost": {
       "dates": [
-        "2026-07-02",
         "2026-07-03",
         "2026-07-04",
         "2026-07-05",
@@ -668,10 +667,10 @@
         "2026-07-29",
         "2026-07-30",
         "2026-07-31",
-        "2026-08-01"
+        "2026-08-01",
+        "2026-08-02"
       ],
       "values": [
-        0,
         0,
         0,
         0,
@@ -701,13 +700,14 @@
         116,
         118,
         119,
+        143,
         143
       ]
     }
   },
   "exec_summary": {
     "status": "critical",
-    "headline": "The number of Level 3 (Go Now) evacuation addresses is up 13% (1,864 \u2192 2,108) since yesterday morning. Over the past 7 days, it is down 9% (2,317 \u2192 2,108).",
+    "headline": "The number of fires with active evacuations is holding steady at 8 since yesterday morning. Over the past 7 days, it is down 20% (10 \u2192 8).",
     "escalation": "This season has recorded 143 structures destroyed so far.",
     "closing": "Full details, county-by-county, are in the sections below."
   },
@@ -750,18 +750,22 @@
   "evac_data_as_of_iso": "2026-08-01T22:45:04Z",
   "struct_loss": {
     "oregon_totals": {
-      "res_threatened": 12311,
+      "res_threatened": 10688,
       "res_damaged": 2,
-      "res_destroyed": 64,
+      "res_destroyed": 15,
       "comm_threatened": 0,
       "comm_damaged": 0,
       "comm_destroyed": 0,
       "minor_threatened": 0,
       "minor_damaged": 1,
       "minor_destroyed": 78,
+      "unc_threatened": 1623,
+      "unc_damaged": 0,
+      "unc_destroyed": 49,
       "total_threatened": 12311,
       "total_damaged": 3,
-      "total_destroyed": 142
+      "total_destroyed": 142,
+      "methodology_note": "Effective 2026-08-01: NWCC structure-loss figures reported as a bare number with no descriptive category text are labeled Uncategorized rather than assumed Residential. Data before this date used the prior assume-Residential convention and has not been retroactively revised."
     }
   },
   "county_structure_data": [
@@ -771,6 +775,7 @@
       "res": 0,
       "comm": 0,
       "other": 3,
+      "unc": 0,
       "fires": [
         {
           "name": "Coleman Creek",
@@ -778,7 +783,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "Second Flat",
@@ -786,7 +792,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 1
+          "other": 1,
+          "unc": 0
         },
         {
           "name": "Bald Mountain",
@@ -794,7 +801,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "Jackass Butte",
@@ -802,7 +810,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 2
+          "other": 2,
+          "unc": 0
         },
         {
           "name": "Stubble",
@@ -810,7 +819,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "Egypt",
@@ -818,7 +828,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "Hoop",
@@ -826,7 +837,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "2680 - Diamond Craters",
@@ -834,24 +846,27 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         }
       ]
     },
     {
       "county": "Wheeler",
       "acres": 376256.0,
-      "res": 28,
+      "res": 3,
       "comm": 0,
       "other": 15,
+      "unc": 25,
       "fires": [
         {
           "name": "ROWE CREEK COMPLEX",
           "acres": 309957,
           "status": "Active",
-          "res": 25,
+          "res": 0,
           "comm": 0,
-          "other": 15
+          "other": 15,
+          "unc": 25
         },
         {
           "name": "0587 SHINGLE",
@@ -859,7 +874,8 @@
           "status": "Active",
           "res": 3,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         }
       ]
     },
@@ -869,6 +885,7 @@
       "res": 0,
       "comm": 0,
       "other": 0,
+      "unc": 0,
       "fires": [
         {
           "name": "BIG GRASS",
@@ -876,7 +893,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "HAT",
@@ -884,7 +902,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "COW CAMP COMPLEX",
@@ -892,7 +911,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "LYTLE",
@@ -900,7 +920,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "CROWLEY",
@@ -908,7 +929,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "Butterfield Spring Fire",
@@ -916,7 +938,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "WHISKEY",
@@ -924,7 +947,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "AIRPORT",
@@ -932,24 +956,27 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         }
       ]
     },
     {
       "county": "Gilliam",
       "acres": 201822.0,
-      "res": 13,
+      "res": 2,
       "comm": 0,
       "other": 5,
+      "unc": 11,
       "fires": [
         {
           "name": "HAY CREEK COMPLEX",
           "acres": 200292,
           "status": "Active",
-          "res": 13,
+          "res": 2,
           "comm": 0,
-          "other": 5
+          "other": 5,
+          "unc": 11
         },
         {
           "name": "518 SULLY",
@@ -957,7 +984,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "0246 RHEA",
@@ -965,7 +993,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "0366 CEDAR",
@@ -973,24 +1002,27 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         }
       ]
     },
     {
       "county": "Jefferson",
       "acres": 112671.0,
-      "res": 15,
+      "res": 2,
       "comm": 0,
       "other": 0,
+      "unc": 13,
       "fires": [
         {
           "name": "Bench",
           "acres": 66760,
           "status": "Active",
-          "res": 13,
+          "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 13
         },
         {
           "name": "0494 AKAWA BUTTE",
@@ -998,7 +1030,8 @@
           "status": "Active",
           "res": 2,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "Beachcomb",
@@ -1006,7 +1039,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "0579 TEN MILE",
@@ -1014,7 +1048,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         }
       ]
     },
@@ -1024,6 +1059,7 @@
       "res": 1,
       "comm": 0,
       "other": 7,
+      "unc": 0,
       "fires": [
         {
           "name": "FOX",
@@ -1031,7 +1067,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 5
+          "other": 5,
+          "unc": 0
         },
         {
           "name": "Olive Butte",
@@ -1039,7 +1076,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "BOLOGNA",
@@ -1047,7 +1085,8 @@
           "status": "Active",
           "res": 1,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "Salmon",
@@ -1055,7 +1094,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 2
+          "other": 2,
+          "unc": 0
         }
       ]
     },
@@ -1065,6 +1105,7 @@
       "res": 6,
       "comm": 0,
       "other": 42,
+      "unc": 0,
       "fires": [
         {
           "name": "Hagen",
@@ -1072,7 +1113,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "Lower Dry Creek Mutual Aid",
@@ -1080,7 +1122,8 @@
           "status": "Contained",
           "res": 6,
           "comm": 0,
-          "other": 42
+          "other": 42,
+          "unc": 0
         },
         {
           "name": "North Cayuse",
@@ -1088,7 +1131,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "Old Emigrant",
@@ -1096,7 +1140,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "Horse Ridge",
@@ -1104,7 +1149,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "Cable Creek",
@@ -1112,7 +1158,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         }
       ]
     },
@@ -1122,6 +1169,7 @@
       "res": 0,
       "comm": 0,
       "other": 0,
+      "unc": 0,
       "fires": [
         {
           "name": "0497 HENRY",
@@ -1129,7 +1177,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "0500 COYOTE",
@@ -1137,7 +1186,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "0611",
@@ -1145,7 +1195,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "0496",
@@ -1153,7 +1204,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         }
       ]
     },
@@ -1163,6 +1215,7 @@
       "res": 0,
       "comm": 0,
       "other": 0,
+      "unc": 0,
       "fires": [
         {
           "name": "POWDER RIVER",
@@ -1170,7 +1223,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "Anthony",
@@ -1178,7 +1232,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "FRONTAGE",
@@ -1186,7 +1241,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "Bob Creek",
@@ -1194,7 +1250,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         }
       ]
     },
@@ -1204,6 +1261,7 @@
       "res": 0,
       "comm": 0,
       "other": 0,
+      "unc": 0,
       "fires": [
         {
           "name": "Grasshopper",
@@ -1211,7 +1269,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "Castle",
@@ -1219,7 +1278,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         }
       ]
     },
@@ -1229,6 +1289,7 @@
       "res": 1,
       "comm": 0,
       "other": 6,
+      "unc": 0,
       "fires": [
         {
           "name": "E Evans Creek Rd 18000",
@@ -1236,7 +1297,8 @@
           "status": "Active",
           "res": 1,
           "comm": 0,
-          "other": 6
+          "other": 6,
+          "unc": 0
         },
         {
           "name": "Blackwell Rd 8087",
@@ -1244,7 +1306,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "HILT",
@@ -1252,7 +1315,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "PP# 342802 UPPER APPLEGATE RD",
@@ -1260,7 +1324,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         }
       ]
     },
@@ -1270,6 +1335,7 @@
       "res": 0,
       "comm": 0,
       "other": 0,
+      "unc": 0,
       "fires": [
         {
           "name": "Burnt Creek",
@@ -1277,7 +1343,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         }
       ]
     },
@@ -1287,6 +1354,7 @@
       "res": 0,
       "comm": 0,
       "other": 0,
+      "unc": 0,
       "fires": [
         {
           "name": "0231 ZEN",
@@ -1294,7 +1362,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "0380 ANTELOPE CREEK",
@@ -1302,7 +1371,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "8 MILE",
@@ -1310,7 +1380,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "0586",
@@ -1318,7 +1389,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         }
       ]
     },
@@ -1328,6 +1400,7 @@
       "res": 0,
       "comm": 0,
       "other": 0,
+      "unc": 0,
       "fires": [
         {
           "name": "PINE MOUNTAIN",
@@ -1335,7 +1408,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "0384 COYNER",
@@ -1343,7 +1417,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         },
         {
           "name": "Riverview Fire",
@@ -1351,7 +1426,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         }
       ]
     },
@@ -1361,6 +1437,7 @@
       "res": 0,
       "comm": 0,
       "other": 0,
+      "unc": 0,
       "fires": [
         {
           "name": "INC 302",
@@ -1368,7 +1445,8 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         }
       ]
     },
@@ -1378,6 +1456,7 @@
       "res": 0,
       "comm": 0,
       "other": 0,
+      "unc": 0,
       "fires": [
         {
           "name": "Loveless",
@@ -1385,7 +1464,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         }
       ]
     },
@@ -1395,6 +1475,7 @@
       "res": 0,
       "comm": 0,
       "other": 0,
+      "unc": 0,
       "fires": [
         {
           "name": "Riverside OSFM Support",
@@ -1402,7 +1483,8 @@
           "status": "Contained",
           "res": 0,
           "comm": 0,
-          "other": 0
+          "other": 0,
+          "unc": 0
         }
       ]
     }
@@ -2437,8 +2519,8 @@
     },
     {
       "date": "2026-08-01",
-      "active_fires": 45,
-      "acres_burned": 1433751.19
+      "active_fires": 47,
+      "acres_burned": 1430425.19
     }
   ],
   "historical_seasons": [
@@ -2955,6 +3037,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -2969,6 +3052,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -2980,9 +3064,10 @@
       "status": "Active",
       "triggered_evacuation": true,
       "acres": 189794.0,
-      "structures_lost_res": 25,
+      "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 25,
       "cpx_name": "ROWE CREEK COMPLEX",
       "cpx_total_acres": 309957.0
     },
@@ -2997,6 +3082,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 1,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3011,6 +3097,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3025,6 +3112,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 5,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3036,9 +3124,10 @@
       "status": "Active",
       "triggered_evacuation": true,
       "acres": 66760.0,
-      "structures_lost_res": 13,
+      "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 13,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3053,6 +3142,7 @@
       "structures_lost_res": 3,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3067,6 +3157,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3081,6 +3172,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": "HAY CREEK COMPLEX",
       "cpx_total_acres": 200292.0
     },
@@ -3095,6 +3187,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3109,6 +3202,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3123,6 +3217,7 @@
       "structures_lost_res": 2,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3137,6 +3232,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 2,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3151,6 +3247,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3165,6 +3262,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3179,6 +3277,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3193,6 +3292,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3207,6 +3307,7 @@
       "structures_lost_res": 1,
       "structures_lost_comm": 0,
       "structures_lost_other": 6,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3221,6 +3322,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
       "cpx_total_acres": 309957.0
     },
@@ -3235,6 +3337,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3249,6 +3352,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3263,6 +3367,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3277,6 +3382,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3291,6 +3397,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3305,6 +3412,7 @@
       "structures_lost_res": 1,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3319,6 +3427,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3333,6 +3442,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 2,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3347,6 +3457,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3361,6 +3472,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3375,6 +3487,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3389,6 +3502,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3400,9 +3514,10 @@
       "status": "Contained",
       "triggered_evacuation": true,
       "acres": 79200.0,
-      "structures_lost_res": 11,
+      "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 11,
       "cpx_name": "HAY CREEK COMPLEX",
       "cpx_total_acres": 200292.0
     },
@@ -3417,6 +3532,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 15,
+      "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
       "cpx_total_acres": 309957.0
     },
@@ -3431,6 +3547,7 @@
       "structures_lost_res": 2,
       "structures_lost_comm": 0,
       "structures_lost_other": 5,
+      "structures_lost_unc": 0,
       "cpx_name": "HAY CREEK COMPLEX",
       "cpx_total_acres": 200292.0
     },
@@ -3445,6 +3562,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
       "cpx_total_acres": 309957.0
     },
@@ -3459,6 +3577,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": "HAY CREEK COMPLEX",
       "cpx_total_acres": 200292.0
     },
@@ -3473,6 +3592,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3487,6 +3607,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": "HAY CREEK COMPLEX",
       "cpx_total_acres": 200292.0
     },
@@ -3501,6 +3622,7 @@
       "structures_lost_res": 6,
       "structures_lost_comm": 0,
       "structures_lost_other": 42,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3515,6 +3637,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
       "cpx_total_acres": 309957.0
     },
@@ -3529,6 +3652,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
       "cpx_total_acres": 309957.0
     },
@@ -3543,6 +3667,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3557,6 +3682,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": "COW CAMP COMPLEX",
       "cpx_total_acres": 8044.3
     },
@@ -3571,6 +3697,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3585,6 +3712,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3599,6 +3727,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3613,6 +3742,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3627,6 +3757,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
       "cpx_total_acres": 309957.0
     },
@@ -3641,6 +3772,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3655,6 +3787,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3669,6 +3802,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
       "cpx_total_acres": 309957.0
     },
@@ -3683,6 +3817,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3697,6 +3832,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": "COW CAMP COMPLEX",
       "cpx_total_acres": 8044.3
     },
@@ -3711,6 +3847,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3725,6 +3862,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3739,6 +3877,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3753,6 +3892,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3767,6 +3907,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
       "cpx_total_acres": 309957.0
     },
@@ -3781,6 +3922,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3795,6 +3937,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3809,6 +3952,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3823,6 +3967,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3837,6 +3982,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3851,6 +3997,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
       "cpx_total_acres": 309957.0
     },
@@ -3865,6 +4012,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3879,6 +4027,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3893,6 +4042,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3907,6 +4057,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3921,6 +4072,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3935,6 +4087,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3949,6 +4102,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3963,6 +4117,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3977,6 +4132,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": "HAY CREEK COMPLEX",
       "cpx_total_acres": 200292.0
     },
@@ -3991,6 +4147,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -4005,6 +4162,7 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     }

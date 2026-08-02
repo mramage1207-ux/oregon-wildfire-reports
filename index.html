@@ -528,6 +528,7 @@
         </thead>
         <tbody id="struct-loss-tbody"></tbody>
       </table>
+      <div class="struct-loss-methodology-note" id="struct-loss-methodology-note" style="display:none;font-size:.7rem;color:#5a6473;font-style:italic;margin-top:.5rem;"></div>
     </div>
   </div>
 </div>
@@ -588,6 +589,9 @@
       </div>
       <div class="legend-item">
         <div class="legend-dot sq" style="background:#A9C6DE;"></div> Other
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot sq" style="background:#999999;"></div> Uncategorized
       </div>
     </div>
     <svg class="trend" viewBox="0 0 1000 220" preserveAspectRatio="none" id="countyChart"
@@ -1124,7 +1128,7 @@ function drawMap(fires) {
   const fireTip=document.getElementById('fire-tooltip');
   const showFireTooltip=f=>{
     if(!fireTip) return;
-    const totalLost=(f.structures_lost_res||0)+(f.structures_lost_comm||0)+(f.structures_lost_other||0);
+    const totalLost=(f.structures_lost_res||0)+(f.structures_lost_comm||0)+(f.structures_lost_other||0)+(f.structures_lost_unc||0);
     let html=`<div style="font-weight:700;color:#1a2744;font-size:13px;border-bottom:1px solid #e2e8f0;padding-bottom:5px;margin-bottom:5px;">
       ${f.name} &nbsp;<span style="color:#e67e22;">${fmtNum(f.acres)} acres</span>
     </div>`;
@@ -1148,6 +1152,7 @@ function drawMap(fires) {
       if(f.structures_lost_res)   html+=`<div style="color:#1a2744;">Residential: <b>${fmtNum(f.structures_lost_res)}</b></div>`;
       if(f.structures_lost_comm)  html+=`<div style="color:#4C7EA8;">Commercial: <b>${fmtNum(f.structures_lost_comm)}</b></div>`;
       if(f.structures_lost_other) html+=`<div style="color:#7799bb;">Other: <b>${fmtNum(f.structures_lost_other)}</b></div>`;
+      if(f.structures_lost_unc)   html+=`<div style="color:#999999;">Uncategorized: <b>${fmtNum(f.structures_lost_unc)}</b></div>`;
     } else {
       html+=`<div style="color:#888;font-style:italic;font-size:11px;margin-top:4px;">No structure losses reported</div>`;
     }
@@ -1386,7 +1391,7 @@ function drawCountyChart(rows) {
   const W=1000, H=220, P={t:14, r:78, b:34, l:52};
   const cW=W-P.l-P.r, cH=H-P.t-P.b;
   const n = rows.length;
-  const CATS = [['res','#1a2744'],['comm','#4C7EA8'],['other','#A9C6DE']];
+  const CATS = [['res','#1a2744'],['comm','#4C7EA8'],['other','#A9C6DE'],['unc','#999999']];
   const maxAcres = Math.max(...rows.map(r=>r.acres||0)) || 1;
   const allCatVals = rows.flatMap(r => CATS.map(([k])=>r[k]||0));
   const maxCatRaw = Math.max(...allCatVals, 0);
@@ -1428,7 +1433,7 @@ function drawCountyChart(rows) {
   const barW = slot*0.60;
   const ovW  = barW*0.80;
   const catGap = 1.6;
-  const catW = (ovW - 2*catGap)/3;
+  const catW = (ovW - (CATS.length-1)*catGap)/CATS.length;
 
   rows.forEach((r,i) => {
     const cx = P.l + slot*i + slot/2;
@@ -1471,12 +1476,13 @@ function drawCountyChart(rows) {
     hit.addEventListener('mouseenter', function(e) {
       const fires = r.fires || [];
       const lossFireRows = fires
-        .filter(f => f.res || f.comm || f.other)
+        .filter(f => f.res || f.comm || f.other || f.unc)
         .map(f => {
           const parts = [];
           if (f.res)   parts.push(`${f.res} res.`);
           if (f.comm)  parts.push(`${f.comm} comm.`);
           if (f.other) parts.push(`${f.other} other`);
+          if (f.unc)   parts.push(`${f.unc} uncat.`);
           return `<div style="margin-top:3px;padding-left:8px;">
             <span style="font-weight:600;">${f.name}</span>
             <span style="color:#666;"> · ${f.acres.toLocaleString()} ac · ${f.status}</span><br>
@@ -1488,7 +1494,7 @@ function drawCountyChart(rows) {
           <span style="font-weight:600;">${f.name}</span>
           <span style="color:#666;"> · ${f.acres.toLocaleString()} ac · ${f.status}</span>
         </div>`).join('');
-      const totalLost = (r.res||0) + (r.comm||0) + (r.other||0);
+      const totalLost = (r.res||0) + (r.comm||0) + (r.other||0) + (r.unc||0);
       let html = `<div style="font-weight:700;color:#1a2744;font-size:13px;border-bottom:1px solid #e2e8f0;padding-bottom:5px;margin-bottom:5px;">
         ${r.county} County &nbsp;<span style="color:#e67e22;">${Math.round(r.acres||0).toLocaleString()} acres</span>
       </div>`;
@@ -1497,6 +1503,7 @@ function drawCountyChart(rows) {
         if (r.res)   html += `<div style="color:#1a2744;">Residential: <b>${r.res}</b></div>`;
         if (r.comm)  html += `<div style="color:#4C7EA8;">Commercial: <b>${r.comm}</b></div>`;
         if (r.other) html += `<div style="color:#7799bb;">Other: <b>${r.other}</b></div>`;
+        if (r.unc)   html += `<div style="color:#999999;">Uncategorized: <b>${r.unc}</b></div>`;
         if (lossFireRows) {
           html += `<div style="margin-top:6px;font-weight:600;color:#555;font-size:11px;">Contributing Fires:</div>${lossFireRows}`;
         }
@@ -1535,9 +1542,9 @@ function drawCountyChart(rows) {
   const tbl = document.getElementById('countyChartTable');
   if (tbl) {
     const bodyRows = rows.map(r =>
-      `<tr><td>${r.county}</td><td>${Math.round(r.acres||0).toLocaleString()}</td><td>${r.res||0}</td><td>${r.comm||0}</td><td>${r.other||0}</td></tr>`
+      `<tr><td>${r.county}</td><td>${Math.round(r.acres||0).toLocaleString()}</td><td>${r.res||0}</td><td>${r.comm||0}</td><td>${r.other||0}</td><td>${r.unc||0}</td></tr>`
     ).join('');
-    tbl.innerHTML = `<table><caption>County-by-county acres burned and structures destroyed</caption><thead><tr><th scope="col">County</th><th scope="col">Acres Burned</th><th scope="col">Residential Lost</th><th scope="col">Commercial Lost</th><th scope="col">Other Lost</th></tr></thead><tbody>${bodyRows}</tbody></table>`;
+    tbl.innerHTML = `<table><caption>County-by-county acres burned and structures destroyed</caption><thead><tr><th scope="col">County</th><th scope="col">Acres Burned</th><th scope="col">Residential Lost</th><th scope="col">Commercial Lost</th><th scope="col">Other Lost</th><th scope="col">Uncategorized Lost</th></tr></thead><tbody>${bodyRows}</tbody></table>`;
   }
 }
 
@@ -1853,6 +1860,7 @@ function render(pdfs, data) {
       ['Residences',   sl.res_threatened,   sl.res_damaged,   sl.res_destroyed],
       ['Commercial',   sl.comm_threatened,  sl.comm_damaged,  sl.comm_destroyed],
       ['Minor / Other',sl.minor_threatened, sl.minor_damaged, sl.minor_destroyed],
+      ['Uncategorized', sl.unc_threatened,  sl.unc_damaged,   sl.unc_destroyed],
       ['<strong>Total</strong>', sl.total_threatened, sl.total_damaged, sl.total_destroyed],
     ];
     function slClass(v) {
@@ -1869,6 +1877,11 @@ function render(pdfs, data) {
       </tr>`).join('');
     const slEl = document.getElementById('struct-loss-section');
     if (slEl) slEl.style.display = '';
+    const slNoteEl = document.getElementById('struct-loss-methodology-note');
+    if (slNoteEl && sl.methodology_note) {
+      slNoteEl.textContent = sl.methodology_note;
+      slNoteEl.style.display = '';
+    }
   }
 
   // ── Count pill ──
