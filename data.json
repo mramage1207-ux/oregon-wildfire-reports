@@ -1,11 +1,11 @@
 {
   "last_updated": "2026-08-03",
-  "report_time": "8:17 AM PDT",
-  "report_time_iso": "2026-08-03T15:17:54Z",
-  "current_active_fires": 49,
-  "current_acres_burned": 1628015.45,
-  "current_report_time": "8:17 AM PDT",
-  "current_report_time_iso": "2026-08-03T15:17:54Z",
+  "report_time": "4:02 PM PDT",
+  "report_time_iso": "2026-08-03T23:02:11Z",
+  "current_active_fires": 52,
+  "current_acres_burned": 1628627.94,
+  "current_report_time": "4:02 PM PDT",
+  "current_report_time_iso": "2026-08-03T23:02:11Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-08-02",
     "active_large_fires": {
@@ -21,33 +21,33 @@
       "pct": 0.0
     },
     "evac_addresses_l1": {
-      "current": 5022,
+      "current": 2564,
       "prior": 5047,
-      "delta": -25,
-      "pct": -0.5
+      "delta": -2483,
+      "pct": -49.2
     },
     "evac_addresses_l2": {
-      "current": 2389,
+      "current": 2953,
       "prior": 3724,
-      "delta": -1335,
-      "pct": -35.8
+      "delta": -771,
+      "pct": -20.7
     },
     "evac_addresses_l3": {
-      "current": 2117,
+      "current": 750,
       "prior": 2275,
-      "delta": -158,
-      "pct": -6.9
+      "delta": -1525,
+      "pct": -67.0
     },
     "active_fires": {
-      "current": 49,
+      "current": 52,
       "prior": 49,
-      "delta": 0,
-      "pct": 0.0
+      "delta": 3,
+      "pct": 6.1
     },
     "total_acres_ytd": {
-      "current": 1960563.3000000003,
+      "current": 1961175.3000000003,
       "prior": 1923690,
-      "delta": 36873.30000000028,
+      "delta": 37485.30000000028,
       "pct": 1.9
     },
     "structures_lost": {
@@ -72,33 +72,33 @@
       "pct": -10.0
     },
     "evac_addresses_l1": {
-      "current": 5022,
+      "current": 2564,
       "prior": 7487,
-      "delta": -2465,
-      "pct": -32.9
+      "delta": -4923,
+      "pct": -65.8
     },
     "evac_addresses_l2": {
-      "current": 2389,
+      "current": 2953,
       "prior": 2932,
-      "delta": -543,
-      "pct": -18.5
+      "delta": 21,
+      "pct": 0.7
     },
     "evac_addresses_l3": {
-      "current": 2117,
+      "current": 750,
       "prior": 2795,
-      "delta": -678,
-      "pct": -24.3
+      "delta": -2045,
+      "pct": -73.2
     },
     "active_fires": {
-      "current": 49,
+      "current": 52,
       "prior": 92,
-      "delta": -43,
-      "pct": -46.7
+      "delta": -40,
+      "pct": -43.5
     },
     "total_acres_ytd": {
-      "current": 1960563.3000000003,
+      "current": 1961175.3000000003,
       "prior": 1372091,
-      "delta": 588472.3000000003,
+      "delta": 589084.3000000003,
       "pct": 42.9
     },
     "structures_lost": {
@@ -123,34 +123,34 @@
       "pct": null
     },
     "evac_addresses_l1": {
-      "current": 5022,
+      "current": 2564,
       "prior": 0,
-      "delta": 5022,
+      "delta": 2564,
       "pct": null
     },
     "evac_addresses_l2": {
-      "current": 2389,
+      "current": 2953,
       "prior": 0,
-      "delta": 2389,
+      "delta": 2953,
       "pct": null
     },
     "evac_addresses_l3": {
-      "current": 2117,
+      "current": 750,
       "prior": 0,
-      "delta": 2117,
+      "delta": 750,
       "pct": null
     },
     "active_fires": {
-      "current": 49,
+      "current": 52,
       "prior": 27,
-      "delta": 22,
-      "pct": 81.5
+      "delta": 25,
+      "pct": 92.6
     },
     "total_acres_ytd": {
-      "current": 1960563.3000000003,
+      "current": 1961175.3000000003,
       "prior": 18029,
-      "delta": 1942534.3000000003,
-      "pct": 10774.5
+      "delta": 1943146.3000000003,
+      "pct": 10777.9
     },
     "structures_lost": {
       "current": 143,
@@ -361,7 +361,7 @@
         4126,
         4710,
         5047,
-        5022
+        2564
       ]
     },
     "evac_addresses_l2": {
@@ -429,7 +429,7 @@
         3598,
         2845,
         3724,
-        2389
+        2953
       ]
     },
     "evac_addresses_l3": {
@@ -497,7 +497,7 @@
         1864,
         2108,
         2275,
-        2117
+        750
       ]
     },
     "active_fires": {
@@ -565,7 +565,7 @@
         48,
         47,
         49,
-        49
+        52
       ]
     },
     "total_acres_ytd": {
@@ -633,7 +633,7 @@
         1749261,
         1765392,
         1923690,
-        1960563.3000000003
+        1961175.3000000003
       ]
     },
     "structures_lost": {
@@ -707,12 +707,12 @@
   },
   "exec_summary": {
     "status": "critical",
-    "headline": "The number of Level 3 (Go Now) evacuation addresses is down 7% (2,275 \u2192 2,117) since yesterday morning. Over the past 7 days, it is down 24% (2,795 \u2192 2,117).",
+    "headline": "The number of Level 3 (Go Now) evacuation addresses is down 67% (2,275 \u2192 750) since yesterday morning. Over the past 7 days, it is down 73% (2,795 \u2192 750).",
     "escalation": "This season has recorded 143 structures destroyed so far.",
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 34,
-  "total_large_fire_acres": 1960563.3000000003,
+  "total_large_fire_acres": 1961175.3000000003,
   "structures_lost": 143,
   "evac_triggering_fires": 9,
   "evac_zones": {
@@ -721,7 +721,6 @@
       "Bench \u2014 ~9 miles west of Metolius, Oregon",
       "Grasshopper \u2014 ~16 miles south of Clearwater Village, Oregon",
       "0494 AKAWA BUTTE \u2014 ~10 miles east of Camp Sherman, Oregon",
-      "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon",
       "Round \u2014 ~14 miles northwest of Bourne, Oregon"
     ],
     "level2": [
@@ -735,6 +734,7 @@
       "Round \u2014 ~14 miles northwest of Bourne, Oregon"
     ],
     "level1": [
+      "0587 SHINGLE \u2014 ~14 miles southeast of Mitchell, Oregon",
       "Bench \u2014 ~9 miles west of Metolius, Oregon",
       "0567 \u2014 ~5 miles northeast of Shaniko, Oregon",
       "Grasshopper \u2014 ~16 miles south of Clearwater Village, Oregon",
@@ -744,11 +744,11 @@
       "Round \u2014 ~14 miles northwest of Bourne, Oregon"
     ]
   },
-  "evac_addresses_l1": 5022,
-  "evac_addresses_l2": 2389,
-  "evac_addresses_l3": 2117,
-  "evac_data_as_of": "8:05 AM PDT",
-  "evac_data_as_of_iso": "2026-08-03T15:05:02Z",
+  "evac_addresses_l1": 2564,
+  "evac_addresses_l2": 2953,
+  "evac_addresses_l3": 750,
+  "evac_data_as_of": "3:45 PM PDT",
+  "evac_data_as_of_iso": "2026-08-03T22:45:02Z",
   "struct_loss": {
     "oregon_totals": {
       "res_threatened": 0,
@@ -982,7 +982,7 @@
     },
     {
       "county": "Jefferson",
-      "acres": 206447.0,
+      "acres": 206608.0,
       "res": 2,
       "comm": 0,
       "other": 15,
@@ -1044,7 +1044,7 @@
         },
         {
           "name": "0658",
-          "acres": 1039,
+          "acres": 1200,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1377,7 +1377,7 @@
     },
     {
       "county": "Wallowa",
-      "acres": 4977.0,
+      "acres": 5428.0,
       "res": 0,
       "comm": 0,
       "other": 0,
@@ -1385,7 +1385,7 @@
       "fires": [
         {
           "name": "Eggo",
-          "acres": 3774,
+          "acres": 4225,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1568,14 +1568,14 @@
     "Harney": 502243.0,
     "Grant": 84798.0,
     "Wheeler": 396230.0,
-    "Jefferson": 206447.0,
+    "Jefferson": 206608.0,
     "Umatilla": 53593.0,
     "Douglas": 33342.0,
     "Crook": 49784.0,
     "Baker": 26461.0,
     "Jackson": 15639.0,
+    "Wallowa": 5428.0,
     "Lake": 4169.0,
-    "Wallowa": 4977.0,
     "Deschutes": 2621.5,
     "Wasco": 3704.0,
     "Gilliam": 201822.0,
@@ -2613,7 +2613,7 @@
     {
       "year": 2026,
       "total_fires": 68,
-      "total_acres": 1960563.3000000003,
+      "total_acres": 1961175.3000000003,
       "total_structures_destroyed": 143,
       "fatalities": 0,
       "injuries": 0,
@@ -3109,6 +3109,11 @@
       "active_fires": 47,
       "acres_burned": 1254832.2,
       "should_update": true
+    },
+    "2026-08-03_1600": {
+      "active_fires": 52,
+      "acres_burned": 1628627.9,
+      "should_update": true
     }
   },
   "map_fires": [
@@ -3443,13 +3448,13 @@
       "cpx_total_acres": null
     },
     {
-      "name": "Burnt Creek",
-      "county": "Lake",
-      "lat": 45.76802,
-      "lon": -117.25321,
+      "name": "Eggo",
+      "county": "Wallowa",
+      "lat": 45.596919,
+      "lon": -117.112607,
       "status": "Active",
-      "triggered_evacuation": true,
-      "acres": 4169.0,
+      "triggered_evacuation": false,
+      "acres": 4225.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3458,13 +3463,13 @@
       "cpx_total_acres": null
     },
     {
-      "name": "Eggo",
-      "county": "Wallowa",
-      "lat": 45.596919,
-      "lon": -117.112607,
+      "name": "Burnt Creek",
+      "county": "Lake",
+      "lat": 45.76802,
+      "lon": -117.25321,
       "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 3774.0,
+      "triggered_evacuation": true,
+      "acres": 4169.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3569,7 +3574,7 @@
       "lon": -121.238963,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 1039.0,
+      "acres": 1200.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
