@@ -1,11 +1,11 @@
 {
   "last_updated": "2026-08-04",
-  "report_time": "9:32 AM PDT",
-  "report_time_iso": "2026-08-04T16:32:47Z",
+  "report_time": "9:47 AM PDT",
+  "report_time_iso": "2026-08-04T16:47:42Z",
   "current_active_fires": 52,
   "current_acres_burned": 1683843.1,
-  "current_report_time": "9:32 AM PDT",
-  "current_report_time_iso": "2026-08-04T16:32:47Z",
+  "current_report_time": "9:47 AM PDT",
+  "current_report_time_iso": "2026-08-04T16:47:42Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-08-03",
     "active_large_fires": {
@@ -51,10 +51,10 @@
       "pct": 2.9
     },
     "structures_lost": {
-      "current": 143,
+      "current": 154,
       "prior": 143,
-      "delta": 0,
-      "pct": 0.0
+      "delta": 11,
+      "pct": 7.7
     }
   },
   "change_vs_7d_ago": {
@@ -102,10 +102,10 @@
       "pct": 34.4
     },
     "structures_lost": {
-      "current": 143,
+      "current": 154,
       "prior": 106,
-      "delta": 37,
-      "pct": 34.9
+      "delta": 48,
+      "pct": 45.3
     }
   },
   "change_vs_30d_ago": {
@@ -153,9 +153,9 @@
       "pct": 10033.9
     },
     "structures_lost": {
-      "current": 143,
+      "current": 154,
       "prior": 0,
-      "delta": 143,
+      "delta": 154,
       "pct": null
     }
   },
@@ -701,19 +701,19 @@
         143,
         143,
         143,
-        143
+        154
       ]
     }
   },
   "exec_summary": {
     "status": "critical",
     "headline": "The number of Level 3 (Go Now) evacuation addresses is down 67% (2,117 \u2192 700) since yesterday morning. Over the past 7 days, it is down 72% (2,517 \u2192 700).",
-    "escalation": "This season has recorded 143 structures destroyed so far.",
+    "escalation": "This season has recorded 154 structures destroyed so far.",
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 34,
   "total_large_fire_acres": 2018363.3000000003,
-  "structures_lost": 143,
+  "structures_lost": 154,
   "evac_triggering_fires": 8,
   "evac_zones": {
     "level3": [
@@ -747,34 +747,31 @@
   "evac_data_as_of_iso": "2026-08-04T15:05:01Z",
   "struct_loss": {
     "oregon_totals": {
-      "res_threatened": 0,
-      "res_damaged": 0,
-      "res_destroyed": 15,
+      "res_threatened": 10,
+      "res_damaged": 1,
+      "res_destroyed": 27,
       "comm_threatened": 0,
       "comm_damaged": 0,
-      "comm_destroyed": 0,
+      "comm_destroyed": 2,
       "minor_threatened": 0,
       "minor_damaged": 1,
-      "minor_destroyed": 78,
-      "unc_threatened": 12311,
-      "unc_damaged": 2,
-      "unc_destroyed": 49,
-      "total_threatened": 12311,
+      "minor_destroyed": 88,
+      "unc_threatened": 8360,
+      "unc_damaged": 1,
+      "unc_destroyed": 36,
+      "total_threatened": 8370,
       "total_damaged": 3,
-      "total_destroyed": 142,
-      "methodology_note": "Effective 2026-08-01: NWCC structure-loss figures reported as a bare number with no descriptive category text are labeled Uncategorized rather than assumed Residential. Data before this date used the prior assume-Residential convention and has not been retroactively revised.",
-      "nwcc_stale_hours": 73.5,
-      "nwcc_fetched_at": "2026-08-01T15:05:01.000Z",
-      "staleness_note": "Data currency notice: the NWCC structure-loss source feed has not refreshed since 2026-08-01T15:05:01.000Z (74 hours old). Figures above reflect that last successful snapshot and may not include subsequent NWCC updates."
+      "total_destroyed": 153,
+      "methodology_note": "Effective 2026-08-01: NWCC structure-loss figures reported as a bare number with no descriptive category text are labeled Uncategorized rather than assumed Residential. Data before this date used the prior assume-Residential convention and has not been retroactively revised."
     }
   },
   "county_structure_data": [
     {
       "county": "Harney",
       "acres": 512069.0,
-      "res": 0,
-      "comm": 0,
-      "other": 3,
+      "res": 2,
+      "comm": 2,
+      "other": 5,
       "unc": 0,
       "fires": [
         {
@@ -790,9 +787,9 @@
           "name": "Second Flat",
           "acres": 105462,
           "status": "Active",
-          "res": 0,
+          "res": 2,
           "comm": 0,
-          "other": 1,
+          "other": 5,
           "unc": 0
         },
         {
@@ -809,8 +806,8 @@
           "acres": 24724,
           "status": "Active",
           "res": 0,
-          "comm": 0,
-          "other": 2,
+          "comm": 2,
+          "other": 0,
           "unc": 0
         },
         {
@@ -936,9 +933,9 @@
     {
       "county": "Wheeler",
       "acres": 404119.0,
-      "res": 3,
+      "res": 4,
       "comm": 0,
-      "other": 0,
+      "other": 1,
       "unc": 25,
       "fires": [
         {
@@ -954,9 +951,9 @@
           "name": "0587 SHINGLE",
           "acres": 70372,
           "status": "Active",
-          "res": 3,
+          "res": 4,
           "comm": 0,
-          "other": 0,
+          "other": 1,
           "unc": 0
         },
         {
@@ -991,10 +988,10 @@
     {
       "county": "Jefferson",
       "acres": 206664.0,
-      "res": 2,
+      "res": 8,
       "comm": 0,
-      "other": 15,
-      "unc": 13,
+      "other": 22,
+      "unc": 0,
       "fires": [
         {
           "name": "BREWER",
@@ -1009,10 +1006,10 @@
           "name": "Bench",
           "acres": 67238,
           "status": "Active",
-          "res": 0,
+          "res": 6,
           "comm": 0,
-          "other": 0,
-          "unc": 13
+          "other": 7,
+          "unc": 0
         },
         {
           "name": "0494 AKAWA BUTTE",
@@ -1110,7 +1107,7 @@
     {
       "county": "Grant",
       "acres": 85758.0,
-      "res": 1,
+      "res": 4,
       "comm": 0,
       "other": 7,
       "unc": 0,
@@ -1119,7 +1116,7 @@
           "name": "FOX",
           "acres": 78815,
           "status": "Active",
-          "res": 0,
+          "res": 3,
           "comm": 0,
           "other": 5,
           "unc": 0
@@ -1621,9 +1618,9 @@
       ]
     },
     "Harney": {
-      "threatened": 3808,
+      "threatened": 3812,
       "damaged": 1,
-      "destroyed": 3,
+      "destroyed": 9,
       "fires": [
         "2680 - Diamond Craters",
         "Bald Mountain",
@@ -1636,7 +1633,7 @@
     "Grant": {
       "threatened": 243,
       "damaged": 0,
-      "destroyed": 8,
+      "destroyed": 11,
       "fires": [
         "BOLOGNA",
         "FOX",
@@ -1647,24 +1644,25 @@
     "Wheeler": {
       "threatened": 318,
       "damaged": 1,
-      "destroyed": 28,
+      "destroyed": 30,
       "fires": [
         "0587 SHINGLE",
         "ROWE CREEK COMPLEX"
       ]
     },
     "Jefferson": {
-      "threatened": 3192,
+      "threatened": 783,
       "damaged": 0,
       "destroyed": 30,
       "fires": [
         "0494 AKAWA BUTTE",
+        "0658",
         "BREWER",
         "Bench"
       ]
     },
     "Umatilla": {
-      "threatened": 1404,
+      "threatened": 1474,
       "damaged": 0,
       "destroyed": 49,
       "fires": [
@@ -1675,7 +1673,7 @@
       ]
     },
     "Douglas": {
-      "threatened": 1637,
+      "threatened": 7,
       "damaged": 0,
       "destroyed": 0,
       "fires": [
@@ -1706,6 +1704,14 @@
       "destroyed": 7,
       "fires": [
         "E Evans Creek Rd 18000"
+      ]
+    },
+    "Wallowa": {
+      "threatened": 24,
+      "damaged": 0,
+      "destroyed": 0,
+      "fires": [
+        "Eggo"
       ]
     },
     "Lake": {
@@ -2647,7 +2653,7 @@
       "year": 2026,
       "total_fires": 70,
       "total_acres": 2018363.3000000003,
-      "total_structures_destroyed": 143,
+      "total_structures_destroyed": 154,
       "fatalities": 0,
       "injuries": 0,
       "largest_fire": {
@@ -3203,9 +3209,9 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 105462.0,
-      "structures_lost_res": 0,
+      "structures_lost_res": 2,
       "structures_lost_comm": 0,
-      "structures_lost_other": 1,
+      "structures_lost_other": 5,
       "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
@@ -3233,7 +3239,7 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 78815.0,
-      "structures_lost_res": 0,
+      "structures_lost_res": 3,
       "structures_lost_comm": 0,
       "structures_lost_other": 5,
       "structures_lost_unc": 0,
@@ -3248,9 +3254,9 @@
       "status": "Active",
       "triggered_evacuation": true,
       "acres": 70372.0,
-      "structures_lost_res": 3,
+      "structures_lost_res": 4,
       "structures_lost_comm": 0,
-      "structures_lost_other": 0,
+      "structures_lost_other": 1,
       "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
@@ -3263,10 +3269,10 @@
       "status": "Active",
       "triggered_evacuation": true,
       "acres": 67238.0,
-      "structures_lost_res": 0,
+      "structures_lost_res": 6,
       "structures_lost_comm": 0,
-      "structures_lost_other": 0,
-      "structures_lost_unc": 13,
+      "structures_lost_other": 7,
+      "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
     },
@@ -3369,8 +3375,8 @@
       "triggered_evacuation": false,
       "acres": 24724.0,
       "structures_lost_res": 0,
-      "structures_lost_comm": 0,
-      "structures_lost_other": 2,
+      "structures_lost_comm": 2,
+      "structures_lost_other": 0,
       "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
