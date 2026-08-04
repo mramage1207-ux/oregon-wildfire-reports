@@ -1879,7 +1879,13 @@ function render(pdfs, data) {
     if (slEl) slEl.style.display = '';
     const slNoteEl = document.getElementById('struct-loss-methodology-note');
     if (slNoteEl && sl.methodology_note) {
-      slNoteEl.textContent = sl.methodology_note;
+      let _slNoteText = sl.methodology_note;
+      // Staleness disclosure (added 2026-08-04) — appended after the methodology
+      // note when present, same trigger/threshold as the PDF's equivalent notice.
+      if (sl.staleness_note) {
+        _slNoteText += ' ' + sl.staleness_note;
+      }
+      slNoteEl.textContent = _slNoteText;
       slNoteEl.style.display = '';
     }
   }

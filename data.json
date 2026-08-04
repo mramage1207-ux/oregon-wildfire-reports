@@ -1,24 +1,24 @@
 {
   "last_updated": "2026-08-04",
-  "report_time": "8:22 AM PDT",
-  "report_time_iso": "2026-08-04T15:22:07Z",
+  "report_time": "9:32 AM PDT",
+  "report_time_iso": "2026-08-04T16:32:47Z",
   "current_active_fires": 52,
   "current_acres_burned": 1683843.1,
-  "current_report_time": "8:22 AM PDT",
-  "current_report_time_iso": "2026-08-04T15:22:07Z",
+  "current_report_time": "9:32 AM PDT",
+  "current_report_time_iso": "2026-08-04T16:32:47Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-08-03",
     "active_large_fires": {
-      "current": 35,
+      "current": 34,
       "prior": 34,
-      "delta": 1,
-      "pct": 2.9
-    },
-    "active_evac_fires": {
-      "current": 9,
-      "prior": 9,
       "delta": 0,
       "pct": 0.0
+    },
+    "active_evac_fires": {
+      "current": 8,
+      "prior": 9,
+      "delta": -1,
+      "pct": -11.1
     },
     "evac_addresses_l1": {
       "current": 2562,
@@ -60,16 +60,16 @@
   "change_vs_7d_ago": {
     "prior_date": "2026-07-28",
     "active_large_fires": {
-      "current": 35,
+      "current": 34,
       "prior": 34,
-      "delta": 1,
-      "pct": 2.9
+      "delta": 0,
+      "pct": 0.0
     },
     "active_evac_fires": {
-      "current": 9,
+      "current": 8,
       "prior": 10,
-      "delta": -1,
-      "pct": -10.0
+      "delta": -2,
+      "pct": -20.0
     },
     "evac_addresses_l1": {
       "current": 2562,
@@ -111,16 +111,16 @@
   "change_vs_30d_ago": {
     "prior_date": "2026-07-05",
     "active_large_fires": {
-      "current": 35,
+      "current": 34,
       "prior": 3,
-      "delta": 32,
-      "pct": 1066.7
+      "delta": 31,
+      "pct": 1033.3
     },
     "active_evac_fires": {
-      "current": 9,
+      "current": 8,
       "prior": 2,
-      "delta": 7,
-      "pct": 350.0
+      "delta": 6,
+      "pct": 300.0
     },
     "evac_addresses_l1": {
       "current": 2562,
@@ -225,7 +225,7 @@
         31,
         34,
         34,
-        35
+        34
       ]
     },
     "active_evac_fires": {
@@ -293,7 +293,7 @@
         8,
         9,
         9,
-        9
+        8
       ]
     },
     "evac_addresses_l1": {
@@ -711,16 +711,15 @@
     "escalation": "This season has recorded 143 structures destroyed so far.",
     "closing": "Full details, county-by-county, are in the sections below."
   },
-  "active_large_fires": 35,
+  "active_large_fires": 34,
   "total_large_fire_acres": 2018363.3000000003,
   "structures_lost": 143,
-  "evac_triggering_fires": 9,
+  "evac_triggering_fires": 8,
   "evac_zones": {
     "level3": [
       "0587 SHINGLE \u2014 ~14 miles southeast of Mitchell, Oregon",
       "Bench \u2014 ~9 miles west of Metolius, Oregon",
-      "Grasshopper \u2014 ~16 miles south of Clearwater Village, Oregon",
-      "Round \u2014 ~14 miles northwest of Bourne, Oregon"
+      "Grasshopper \u2014 ~16 miles south of Clearwater Village, Oregon"
     ],
     "level2": [
       "0587 SHINGLE \u2014 ~14 miles southeast of Mitchell, Oregon",
@@ -729,8 +728,7 @@
       "Grasshopper \u2014 ~16 miles south of Clearwater Village, Oregon",
       "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon",
       "Salmon \u2014 ~2 miles west of Greenhorn, Oregon",
-      "I5 MM 57 NB \u2014 ~1 miles northeast of Grants Pass, Oregon",
-      "Round \u2014 ~14 miles northwest of Bourne, Oregon"
+      "I5 MM 57 NB \u2014 ~1 miles northeast of Grants Pass, Oregon"
     ],
     "level1": [
       "0587 SHINGLE \u2014 ~14 miles southeast of Mitchell, Oregon",
@@ -739,8 +737,7 @@
       "Grasshopper \u2014 ~16 miles south of Clearwater Village, Oregon",
       "Burnt Creek \u2014 ~9 miles southeast of Lakeview, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon",
-      "I5 MM 57 NB \u2014 ~1 miles northeast of Grants Pass, Oregon",
-      "Round \u2014 ~14 miles northwest of Bourne, Oregon"
+      "I5 MM 57 NB \u2014 ~1 miles northeast of Grants Pass, Oregon"
     ]
   },
   "evac_addresses_l1": 2562,
@@ -765,7 +762,10 @@
       "total_threatened": 12311,
       "total_damaged": 3,
       "total_destroyed": 142,
-      "methodology_note": "Effective 2026-08-01: NWCC structure-loss figures reported as a bare number with no descriptive category text are labeled Uncategorized rather than assumed Residential. Data before this date used the prior assume-Residential convention and has not been retroactively revised."
+      "methodology_note": "Effective 2026-08-01: NWCC structure-loss figures reported as a bare number with no descriptive category text are labeled Uncategorized rather than assumed Residential. Data before this date used the prior assume-Residential convention and has not been retroactively revised.",
+      "nwcc_stale_hours": 73.5,
+      "nwcc_fetched_at": "2026-08-01T15:05:01.000Z",
+      "staleness_note": "Data currency notice: the NWCC structure-loss source feed has not refreshed since 2026-08-01T15:05:01.000Z (74 hours old). Figures above reflect that last successful snapshot and may not include subsequent NWCC updates."
     }
   },
   "county_structure_data": [
@@ -1562,7 +1562,7 @@
         {
           "name": "Round",
           "acres": 0,
-          "status": "Active",
+          "status": "Contained",
           "res": 0,
           "comm": 0,
           "other": 0,
@@ -4325,7 +4325,7 @@
       "county": "Union",
       "lat": 45.00825,
       "lon": -118.32265,
-      "status": "Active",
+      "status": "Contained",
       "triggered_evacuation": true,
       "acres": 0.1,
       "structures_lost_res": 0,
