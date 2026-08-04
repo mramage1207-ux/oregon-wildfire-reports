@@ -1,11 +1,11 @@
 {
   "last_updated": "2026-08-04",
-  "report_time": "9:47 AM PDT",
-  "report_time_iso": "2026-08-04T16:47:42Z",
+  "report_time": "10:12 AM PDT",
+  "report_time_iso": "2026-08-04T17:12:02Z",
   "current_active_fires": 52,
   "current_acres_burned": 1683843.1,
-  "current_report_time": "9:47 AM PDT",
-  "current_report_time_iso": "2026-08-04T16:47:42Z",
+  "current_report_time": "10:12 AM PDT",
+  "current_report_time_iso": "2026-08-04T17:12:02Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-08-03",
     "active_large_fires": {
@@ -749,16 +749,16 @@
     "oregon_totals": {
       "res_threatened": 10,
       "res_damaged": 1,
-      "res_destroyed": 27,
+      "res_destroyed": 31,
       "comm_threatened": 0,
       "comm_damaged": 0,
       "comm_destroyed": 2,
       "minor_threatened": 0,
       "minor_damaged": 1,
-      "minor_destroyed": 88,
+      "minor_destroyed": 109,
       "unc_threatened": 8360,
       "unc_damaged": 1,
-      "unc_destroyed": 36,
+      "unc_destroyed": 11,
       "total_threatened": 8370,
       "total_damaged": 3,
       "total_destroyed": 153,
@@ -933,19 +933,19 @@
     {
       "county": "Wheeler",
       "acres": 404119.0,
-      "res": 4,
+      "res": 8,
       "comm": 0,
-      "other": 1,
-      "unc": 25,
+      "other": 22,
+      "unc": 0,
       "fires": [
         {
           "name": "ROWE CREEK COMPLEX",
           "acres": 323951,
           "status": "Active",
-          "res": 0,
+          "res": 4,
           "comm": 0,
-          "other": 0,
-          "unc": 25
+          "other": 21,
+          "unc": 0
         },
         {
           "name": "0587 SHINGLE",
@@ -3179,10 +3179,10 @@
       "status": "Active",
       "triggered_evacuation": true,
       "acres": 306347.0,
-      "structures_lost_res": 0,
+      "structures_lost_res": 4,
       "structures_lost_comm": 0,
-      "structures_lost_other": 0,
-      "structures_lost_unc": 25,
+      "structures_lost_other": 21,
+      "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
       "cpx_total_acres": 323951.0
     },
