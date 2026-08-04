@@ -1,11 +1,11 @@
 {
   "last_updated": "2026-08-04",
-  "report_time": "4:11 PM PDT",
-  "report_time_iso": "2026-08-04T23:11:30Z",
-  "current_active_fires": 50,
-  "current_acres_burned": 1683843.1,
-  "current_report_time": "4:11 PM PDT",
-  "current_report_time_iso": "2026-08-04T23:11:30Z",
+  "report_time": "4:20 PM PDT",
+  "report_time_iso": "2026-08-04T23:20:48Z",
+  "current_active_fires": 54,
+  "current_acres_burned": 1683845.75,
+  "current_report_time": "4:20 PM PDT",
+  "current_report_time_iso": "2026-08-04T23:20:48Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-08-03",
     "active_large_fires": {
@@ -21,28 +21,28 @@
       "pct": 0.0
     },
     "evac_addresses_l1": {
-      "current": 2872,
+      "current": 3872,
       "prior": 5022,
-      "delta": -2150,
-      "pct": -42.8
+      "delta": -1150,
+      "pct": -22.9
     },
     "evac_addresses_l2": {
-      "current": 2675,
+      "current": 2526,
       "prior": 2389,
-      "delta": 286,
-      "pct": 12.0
+      "delta": 137,
+      "pct": 5.7
     },
     "evac_addresses_l3": {
-      "current": 809,
+      "current": 519,
       "prior": 2117,
-      "delta": -1308,
-      "pct": -61.8
+      "delta": -1598,
+      "pct": -75.5
     },
     "active_fires": {
-      "current": 50,
+      "current": 54,
       "prior": 49,
-      "delta": 1,
-      "pct": 2.0
+      "delta": 5,
+      "pct": 10.2
     },
     "total_acres_ytd": {
       "current": 2018363.3000000003,
@@ -51,10 +51,10 @@
       "pct": 2.9
     },
     "structures_lost": {
-      "current": 153,
+      "current": 154,
       "prior": 143,
-      "delta": 10,
-      "pct": 7.0
+      "delta": 11,
+      "pct": 7.7
     }
   },
   "change_vs_7d_ago": {
@@ -72,28 +72,28 @@
       "pct": -10.0
     },
     "evac_addresses_l1": {
-      "current": 2872,
+      "current": 3872,
       "prior": 7165,
-      "delta": -4293,
-      "pct": -59.9
+      "delta": -3293,
+      "pct": -46.0
     },
     "evac_addresses_l2": {
-      "current": 2675,
+      "current": 2526,
       "prior": 3129,
-      "delta": -454,
-      "pct": -14.5
+      "delta": -603,
+      "pct": -19.3
     },
     "evac_addresses_l3": {
-      "current": 809,
+      "current": 519,
       "prior": 2517,
-      "delta": -1708,
-      "pct": -67.9
+      "delta": -1998,
+      "pct": -79.4
     },
     "active_fires": {
-      "current": 50,
+      "current": 54,
       "prior": 74,
-      "delta": -24,
-      "pct": -32.4
+      "delta": -20,
+      "pct": -27.0
     },
     "total_acres_ytd": {
       "current": 2018363.3000000003,
@@ -102,10 +102,10 @@
       "pct": 34.4
     },
     "structures_lost": {
-      "current": 153,
+      "current": 154,
       "prior": 106,
-      "delta": 47,
-      "pct": 44.3
+      "delta": 48,
+      "pct": 45.3
     }
   },
   "change_vs_30d_ago": {
@@ -123,28 +123,28 @@
       "pct": 350.0
     },
     "evac_addresses_l1": {
-      "current": 2872,
+      "current": 3872,
       "prior": 21,
-      "delta": 2851,
-      "pct": 13576.2
+      "delta": 3851,
+      "pct": 18338.1
     },
     "evac_addresses_l2": {
-      "current": 2675,
+      "current": 2526,
       "prior": 192,
-      "delta": 2483,
-      "pct": 1293.2
+      "delta": 2334,
+      "pct": 1215.6
     },
     "evac_addresses_l3": {
-      "current": 809,
+      "current": 519,
       "prior": 2,
-      "delta": 807,
-      "pct": 40350.0
+      "delta": 517,
+      "pct": 25850.0
     },
     "active_fires": {
-      "current": 50,
+      "current": 54,
       "prior": 46,
-      "delta": 4,
-      "pct": 8.7
+      "delta": 8,
+      "pct": 17.4
     },
     "total_acres_ytd": {
       "current": 2018363.3000000003,
@@ -153,9 +153,9 @@
       "pct": 10033.9
     },
     "structures_lost": {
-      "current": 153,
+      "current": 154,
       "prior": 0,
-      "delta": 153,
+      "delta": 154,
       "pct": null
     }
   },
@@ -361,7 +361,7 @@
         4710,
         5047,
         5022,
-        2872
+        3872
       ]
     },
     "evac_addresses_l2": {
@@ -429,7 +429,7 @@
         2845,
         3724,
         2389,
-        2675
+        2526
       ]
     },
     "evac_addresses_l3": {
@@ -497,7 +497,7 @@
         2108,
         2275,
         2117,
-        809
+        519
       ]
     },
     "active_fires": {
@@ -565,7 +565,7 @@
         47,
         49,
         49,
-        50
+        54
       ]
     },
     "total_acres_ytd": {
@@ -701,24 +701,23 @@
         143,
         143,
         143,
-        153
+        154
       ]
     }
   },
   "exec_summary": {
     "status": "critical",
-    "headline": "The number of Level 3 (Go Now) evacuation addresses is down 62% (2,117 \u2192 809) since yesterday morning. Over the past 7 days, it is down 68% (2,517 \u2192 809).",
-    "escalation": "This season has recorded 153 structures destroyed so far.",
+    "headline": "The number of Level 3 (Go Now) evacuation addresses is down 76% (2,117 \u2192 519) since yesterday morning. Over the past 7 days, it is down 79% (2,517 \u2192 519).",
+    "escalation": "This season has recorded 154 structures destroyed so far.",
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 34,
   "total_large_fire_acres": 2018363.3000000003,
-  "structures_lost": 153,
+  "structures_lost": 154,
   "evac_triggering_fires": 9,
   "evac_zones": {
     "level3": [
       "0587 SHINGLE \u2014 ~14 miles southeast of Mitchell, Oregon",
-      "Bench \u2014 ~9 miles west of Metolius, Oregon",
       "Grasshopper \u2014 ~16 miles south of Clearwater Village, Oregon",
       "0658 ROUND BUTTE \u2014 ~3 miles northwest of Metolius, Oregon"
     ],
@@ -742,28 +741,28 @@
       "I5 MM 57 NB \u2014 ~1 miles northeast of Grants Pass, Oregon"
     ]
   },
-  "evac_addresses_l1": 2872,
-  "evac_addresses_l2": 2675,
-  "evac_addresses_l3": 809,
-  "evac_data_as_of": "9:40 AM PDT",
-  "evac_data_as_of_iso": "2026-08-04T16:40:12Z",
+  "evac_addresses_l1": 3872,
+  "evac_addresses_l2": 2526,
+  "evac_addresses_l3": 519,
+  "evac_data_as_of": "3:45 PM PDT",
+  "evac_data_as_of_iso": "2026-08-04T22:45:02Z",
   "struct_loss": {
     "oregon_totals": {
-      "res_threatened": 10,
+      "res_threatened": 60,
       "res_damaged": 1,
-      "res_destroyed": 34,
+      "res_destroyed": 35,
       "comm_threatened": 0,
       "comm_damaged": 0,
       "comm_destroyed": 2,
       "minor_threatened": 0,
       "minor_damaged": 1,
       "minor_destroyed": 117,
-      "unc_threatened": 8360,
+      "unc_threatened": 8658,
       "unc_damaged": 1,
       "unc_destroyed": 0,
-      "total_threatened": 8370,
+      "total_threatened": 8718,
       "total_damaged": 3,
-      "total_destroyed": 153,
+      "total_destroyed": 154,
       "methodology_note": "Effective 2026-08-01: NWCC structure-loss figures reported as a bare number with no descriptive category text are labeled Uncategorized rather than assumed Residential. Data before this date used the prior assume-Residential convention and has not been retroactively revised."
     }
   },
@@ -1534,7 +1533,7 @@
     {
       "county": "Josephine",
       "acres": 100.0,
-      "res": 0,
+      "res": 1,
       "comm": 0,
       "other": 0,
       "unc": 0,
@@ -1543,7 +1542,7 @@
           "name": "I5 MM 57 NB",
           "acres": 100,
           "status": "Active",
-          "res": 0,
+          "res": 1,
           "comm": 0,
           "other": 0,
           "unc": 0
@@ -1653,7 +1652,7 @@
       ]
     },
     "Jefferson": {
-      "threatened": 783,
+      "threatened": 1071,
       "damaged": 0,
       "destroyed": 37,
       "fires": [
@@ -1722,6 +1721,14 @@
       "destroyed": 0,
       "fires": [
         "Burnt Creek"
+      ]
+    },
+    "Josephine": {
+      "threatened": 60,
+      "damaged": 0,
+      "destroyed": 1,
+      "fires": [
+        "I5 MM 57 NB"
       ]
     },
     "Gilliam": {
@@ -2655,7 +2662,7 @@
       "year": 2026,
       "total_fires": 70,
       "total_acres": 2018363.3000000003,
-      "total_structures_destroyed": 153,
+      "total_structures_destroyed": 154,
       "fatalities": 0,
       "injuries": 0,
       "largest_fire": {
@@ -3676,7 +3683,7 @@
       "status": "Active",
       "triggered_evacuation": true,
       "acres": 100.0,
-      "structures_lost_res": 0,
+      "structures_lost_res": 1,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
       "structures_lost_unc": 0,
