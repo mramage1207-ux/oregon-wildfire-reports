@@ -1,11 +1,11 @@
 {
   "last_updated": "2026-08-04",
-  "report_time": "10:12 AM PDT",
-  "report_time_iso": "2026-08-04T17:12:02Z",
+  "report_time": "10:16 AM PDT",
+  "report_time_iso": "2026-08-04T17:16:23Z",
   "current_active_fires": 52,
   "current_acres_burned": 1683843.1,
-  "current_report_time": "10:12 AM PDT",
-  "current_report_time_iso": "2026-08-04T17:12:02Z",
+  "current_report_time": "10:16 AM PDT",
+  "current_report_time_iso": "2026-08-04T17:16:23Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-08-03",
     "active_large_fires": {
@@ -51,10 +51,10 @@
       "pct": 2.9
     },
     "structures_lost": {
-      "current": 154,
+      "current": 146,
       "prior": 143,
-      "delta": 11,
-      "pct": 7.7
+      "delta": 3,
+      "pct": 2.1
     }
   },
   "change_vs_7d_ago": {
@@ -102,10 +102,10 @@
       "pct": 34.4
     },
     "structures_lost": {
-      "current": 154,
+      "current": 146,
       "prior": 106,
-      "delta": 48,
-      "pct": 45.3
+      "delta": 40,
+      "pct": 37.7
     }
   },
   "change_vs_30d_ago": {
@@ -153,9 +153,9 @@
       "pct": 10033.9
     },
     "structures_lost": {
-      "current": 154,
+      "current": 146,
       "prior": 0,
-      "delta": 154,
+      "delta": 146,
       "pct": null
     }
   },
@@ -701,19 +701,19 @@
         143,
         143,
         143,
-        154
+        146
       ]
     }
   },
   "exec_summary": {
     "status": "critical",
     "headline": "The number of Level 3 (Go Now) evacuation addresses is down 67% (2,117 \u2192 700) since yesterday morning. Over the past 7 days, it is down 72% (2,517 \u2192 700).",
-    "escalation": "This season has recorded 154 structures destroyed so far.",
+    "escalation": "This season has recorded 146 structures destroyed so far.",
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 34,
   "total_large_fire_acres": 2018363.3000000003,
-  "structures_lost": 154,
+  "structures_lost": 146,
   "evac_triggering_fires": 8,
   "evac_zones": {
     "level3": [
@@ -749,19 +749,19 @@
     "oregon_totals": {
       "res_threatened": 10,
       "res_damaged": 1,
-      "res_destroyed": 31,
+      "res_destroyed": 30,
       "comm_threatened": 0,
       "comm_damaged": 0,
       "comm_destroyed": 2,
       "minor_threatened": 0,
       "minor_damaged": 1,
-      "minor_destroyed": 109,
+      "minor_destroyed": 114,
       "unc_threatened": 8360,
       "unc_damaged": 1,
-      "unc_destroyed": 11,
+      "unc_destroyed": 0,
       "total_threatened": 8370,
       "total_damaged": 3,
-      "total_destroyed": 153,
+      "total_destroyed": 146,
       "methodology_note": "Effective 2026-08-01: NWCC structure-loss figures reported as a bare number with no descriptive category text are labeled Uncategorized rather than assumed Residential. Data before this date used the prior assume-Residential convention and has not been retroactively revised."
     }
   },
@@ -1061,19 +1061,19 @@
     {
       "county": "Gilliam",
       "acres": 201822.0,
-      "res": 2,
+      "res": 1,
       "comm": 0,
-      "other": 5,
-      "unc": 11,
+      "other": 9,
+      "unc": 0,
       "fires": [
         {
           "name": "HAY CREEK COMPLEX",
           "acres": 200292,
           "status": "Active",
-          "res": 2,
+          "res": 1,
           "comm": 0,
-          "other": 5,
-          "unc": 11
+          "other": 9,
+          "unc": 0
         },
         {
           "name": "518 SULLY",
@@ -1155,7 +1155,7 @@
       "acres": 55874.0,
       "res": 6,
       "comm": 0,
-      "other": 42,
+      "other": 43,
       "unc": 0,
       "fires": [
         {
@@ -1182,7 +1182,7 @@
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 0,
+          "other": 1,
           "unc": 0
         },
         {
@@ -1725,7 +1725,7 @@
     "Gilliam": {
       "threatened": 0,
       "damaged": 0,
-      "destroyed": 18,
+      "destroyed": 10,
       "fires": [
         "HAY CREEK COMPLEX"
       ]
@@ -2653,7 +2653,7 @@
       "year": 2026,
       "total_fires": 70,
       "total_acres": 2018363.3000000003,
-      "total_structures_destroyed": 154,
+      "total_structures_destroyed": 146,
       "fatalities": 0,
       "injuries": 0,
       "largest_fire": {
@@ -3466,7 +3466,7 @@
       "acres": 4887.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
-      "structures_lost_other": 0,
+      "structures_lost_other": 1,
       "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
