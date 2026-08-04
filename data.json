@@ -1,11 +1,11 @@
 {
   "last_updated": "2026-08-04",
-  "report_time": "10:27 AM PDT",
-  "report_time_iso": "2026-08-04T17:27:52Z",
+  "report_time": "11:53 AM PDT",
+  "report_time_iso": "2026-08-04T18:53:39Z",
   "current_active_fires": 52,
   "current_acres_burned": 1683843.1,
-  "current_report_time": "10:27 AM PDT",
-  "current_report_time_iso": "2026-08-04T17:27:52Z",
+  "current_report_time": "11:53 AM PDT",
+  "current_report_time_iso": "2026-08-04T18:53:39Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-08-03",
     "active_large_fires": {
@@ -15,28 +15,28 @@
       "pct": 0.0
     },
     "active_evac_fires": {
-      "current": 8,
+      "current": 9,
       "prior": 9,
-      "delta": -1,
-      "pct": -11.1
+      "delta": 0,
+      "pct": 0.0
     },
     "evac_addresses_l1": {
-      "current": 2562,
+      "current": 2872,
       "prior": 5022,
-      "delta": -2460,
-      "pct": -49.0
+      "delta": -2150,
+      "pct": -42.8
     },
     "evac_addresses_l2": {
-      "current": 2973,
+      "current": 2675,
       "prior": 2389,
-      "delta": 584,
-      "pct": 24.4
+      "delta": 286,
+      "pct": 12.0
     },
     "evac_addresses_l3": {
-      "current": 700,
+      "current": 809,
       "prior": 2117,
-      "delta": -1417,
-      "pct": -66.9
+      "delta": -1308,
+      "pct": -61.8
     },
     "active_fires": {
       "current": 52,
@@ -66,28 +66,28 @@
       "pct": 0.0
     },
     "active_evac_fires": {
-      "current": 8,
+      "current": 9,
       "prior": 10,
-      "delta": -2,
-      "pct": -20.0
+      "delta": -1,
+      "pct": -10.0
     },
     "evac_addresses_l1": {
-      "current": 2562,
+      "current": 2872,
       "prior": 7165,
-      "delta": -4603,
-      "pct": -64.2
+      "delta": -4293,
+      "pct": -59.9
     },
     "evac_addresses_l2": {
-      "current": 2973,
+      "current": 2675,
       "prior": 3129,
-      "delta": -156,
-      "pct": -5.0
+      "delta": -454,
+      "pct": -14.5
     },
     "evac_addresses_l3": {
-      "current": 700,
+      "current": 809,
       "prior": 2517,
-      "delta": -1817,
-      "pct": -72.2
+      "delta": -1708,
+      "pct": -67.9
     },
     "active_fires": {
       "current": 52,
@@ -117,28 +117,28 @@
       "pct": 1033.3
     },
     "active_evac_fires": {
-      "current": 8,
+      "current": 9,
       "prior": 2,
-      "delta": 6,
-      "pct": 300.0
+      "delta": 7,
+      "pct": 350.0
     },
     "evac_addresses_l1": {
-      "current": 2562,
+      "current": 2872,
       "prior": 21,
-      "delta": 2541,
-      "pct": 12100.0
+      "delta": 2851,
+      "pct": 13576.2
     },
     "evac_addresses_l2": {
-      "current": 2973,
+      "current": 2675,
       "prior": 192,
-      "delta": 2781,
-      "pct": 1448.4
+      "delta": 2483,
+      "pct": 1293.2
     },
     "evac_addresses_l3": {
-      "current": 700,
+      "current": 809,
       "prior": 2,
-      "delta": 698,
-      "pct": 34900.0
+      "delta": 807,
+      "pct": 40350.0
     },
     "active_fires": {
       "current": 52,
@@ -293,7 +293,7 @@
         8,
         9,
         9,
-        8
+        9
       ]
     },
     "evac_addresses_l1": {
@@ -361,7 +361,7 @@
         4710,
         5047,
         5022,
-        2562
+        2872
       ]
     },
     "evac_addresses_l2": {
@@ -429,7 +429,7 @@
         2845,
         3724,
         2389,
-        2973
+        2675
       ]
     },
     "evac_addresses_l3": {
@@ -497,7 +497,7 @@
         2108,
         2275,
         2117,
-        700
+        809
       ]
     },
     "active_fires": {
@@ -707,19 +707,20 @@
   },
   "exec_summary": {
     "status": "critical",
-    "headline": "The number of Level 3 (Go Now) evacuation addresses is down 67% (2,117 \u2192 700) since yesterday morning. Over the past 7 days, it is down 72% (2,517 \u2192 700).",
+    "headline": "The number of Level 3 (Go Now) evacuation addresses is down 62% (2,117 \u2192 809) since yesterday morning. Over the past 7 days, it is down 68% (2,517 \u2192 809).",
     "escalation": "This season has recorded 153 structures destroyed so far.",
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 34,
   "total_large_fire_acres": 2018363.3000000003,
   "structures_lost": 153,
-  "evac_triggering_fires": 8,
+  "evac_triggering_fires": 9,
   "evac_zones": {
     "level3": [
       "0587 SHINGLE \u2014 ~14 miles southeast of Mitchell, Oregon",
       "Bench \u2014 ~9 miles west of Metolius, Oregon",
-      "Grasshopper \u2014 ~16 miles south of Clearwater Village, Oregon"
+      "Grasshopper \u2014 ~16 miles south of Clearwater Village, Oregon",
+      "0658 ROUND BUTTE \u2014 ~3 miles northwest of Metolius, Oregon"
     ],
     "level2": [
       "0587 SHINGLE \u2014 ~14 miles southeast of Mitchell, Oregon",
@@ -728,7 +729,7 @@
       "Grasshopper \u2014 ~16 miles south of Clearwater Village, Oregon",
       "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon",
       "Salmon \u2014 ~2 miles west of Greenhorn, Oregon",
-      "I5 MM 57 NB \u2014 ~1 miles northeast of Grants Pass, Oregon"
+      "0658 ROUND BUTTE \u2014 ~3 miles northwest of Metolius, Oregon"
     ],
     "level1": [
       "0587 SHINGLE \u2014 ~14 miles southeast of Mitchell, Oregon",
@@ -737,14 +738,15 @@
       "Grasshopper \u2014 ~16 miles south of Clearwater Village, Oregon",
       "Burnt Creek \u2014 ~9 miles southeast of Lakeview, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon",
+      "0658 ROUND BUTTE \u2014 ~3 miles northwest of Metolius, Oregon",
       "I5 MM 57 NB \u2014 ~1 miles northeast of Grants Pass, Oregon"
     ]
   },
-  "evac_addresses_l1": 2562,
-  "evac_addresses_l2": 2973,
-  "evac_addresses_l3": 700,
-  "evac_data_as_of": "8:05 AM PDT",
-  "evac_data_as_of_iso": "2026-08-04T15:05:01Z",
+  "evac_addresses_l1": 2872,
+  "evac_addresses_l2": 2675,
+  "evac_addresses_l3": 809,
+  "evac_data_as_of": "9:40 AM PDT",
+  "evac_data_as_of_iso": "2026-08-04T16:40:12Z",
   "struct_loss": {
     "oregon_totals": {
       "res_threatened": 10,
@@ -1048,7 +1050,7 @@
           "unc": 0
         },
         {
-          "name": "0658",
+          "name": "0658 ROUND BUTTE",
           "acres": 1200,
           "status": "Active",
           "res": 0,
@@ -1656,7 +1658,7 @@
       "destroyed": 37,
       "fires": [
         "0494 AKAWA BUTTE",
-        "0658",
+        "0658 ROUND BUTTE",
         "BREWER",
         "Bench"
       ]
@@ -3607,12 +3609,12 @@
       "cpx_total_acres": null
     },
     {
-      "name": "0658",
+      "name": "0658 ROUND BUTTE",
       "county": "Jefferson",
       "lat": 44.611587,
       "lon": -121.238963,
       "status": "Active",
-      "triggered_evacuation": false,
+      "triggered_evacuation": true,
       "acres": 1200.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
