@@ -267,7 +267,15 @@
     }
     .map-card h2 { font-size: 1rem; font-weight: 700; color: #1a2744; }
     .map-sub { font-size: .78rem; color: #5a6473; margin-top: 3px; margin-bottom: .8rem; }
+    .map-sub a { color: #4C7EA8; }
     svg.fire-map { width: 100%; display: block; }
+    .aqi-map-frame {
+      position: relative; width: 100%; padding-bottom: 62%;
+      border-radius: 8px; overflow: hidden; background: #f0f2f5;
+    }
+    .aqi-map-frame iframe {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+    }
     .chart-card {
       background: #fff; border-radius: 12px; padding: 1.4rem 1.6rem;
       margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,.07);
@@ -554,6 +562,16 @@
     <svg class="fire-map" viewBox="0 0 900 480" id="fireMap"
       preserveAspectRatio="xMidYMid meet" role="img" aria-label="Oregon 2026 fire season locations map">
     </svg>
+  </div>
+  <div class="map-card" id="aqi-map-card">
+    <h2>Live Air Quality Map (AQI)</h2>
+    <div class="map-sub">EPA AirNow monitoring stations &mdash; PM2.5/ozone, updates live and independently of this report &middot;
+      <a href="https://gispub.epa.gov/airnow/?monitors=pm&amp;contours=none&amp;basemap=terrain&amp;xmin=-13898238.42&amp;ymin=5138536.59&amp;xmax=-12946456.78&amp;ymax=5852757.63" target="_blank" rel="noopener">Open full map &rarr;</a>
+    </div>
+    <div class="aqi-map-frame">
+      <iframe src="https://gispub.epa.gov/airnow/?monitors=pm&amp;contours=none&amp;basemap=terrain&amp;xmin=-13898238.42&amp;ymin=5138536.59&amp;xmax=-12946456.78&amp;ymax=5852757.63"
+        title="EPA AirNow live air quality map, Oregon" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </div>
   <div class="chart-card" id="chart-card">
     <h2>2026 Season Trend</h2>

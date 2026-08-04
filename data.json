@@ -1,11 +1,11 @@
 {
   "last_updated": "2026-08-04",
-  "report_time": "11:53 AM PDT",
-  "report_time_iso": "2026-08-04T18:53:39Z",
-  "current_active_fires": 52,
+  "report_time": "4:11 PM PDT",
+  "report_time_iso": "2026-08-04T23:11:30Z",
+  "current_active_fires": 50,
   "current_acres_burned": 1683843.1,
-  "current_report_time": "11:53 AM PDT",
-  "current_report_time_iso": "2026-08-04T18:53:39Z",
+  "current_report_time": "4:11 PM PDT",
+  "current_report_time_iso": "2026-08-04T23:11:30Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-08-03",
     "active_large_fires": {
@@ -39,10 +39,10 @@
       "pct": -61.8
     },
     "active_fires": {
-      "current": 52,
+      "current": 50,
       "prior": 49,
-      "delta": 3,
-      "pct": 6.1
+      "delta": 1,
+      "pct": 2.0
     },
     "total_acres_ytd": {
       "current": 2018363.3000000003,
@@ -90,10 +90,10 @@
       "pct": -67.9
     },
     "active_fires": {
-      "current": 52,
+      "current": 50,
       "prior": 74,
-      "delta": -22,
-      "pct": -29.7
+      "delta": -24,
+      "pct": -32.4
     },
     "total_acres_ytd": {
       "current": 2018363.3000000003,
@@ -141,10 +141,10 @@
       "pct": 40350.0
     },
     "active_fires": {
-      "current": 52,
+      "current": 50,
       "prior": 46,
-      "delta": 6,
-      "pct": 13.0
+      "delta": 4,
+      "pct": 8.7
     },
     "total_acres_ytd": {
       "current": 2018363.3000000003,
@@ -565,7 +565,7 @@
         47,
         49,
         49,
-        52
+        50
       ]
     },
     "total_acres_ytd": {
