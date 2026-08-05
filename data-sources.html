@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Oregon Wildfire: Data Sources &amp; AI Use</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f4f5f7; color: #1a1a2e; min-height: 100vh;
+  }
+  a { color: inherit; }
+  header {
+    background: linear-gradient(135deg, #1a2744 0%, #0f3460 100%);
+    color: #fff; padding: 0 2rem;
+  }
+  .header-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; align-items: center; gap: 1.25rem; padding: 1.4rem 0; flex-wrap: wrap;
+  }
+  .header-flame { font-size: 2rem; line-height: 1; filter: drop-shadow(0 0 8px rgba(76,126,168,.7)); }
+  .header-text h1 { font-size: 1.3rem; font-weight: 700; letter-spacing: -.3px; }
+  .header-text p { font-size: .8rem; opacity: .72; margin-top: 2px; }
+  .back-link {
+    margin-left: auto; font-size: .78rem; font-weight: 600; text-decoration: none;
+    color: rgba(255,255,255,.85); background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.22); border-radius: 20px; padding: .4rem .9rem;
+  }
+  .back-link:hover { background: rgba(255,255,255,.2); }
+
+  .hero-wrap { background: linear-gradient(135deg, #0f3460 0%, #1a2744 100%); padding: 1.6rem 2rem 2rem; }
+  .hero { max-width: 1100px; margin: 0 auto; color: #fff; }
+  .hero-sub { font-size: .84rem; opacity: .75; line-height: 1.6; max-width: 760px; }
+  .review-badges { display: flex; gap: .6rem; margin-top: 1rem; flex-wrap: wrap; }
+  .review-badge {
+    background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22);
+    border-radius: 20px; padding: .35rem .85rem; font-size: .74rem;
+  }
+  .review-badge strong { color: #fff; font-weight: 700; }
+
+  main { max-width: 1100px; margin: 0 auto; padding: 1.6rem 2rem 3rem; }
+  .card { background: #fff; border: 1px solid #e2e5ea; border-radius: 12px; padding: 1.2rem 1.3rem; margin-bottom: 1.4rem; }
+  .card h2 { font-size: 1.05rem; margin-bottom: .3rem; color: #1a2744; }
+  .card .sub { font-size: .78rem; color: #667; margin-bottom: .9rem; }
+  .table-card { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+  thead th {
+    background: #1a2744; color: #fff; text-align: left; padding: .6rem .7rem;
+    font-size: .68rem; text-transform: uppercase; letter-spacing: .4px; white-space: nowrap;
+  }
+  thead th.center { text-align: center; }
+  tbody td { padding: .65rem .7rem; text-align: left; border-bottom: 1px solid #eef0f3; vertical-align: top; line-height: 1.5; }
+  tbody td:nth-child(3) { text-align: center; white-space: nowrap; }
+  tbody tr:last-child td { border-bottom: none; }
+  .ai-pill {
+    display: inline-block; border-radius: 20px; padding: .2rem .65rem; font-size: .68rem; font-weight: 700;
+    white-space: nowrap;
+  }
+  .ai-pill-yes     { background: rgba(76,126,168,.18); color: #1e4a6e; }
+  .ai-pill-partial { background: #fff3e6; color: #7a3800; }
+  .ai-pill-no      { background: #e6f4ea; color: #1e7d34; }
+  .ai-pill-unknown { background: #f0f4f8; color: #5a6473; }
+  .empty-row { text-align: center; color: #999; padding: 1.2rem; }
+
+  .info-box {
+    background: #fffaf0; border: 1px solid #f0dca8; border-radius: 10px;
+    padding: .9rem 1.1rem; font-size: .83rem; line-height: 1.6; color: #6b4e00;
+  }
+
+  footer {
+    text-align: center; padding: 1.6rem 1rem 2.5rem; font-size: .74rem; color: #8a8fa3; line-height: 1.7;
+  }
+
+  @media (max-width: 700px) {
+    .header-inner { padding: 1rem 0; }
+    main { padding: 1.2rem 1rem 2.5rem; }
+    table { font-size: .76rem; }
+    thead th, tbody td { padding: .5rem .55rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-flame" aria-hidden="true">&#129302;</div>
+    <div class="header-text">
+      <h1>Data Sources &amp; AI Use</h1>
+      <p>Every external source this site pulls from &mdash; and where AI is (and isn't) involved</p>
+    </div>
+    <a class="back-link" href="index.html">&larr; Back to main report</a>
+  </div>
+</header>
+
+<div class="hero-wrap">
+  <div class="hero">
+    <div class="hero-sub">
+      This page audits every external website, API, and data feed the Oregon Wildfire Daily
+      Reports pipeline pulls from or links to &mdash; fire data, evacuation zones, weather, air
+      quality, and the community-resources sources it searches each day &mdash; and reports
+      plainly which of them use artificial intelligence to collect, forecast, or present that
+      data, and which don't.
+    </div>
+    <div class="review-badges">
+      <div class="review-badge">Last reviewed: <strong>August 4, 2026</strong></div>
+      <div class="review-badge">Next review: <strong>September 1, 2026</strong></div>
+      <div class="review-badge">Reviewed monthly, on the 1st</div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="card">
+    <h2>Source-by-Source Audit</h2>
+    <div class="sub">Sorted in the order each source enters the pipeline &mdash; fire/evacuation data feeds first, then community-resources sources, then this report itself.</div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th>Role in this pipeline</th>
+            <th class="center">AI use?</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="left"><strong>WFIGS (NIFC / IRWIN)</strong></td>
+          <td class="left">Fire location, status, containment, acreage</td>
+          <td><span class="ai-pill ai-pill-no">No AI Found</span></td>
+          <td class="left">Incident records come from human-entered situation reports (ICS-209/dispatch data), integrated across agencies by IRWIN's data-exchange rules — matching and deduplication logic, not machine learning. NIFC/USFS separately fund AI/ML research for satellite-based fire-perimeter detection, but that's a different product from the point-location feed this pipeline pulls.</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>NWCC Large Fire Information</strong></td>
+          <td class="left">Structures threatened/damaged/destroyed</td>
+          <td><span class="ai-pill ai-pill-no">No AI Found</span></td>
+          <td class="left">Manually compiled by incident management teams as part of standard situation reporting.</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Oregon OEM evacuation zones</strong></td>
+          <td class="left">Evacuation levels, zone boundaries, addresses affected</td>
+          <td><span class="ai-pill ai-pill-no">No AI Found</span></td>
+          <td class="left">Zones are hand-drawn and maintained by county sheriffs/emergency managers on Esri's ArcGIS platform. Esri's own case study on Oregon OEM describes staff manually assembling map “portfolios” per event — no AI in how zones are determined.</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Census TIGERweb (ZCTA boundaries)</strong></td>
+          <td class="left">ZIP code geographic boundaries, used to map evac zones to ZIP codes</td>
+          <td><span class="ai-pill ai-pill-no">No AI Found</span></td>
+          <td class="left">Static Census Bureau reference geometry on a fixed update schedule — not model-generated.</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Open-Meteo</strong></td>
+          <td class="left">Daily temp/wind/gust forecast, hourly humidity</td>
+          <td><span class="ai-pill ai-pill-no">No AI Found</span></td>
+          <td class="left">This pipeline requests Open-Meteo's default model blend, which for the US resolves mainly to physics-based NWP (GFS / NOAA's National Blend of Models). Open-Meteo separately offers ECMWF's AIFS — an actual AI forecast model — as an optional endpoint, but this pipeline doesn't select it.</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>AirNow (EPA)</strong></td>
+          <td class="left">Current AQI readings in the PDF; live AQI map embedded on the website</td>
+          <td><span class="ai-pill ai-pill-partial">Partial</span></td>
+          <td class="left">The values this pipeline fetches are real-time monitor readings (direct sensor data, not AI-derived). AirNow's separate multi-day air-quality *forecast* product increasingly blends machine-learning models with traditional chemical transport modeling, per EPA/NOAA's published methodology.</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>InciWeb</strong></td>
+          <td class="left">Community-resources source (meetings, shelters, contacts)</td>
+          <td><span class="ai-pill ai-pill-no">No AI Found</span></td>
+          <td class="left">Government interagency incident-information system, manually curated by fire Public Information Officers on a Drupal CMS.</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>centraloregonfire.org</strong></td>
+          <td class="left">Community-resources source</td>
+          <td><span class="ai-pill ai-pill-no">No AI Found</span></td>
+          <td class="left">Manually managed by Central Oregon Interagency Dispatch Center; no AI use found or disclosed.</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>County emergency-management sites</strong></td>
+          <td class="left">Community-resources source</td>
+          <td><span class="ai-pill ai-pill-no">No AI Found</span></td>
+          <td class="left">Standard local-government sites (e.g. readyjacksonco.com, bakercounty.org); no AI disclosed.</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Oregon State Fire Marshal (OSFM) newsroom</strong></td>
+          <td class="left">Community-resources source</td>
+          <td><span class="ai-pill ai-pill-no">No AI Found</span></td>
+          <td class="left">Government press-release page.</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>American Red Cross</strong></td>
+          <td class="left">Shelter location info</td>
+          <td><span class="ai-pill ai-pill-yes">AI Used</span></td>
+          <td class="left">The static shelter-locator map is a database lookup, but Red Cross's broader digital-assistance channel runs “Clara,” a published AI chatbot that helps disaster survivors find shelter and support services (in production since December 2020).</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Local news sites</strong></td>
+          <td class="left">Community-resources source for cross-border fires (idahonews.com, elkhornmediagroup.com, argusobserver.com)</td>
+          <td><span class="ai-pill ai-pill-unknown">Unverified</span></td>
+          <td class="left">No public disclosure of AI use found for these specific outlets either way — flagged as unverified rather than asserted, since AI-assisted drafting is increasingly common in local news generally.</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>This report & website</strong></td>
+          <td class="left">Community-resources search &amp; drafting, evacuation-data reconciliation logic, report narrative, website features</td>
+          <td><span class="ai-pill ai-pill-yes">AI Used</span></td>
+          <td class="left">The most direct AI use in the whole system: every day, an AI assistant searches for and drafts the community-resources section, writes narrative summaries, and builds/maintains this website's interactive features — all under Matt Ramage's review and approval.</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <strong style="color:#1a2744;">Bottom line:</strong> Across roughly a dozen external sources, only two have any confirmed AI involvement — EPA AirNow's forecast layer (not the raw readings this site uses) and the American Red Cross's Clara chatbot (not the shelter database itself). Everything else — fire locations, structure data, evacuation zones, ZIP boundaries, weather, and community-resource sources — is manually entered or curated, or standard physics-based modeling. The one place AI plays a direct role is upstream of all of it: this report and website are built and maintained by an AI assistant.
+  </div>
+</main>
+
+<footer>
+  This audit is reviewed and updated on the 1st of every month as part of the Oregon Wildfire Daily Reports pipeline.<br>
+  Generated automatically. Not an official State of Oregon publication.<br>
+  Report assembly assisted by <strong style="color:#4a5568;">Claude AI</strong> (Anthropic) &mdash; data sourced from public government feeds.
+</footer>
+
+</body>
+</html>
