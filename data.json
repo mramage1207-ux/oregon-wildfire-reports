@@ -1107,11 +1107,11 @@
       ]
     },
     {
-      "county": "Grant",
-      "acres": 85771.0,
-      "res": 4,
+      "county": "Baker",
+      "acres": 105289.0,
+      "res": 3,
       "comm": 0,
-      "other": 7,
+      "other": 5,
       "unc": 0,
       "fires": [
         {
@@ -1124,8 +1124,8 @@
           "unc": 0
         },
         {
-          "name": "Olive Butte",
-          "acres": 3092,
+          "name": "POWDER RIVER",
+          "acres": 21088,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1133,21 +1133,30 @@
           "unc": 0
         },
         {
-          "name": "BOLOGNA",
-          "acres": 2425,
+          "name": "Anthony",
+          "acres": 2584,
           "status": "Active",
-          "res": 1,
+          "res": 0,
           "comm": 0,
           "other": 0,
           "unc": 0
         },
         {
-          "name": "Salmon",
-          "acres": 1426,
+          "name": "FRONTAGE",
+          "acres": 1938,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0,
+          "unc": 0
+        },
+        {
+          "name": "Bob Creek",
+          "acres": 851,
           "status": "Active",
           "res": 0,
           "comm": 0,
-          "other": 2,
+          "other": 0,
           "unc": 0
         }
       ]
@@ -1291,52 +1300,6 @@
       ]
     },
     {
-      "county": "Baker",
-      "acres": 26461.0,
-      "res": 0,
-      "comm": 0,
-      "other": 0,
-      "unc": 0,
-      "fires": [
-        {
-          "name": "POWDER RIVER",
-          "acres": 21088,
-          "status": "Active",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        },
-        {
-          "name": "Anthony",
-          "acres": 2584,
-          "status": "Active",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        },
-        {
-          "name": "FRONTAGE",
-          "acres": 1938,
-          "status": "Contained",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        },
-        {
-          "name": "Bob Creek",
-          "acres": 851,
-          "status": "Active",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        }
-      ]
-    },
-    {
       "county": "Jackson",
       "acres": 15639.0,
       "res": 1,
@@ -1378,6 +1341,43 @@
           "res": 0,
           "comm": 0,
           "other": 0,
+          "unc": 0
+        }
+      ]
+    },
+    {
+      "county": "Grant",
+      "acres": 6943.0,
+      "res": 1,
+      "comm": 0,
+      "other": 2,
+      "unc": 0,
+      "fires": [
+        {
+          "name": "Olive Butte",
+          "acres": 3092,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0,
+          "unc": 0
+        },
+        {
+          "name": "BOLOGNA",
+          "acres": 2425,
+          "status": "Active",
+          "res": 1,
+          "comm": 0,
+          "other": 0,
+          "unc": 0
+        },
+        {
+          "name": "Salmon",
+          "acres": 1426,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 2,
           "unc": 0
         }
       ]
@@ -1592,16 +1592,16 @@
   "county_acres_map": {
     "Malheur": 407197.7,
     "Harney": 515564.0,
-    "Grant": 85771.0,
+    "Baker": 105289.0,
     "Wheeler": 405612.0,
     "Jefferson": 206504.0,
     "Umatilla": 56339.0,
     "Douglas": 37455.0,
     "Crook": 49784.0,
-    "Baker": 26461.0,
     "Jackson": 15639.0,
     "Wallowa": 5730.0,
     "Lake": 4169.0,
+    "Grant": 6943.0,
     "Josephine": 100.0,
     "Deschutes": 2621.5,
     "Wasco": 3704.0,
@@ -1629,15 +1629,14 @@
         "Second Flat"
       ]
     },
-    "Grant": {
-      "threatened": 243,
+    "Baker": {
+      "threatened": 272,
       "damaged": 0,
-      "destroyed": 11,
+      "destroyed": 8,
       "fires": [
-        "BOLOGNA",
-        "FOX",
-        "Olive Butte",
-        "Salmon"
+        "Anthony",
+        "Bob Creek",
+        "FOX"
       ]
     },
     "Wheeler": {
@@ -1688,15 +1687,6 @@
         "0500 COYOTE"
       ]
     },
-    "Baker": {
-      "threatened": 105,
-      "damaged": 0,
-      "destroyed": 0,
-      "fires": [
-        "Anthony",
-        "Bob Creek"
-      ]
-    },
     "Jackson": {
       "threatened": 0,
       "damaged": 1,
@@ -1719,6 +1709,16 @@
       "destroyed": 0,
       "fires": [
         "Burnt Creek"
+      ]
+    },
+    "Grant": {
+      "threatened": 76,
+      "damaged": 0,
+      "destroyed": 3,
+      "fires": [
+        "BOLOGNA",
+        "Olive Butte",
+        "Salmon"
       ]
     },
     "Josephine": {
@@ -3245,7 +3245,7 @@
     },
     {
       "name": "FOX",
-      "county": "Grant",
+      "county": "Baker",
       "lat": 44.499486,
       "lon": -117.216225,
       "status": "Active",
