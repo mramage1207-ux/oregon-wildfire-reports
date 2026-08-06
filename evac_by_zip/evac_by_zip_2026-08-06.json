@@ -1,28 +1,92 @@
 {
   "date": "2026-08-06",
-  "generated_at": "2026-08-06T15:17:26Z",
-  "as_of_iso": "2026-08-06T14:46:08.000Z",
-  "as_of_display": "August 6, 2026, 7:46 AM PDT",
+  "generated_at": "2026-08-06T23:02:16Z",
+  "as_of_iso": "2026-08-06T22:45:03.000Z",
+  "as_of_display": "August 6, 2026, 3:45 PM PDT",
   "totals": {
-    "l1": 3999,
-    "l2": 2211,
+    "l1": 3686,
+    "l2": 2090,
     "l3": 286,
-    "total": 6496,
-    "zip_count": 44
+    "total": 6062,
+    "zip_count": 38
   },
   "unmatched": {
-    "l1": 152,
-    "l2": 89,
+    "l1": 769,
+    "l2": 146,
     "l3": 31,
-    "total": 272,
-    "zone_count": 0
+    "total": 946,
+    "zone_count": 9
   },
-  "unmatched_zones": [],
+  "unmatched_zones": [
+    {
+      "zone_name": "KM",
+      "level": 1,
+      "addresses": 5,
+      "fire_name": "No named fire",
+      "county": "Wasco"
+    },
+    {
+      "zone_name": "US-OR-JAC-JAC-423",
+      "level": 1,
+      "addresses": 45,
+      "fire_name": "No named fire",
+      "county": "Jackson"
+    },
+    {
+      "zone_name": "US-OR-JAC-JAC-429",
+      "level": 1,
+      "addresses": 10,
+      "fire_name": "No named fire",
+      "county": "Jackson"
+    },
+    {
+      "zone_name": "US-OR-JAC-JAC-438",
+      "level": 1,
+      "addresses": 20,
+      "fire_name": "No named fire",
+      "county": "Jackson"
+    },
+    {
+      "zone_name": "US-OR-JAC-JAC-436",
+      "level": 1,
+      "addresses": 139,
+      "fire_name": "Upper Applegate",
+      "county": "Jackson"
+    },
+    {
+      "zone_name": "US-OR-JAC-JAC-427",
+      "level": 1,
+      "addresses": 323,
+      "fire_name": "Upper Applegate",
+      "county": "Jackson"
+    },
+    {
+      "zone_name": "US-OR-JAC-JAC-421",
+      "level": 1,
+      "addresses": 13,
+      "fire_name": "Upper Applegate",
+      "county": "Jackson"
+    },
+    {
+      "zone_name": "US-OR-JAC-JAC-422",
+      "level": 1,
+      "addresses": 55,
+      "fire_name": "Upper Applegate",
+      "county": "Jackson"
+    },
+    {
+      "zone_name": "US-OR-JAC-JAC-428",
+      "level": 2,
+      "addresses": 69,
+      "fire_name": "Upper Applegate",
+      "county": "Jackson"
+    }
+  ],
   "reconciled_total": {
-    "l1": 4151,
-    "l2": 2300,
+    "l1": 4455,
+    "l2": 2236,
     "l3": 317,
-    "total": 6768
+    "total": 7008
   },
   "zips": [
     {
@@ -47,13 +111,13 @@
     },
     {
       "zip": "97754",
-      "l1": 72,
-      "l2": 293,
+      "l1": 105,
+      "l2": 224,
       "l3": 137,
-      "total": 502,
+      "total": 466,
       "peak_level": 3,
       "counties": "Crook",
-      "fires": "No named fire; Rowe Creek Complex"
+      "fires": "Rowe Creek Complex"
     },
     {
       "zip": "97907",
@@ -67,10 +131,10 @@
     },
     {
       "zip": "97750",
-      "l1": 160,
-      "l2": 121,
+      "l1": 198,
+      "l2": 84,
       "l3": 1,
-      "total": 282,
+      "total": 283,
       "peak_level": 3,
       "counties": "Grant, Wheeler",
       "fires": "No named fire; Rowe Creek Complex; Shingle"
@@ -206,26 +270,6 @@
       "fires": "Shingle"
     },
     {
-      "zip": "97906",
-      "l1": 108,
-      "l2": 4,
-      "l3": 0,
-      "total": 112,
-      "peak_level": 2,
-      "counties": "Harney, Malheur",
-      "fires": "No named fire"
-    },
-    {
-      "zip": "97741",
-      "l1": 80,
-      "l2": 8,
-      "l3": 0,
-      "total": 88,
-      "peak_level": 2,
-      "counties": "Crook, Jefferson",
-      "fires": "Round Butte Fire; Rowe Creek Complex"
-    },
-    {
       "zip": "97876",
       "l1": 61,
       "l2": 7,
@@ -233,16 +277,6 @@
       "total": 68,
       "peak_level": 2,
       "counties": "Union",
-      "fires": "No named fire"
-    },
-    {
-      "zip": "97913",
-      "l1": 43,
-      "l2": 0,
-      "l3": 0,
-      "total": 43,
-      "peak_level": 1,
-      "counties": "Malheur",
       "fires": "No named fire"
     },
     {
@@ -256,24 +290,14 @@
       "fires": "Salmon; Salmon/Olive Butte Fires"
     },
     {
-      "zip": "97734",
-      "l1": 21,
-      "l2": 4,
+      "zip": "97741",
+      "l1": 8,
+      "l2": 2,
       "l3": 0,
-      "total": 25,
+      "total": 10,
       "peak_level": 2,
       "counties": "Jefferson",
-      "fires": "Round Butte Fire"
-    },
-    {
-      "zip": "97917",
-      "l1": 11,
-      "l2": 1,
-      "l3": 0,
-      "total": 12,
-      "peak_level": 2,
-      "counties": "Malheur",
-      "fires": "No named fire"
+      "fires": "Round Butte Fire; Rowe Creek Complex"
     },
     {
       "zip": "97848",
@@ -316,16 +340,6 @@
       "fires": "Rowe Creek Complex"
     },
     {
-      "zip": "97526",
-      "l1": 703,
-      "l2": 0,
-      "l3": 0,
-      "total": 703,
-      "peak_level": 1,
-      "counties": "Josephine",
-      "fires": "No named fire"
-    },
-    {
       "zip": "97049",
       "l1": 677,
       "l2": 0,
@@ -336,13 +350,13 @@
       "fires": "No named fire"
     },
     {
-      "zip": "97911",
-      "l1": 63,
+      "zip": "97526",
+      "l1": 672,
       "l2": 0,
       "l3": 0,
-      "total": 63,
+      "total": 672,
       "peak_level": 1,
-      "counties": "Malheur",
+      "counties": "Josephine",
       "fires": "No named fire"
     },
     {
@@ -366,16 +380,6 @@
       "fires": "Anthony Fire"
     },
     {
-      "zip": "97910",
-      "l1": 20,
-      "l2": 0,
-      "l3": 0,
-      "total": 20,
-      "peak_level": 1,
-      "counties": "Harney, Malheur",
-      "fires": "No named fire"
-    },
-    {
       "zip": "97828",
       "l1": 17,
       "l2": 0,
@@ -386,26 +390,6 @@
       "fires": "Burnt Creek Fire"
     },
     {
-      "zip": "97918",
-      "l1": 11,
-      "l2": 0,
-      "l3": 0,
-      "total": 11,
-      "peak_level": 1,
-      "counties": "Malheur",
-      "fires": "No named fire"
-    },
-    {
-      "zip": "97752",
-      "l1": 11,
-      "l2": 0,
-      "l3": 0,
-      "total": 11,
-      "peak_level": 1,
-      "counties": "Crook",
-      "fires": "No named fire"
-    },
-    {
       "zip": "97721",
       "l1": 8,
       "l2": 0,
@@ -413,6 +397,26 @@
       "total": 8,
       "peak_level": 1,
       "counties": "Harney",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97734",
+      "l1": 4,
+      "l2": 0,
+      "l3": 0,
+      "total": 4,
+      "peak_level": 1,
+      "counties": "Jefferson",
+      "fires": "Round Butte Fire"
+    },
+    {
+      "zip": "97906",
+      "l1": 4,
+      "l2": 0,
+      "l3": 0,
+      "total": 4,
+      "peak_level": 1,
+      "counties": "Harney, Malheur",
       "fires": "No named fire"
     },
     {
@@ -436,16 +440,6 @@
       "fires": "No named fire"
     },
     {
-      "zip": "97751",
-      "l1": 2,
-      "l2": 0,
-      "l3": 0,
-      "total": 2,
-      "peak_level": 1,
-      "counties": "Crook",
-      "fires": "No named fire"
-    },
-    {
       "zip": "97830",
       "l1": 2,
       "l2": 0,
@@ -464,7 +458,17 @@
       "peak_level": 1,
       "counties": "Clackamas",
       "fires": "No named fire"
+    },
+    {
+      "zip": "97917",
+      "l1": 1,
+      "l2": 0,
+      "l3": 0,
+      "total": 1,
+      "peak_level": 1,
+      "counties": "Malheur",
+      "fires": "No named fire"
     }
   ],
-  "note": "Reconciled 2026-08-06 to match the morning report's evac_raw.json snapshot (fetched 2026-08-06T14:46:08.000Z / August 6, 2026, 7:46 AM PDT) rather than a separate live pull. 96.0% of 6,768 total addresses (6,496) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 272 addresses (L1:152 L2:89 L3:31, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+  "note": "Reconciled 2026-08-06 to match the morning report's evac_raw.json snapshot (fetched 2026-08-06T22:45:03.000Z / August 6, 2026, 3:45 PM PDT) rather than a separate live pull. 86.5% of 7,008 total addresses (6,062) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 946 addresses (L1:769 L2:146 L3:31, spanning 9 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
 }
