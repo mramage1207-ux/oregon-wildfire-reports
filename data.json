@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-06",
+  "last_updated": "2026-08-07",
   "report_time": "4:03 PM PDT",
   "report_time_iso": "2026-08-06T23:03:01Z",
   "current_active_fires": 55,
@@ -7,7 +7,7 @@
   "current_report_time": "4:03 PM PDT",
   "current_report_time_iso": "2026-08-06T23:03:01Z",
   "change_vs_prior_morning": {
-    "prior_date": "2026-08-05",
+    "prior_date": "2026-08-06",
     "active_large_fires": {
       "current": 36,
       "prior": 34,
@@ -16,39 +16,39 @@
     },
     "active_evac_fires": {
       "current": 10,
-      "prior": 9,
-      "delta": 1,
-      "pct": 11.1
+      "prior": 8,
+      "delta": 2,
+      "pct": 25.0
     },
     "evac_addresses_l1": {
       "current": 4455,
-      "prior": 3872,
-      "delta": 583,
-      "pct": 15.1
+      "prior": 4151,
+      "delta": 304,
+      "pct": 7.3
     },
     "evac_addresses_l2": {
       "current": 2236,
-      "prior": 2577,
-      "delta": -341,
-      "pct": -13.2
+      "prior": 2300,
+      "delta": -64,
+      "pct": -2.8
     },
     "evac_addresses_l3": {
       "current": 317,
-      "prior": 519,
-      "delta": -202,
-      "pct": -38.9
-    },
-    "active_fires": {
-      "current": 55,
-      "prior": 55,
+      "prior": 317,
       "delta": 0,
       "pct": 0.0
     },
+    "active_fires": {
+      "current": 55,
+      "prior": 53,
+      "delta": 2,
+      "pct": 3.8
+    },
     "total_acres_ytd": {
       "current": 2038017.3000000003,
-      "prior": 2024720,
-      "delta": 13297.30000000028,
-      "pct": 0.7
+      "prior": 2025291,
+      "delta": 12726.30000000028,
+      "pct": 0.6
     },
     "structures_lost": {
       "current": 157,
@@ -58,7 +58,7 @@
     }
   },
   "change_vs_7d_ago": {
-    "prior_date": "2026-07-30",
+    "prior_date": "2026-07-31",
     "active_large_fires": {
       "current": 36,
       "prior": 31,
@@ -73,43 +73,43 @@
     },
     "evac_addresses_l1": {
       "current": 4455,
-      "prior": 4009,
-      "delta": 446,
-      "pct": 11.1
+      "prior": 4126,
+      "delta": 329,
+      "pct": 8.0
     },
     "evac_addresses_l2": {
       "current": 2236,
-      "prior": 3667,
-      "delta": -1431,
-      "pct": -39.0
+      "prior": 3598,
+      "delta": -1362,
+      "pct": -37.9
     },
     "evac_addresses_l3": {
       "current": 317,
-      "prior": 1920,
-      "delta": -1603,
-      "pct": -83.5
+      "prior": 1864,
+      "delta": -1547,
+      "pct": -83.0
     },
     "active_fires": {
       "current": 55,
-      "prior": 55,
-      "delta": 0,
-      "pct": 0.0
+      "prior": 48,
+      "delta": 7,
+      "pct": 14.6
     },
     "total_acres_ytd": {
       "current": 2038017.3000000003,
-      "prior": 1696112,
-      "delta": 341905.3000000003,
-      "pct": 20.2
+      "prior": 1749261,
+      "delta": 288756.3000000003,
+      "pct": 16.5
     },
     "structures_lost": {
       "current": 157,
-      "prior": 118,
-      "delta": 39,
-      "pct": 33.1
+      "prior": 119,
+      "delta": 38,
+      "pct": 31.9
     }
   },
   "change_vs_30d_ago": {
-    "prior_date": "2026-07-07",
+    "prior_date": "2026-07-08",
     "active_large_fires": {
       "current": 36,
       "prior": 2,
@@ -118,15 +118,15 @@
     },
     "active_evac_fires": {
       "current": 10,
-      "prior": 2,
-      "delta": 8,
-      "pct": 400.0
+      "prior": 1,
+      "delta": 9,
+      "pct": 900.0
     },
     "evac_addresses_l1": {
       "current": 4455,
-      "prior": 31,
-      "delta": 4424,
-      "pct": 14271.0
+      "prior": 21,
+      "delta": 4434,
+      "pct": 21114.3
     },
     "evac_addresses_l2": {
       "current": 2236,
@@ -148,9 +148,9 @@
     },
     "total_acres_ytd": {
       "current": 2038017.3000000003,
-      "prior": 24060,
-      "delta": 2013957.3000000003,
-      "pct": 8370.6
+      "prior": 25128,
+      "delta": 2012889.3000000003,
+      "pct": 8010.5
     },
     "structures_lost": {
       "current": 157,
@@ -162,7 +162,6 @@
   "trend_history": {
     "active_large_fires": {
       "dates": [
-        "2026-07-07",
         "2026-07-08",
         "2026-07-09",
         "2026-07-10",
@@ -192,10 +191,10 @@
         "2026-08-03",
         "2026-08-04",
         "2026-08-05",
-        "2026-08-06"
+        "2026-08-06",
+        "2026-08-07"
       ],
       "values": [
-        2,
         2,
         7,
         5,
@@ -225,12 +224,12 @@
         34,
         34,
         34,
+        34,
         36
       ]
     },
     "active_evac_fires": {
       "dates": [
-        "2026-07-07",
         "2026-07-08",
         "2026-07-09",
         "2026-07-10",
@@ -260,10 +259,10 @@
         "2026-08-03",
         "2026-08-04",
         "2026-08-05",
-        "2026-08-06"
+        "2026-08-06",
+        "2026-08-07"
       ],
       "values": [
-        2,
         1,
         2,
         2,
@@ -293,12 +292,12 @@
         9,
         8,
         9,
+        8,
         10
       ]
     },
     "evac_addresses_l1": {
       "dates": [
-        "2026-07-07",
         "2026-07-08",
         "2026-07-09",
         "2026-07-10",
@@ -328,10 +327,10 @@
         "2026-08-03",
         "2026-08-04",
         "2026-08-05",
-        "2026-08-06"
+        "2026-08-06",
+        "2026-08-07"
       ],
       "values": [
-        31,
         21,
         45,
         154,
@@ -361,12 +360,12 @@
         5022,
         2562,
         3872,
+        4151,
         4455
       ]
     },
     "evac_addresses_l2": {
       "dates": [
-        "2026-07-07",
         "2026-07-08",
         "2026-07-09",
         "2026-07-10",
@@ -396,10 +395,10 @@
         "2026-08-03",
         "2026-08-04",
         "2026-08-05",
-        "2026-08-06"
+        "2026-08-06",
+        "2026-08-07"
       ],
       "values": [
-        0,
         0,
         0,
         112,
@@ -429,12 +428,12 @@
         2389,
         2973,
         2577,
+        2300,
         2236
       ]
     },
     "evac_addresses_l3": {
       "dates": [
-        "2026-07-07",
         "2026-07-08",
         "2026-07-09",
         "2026-07-10",
@@ -464,10 +463,10 @@
         "2026-08-03",
         "2026-08-04",
         "2026-08-05",
-        "2026-08-06"
+        "2026-08-06",
+        "2026-08-07"
       ],
       "values": [
-        0,
         0,
         19,
         20,
@@ -497,12 +496,12 @@
         2117,
         700,
         519,
+        317,
         317
       ]
     },
     "active_fires": {
       "dates": [
-        "2026-07-07",
         "2026-07-08",
         "2026-07-09",
         "2026-07-10",
@@ -532,10 +531,10 @@
         "2026-08-03",
         "2026-08-04",
         "2026-08-05",
-        "2026-08-06"
+        "2026-08-06",
+        "2026-08-07"
       ],
       "values": [
-        59,
         59,
         83,
         44,
@@ -565,12 +564,12 @@
         49,
         52,
         55,
+        53,
         55
       ]
     },
     "total_acres_ytd": {
       "dates": [
-        "2026-07-07",
         "2026-07-08",
         "2026-07-09",
         "2026-07-10",
@@ -600,10 +599,10 @@
         "2026-08-03",
         "2026-08-04",
         "2026-08-05",
-        "2026-08-06"
+        "2026-08-06",
+        "2026-08-07"
       ],
       "values": [
-        24060,
         25128,
         27641,
         27693,
@@ -633,12 +632,12 @@
         1960563,
         2018363,
         2024720,
+        2025291,
         2038017.3000000003
       ]
     },
     "structures_lost": {
       "dates": [
-        "2026-07-07",
         "2026-07-08",
         "2026-07-09",
         "2026-07-10",
@@ -668,10 +667,10 @@
         "2026-08-03",
         "2026-08-04",
         "2026-08-05",
-        "2026-08-06"
+        "2026-08-06",
+        "2026-08-07"
       ],
       "values": [
-        0,
         0,
         0,
         0,
@@ -701,14 +700,15 @@
         143,
         153,
         156,
+        156,
         157
       ]
     }
   },
   "exec_summary": {
     "status": "critical",
-    "headline": "The number of Level 3 (Go Now) evacuation addresses is down 39% (519 \u2192 317) since yesterday morning. Over the past 7 days, it is down 84% (1,920 \u2192 317).",
-    "escalation": "Fires with active evacuations have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (9 \u2192 10 since yesterday morning).",
+    "headline": "The number of fires with active evacuations is up 25% (8 \u2192 10) since yesterday morning. Over the past 7 days, it is up 25% (8 \u2192 10).",
+    "escalation": "Fires with active evacuations have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (8 \u2192 10 since yesterday morning).",
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 36,
