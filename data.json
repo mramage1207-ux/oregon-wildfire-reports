@@ -1,11 +1,11 @@
 {
   "last_updated": "2026-08-07",
-  "report_time": "10:52 AM PDT",
-  "report_time_iso": "2026-08-07T17:52:15Z",
+  "report_time": "1:12 PM PDT",
+  "report_time_iso": "2026-08-07T20:12:09Z",
   "current_active_fires": 55,
-  "current_acres_burned": 1759666.39,
-  "current_report_time": "10:52 AM PDT",
-  "current_report_time_iso": "2026-08-07T17:52:15Z",
+  "current_acres_burned": 1751142.39,
+  "current_report_time": "1:12 PM PDT",
+  "current_report_time_iso": "2026-08-07T20:12:09Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-08-06",
     "active_large_fires": {
@@ -45,10 +45,10 @@
       "pct": 3.8
     },
     "total_acres_ytd": {
-      "current": 2095415.3000000003,
+      "current": 2086891.3000000003,
       "prior": 2025291,
-      "delta": 70124.30000000028,
-      "pct": 3.5
+      "delta": 61600.30000000028,
+      "pct": 3.0
     },
     "structures_lost": {
       "current": 157,
@@ -96,10 +96,10 @@
       "pct": 14.6
     },
     "total_acres_ytd": {
-      "current": 2095415.3000000003,
+      "current": 2086891.3000000003,
       "prior": 1749261,
-      "delta": 346154.3000000003,
-      "pct": 19.8
+      "delta": 337630.3000000003,
+      "pct": 19.3
     },
     "structures_lost": {
       "current": 157,
@@ -147,10 +147,10 @@
       "pct": -6.8
     },
     "total_acres_ytd": {
-      "current": 2095415.3000000003,
+      "current": 2086891.3000000003,
       "prior": 25128,
-      "delta": 2070287.3000000003,
-      "pct": 8239.0
+      "delta": 2061763.3000000003,
+      "pct": 8205.0
     },
     "structures_lost": {
       "current": 157,
@@ -633,7 +633,7 @@
         2018363,
         2024720,
         2025291,
-        2095415.3000000003
+        2086891.3000000003
       ]
     },
     "structures_lost": {
@@ -712,7 +712,7 @@
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 37,
-  "total_large_fire_acres": 2095415.3000000003,
+  "total_large_fire_acres": 2086891.3000000003,
   "structures_lost": 157,
   "evac_triggering_fires": 10,
   "evac_zones": {
@@ -767,7 +767,7 @@
   "county_structure_data": [
     {
       "county": "Harney",
-      "acres": 547081.0,
+      "acres": 539803.0,
       "res": 2,
       "comm": 2,
       "other": 7,
@@ -793,7 +793,7 @@
         },
         {
           "name": "Bald Mountain",
-          "acres": 85357,
+          "acres": 78079,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1463,25 +1463,6 @@
       ]
     },
     {
-      "county": "Douglas",
-      "acres": 2796.0,
-      "res": 0,
-      "comm": 0,
-      "other": 0,
-      "unc": 0,
-      "fires": [
-        {
-          "name": "Castle",
-          "acres": 2796,
-          "status": "Active",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        }
-      ]
-    },
-    {
       "county": "Deschutes",
       "acres": 2621.5,
       "res": 0,
@@ -1511,6 +1492,25 @@
           "name": "Riverview Fire",
           "acres": 12,
           "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0,
+          "unc": 0
+        }
+      ]
+    },
+    {
+      "county": "Douglas",
+      "acres": 1550.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0,
+      "unc": 0,
+      "fires": [
+        {
+          "name": "Castle",
+          "acres": 1550,
+          "status": "Active",
           "res": 0,
           "comm": 0,
           "other": 0,
@@ -1578,7 +1578,7 @@
   ],
   "county_acres_map": {
     "Malheur": 407319.7,
-    "Harney": 547081.0,
+    "Harney": 539803.0,
     "Baker": 105463.0,
     "Wheeler": 425648.0,
     "Jefferson": 206460.0,
@@ -1589,7 +1589,7 @@
     "Klamath": 8969.0,
     "Wallowa": 10058.0,
     "Grant": 7655.0,
-    "Douglas": 2796.0,
+    "Douglas": 1550.0,
     "Josephine": 100.0,
     "Deschutes": 2621.5,
     "Gilliam": 201822.0,
@@ -2647,14 +2647,14 @@
     {
       "date": "2026-08-07",
       "active_fires": 55,
-      "acres_burned": 1759666.39
+      "acres_burned": 1751142.39
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
       "total_fires": 70,
-      "total_acres": 2095415.3000000003,
+      "total_acres": 2086891.3000000003,
       "total_structures_destroyed": 157,
       "fatalities": 0,
       "injuries": 0,
@@ -3224,21 +3224,6 @@
       "cpx_total_acres": null
     },
     {
-      "name": "Bald Mountain",
-      "county": "Harney",
-      "lat": 43.008654,
-      "lon": -118.474392,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 85357.0,
-      "structures_lost_res": 0,
-      "structures_lost_comm": 0,
-      "structures_lost_other": 2,
-      "structures_lost_unc": 0,
-      "cpx_name": null,
-      "cpx_total_acres": null
-    },
-    {
       "name": "FOX",
       "county": "Baker",
       "lat": 44.499486,
@@ -3249,6 +3234,21 @@
       "structures_lost_res": 3,
       "structures_lost_comm": 0,
       "structures_lost_other": 5,
+      "structures_lost_unc": 0,
+      "cpx_name": null,
+      "cpx_total_acres": null
+    },
+    {
+      "name": "Bald Mountain",
+      "county": "Harney",
+      "lat": 43.008654,
+      "lon": -118.474392,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 78079.0,
+      "structures_lost_res": 0,
+      "structures_lost_comm": 0,
+      "structures_lost_other": 2,
       "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
@@ -3554,21 +3554,6 @@
       "cpx_total_acres": null
     },
     {
-      "name": "Castle",
-      "county": "Douglas",
-      "lat": 43.111333,
-      "lon": -122.566,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 2796.0,
-      "structures_lost_res": 0,
-      "structures_lost_comm": 0,
-      "structures_lost_other": 0,
-      "structures_lost_unc": 0,
-      "cpx_name": null,
-      "cpx_total_acres": null
-    },
-    {
       "name": "Anthony",
       "county": "Baker",
       "lat": 44.992651,
@@ -3606,6 +3591,21 @@
       "status": "Active",
       "triggered_evacuation": false,
       "acres": 1664.0,
+      "structures_lost_res": 0,
+      "structures_lost_comm": 0,
+      "structures_lost_other": 0,
+      "structures_lost_unc": 0,
+      "cpx_name": null,
+      "cpx_total_acres": null
+    },
+    {
+      "name": "Castle",
+      "county": "Douglas",
+      "lat": 43.111333,
+      "lon": -122.566,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 1550.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
