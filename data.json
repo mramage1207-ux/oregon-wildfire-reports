@@ -1,24 +1,24 @@
 {
   "last_updated": "2026-08-07",
-  "report_time": "8:24 AM PDT",
-  "report_time_iso": "2026-08-07T15:24:11Z",
+  "report_time": "9:25 AM PDT",
+  "report_time_iso": "2026-08-07T16:25:51Z",
   "current_active_fires": 55,
   "current_acres_burned": 1759666.39,
-  "current_report_time": "8:24 AM PDT",
-  "current_report_time_iso": "2026-08-07T15:24:11Z",
+  "current_report_time": "9:25 AM PDT",
+  "current_report_time_iso": "2026-08-07T16:25:51Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-08-06",
     "active_large_fires": {
-      "current": 38,
+      "current": 37,
       "prior": 34,
-      "delta": 4,
-      "pct": 11.8
+      "delta": 3,
+      "pct": 8.8
     },
     "active_evac_fires": {
-      "current": 11,
+      "current": 10,
       "prior": 8,
-      "delta": 3,
-      "pct": 37.5
+      "delta": 2,
+      "pct": 25.0
     },
     "evac_addresses_l1": {
       "current": 4544,
@@ -60,16 +60,16 @@
   "change_vs_7d_ago": {
     "prior_date": "2026-07-31",
     "active_large_fires": {
-      "current": 38,
+      "current": 37,
       "prior": 31,
-      "delta": 7,
-      "pct": 22.6
+      "delta": 6,
+      "pct": 19.4
     },
     "active_evac_fires": {
-      "current": 11,
+      "current": 10,
       "prior": 8,
-      "delta": 3,
-      "pct": 37.5
+      "delta": 2,
+      "pct": 25.0
     },
     "evac_addresses_l1": {
       "current": 4544,
@@ -111,16 +111,16 @@
   "change_vs_30d_ago": {
     "prior_date": "2026-07-08",
     "active_large_fires": {
-      "current": 38,
+      "current": 37,
       "prior": 2,
-      "delta": 36,
-      "pct": 1800.0
+      "delta": 35,
+      "pct": 1750.0
     },
     "active_evac_fires": {
-      "current": 11,
+      "current": 10,
       "prior": 1,
-      "delta": 10,
-      "pct": 1000.0
+      "delta": 9,
+      "pct": 900.0
     },
     "evac_addresses_l1": {
       "current": 4544,
@@ -225,7 +225,7 @@
         34,
         34,
         34,
-        38
+        37
       ]
     },
     "active_evac_fires": {
@@ -293,7 +293,7 @@
         8,
         9,
         8,
-        11
+        10
       ]
     },
     "evac_addresses_l1": {
@@ -708,22 +708,21 @@
   "exec_summary": {
     "status": "critical",
     "headline": "The number of Level 3 (Go Now) evacuation addresses is up 58% (317 \u2192 502) since yesterday morning. Over the past 7 days, it is down 73% (1,864 \u2192 502).",
-    "escalation": "Fires with active evacuations have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (8 \u2192 11 since yesterday morning).",
+    "escalation": "Fires with active evacuations have increased both since yesterday and over the past week \u2014 a sustained rise, not a one-day blip (8 \u2192 10 since yesterday morning).",
     "closing": "Full details, county-by-county, are in the sections below."
   },
-  "active_large_fires": 38,
+  "active_large_fires": 37,
   "total_large_fire_acres": 2095415.3000000003,
   "structures_lost": 157,
-  "evac_triggering_fires": 11,
+  "evac_triggering_fires": 10,
   "evac_zones": {
     "level3": [
-      "Grasshopper \u2014 ~16 miles south of Clearwater Village, Oregon",
-      "PP# 342802 UPPER APPLEGATE RD \u2014 ~1 miles south of Ruch, Oregon"
+      "Grasshopper \u2014 ~11 miles east of Government Camp, Oregon"
     ],
     "level2": [
       "0587 SHINGLE \u2014 ~14 miles southeast of Mitchell, Oregon",
       "0567 \u2014 ~5 miles northeast of Shaniko, Oregon",
-      "Grasshopper \u2014 ~16 miles south of Clearwater Village, Oregon",
+      "Grasshopper \u2014 ~11 miles east of Government Camp, Oregon",
       "286 \u2014 ~6 miles east of Modoc Point, Oregon",
       "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon",
       "Salmon \u2014 ~2 miles west of Greenhorn, Oregon"
@@ -731,14 +730,13 @@
     "level1": [
       "0587 SHINGLE \u2014 ~14 miles southeast of Mitchell, Oregon",
       "0567 \u2014 ~5 miles northeast of Shaniko, Oregon",
-      "Grasshopper \u2014 ~16 miles south of Clearwater Village, Oregon",
+      "Grasshopper \u2014 ~11 miles east of Government Camp, Oregon",
       "E Evans Creek Rd 18000 \u2014 ~6 miles northwest of Beagle, Oregon",
       "286 \u2014 ~6 miles east of Modoc Point, Oregon",
-      "Burnt Creek \u2014 ~9 miles southeast of Lakeview, Oregon",
+      "Burnt Creek \u2014 ~9 miles south of Flora, Oregon",
       "Anthony \u2014 ~6 miles west of Hutchinson, Oregon",
       "0658 ROUND BUTTE \u2014 ~3 miles northwest of Metolius, Oregon",
-      "I5 MM 57 NB \u2014 ~1 miles northeast of Grants Pass, Oregon",
-      "PP# 342802 UPPER APPLEGATE RD \u2014 ~1 miles south of Ruch, Oregon"
+      "I5 MM 57 NB \u2014 ~2 miles east of Grants Pass, Oregon"
     ]
   },
   "evac_addresses_l1": 4544,
@@ -1244,8 +1242,8 @@
       ]
     },
     {
-      "county": "Douglas",
-      "acres": 46040.0,
+      "county": "Wasco",
+      "acres": 46948.0,
       "res": 0,
       "comm": 0,
       "other": 1,
@@ -1261,9 +1259,36 @@
           "unc": 0
         },
         {
-          "name": "Castle",
-          "acres": 2796,
-          "status": "Active",
+          "name": "0231 ZEN",
+          "acres": 1634,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0,
+          "unc": 0
+        },
+        {
+          "name": "0380 ANTELOPE CREEK",
+          "acres": 1347,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0,
+          "unc": 0
+        },
+        {
+          "name": "8 MILE",
+          "acres": 532,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0,
+          "unc": 0
+        },
+        {
+          "name": "0586",
+          "acres": 191,
+          "status": "Contained",
           "res": 0,
           "comm": 0,
           "other": 0,
@@ -1318,6 +1343,43 @@
         {
           "name": "PP# 342802 UPPER APPLEGATE RD",
           "acres": 1,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0,
+          "unc": 0
+        }
+      ]
+    },
+    {
+      "county": "Wallowa",
+      "acres": 10058.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0,
+      "unc": 0,
+      "fires": [
+        {
+          "name": "Eggo",
+          "acres": 4225,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0,
+          "unc": 0
+        },
+        {
+          "name": "Burnt Creek",
+          "acres": 4169,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0,
+          "unc": 0
+        },
+        {
+          "name": "INC 302",
+          "acres": 1664,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1401,91 +1463,17 @@
       ]
     },
     {
-      "county": "Wallowa",
-      "acres": 5889.0,
+      "county": "Douglas",
+      "acres": 2796.0,
       "res": 0,
       "comm": 0,
       "other": 0,
       "unc": 0,
       "fires": [
         {
-          "name": "Eggo",
-          "acres": 4225,
+          "name": "Castle",
+          "acres": 2796,
           "status": "Active",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        },
-        {
-          "name": "INC 302",
-          "acres": 1664,
-          "status": "Active",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        }
-      ]
-    },
-    {
-      "county": "Lake",
-      "acres": 4169.0,
-      "res": 0,
-      "comm": 0,
-      "other": 0,
-      "unc": 0,
-      "fires": [
-        {
-          "name": "Burnt Creek",
-          "acres": 4169,
-          "status": "Active",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        }
-      ]
-    },
-    {
-      "county": "Wasco",
-      "acres": 3704.0,
-      "res": 0,
-      "comm": 0,
-      "other": 0,
-      "unc": 0,
-      "fires": [
-        {
-          "name": "0231 ZEN",
-          "acres": 1634,
-          "status": "Contained",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        },
-        {
-          "name": "0380 ANTELOPE CREEK",
-          "acres": 1347,
-          "status": "Contained",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        },
-        {
-          "name": "8 MILE",
-          "acres": 532,
-          "status": "Contained",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        },
-        {
-          "name": "0586",
-          "acres": 191,
-          "status": "Contained",
           "res": 0,
           "comm": 0,
           "other": 0,
@@ -1594,17 +1582,16 @@
     "Baker": 105463.0,
     "Wheeler": 425648.0,
     "Jefferson": 206460.0,
-    "Douglas": 46040.0,
+    "Wasco": 46948.0,
     "Umatilla": 56751.0,
     "Crook": 49784.0,
     "Jackson": 15939.0,
     "Klamath": 8969.0,
-    "Wallowa": 5889.0,
-    "Lake": 4169.0,
+    "Wallowa": 10058.0,
     "Grant": 7655.0,
+    "Douglas": 2796.0,
     "Josephine": 100.0,
     "Deschutes": 2621.5,
-    "Wasco": 3704.0,
     "Gilliam": 201822.0,
     "Union": 0.1
   },
@@ -1658,7 +1645,7 @@
         "Bench"
       ]
     },
-    "Douglas": {
+    "Wasco": {
       "threatened": 34,
       "damaged": 0,
       "destroyed": 1,
@@ -1695,20 +1682,13 @@
       ]
     },
     "Wallowa": {
-      "threatened": 43,
+      "threatened": 89,
       "damaged": 0,
       "destroyed": 0,
       "fires": [
+        "Burnt Creek",
         "Eggo",
         "INC 302"
-      ]
-    },
-    "Lake": {
-      "threatened": 46,
-      "damaged": 0,
-      "destroyed": 0,
-      "fires": [
-        "Burnt Creek"
       ]
     },
     "Grant": {
@@ -3320,7 +3300,7 @@
     },
     {
       "name": "Grasshopper",
-      "county": "Douglas",
+      "county": "Wasco",
       "lat": 45.242462,
       "lon": -121.537304,
       "status": "Active",
@@ -3545,7 +3525,7 @@
     },
     {
       "name": "Burnt Creek",
-      "county": "Lake",
+      "county": "Wallowa",
       "lat": 45.76802,
       "lon": -117.25321,
       "status": "Active",
@@ -4373,7 +4353,7 @@
       "county": "Jackson",
       "lat": 42.22611667,
       "lon": -123.0478,
-      "status": "Active",
+      "status": "Contained",
       "triggered_evacuation": true,
       "acres": 1.0,
       "structures_lost_res": 0,
