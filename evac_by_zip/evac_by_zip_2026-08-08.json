@@ -1,28 +1,246 @@
 {
   "date": "2026-08-08",
-  "generated_at": "2026-08-08T15:17:43Z",
-  "as_of_iso": "2026-08-08T14:45:06.000Z",
-  "as_of_display": "August 8, 2026, 7:45 AM PDT",
+  "generated_at": "2026-08-08T23:02:18Z",
+  "as_of_iso": "2026-08-08T22:45:02.000Z",
+  "as_of_display": "August 8, 2026, 3:45 PM PDT",
   "totals": {
-    "l1": 4728,
-    "l2": 2484,
-    "l3": 391,
-    "total": 7603,
-    "zip_count": 47
+    "l1": 3458,
+    "l2": 2230,
+    "l3": 673,
+    "total": 6361,
+    "zip_count": 44
   },
   "unmatched": {
-    "l1": 175,
-    "l2": 100,
-    "l3": 35,
-    "total": 310,
-    "zone_count": 0
+    "l1": 556,
+    "l2": 405,
+    "l3": 52,
+    "total": 1013,
+    "zone_count": 31
   },
-  "unmatched_zones": [],
+  "unmatched_zones": [
+    {
+      "zone_name": "US-OR-KLA-KLA-0137",
+      "level": 1,
+      "addresses": 21,
+      "fire_name": "No named fire",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-0138",
+      "level": 1,
+      "addresses": 1,
+      "fire_name": "No named fire",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-0191",
+      "level": 1,
+      "addresses": 2,
+      "fire_name": "No named fire",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-0196",
+      "level": 1,
+      "addresses": 68,
+      "fire_name": "No named fire",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-0197",
+      "level": 1,
+      "addresses": 77,
+      "fire_name": "No named fire",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-0202",
+      "level": 1,
+      "addresses": 35,
+      "fire_name": "No named fire",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-FHZ-0005",
+      "level": 1,
+      "addresses": 4,
+      "fire_name": "No named fire",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-FHZ-0007",
+      "level": 1,
+      "addresses": 3,
+      "fire_name": "No named fire",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-0211",
+      "level": 1,
+      "addresses": 1,
+      "fire_name": "No named fire",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-0213",
+      "level": 1,
+      "addresses": 11,
+      "fire_name": "No named fire",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-0271",
+      "level": 1,
+      "addresses": 11,
+      "fire_name": "No named fire",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-0276",
+      "level": 1,
+      "addresses": 1,
+      "fire_name": "No named fire",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-UNI-UCO-1495",
+      "level": 1,
+      "addresses": 1,
+      "fire_name": "No named fire",
+      "county": "Union"
+    },
+    {
+      "zone_name": "US-OR-UNI-UCO-1497",
+      "level": 1,
+      "addresses": 2,
+      "fire_name": "No named fire",
+      "county": "Union"
+    },
+    {
+      "zone_name": "US-OR-UNI-UCO-1505",
+      "level": 1,
+      "addresses": 1,
+      "fire_name": "No named fire",
+      "county": "Union"
+    },
+    {
+      "zone_name": "US-OR-UNI-UCO-1513",
+      "level": 1,
+      "addresses": 2,
+      "fire_name": "No named fire",
+      "county": "Union"
+    },
+    {
+      "zone_name": "US-OR-UMA-UMC-1406025-B",
+      "level": 2,
+      "addresses": 2,
+      "fire_name": "No named fire",
+      "county": "Umatilla"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-0216",
+      "level": 2,
+      "addresses": 139,
+      "fire_name": "No named fire",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-0206",
+      "level": 2,
+      "addresses": 151,
+      "fire_name": "No named fire",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-CRO-CRR-8SG-B",
+      "level": 2,
+      "addresses": 7,
+      "fire_name": "No named fire",
+      "county": "Crook"
+    },
+    {
+      "zone_name": "US-OR-CRO-CRR-4S-N",
+      "level": 2,
+      "addresses": 4,
+      "fire_name": "Rowe Creek Complex",
+      "county": "Crook"
+    },
+    {
+      "zone_name": "US-OR-CRO-CRR-8SG-A",
+      "level": 2,
+      "addresses": 1,
+      "fire_name": "Rowe Creek Complex",
+      "county": "Crook"
+    },
+    {
+      "zone_name": "US-OR-KLA-FHZ-1583",
+      "level": 1,
+      "addresses": 18,
+      "fire_name": "Wrights Spring",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-1181",
+      "level": 1,
+      "addresses": 71,
+      "fire_name": "Wrights Spring",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-1186",
+      "level": 1,
+      "addresses": 39,
+      "fire_name": "Wrights Spring",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-1191",
+      "level": 1,
+      "addresses": 3,
+      "fire_name": "Wrights Spring",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-1421",
+      "level": 1,
+      "addresses": 2,
+      "fire_name": "Wrights Spring",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-1431",
+      "level": 1,
+      "addresses": 2,
+      "fire_name": "Wrights Spring",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-1718",
+      "level": 1,
+      "addresses": 5,
+      "fire_name": "Wrights Spring",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-1381-A",
+      "level": 2,
+      "addresses": 23,
+      "fire_name": "Wrights Spring",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-1381-B",
+      "level": 3,
+      "addresses": 1,
+      "fire_name": "Wrights Spring",
+      "county": "Klamath"
+    }
+  ],
   "reconciled_total": {
-    "l1": 4903,
-    "l2": 2584,
-    "l3": 426,
-    "total": 7913
+    "l1": 4014,
+    "l2": 2635,
+    "l3": 725,
+    "total": 7374
   },
   "zips": [
     {
@@ -37,9 +255,9 @@
     },
     {
       "zip": "97886",
-      "l1": 440,
-      "l2": 198,
-      "l3": 4,
+      "l1": 272,
+      "l2": 113,
+      "l3": 257,
       "total": 642,
       "peak_level": 3,
       "counties": "Umatilla, Union",
@@ -48,9 +266,9 @@
     {
       "zip": "97754",
       "l1": 130,
-      "l2": 199,
+      "l2": 187,
       "l3": 138,
-      "total": 467,
+      "total": 455,
       "peak_level": 3,
       "counties": "Crook",
       "fires": "No named fire; Rowe Creek Complex"
@@ -66,16 +284,6 @@
       "fires": "No named fire"
     },
     {
-      "zip": "97624",
-      "l1": 156,
-      "l2": 21,
-      "l3": 108,
-      "total": 285,
-      "peak_level": 3,
-      "counties": "Klamath",
-      "fires": "Wrights Spring"
-    },
-    {
       "zip": "97750",
       "l1": 198,
       "l2": 84,
@@ -84,6 +292,16 @@
       "peak_level": 3,
       "counties": "Grant, Wheeler",
       "fires": "No named fire; Rowe Creek Complex; Shingle"
+    },
+    {
+      "zip": "97624",
+      "l1": 81,
+      "l2": 90,
+      "l3": 108,
+      "total": 279,
+      "peak_level": 3,
+      "counties": "Klamath",
+      "fires": "Wrights Spring"
     },
     {
       "zip": "97041",
@@ -108,10 +326,10 @@
     {
       "zip": "97639",
       "l1": 132,
-      "l2": 12,
+      "l2": 0,
       "l3": 0,
-      "total": 144,
-      "peak_level": 2,
+      "total": 132,
+      "peak_level": 1,
       "counties": "Klamath",
       "fires": "Wrights Spring"
     },
@@ -138,8 +356,8 @@
     {
       "zip": "97827",
       "l1": 0,
-      "l2": 6,
-      "l3": 29,
+      "l2": 0,
+      "l3": 35,
       "total": 35,
       "peak_level": 3,
       "counties": "Umatilla, Union",
@@ -163,6 +381,16 @@
       "total": 23,
       "peak_level": 2,
       "counties": "Grant",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97862",
+      "l1": 0,
+      "l2": 0,
+      "l3": 23,
+      "total": 23,
+      "peak_level": 3,
+      "counties": "Umatilla",
       "fires": "No named fire"
     },
     {
@@ -234,16 +462,6 @@
       "peak_level": 1,
       "counties": "Clackamas, Hood River",
       "fires": "No named fire"
-    },
-    {
-      "zip": "97530",
-      "l1": 529,
-      "l2": 208,
-      "l3": 0,
-      "total": 737,
-      "peak_level": 2,
-      "counties": "Jackson",
-      "fires": "No named fire; Upper Applegate"
     },
     {
       "zip": "97058",
@@ -366,14 +584,14 @@
       "fires": "No named fire"
     },
     {
-      "zip": "97526",
-      "l1": 672,
+      "zip": "97530",
+      "l1": 208,
       "l2": 0,
       "l3": 0,
-      "total": 672,
+      "total": 208,
       "peak_level": 1,
-      "counties": "Josephine",
-      "fires": "No named fire"
+      "counties": "Jackson",
+      "fires": "Upper Applegate"
     },
     {
       "zip": "97623",
@@ -396,16 +614,6 @@
       "fires": "No named fire"
     },
     {
-      "zip": "97862",
-      "l1": 23,
-      "l2": 0,
-      "l3": 0,
-      "total": 23,
-      "peak_level": 1,
-      "counties": "Umatilla",
-      "fires": "No named fire"
-    },
-    {
       "zip": "97833",
       "l1": 23,
       "l2": 0,
@@ -424,16 +632,6 @@
       "peak_level": 1,
       "counties": "Wallowa",
       "fires": "Burnt Creek Fire"
-    },
-    {
-      "zip": "97501",
-      "l1": 9,
-      "l2": 0,
-      "l3": 0,
-      "total": 9,
-      "peak_level": 1,
-      "counties": "Jackson",
-      "fires": "No named fire"
     },
     {
       "zip": "97701",
@@ -466,16 +664,6 @@
       "fires": "Wrights Spring"
     },
     {
-      "zip": "97540",
-      "l1": 2,
-      "l2": 0,
-      "l3": 0,
-      "total": 2,
-      "peak_level": 1,
-      "counties": "Jackson",
-      "fires": "No named fire"
-    },
-    {
       "zip": "97830",
       "l1": 2,
       "l2": 0,
@@ -496,5 +684,5 @@
       "fires": "No named fire"
     }
   ],
-  "note": "Reconciled 2026-08-08 to match the morning report's evac_raw.json snapshot (fetched 2026-08-08T14:45:06.000Z / August 8, 2026, 7:45 AM PDT) rather than a separate live pull. 96.1% of 7,913 total addresses (7,603) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 310 addresses (L1:175 L2:100 L3:35, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+  "note": "Reconciled 2026-08-08 to match the morning report's evac_raw.json snapshot (fetched 2026-08-08T22:45:02.000Z / August 8, 2026, 3:45 PM PDT) rather than a separate live pull. 86.3% of 7,374 total addresses (6,361) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 1,013 addresses (L1:556 L2:405 L3:52, spanning 31 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
 }
