@@ -1,0 +1,490 @@
+{
+  "date": "2026-08-09",
+  "generated_at": "2026-08-09T15:16:16Z",
+  "as_of_iso": "2026-08-09T14:45:02.000Z",
+  "as_of_display": "August 9, 2026, 7:45 AM PDT",
+  "totals": {
+    "l1": 3914,
+    "l2": 2470,
+    "l3": 694,
+    "total": 7078,
+    "zip_count": 46
+  },
+  "unmatched": {
+    "l1": 344,
+    "l2": 78,
+    "l3": 54,
+    "total": 476,
+    "zone_count": 0
+  },
+  "unmatched_zones": [],
+  "reconciled_total": {
+    "l1": 4258,
+    "l2": 2548,
+    "l3": 748,
+    "total": 7554
+  },
+  "zips": [
+    {
+      "zip": "97063",
+      "l1": 1,
+      "l2": 1146,
+      "l3": 0,
+      "total": 1147,
+      "peak_level": 2,
+      "counties": "Wasco",
+      "fires": "Grasshopper; No named fire"
+    },
+    {
+      "zip": "97886",
+      "l1": 272,
+      "l2": 115,
+      "l3": 257,
+      "total": 644,
+      "peak_level": 3,
+      "counties": "Umatilla, Union",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97754",
+      "l1": 130,
+      "l2": 199,
+      "l3": 138,
+      "total": 467,
+      "peak_level": 3,
+      "counties": "Crook",
+      "fires": "No named fire; Rowe Creek Complex"
+    },
+    {
+      "zip": "97624",
+      "l1": 201,
+      "l2": 90,
+      "l3": 116,
+      "total": 407,
+      "peak_level": 3,
+      "counties": "Klamath",
+      "fires": "Wrights Spring"
+    },
+    {
+      "zip": "97907",
+      "l1": 285,
+      "l2": 48,
+      "l3": 1,
+      "total": 334,
+      "peak_level": 3,
+      "counties": "Baker",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97750",
+      "l1": 198,
+      "l2": 84,
+      "l3": 1,
+      "total": 283,
+      "peak_level": 3,
+      "counties": "Grant, Wheeler",
+      "fires": "No named fire; Rowe Creek Complex; Shingle"
+    },
+    {
+      "zip": "97041",
+      "l1": 162,
+      "l2": 66,
+      "l3": 4,
+      "total": 232,
+      "peak_level": 3,
+      "counties": "Clackamas, Hood River",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97021",
+      "l1": 76,
+      "l2": 139,
+      "l3": 3,
+      "total": 218,
+      "peak_level": 3,
+      "counties": "Wasco",
+      "fires": "Grasshopper; No named fire"
+    },
+    {
+      "zip": "97639",
+      "l1": 24,
+      "l2": 130,
+      "l3": 13,
+      "total": 167,
+      "peak_level": 3,
+      "counties": "Klamath",
+      "fires": "Wrights Spring"
+    },
+    {
+      "zip": "97810",
+      "l1": 23,
+      "l2": 28,
+      "l3": 64,
+      "total": 115,
+      "peak_level": 3,
+      "counties": "Umatilla",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97905",
+      "l1": 0,
+      "l2": 40,
+      "l3": 32,
+      "total": 72,
+      "peak_level": 3,
+      "counties": "Baker",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97827",
+      "l1": 1,
+      "l2": 0,
+      "l3": 35,
+      "total": 36,
+      "peak_level": 3,
+      "counties": "Umatilla, Union",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97856",
+      "l1": 0,
+      "l2": 26,
+      "l3": 0,
+      "total": 26,
+      "peak_level": 2,
+      "counties": "Grant",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97864",
+      "l1": 6,
+      "l2": 17,
+      "l3": 0,
+      "total": 23,
+      "peak_level": 2,
+      "counties": "Grant",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97862",
+      "l1": 0,
+      "l2": 0,
+      "l3": 23,
+      "total": 23,
+      "peak_level": 3,
+      "counties": "Umatilla",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97720",
+      "l1": 5,
+      "l2": 3,
+      "l3": 1,
+      "total": 9,
+      "peak_level": 3,
+      "counties": "Harney",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97738",
+      "l1": 1,
+      "l2": 3,
+      "l3": 2,
+      "total": 6,
+      "peak_level": 3,
+      "counties": "Harney",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97870",
+      "l1": 0,
+      "l2": 1,
+      "l3": 2,
+      "total": 3,
+      "peak_level": 3,
+      "counties": "Baker",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97840",
+      "l1": 0,
+      "l2": 0,
+      "l3": 2,
+      "total": 2,
+      "peak_level": 3,
+      "counties": "Baker",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97814",
+      "l1": 0,
+      "l2": 2,
+      "l3": 0,
+      "total": 2,
+      "peak_level": 2,
+      "counties": "Baker",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97859",
+      "l1": 0,
+      "l2": 1,
+      "l3": 0,
+      "total": 1,
+      "peak_level": 2,
+      "counties": "Umatilla",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97028",
+      "l1": 836,
+      "l2": 0,
+      "l3": 0,
+      "total": 836,
+      "peak_level": 1,
+      "counties": "Clackamas, Hood River",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97623",
+      "l1": 168,
+      "l2": 93,
+      "l3": 0,
+      "total": 261,
+      "peak_level": 2,
+      "counties": "Klamath",
+      "fires": "Wrights Spring"
+    },
+    {
+      "zip": "97058",
+      "l1": 108,
+      "l2": 37,
+      "l3": 0,
+      "total": 145,
+      "peak_level": 2,
+      "counties": "Wasco",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97825",
+      "l1": 3,
+      "l2": 135,
+      "l3": 0,
+      "total": 138,
+      "peak_level": 2,
+      "counties": "Grant, Wheeler",
+      "fires": "Shingle"
+    },
+    {
+      "zip": "97876",
+      "l1": 61,
+      "l2": 7,
+      "l3": 0,
+      "total": 68,
+      "peak_level": 2,
+      "counties": "Union",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97877",
+      "l1": 0,
+      "l2": 37,
+      "l3": 0,
+      "total": 37,
+      "peak_level": 2,
+      "counties": "Baker, Grant",
+      "fires": "Salmon; Salmon/Olive Butte Fires"
+    },
+    {
+      "zip": "97625",
+      "l1": 30,
+      "l2": 0,
+      "l3": 0,
+      "total": 30,
+      "peak_level": 1,
+      "counties": "Klamath",
+      "fires": "Wrights Spring"
+    },
+    {
+      "zip": "97621",
+      "l1": 12,
+      "l2": 3,
+      "l3": 0,
+      "total": 15,
+      "peak_level": 2,
+      "counties": "Klamath",
+      "fires": "Wrights Spring"
+    },
+    {
+      "zip": "97848",
+      "l1": 10,
+      "l2": 0,
+      "l3": 0,
+      "total": 10,
+      "peak_level": 1,
+      "counties": "Grant",
+      "fires": "Shingle"
+    },
+    {
+      "zip": "97817",
+      "l1": 0,
+      "l2": 9,
+      "l3": 0,
+      "total": 9,
+      "peak_level": 2,
+      "counties": "Baker, Grant",
+      "fires": "Salmon; Salmon/Olive Butte Fires"
+    },
+    {
+      "zip": "99362",
+      "l1": 0,
+      "l2": 4,
+      "l3": 0,
+      "total": 4,
+      "peak_level": 2,
+      "counties": "Umatilla",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97874",
+      "l1": 0,
+      "l2": 4,
+      "l3": 0,
+      "total": 4,
+      "peak_level": 2,
+      "counties": "Wheeler",
+      "fires": "Rowe Creek Complex"
+    },
+    {
+      "zip": "97741",
+      "l1": 2,
+      "l2": 2,
+      "l3": 0,
+      "total": 4,
+      "peak_level": 2,
+      "counties": "Jefferson",
+      "fires": "Rowe Creek Complex"
+    },
+    {
+      "zip": "97037",
+      "l1": 3,
+      "l2": 0,
+      "l3": 0,
+      "total": 3,
+      "peak_level": 1,
+      "counties": "Wasco",
+      "fires": "Grasshopper; No named fire"
+    },
+    {
+      "zip": "97711",
+      "l1": 0,
+      "l2": 1,
+      "l3": 0,
+      "total": 1,
+      "peak_level": 2,
+      "counties": "Jefferson",
+      "fires": "Rowe Creek Complex"
+    },
+    {
+      "zip": "97049",
+      "l1": 677,
+      "l2": 0,
+      "l3": 0,
+      "total": 677,
+      "peak_level": 1,
+      "counties": "Clackamas",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97733",
+      "l1": 299,
+      "l2": 0,
+      "l3": 0,
+      "total": 299,
+      "peak_level": 1,
+      "counties": "Klamath",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97530",
+      "l1": 208,
+      "l2": 0,
+      "l3": 0,
+      "total": 208,
+      "peak_level": 1,
+      "counties": "Jackson",
+      "fires": "Upper Applegate"
+    },
+    {
+      "zip": "97737",
+      "l1": 59,
+      "l2": 0,
+      "l3": 0,
+      "total": 59,
+      "peak_level": 1,
+      "counties": "Klamath",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97833",
+      "l1": 23,
+      "l2": 0,
+      "l3": 0,
+      "total": 23,
+      "peak_level": 1,
+      "counties": "Baker",
+      "fires": "Anthony Fire"
+    },
+    {
+      "zip": "97828",
+      "l1": 17,
+      "l2": 0,
+      "l3": 0,
+      "total": 17,
+      "peak_level": 1,
+      "counties": "Wallowa",
+      "fires": "Burnt Creek Fire"
+    },
+    {
+      "zip": "97721",
+      "l1": 8,
+      "l2": 0,
+      "l3": 0,
+      "total": 8,
+      "peak_level": 1,
+      "counties": "Harney",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97739",
+      "l1": 2,
+      "l2": 0,
+      "l3": 0,
+      "total": 2,
+      "peak_level": 1,
+      "counties": "Klamath",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97830",
+      "l1": 2,
+      "l2": 0,
+      "l3": 0,
+      "total": 2,
+      "peak_level": 1,
+      "counties": "Wheeler",
+      "fires": "Rowe Creek Complex"
+    },
+    {
+      "zip": "97067",
+      "l1": 1,
+      "l2": 0,
+      "l3": 0,
+      "total": 1,
+      "peak_level": 1,
+      "counties": "Clackamas",
+      "fires": "No named fire"
+    }
+  ],
+  "note": "Reconciled 2026-08-09 to match the morning report's evac_raw.json snapshot (fetched 2026-08-09T14:45:02.000Z / August 9, 2026, 7:45 AM PDT) rather than a separate live pull. 93.7% of 7,554 total addresses (7,078) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 476 addresses (L1:344 L2:78 L3:54, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+}
