@@ -160,10 +160,26 @@ const COUNTY_CENTROIDS = {"Morrow":[-119.60,45.40],"Deschutes":[-121.20,43.90],"
   "Polk":[-123.40,44.90],"Lincoln":[-124.00,44.60],"Tillamook":[-123.80,45.45],"Clatsop":[-123.80,46.10],
   "Benton":[-123.40,44.50],"Linn":[-122.50,44.50],"Coos":[-124.10,43.20],"Curry":[-124.20,42.50]};
 
-function radiusFor(acres, maxAcres) {
+// Fixed, season-wide scale — added 2026-08-12 per Matt. Previously maxAcres was
+// recomputed PER DATE from that day's own fires, so a fire's marker could
+// visibly grow or shrink on the slider purely because some OTHER fire got
+// bigger/smaller that day, not because the fire itself changed — misleading
+// when scrubbing through history. Computed once, globally, across every fire
+// on every date (not just today's) so it's correct even in the edge case of a
+// fire whose recorded acreage was later revised down (see the MANUAL ACRES
+// OVERRIDE notes in the PDFs) — a fixed denominator means a marker's size on
+// any given date now reflects that fire's own acreage, comparable day to day.
+let GLOBAL_MAX_ACRES = 1;
+for (const d of DATES) {
+  for (const f of (DAILY[d] || [])) {
+    if ((f.acres || 0) > GLOBAL_MAX_ACRES) GLOBAL_MAX_ACRES = f.acres;
+  }
+}
+
+function radiusFor(acres) {
   const MIN = 4, MAX = 22;
   const a = Math.max(0, acres || 0);
-  const t = Math.sqrt(a / Math.max(1, maxAcres));
+  const t = Math.sqrt(a / GLOBAL_MAX_ACRES);
   return MIN + (MAX - MIN) * t;
 }
 
@@ -206,7 +222,6 @@ function render(date) {
   markerLayer.clearLayers();
   alwaysOnLabels.clearLayers();
   const fires = DAILY[date] || [];
-  const maxAcres = Math.max(1, ...fires.map(f => f.acres || 0));
   let activeN = 0, containedN = 0, totalAcres = 0;
   for (const f0 of fires) {
     let lat = f0.lat, lon = f0.lon, locationMatched = f0.location_matched;
@@ -221,7 +236,7 @@ function render(date) {
     totalAcres += (f.acres || 0);
     const isMega = isActive && (f.acres || 0) >= MEGA_FIRE_ACRES;
     const color = isMega ? COLOR_MEGA : (isActive ? COLOR_ACTIVE : COLOR_CONTAINED);
-    const r = radiusFor(f.acres, maxAcres);
+    const r = radiusFor(f.acres);
     const marker = L.circleMarker([lat, lon], {
       radius: r, color: '#fff', weight: 1, fillColor: color, fillOpacity: 0.85,
     });
