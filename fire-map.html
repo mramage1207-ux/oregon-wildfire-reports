@@ -139,6 +139,27 @@ dateSlider.addEventListener('input', () => {
 
 const fmtNum = n => (n || 0).toLocaleString();
 
+// County-centroid fallback — added 2026-08-12. Live (today-forward) snapshots
+// come straight from push_to_github.py's map_fires and, for a handful of
+// legacy/manually-tracked fires the current database has never gotten real
+// WFIGS coordinates for (e.g. Riverview Fire, Riverside OSFM Support — both
+// pre-date this season's coordinate sync), lat/lon is null. The homepage's
+// static SVG map already has this exact fallback (its own CC dict in
+// drawMap()); backfilled dates already get it too (county centroid, computed
+// in Python by backfill_fire_map_snapshots.py). This map's render() was the
+// only path silently DROPPING those fires instead of falling back — fixed by
+// applying the identical table here, so a fire with no coordinates still
+// shows up (at its county's centroid) rather than vanishing from the map.
+const COUNTY_CENTROIDS = {"Morrow":[-119.60,45.40],"Deschutes":[-121.20,43.90],"Jackson":[-122.70,42.50],
+  "Klamath":[-121.50,42.60],"Lane":[-122.80,43.90],"Douglas":[-123.10,43.20],"Marion":[-122.90,44.90],
+  "Clackamas":[-122.20,45.10],"Multnomah":[-122.50,45.55],"Jefferson":[-121.10,44.60],"Wasco":[-121.00,45.30],
+  "Crook":[-120.50,44.30],"Harney":[-118.90,43.00],"Lake":[-120.30,42.70],"Grant":[-118.90,44.50],
+  "Union":[-117.90,45.30],"Wallowa":[-117.30,45.60],"Baker":[-117.60,44.80],"Malheur":[-117.70,43.40],
+  "Umatilla":[-118.70,45.60],"Gilliam":[-120.00,45.40],"Wheeler":[-120.00,44.70],"Sherman":[-120.70,45.40],
+  "Hood River":[-121.60,45.50],"Columbia":[-123.20,46.00],"Washington":[-123.00,45.50],"Yamhill":[-123.30,45.30],
+  "Polk":[-123.40,44.90],"Lincoln":[-124.00,44.60],"Tillamook":[-123.80,45.45],"Clatsop":[-123.80,46.10],
+  "Benton":[-123.40,44.50],"Linn":[-122.50,44.50],"Coos":[-124.10,43.20],"Curry":[-124.20,42.50]};
+
 function radiusFor(acres, maxAcres) {
   const MIN = 4, MAX = 22;
   const a = Math.max(0, acres || 0);
@@ -187,15 +208,21 @@ function render(date) {
   const fires = DAILY[date] || [];
   const maxAcres = Math.max(1, ...fires.map(f => f.acres || 0));
   let activeN = 0, containedN = 0, totalAcres = 0;
-  for (const f of fires) {
-    if (!f.lat || !f.lon) continue;
+  for (const f0 of fires) {
+    let lat = f0.lat, lon = f0.lon, locationMatched = f0.location_matched;
+    if ((!lat || !lon) && COUNTY_CENTROIDS[f0.county]) {
+      [lon, lat] = COUNTY_CENTROIDS[f0.county];
+      locationMatched = false;
+    }
+    if (!lat || !lon) continue;  // no real coords AND no known county — nothing left to plot
+    const f = { ...f0, location_matched: locationMatched };
     const isActive = f.status === 'Active';
     if (isActive) activeN++; else containedN++;
     totalAcres += (f.acres || 0);
     const isMega = isActive && (f.acres || 0) >= MEGA_FIRE_ACRES;
     const color = isMega ? COLOR_MEGA : (isActive ? COLOR_ACTIVE : COLOR_CONTAINED);
     const r = radiusFor(f.acres, maxAcres);
-    const marker = L.circleMarker([f.lat, f.lon], {
+    const marker = L.circleMarker([lat, lon], {
       radius: r, color: '#fff', weight: 1, fillColor: color, fillOpacity: 0.85,
     });
     marker.on('click', () => showDetails(f));
