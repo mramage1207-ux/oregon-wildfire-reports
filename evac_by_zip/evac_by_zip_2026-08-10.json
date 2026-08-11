@@ -1,39 +1,39 @@
 {
   "date": "2026-08-10",
-  "generated_at": "2026-08-10T15:16:32Z",
-  "as_of_iso": "2026-08-10T14:45:02.000Z",
-  "as_of_display": "August 10, 2026, 7:45 AM PDT",
+  "generated_at": "2026-08-10T23:01:19Z",
+  "as_of_iso": "2026-08-10T22:46:07.000Z",
+  "as_of_display": "August 10, 2026, 3:46 PM PDT",
   "totals": {
-    "l1": 3616,
-    "l2": 2844,
-    "l3": 1165,
-    "total": 7625,
-    "zip_count": 48
+    "l1": 3818,
+    "l2": 2170,
+    "l3": 1470,
+    "total": 7458,
+    "zip_count": 44
   },
   "unmatched": {
-    "l1": 341,
-    "l2": 86,
-    "l3": 54,
-    "total": 481,
+    "l1": 342,
+    "l2": 64,
+    "l3": 55,
+    "total": 461,
     "zone_count": 0
   },
   "unmatched_zones": [],
   "reconciled_total": {
-    "l1": 3957,
-    "l2": 2930,
-    "l3": 1219,
-    "total": 8106
+    "l1": 4160,
+    "l2": 2234,
+    "l3": 1525,
+    "total": 7919
   },
   "zips": [
     {
       "zip": "97063",
-      "l1": 1,
-      "l2": 1146,
+      "l1": 217,
+      "l2": 930,
       "l3": 0,
       "total": 1147,
       "peak_level": 2,
       "counties": "Wasco",
-      "fires": "Grasshopper; No named fire"
+      "fires": "Grasshopper"
     },
     {
       "zip": "97623",
@@ -48,22 +48,22 @@
     {
       "zip": "97886",
       "l1": 33,
-      "l2": 241,
-      "l3": 369,
-      "total": 643,
+      "l2": 13,
+      "l3": 598,
+      "total": 644,
       "peak_level": 3,
       "counties": "Umatilla, Union",
       "fires": "No named fire"
     },
     {
       "zip": "97754",
-      "l1": 130,
-      "l2": 199,
-      "l3": 138,
-      "total": 467,
+      "l1": 131,
+      "l2": 198,
+      "l3": 139,
+      "total": 468,
       "peak_level": 3,
       "counties": "Crook, Wheeler",
-      "fires": "No named fire; Rowe Creek Complex"
+      "fires": "Rowe Creek Complex"
     },
     {
       "zip": "97624",
@@ -86,16 +86,6 @@
       "fires": "No named fire"
     },
     {
-      "zip": "97750",
-      "l1": 198,
-      "l2": 84,
-      "l3": 1,
-      "total": 283,
-      "peak_level": 3,
-      "counties": "Grant, Wheeler",
-      "fires": "No named fire; Rowe Creek Complex; Shingle"
-    },
-    {
       "zip": "97041",
       "l1": 162,
       "l2": 66,
@@ -103,17 +93,17 @@
       "total": 232,
       "peak_level": 3,
       "counties": "Clackamas, Hood River",
-      "fires": "No named fire"
+      "fires": "Grasshopper"
     },
     {
       "zip": "97021",
       "l1": 76,
-      "l2": 139,
-      "l3": 3,
+      "l2": 66,
+      "l3": 76,
       "total": 218,
       "peak_level": 3,
       "counties": "Wasco",
-      "fires": "Grasshopper; No named fire"
+      "fires": "Grasshopper"
     },
     {
       "zip": "97639",
@@ -128,8 +118,8 @@
     {
       "zip": "97810",
       "l1": 17,
-      "l2": 29,
-      "l3": 70,
+      "l2": 23,
+      "l3": 76,
       "total": 116,
       "peak_level": 3,
       "counties": "Umatilla",
@@ -216,26 +206,6 @@
       "fires": "No named fire"
     },
     {
-      "zip": "97720",
-      "l1": 5,
-      "l2": 3,
-      "l3": 1,
-      "total": 9,
-      "peak_level": 3,
-      "counties": "Harney",
-      "fires": "No named fire"
-    },
-    {
-      "zip": "97738",
-      "l1": 1,
-      "l2": 3,
-      "l3": 2,
-      "total": 6,
-      "peak_level": 3,
-      "counties": "Harney",
-      "fires": "No named fire"
-    },
-    {
       "zip": "97870",
       "l1": 0,
       "l2": 1,
@@ -283,7 +253,17 @@
       "total": 836,
       "peak_level": 1,
       "counties": "Clackamas, Hood River",
-      "fires": "No named fire"
+      "fires": "Grasshopper"
+    },
+    {
+      "zip": "97750",
+      "l1": 197,
+      "l2": 78,
+      "l3": 0,
+      "total": 275,
+      "peak_level": 2,
+      "counties": "Grant, Wheeler",
+      "fires": "Rowe Creek Complex; Shingle"
     },
     {
       "zip": "97058",
@@ -293,27 +273,7 @@
       "total": 145,
       "peak_level": 2,
       "counties": "Wasco",
-      "fires": "No named fire"
-    },
-    {
-      "zip": "97523",
-      "l1": 0,
-      "l2": 136,
-      "l3": 0,
-      "total": 136,
-      "peak_level": 2,
-      "counties": "Josephine",
-      "fires": "No named fire"
-    },
-    {
-      "zip": "97825",
-      "l1": 135,
-      "l2": 0,
-      "l3": 0,
-      "total": 135,
-      "peak_level": 1,
-      "counties": "Grant, Wheeler",
-      "fires": "Shingle"
+      "fires": "Grasshopper"
     },
     {
       "zip": "97876",
@@ -366,16 +326,6 @@
       "fires": "No named fire"
     },
     {
-      "zip": "97741",
-      "l1": 2,
-      "l2": 2,
-      "l3": 0,
-      "total": 4,
-      "peak_level": 2,
-      "counties": "Jefferson",
-      "fires": "Rowe Creek Complex"
-    },
-    {
       "zip": "97037",
       "l1": 3,
       "l2": 0,
@@ -383,7 +333,7 @@
       "total": 3,
       "peak_level": 1,
       "counties": "Wasco",
-      "fires": "Grasshopper; No named fire"
+      "fires": "Grasshopper"
     },
     {
       "zip": "97711",
@@ -403,7 +353,7 @@
       "total": 677,
       "peak_level": 1,
       "counties": "Clackamas",
-      "fires": "No named fire"
+      "fires": "Grasshopper"
     },
     {
       "zip": "97733",
@@ -414,6 +364,16 @@
       "peak_level": 1,
       "counties": "Klamath",
       "fires": "No named fire"
+    },
+    {
+      "zip": "97825",
+      "l1": 135,
+      "l2": 0,
+      "l3": 0,
+      "total": 135,
+      "peak_level": 1,
+      "counties": "Grant",
+      "fires": "Shingle"
     },
     {
       "zip": "97737",
@@ -456,16 +416,6 @@
       "fires": "Burnt Creek Fire"
     },
     {
-      "zip": "97721",
-      "l1": 8,
-      "l2": 0,
-      "l3": 0,
-      "total": 8,
-      "peak_level": 1,
-      "counties": "Harney",
-      "fires": "No named fire"
-    },
-    {
       "zip": "97739",
       "l1": 2,
       "l2": 0,
@@ -474,6 +424,16 @@
       "peak_level": 1,
       "counties": "Klamath",
       "fires": "No named fire"
+    },
+    {
+      "zip": "97741",
+      "l1": 2,
+      "l2": 0,
+      "l3": 0,
+      "total": 2,
+      "peak_level": 1,
+      "counties": "",
+      "fires": "Rowe Creek Complex"
     },
     {
       "zip": "97830",
@@ -503,8 +463,8 @@
       "total": 1,
       "peak_level": 1,
       "counties": "Clackamas",
-      "fires": "No named fire"
+      "fires": "Grasshopper"
     }
   ],
-  "note": "Reconciled 2026-08-10 to match the morning report's evac_raw.json snapshot (fetched 2026-08-10T14:45:02.000Z / August 10, 2026, 7:45 AM PDT) rather than a separate live pull. 94.1% of 8,106 total addresses (7,625) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 481 addresses (L1:341 L2:86 L3:54, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+  "note": "Reconciled 2026-08-10 to match the morning report's evac_raw.json snapshot (fetched 2026-08-10T22:46:07.000Z / August 10, 2026, 3:46 PM PDT) rather than a separate live pull. 94.2% of 7,919 total addresses (7,458) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 461 addresses (L1:342 L2:64 L3:55, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
 }
