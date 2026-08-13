@@ -1,28 +1,28 @@
 {
   "date": "2026-08-13",
-  "generated_at": "2026-08-13T15:16:40Z",
+  "generated_at": "2026-08-13T16:01:15Z",
   "as_of_iso": "2026-08-13T14:45:10.000Z",
   "as_of_display": "August 13, 2026, 7:45 AM PDT",
   "totals": {
-    "l1": 4922,
+    "l1": 3406,
     "l2": 2693,
     "l3": 1570,
-    "total": 9185,
+    "total": 7669,
     "zip_count": 41
   },
   "unmatched": {
-    "l1": 182,
+    "l1": 178,
     "l2": 54,
     "l3": 59,
-    "total": 295,
+    "total": 291,
     "zone_count": 0
   },
   "unmatched_zones": [],
   "reconciled_total": {
-    "l1": 5104,
+    "l1": 3584,
     "l2": 2747,
     "l3": 1629,
-    "total": 9480
+    "total": 7960
   },
   "zips": [
     {
@@ -187,10 +187,10 @@
     },
     {
       "zip": "97023",
-      "l1": 2,
+      "l1": 1,
       "l2": 0,
       "l3": 2,
-      "total": 4,
+      "total": 3,
       "peak_level": 3,
       "counties": "Clackamas",
       "fires": "No named fire"
@@ -217,10 +217,10 @@
     },
     {
       "zip": "97028",
-      "l1": 1672,
+      "l1": 836,
       "l2": 0,
       "l3": 0,
-      "total": 1672,
+      "total": 836,
       "peak_level": 1,
       "counties": "Clackamas, Hood River",
       "fires": "Grasshopper"
@@ -347,10 +347,10 @@
     },
     {
       "zip": "97049",
-      "l1": 1355,
+      "l1": 677,
       "l2": 0,
       "l3": 0,
-      "total": 1355,
+      "total": 677,
       "peak_level": 1,
       "counties": "Clackamas",
       "fires": "Grasshopper"
@@ -416,16 +416,6 @@
       "fires": "No named fire"
     },
     {
-      "zip": "97067",
-      "l1": 2,
-      "l2": 0,
-      "l3": 0,
-      "total": 2,
-      "peak_level": 1,
-      "counties": "Clackamas",
-      "fires": "Grasshopper"
-    },
-    {
       "zip": "97711",
       "l1": 1,
       "l2": 0,
@@ -434,7 +424,17 @@
       "peak_level": 1,
       "counties": "Jefferson",
       "fires": "Rowe Creek Complex"
+    },
+    {
+      "zip": "97067",
+      "l1": 1,
+      "l2": 0,
+      "l3": 0,
+      "total": 1,
+      "peak_level": 1,
+      "counties": "Clackamas",
+      "fires": "Grasshopper"
     }
   ],
-  "note": "Reconciled 2026-08-13 to match the morning report's evac_raw.json snapshot (fetched 2026-08-13T14:45:10.000Z / August 13, 2026, 7:45 AM PDT) rather than a separate live pull. 96.9% of 9,480 total addresses (9,185) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 295 addresses (L1:182 L2:54 L3:59, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+  "note": "Reconciled 2026-08-13 to match the morning report's evac_raw.json snapshot (fetched 2026-08-13T14:45:10.000Z / August 13, 2026, 7:45 AM PDT) rather than a separate live pull. 96.3% of 7,960 total addresses (7,669) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 291 addresses (L1:178 L2:54 L3:59, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
 }
