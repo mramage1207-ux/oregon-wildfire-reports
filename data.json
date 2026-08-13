@@ -706,9 +706,9 @@
     }
   },
   "exec_summary": {
-    "status": "critical",
-    "headline": "The number of fires with active evacuations is holding steady at 7 since yesterday morning. Over the past 7 days, it is down 12% (8 \u2192 7).",
-    "escalation": "This season has recorded 1 fatality and 157 structures destroyed so far.",
+    "headline": "Total evacuation addresses are down 12% (9,092 \u2192 7,960) since yesterday morning. Total acres burned by large fires this season stands at 2,446,561, up 14,495 acres (0.6%) since yesterday morning. The number of active fires statewide is up 6% (63 \u2192 67) since yesterday morning.",
+    "losses": "This season has recorded 1 fatality and 157 structures destroyed so far. Structure loss is unchanged since yesterday morning.",
+    "has_loss": true,
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 33,

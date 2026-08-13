@@ -38,34 +38,27 @@
       padding: 0 2rem 2.5rem;
     }
     .hero { max-width: 1100px; margin: 0 auto; padding-top: 2rem; }
-    /* Executive summary card — added 2026-07-16 at Matt's request. Sits above
-       the hero stats so non-technical readers see the plain-English takeaway
-       before any raw numbers. */
+    /* Executive summary card — added 2026-07-16 at Matt's request, REDESIGNED
+       2026-08-13 (status tag removed; a "confirmed losses" sub-box is now a
+       standing fixture, red when there's real loss to report this season,
+       green when there isn't — see the exec_summary Python block above for
+       the full rationale). Sits above the hero stats so non-technical
+       readers see the plain-English takeaway before any raw numbers. */
     .exec-summary {
       background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
       border-left: 5px solid #718096; border-radius: 12px;
       padding: 1.1rem 1.4rem; margin-bottom: 1.1rem; color: #fff;
     }
-    .exec-summary.status-critical { border-left-color: #e53e3e; }
-    .exec-summary.status-serious  { border-left-color: #dd6b20; }
-    .exec-summary.status-elevated { border-left-color: #d69e2e; }
-    .exec-summary.status-calm     { border-left-color: #38a169; }
-    .exec-summary-tag {
-      display: inline-block; font-size: .68rem; font-weight: 800; letter-spacing: .5px;
-      text-transform: uppercase; padding: .22rem .6rem; border-radius: 20px; margin-right: .6rem;
-    }
-    .exec-summary-tag.status-critical { background: #e53e3e; color: #fff; }
-    .exec-summary-tag.status-serious  { background: #dd6b20; color: #fff; }
-    .exec-summary-tag.status-elevated { background: #d69e2e; color: #3b2e00; }
-    .exec-summary-tag.status-calm     { background: #38a169; color: #fff; }
     .exec-summary-label { font-size: .72rem; color: rgba(255,255,255,.55); }
-    .exec-summary-headline { font-size: 1rem; font-weight: 600; line-height: 1.5; margin-top: .7rem; }
-    .exec-summary-escalation {
-      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18);
+    .exec-summary-headline { font-size: 1rem; font-weight: 600; line-height: 1.5; margin-top: .4rem; }
+    .exec-summary-losses {
       border-radius: 8px; padding: .7rem .9rem; margin-top: .8rem; font-size: .85rem; line-height: 1.5;
     }
-    .exec-summary-escalation-label { font-size: .75rem; font-weight: 700; margin-bottom: .25rem; color: #fc8181; }
-    .exec-summary.status-serious .exec-summary-escalation-label { color: #f6ad55; }
+    .exec-summary-losses.has-loss { background: rgba(229,62,62,.16); border: 1px solid rgba(229,62,62,.4); }
+    .exec-summary-losses.no-loss  { background: rgba(56,161,105,.14); border: 1px solid rgba(56,161,105,.35); }
+    .exec-summary-losses-label { font-size: .75rem; font-weight: 700; margin-bottom: .25rem; }
+    .exec-summary-losses.has-loss .exec-summary-losses-label { color: #fc8181; }
+    .exec-summary-losses.no-loss  .exec-summary-losses-label { color: #9ae6b4; }
     .exec-summary-closing { font-size: .78rem; color: rgba(255,255,255,.6); margin-top: .7rem; line-height: 1.5; }
     .hero-label {
       font-size: .72rem; font-weight: 700; letter-spacing: 1.2px;
@@ -1598,25 +1591,27 @@ function drawCountyChart(rows) {
 
 // ── EXECUTIVE SUMMARY ───────────────────────────────────────────────────────
 // Added 2026-07-16 at Matt's request ("my customers are not data savvy").
-// The card's text is fully generated server-side (see push_to_github.py's
-// exec_summary block) so all the materiality/escalation logic lives in one
-// place; this function just paints whatever data.exec_summary contains.
+// REDESIGNED 2026-08-13: no more status tag; the "confirmed losses" box is a
+// standing fixture (always rendered, red if there's real loss this season,
+// green if not) instead of a conditional escalation callout. The card's text
+// is fully generated server-side (see push_to_github.py's exec_summary
+// block) so all the materiality/threshold logic lives in one place; this
+// function just paints whatever data.exec_summary contains.
 function renderExecSummary(es) {
   const container = document.getElementById('exec-summary-card');
   if (!container) return;
   if (!es || !es.headline) { container.innerHTML = ''; return; }
-  const statusLabel = { critical: 'Critical', serious: 'Serious', elevated: 'Elevated', calm: 'Calm' }[es.status] || 'Update';
-  const escalationHtml = es.escalation
-    ? `<div class="exec-summary-escalation">
-         <div class="exec-summary-escalation-label">&#9888;&nbsp; ${es.status === 'critical' ? 'Real loss reported' : 'Escalating risk to residents'}</div>
-         <div>${es.escalation}</div>
-       </div>`
-    : '';
+  const lossClass = es.has_loss ? 'has-loss' : 'no-loss';
+  const lossIcon  = es.has_loss ? '&#9888;' : '&#10003;';
+  const lossLabel = es.has_loss ? 'Confirmed losses this season' : 'No losses reported this season';
   container.innerHTML = `
-    <div class="exec-summary status-${es.status}">
-      <div><span class="exec-summary-tag status-${es.status}">${statusLabel}</span><span class="exec-summary-label">Executive Summary &middot; updated with this report</span></div>
+    <div class="exec-summary">
+      <div class="exec-summary-label">Executive Summary &middot; updated with this report</div>
       <div class="exec-summary-headline">${es.headline}</div>
-      ${escalationHtml}
+      <div class="exec-summary-losses ${lossClass}">
+        <div class="exec-summary-losses-label">${lossIcon}&nbsp; ${lossLabel}</div>
+        <div>${es.losses}</div>
+      </div>
       <div class="exec-summary-closing">${es.closing || ''}</div>
     </div>`;
 }
