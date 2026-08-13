@@ -600,19 +600,19 @@
     <div class="chart-sub">Total acres burned (left axis) &amp; structures destroyed by type (right axis), sorted descending by acres</div>
     <div class="chart-legend">
       <div class="legend-item">
-        <div class="legend-dot" style="background:#e67e22;"></div> Total Acres
+        <div class="legend-dot" style="background:#e67e22;"></div> Total Acres: <b id="legend-total-acres">&mdash;</b>
       </div>
       <div class="legend-item">
-        <div class="legend-dot sq" style="background:#1a2744;"></div> Residential
+        <div class="legend-dot sq" style="background:#1a2744;"></div> Residential: <b id="legend-total-res">&mdash;</b>
       </div>
       <div class="legend-item">
-        <div class="legend-dot sq" style="background:#4C7EA8;"></div> Commercial
+        <div class="legend-dot sq" style="background:#4C7EA8;"></div> Commercial: <b id="legend-total-comm">&mdash;</b>
       </div>
       <div class="legend-item">
-        <div class="legend-dot sq" style="background:#A9C6DE;"></div> Other
+        <div class="legend-dot sq" style="background:#A9C6DE;"></div> Other: <b id="legend-total-other">&mdash;</b>
       </div>
       <div class="legend-item">
-        <div class="legend-dot sq" style="background:#999999;"></div> Uncategorized
+        <div class="legend-dot sq" style="background:#999999;"></div> Uncategorized: <b id="legend-total-unc">&mdash;</b>
       </div>
     </div>
     <svg class="trend" viewBox="0 0 1000 220" preserveAspectRatio="none" id="countyChart"
@@ -1411,6 +1411,31 @@ function niceTicks(maxVal, target) {
 function drawCountyChart(rows) {
   const svg = document.getElementById('countyChart');
   if (!svg || !rows || !rows.length) return;
+
+  // Legend totals — added 2026-08-13 per Matt's request to mirror the PDF's
+  // Section 5 legend line (same day's fix), applied here to the website too.
+  // Summed from the SAME `rows` array the chart itself draws from
+  // (data.county_structure_data), so this can never drift out of sync with
+  // the bars below — identical invariant to the PDF's _cbc_total_acres/
+  // _cbc_totals computation in generate_wildfire_report.py.
+  const legendTotals = {acres:0, res:0, comm:0, other:0, unc:0};
+  rows.forEach(r => {
+    legendTotals.acres += r.acres || 0;
+    legendTotals.res   += r.res   || 0;
+    legendTotals.comm  += r.comm  || 0;
+    legendTotals.other += r.other || 0;
+    legendTotals.unc   += r.unc   || 0;
+  });
+  const _setLegend = (id, v) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = Math.round(v).toLocaleString();
+  };
+  _setLegend('legend-total-acres', legendTotals.acres);
+  _setLegend('legend-total-res',   legendTotals.res);
+  _setLegend('legend-total-comm',  legendTotals.comm);
+  _setLegend('legend-total-other', legendTotals.other);
+  _setLegend('legend-total-unc',   legendTotals.unc);
+
   const W=1000, H=220, P={t:14, r:78, b:34, l:52};
   const cW=W-P.l-P.r, cH=H-P.t-P.b;
   const n = rows.length;
