@@ -1,27 +1,42 @@
 {
   "date": "2026-08-14",
-  "generated_at": "2026-08-14T16:16:20Z",
-  "as_of_iso": "2026-08-14T16:14:24.000Z",
-  "as_of_display": "August 14, 2026, 9:14 AM PDT",
+  "generated_at": "2026-08-14T23:02:05Z",
+  "as_of_iso": "2026-08-14T22:45:06.000Z",
+  "as_of_display": "August 14, 2026, 3:45 PM PDT",
   "totals": {
-    "l1": 4279,
-    "l2": 2859,
-    "l3": 1871,
-    "total": 9009,
+    "l1": 4306,
+    "l2": 2890,
+    "l3": 1801,
+    "total": 8997,
     "zip_count": 43
   },
   "unmatched": {
-    "l1": 179,
-    "l2": 59,
-    "l3": 52,
-    "total": 290,
-    "zone_count": 0
+    "l1": 183,
+    "l2": 58,
+    "l3": 61,
+    "total": 302,
+    "zone_count": 2
   },
-  "unmatched_zones": [],
+  "unmatched_zones": [
+    {
+      "zone_name": "US-OR-CRO-CRR-8S-T",
+      "level": 3,
+      "addresses": 5,
+      "fire_name": "Rowe Creek Complex",
+      "county": "Crook"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-1381-C",
+      "level": 3,
+      "addresses": 9,
+      "fire_name": "Wrights Spring",
+      "county": "Klamath"
+    }
+  ],
   "reconciled_total": {
-    "l1": 4458,
-    "l2": 2918,
-    "l3": 1923,
+    "l1": 4489,
+    "l2": 2948,
+    "l3": 1862,
     "total": 9299
   },
   "zips": [
@@ -43,7 +58,7 @@
       "total": 1133,
       "peak_level": 3,
       "counties": "Jackson, Josephine",
-      "fires": "No named fire"
+      "fires": "Fielders Mountain"
     },
     {
       "zip": "97526",
@@ -53,13 +68,13 @@
       "total": 694,
       "peak_level": 3,
       "counties": "Jackson, Josephine",
-      "fires": "No named fire"
+      "fires": "Fielders Mountain"
     },
     {
       "zip": "97623",
-      "l1": 173,
-      "l2": 407,
-      "l3": 87,
+      "l1": 177,
+      "l2": 415,
+      "l3": 75,
       "total": 667,
       "peak_level": 3,
       "counties": "Klamath",
@@ -88,19 +103,19 @@
     {
       "zip": "97754",
       "l1": 130,
-      "l2": 224,
-      "l3": 112,
-      "total": 466,
+      "l2": 229,
+      "l3": 102,
+      "total": 461,
       "peak_level": 3,
       "counties": "Crook, Wheeler",
       "fires": "Rowe Creek Complex"
     },
     {
       "zip": "97624",
-      "l1": 182,
-      "l2": 162,
-      "l3": 116,
-      "total": 460,
+      "l1": 184,
+      "l2": 165,
+      "l3": 109,
+      "total": 458,
       "peak_level": 3,
       "counties": "Klamath",
       "fires": "Wrights Spring"
@@ -117,10 +132,10 @@
     },
     {
       "zip": "97639",
-      "l1": 4,
-      "l2": 87,
-      "l3": 81,
-      "total": 172,
+      "l1": 13,
+      "l2": 111,
+      "l3": 43,
+      "total": 167,
       "peak_level": 3,
       "counties": "Klamath",
       "fires": "Wrights Spring"
@@ -144,16 +159,6 @@
       "peak_level": 3,
       "counties": "Umatilla",
       "fires": "No named fire"
-    },
-    {
-      "zip": "97621",
-      "l1": 49,
-      "l2": 12,
-      "l3": 3,
-      "total": 64,
-      "peak_level": 3,
-      "counties": "Klamath",
-      "fires": "Wrights Spring"
     },
     {
       "zip": "97625",
@@ -234,6 +239,16 @@
       "peak_level": 2,
       "counties": "Union",
       "fires": "No named fire"
+    },
+    {
+      "zip": "97621",
+      "l1": 61,
+      "l2": 3,
+      "l3": 0,
+      "total": 64,
+      "peak_level": 2,
+      "counties": "Klamath",
+      "fires": "Wrights Spring"
     },
     {
       "zip": "97603",
@@ -423,7 +438,7 @@
       "total": 9,
       "peak_level": 1,
       "counties": "Jackson",
-      "fires": "No named fire"
+      "fires": "Fielders Mountain"
     },
     {
       "zip": "97845",
@@ -443,7 +458,7 @@
       "total": 2,
       "peak_level": 1,
       "counties": "Jackson, Josephine",
-      "fires": "No named fire"
+      "fires": "Fielders Mountain"
     },
     {
       "zip": "97067",
@@ -456,5 +471,5 @@
       "fires": "Grasshopper"
     }
   ],
-  "note": "Reconciled 2026-08-14 to match the morning report's evac_raw.json snapshot (fetched 2026-08-14T16:14:24.000Z / August 14, 2026, 9:14 AM PDT) rather than a separate live pull. 96.9% of 9,299 total addresses (9,009) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 290 addresses (L1:179 L2:59 L3:52, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+  "note": "Reconciled 2026-08-14 to match the morning report's evac_raw.json snapshot (fetched 2026-08-14T22:45:06.000Z / August 14, 2026, 3:45 PM PDT) rather than a separate live pull. 96.8% of 9,299 total addresses (8,997) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 302 addresses (L1:183 L2:58 L3:61, spanning 2 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
 }
