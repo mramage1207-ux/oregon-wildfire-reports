@@ -1,28 +1,64 @@
 {
   "date": "2026-08-13",
-  "generated_at": "2026-08-13T16:01:15Z",
-  "as_of_iso": "2026-08-13T14:45:10.000Z",
-  "as_of_display": "August 13, 2026, 7:45 AM PDT",
+  "generated_at": "2026-08-13T23:01:58Z",
+  "as_of_iso": "2026-08-13T22:45:05.000Z",
+  "as_of_display": "August 13, 2026, 3:45 PM PDT",
   "totals": {
-    "l1": 3406,
-    "l2": 2693,
-    "l3": 1570,
-    "total": 7669,
-    "zip_count": 41
+    "l1": 2924,
+    "l2": 2793,
+    "l3": 1374,
+    "total": 7091,
+    "zip_count": 39
   },
   "unmatched": {
     "l1": 178,
-    "l2": 54,
-    "l3": 59,
-    "total": 291,
-    "zone_count": 0
+    "l2": 93,
+    "l3": 76,
+    "total": 347,
+    "zone_count": 5
   },
-  "unmatched_zones": [],
+  "unmatched_zones": [
+    {
+      "zone_name": "US-OR-KLA-KLA-1957-A",
+      "level": 2,
+      "addresses": 10,
+      "fire_name": "Wrights Spring",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-1719-B",
+      "level": 2,
+      "addresses": 24,
+      "fire_name": "Wrights Spring",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-1957-B",
+      "level": 3,
+      "addresses": 19,
+      "fire_name": "Wrights Spring",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-1718-A",
+      "level": 3,
+      "addresses": 3,
+      "fire_name": "Wrights Spring",
+      "county": "Klamath"
+    },
+    {
+      "zone_name": "US-OR-KLA-KLA-1718-B",
+      "level": 3,
+      "addresses": 2,
+      "fire_name": "Wrights Spring",
+      "county": "Klamath"
+    }
+  ],
   "reconciled_total": {
-    "l1": 3584,
-    "l2": 2747,
-    "l3": 1629,
-    "total": 7960
+    "l1": 3102,
+    "l2": 2886,
+    "l3": 1450,
+    "total": 7438
   },
   "zips": [
     {
@@ -36,16 +72,6 @@
       "fires": "Grasshopper"
     },
     {
-      "zip": "97623",
-      "l1": 173,
-      "l2": 296,
-      "l3": 199,
-      "total": 668,
-      "peak_level": 3,
-      "counties": "Klamath",
-      "fires": "Wrights Spring"
-    },
-    {
       "zip": "97886",
       "l1": 33,
       "l2": 13,
@@ -54,6 +80,16 @@
       "peak_level": 3,
       "counties": "Umatilla, Union",
       "fires": "No named fire"
+    },
+    {
+      "zip": "97623",
+      "l1": 173,
+      "l2": 373,
+      "l3": 64,
+      "total": 610,
+      "peak_level": 3,
+      "counties": "Klamath",
+      "fires": "Wrights Spring"
     },
     {
       "zip": "97021",
@@ -68,9 +104,9 @@
     {
       "zip": "97754",
       "l1": 130,
-      "l2": 199,
-      "l3": 138,
-      "total": 467,
+      "l2": 224,
+      "l3": 112,
+      "total": 466,
       "peak_level": 3,
       "counties": "Crook, Wheeler",
       "fires": "Rowe Creek Complex"
@@ -146,16 +182,6 @@
       "fires": "Wrights Spring"
     },
     {
-      "zip": "97907",
-      "l1": 16,
-      "l2": 27,
-      "l3": 1,
-      "total": 44,
-      "peak_level": 3,
-      "counties": "Baker",
-      "fires": "No named fire"
-    },
-    {
       "zip": "97827",
       "l1": 1,
       "l2": 0,
@@ -163,16 +189,6 @@
       "total": 36,
       "peak_level": 3,
       "counties": "Umatilla, Union",
-      "fires": "No named fire"
-    },
-    {
-      "zip": "97905",
-      "l1": 0,
-      "l2": 1,
-      "l3": 32,
-      "total": 33,
-      "peak_level": 3,
-      "counties": "Baker",
       "fires": "No named fire"
     },
     {
@@ -193,16 +209,6 @@
       "total": 3,
       "peak_level": 3,
       "counties": "Clackamas",
-      "fires": "No named fire"
-    },
-    {
-      "zip": "97870",
-      "l1": 0,
-      "l2": 1,
-      "l3": 2,
-      "total": 3,
-      "peak_level": 3,
-      "counties": "Baker",
       "fires": "No named fire"
     },
     {
@@ -276,6 +282,16 @@
       "fires": "Salmon; Salmon/Olive Butte Fires"
     },
     {
+      "zip": "97907",
+      "l1": 9,
+      "l2": 24,
+      "l3": 0,
+      "total": 33,
+      "peak_level": 2,
+      "counties": "Baker",
+      "fires": "No named fire"
+    },
+    {
       "zip": "97856",
       "l1": 0,
       "l2": 26,
@@ -293,6 +309,16 @@
       "total": 24,
       "peak_level": 2,
       "counties": "Grant",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97905",
+      "l1": 17,
+      "l2": 1,
+      "l3": 0,
+      "total": 18,
+      "peak_level": 2,
+      "counties": "Baker",
       "fires": "No named fire"
     },
     {
@@ -346,6 +372,16 @@
       "fires": "Grasshopper"
     },
     {
+      "zip": "97870",
+      "l1": 0,
+      "l2": 2,
+      "l3": 0,
+      "total": 2,
+      "peak_level": 2,
+      "counties": "Baker",
+      "fires": "No named fire"
+    },
+    {
       "zip": "97049",
       "l1": 677,
       "l2": 0,
@@ -356,16 +392,6 @@
       "fires": "Grasshopper"
     },
     {
-      "zip": "97478",
-      "l1": 388,
-      "l2": 0,
-      "l3": 0,
-      "total": 388,
-      "peak_level": 1,
-      "counties": "Lane",
-      "fires": "No named fire"
-    },
-    {
       "zip": "97825",
       "l1": 135,
       "l2": 0,
@@ -374,16 +400,6 @@
       "peak_level": 1,
       "counties": "Grant",
       "fires": "Shingle"
-    },
-    {
-      "zip": "97497",
-      "l1": 104,
-      "l2": 0,
-      "l3": 0,
-      "total": 104,
-      "peak_level": 1,
-      "counties": "Josephine",
-      "fires": "No named fire"
     },
     {
       "zip": "97833",
@@ -436,5 +452,5 @@
       "fires": "Grasshopper"
     }
   ],
-  "note": "Reconciled 2026-08-13 to match the morning report's evac_raw.json snapshot (fetched 2026-08-13T14:45:10.000Z / August 13, 2026, 7:45 AM PDT) rather than a separate live pull. 96.3% of 7,960 total addresses (7,669) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 291 addresses (L1:178 L2:54 L3:59, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+  "note": "Reconciled 2026-08-13 to match the morning report's evac_raw.json snapshot (fetched 2026-08-13T22:45:05.000Z / August 13, 2026, 3:45 PM PDT) rather than a separate live pull. 95.3% of 7,438 total addresses (7,091) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 347 addresses (L1:178 L2:93 L3:76, spanning 5 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
 }
