@@ -1,28 +1,36 @@
 {
   "date": "2026-08-15",
-  "generated_at": "2026-08-15T19:24:46Z",
-  "as_of_iso": "2026-08-15T14:45:04.000Z",
-  "as_of_display": "August 15, 2026, 7:45 AM PDT",
+  "generated_at": "2026-08-15T23:02:06Z",
+  "as_of_iso": "2026-08-15T22:45:10.000Z",
+  "as_of_display": "August 15, 2026, 3:45 PM PDT",
   "totals": {
-    "l1": 4154,
-    "l2": 2845,
-    "l3": 1814,
-    "total": 8813,
-    "zip_count": 38
+    "l1": 3179,
+    "l2": 2776,
+    "l3": 1337,
+    "total": 7292,
+    "zip_count": 36
   },
   "unmatched": {
-    "l1": 177,
-    "l2": 59,
-    "l3": 48,
-    "total": 284,
-    "zone_count": 0
+    "l1": 176,
+    "l2": 76,
+    "l3": 47,
+    "total": 299,
+    "zone_count": 1
   },
-  "unmatched_zones": [],
+  "unmatched_zones": [
+    {
+      "zone_name": "US-OR-JAC-JAC-052",
+      "level": 2,
+      "addresses": 15,
+      "fire_name": "No named fire",
+      "county": "Jackson"
+    }
+  ],
   "reconciled_total": {
-    "l1": 4331,
-    "l2": 2904,
-    "l3": 1862,
-    "total": 9097
+    "l1": 3355,
+    "l2": 2852,
+    "l3": 1384,
+    "total": 7591
   },
   "zips": [
     {
@@ -34,26 +42,6 @@
       "peak_level": 3,
       "counties": "Wasco",
       "fires": "Grasshopper"
-    },
-    {
-      "zip": "97537",
-      "l1": 666,
-      "l2": 7,
-      "l3": 460,
-      "total": 1133,
-      "peak_level": 3,
-      "counties": "Jackson, Josephine",
-      "fires": "Fielders Mountain"
-    },
-    {
-      "zip": "97526",
-      "l1": 679,
-      "l2": 2,
-      "l3": 13,
-      "total": 694,
-      "peak_level": 3,
-      "counties": "Jackson, Josephine",
-      "fires": "Fielders Mountain"
     },
     {
       "zip": "97623",
@@ -104,16 +92,6 @@
       "peak_level": 3,
       "counties": "Klamath",
       "fires": "Wrights Spring"
-    },
-    {
-      "zip": "97041",
-      "l1": 162,
-      "l2": 66,
-      "l3": 4,
-      "total": 232,
-      "peak_level": 3,
-      "counties": "Clackamas, Hood River",
-      "fires": "Grasshopper"
     },
     {
       "zip": "97639",
@@ -214,6 +192,16 @@
       "peak_level": 2,
       "counties": "Wheeler",
       "fires": "No named fire; Rowe Creek Complex"
+    },
+    {
+      "zip": "97041",
+      "l1": 225,
+      "l2": 6,
+      "l3": 0,
+      "total": 231,
+      "peak_level": 2,
+      "counties": "Clackamas, Hood River",
+      "fires": "Grasshopper"
     },
     {
       "zip": "97876",
@@ -356,6 +344,16 @@
       "fires": "Grasshopper"
     },
     {
+      "zip": "97537",
+      "l1": 307,
+      "l2": 0,
+      "l3": 0,
+      "total": 307,
+      "peak_level": 1,
+      "counties": "Jackson",
+      "fires": "Fielders Mountain"
+    },
+    {
       "zip": "97833",
       "l1": 23,
       "l2": 0,
@@ -376,23 +374,13 @@
       "fires": "Burnt Creek Fire"
     },
     {
-      "zip": "97525",
-      "l1": 9,
+      "zip": "97526",
+      "l1": 11,
       "l2": 0,
       "l3": 0,
-      "total": 9,
+      "total": 11,
       "peak_level": 1,
       "counties": "Jackson",
-      "fires": "Fielders Mountain"
-    },
-    {
-      "zip": "97527",
-      "l1": 2,
-      "l2": 0,
-      "l3": 0,
-      "total": 2,
-      "peak_level": 1,
-      "counties": "Jackson, Josephine",
       "fires": "Fielders Mountain"
     },
     {
@@ -406,5 +394,5 @@
       "fires": "Grasshopper"
     }
   ],
-  "note": "Reconciled 2026-08-15 to match the morning report's evac_raw.json snapshot (fetched 2026-08-15T14:45:04.000Z / August 15, 2026, 7:45 AM PDT) rather than a separate live pull. 96.9% of 9,097 total addresses (8,813) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 284 addresses (L1:177 L2:59 L3:48, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+  "note": "Reconciled 2026-08-15 to match the morning report's evac_raw.json snapshot (fetched 2026-08-15T22:45:10.000Z / August 15, 2026, 3:45 PM PDT) rather than a separate live pull. 96.1% of 7,591 total addresses (7,292) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 299 addresses (L1:176 L2:76 L3:47, spanning 1 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
 }
