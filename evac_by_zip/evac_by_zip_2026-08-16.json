@@ -1,28 +1,28 @@
 {
   "date": "2026-08-16",
-  "generated_at": "2026-08-16T15:41:53Z",
-  "as_of_iso": "2026-08-16T14:45:03.000Z",
-  "as_of_display": "August 16, 2026, 7:45 AM PDT",
+  "generated_at": "2026-08-16T23:02:09Z",
+  "as_of_iso": "2026-08-16T22:45:07.000Z",
+  "as_of_display": "August 16, 2026, 3:45 PM PDT",
   "totals": {
-    "l1": 3285,
-    "l2": 2767,
-    "l3": 1218,
-    "total": 7270,
+    "l1": 3251,
+    "l2": 2774,
+    "l3": 1211,
+    "total": 7236,
     "zip_count": 36
   },
   "unmatched": {
     "l1": 179,
-    "l2": 57,
-    "l3": 47,
+    "l2": 60,
+    "l3": 44,
     "total": 283,
     "zone_count": 0
   },
   "unmatched_zones": [],
   "reconciled_total": {
-    "l1": 3464,
-    "l2": 2824,
-    "l3": 1265,
-    "total": 7553
+    "l1": 3430,
+    "l2": 2834,
+    "l3": 1255,
+    "total": 7519
   },
   "zips": [
     {
@@ -77,10 +77,10 @@
     },
     {
       "zip": "97754",
-      "l1": 200,
-      "l2": 199,
-      "l3": 67,
-      "total": 466,
+      "l1": 166,
+      "l2": 206,
+      "l3": 60,
+      "total": 432,
       "peak_level": 3,
       "counties": "Crook, Wheeler",
       "fires": "Rowe Creek Complex"
@@ -386,5 +386,5 @@
       "fires": "Grasshopper"
     }
   ],
-  "note": "Reconciled 2026-08-16 to match the morning report's evac_raw.json snapshot (fetched 2026-08-16T14:45:03.000Z / August 16, 2026, 7:45 AM PDT) rather than a separate live pull. 96.3% of 7,553 total addresses (7,270) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 283 addresses (L1:179 L2:57 L3:47, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+  "note": "Reconciled 2026-08-16 to match the morning report's evac_raw.json snapshot (fetched 2026-08-16T22:45:07.000Z / August 16, 2026, 3:45 PM PDT) rather than a separate live pull. 96.2% of 7,519 total addresses (7,236) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 283 addresses (L1:179 L2:60 L3:44, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
 }
