@@ -1,64 +1,64 @@
 {
-  "last_updated": "2026-08-18",
-  "report_time": "9:19 AM PDT",
-  "report_time_iso": "2026-08-18T16:19:28Z",
-  "current_active_fires": 62,
-  "current_acres_burned": 2020711.5,
-  "current_report_time": "9:19 AM PDT",
-  "current_report_time_iso": "2026-08-18T16:19:28Z",
+  "last_updated": "2026-08-19",
+  "report_time": "8:25 AM PDT",
+  "report_time_iso": "2026-08-19T15:25:59Z",
+  "current_active_fires": 56,
+  "current_acres_burned": 2023269.14,
+  "current_report_time": "8:25 AM PDT",
+  "current_report_time_iso": "2026-08-19T15:25:59Z",
   "change_vs_prior_morning": {
-    "prior_date": "2026-08-17",
+    "prior_date": "2026-08-18",
     "active_large_fires": {
       "current": 36,
-      "prior": 35,
-      "delta": 1,
-      "pct": 2.9
-    },
-    "active_evac_fires": {
-      "current": 8,
-      "prior": 7,
-      "delta": 1,
-      "pct": 14.3
-    },
-    "evac_addresses_l1": {
-      "current": 4038,
-      "prior": 3427,
-      "delta": 611,
-      "pct": 17.8
-    },
-    "evac_addresses_l2": {
-      "current": 1580,
-      "prior": 2872,
-      "delta": -1292,
-      "pct": -45.0
-    },
-    "evac_addresses_l3": {
-      "current": 1033,
-      "prior": 1217,
-      "delta": -184,
-      "pct": -15.1
-    },
-    "active_fires": {
-      "current": 62,
-      "prior": 70,
-      "delta": -8,
-      "pct": -11.4
-    },
-    "total_acres_ytd": {
-      "current": 2465232.3,
-      "prior": 2457210,
-      "delta": 8022.299999999814,
-      "pct": 0.3
-    },
-    "structures_lost": {
-      "current": 185,
-      "prior": 185,
+      "prior": 36,
       "delta": 0,
       "pct": 0.0
+    },
+    "active_evac_fires": {
+      "current": 6,
+      "prior": 8,
+      "delta": -2,
+      "pct": -25.0
+    },
+    "evac_addresses_l1": {
+      "current": 4074,
+      "prior": 4038,
+      "delta": 36,
+      "pct": 0.9
+    },
+    "evac_addresses_l2": {
+      "current": 1491,
+      "prior": 1580,
+      "delta": -89,
+      "pct": -5.6
+    },
+    "evac_addresses_l3": {
+      "current": 1049,
+      "prior": 1033,
+      "delta": 16,
+      "pct": 1.5
+    },
+    "active_fires": {
+      "current": 56,
+      "prior": 62,
+      "delta": -6,
+      "pct": -9.7
+    },
+    "total_acres_ytd": {
+      "current": 2467706.3,
+      "prior": 2465232,
+      "delta": 2474.2999999998137,
+      "pct": 0.1
+    },
+    "structures_lost": {
+      "current": 198,
+      "prior": 185,
+      "delta": 13,
+      "pct": 7.0
     }
   },
   "change_vs_7d_ago": {
-    "prior_date": "2026-08-11",
+    "prior_date": "2026-08-12",
     "active_large_fires": {
       "current": 36,
       "prior": 34,
@@ -66,103 +66,102 @@
       "pct": 5.9
     },
     "active_evac_fires": {
-      "current": 8,
+      "current": 6,
       "prior": 7,
-      "delta": 1,
-      "pct": 14.3
+      "delta": -1,
+      "pct": -14.3
     },
     "evac_addresses_l1": {
-      "current": 4038,
-      "prior": 4800,
-      "delta": -762,
-      "pct": -15.9
+      "current": 4074,
+      "prior": 4716,
+      "delta": -642,
+      "pct": -13.6
     },
     "evac_addresses_l2": {
-      "current": 1580,
-      "prior": 2567,
-      "delta": -987,
-      "pct": -38.4
+      "current": 1491,
+      "prior": 2747,
+      "delta": -1256,
+      "pct": -45.7
     },
     "evac_addresses_l3": {
-      "current": 1033,
-      "prior": 1681,
-      "delta": -648,
-      "pct": -38.5
+      "current": 1049,
+      "prior": 1629,
+      "delta": -580,
+      "pct": -35.6
     },
     "active_fires": {
-      "current": 62,
-      "prior": 61,
-      "delta": 1,
-      "pct": 1.6
+      "current": 56,
+      "prior": 63,
+      "delta": -7,
+      "pct": -11.1
     },
     "total_acres_ytd": {
-      "current": 2465232.3,
-      "prior": 2387669,
-      "delta": 77563.29999999981,
-      "pct": 3.2
+      "current": 2467706.3,
+      "prior": 2432066,
+      "delta": 35640.299999999814,
+      "pct": 1.5
     },
     "structures_lost": {
-      "current": 185,
+      "current": 198,
       "prior": 157,
-      "delta": 28,
-      "pct": 17.8
+      "delta": 41,
+      "pct": 26.1
     }
   },
   "change_vs_30d_ago": {
-    "prior_date": "2026-07-19",
+    "prior_date": "2026-07-20",
     "active_large_fires": {
       "current": 36,
-      "prior": 29,
-      "delta": 7,
-      "pct": 24.1
+      "prior": 22,
+      "delta": 14,
+      "pct": 63.6
     },
     "active_evac_fires": {
-      "current": 8,
-      "prior": 11,
-      "delta": -3,
-      "pct": -27.3
+      "current": 6,
+      "prior": 6,
+      "delta": 0,
+      "pct": 0.0
     },
     "evac_addresses_l1": {
-      "current": 4038,
-      "prior": 2904,
-      "delta": 1134,
-      "pct": 39.0
+      "current": 4074,
+      "prior": 4453,
+      "delta": -379,
+      "pct": -8.5
     },
     "evac_addresses_l2": {
-      "current": 1580,
-      "prior": 1360,
-      "delta": 220,
-      "pct": 16.2
+      "current": 1491,
+      "prior": 2657,
+      "delta": -1166,
+      "pct": -43.9
     },
     "evac_addresses_l3": {
-      "current": 1033,
-      "prior": 745,
-      "delta": 288,
-      "pct": 38.7
+      "current": 1049,
+      "prior": 840,
+      "delta": 209,
+      "pct": 24.9
     },
     "active_fires": {
-      "current": 62,
-      "prior": 101,
-      "delta": -39,
-      "pct": -38.6
+      "current": 56,
+      "prior": 91,
+      "delta": -35,
+      "pct": -38.5
     },
     "total_acres_ytd": {
-      "current": 2465232.3,
-      "prior": 251464,
-      "delta": 2213768.3,
-      "pct": 880.4
+      "current": 2467706.3,
+      "prior": 371077,
+      "delta": 2096629.2999999998,
+      "pct": 565.0
     },
     "structures_lost": {
-      "current": 185,
-      "prior": 0,
-      "delta": 185,
-      "pct": null
+      "current": 198,
+      "prior": 19,
+      "delta": 179,
+      "pct": 942.1
     }
   },
   "trend_history": {
     "active_large_fires": {
       "dates": [
-        "2026-07-19",
         "2026-07-20",
         "2026-07-21",
         "2026-07-22",
@@ -192,10 +191,10 @@
         "2026-08-15",
         "2026-08-16",
         "2026-08-17",
-        "2026-08-18"
+        "2026-08-18",
+        "2026-08-19"
       ],
       "values": [
-        29,
         22,
         22,
         23,
@@ -225,12 +224,12 @@
         34,
         35,
         35,
+        36,
         36
       ]
     },
     "active_evac_fires": {
       "dates": [
-        "2026-07-19",
         "2026-07-20",
         "2026-07-21",
         "2026-07-22",
@@ -260,10 +259,10 @@
         "2026-08-15",
         "2026-08-16",
         "2026-08-17",
-        "2026-08-18"
+        "2026-08-18",
+        "2026-08-19"
       ],
       "values": [
-        11,
         6,
         7,
         8,
@@ -293,12 +292,12 @@
         7,
         7,
         7,
-        8
+        8,
+        6
       ]
     },
     "evac_addresses_l1": {
       "dates": [
-        "2026-07-19",
         "2026-07-20",
         "2026-07-21",
         "2026-07-22",
@@ -328,10 +327,10 @@
         "2026-08-15",
         "2026-08-16",
         "2026-08-17",
-        "2026-08-18"
+        "2026-08-18",
+        "2026-08-19"
       ],
       "values": [
-        2904,
         4453,
         5230,
         6438,
@@ -361,12 +360,12 @@
         4331,
         3464,
         3427,
-        4038
+        4038,
+        4074
       ]
     },
     "evac_addresses_l2": {
       "dates": [
-        "2026-07-19",
         "2026-07-20",
         "2026-07-21",
         "2026-07-22",
@@ -396,10 +395,10 @@
         "2026-08-15",
         "2026-08-16",
         "2026-08-17",
-        "2026-08-18"
+        "2026-08-18",
+        "2026-08-19"
       ],
       "values": [
-        1360,
         2657,
         1789,
         1225,
@@ -429,12 +428,12 @@
         2904,
         2824,
         2872,
-        1580
+        1580,
+        1491
       ]
     },
     "evac_addresses_l3": {
       "dates": [
-        "2026-07-19",
         "2026-07-20",
         "2026-07-21",
         "2026-07-22",
@@ -464,10 +463,10 @@
         "2026-08-15",
         "2026-08-16",
         "2026-08-17",
-        "2026-08-18"
+        "2026-08-18",
+        "2026-08-19"
       ],
       "values": [
-        745,
         840,
         583,
         471,
@@ -497,12 +496,12 @@
         1862,
         1265,
         1217,
-        1033
+        1033,
+        1049
       ]
     },
     "active_fires": {
       "dates": [
-        "2026-07-19",
         "2026-07-20",
         "2026-07-21",
         "2026-07-22",
@@ -532,10 +531,10 @@
         "2026-08-15",
         "2026-08-16",
         "2026-08-17",
-        "2026-08-18"
+        "2026-08-18",
+        "2026-08-19"
       ],
       "values": [
-        101,
         91,
         85,
         77,
@@ -565,12 +564,12 @@
         75,
         76,
         70,
-        62
+        62,
+        56
       ]
     },
     "total_acres_ytd": {
       "dates": [
-        "2026-07-19",
         "2026-07-20",
         "2026-07-21",
         "2026-07-22",
@@ -600,10 +599,10 @@
         "2026-08-15",
         "2026-08-16",
         "2026-08-17",
-        "2026-08-18"
+        "2026-08-18",
+        "2026-08-19"
       ],
       "values": [
-        251464,
         371077,
         368661,
         449322,
@@ -633,12 +632,12 @@
         2458523,
         2457210,
         2457210,
-        2465232.3
+        2465232,
+        2467706.3
       ]
     },
     "structures_lost": {
       "dates": [
-        "2026-07-19",
         "2026-07-20",
         "2026-07-21",
         "2026-07-22",
@@ -668,10 +667,10 @@
         "2026-08-15",
         "2026-08-16",
         "2026-08-17",
-        "2026-08-18"
+        "2026-08-18",
+        "2026-08-19"
       ],
       "values": [
-        0,
         19,
         20,
         93,
@@ -701,20 +700,21 @@
         182,
         185,
         185,
-        185
+        185,
+        198
       ]
     }
   },
   "exec_summary": {
-    "headline": "Total evacuation addresses are down 12% (7,516 \u2192 6,651) since yesterday morning. Total acres burned by large fires this season stands at 2,465,232, up 8,022 acres (0.3%) since yesterday morning. The number of fires with active evacuations is up 14% (7 \u2192 8) since yesterday morning. The number of active fires statewide is down 11% (70 \u2192 62) since yesterday morning.",
-    "losses": "This season has recorded 1 fatality and 185 structures destroyed so far. Structure loss is unchanged since yesterday morning.",
+    "headline": "Total evacuation addresses are down 1% (6,651 \u2192 6,614) since yesterday morning. Total acres burned by large fires this season stands at 2,467,706, up 2,474 acres (0.1%) since yesterday morning. The number of fires with active evacuations is down 25% (8 \u2192 6) since yesterday morning. The number of active fires statewide is down 10% (62 \u2192 56) since yesterday morning.",
+    "losses": "This season has recorded 1 fatality and 198 structures destroyed so far. Structures destroyed up 7% (185 \u2192 198) since yesterday morning.",
     "has_loss": true,
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 36,
-  "total_large_fire_acres": 2465232.3,
-  "structures_lost": 185,
-  "evac_triggering_fires": 8,
+  "total_large_fire_acres": 2467706.3,
+  "structures_lost": 198,
+  "evac_triggering_fires": 6,
   "evac_zones": {
     "level3": [
       "Grasshopper \u2014 ~11 miles east of Government Camp, Oregon",
@@ -723,50 +723,47 @@
     ],
     "level2": [
       "Grasshopper \u2014 ~11 miles east of Government Camp, Oregon",
-      "0587 SHINGLE \u2014 ~14 miles southeast of Mitchell, Oregon",
       "286 Wrights Spring \u2014 ~6 miles east of Modoc Point, Oregon",
       "Olive Butte \u2014 ~3 miles northeast of Greenhorn, Oregon",
       "Picture Rock \u2014 ~3 miles north of Summer Lake, Oregon"
     ],
     "level1": [
       "Grasshopper \u2014 ~11 miles east of Government Camp, Oregon",
-      "0587 SHINGLE \u2014 ~14 miles southeast of Mitchell, Oregon",
       "286 Wrights Spring \u2014 ~6 miles east of Modoc Point, Oregon",
       "Burnt Creek \u2014 ~9 miles south of Flora, Oregon",
       "AUSTIN \u2014 ~5 miles southeast of Ripplebrook, Oregon",
-      "Anthony \u2014 ~6 miles west of Hutchinson, Oregon",
       "Picture Rock \u2014 ~3 miles north of Summer Lake, Oregon"
     ]
   },
-  "evac_addresses_l1": 4038,
-  "evac_addresses_l2": 1580,
-  "evac_addresses_l3": 1033,
+  "evac_addresses_l1": 4074,
+  "evac_addresses_l2": 1491,
+  "evac_addresses_l3": 1049,
   "evac_data_as_of": "7:45 AM PDT",
-  "evac_data_as_of_iso": "2026-08-18T14:45:03Z",
+  "evac_data_as_of_iso": "2026-08-19T14:45:03Z",
   "struct_loss": {
     "oregon_totals": {
       "res_threatened": 10,
-      "res_damaged": 1,
-      "res_destroyed": 42,
+      "res_damaged": 0,
+      "res_destroyed": 45,
       "comm_threatened": 0,
       "comm_damaged": 0,
       "comm_destroyed": 2,
       "minor_threatened": 0,
-      "minor_damaged": 1,
-      "minor_destroyed": 141,
-      "unc_threatened": 8197,
+      "minor_damaged": 0,
+      "minor_destroyed": 151,
+      "unc_threatened": 7636,
       "unc_damaged": 0,
       "unc_destroyed": 0,
-      "total_threatened": 8207,
-      "total_damaged": 2,
-      "total_destroyed": 185,
+      "total_threatened": 7646,
+      "total_damaged": 0,
+      "total_destroyed": 198,
       "methodology_note": "Effective 2026-08-01: NWCC structure-loss figures reported as a bare number with no descriptive category text are labeled Uncategorized rather than assumed Residential. Data before this date used the prior assume-Residential convention and has not been retroactively revised."
     }
   },
   "county_structure_data": [
     {
       "county": "Malheur",
-      "acres": 644401.7,
+      "acres": 644436.7,
       "res": 0,
       "comm": 0,
       "other": 0,
@@ -774,7 +771,7 @@
       "fires": [
         {
           "name": "BIG GRASS",
-          "acres": 579134,
+          "acres": 579169,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -857,7 +854,7 @@
     },
     {
       "county": "Harney",
-      "acres": 537280.0,
+      "acres": 537633.0,
       "res": 2,
       "comm": 2,
       "other": 7,
@@ -874,7 +871,7 @@
         },
         {
           "name": "Second Flat",
-          "acres": 105501,
+          "acres": 105854,
           "status": "Active",
           "res": 2,
           "comm": 0,
@@ -939,7 +936,7 @@
     },
     {
       "county": "Wheeler",
-      "acres": 447450.0,
+      "acres": 447451.0,
       "res": 8,
       "comm": 0,
       "other": 22,
@@ -947,7 +944,7 @@
       "fires": [
         {
           "name": "ROWE CREEK COMPLEX",
-          "acres": 373784,
+          "acres": 373785,
           "status": "Active",
           "res": 4,
           "comm": 0,
@@ -1150,19 +1147,19 @@
     },
     {
       "county": "Wasco",
-      "acres": 94371.0,
-      "res": 6,
+      "acres": 95259.0,
+      "res": 9,
       "comm": 0,
-      "other": 16,
+      "other": 26,
       "unc": 0,
       "fires": [
         {
           "name": "Grasshopper",
-          "acres": 90667,
+          "acres": 91555,
           "status": "Active",
-          "res": 6,
+          "res": 9,
           "comm": 0,
-          "other": 16,
+          "other": 26,
           "unc": 0
         },
         {
@@ -1205,7 +1202,7 @@
     },
     {
       "county": "Umatilla",
-      "acres": 72817.0,
+      "acres": 73626.0,
       "res": 6,
       "comm": 0,
       "other": 43,
@@ -1213,7 +1210,7 @@
       "fires": [
         {
           "name": "Hagen",
-          "acres": 56869,
+          "acres": 57678,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1269,7 +1266,7 @@
     },
     {
       "county": "Klamath",
-      "acres": 54188.0,
+      "acres": 54263.0,
       "res": 1,
       "comm": 0,
       "other": 6,
@@ -1277,7 +1274,7 @@
       "fires": [
         {
           "name": "286 Wrights Spring",
-          "acres": 53941,
+          "acres": 54016,
           "status": "Active",
           "res": 1,
           "comm": 0,
@@ -1398,7 +1395,7 @@
     },
     {
       "county": "Wallowa",
-      "acres": 13727.0,
+      "acres": 13817.0,
       "res": 0,
       "comm": 0,
       "other": 0,
@@ -1406,7 +1403,7 @@
       "fires": [
         {
           "name": "INC 302",
-          "acres": 5333,
+          "acres": 5423,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1481,7 +1478,7 @@
     },
     {
       "county": "Clackamas",
-      "acres": 3678.0,
+      "acres": 3901.0,
       "res": 0,
       "comm": 0,
       "other": 0,
@@ -1489,7 +1486,7 @@
       "fires": [
         {
           "name": "AUSTIN",
-          "acres": 2678,
+          "acres": 2901,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1650,20 +1647,20 @@
     }
   ],
   "county_acres_map": {
-    "Malheur": 644401.7,
-    "Harney": 537280.0,
-    "Wasco": 94371.0,
+    "Malheur": 644436.7,
+    "Harney": 537633.0,
+    "Wasco": 95259.0,
     "Baker": 105364.0,
-    "Wheeler": 447450.0,
+    "Wheeler": 447451.0,
     "Jefferson": 206460.0,
-    "Umatilla": 72817.0,
-    "Klamath": 54188.0,
+    "Umatilla": 73626.0,
+    "Klamath": 54263.0,
     "Crook": 49795.0,
     "Jackson": 16212.0,
-    "Wallowa": 13727.0,
+    "Wallowa": 13817.0,
     "Grant": 9756.0,
     "Douglas": 3615.0,
-    "Clackamas": 3678.0,
+    "Clackamas": 3901.0,
     "Lake": 1277.0,
     "Deschutes": 2918.5,
     "Gilliam": 201822.0,
@@ -1672,7 +1669,7 @@
   },
   "county_structures_map": {
     "Malheur": {
-      "threatened": 737,
+      "threatened": 222,
       "damaged": 0,
       "destroyed": 0,
       "fires": [
@@ -1680,8 +1677,8 @@
       ]
     },
     "Harney": {
-      "threatened": 34,
-      "damaged": 1,
+      "threatened": 0,
+      "damaged": 0,
       "destroyed": 11,
       "fires": [
         "Bald Mountain",
@@ -1692,7 +1689,7 @@
     "Wasco": {
       "threatened": 3832,
       "damaged": 0,
-      "destroyed": 22,
+      "destroyed": 35,
       "fires": [
         "Grasshopper"
       ]
@@ -1706,12 +1703,11 @@
       ]
     },
     "Wheeler": {
-      "threatened": 14,
-      "damaged": 1,
+      "threatened": 0,
+      "damaged": 0,
       "destroyed": 30,
       "fires": [
         "0587 SHINGLE",
-        "0722 ROSENBAUM",
         "ROWE CREEK COMPLEX"
       ]
     },
@@ -1769,7 +1765,7 @@
       ]
     },
     "Clackamas": {
-      "threatened": 10,
+      "threatened": 12,
       "damaged": 0,
       "destroyed": 0,
       "fires": [
@@ -2787,31 +2783,36 @@
       "date": "2026-08-18",
       "active_fires": 62,
       "acres_burned": 2020711.5
+    },
+    {
+      "date": "2026-08-19",
+      "active_fires": 56,
+      "acres_burned": 2023269.14
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
       "total_fires": 76,
-      "total_acres": 2465232.3,
-      "total_structures_destroyed": 185,
+      "total_acres": 2467706.3,
+      "total_structures_destroyed": 198,
       "fatalities": 1,
       "injuries": 0,
       "largest_fire": {
         "name": "BIG GRASS",
         "county": "Malheur",
-        "acres": 579134.0
+        "acres": 579169.0
       },
       "notable_fires": [
         {
           "name": "BIG GRASS",
           "county": "Malheur",
-          "acres": 579134.0
+          "acres": 579169.0
         },
         {
           "name": "ROWE CREEK COMPLEX",
           "county": "Wheeler",
-          "acres": 373784.0
+          "acres": 373785.0
         },
         {
           "name": "Coleman Creek",
@@ -2826,7 +2827,7 @@
         {
           "name": "Second Flat",
           "county": "Harney",
-          "acres": 105501.0
+          "acres": 105854.0
         }
       ]
     },
@@ -3314,7 +3315,7 @@
       "lon": -117.335,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 579134.0,
+      "acres": 579169.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3329,13 +3330,13 @@
       "lon": -120.199167,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 344916.0,
+      "acres": 344917.0,
       "structures_lost_res": 4,
       "structures_lost_comm": 0,
       "structures_lost_other": 21,
       "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
-      "cpx_total_acres": 373784.0
+      "cpx_total_acres": 373785.0
     },
     {
       "name": "Coleman Creek",
@@ -3359,7 +3360,7 @@
       "lon": -119.439167,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 105501.0,
+      "acres": 105854.0,
       "structures_lost_res": 2,
       "structures_lost_comm": 0,
       "structures_lost_other": 5,
@@ -3374,10 +3375,10 @@
       "lon": -121.537304,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 90667.0,
-      "structures_lost_res": 6,
+      "acres": 91555.0,
+      "structures_lost_res": 9,
       "structures_lost_comm": 0,
-      "structures_lost_other": 16,
+      "structures_lost_other": 26,
       "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
@@ -3449,7 +3450,7 @@
       "lon": -118.269,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 56869.0,
+      "acres": 57678.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3464,7 +3465,7 @@
       "lon": -121.751126,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 53941.0,
+      "acres": 54016.0,
       "structures_lost_res": 1,
       "structures_lost_comm": 0,
       "structures_lost_other": 6,
@@ -3575,7 +3576,7 @@
       "structures_lost_other": 0,
       "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
-      "cpx_total_acres": 373784.0
+      "cpx_total_acres": 373785.0
     },
     {
       "name": "INC 302",
@@ -3584,7 +3585,7 @@
       "lon": -118.007951,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 5333.0,
+      "acres": 5423.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3704,7 +3705,7 @@
       "lon": -121.96,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 2678.0,
+      "acres": 2901.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -4010,7 +4011,7 @@
       "structures_lost_other": 0,
       "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
-      "cpx_total_acres": 373784.0
+      "cpx_total_acres": 373785.0
     },
     {
       "name": "Lower Dry Creek Mutual Aid",
@@ -4055,7 +4056,7 @@
       "structures_lost_other": 0,
       "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
-      "cpx_total_acres": 373784.0
+      "cpx_total_acres": 373785.0
     },
     {
       "name": "LYTLE",
@@ -4145,7 +4146,7 @@
       "structures_lost_other": 0,
       "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
-      "cpx_total_acres": 373784.0
+      "cpx_total_acres": 373785.0
     },
     {
       "name": "0611",
@@ -4205,7 +4206,7 @@
       "structures_lost_other": 0,
       "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
-      "cpx_total_acres": 373784.0
+      "cpx_total_acres": 373785.0
     },
     {
       "name": "0231 ZEN",
@@ -4310,7 +4311,7 @@
       "structures_lost_other": 0,
       "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
-      "cpx_total_acres": 373784.0
+      "cpx_total_acres": 373785.0
     },
     {
       "name": "2680 - Diamond Craters",
@@ -4415,7 +4416,7 @@
       "structures_lost_other": 0,
       "structures_lost_unc": 0,
       "cpx_name": "ROWE CREEK COMPLEX",
-      "cpx_total_acres": 373784.0
+      "cpx_total_acres": 373785.0
     },
     {
       "name": "0496",

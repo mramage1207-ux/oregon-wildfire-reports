@@ -1,14 +1,14 @@
 {
   "date": "2026-08-18",
-  "generated_at": "2026-08-18T16:19:22Z",
-  "as_of_iso": "2026-08-18T14:45:03.000Z",
-  "as_of_display": "August 18, 2026, 7:45 AM PDT",
+  "generated_at": "2026-08-19T00:23:49Z",
+  "as_of_iso": "2026-08-18T22:45:03.000Z",
+  "as_of_display": "August 18, 2026, 3:45 PM PDT",
   "totals": {
-    "l1": 3866,
+    "l1": 3858,
     "l2": 1519,
     "l3": 992,
-    "total": 6377,
-    "zip_count": 35
+    "total": 6369,
+    "zip_count": 33
   },
   "unmatched": {
     "l1": 172,
@@ -19,10 +19,10 @@
   },
   "unmatched_zones": [],
   "reconciled_total": {
-    "l1": 4038,
+    "l1": 4030,
     "l2": 1580,
     "l3": 1033,
-    "total": 6651
+    "total": 6643
   },
   "zips": [
     {
@@ -336,16 +336,6 @@
       "fires": "Burnt Creek Fire"
     },
     {
-      "zip": "97750",
-      "l1": 6,
-      "l2": 0,
-      "l3": 0,
-      "total": 6,
-      "peak_level": 1,
-      "counties": "Wheeler",
-      "fires": "No named fire; Rowe Creek Complex"
-    },
-    {
       "zip": "97621",
       "l1": 3,
       "l2": 0,
@@ -354,16 +344,6 @@
       "peak_level": 1,
       "counties": "Klamath",
       "fires": "Wrights Spring"
-    },
-    {
-      "zip": "97830",
-      "l1": 2,
-      "l2": 0,
-      "l3": 0,
-      "total": 2,
-      "peak_level": 1,
-      "counties": "Wheeler",
-      "fires": "No named fire"
     },
     {
       "zip": "97067",
@@ -376,5 +356,5 @@
       "fires": "Grasshopper"
     }
   ],
-  "note": "Reconciled 2026-08-18 to match the morning report's evac_raw.json snapshot (fetched 2026-08-18T14:45:03.000Z / August 18, 2026, 7:45 AM PDT) rather than a separate live pull. 95.9% of 6,651 total addresses (6,377) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 274 addresses (L1:172 L2:61 L3:41, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+  "note": "Reconciled 2026-08-18 to match the morning report's evac_raw.json snapshot (fetched 2026-08-18T22:45:03.000Z / August 18, 2026, 3:45 PM PDT) rather than a separate live pull. 95.9% of 6,643 total addresses (6,369) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 274 addresses (L1:172 L2:61 L3:41, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
 }
