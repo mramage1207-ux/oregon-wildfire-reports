@@ -1,0 +1,240 @@
+{
+  "date": "2026-08-22",
+  "generated_at": "2026-08-22T15:16:08Z",
+  "as_of_iso": "2026-08-22T14:45:06.000Z",
+  "as_of_display": "August 22, 2026, 7:45 AM PDT",
+  "totals": {
+    "l1": 2595,
+    "l2": 1119,
+    "l3": 367,
+    "total": 4081,
+    "zip_count": 21
+  },
+  "unmatched": {
+    "l1": 198,
+    "l2": 49,
+    "l3": 20,
+    "total": 267,
+    "zone_count": 0
+  },
+  "unmatched_zones": [],
+  "reconciled_total": {
+    "l1": 2793,
+    "l2": 1168,
+    "l3": 387,
+    "total": 4348
+  },
+  "zips": [
+    {
+      "zip": "97063",
+      "l1": 1104,
+      "l2": 0,
+      "l3": 0,
+      "total": 1104,
+      "peak_level": 1,
+      "counties": "Wasco",
+      "fires": "Grasshopper"
+    },
+    {
+      "zip": "97886",
+      "l1": 45,
+      "l2": 436,
+      "l3": 185,
+      "total": 666,
+      "peak_level": 3,
+      "counties": "Umatilla, Union",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97623",
+      "l1": 450,
+      "l2": 86,
+      "l3": 11,
+      "total": 547,
+      "peak_level": 3,
+      "counties": "Klamath",
+      "fires": "Wrights Spring"
+    },
+    {
+      "zip": "97754",
+      "l1": 163,
+      "l2": 226,
+      "l3": 40,
+      "total": 429,
+      "peak_level": 3,
+      "counties": "Crook, Wheeler",
+      "fires": "Rowe Creek Complex"
+    },
+    {
+      "zip": "97624",
+      "l1": 161,
+      "l2": 112,
+      "l3": 21,
+      "total": 294,
+      "peak_level": 3,
+      "counties": "Klamath",
+      "fires": "Wrights Spring"
+    },
+    {
+      "zip": "97021",
+      "l1": 132,
+      "l2": 43,
+      "l3": 3,
+      "total": 178,
+      "peak_level": 3,
+      "counties": "Wasco",
+      "fires": "Grasshopper"
+    },
+    {
+      "zip": "97639",
+      "l1": 106,
+      "l2": 45,
+      "l3": 9,
+      "total": 160,
+      "peak_level": 3,
+      "counties": "Klamath",
+      "fires": "Wrights Spring"
+    },
+    {
+      "zip": "97810",
+      "l1": 17,
+      "l2": 37,
+      "l3": 62,
+      "total": 116,
+      "peak_level": 3,
+      "counties": "Umatilla",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "99362",
+      "l1": 22,
+      "l2": 58,
+      "l3": 4,
+      "total": 84,
+      "peak_level": 3,
+      "counties": "Umatilla",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97625",
+      "l1": 20,
+      "l2": 35,
+      "l3": 0,
+      "total": 55,
+      "peak_level": 2,
+      "counties": "Klamath",
+      "fires": "Wrights Spring"
+    },
+    {
+      "zip": "97827",
+      "l1": 1,
+      "l2": 5,
+      "l3": 30,
+      "total": 36,
+      "peak_level": 3,
+      "counties": "Umatilla, Union",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97023",
+      "l1": 1,
+      "l2": 0,
+      "l3": 2,
+      "total": 3,
+      "peak_level": 3,
+      "counties": "Clackamas",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97041",
+      "l1": 225,
+      "l2": 6,
+      "l3": 0,
+      "total": 231,
+      "peak_level": 2,
+      "counties": "Hood River",
+      "fires": "Grasshopper"
+    },
+    {
+      "zip": "97876",
+      "l1": 61,
+      "l2": 7,
+      "l3": 0,
+      "total": 68,
+      "peak_level": 2,
+      "counties": "Union",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97603",
+      "l1": 42,
+      "l2": 15,
+      "l3": 0,
+      "total": 57,
+      "peak_level": 2,
+      "counties": "Klamath",
+      "fires": "Wrights Spring"
+    },
+    {
+      "zip": "97862",
+      "l1": 7,
+      "l2": 7,
+      "l3": 0,
+      "total": 14,
+      "peak_level": 2,
+      "counties": "Umatilla",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97859",
+      "l1": 0,
+      "l2": 1,
+      "l3": 0,
+      "total": 1,
+      "peak_level": 2,
+      "counties": "Umatilla",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97828",
+      "l1": 17,
+      "l2": 0,
+      "l3": 0,
+      "total": 17,
+      "peak_level": 1,
+      "counties": "Wallowa",
+      "fires": "Burnt Creek Fire"
+    },
+    {
+      "zip": "97058",
+      "l1": 15,
+      "l2": 0,
+      "l3": 0,
+      "total": 15,
+      "peak_level": 1,
+      "counties": "Wasco",
+      "fires": "Grasshopper"
+    },
+    {
+      "zip": "97037",
+      "l1": 3,
+      "l2": 0,
+      "l3": 0,
+      "total": 3,
+      "peak_level": 1,
+      "counties": "Wasco",
+      "fires": "Grasshopper"
+    },
+    {
+      "zip": "97621",
+      "l1": 3,
+      "l2": 0,
+      "l3": 0,
+      "total": 3,
+      "peak_level": 1,
+      "counties": "Klamath",
+      "fires": "Wrights Spring"
+    }
+  ],
+  "note": "Reconciled 2026-08-22 to match the morning report's evac_raw.json snapshot (fetched 2026-08-22T14:45:06.000Z / August 22, 2026, 7:45 AM PDT) rather than a separate live pull. 93.9% of 4,348 total addresses (4,081) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 267 addresses (L1:198 L2:49 L3:20, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+}
