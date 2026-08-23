@@ -1,8 +1,8 @@
 {
   "date": "2026-08-22",
-  "generated_at": "2026-08-22T15:16:08Z",
-  "as_of_iso": "2026-08-22T14:45:06.000Z",
-  "as_of_display": "August 22, 2026, 7:45 AM PDT",
+  "generated_at": "2026-08-22T23:01:58Z",
+  "as_of_iso": "2026-08-22T22:45:03.000Z",
+  "as_of_display": "August 22, 2026, 3:45 PM PDT",
   "totals": {
     "l1": 2595,
     "l2": 1119,
@@ -236,5 +236,5 @@
       "fires": "Wrights Spring"
     }
   ],
-  "note": "Reconciled 2026-08-22 to match the morning report's evac_raw.json snapshot (fetched 2026-08-22T14:45:06.000Z / August 22, 2026, 7:45 AM PDT) rather than a separate live pull. 93.9% of 4,348 total addresses (4,081) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 267 addresses (L1:198 L2:49 L3:20, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+  "note": "Reconciled 2026-08-22 to match the morning report's evac_raw.json snapshot (fetched 2026-08-22T22:45:03.000Z / August 22, 2026, 3:45 PM PDT) rather than a separate live pull. 93.9% of 4,348 total addresses (4,081) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 267 addresses (L1:198 L2:49 L3:20, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
 }
