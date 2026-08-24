@@ -1,54 +1,54 @@
 {
-  "last_updated": "2026-08-23",
-  "report_time": "8:22 AM PDT",
-  "report_time_iso": "2026-08-23T15:22:31Z",
-  "current_active_fires": 63,
-  "current_acres_burned": 1986568.26,
-  "current_report_time": "8:22 AM PDT",
-  "current_report_time_iso": "2026-08-23T15:22:31Z",
+  "last_updated": "2026-08-24",
+  "report_time": "8:24 AM PDT",
+  "report_time_iso": "2026-08-24T15:24:53Z",
+  "current_active_fires": 62,
+  "current_acres_burned": 1988749.58,
+  "current_report_time": "8:24 AM PDT",
+  "current_report_time_iso": "2026-08-24T15:24:53Z",
   "change_vs_prior_morning": {
-    "prior_date": "2026-08-22",
+    "prior_date": "2026-08-23",
     "active_large_fires": {
-      "current": 35,
-      "prior": 32,
-      "delta": 3,
-      "pct": 9.4
+      "current": 36,
+      "prior": 35,
+      "delta": 1,
+      "pct": 2.9
     },
     "active_evac_fires": {
       "current": 5,
-      "prior": 4,
-      "delta": 1,
-      "pct": 25.0
+      "prior": 5,
+      "delta": 0,
+      "pct": 0.0
     },
     "evac_addresses_l1": {
-      "current": 3035,
-      "prior": 2793,
-      "delta": 242,
-      "pct": 8.7
+      "current": 3056,
+      "prior": 3035,
+      "delta": 21,
+      "pct": 0.7
     },
     "evac_addresses_l2": {
-      "current": 1170,
-      "prior": 1168,
-      "delta": 2,
-      "pct": 0.2
+      "current": 1064,
+      "prior": 1170,
+      "delta": -106,
+      "pct": -9.1
     },
     "evac_addresses_l3": {
-      "current": 396,
-      "prior": 387,
-      "delta": 9,
-      "pct": 2.3
+      "current": 326,
+      "prior": 396,
+      "delta": -70,
+      "pct": -17.7
     },
     "active_fires": {
-      "current": 63,
-      "prior": 54,
-      "delta": 9,
-      "pct": 16.7
+      "current": 62,
+      "prior": 63,
+      "delta": -1,
+      "pct": -1.6
     },
     "total_acres_ytd": {
-      "current": 2474168.3,
-      "prior": 2474076,
-      "delta": 92.29999999981374,
-      "pct": 0.0
+      "current": 2476487.1,
+      "prior": 2474168,
+      "delta": 2319.100000000093,
+      "pct": 0.1
     },
     "structures_lost": {
       "current": 198,
@@ -58,12 +58,12 @@
     }
   },
   "change_vs_7d_ago": {
-    "prior_date": "2026-08-16",
+    "prior_date": "2026-08-17",
     "active_large_fires": {
-      "current": 35,
+      "current": 36,
       "prior": 35,
-      "delta": 0,
-      "pct": 0.0
+      "delta": 1,
+      "pct": 2.9
     },
     "active_evac_fires": {
       "current": 5,
@@ -72,34 +72,34 @@
       "pct": -28.6
     },
     "evac_addresses_l1": {
-      "current": 3035,
-      "prior": 3464,
-      "delta": -429,
-      "pct": -12.4
+      "current": 3056,
+      "prior": 3427,
+      "delta": -371,
+      "pct": -10.8
     },
     "evac_addresses_l2": {
-      "current": 1170,
-      "prior": 2824,
-      "delta": -1654,
-      "pct": -58.6
+      "current": 1064,
+      "prior": 2872,
+      "delta": -1808,
+      "pct": -63.0
     },
     "evac_addresses_l3": {
-      "current": 396,
-      "prior": 1265,
-      "delta": -869,
-      "pct": -68.7
+      "current": 326,
+      "prior": 1217,
+      "delta": -891,
+      "pct": -73.2
     },
     "active_fires": {
-      "current": 63,
-      "prior": 76,
-      "delta": -13,
-      "pct": -17.1
+      "current": 62,
+      "prior": 70,
+      "delta": -8,
+      "pct": -11.4
     },
     "total_acres_ytd": {
-      "current": 2474168.3,
+      "current": 2476487.1,
       "prior": 2457210,
-      "delta": 16958.299999999814,
-      "pct": 0.7
+      "delta": 19277.100000000093,
+      "pct": 0.8
     },
     "structures_lost": {
       "current": 198,
@@ -109,60 +109,59 @@
     }
   },
   "change_vs_30d_ago": {
-    "prior_date": "2026-07-24",
+    "prior_date": "2026-07-25",
     "active_large_fires": {
-      "current": 35,
-      "prior": 27,
-      "delta": 8,
-      "pct": 29.6
+      "current": 36,
+      "prior": 35,
+      "delta": 1,
+      "pct": 2.9
     },
     "active_evac_fires": {
       "current": 5,
-      "prior": 7,
-      "delta": -2,
-      "pct": -28.6
+      "prior": 10,
+      "delta": -5,
+      "pct": -50.0
     },
     "evac_addresses_l1": {
-      "current": 3035,
-      "prior": 5563,
-      "delta": -2528,
-      "pct": -45.4
+      "current": 3056,
+      "prior": 5724,
+      "delta": -2668,
+      "pct": -46.6
     },
     "evac_addresses_l2": {
-      "current": 1170,
-      "prior": 1489,
-      "delta": -319,
-      "pct": -21.4
+      "current": 1064,
+      "prior": 2726,
+      "delta": -1662,
+      "pct": -61.0
     },
     "evac_addresses_l3": {
-      "current": 396,
-      "prior": 1311,
-      "delta": -915,
-      "pct": -69.8
+      "current": 326,
+      "prior": 2317,
+      "delta": -1991,
+      "pct": -85.9
     },
     "active_fires": {
-      "current": 63,
-      "prior": 155,
-      "delta": -92,
-      "pct": -59.4
+      "current": 62,
+      "prior": 145,
+      "delta": -83,
+      "pct": -57.2
     },
     "total_acres_ytd": {
-      "current": 2474168.3,
-      "prior": 550472,
-      "delta": 1923696.2999999998,
-      "pct": 349.5
+      "current": 2476487.1,
+      "prior": 669927,
+      "delta": 1806560.1,
+      "pct": 269.7
     },
     "structures_lost": {
       "current": 198,
-      "prior": 71,
-      "delta": 127,
-      "pct": 178.9
+      "prior": 90,
+      "delta": 108,
+      "pct": 120.0
     }
   },
   "trend_history": {
     "active_large_fires": {
       "dates": [
-        "2026-07-24",
         "2026-07-25",
         "2026-07-26",
         "2026-07-27",
@@ -192,10 +191,10 @@
         "2026-08-20",
         "2026-08-21",
         "2026-08-22",
-        "2026-08-23"
+        "2026-08-23",
+        "2026-08-24"
       ],
       "values": [
-        27,
         35,
         37,
         37,
@@ -225,12 +224,12 @@
         36,
         35,
         32,
-        35
+        35,
+        36
       ]
     },
     "active_evac_fires": {
       "dates": [
-        "2026-07-24",
         "2026-07-25",
         "2026-07-26",
         "2026-07-27",
@@ -260,10 +259,10 @@
         "2026-08-20",
         "2026-08-21",
         "2026-08-22",
-        "2026-08-23"
+        "2026-08-23",
+        "2026-08-24"
       ],
       "values": [
-        7,
         10,
         10,
         10,
@@ -293,12 +292,12 @@
         5,
         5,
         4,
+        5,
         5
       ]
     },
     "evac_addresses_l1": {
       "dates": [
-        "2026-07-24",
         "2026-07-25",
         "2026-07-26",
         "2026-07-27",
@@ -328,10 +327,10 @@
         "2026-08-20",
         "2026-08-21",
         "2026-08-22",
-        "2026-08-23"
+        "2026-08-23",
+        "2026-08-24"
       ],
       "values": [
-        5563,
         5724,
         5858,
         7487,
@@ -361,12 +360,12 @@
         3199,
         3212,
         2793,
-        3035
+        3035,
+        3056
       ]
     },
     "evac_addresses_l2": {
       "dates": [
-        "2026-07-24",
         "2026-07-25",
         "2026-07-26",
         "2026-07-27",
@@ -396,10 +395,10 @@
         "2026-08-20",
         "2026-08-21",
         "2026-08-22",
-        "2026-08-23"
+        "2026-08-23",
+        "2026-08-24"
       ],
       "values": [
-        1489,
         2726,
         2580,
         2932,
@@ -429,12 +428,12 @@
         702,
         1159,
         1168,
-        1170
+        1170,
+        1064
       ]
     },
     "evac_addresses_l3": {
       "dates": [
-        "2026-07-24",
         "2026-07-25",
         "2026-07-26",
         "2026-07-27",
@@ -464,10 +463,10 @@
         "2026-08-20",
         "2026-08-21",
         "2026-08-22",
-        "2026-08-23"
+        "2026-08-23",
+        "2026-08-24"
       ],
       "values": [
-        1311,
         2317,
         2759,
         2795,
@@ -497,12 +496,12 @@
         901,
         431,
         387,
-        396
+        396,
+        326
       ]
     },
     "active_fires": {
       "dates": [
-        "2026-07-24",
         "2026-07-25",
         "2026-07-26",
         "2026-07-27",
@@ -532,10 +531,10 @@
         "2026-08-20",
         "2026-08-21",
         "2026-08-22",
-        "2026-08-23"
+        "2026-08-23",
+        "2026-08-24"
       ],
       "values": [
-        155,
         145,
         117,
         92,
@@ -565,12 +564,12 @@
         59,
         62,
         54,
-        63
+        63,
+        62
       ]
     },
     "total_acres_ytd": {
       "dates": [
-        "2026-07-24",
         "2026-07-25",
         "2026-07-26",
         "2026-07-27",
@@ -600,10 +599,10 @@
         "2026-08-20",
         "2026-08-21",
         "2026-08-22",
-        "2026-08-23"
+        "2026-08-23",
+        "2026-08-24"
       ],
       "values": [
-        550472,
         669927,
         1053674,
         1372091,
@@ -633,12 +632,12 @@
         2470325,
         2471636,
         2474076,
-        2474168.3
+        2474168,
+        2476487.1
       ]
     },
     "structures_lost": {
       "dates": [
-        "2026-07-24",
         "2026-07-25",
         "2026-07-26",
         "2026-07-27",
@@ -668,10 +667,10 @@
         "2026-08-20",
         "2026-08-21",
         "2026-08-22",
-        "2026-08-23"
+        "2026-08-23",
+        "2026-08-24"
       ],
       "values": [
-        71,
         90,
         90,
         98,
@@ -701,18 +700,19 @@
         198,
         198,
         198,
+        198,
         198
       ]
     }
   },
   "exec_summary": {
-    "headline": "Total evacuation addresses are up 6% (4,348 \u2192 4,601) since yesterday morning. Total acres burned by large fires this season stands at 2,474,168, up 92 acres (0.0%) since yesterday morning. The number of fires with active evacuations is up 25% (4 \u2192 5) since yesterday morning. The number of active fires statewide is up 17% (54 \u2192 63) since yesterday morning. The number of active large fires is up 9% (32 \u2192 35) since yesterday morning.",
+    "headline": "Total evacuation addresses are down 3% (4,601 \u2192 4,446) since yesterday morning. Total acres burned by large fires this season stands at 2,476,487, up 2,319 acres (0.1%) since yesterday morning.",
     "losses": "This season has recorded 1 fatality and 198 structures destroyed so far. Structure loss is unchanged since yesterday morning.",
     "has_loss": true,
     "closing": "Full details, county-by-county, are in the sections below."
   },
-  "active_large_fires": 35,
-  "total_large_fire_acres": 2474168.3,
+  "active_large_fires": 36,
+  "total_large_fire_acres": 2476487.1,
   "structures_lost": 198,
   "evac_triggering_fires": 5,
   "evac_zones": {
@@ -735,11 +735,11 @@
       "Middle Ridge \u2014 ~9 miles southeast of Tollgate, Oregon"
     ]
   },
-  "evac_addresses_l1": 3035,
-  "evac_addresses_l2": 1170,
-  "evac_addresses_l3": 396,
+  "evac_addresses_l1": 3056,
+  "evac_addresses_l2": 1064,
+  "evac_addresses_l3": 326,
   "evac_data_as_of": "7:45 AM PDT",
-  "evac_data_as_of_iso": "2026-08-23T14:45:03Z",
+  "evac_data_as_of_iso": "2026-08-24T14:45:09Z",
   "struct_loss": {
     "oregon_totals": {
       "res_threatened": 10,
@@ -751,10 +751,10 @@
       "minor_threatened": 0,
       "minor_damaged": 0,
       "minor_destroyed": 151,
-      "unc_threatened": 3737,
+      "unc_threatened": 4644,
       "unc_damaged": 0,
       "unc_destroyed": 0,
-      "total_threatened": 3747,
+      "total_threatened": 4654,
       "total_damaged": 0,
       "total_destroyed": 198,
       "methodology_note": "Effective 2026-08-01: NWCC structure-loss figures reported as a bare number with no descriptive category text are labeled Uncategorized rather than assumed Residential. Data before this date used the prior assume-Residential convention and has not been retroactively revised."
@@ -1092,7 +1092,7 @@
     },
     {
       "county": "Baker",
-      "acres": 105764.0,
+      "acres": 106872.8,
       "res": 3,
       "comm": 0,
       "other": 5,
@@ -1135,6 +1135,15 @@
           "unc": 0
         },
         {
+          "name": "McCulley",
+          "acres": 1202,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0,
+          "unc": 0
+        },
+        {
           "name": "Bob Creek",
           "acres": 851,
           "status": "Contained",
@@ -1144,8 +1153,8 @@
           "unc": 0
         },
         {
-          "name": "McCulley",
-          "acres": 400,
+          "name": "North Pole",
+          "acres": 307,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1156,7 +1165,7 @@
     },
     {
       "county": "Wasco",
-      "acres": 97266.0,
+      "acres": 97397.0,
       "res": 9,
       "comm": 0,
       "other": 26,
@@ -1164,7 +1173,7 @@
       "fires": [
         {
           "name": "Grasshopper",
-          "acres": 93562,
+          "acres": 93693,
           "status": "Active",
           "res": 9,
           "comm": 0,
@@ -1211,7 +1220,7 @@
     },
     {
       "county": "Umatilla",
-      "acres": 75507.0,
+      "acres": 75765.0,
       "res": 6,
       "comm": 0,
       "other": 43,
@@ -1219,7 +1228,7 @@
       "fires": [
         {
           "name": "Hagen",
-          "acres": 59559,
+          "acres": 59817,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1275,7 +1284,7 @@
     },
     {
       "county": "Klamath",
-      "acres": 54572.0,
+      "acres": 54612.0,
       "res": 1,
       "comm": 0,
       "other": 6,
@@ -1283,7 +1292,7 @@
       "fires": [
         {
           "name": "286 Wrights Spring",
-          "acres": 54325,
+          "acres": 54365,
           "status": "Active",
           "res": 1,
           "comm": 0,
@@ -1331,6 +1340,43 @@
           "name": "0496",
           "acres": 350,
           "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0,
+          "unc": 0
+        }
+      ]
+    },
+    {
+      "county": "Wallowa",
+      "acres": 16388.0,
+      "res": 0,
+      "comm": 0,
+      "other": 0,
+      "unc": 0,
+      "fires": [
+        {
+          "name": "INC 302",
+          "acres": 7994,
+          "status": "Active",
+          "res": 0,
+          "comm": 0,
+          "other": 0,
+          "unc": 0
+        },
+        {
+          "name": "Eggo",
+          "acres": 4225,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0,
+          "unc": 0
+        },
+        {
+          "name": "Burnt Creek",
+          "acres": 4169,
+          "status": "Active",
           "res": 0,
           "comm": 0,
           "other": 0,
@@ -1394,43 +1440,6 @@
       ]
     },
     {
-      "county": "Wallowa",
-      "acres": 16094.0,
-      "res": 0,
-      "comm": 0,
-      "other": 0,
-      "unc": 0,
-      "fires": [
-        {
-          "name": "INC 302",
-          "acres": 7700,
-          "status": "Active",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        },
-        {
-          "name": "Eggo",
-          "acres": 4225,
-          "status": "Contained",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        },
-        {
-          "name": "Burnt Creek",
-          "acres": 4169,
-          "status": "Active",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        }
-      ]
-    },
-    {
       "county": "Grant",
       "acres": 9683.0,
       "res": 1,
@@ -1478,7 +1487,7 @@
     },
     {
       "county": "Clackamas",
-      "acres": 5808.0,
+      "acres": 6295.0,
       "res": 0,
       "comm": 0,
       "other": 0,
@@ -1486,7 +1495,7 @@
       "fires": [
         {
           "name": "AUSTIN",
-          "acres": 4808,
+          "acres": 5295,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1658,15 +1667,15 @@
   "county_acres_map": {
     "Malheur": 643904.7,
     "Harney": 537775.0,
-    "Wasco": 97266.0,
-    "Baker": 105764.0,
+    "Wasco": 97397.0,
+    "Baker": 106872.8,
     "Wheeler": 447647.0,
     "Jefferson": 206460.0,
-    "Umatilla": 75507.0,
-    "Klamath": 54572.0,
+    "Umatilla": 75765.0,
+    "Klamath": 54612.0,
     "Crook": 47654.0,
-    "Wallowa": 16094.0,
-    "Clackamas": 5808.0,
+    "Wallowa": 16388.0,
+    "Clackamas": 6295.0,
     "Grant": 9683.0,
     "Douglas": 3615.0,
     "Lake": 1228.0,
@@ -1678,7 +1687,7 @@
   },
   "county_structures_map": {
     "Malheur": {
-      "threatened": 148,
+      "threatened": 222,
       "damaged": 0,
       "destroyed": 0,
       "fires": [
@@ -1704,11 +1713,13 @@
       ]
     },
     "Baker": {
-      "threatened": 0,
+      "threatened": 101,
       "damaged": 0,
       "destroyed": 8,
       "fires": [
-        "FOX"
+        "FOX",
+        "McCulley",
+        "North Pole"
       ]
     },
     "Wheeler": {
@@ -1731,7 +1742,7 @@
       ]
     },
     "Umatilla": {
-      "threatened": 1434,
+      "threatened": 2151,
       "damaged": 0,
       "destroyed": 49,
       "fires": [
@@ -1749,7 +1760,7 @@
       ]
     },
     "Wallowa": {
-      "threatened": 46,
+      "threatened": 67,
       "damaged": 0,
       "destroyed": 0,
       "fires": [
@@ -1757,7 +1768,7 @@
       ]
     },
     "Clackamas": {
-      "threatened": 12,
+      "threatened": 6,
       "damaged": 0,
       "destroyed": 0,
       "fires": [
@@ -2817,13 +2828,18 @@
       "date": "2026-08-23",
       "active_fires": 63,
       "acres_burned": 1986568.26
+    },
+    {
+      "date": "2026-08-24",
+      "active_fires": 62,
+      "acres_burned": 1988749.58
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 77,
-      "total_acres": 2474168.3,
+      "total_fires": 78,
+      "total_acres": 2476487.1,
       "total_structures_destroyed": 198,
       "fatalities": 1,
       "injuries": 0,
@@ -3404,7 +3420,7 @@
       "lon": -121.537304,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 93562.0,
+      "acres": 93693.0,
       "structures_lost_res": 9,
       "structures_lost_comm": 0,
       "structures_lost_other": 26,
@@ -3479,7 +3495,7 @@
       "lon": -118.269,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 59559.0,
+      "acres": 59817.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3494,7 +3510,7 @@
       "lon": -121.751126,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 54325.0,
+      "acres": 54365.0,
       "structures_lost_res": 1,
       "structures_lost_comm": 0,
       "structures_lost_other": 6,
@@ -3584,7 +3600,7 @@
       "lon": -118.007951,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 7700.0,
+      "acres": 7994.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3608,6 +3624,21 @@
       "cpx_total_acres": 373981.1
     },
     {
+      "name": "AUSTIN",
+      "county": "Clackamas",
+      "lat": 45.03,
+      "lon": -121.96,
+      "status": "Active",
+      "triggered_evacuation": true,
+      "acres": 5295.0,
+      "structures_lost_res": 0,
+      "structures_lost_comm": 0,
+      "structures_lost_other": 0,
+      "structures_lost_unc": 0,
+      "cpx_name": null,
+      "cpx_total_acres": null
+    },
+    {
       "name": "North Cayuse",
       "county": "Umatilla",
       "lat": 45.688538,
@@ -3618,21 +3649,6 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 1,
-      "structures_lost_unc": 0,
-      "cpx_name": null,
-      "cpx_total_acres": null
-    },
-    {
-      "name": "AUSTIN",
-      "county": "Clackamas",
-      "lat": 45.03,
-      "lon": -121.96,
-      "status": "Active",
-      "triggered_evacuation": true,
-      "acres": 4808.0,
-      "structures_lost_res": 0,
-      "structures_lost_comm": 0,
-      "structures_lost_other": 0,
       "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
@@ -3758,6 +3774,21 @@
       "cpx_total_acres": null
     },
     {
+      "name": "McCulley",
+      "county": "Baker",
+      "lat": 44.827902,
+      "lon": -118.280776,
+      "status": "Active",
+      "triggered_evacuation": false,
+      "acres": 1201.8,
+      "structures_lost_res": 0,
+      "structures_lost_comm": 0,
+      "structures_lost_other": 0,
+      "structures_lost_unc": 0,
+      "cpx_name": null,
+      "cpx_total_acres": null
+    },
+    {
       "name": "0658 ROUND BUTTE",
       "county": "Jefferson",
       "lat": 44.611587,
@@ -3833,13 +3864,13 @@
       "cpx_total_acres": null
     },
     {
-      "name": "McCulley",
+      "name": "North Pole",
       "county": "Baker",
-      "lat": 44.827902,
-      "lon": -118.280776,
+      "lat": 44.845167,
+      "lon": -118.196467,
       "status": "Active",
       "triggered_evacuation": false,
-      "acres": 400.0,
+      "acres": 307.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,

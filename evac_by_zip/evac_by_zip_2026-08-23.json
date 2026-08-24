@@ -1,28 +1,57 @@
 {
   "date": "2026-08-23",
-  "generated_at": "2026-08-23T15:16:20Z",
-  "as_of_iso": "2026-08-23T14:45:03.000Z",
-  "as_of_display": "August 23, 2026, 7:45 AM PDT",
+  "generated_at": "2026-08-23T23:01:48Z",
+  "as_of_iso": "2026-08-23T22:45:08.000Z",
+  "as_of_display": "August 23, 2026, 3:45 PM PDT",
   "totals": {
-    "l1": 2836,
-    "l2": 1120,
-    "l3": 376,
-    "total": 4332,
+    "l1": 2844,
+    "l2": 1150,
+    "l3": 336,
+    "total": 4330,
     "zip_count": 23
   },
   "unmatched": {
-    "l1": 199,
-    "l2": 50,
-    "l3": 20,
-    "total": 269,
-    "zone_count": 0
+    "l1": 224,
+    "l2": 52,
+    "l3": 18,
+    "total": 294,
+    "zone_count": 4
   },
-  "unmatched_zones": [],
+  "unmatched_zones": [
+    {
+      "zone_name": "US-OR-BAK-BAB-1242",
+      "level": 1,
+      "addresses": 5,
+      "fire_name": "No named fire",
+      "county": "Baker"
+    },
+    {
+      "zone_name": "US-OR-BAK-BAB-1252",
+      "level": 1,
+      "addresses": 19,
+      "fire_name": "No named fire",
+      "county": "Baker"
+    },
+    {
+      "zone_name": "US-OR-GRA-GRN-043-E",
+      "level": 2,
+      "addresses": 2,
+      "fire_name": "No named fire",
+      "county": "Grant"
+    },
+    {
+      "zone_name": "US-OR-BAK-BAB-1119",
+      "level": 2,
+      "addresses": 1,
+      "fire_name": "No named fire",
+      "county": "Baker"
+    }
+  ],
   "reconciled_total": {
-    "l1": 3035,
-    "l2": 1170,
-    "l3": 396,
-    "total": 4601
+    "l1": 3068,
+    "l2": 1202,
+    "l3": 354,
+    "total": 4624
   },
   "zips": [
     {
@@ -54,16 +83,6 @@
       "peak_level": 3,
       "counties": "Klamath",
       "fires": "Wrights Spring"
-    },
-    {
-      "zip": "97754",
-      "l1": 163,
-      "l2": 226,
-      "l3": 40,
-      "total": 429,
-      "peak_level": 3,
-      "counties": "Crook, Wheeler",
-      "fires": "Rowe Creek Complex"
     },
     {
       "zip": "97624",
@@ -166,6 +185,16 @@
       "fires": "No named fire"
     },
     {
+      "zip": "97754",
+      "l1": 171,
+      "l2": 256,
+      "l3": 0,
+      "total": 427,
+      "peak_level": 2,
+      "counties": "Crook, Wheeler",
+      "fires": "Rowe Creek Complex"
+    },
+    {
       "zip": "97041",
       "l1": 225,
       "l2": 6,
@@ -256,5 +285,5 @@
       "fires": "Wrights Spring"
     }
   ],
-  "note": "Reconciled 2026-08-23 to match the morning report's evac_raw.json snapshot (fetched 2026-08-23T14:45:03.000Z / August 23, 2026, 7:45 AM PDT) rather than a separate live pull. 94.2% of 4,601 total addresses (4,332) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 269 addresses (L1:199 L2:50 L3:20, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+  "note": "Reconciled 2026-08-23 to match the morning report's evac_raw.json snapshot (fetched 2026-08-23T22:45:08.000Z / August 23, 2026, 3:45 PM PDT) rather than a separate live pull. 93.6% of 4,624 total addresses (4,330) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 294 addresses (L1:224 L2:52 L3:18, spanning 4 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
 }
