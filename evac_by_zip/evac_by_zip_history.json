@@ -250,5 +250,14 @@
     "total": 4382,
     "zip_count": 24,
     "zip_mapped_total": 4123
+  },
+  {
+    "date": "2026-08-26",
+    "l1": 1829,
+    "l2": 983,
+    "l3": 140,
+    "total": 2952,
+    "zip_count": 23,
+    "zip_mapped_total": 2733
   }
 ]
