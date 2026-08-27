@@ -107,10 +107,19 @@ const DAILY = {"2026-03-29":[{"name":"Boardman Fire","county":"Morrow","lat":45.
 const MEGA_FIRE_ACRES = 100000;
 const COLOR_MEGA = '#0072B2', COLOR_ACTIVE = '#CC2200', COLOR_CONTAINED = '#228B22';
 
+// Basemap changed 2026-08-27: Carto began enforcing an API-key requirement on the
+// free basemaps.cartocdn.com raster endpoint around 2026-08-26 — every unauthenticated
+// tile request now returns a watermarked "API KEY REQUIRED" image instead of an actual
+// map tile. Matt caught this live via a screenshot of evac_map.html (which uses the
+// same tile URL) showing the watermark tiled across the map. Switched to the standard
+// OpenStreetMap tile server here too, for the same reason and with the same tradeoff
+// (loses the minimalist light-gray look, gains "never requires an account or key") —
+// see the fuller comment in generate_evac_zip_report.py's write_html_map(), which was
+// fixed identically in the same pass.
 const map = L.map('map', { zoomControl: true }).setView([44.1, -120.5], 7);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; OpenStreetMap, &copy; CARTO',
-  subdomains: 'abcd', maxZoom: 16,
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors',
+  subdomains: 'abc', maxZoom: 19,
 }).addTo(map);
 
 let curDate = DATES[DATES.length - 1];
