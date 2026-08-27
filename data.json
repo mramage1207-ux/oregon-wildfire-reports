@@ -1,11 +1,11 @@
 {
   "last_updated": "2026-08-27",
-  "report_time": "3:09 PM PDT",
-  "report_time_iso": "2026-08-27T22:09:44Z",
+  "report_time": "3:22 PM PDT",
+  "report_time_iso": "2026-08-27T22:22:52Z",
   "current_active_fires": 65,
   "current_acres_burned": 2012780.72,
-  "current_report_time": "3:09 PM PDT",
-  "current_report_time_iso": "2026-08-27T22:09:44Z",
+  "current_report_time": "3:22 PM PDT",
+  "current_report_time_iso": "2026-08-27T22:22:52Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-08-26",
     "active_large_fires": {
@@ -15,10 +15,10 @@
       "pct": 0.0
     },
     "active_evac_fires": {
-      "current": 12,
+      "current": 10,
       "prior": 5,
-      "delta": 7,
-      "pct": 140.0
+      "delta": 5,
+      "pct": 100.0
     },
     "evac_addresses_l1": {
       "current": 1638,
@@ -66,10 +66,10 @@
       "pct": 2.8
     },
     "active_evac_fires": {
-      "current": 12,
+      "current": 10,
       "prior": 5,
-      "delta": 7,
-      "pct": 140.0
+      "delta": 5,
+      "pct": 100.0
     },
     "evac_addresses_l1": {
       "current": 1638,
@@ -117,10 +117,10 @@
       "pct": 8.8
     },
     "active_evac_fires": {
-      "current": 12,
+      "current": 10,
       "prior": 10,
-      "delta": 2,
-      "pct": 20.0
+      "delta": 0,
+      "pct": 0.0
     },
     "evac_addresses_l1": {
       "current": 1638,
@@ -293,7 +293,7 @@
         5,
         5,
         5,
-        12
+        10
       ]
     },
     "evac_addresses_l1": {
@@ -706,7 +706,7 @@
     }
   },
   "exec_summary": {
-    "headline": "Total evacuation addresses are down 8% (2,952 \u2192 2,719) since yesterday morning. Total acres burned by large fires this season stands at 2,516,209, up 27,672 acres (1.1%) since yesterday morning. The number of fires with active evacuations is up 140% (5 \u2192 12) since yesterday morning.",
+    "headline": "Total evacuation addresses are down 8% (2,952 \u2192 2,719) since yesterday morning. Total acres burned by large fires this season stands at 2,516,209, up 27,672 acres (1.1%) since yesterday morning. The number of fires with active evacuations is up 100% (5 \u2192 10) since yesterday morning.",
     "losses": "This season has recorded 1 fatality and 206 structures destroyed so far. Structures destroyed up 4% (198 \u2192 206) since yesterday morning.",
     "has_loss": true,
     "closing": "Full details, county-by-county, are in the sections below."
@@ -714,15 +714,15 @@
   "active_large_fires": 37,
   "total_large_fire_acres": 2516209.3,
   "structures_lost": 206,
-  "evac_triggering_fires": 12,
+  "evac_triggering_fires": 10,
   "evac_zones": {
     "level3": [
       "Grasshopper \u2014 ~11 miles east of Government Camp, Oregon",
       "Hagen \u2014 ~3 miles southwest of Bingham Springs, Oregon",
       "286 Wrights Spring \u2014 ~6 miles east of Modoc Point, Oregon",
       "INC 302 \u2014 ~6 miles southeast of Kooskooskie, Oregon",
+      "AUSTIN \u2014 ~5 miles southeast of Ripplebrook, Oregon",
       "McCulley \u2014 ~4 miles west of Bourne, Oregon",
-      "Austin Non-Stat \u2014 ~6 miles southeast of Ripplebrook, Oregon",
       "North Pole \u2014 ~1 miles north of Bourne, Oregon",
       "Middle Ridge \u2014 ~9 miles southeast of Tollgate, Oregon"
     ],
@@ -732,7 +732,6 @@
       "286 Wrights Spring \u2014 ~6 miles east of Modoc Point, Oregon",
       "INC 302 \u2014 ~6 miles southeast of Kooskooskie, Oregon",
       "McCulley \u2014 ~4 miles west of Bourne, Oregon",
-      "Horse Ridge \u2014 ~2 miles southwest of Duncan, Oregon",
       "North Pole \u2014 ~1 miles north of Bourne, Oregon",
       "Middle Ridge \u2014 ~9 miles southeast of Tollgate, Oregon"
     ],
@@ -744,7 +743,6 @@
       "AUSTIN \u2014 ~5 miles southeast of Ripplebrook, Oregon",
       "McCulley \u2014 ~4 miles west of Bourne, Oregon",
       "Burnt Creek \u2014 ~9 miles south of Flora, Oregon",
-      "Horse Ridge \u2014 ~2 miles southwest of Duncan, Oregon",
       "North Pole \u2014 ~1 miles north of Bourne, Oregon",
       "Middle Ridge \u2014 ~9 miles southeast of Tollgate, Oregon",
       "ROWE CREEK COMPLEX \u2014 ~9 miles southeast of Eagle, Oregon"
