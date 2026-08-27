@@ -1,11 +1,11 @@
 {
   "last_updated": "2026-08-27",
-  "report_time": "8:33 AM PDT",
-  "report_time_iso": "2026-08-27T15:33:49Z",
+  "report_time": "8:42 AM PDT",
+  "report_time_iso": "2026-08-27T15:42:46Z",
   "current_active_fires": 65,
   "current_acres_burned": 2012780.72,
-  "current_report_time": "8:33 AM PDT",
-  "current_report_time_iso": "2026-08-27T15:33:49Z",
+  "current_report_time": "8:42 AM PDT",
+  "current_report_time_iso": "2026-08-27T15:42:46Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-08-26",
     "active_large_fires": {
@@ -51,10 +51,10 @@
       "pct": 1.1
     },
     "structures_lost": {
-      "current": 198,
+      "current": 206,
       "prior": 198,
-      "delta": 0,
-      "pct": 0.0
+      "delta": 8,
+      "pct": 4.0
     }
   },
   "change_vs_7d_ago": {
@@ -102,10 +102,10 @@
       "pct": 1.9
     },
     "structures_lost": {
-      "current": 198,
+      "current": 206,
       "prior": 198,
-      "delta": 0,
-      "pct": 0.0
+      "delta": 8,
+      "pct": 4.0
     }
   },
   "change_vs_30d_ago": {
@@ -153,10 +153,10 @@
       "pct": 67.6
     },
     "structures_lost": {
-      "current": 198,
+      "current": 206,
       "prior": 106,
-      "delta": 92,
-      "pct": 86.8
+      "delta": 100,
+      "pct": 94.3
     }
   },
   "trend_history": {
@@ -701,19 +701,19 @@
         198,
         198,
         198,
-        198
+        206
       ]
     }
   },
   "exec_summary": {
     "headline": "Total evacuation addresses are down 8% (2,952 \u2192 2,719) since yesterday morning. Total acres burned by large fires this season stands at 2,516,209, up 27,672 acres (1.1%) since yesterday morning.",
-    "losses": "This season has recorded 1 fatality and 198 structures destroyed so far. Structure loss is unchanged since yesterday morning.",
+    "losses": "This season has recorded 1 fatality and 206 structures destroyed so far. Structures destroyed up 4% (198 \u2192 206) since yesterday morning.",
     "has_loss": true,
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 37,
   "total_large_fire_acres": 2516209.3,
-  "structures_lost": 198,
+  "structures_lost": 206,
   "evac_triggering_fires": 5,
   "evac_zones": {
     "level3": [
@@ -744,19 +744,19 @@
     "oregon_totals": {
       "res_threatened": 0,
       "res_damaged": 0,
-      "res_destroyed": 45,
+      "res_destroyed": 50,
       "comm_threatened": 0,
       "comm_damaged": 0,
       "comm_destroyed": 2,
       "minor_threatened": 0,
       "minor_damaged": 0,
-      "minor_destroyed": 151,
-      "unc_threatened": 6506,
-      "unc_damaged": 0,
+      "minor_destroyed": 154,
+      "unc_threatened": 6953,
+      "unc_damaged": 1,
       "unc_destroyed": 0,
-      "total_threatened": 6506,
-      "total_damaged": 0,
-      "total_destroyed": 198,
+      "total_threatened": 6953,
+      "total_damaged": 1,
+      "total_destroyed": 206,
       "methodology_note": "Effective 2026-08-01: NWCC structure-loss figures reported as a bare number with no descriptive category text are labeled Uncategorized rather than assumed Residential. Data before this date used the prior assume-Residential convention and has not been retroactively revised."
     }
   },
@@ -946,18 +946,18 @@
     {
       "county": "Wheeler",
       "acres": 447593.0,
-      "res": 8,
+      "res": 13,
       "comm": 0,
-      "other": 22,
+      "other": 25,
       "unc": 0,
       "fires": [
         {
           "name": "ROWE CREEK COMPLEX",
           "acres": 373927,
           "status": "Active",
-          "res": 4,
+          "res": 9,
           "comm": 0,
-          "other": 21,
+          "other": 24,
           "unc": 0
         },
         {
@@ -1742,9 +1742,9 @@
       ]
     },
     "Wheeler": {
-      "threatened": 0,
-      "damaged": 0,
-      "destroyed": 30,
+      "threatened": 447,
+      "damaged": 1,
+      "destroyed": 38,
       "fires": [
         "0587 SHINGLE",
         "ROWE CREEK COMPLEX"
@@ -2866,7 +2866,7 @@
       "year": 2026,
       "total_fires": 80,
       "total_acres": 2516209.3,
-      "total_structures_destroyed": 198,
+      "total_structures_destroyed": 206,
       "fatalities": 1,
       "injuries": 0,
       "largest_fire": {
