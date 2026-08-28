@@ -262,11 +262,20 @@
   },
   {
     "date": "2026-08-27",
-    "l1": 1638,
+    "l1": 1619,
     "l2": 941,
-    "l3": 140,
-    "total": 2719,
-    "zip_count": 23,
-    "zip_mapped_total": 2507
+    "l3": 151,
+    "total": 2711,
+    "zip_count": 21,
+    "zip_mapped_total": 2485
+  },
+  {
+    "date": "2026-08-28",
+    "l1": 1621,
+    "l2": 941,
+    "l3": 153,
+    "total": 2715,
+    "zip_count": 22,
+    "zip_mapped_total": 2492
   }
 ]
