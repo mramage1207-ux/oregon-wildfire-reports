@@ -1,54 +1,54 @@
 {
-  "last_updated": "2026-08-28",
-  "report_time": "8:21 AM PDT",
-  "report_time_iso": "2026-08-28T15:21:01Z",
-  "current_active_fires": 60,
-  "current_acres_burned": 2026490.75,
-  "current_report_time": "8:21 AM PDT",
-  "current_report_time_iso": "2026-08-28T15:21:01Z",
+  "last_updated": "2026-08-29",
+  "report_time": "8:25 AM PDT",
+  "report_time_iso": "2026-08-29T15:25:39Z",
+  "current_active_fires": 52,
+  "current_acres_burned": 2026691.83,
+  "current_report_time": "8:25 AM PDT",
+  "current_report_time_iso": "2026-08-29T15:25:39Z",
   "change_vs_prior_morning": {
-    "prior_date": "2026-08-27",
+    "prior_date": "2026-08-28",
     "active_large_fires": {
-      "current": 35,
-      "prior": 37,
+      "current": 33,
+      "prior": 35,
       "delta": -2,
-      "pct": -5.4
+      "pct": -5.7
     },
     "active_evac_fires": {
-      "current": 9,
-      "prior": 10,
-      "delta": -1,
-      "pct": -10.0
+      "current": 7,
+      "prior": 9,
+      "delta": -2,
+      "pct": -22.2
     },
     "evac_addresses_l1": {
       "current": 1621,
-      "prior": 1638,
-      "delta": -17,
-      "pct": -1.0
-    },
-    "evac_addresses_l2": {
-      "current": 941,
-      "prior": 941,
+      "prior": 1621,
       "delta": 0,
       "pct": 0.0
     },
+    "evac_addresses_l2": {
+      "current": 1006,
+      "prior": 941,
+      "delta": 65,
+      "pct": 6.9
+    },
     "evac_addresses_l3": {
-      "current": 153,
-      "prior": 140,
-      "delta": 13,
-      "pct": 9.3
+      "current": 88,
+      "prior": 153,
+      "delta": -65,
+      "pct": -42.5
     },
     "active_fires": {
-      "current": 60,
-      "prior": 65,
-      "delta": -5,
-      "pct": -7.7
+      "current": 52,
+      "prior": 60,
+      "delta": -8,
+      "pct": -13.3
     },
     "total_acres_ytd": {
-      "current": 2524984.3,
-      "prior": 2516209,
-      "delta": 8775.299999999814,
-      "pct": 0.3
+      "current": 2510891.3,
+      "prior": 2524984,
+      "delta": -14092.700000000186,
+      "pct": -0.6
     },
     "structures_lost": {
       "current": 206,
@@ -58,48 +58,48 @@
     }
   },
   "change_vs_7d_ago": {
-    "prior_date": "2026-08-21",
+    "prior_date": "2026-08-22",
     "active_large_fires": {
-      "current": 35,
-      "prior": 35,
-      "delta": 0,
-      "pct": 0.0
+      "current": 33,
+      "prior": 32,
+      "delta": 1,
+      "pct": 3.1
     },
     "active_evac_fires": {
-      "current": 9,
-      "prior": 5,
-      "delta": 4,
-      "pct": 80.0
+      "current": 7,
+      "prior": 4,
+      "delta": 3,
+      "pct": 75.0
     },
     "evac_addresses_l1": {
       "current": 1621,
-      "prior": 3212,
-      "delta": -1591,
-      "pct": -49.5
+      "prior": 2793,
+      "delta": -1172,
+      "pct": -42.0
     },
     "evac_addresses_l2": {
-      "current": 941,
-      "prior": 1159,
-      "delta": -218,
-      "pct": -18.8
+      "current": 1006,
+      "prior": 1168,
+      "delta": -162,
+      "pct": -13.9
     },
     "evac_addresses_l3": {
-      "current": 153,
-      "prior": 431,
-      "delta": -278,
-      "pct": -64.5
+      "current": 88,
+      "prior": 387,
+      "delta": -299,
+      "pct": -77.3
     },
     "active_fires": {
-      "current": 60,
-      "prior": 62,
+      "current": 52,
+      "prior": 54,
       "delta": -2,
-      "pct": -3.2
+      "pct": -3.7
     },
     "total_acres_ytd": {
-      "current": 2524984.3,
-      "prior": 2471636,
-      "delta": 53348.299999999814,
-      "pct": 2.2
+      "current": 2510891.3,
+      "prior": 2474076,
+      "delta": 36815.299999999814,
+      "pct": 1.5
     },
     "structures_lost": {
       "current": 206,
@@ -109,60 +109,59 @@
     }
   },
   "change_vs_30d_ago": {
-    "prior_date": "2026-07-29",
+    "prior_date": "2026-07-30",
     "active_large_fires": {
-      "current": 35,
+      "current": 33,
       "prior": 31,
-      "delta": 4,
-      "pct": 12.9
+      "delta": 2,
+      "pct": 6.5
     },
     "active_evac_fires": {
-      "current": 9,
+      "current": 7,
       "prior": 8,
-      "delta": 1,
-      "pct": 12.5
+      "delta": -1,
+      "pct": -12.5
     },
     "evac_addresses_l1": {
       "current": 1621,
-      "prior": 3930,
-      "delta": -2309,
-      "pct": -58.8
+      "prior": 4009,
+      "delta": -2388,
+      "pct": -59.6
     },
     "evac_addresses_l2": {
-      "current": 941,
-      "prior": 3716,
-      "delta": -2775,
-      "pct": -74.7
+      "current": 1006,
+      "prior": 3667,
+      "delta": -2661,
+      "pct": -72.6
     },
     "evac_addresses_l3": {
-      "current": 153,
-      "prior": 1915,
-      "delta": -1762,
-      "pct": -92.0
+      "current": 88,
+      "prior": 1920,
+      "delta": -1832,
+      "pct": -95.4
     },
     "active_fires": {
-      "current": 60,
-      "prior": 60,
-      "delta": 0,
-      "pct": 0.0
+      "current": 52,
+      "prior": 55,
+      "delta": -3,
+      "pct": -5.5
     },
     "total_acres_ytd": {
-      "current": 2524984.3,
-      "prior": 1579000,
-      "delta": 945984.2999999998,
-      "pct": 59.9
+      "current": 2510891.3,
+      "prior": 1696112,
+      "delta": 814779.2999999998,
+      "pct": 48.0
     },
     "structures_lost": {
       "current": 206,
-      "prior": 116,
-      "delta": 90,
-      "pct": 77.6
+      "prior": 118,
+      "delta": 88,
+      "pct": 74.6
     }
   },
   "trend_history": {
     "active_large_fires": {
       "dates": [
-        "2026-07-29",
         "2026-07-30",
         "2026-07-31",
         "2026-08-01",
@@ -192,10 +191,10 @@
         "2026-08-25",
         "2026-08-26",
         "2026-08-27",
-        "2026-08-28"
+        "2026-08-28",
+        "2026-08-29"
       ],
       "values": [
-        31,
         31,
         31,
         31,
@@ -225,12 +224,12 @@
         36,
         37,
         37,
-        35
+        35,
+        33
       ]
     },
     "active_evac_fires": {
       "dates": [
-        "2026-07-29",
         "2026-07-30",
         "2026-07-31",
         "2026-08-01",
@@ -260,10 +259,10 @@
         "2026-08-25",
         "2026-08-26",
         "2026-08-27",
-        "2026-08-28"
+        "2026-08-28",
+        "2026-08-29"
       ],
       "values": [
-        8,
         8,
         8,
         8,
@@ -293,12 +292,12 @@
         5,
         5,
         10,
-        9
+        9,
+        7
       ]
     },
     "evac_addresses_l1": {
       "dates": [
-        "2026-07-29",
         "2026-07-30",
         "2026-07-31",
         "2026-08-01",
@@ -328,10 +327,10 @@
         "2026-08-25",
         "2026-08-26",
         "2026-08-27",
-        "2026-08-28"
+        "2026-08-28",
+        "2026-08-29"
       ],
       "values": [
-        3930,
         4009,
         4126,
         4710,
@@ -361,12 +360,12 @@
         3215,
         1829,
         1638,
+        1621,
         1621
       ]
     },
     "evac_addresses_l2": {
       "dates": [
-        "2026-07-29",
         "2026-07-30",
         "2026-07-31",
         "2026-08-01",
@@ -396,10 +395,10 @@
         "2026-08-25",
         "2026-08-26",
         "2026-08-27",
-        "2026-08-28"
+        "2026-08-28",
+        "2026-08-29"
       ],
       "values": [
-        3716,
         3667,
         3598,
         2845,
@@ -429,12 +428,12 @@
         840,
         983,
         941,
-        941
+        941,
+        1006
       ]
     },
     "evac_addresses_l3": {
       "dates": [
-        "2026-07-29",
         "2026-07-30",
         "2026-07-31",
         "2026-08-01",
@@ -464,10 +463,10 @@
         "2026-08-25",
         "2026-08-26",
         "2026-08-27",
-        "2026-08-28"
+        "2026-08-28",
+        "2026-08-29"
       ],
       "values": [
-        1915,
         1920,
         1864,
         2108,
@@ -497,12 +496,12 @@
         327,
         140,
         140,
-        153
+        153,
+        88
       ]
     },
     "active_fires": {
       "dates": [
-        "2026-07-29",
         "2026-07-30",
         "2026-07-31",
         "2026-08-01",
@@ -532,10 +531,10 @@
         "2026-08-25",
         "2026-08-26",
         "2026-08-27",
-        "2026-08-28"
+        "2026-08-28",
+        "2026-08-29"
       ],
       "values": [
-        60,
         55,
         48,
         47,
@@ -565,12 +564,12 @@
         61,
         63,
         65,
-        60
+        60,
+        52
       ]
     },
     "total_acres_ytd": {
       "dates": [
-        "2026-07-29",
         "2026-07-30",
         "2026-07-31",
         "2026-08-01",
@@ -600,10 +599,10 @@
         "2026-08-25",
         "2026-08-26",
         "2026-08-27",
-        "2026-08-28"
+        "2026-08-28",
+        "2026-08-29"
       ],
       "values": [
-        1579000,
         1696112,
         1749261,
         1765392,
@@ -633,12 +632,12 @@
         2480447,
         2488537,
         2516209,
-        2524984.3
+        2524984,
+        2510891.3
       ]
     },
     "structures_lost": {
       "dates": [
-        "2026-07-29",
         "2026-07-30",
         "2026-07-31",
         "2026-08-01",
@@ -668,10 +667,10 @@
         "2026-08-25",
         "2026-08-26",
         "2026-08-27",
-        "2026-08-28"
+        "2026-08-28",
+        "2026-08-29"
       ],
       "values": [
-        116,
         118,
         119,
         143,
@@ -701,55 +700,50 @@
         198,
         198,
         206,
+        206,
         206
       ]
     }
   },
   "exec_summary": {
-    "headline": "Total evacuation addresses are down 0% (2,719 \u2192 2,715) since yesterday morning. Total acres burned by large fires this season stands at 2,524,984, up 8,775 acres (0.3%) since yesterday morning. The number of fires with active evacuations is down 10% (10 \u2192 9) since yesterday morning. The number of active fires statewide is down 8% (65 \u2192 60) since yesterday morning.",
+    "headline": "Total evacuation addresses are holding steady at 2,715 since yesterday morning. Total acres burned by large fires this season stands at 2,510,891, down 14,093 acres (0.6%) since yesterday morning. The number of fires with active evacuations is down 22% (9 \u2192 7) since yesterday morning. The number of active fires statewide is down 13% (60 \u2192 52) since yesterday morning.",
     "losses": "This season has recorded 1 fatality and 206 structures destroyed so far. Structure loss is unchanged since yesterday morning.",
     "has_loss": true,
     "closing": "Full details, county-by-county, are in the sections below."
   },
-  "active_large_fires": 35,
-  "total_large_fire_acres": 2524984.3,
+  "active_large_fires": 33,
+  "total_large_fire_acres": 2510891.3,
   "structures_lost": 206,
-  "evac_triggering_fires": 9,
+  "evac_triggering_fires": 7,
   "evac_zones": {
     "level3": [
       "Grasshopper \u2014 ~11 miles east of Government Camp, Oregon",
       "Hagen \u2014 ~3 miles southwest of Bingham Springs, Oregon",
       "286 Wrights Spring \u2014 ~6 miles east of Modoc Point, Oregon",
-      "INC 302 \u2014 ~6 miles southeast of Kooskooskie, Oregon",
       "AUSTIN \u2014 ~5 miles southeast of Ripplebrook, Oregon",
       "McCulley \u2014 ~4 miles west of Bourne, Oregon",
-      "North Pole \u2014 ~1 miles north of Bourne, Oregon",
-      "Middle Ridge \u2014 ~9 miles southeast of Tollgate, Oregon"
+      "North Pole \u2014 ~1 miles north of Bourne, Oregon"
     ],
     "level2": [
       "Grasshopper \u2014 ~11 miles east of Government Camp, Oregon",
       "Hagen \u2014 ~3 miles southwest of Bingham Springs, Oregon",
       "286 Wrights Spring \u2014 ~6 miles east of Modoc Point, Oregon",
-      "INC 302 \u2014 ~6 miles southeast of Kooskooskie, Oregon",
-      "McCulley \u2014 ~4 miles west of Bourne, Oregon",
-      "Middle Ridge \u2014 ~9 miles southeast of Tollgate, Oregon"
+      "McCulley \u2014 ~4 miles west of Bourne, Oregon"
     ],
     "level1": [
       "Grasshopper \u2014 ~11 miles east of Government Camp, Oregon",
       "Hagen \u2014 ~3 miles southwest of Bingham Springs, Oregon",
       "286 Wrights Spring \u2014 ~6 miles east of Modoc Point, Oregon",
-      "INC 302 \u2014 ~6 miles southeast of Kooskooskie, Oregon",
       "McCulley \u2014 ~4 miles west of Bourne, Oregon",
       "North Pole \u2014 ~1 miles north of Bourne, Oregon",
-      "Middle Ridge \u2014 ~9 miles southeast of Tollgate, Oregon",
       "ROWE CREEK COMPLEX \u2014 ~9 miles southeast of Eagle, Oregon"
     ]
   },
   "evac_addresses_l1": 1621,
-  "evac_addresses_l2": 941,
-  "evac_addresses_l3": 153,
-  "evac_data_as_of": "8:11 AM PDT",
-  "evac_data_as_of_iso": "2026-08-28T15:11:29Z",
+  "evac_addresses_l2": 1006,
+  "evac_addresses_l3": 88,
+  "evac_data_as_of": "7:45 AM PDT",
+  "evac_data_as_of_iso": "2026-08-29T14:45:03Z",
   "struct_loss": {
     "oregon_totals": {
       "res_threatened": 0,
@@ -761,10 +755,10 @@
       "minor_threatened": 0,
       "minor_damaged": 0,
       "minor_destroyed": 154,
-      "unc_threatened": 6472,
+      "unc_threatened": 6471,
       "unc_damaged": 1,
       "unc_destroyed": 0,
-      "total_threatened": 6472,
+      "total_threatened": 6471,
       "total_damaged": 1,
       "total_destroyed": 206,
       "methodology_note": "Effective 2026-08-01: NWCC structure-loss figures reported as a bare number with no descriptive category text are labeled Uncategorized rather than assumed Residential. Data before this date used the prior assume-Residential convention and has not been retroactively revised."
@@ -1000,61 +994,6 @@
       ]
     },
     {
-      "county": "Gilliam",
-      "acres": 217480.0,
-      "res": 1,
-      "comm": 0,
-      "other": 9,
-      "unc": 0,
-      "fires": [
-        {
-          "name": "HAY CREEK COMPLEX",
-          "acres": 200292,
-          "status": "Active",
-          "res": 1,
-          "comm": 0,
-          "other": 9,
-          "unc": 0
-        },
-        {
-          "name": "0584 COTTONWOOD",
-          "acres": 15658,
-          "status": "Contained",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        },
-        {
-          "name": "518 SULLY",
-          "acres": 640,
-          "status": "Contained",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        },
-        {
-          "name": "0246 RHEA",
-          "acres": 450,
-          "status": "Contained",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        },
-        {
-          "name": "0366 CEDAR",
-          "acres": 440,
-          "status": "Contained",
-          "res": 0,
-          "comm": 0,
-          "other": 0,
-          "unc": 0
-        }
-      ]
-    },
-    {
       "county": "Jefferson",
       "acres": 206460.0,
       "res": 12,
@@ -1128,8 +1067,54 @@
       ]
     },
     {
+      "county": "Gilliam",
+      "acres": 201822.0,
+      "res": 1,
+      "comm": 0,
+      "other": 9,
+      "unc": 0,
+      "fires": [
+        {
+          "name": "HAY CREEK COMPLEX",
+          "acres": 200292,
+          "status": "Active",
+          "res": 1,
+          "comm": 0,
+          "other": 9,
+          "unc": 0
+        },
+        {
+          "name": "518 SULLY",
+          "acres": 640,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0,
+          "unc": 0
+        },
+        {
+          "name": "0246 RHEA",
+          "acres": 450,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0,
+          "unc": 0
+        },
+        {
+          "name": "0366 CEDAR",
+          "acres": 440,
+          "status": "Contained",
+          "res": 0,
+          "comm": 0,
+          "other": 0,
+          "unc": 0
+        }
+      ]
+    },
+    {
       "county": "Baker",
-      "acres": 113979.0,
+      "acres": 114546.0,
       "res": 3,
       "comm": 0,
       "other": 5,
@@ -1155,7 +1140,7 @@
         },
         {
           "name": "McCulley",
-          "acres": 8305,
+          "acres": 8872,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1202,7 +1187,7 @@
     },
     {
       "county": "Wasco",
-      "acres": 97545.0,
+      "acres": 97590.0,
       "res": 9,
       "comm": 0,
       "other": 26,
@@ -1210,7 +1195,7 @@
       "fires": [
         {
           "name": "Grasshopper",
-          "acres": 93841,
+          "acres": 93886,
           "status": "Active",
           "res": 9,
           "comm": 0,
@@ -1257,7 +1242,7 @@
     },
     {
       "county": "Umatilla",
-      "acres": 76593.0,
+      "acres": 76685.0,
       "res": 6,
       "comm": 0,
       "other": 43,
@@ -1265,7 +1250,7 @@
       "fires": [
         {
           "name": "Hagen",
-          "acres": 60645,
+          "acres": 60737,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1321,7 +1306,7 @@
     },
     {
       "county": "Klamath",
-      "acres": 55380.0,
+      "acres": 55381.0,
       "res": 1,
       "comm": 0,
       "other": 6,
@@ -1329,7 +1314,7 @@
       "fires": [
         {
           "name": "286 Wrights Spring",
-          "acres": 55133,
+          "acres": 55134,
           "status": "Active",
           "res": 1,
           "comm": 0,
@@ -1386,7 +1371,7 @@
     },
     {
       "county": "Wallowa",
-      "acres": 17666.0,
+      "acres": 17718.0,
       "res": 0,
       "comm": 0,
       "other": 0,
@@ -1394,7 +1379,7 @@
       "fires": [
         {
           "name": "INC 302",
-          "acres": 9272,
+          "acres": 9324,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1478,7 +1463,7 @@
     },
     {
       "county": "Clackamas",
-      "acres": 10237.0,
+      "acres": 11045.0,
       "res": 0,
       "comm": 0,
       "other": 0,
@@ -1486,7 +1471,7 @@
       "fires": [
         {
           "name": "AUSTIN",
-          "acres": 9237,
+          "acres": 10045,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1626,7 +1611,7 @@
         {
           "name": "Picture Rock",
           "acres": 1228,
-          "status": "Active",
+          "status": "Contained",
           "res": 0,
           "comm": 0,
           "other": 0,
@@ -1645,7 +1630,7 @@
         {
           "name": "Middle Ridge",
           "acres": 138,
-          "status": "Active",
+          "status": "Contained",
           "res": 0,
           "comm": 0,
           "other": 0,
@@ -1704,32 +1689,31 @@
   "county_acres_map": {
     "Malheur": 662727.7,
     "Harney": 537775.0,
-    "Wasco": 97545.0,
-    "Baker": 113979.0,
+    "Wasco": 97590.0,
+    "Baker": 114546.0,
     "Wheeler": 447593.0,
     "Jefferson": 206460.0,
-    "Umatilla": 76593.0,
-    "Klamath": 55380.0,
+    "Umatilla": 76685.0,
+    "Klamath": 55381.0,
     "Crook": 47654.0,
-    "Wallowa": 17666.0,
-    "Clackamas": 10237.0,
+    "Clackamas": 11045.0,
+    "Wallowa": 17718.0,
     "Grant": 9683.0,
-    "Lake": 1228.0,
-    "Union": 138.1,
-    "Gilliam": 217480.0,
     "Jackson": 16212.0,
     "Douglas": 3615.0,
     "Deschutes": 2918.5,
+    "Lake": 1228.0,
+    "Gilliam": 201822.0,
+    "Union": 138.1,
     "Josephine": 100.0
   },
   "county_structures_map": {
     "Malheur": {
-      "threatened": 234,
+      "threatened": 233,
       "damaged": 0,
       "destroyed": 0,
       "fires": [
-        "BIG GRASS",
-        "MITCHELL SPRINGS"
+        "BIG GRASS"
       ]
     },
     "Harney": {
@@ -1796,14 +1780,6 @@
         "286 Wrights Spring"
       ]
     },
-    "Wallowa": {
-      "threatened": 67,
-      "damaged": 0,
-      "destroyed": 0,
-      "fires": [
-        "INC 302"
-      ]
-    },
     "Clackamas": {
       "threatened": 12,
       "damaged": 0,
@@ -1811,6 +1787,14 @@
       "fires": [
         "AUSTIN",
         "Austin Non-Stat"
+      ]
+    },
+    "Wallowa": {
+      "threatened": 67,
+      "damaged": 0,
+      "destroyed": 0,
+      "fires": [
+        "INC 302"
       ]
     },
     "Grant": {
@@ -1822,20 +1806,20 @@
         "Salmon"
       ]
     },
-    "Gilliam": {
-      "threatened": 0,
-      "damaged": 0,
-      "destroyed": 10,
-      "fires": [
-        "HAY CREEK COMPLEX"
-      ]
-    },
     "Jackson": {
       "threatened": 0,
       "damaged": 0,
       "destroyed": 7,
       "fires": [
         "E Evans Creek Rd 18000"
+      ]
+    },
+    "Gilliam": {
+      "threatened": 0,
+      "damaged": 0,
+      "destroyed": 10,
+      "fires": [
+        "HAY CREEK COMPLEX"
       ]
     },
     "Josephine": {
@@ -2882,13 +2866,18 @@
       "date": "2026-08-28",
       "active_fires": 60,
       "acres_burned": 2026490.75
+    },
+    {
+      "date": "2026-08-29",
+      "active_fires": 52,
+      "acres_burned": 2026691.83
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
-      "total_fires": 81,
-      "total_acres": 2524984.3,
+      "total_fires": 80,
+      "total_acres": 2510891.3,
       "total_structures_destroyed": 206,
       "fatalities": 1,
       "injuries": 0,
@@ -3469,7 +3458,7 @@
       "lon": -121.537304,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 93841.0,
+      "acres": 93886.0,
       "structures_lost_res": 9,
       "structures_lost_comm": 0,
       "structures_lost_other": 26,
@@ -3544,7 +3533,7 @@
       "lon": -118.269,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 60645.0,
+      "acres": 60737.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3559,7 +3548,7 @@
       "lon": -121.751126,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 55133.0,
+      "acres": 55134.0,
       "structures_lost_res": 1,
       "structures_lost_comm": 0,
       "structures_lost_other": 6,
@@ -3643,13 +3632,13 @@
       "cpx_total_acres": null
     },
     {
-      "name": "INC 302",
-      "county": "Wallowa",
-      "lat": 45.975728,
-      "lon": -118.007951,
+      "name": "AUSTIN",
+      "county": "Clackamas",
+      "lat": 45.03,
+      "lon": -121.96,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 9272.0,
+      "acres": 10045.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3658,13 +3647,13 @@
       "cpx_total_acres": null
     },
     {
-      "name": "AUSTIN",
-      "county": "Clackamas",
-      "lat": 45.03,
-      "lon": -121.96,
+      "name": "INC 302",
+      "county": "Wallowa",
+      "lat": 45.975728,
+      "lon": -118.007951,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 9237.0,
+      "acres": 9324.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3679,7 +3668,7 @@
       "lon": -118.280776,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 8305.0,
+      "acres": 8872.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3823,21 +3812,6 @@
       "cpx_total_acres": null
     },
     {
-      "name": "Picture Rock",
-      "county": "Lake",
-      "lat": 43.012952,
-      "lon": -120.771412,
-      "status": "Active",
-      "triggered_evacuation": true,
-      "acres": 1228.0,
-      "structures_lost_res": 0,
-      "structures_lost_comm": 0,
-      "structures_lost_other": 0,
-      "structures_lost_unc": 0,
-      "cpx_name": null,
-      "cpx_total_acres": null
-    },
-    {
       "name": "0658 ROUND BUTTE",
       "county": "Jefferson",
       "lat": 44.611587,
@@ -3913,21 +3887,6 @@
       "cpx_total_acres": null
     },
     {
-      "name": "Middle Ridge",
-      "county": "Union",
-      "lat": 45.712016,
-      "lon": -117.932463,
-      "status": "Active",
-      "triggered_evacuation": true,
-      "acres": 138.0,
-      "structures_lost_res": 0,
-      "structures_lost_comm": 0,
-      "structures_lost_other": 0,
-      "structures_lost_unc": 0,
-      "cpx_name": null,
-      "cpx_total_acres": null
-    },
-    {
       "name": "0449 PORCUPINE RIDGE",
       "county": "Gilliam",
       "lat": 45.18894,
@@ -3940,7 +3899,7 @@
       "structures_lost_other": 0,
       "structures_lost_unc": 11,
       "cpx_name": "HAY CREEK COMPLEX",
-      "cpx_total_acres": 184634.0
+      "cpx_total_acres": 200292.0
     },
     {
       "name": "BREWER",
@@ -3970,7 +3929,7 @@
       "structures_lost_other": 5,
       "structures_lost_unc": 0,
       "cpx_name": "HAY CREEK COMPLEX",
-      "cpx_total_acres": 184634.0
+      "cpx_total_acres": 200292.0
     },
     {
       "name": "0567",
@@ -3985,7 +3944,7 @@
       "structures_lost_other": 0,
       "structures_lost_unc": 0,
       "cpx_name": "HAY CREEK COMPLEX",
-      "cpx_total_acres": 184634.0
+      "cpx_total_acres": 200292.0
     },
     {
       "name": "HAT",
@@ -4044,8 +4003,8 @@
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
       "structures_lost_unc": 0,
-      "cpx_name": null,
-      "cpx_total_acres": null
+      "cpx_name": "HAY CREEK COMPLEX",
+      "cpx_total_acres": 200292.0
     },
     {
       "name": "E Evans Creek Rd 18000",
@@ -4105,7 +4064,7 @@
       "structures_lost_other": 0,
       "structures_lost_unc": 0,
       "cpx_name": "HAY CREEK COMPLEX",
-      "cpx_total_acres": 184634.0
+      "cpx_total_acres": 200292.0
     },
     {
       "name": "0485",
@@ -4385,6 +4344,21 @@
       "status": "Contained",
       "triggered_evacuation": true,
       "acres": 1347.0,
+      "structures_lost_res": 0,
+      "structures_lost_comm": 0,
+      "structures_lost_other": 0,
+      "structures_lost_unc": 0,
+      "cpx_name": null,
+      "cpx_total_acres": null
+    },
+    {
+      "name": "Picture Rock",
+      "county": "Lake",
+      "lat": 43.012952,
+      "lon": -120.771412,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 1228.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -4678,6 +4652,21 @@
       "cpx_total_acres": null
     },
     {
+      "name": "Middle Ridge",
+      "county": "Union",
+      "lat": 45.712016,
+      "lon": -117.932463,
+      "status": "Contained",
+      "triggered_evacuation": true,
+      "acres": 138.0,
+      "structures_lost_res": 0,
+      "structures_lost_comm": 0,
+      "structures_lost_other": 0,
+      "structures_lost_unc": 0,
+      "cpx_name": null,
+      "cpx_total_acres": null
+    },
+    {
       "name": "I5 MM 57 NB",
       "county": "Josephine",
       "lat": 42.44636667,
@@ -4780,7 +4769,7 @@
       "structures_lost_other": 0,
       "structures_lost_unc": 0,
       "cpx_name": "HAY CREEK COMPLEX",
-      "cpx_total_acres": 184634.0
+      "cpx_total_acres": 200292.0
     },
     {
       "name": "AIRPORT",
