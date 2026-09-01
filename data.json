@@ -1,11 +1,11 @@
 {
   "last_updated": "2026-09-01",
-  "report_time": "8:25 AM PDT",
-  "report_time_iso": "2026-09-01T15:25:47Z",
+  "report_time": "9:38 AM PDT",
+  "report_time_iso": "2026-09-01T16:38:03Z",
   "current_active_fires": 94,
   "current_acres_burned": 2026781.17,
-  "current_report_time": "8:25 AM PDT",
-  "current_report_time_iso": "2026-09-01T15:25:47Z",
+  "current_report_time": "9:38 AM PDT",
+  "current_report_time_iso": "2026-09-01T16:38:03Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-08-31",
     "active_large_fires": {
@@ -727,14 +727,15 @@
       "Grasshopper \u2014 ~11 miles east of Government Camp, Oregon",
       "Hagen \u2014 ~3 miles southwest of Bingham Springs, Oregon",
       "286 Wrights Spring \u2014 ~6 miles east of Modoc Point, Oregon",
-      "McCulley \u2014 ~4 miles west of Bourne, Oregon"
+      "McCulley \u2014 ~4 miles west of Bourne, Oregon",
+      "INC 302 \u2014 ~6 miles southeast of Kooskooskie, Oregon"
     ],
     "level1": [
       "Grasshopper \u2014 ~11 miles east of Government Camp, Oregon",
       "Hagen \u2014 ~3 miles southwest of Bingham Springs, Oregon",
       "McCulley \u2014 ~4 miles west of Bourne, Oregon",
-      "North Pole \u2014 ~1 miles north of Bourne, Oregon",
-      "ROWE CREEK COMPLEX \u2014 ~9 miles southeast of Eagle, Oregon"
+      "INC 302 \u2014 ~6 miles southeast of Kooskooskie, Oregon",
+      "North Pole \u2014 ~1 miles north of Bourne, Oregon"
     ]
   },
   "evac_addresses_l1": 1229,
