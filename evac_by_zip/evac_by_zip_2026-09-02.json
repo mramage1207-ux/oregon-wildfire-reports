@@ -1,36 +1,28 @@
 {
-  "date": "2026-09-01",
-  "generated_at": "2026-09-01T23:01:50Z",
-  "as_of_iso": "2026-09-01T22:45:08.000Z",
-  "as_of_display": "September 1, 2026, 3:45 PM PDT",
+  "date": "2026-09-02",
+  "generated_at": "2026-09-02T15:16:16Z",
+  "as_of_iso": "2026-09-02T14:45:09.000Z",
+  "as_of_display": "September 2, 2026, 7:45 AM PDT",
   "totals": {
     "l1": 1069,
-    "l2": 341,
-    "l3": 44,
-    "total": 1454,
-    "zip_count": 14
+    "l2": 342,
+    "l3": 48,
+    "total": 1459,
+    "zip_count": 13
   },
   "unmatched": {
     "l1": 158,
-    "l2": 12,
+    "l2": 9,
     "l3": 28,
-    "total": 198,
-    "zone_count": 1
+    "total": 195,
+    "zone_count": 0
   },
-  "unmatched_zones": [
-    {
-      "zone_name": "US-OR-GRA-GRN-043-N",
-      "level": 2,
-      "addresses": 2,
-      "fire_name": "No named fire",
-      "county": "Grant"
-    }
-  ],
+  "unmatched_zones": [],
   "reconciled_total": {
     "l1": 1227,
-    "l2": 353,
-    "l3": 72,
-    "total": 1652
+    "l2": 351,
+    "l3": 76,
+    "total": 1654
   },
   "zips": [
     {
@@ -46,9 +38,9 @@
     {
       "zip": "97877",
       "l1": 240,
-      "l2": 3,
-      "l3": 9,
-      "total": 252,
+      "l2": 5,
+      "l3": 13,
+      "total": 258,
       "peak_level": 3,
       "counties": "Baker, Grant",
       "fires": "No named fire"
@@ -154,16 +146,6 @@
       "fires": "No named fire"
     },
     {
-      "zip": "97639",
-      "l1": 0,
-      "l2": 1,
-      "l3": 0,
-      "total": 1,
-      "peak_level": 2,
-      "counties": "Klamath",
-      "fires": "Wrights Spring"
-    },
-    {
       "zip": "97859",
       "l1": 0,
       "l2": 1,
@@ -174,5 +156,5 @@
       "fires": "No named fire"
     }
   ],
-  "note": "Reconciled 2026-09-01 to match the morning report's evac_raw.json snapshot (fetched 2026-09-01T22:45:08.000Z / September 1, 2026, 3:45 PM PDT) rather than a separate live pull. 88.0% of 1,652 total addresses (1,454) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 198 addresses (L1:158 L2:12 L3:28, spanning 1 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+  "note": "Reconciled 2026-09-02 to match the morning report's evac_raw.json snapshot (fetched 2026-09-02T14:45:09.000Z / September 2, 2026, 7:45 AM PDT) rather than a separate live pull. 88.2% of 1,654 total addresses (1,459) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 195 addresses (L1:158 L2:9 L3:28, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
 }
