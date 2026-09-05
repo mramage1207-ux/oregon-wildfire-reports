@@ -1,0 +1,150 @@
+{
+  "date": "2026-09-05",
+  "generated_at": "2026-09-05T15:02:44Z",
+  "as_of_iso": "2026-09-05T14:45:07.000Z",
+  "as_of_display": "September 5, 2026, 7:45 AM PDT",
+  "totals": {
+    "l1": 405,
+    "l2": 215,
+    "l3": 47,
+    "total": 667,
+    "zip_count": 12
+  },
+  "unmatched": {
+    "l1": 141,
+    "l2": 5,
+    "l3": 27,
+    "total": 173,
+    "zone_count": 0
+  },
+  "unmatched_zones": [],
+  "reconciled_total": {
+    "l1": 546,
+    "l2": 220,
+    "l3": 74,
+    "total": 840
+  },
+  "zips": [
+    {
+      "zip": "97886",
+      "l1": 56,
+      "l2": 121,
+      "l3": 0,
+      "total": 177,
+      "peak_level": 2,
+      "counties": "Umatilla, Union",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97877",
+      "l1": 24,
+      "l2": 5,
+      "l3": 13,
+      "total": 42,
+      "peak_level": 3,
+      "counties": "Baker, Grant",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97827",
+      "l1": 0,
+      "l2": 1,
+      "l3": 29,
+      "total": 30,
+      "peak_level": 3,
+      "counties": "Umatilla, Union",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97021",
+      "l1": 0,
+      "l2": 0,
+      "l3": 3,
+      "total": 3,
+      "peak_level": 3,
+      "counties": "Wasco",
+      "fires": "Grasshopper"
+    },
+    {
+      "zip": "97814",
+      "l1": 0,
+      "l2": 1,
+      "l3": 1,
+      "total": 2,
+      "peak_level": 3,
+      "counties": "Baker",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97023",
+      "l1": 0,
+      "l2": 0,
+      "l3": 1,
+      "total": 1,
+      "peak_level": 3,
+      "counties": "Clackamas",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97041",
+      "l1": 225,
+      "l2": 6,
+      "l3": 0,
+      "total": 231,
+      "peak_level": 2,
+      "counties": "Hood River",
+      "fires": "Grasshopper"
+    },
+    {
+      "zip": "99362",
+      "l1": 79,
+      "l2": 4,
+      "l3": 0,
+      "total": 83,
+      "peak_level": 2,
+      "counties": "Umatilla",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97810",
+      "l1": 0,
+      "l2": 76,
+      "l3": 0,
+      "total": 76,
+      "peak_level": 2,
+      "counties": "Umatilla",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97859",
+      "l1": 0,
+      "l2": 1,
+      "l3": 0,
+      "total": 1,
+      "peak_level": 2,
+      "counties": "Umatilla",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97862",
+      "l1": 14,
+      "l2": 0,
+      "l3": 0,
+      "total": 14,
+      "peak_level": 1,
+      "counties": "Umatilla",
+      "fires": "No named fire"
+    },
+    {
+      "zip": "97876",
+      "l1": 7,
+      "l2": 0,
+      "l3": 0,
+      "total": 7,
+      "peak_level": 1,
+      "counties": "Union",
+      "fires": "No named fire"
+    }
+  ],
+  "note": "Reconciled 2026-09-05 to match the morning report's evac_raw.json snapshot (fetched 2026-09-05T14:45:07.000Z / September 5, 2026, 7:45 AM PDT) rather than a separate live pull. 79.4% of 840 total addresses (667) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 173 addresses (L1:141 L2:5 L3:27, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+}
