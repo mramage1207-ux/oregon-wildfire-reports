@@ -1,11 +1,11 @@
 {
   "last_updated": "2026-09-10",
-  "report_time": "8:21 AM PDT",
-  "report_time_iso": "2026-09-10T15:21:14Z",
+  "report_time": "8:25 AM PDT",
+  "report_time_iso": "2026-09-10T15:25:58Z",
   "current_active_fires": 43,
   "current_acres_burned": 1844354.06,
-  "current_report_time": "8:21 AM PDT",
-  "current_report_time_iso": "2026-09-10T15:21:14Z",
+  "current_report_time": "8:25 AM PDT",
+  "current_report_time_iso": "2026-09-10T15:25:58Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-09-09",
     "active_large_fires": {
@@ -45,9 +45,9 @@
       "pct": -12.2
     },
     "total_acres_ytd": {
-      "current": 2521052.3,
+      "current": 2521054.3,
       "prior": 2520927,
-      "delta": 125.29999999981374,
+      "delta": 127.29999999981374,
       "pct": 0.0
     },
     "structures_lost": {
@@ -96,9 +96,9 @@
       "pct": -50.6
     },
     "total_acres_ytd": {
-      "current": 2521052.3,
+      "current": 2521054.3,
       "prior": 2520737,
-      "delta": 315.29999999981374,
+      "delta": 317.29999999981374,
       "pct": 0.0
     },
     "structures_lost": {
@@ -147,9 +147,9 @@
       "pct": -29.5
     },
     "total_acres_ytd": {
-      "current": 2521052.3,
+      "current": 2521054.3,
       "prior": 2387669,
-      "delta": 133383.2999999998,
+      "delta": 133385.2999999998,
       "pct": 5.6
     },
     "structures_lost": {
@@ -633,7 +633,7 @@
         2520836,
         2520787,
         2520927,
-        2521052.3
+        2521054.3
       ]
     },
     "structures_lost": {
@@ -706,13 +706,13 @@
     }
   },
   "exec_summary": {
-    "headline": "Total evacuation addresses are holding steady at 809 since yesterday morning. Total acres burned by large fires this season stands at 2,521,052, up 125 acres (0.0%) since yesterday morning. The number of active fires statewide is down 12% (49 \u2192 43) since yesterday morning.",
+    "headline": "Total evacuation addresses are holding steady at 809 since yesterday morning. Total acres burned by large fires this season stands at 2,521,054, up 127 acres (0.0%) since yesterday morning. The number of active fires statewide is down 12% (49 \u2192 43) since yesterday morning.",
     "losses": "This season has recorded 1 fatality and 207 structures destroyed so far. Structure loss is unchanged since yesterday morning.",
     "has_loss": true,
     "closing": "Full details, county-by-county, are in the sections below."
   },
   "active_large_fires": 26,
-  "total_large_fire_acres": 2521052.3,
+  "total_large_fire_acres": 2521054.3,
   "structures_lost": 207,
   "evac_triggering_fires": 6,
   "evac_zones": {
@@ -991,7 +991,7 @@
     },
     {
       "county": "Jefferson",
-      "acres": 206460.0,
+      "acres": 206462.0,
       "res": 12,
       "comm": 0,
       "other": 25,
@@ -1008,7 +1008,7 @@
         },
         {
           "name": "Bench",
-          "acres": 67071,
+          "acres": 67073,
           "status": "Active",
           "res": 6,
           "comm": 0,
@@ -1715,7 +1715,7 @@
     "Harney": 537775.0,
     "Wasco": 97701.0,
     "Wheeler": 447593.0,
-    "Jefferson": 206460.0,
+    "Jefferson": 206462.0,
     "Umatilla": 77333.0,
     "Klamath": 55381.0,
     "Crook": 47654.0,
@@ -2961,7 +2961,7 @@
     {
       "year": 2026,
       "total_fires": 82,
-      "total_acres": 2521052.3,
+      "total_acres": 2521054.3,
       "total_structures_destroyed": 207,
       "fatalities": 1,
       "injuries": 0,
@@ -3587,7 +3587,7 @@
       "lon": -121.350222,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 67071.0,
+      "acres": 67073.0,
       "structures_lost_res": 6,
       "structures_lost_comm": 0,
       "structures_lost_other": 7,
