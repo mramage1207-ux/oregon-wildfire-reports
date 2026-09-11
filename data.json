@@ -1,11 +1,11 @@
 {
   "last_updated": "2026-09-11",
-  "report_time": "8:22 AM PDT",
-  "report_time_iso": "2026-09-11T15:22:29Z",
-  "current_active_fires": 38,
-  "current_acres_burned": 1844054.86,
-  "current_report_time": "8:22 AM PDT",
-  "current_report_time_iso": "2026-09-11T15:22:29Z",
+  "report_time": "3:56 PM PDT",
+  "report_time_iso": "2026-09-11T22:56:40Z",
+  "current_active_fires": 37,
+  "current_acres_burned": 1844164.76,
+  "current_report_time": "3:56 PM PDT",
+  "current_report_time_iso": "2026-09-11T22:56:40Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-09-10",
     "active_large_fires": {
@@ -39,10 +39,10 @@
       "pct": -14.3
     },
     "active_fires": {
-      "current": 38,
+      "current": 37,
       "prior": 43,
-      "delta": -5,
-      "pct": -11.6
+      "delta": -6,
+      "pct": -14.0
     },
     "total_acres_ytd": {
       "current": 2521065.3,
@@ -90,10 +90,10 @@
       "pct": -21.1
     },
     "active_fires": {
-      "current": 38,
+      "current": 37,
       "prior": 44,
-      "delta": -6,
-      "pct": -13.6
+      "delta": -7,
+      "pct": -15.9
     },
     "total_acres_ytd": {
       "current": 2521065.3,
@@ -141,10 +141,10 @@
       "pct": -96.3
     },
     "active_fires": {
-      "current": 38,
+      "current": 37,
       "prior": 63,
-      "delta": -25,
-      "pct": -39.7
+      "delta": -26,
+      "pct": -41.3
     },
     "total_acres_ytd": {
       "current": 2521065.3,
@@ -565,7 +565,7 @@
         53,
         49,
         43,
-        38
+        37
       ]
     },
     "total_acres_ytd": {
@@ -706,8 +706,8 @@
     }
   },
   "exec_summary": {
-    "headline": "Total evacuation addresses are holding steady at 809 since yesterday morning. Total acres burned by large fires this season stands at 2,521,065, up 11 acres (0.0%) since yesterday morning. The number of fires with active evacuations is down 17% (6 \u2192 5) since yesterday morning. The number of active fires statewide is down 12% (43 \u2192 38) since yesterday morning.",
-    "losses": "This season has recorded 1 fatality and 207 structures destroyed so far. Structure loss is unchanged since yesterday morning.",
+    "headline": "Total evacuation addresses are holding steady at 809 since yesterday morning. Total acres burned by large fires this season stands at 2,521,065, up 11 acres (0.0%) since yesterday morning. The number of fires with active evacuations is down 17% (6 \u2192 5) since yesterday morning. The number of active fires statewide is down 14% (43 \u2192 37) since yesterday morning.",
+    "losses": "This season has recorded 2 fatalities and 207 structures destroyed so far. Structure loss is unchanged since yesterday morning.",
     "has_loss": true,
     "closing": "Full details, county-by-county, are in the sections below."
   },
@@ -2957,8 +2957,8 @@
     },
     {
       "date": "2026-09-11",
-      "active_fires": 38,
-      "acres_burned": 1844054.86
+      "active_fires": 37,
+      "acres_burned": 1844164.76
     }
   ],
   "historical_seasons": [
@@ -2967,7 +2967,7 @@
       "total_fires": 82,
       "total_acres": 2521065.3,
       "total_structures_destroyed": 207,
-      "fatalities": 1,
+      "fatalities": 2,
       "injuries": 0,
       "largest_fire": {
         "name": "BIG GRASS",
