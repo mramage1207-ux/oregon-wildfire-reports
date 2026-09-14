@@ -1,8 +1,8 @@
 {
-  "date": "2026-09-13",
-  "generated_at": "2026-09-13T23:01:16Z",
-  "as_of_iso": "2026-09-13T22:45:07.000Z",
-  "as_of_display": "September 13, 2026, 3:45 PM PDT",
+  "date": "2026-09-14",
+  "generated_at": "2026-09-14T15:15:48Z",
+  "as_of_iso": "2026-09-14T14:45:04.000Z",
+  "as_of_display": "September 14, 2026, 7:45 AM PDT",
   "totals": {
     "l1": 330,
     "l2": 12,
@@ -106,5 +106,5 @@
       "fires": "No named fire"
     }
   ],
-  "note": "Reconciled 2026-09-13 to match the morning report's evac_raw.json snapshot (fetched 2026-09-13T22:45:07.000Z / September 13, 2026, 3:45 PM PDT) rather than a separate live pull. 68.9% of 544 total addresses (375) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 169 addresses (L1:137 L2:5 L3:27, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+  "note": "Reconciled 2026-09-14 to match the morning report's evac_raw.json snapshot (fetched 2026-09-14T14:45:04.000Z / September 14, 2026, 7:45 AM PDT) rather than a separate live pull. 68.9% of 544 total addresses (375) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 169 addresses (L1:137 L2:5 L3:27, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
 }
