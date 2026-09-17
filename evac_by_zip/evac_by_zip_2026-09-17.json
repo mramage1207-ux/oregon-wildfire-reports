@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-17",
+  "generated_at": "2026-09-17T15:15:43Z",
+  "as_of_iso": "2026-09-17T14:45:08.000Z",
+  "as_of_display": "September 17, 2026, 7:45 AM PDT",
+  "totals": {
+    "l1": 225,
+    "l2": 9,
+    "l3": 0,
+    "total": 234,
+    "zip_count": 2
+  },
+  "unmatched": {
+    "l1": 137,
+    "l2": 7,
+    "l3": 0,
+    "total": 144,
+    "zone_count": 0
+  },
+  "unmatched_zones": [],
+  "reconciled_total": {
+    "l1": 362,
+    "l2": 16,
+    "l3": 0,
+    "total": 378
+  },
+  "zips": [
+    {
+      "zip": "97041",
+      "l1": 225,
+      "l2": 6,
+      "l3": 0,
+      "total": 231,
+      "peak_level": 2,
+      "counties": "Hood River",
+      "fires": "Grasshopper"
+    },
+    {
+      "zip": "97021",
+      "l1": 0,
+      "l2": 3,
+      "l3": 0,
+      "total": 3,
+      "peak_level": 2,
+      "counties": "Wasco",
+      "fires": "Grasshopper"
+    }
+  ],
+  "note": "Reconciled 2026-09-17 to match the morning report's evac_raw.json snapshot (fetched 2026-09-17T14:45:08.000Z / September 17, 2026, 7:45 AM PDT) rather than a separate live pull. 61.9% of 378 total addresses (234) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 144 addresses (L1:137 L2:7 L3:0, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+}
