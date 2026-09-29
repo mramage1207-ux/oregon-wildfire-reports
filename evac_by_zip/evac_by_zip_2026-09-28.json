@@ -1,40 +1,30 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28T15:13:18Z",
-  "as_of_iso": "2026-09-28T14:45:09.000Z",
-  "as_of_display": "September 28, 2026, 7:45 AM PDT",
+  "generated_at": "2026-09-28T23:17:39Z",
+  "as_of_iso": "2026-09-28T22:45:03.000Z",
+  "as_of_display": "September 28, 2026, 3:45 PM PDT",
   "totals": {
-    "l1": 228,
-    "l2": 6,
+    "l1": 3,
+    "l2": 0,
     "l3": 0,
-    "total": 234,
-    "zip_count": 2
+    "total": 3,
+    "zip_count": 1
   },
   "unmatched": {
-    "l1": 139,
-    "l2": 5,
+    "l1": 2,
+    "l2": 0,
     "l3": 0,
-    "total": 144,
+    "total": 2,
     "zone_count": 0
   },
   "unmatched_zones": [],
   "reconciled_total": {
-    "l1": 367,
-    "l2": 11,
+    "l1": 5,
+    "l2": 0,
     "l3": 0,
-    "total": 378
+    "total": 5
   },
   "zips": [
-    {
-      "zip": "97041",
-      "l1": 225,
-      "l2": 6,
-      "l3": 0,
-      "total": 231,
-      "peak_level": 2,
-      "counties": "Hood River",
-      "fires": "Grasshopper"
-    },
     {
       "zip": "97021",
       "l1": 3,
@@ -46,5 +36,5 @@
       "fires": "Grasshopper"
     }
   ],
-  "note": "Reconciled 2026-09-28 to match the morning report's evac_raw.json snapshot (fetched 2026-09-28T14:45:09.000Z / September 28, 2026, 7:45 AM PDT) rather than a separate live pull. 61.9% of 378 total addresses (234) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 144 addresses (L1:139 L2:5 L3:0, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+  "note": "Reconciled 2026-09-28 to match the morning report's evac_raw.json snapshot (fetched 2026-09-28T22:45:03.000Z / September 28, 2026, 3:45 PM PDT) rather than a separate live pull. 60.0% of 5 total addresses (3) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 2 addresses (L1:2 L2:0 L3:0, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
 }

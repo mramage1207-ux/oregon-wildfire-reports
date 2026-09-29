@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-29",
+  "generated_at": "2026-09-29T15:16:03Z",
+  "as_of_iso": "2026-09-29T14:45:03.000Z",
+  "as_of_display": "September 29, 2026, 7:45 AM PDT",
+  "totals": {
+    "l1": 3,
+    "l2": 0,
+    "l3": 0,
+    "total": 3,
+    "zip_count": 1
+  },
+  "unmatched": {
+    "l1": 2,
+    "l2": 0,
+    "l3": 0,
+    "total": 2,
+    "zone_count": 0
+  },
+  "unmatched_zones": [],
+  "reconciled_total": {
+    "l1": 5,
+    "l2": 0,
+    "l3": 0,
+    "total": 5
+  },
+  "zips": [
+    {
+      "zip": "97021",
+      "l1": 3,
+      "l2": 0,
+      "l3": 0,
+      "total": 3,
+      "peak_level": 1,
+      "counties": "Wasco",
+      "fires": "Grasshopper"
+    }
+  ],
+  "note": "Reconciled 2026-09-29 to match the morning report's evac_raw.json snapshot (fetched 2026-09-29T14:45:03.000Z / September 29, 2026, 7:45 AM PDT) rather than a separate live pull. 60.0% of 5 total addresses (3) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 2 addresses (L1:2 L2:0 L3:0, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+}
