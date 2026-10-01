@@ -1,18 +1,18 @@
 {
   "last_updated": "2026-10-01",
   "report_time": "8:12 AM PDT",
-  "report_time_iso": "2026-09-30T15:12:18Z",
-  "current_active_fires": 47,
-  "current_acres_burned": 858364.64,
+  "report_time_iso": "2026-10-01T15:12:14Z",
+  "current_active_fires": 38,
+  "current_acres_burned": 828798.61,
   "current_report_time": "8:12 AM PDT",
-  "current_report_time_iso": "2026-09-30T15:12:18Z",
+  "current_report_time_iso": "2026-10-01T15:12:14Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-09-30",
     "active_large_fires": {
-      "current": 16,
+      "current": 15,
       "prior": 16,
-      "delta": 0,
-      "pct": 0.0
+      "delta": -1,
+      "pct": -6.2
     },
     "active_evac_fires": {
       "current": 0,
@@ -39,15 +39,15 @@
       "pct": 0.0
     },
     "active_fires": {
-      "current": 47,
+      "current": 38,
       "prior": 47,
-      "delta": 0,
-      "pct": 0.0
+      "delta": -9,
+      "pct": -19.1
     },
     "total_acres_ytd": {
-      "current": 2523633.3,
+      "current": 2523633.9,
       "prior": 2523633,
-      "delta": 0.2999999998137355,
+      "delta": 0.8999999999068677,
       "pct": 0.0
     },
     "structures_lost": {
@@ -60,10 +60,10 @@
   "change_vs_7d_ago": {
     "prior_date": "2026-09-24",
     "active_large_fires": {
-      "current": 16,
+      "current": 15,
       "prior": 17,
-      "delta": -1,
-      "pct": -5.9
+      "delta": -2,
+      "pct": -11.8
     },
     "active_evac_fires": {
       "current": 0,
@@ -90,15 +90,15 @@
       "pct": 0.0
     },
     "active_fires": {
-      "current": 47,
+      "current": 38,
       "prior": 32,
-      "delta": 15,
-      "pct": 46.9
+      "delta": 6,
+      "pct": 18.8
     },
     "total_acres_ytd": {
-      "current": 2523633.3,
+      "current": 2523633.9,
       "prior": 2523627,
-      "delta": 6.2999999998137355,
+      "delta": 6.899999999906868,
       "pct": 0.0
     },
     "structures_lost": {
@@ -111,10 +111,10 @@
   "change_vs_30d_ago": {
     "prior_date": "2026-09-01",
     "active_large_fires": {
-      "current": 16,
+      "current": 15,
       "prior": 33,
-      "delta": -17,
-      "pct": -51.5
+      "delta": -18,
+      "pct": -54.5
     },
     "active_evac_fires": {
       "current": 0,
@@ -141,15 +141,15 @@
       "pct": -100.0
     },
     "active_fires": {
-      "current": 47,
+      "current": 38,
       "prior": 94,
-      "delta": -47,
-      "pct": -50.0
+      "delta": -56,
+      "pct": -59.6
     },
     "total_acres_ytd": {
-      "current": 2523633.3,
+      "current": 2523633.9,
       "prior": 2517093,
-      "delta": 6540.299999999814,
+      "delta": 6540.899999999907,
       "pct": 0.3
     },
     "structures_lost": {
@@ -225,7 +225,7 @@
         17,
         17,
         16,
-        16
+        15
       ]
     },
     "active_evac_fires": {
@@ -565,7 +565,7 @@
         37,
         41,
         47,
-        47
+        38
       ]
     },
     "total_acres_ytd": {
@@ -633,7 +633,7 @@
         2523627,
         2523627,
         2523633,
-        2523633.3
+        2523633.9
       ]
     },
     "structures_lost": {
@@ -706,13 +706,13 @@
     }
   },
   "exec_summary": {
-    "headline": "Total evacuation addresses are holding steady at 0 since yesterday morning. Total acres burned by large fires this season stands at 2,523,633, up 0 acres (0.0%) since yesterday morning.",
+    "headline": "Total evacuation addresses are holding steady at 0 since yesterday morning. Total acres burned by large fires this season stands at 2,523,634, up 1 acres (0.0%) since yesterday morning. The number of active fires statewide is down 19% (47 \u2192 38) since yesterday morning.",
     "losses": "This season has recorded 2 fatalities and 207 structures destroyed so far. Structure loss is unchanged since yesterday morning.",
     "has_loss": true,
     "closing": "Full details, county-by-county, are in the sections below."
   },
-  "active_large_fires": 16,
-  "total_large_fire_acres": 2523633.3,
+  "active_large_fires": 15,
+  "total_large_fire_acres": 2523633.9,
   "structures_lost": 207,
   "evac_triggering_fires": 0,
   "evac_zones": {
@@ -724,7 +724,7 @@
   "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
   "evac_data_as_of": "7:45 AM PDT",
-  "evac_data_as_of_iso": "2026-09-30T14:45:07Z",
+  "evac_data_as_of_iso": "2026-10-01T14:45:06Z",
   "struct_loss": {
     "oregon_totals": {
       "res_threatened": 0,
@@ -939,7 +939,7 @@
     },
     {
       "county": "Wheeler",
-      "acres": 447593.0,
+      "acres": 447594.6,
       "res": 13,
       "comm": 0,
       "other": 25,
@@ -947,7 +947,7 @@
       "fires": [
         {
           "name": "ROWE CREEK COMPLEX",
-          "acres": 373927,
+          "acres": 373929,
           "status": "Active",
           "res": 9,
           "comm": 0,
@@ -1324,7 +1324,7 @@
         {
           "name": "0497 HENRY",
           "acres": 29844,
-          "status": "Active",
+          "status": "Contained",
           "res": 0,
           "comm": 0,
           "other": 0,
@@ -1444,7 +1444,7 @@
     },
     {
       "county": "Clackamas",
-      "acres": 14194.0,
+      "acres": 14193.0,
       "res": 0,
       "comm": 0,
       "other": 0,
@@ -1452,7 +1452,7 @@
       "fires": [
         {
           "name": "AUSTIN",
-          "acres": 12889,
+          "acres": 12888,
           "status": "Active",
           "res": 0,
           "comm": 0,
@@ -1712,11 +1712,11 @@
     "Klamath": 55381.0,
     "Crook": 47654.0,
     "Baker": 119278.0,
-    "Clackamas": 14194.0,
+    "Clackamas": 14193.0,
     "Wallowa": 18050.0,
     "Grant": 9683.0,
     "Malheur": 662727.7,
-    "Wheeler": 447593.0,
+    "Wheeler": 447594.6,
     "Jackson": 16212.0,
     "Douglas": 3615.0,
     "Deschutes": 2918.5,
@@ -3024,13 +3024,18 @@
       "date": "2026-09-30",
       "active_fires": 47,
       "acres_burned": 858364.64
+    },
+    {
+      "date": "2026-10-01",
+      "active_fires": 38,
+      "acres_burned": 828798.61
     }
   ],
   "historical_seasons": [
     {
       "year": 2026,
       "total_fires": 83,
-      "total_acres": 2523633.3,
+      "total_acres": 2523633.9,
       "total_structures_destroyed": 207,
       "fatalities": 2,
       "injuries": 0,
@@ -3048,7 +3053,7 @@
         {
           "name": "ROWE CREEK COMPLEX",
           "county": "Wheeler",
-          "acres": 373927.0
+          "acres": 373928.6
         },
         {
           "name": "Coleman Creek",
@@ -3635,21 +3640,6 @@
       "cpx_total_acres": null
     },
     {
-      "name": "0497 HENRY",
-      "county": "Crook",
-      "lat": 44.097222,
-      "lon": -119.952351,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 29844.0,
-      "structures_lost_res": 0,
-      "structures_lost_comm": 0,
-      "structures_lost_other": 0,
-      "structures_lost_unc": 0,
-      "cpx_name": null,
-      "cpx_total_acres": null
-    },
-    {
       "name": "Jackass Butte",
       "county": "Harney",
       "lat": 43.045,
@@ -3716,7 +3706,7 @@
       "lon": -121.96,
       "status": "Active",
       "triggered_evacuation": true,
-      "acres": 12889.0,
+      "acres": 12888.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3927,6 +3917,21 @@
       "status": "Contained",
       "triggered_evacuation": false,
       "acres": 42122.0,
+      "structures_lost_res": 0,
+      "structures_lost_comm": 0,
+      "structures_lost_other": 0,
+      "structures_lost_unc": 0,
+      "cpx_name": null,
+      "cpx_total_acres": null
+    },
+    {
+      "name": "0497 HENRY",
+      "county": "Crook",
+      "lat": 44.097222,
+      "lon": -119.952351,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 29844.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
