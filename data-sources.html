@@ -103,8 +103,8 @@
       data, and which don't.
     </div>
     <div class="review-badges">
-      <div class="review-badge">Last reviewed: <strong>August 4, 2026</strong></div>
-      <div class="review-badge">Next review: <strong>September 1, 2026</strong></div>
+      <div class="review-badge">Last reviewed: <strong>October 1, 2026</strong></div>
+      <div class="review-badge">Next review: <strong>November 1, 2026</strong></div>
       <div class="review-badge">Reviewed monthly, on the 1st</div>
     </div>
   </div>
@@ -162,6 +162,12 @@
           <td class="left">The values this pipeline fetches are real-time monitor readings (direct sensor data, not AI-derived). AirNow's separate multi-day air-quality *forecast* product increasingly blends machine-learning models with traditional chemical transport modeling, per EPA/NOAA's published methodology.</td>
         </tr>
         <tr>
+          <td class="left"><strong>OpenStreetMap (basemap tiles)</strong></td>
+          <td class="left">Background street/terrain map on the interactive fire and evacuation maps (replaced CARTO tiles on 2026-08-27)</td>
+          <td><span class="ai-pill ai-pill-partial">Partial</span></td>
+          <td class="left">The tiles are rendered from OpenStreetMap's volunteer-edited map data — no AI in how fires or evacuation zones are shown on top of it. Some OSM contributors use AI-assisted editors (e.g. Rapid with Microsoft's machine-learning building footprints) to add buildings and roads, which community guidelines require be human-reviewed before upload. Background map only; no fire or evacuation data comes from it.</td>
+        </tr>
+        <tr>
           <td class="left"><strong>InciWeb</strong></td>
           <td class="left">Community-resources source (meetings, shelters, contacts)</td>
           <td><span class="ai-pill ai-pill-no">No AI Found</span></td>
@@ -174,10 +180,10 @@
           <td class="left">Manually managed by Central Oregon Interagency Dispatch Center; no AI use found or disclosed.</td>
         </tr>
         <tr>
-          <td class="left"><strong>County emergency-management sites</strong></td>
+          <td class="left"><strong>County, sheriff &amp; other agency pages</strong></td>
           <td class="left">Community-resources source</td>
           <td><span class="ai-pill ai-pill-no">No AI Found</span></td>
-          <td class="left">Standard local-government sites (e.g. readyjacksonco.com, bakercounty.org); no AI disclosed.</td>
+          <td class="left">Standard local-government and agency pages (e.g. readyjacksonco.com, bakercounty.org, clackamas.us, harneycountyor.gov, klamathcounty.org, USFS national-forest pages, and incident/agency Facebook pages); content is posted by agency staff. No AI use disclosed in how these agencies produce the information.</td>
         </tr>
         <tr>
           <td class="left"><strong>Oregon State Fire Marshal (OSFM) newsroom</strong></td>
@@ -193,9 +199,33 @@
         </tr>
         <tr>
           <td class="left"><strong>Local news sites</strong></td>
-          <td class="left">Community-resources source for cross-border fires (idahonews.com, elkhornmediagroup.com, argusobserver.com)</td>
+          <td class="left">Community-resources source (e.g. idahonews.com, elkhornmediagroup.com, argusobserver.com, KTVZ, KATU, KOIN, KPTV, KDRV, OPB, Bend Bulletin, East Oregonian, Baker City Herald, La Grande Observer)</td>
           <td><span class="ai-pill ai-pill-unknown">Unverified</span></td>
-          <td class="left">No public disclosure of AI use found for these specific outlets either way — flagged as unverified rather than asserted, since AI-assisted drafting is increasingly common in local news generally.</td>
+          <td class="left">Mixed and mostly undisclosed. OPB publishes an editorial AI policy (AI may assist with research/transcription; all AI-assisted material is human-verified and disclosed when significant). Bend Bulletin, East Oregonian, Baker City Herald and La Grande Observer are now owned by Carpenter Media Group, which has used AI-generated video news anchors at another of its papers; no AI use found at these specific Oregon titles. No disclosure either way found for the other outlets — flagged as unverified rather than asserted, since AI-assisted drafting is increasingly common in local news.</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>FireRisk.ai</strong></td>
+          <td class="left">Community-resources cross-check (fire size, containment, status)</td>
+          <td><span class="ai-pill ai-pill-yes">AI Used</span></td>
+          <td class="left">Third-party fire-tracking site whose per-fire briefings are generated automatically by AI from official feeds (NIFC, NWS, InciWeb, NASA). The site says every figure is traced to a named public source and reviewed, but the write-ups themselves are AI-generated. Used only as a secondary cross-check, never as the sole source for a number.</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>WFCA Fire Map (Western Fire Chiefs Association)</strong></td>
+          <td class="left">Community-resources cross-check (fire location/status)</td>
+          <td><span class="ai-pill ai-pill-partial">Partial</span></td>
+          <td class="left">Incident data comes from NIFC's IRWIN feed (same human-entered data as WFIGS) and PulsePoint 911 dispatch data; the satellite heat-detection layer is verified by Satellites on Fire, an AI system. The fire records this report cross-checks are IRWIN-based, not AI-derived.</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>Watch Duty</strong></td>
+          <td class="left">Community-resources cross-check (incident links, evacuation updates)</td>
+          <td><span class="ai-pill ai-pill-no">No AI Found</span></td>
+          <td class="left">Nonprofit alert app staffed by people — firefighters, dispatchers and reporters monitoring radio scanners. It states its information is vetted by trained professionals, “not robots or AI.”</td>
+        </tr>
+        <tr>
+          <td class="left"><strong>CurrentWildfires.com</strong></td>
+          <td class="left">Community-resources cross-check (containment figures)</td>
+          <td><span class="ai-pill ai-pill-no">No AI Found</span></td>
+          <td class="left">Map built on NASA FIRMS satellite heat detections plus official feeds. It filters out non-wildfire heat sources with a published rule-based method (night detection and radiative power), not machine learning; no AI use disclosed.</td>
         </tr>
         <tr>
           <td class="left"><strong>This report & website</strong></td>
@@ -209,7 +239,7 @@
   </div>
 
   <div class="info-box">
-    <strong style="color:#1a2744;">Bottom line:</strong> Across roughly a dozen external sources, only two have any confirmed AI involvement — EPA AirNow's forecast layer (not the raw readings this site uses) and the American Red Cross's Clara chatbot (not the shelter database itself). Everything else — fire locations, structure data, evacuation zones, ZIP boundaries, weather, and community-resource sources — is manually entered or curated, or standard physics-based modeling. The one place AI plays a direct role is upstream of all of it: this report and website are built and maintained by an AI assistant.
+    <strong style="color:#1a2744;">Bottom line:</strong> Of the 17 external sources and source groups audited, five have confirmed or partial AI involvement: FireRisk.ai, whose fire briefings are AI-generated (used here only as a secondary cross-check); EPA AirNow's forecast layer (not the raw readings this site uses); the WFCA Fire Map's satellite-detection layer (not the IRWIN fire records cross-checked here); the American Red Cross's Clara chatbot (not the shelter database itself); and the OpenStreetMap background map, parts of which are added with AI-assisted, human-reviewed edits. Everything that drives this report's numbers — fire locations, structure data, evacuation zones, ZIP boundaries, weather, and AQI readings — is manually entered or curated, or standard physics-based modeling. Local news outlets remain largely unverified. The one place AI plays a direct role is upstream of all of it: this report and website are built and maintained by an AI assistant.
   </div>
 </main>
 
