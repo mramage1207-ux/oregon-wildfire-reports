@@ -2099,9 +2099,9 @@ function render(pdfs, data) {
           <span class="season-fire-name">${f.name}</span>
           <span>
             <span class="season-fire-county">${f.county}&nbsp;</span>
-            <span class="season-fire-acres">${f.acres.toLocaleString('en-US', {maximumFractionDigits: 0})} ac</span>
+            <span class="season-fire-acres">${f.acres.toLocaleString('en-US', {maximumFractionDigits: 0})} ac${f.acres_total ? '*' : ''}</span>
           </span>
-        </div>`).join('');
+        </div>${f.acres_total ? `<div style="font-size:0.72em;opacity:0.75;text-align:right;margin:-2px 0 4px;">*Oregon acres only &mdash; fire crossed the OR/ID border; total size ${f.acres_total.toLocaleString('en-US', {maximumFractionDigits: 0})} ac</div>` : ''}`).join('');
       return `
         <div class="season-card">
           <div class="season-year">${s.year} Season</div>
@@ -2119,7 +2119,7 @@ function render(pdfs, data) {
               <span class="sl">Structures Lost</span>
             </div>
           </div>
-          <div class="season-fires-label">Top Fires by Size</div>
+          <div class="season-fires-label">Top Fires by Size (Oregon acres)</div>
           ${fireRows}
           ${fatStr}
         </div>`;

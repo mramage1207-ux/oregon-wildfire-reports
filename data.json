@@ -3128,16 +3128,11 @@
       "fatalities": 2,
       "injuries": 0,
       "largest_fire": {
-        "name": "BIG GRASS",
-        "county": "Malheur",
-        "acres": 578637.0
+        "name": "ROWE CREEK COMPLEX",
+        "county": "Wheeler",
+        "acres": 373928.6
       },
       "notable_fires": [
-        {
-          "name": "BIG GRASS",
-          "county": "Malheur",
-          "acres": 578637.0
-        },
         {
           "name": "ROWE CREEK COMPLEX",
           "county": "Wheeler",
@@ -3152,6 +3147,12 @@
           "name": "HAY CREEK COMPLEX",
           "county": "Gilliam",
           "acres": 200292.0
+        },
+        {
+          "name": "BIG GRASS",
+          "county": "Malheur",
+          "acres": 186809.0,
+          "acres_total": 578637.0
         },
         {
           "name": "Second Flat",
