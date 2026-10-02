@@ -731,7 +731,7 @@ window.__wfOpenCountyMap = function(kind) {
     toggleEl.innerHTML = '';
   }
   document.getElementById('wf-map-footnote').textContent = kind === 'acres'
-    ? 'Source: WFIGS, large fires only (matches the Total Acres YTD tile), excludes complex-fire child records to avoid double counting. Complex fires are attributed to a single administrative county even though their perimeters can cross into neighboring counties.'
+    ? 'Source: WFIGS, large fires only (matches the Total Acres YTD tile), excludes complex-fire child records to avoid double counting. Complex fires are attributed to a single administrative county even though their perimeters can cross into neighboring counties. Note: BIG GRASS crossed the Oregon/Idaho border — only its Oregon portion (186,809 of 578,637 total acres) is counted here.'
     : 'Source: NWCC Large Fire Public Information, matched to WFIGS incidents by fire name. Threatened reflects active fires only; damaged and destroyed are season-to-date.';
   overlay.classList.add('open');
   wfDrawCountyMap(kind);
@@ -1810,7 +1810,7 @@ function render(pdfs, data) {
       <div class="stat-pill">
         ${wfVizIconHtml('acres')}
         <div class="val">${fmtAcres(nLargeAcres)}</div>
-        <div class="lbl">Total Acres YTD<br><span style="font-size:0.75em;opacity:0.8">(Large Fires)</span></div>
+        <div class="lbl">Total Acres YTD<br><span style="font-size:0.75em;opacity:0.8">(Large Fires, Oregon acres only)</span></div>
         ${changeBadgeHtml('total_acres_ytd', 'tay')}
       </div>
       <div class="stat-pill">
