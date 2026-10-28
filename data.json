@@ -1,18 +1,18 @@
 {
-  "last_updated": "2026-10-27",
-  "report_time": "8:24 AM PDT",
-  "report_time_iso": "2026-10-27T15:24:01Z",
-  "current_active_fires": 53,
-  "current_acres_burned": 420163.96,
-  "current_report_time": "8:24 AM PDT",
-  "current_report_time_iso": "2026-10-27T15:24:01Z",
+  "last_updated": "2026-10-28",
+  "report_time": "8:20 AM PDT",
+  "report_time_iso": "2026-10-28T15:20:55Z",
+  "current_active_fires": 58,
+  "current_acres_burned": 274569.36,
+  "current_report_time": "8:20 AM PDT",
+  "current_report_time_iso": "2026-10-28T15:20:55Z",
   "change_vs_prior_morning": {
-    "prior_date": "2026-10-26",
+    "prior_date": "2026-10-27",
     "active_large_fires": {
-      "current": 11,
+      "current": 7,
       "prior": 11,
-      "delta": 0,
-      "pct": 0.0
+      "delta": -4,
+      "pct": -36.4
     },
     "active_evac_fires": {
       "current": 0,
@@ -39,10 +39,10 @@
       "pct": 0.0
     },
     "active_fires": {
-      "current": 53,
-      "prior": 43,
-      "delta": 10,
-      "pct": 23.3
+      "current": 58,
+      "prior": 53,
+      "delta": 5,
+      "pct": 9.4
     },
     "total_acres_ytd": {
       "current": 2131805.9,
@@ -58,12 +58,12 @@
     }
   },
   "change_vs_7d_ago": {
-    "prior_date": "2026-10-20",
+    "prior_date": "2026-10-21",
     "active_large_fires": {
-      "current": 11,
+      "current": 7,
       "prior": 11,
-      "delta": 0,
-      "pct": 0.0
+      "delta": -4,
+      "pct": -36.4
     },
     "active_evac_fires": {
       "current": 0,
@@ -90,10 +90,10 @@
       "pct": 0.0
     },
     "active_fires": {
-      "current": 53,
+      "current": 58,
       "prior": 47,
-      "delta": 6,
-      "pct": 12.8
+      "delta": 11,
+      "pct": 23.4
     },
     "total_acres_ytd": {
       "current": 2131805.9,
@@ -109,12 +109,12 @@
     }
   },
   "change_vs_30d_ago": {
-    "prior_date": "2026-09-27",
+    "prior_date": "2026-09-28",
     "active_large_fires": {
-      "current": 11,
+      "current": 7,
       "prior": 17,
-      "delta": -6,
-      "pct": -35.3
+      "delta": -10,
+      "pct": -58.8
     },
     "active_evac_fires": {
       "current": 0,
@@ -141,10 +141,10 @@
       "pct": 0.0
     },
     "active_fires": {
-      "current": 53,
-      "prior": 35,
-      "delta": 18,
-      "pct": 51.4
+      "current": 58,
+      "prior": 37,
+      "delta": 21,
+      "pct": 56.8
     },
     "total_acres_ytd": {
       "current": 2131805.9,
@@ -162,7 +162,6 @@
   "trend_history": {
     "active_large_fires": {
       "dates": [
-        "2026-09-27",
         "2026-09-28",
         "2026-09-29",
         "2026-09-30",
@@ -192,10 +191,10 @@
         "2026-10-24",
         "2026-10-25",
         "2026-10-26",
-        "2026-10-27"
+        "2026-10-27",
+        "2026-10-28"
       ],
       "values": [
-        17,
         17,
         17,
         16,
@@ -225,12 +224,12 @@
         11,
         11,
         11,
-        11
+        11,
+        7
       ]
     },
     "active_evac_fires": {
       "dates": [
-        "2026-09-27",
         "2026-09-28",
         "2026-09-29",
         "2026-09-30",
@@ -260,12 +259,13 @@
         "2026-10-24",
         "2026-10-25",
         "2026-10-26",
-        "2026-10-27"
+        "2026-10-27",
+        "2026-10-28"
       ],
       "values": [
         1,
         1,
-        1,
+        0,
         0,
         0,
         0,
@@ -298,7 +298,6 @@
     },
     "evac_addresses_l1": {
       "dates": [
-        "2026-09-27",
         "2026-09-28",
         "2026-09-29",
         "2026-09-30",
@@ -328,12 +327,13 @@
         "2026-10-24",
         "2026-10-25",
         "2026-10-26",
-        "2026-10-27"
+        "2026-10-27",
+        "2026-10-28"
       ],
       "values": [
         367,
-        367,
         5,
+        0,
         0,
         0,
         0,
@@ -366,7 +366,6 @@
     },
     "evac_addresses_l2": {
       "dates": [
-        "2026-09-27",
         "2026-09-28",
         "2026-09-29",
         "2026-09-30",
@@ -396,11 +395,12 @@
         "2026-10-24",
         "2026-10-25",
         "2026-10-26",
-        "2026-10-27"
+        "2026-10-27",
+        "2026-10-28"
       ],
       "values": [
         11,
-        11,
+        0,
         0,
         0,
         0,
@@ -434,7 +434,6 @@
     },
     "evac_addresses_l3": {
       "dates": [
-        "2026-09-27",
         "2026-09-28",
         "2026-09-29",
         "2026-09-30",
@@ -464,7 +463,8 @@
         "2026-10-24",
         "2026-10-25",
         "2026-10-26",
-        "2026-10-27"
+        "2026-10-27",
+        "2026-10-28"
       ],
       "values": [
         0,
@@ -502,7 +502,6 @@
     },
     "active_fires": {
       "dates": [
-        "2026-09-27",
         "2026-09-28",
         "2026-09-29",
         "2026-09-30",
@@ -532,10 +531,10 @@
         "2026-10-24",
         "2026-10-25",
         "2026-10-26",
-        "2026-10-27"
+        "2026-10-27",
+        "2026-10-28"
       ],
       "values": [
-        35,
         37,
         41,
         47,
@@ -565,12 +564,12 @@
         69,
         70,
         43,
-        53
+        53,
+        58
       ]
     },
     "total_acres_ytd": {
       "dates": [
-        "2026-09-27",
         "2026-09-28",
         "2026-09-29",
         "2026-09-30",
@@ -600,14 +599,15 @@
         "2026-10-24",
         "2026-10-25",
         "2026-10-26",
-        "2026-10-27"
+        "2026-10-27",
+        "2026-10-28"
       ],
       "values": [
         2523627,
         2523627,
-        2523627,
         2523633,
         2523634,
+        2131806,
         2131806,
         2131806,
         2131806,
@@ -638,7 +638,6 @@
     },
     "structures_lost": {
       "dates": [
-        "2026-09-27",
         "2026-09-28",
         "2026-09-29",
         "2026-09-30",
@@ -668,7 +667,8 @@
         "2026-10-24",
         "2026-10-25",
         "2026-10-26",
-        "2026-10-27"
+        "2026-10-27",
+        "2026-10-28"
       ],
       "values": [
         207,
@@ -706,12 +706,12 @@
     }
   },
   "exec_summary": {
-    "headline": "Total evacuation addresses are holding steady at 0 since yesterday morning. Total acres burned by large fires this season stands at 2,131,806, down 0 acres (0.0%) since yesterday morning. The number of active fires statewide is up 23% (43 \u2192 53) since yesterday morning.",
+    "headline": "Total evacuation addresses are holding steady at 0 since yesterday morning. Total acres burned by large fires this season stands at 2,131,806, down 0 acres (0.0%) since yesterday morning. The number of active fires statewide is up 9% (53 \u2192 58) since yesterday morning. The number of active large fires is down 36% (11 \u2192 7) since yesterday morning.",
     "losses": "This season has recorded 2 fatalities and 207 structures destroyed so far. Structure loss is unchanged since yesterday morning.",
     "has_loss": true,
     "closing": "Full details, county-by-county, are in the sections below."
   },
-  "active_large_fires": 11,
+  "active_large_fires": 7,
   "total_large_fire_acres": 2131805.9,
   "structures_lost": 207,
   "evac_triggering_fires": 0,
@@ -724,7 +724,7 @@
   "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
   "evac_data_as_of": "7:45 AM PDT",
-  "evac_data_as_of_iso": "2026-10-27T14:45:05Z",
+  "evac_data_as_of_iso": "2026-10-28T14:45:02Z",
   "struct_loss": {
     "oregon_totals": {
       "res_threatened": 0,
@@ -768,7 +768,7 @@
           "name": "Second Flat",
           "acres": 105854,
           "acres_total": null,
-          "status": "Active",
+          "status": "Contained",
           "res": 2,
           "comm": 0,
           "other": 5,
@@ -788,7 +788,7 @@
           "name": "Jackass Butte",
           "acres": 24724,
           "acres_total": null,
-          "status": "Active",
+          "status": "Contained",
           "res": 0,
           "comm": 2,
           "other": 0,
@@ -798,7 +798,7 @@
           "name": "Stubble",
           "acres": 15673,
           "acres_total": null,
-          "status": "Active",
+          "status": "Contained",
           "res": 0,
           "comm": 0,
           "other": 0,
@@ -1538,7 +1538,7 @@
           "name": "THE NARROWS",
           "acres": 305,
           "acres_total": null,
-          "status": "Active",
+          "status": "Contained",
           "res": 0,
           "comm": 0,
           "other": 0,
@@ -1788,7 +1788,6 @@
     }
   ],
   "county_acres_map": {
-    "Harney": 537775.0,
     "Wasco": 97676.0,
     "Jefferson": 206460.0,
     "Umatilla": 77328.0,
@@ -1796,6 +1795,7 @@
     "Clackamas": 14193.0,
     "Wallowa": 18050.0,
     "Malheur": 270899.7,
+    "Harney": 537775.0,
     "Wheeler": 447594.6,
     "Klamath": 55381.0,
     "Crook": 47654.0,
@@ -1810,16 +1810,6 @@
     "Josephine": 100.0
   },
   "county_structures_map": {
-    "Harney": {
-      "threatened": 0,
-      "damaged": 0,
-      "destroyed": 11,
-      "fires": [
-        "Bald Mountain",
-        "Jackass Butte",
-        "Second Flat"
-      ]
-    },
     "Wasco": {
       "threatened": 0,
       "damaged": 0,
@@ -1854,6 +1844,16 @@
       "fires": [
         "FOX",
         "McCulley"
+      ]
+    },
+    "Harney": {
+      "threatened": 0,
+      "damaged": 0,
+      "destroyed": 11,
+      "fires": [
+        "Bald Mountain",
+        "Jackass Butte",
+        "Second Flat"
       ]
     },
     "Wheeler": {
@@ -3242,6 +3242,11 @@
       "date": "2026-10-27",
       "active_fires": 53,
       "acres_burned": 420163.96
+    },
+    {
+      "date": "2026-10-28",
+      "active_fires": 58,
+      "acres_burned": 274569.36
     }
   ],
   "historical_seasons": [
@@ -3769,21 +3774,6 @@
   },
   "map_fires": [
     {
-      "name": "Second Flat",
-      "county": "Harney",
-      "lat": 43.608667,
-      "lon": -119.439167,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 105854.0,
-      "structures_lost_res": 2,
-      "structures_lost_comm": 0,
-      "structures_lost_other": 5,
-      "structures_lost_unc": 0,
-      "cpx_name": null,
-      "cpx_total_acres": null
-    },
-    {
       "name": "Grasshopper",
       "county": "Wasco",
       "lat": 45.242462,
@@ -3821,36 +3811,6 @@
       "status": "Active",
       "triggered_evacuation": true,
       "acres": 61380.0,
-      "structures_lost_res": 0,
-      "structures_lost_comm": 0,
-      "structures_lost_other": 0,
-      "structures_lost_unc": 0,
-      "cpx_name": null,
-      "cpx_total_acres": null
-    },
-    {
-      "name": "Jackass Butte",
-      "county": "Harney",
-      "lat": 43.045,
-      "lon": -118.955667,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 24724.0,
-      "structures_lost_res": 0,
-      "structures_lost_comm": 2,
-      "structures_lost_other": 0,
-      "structures_lost_unc": 0,
-      "cpx_name": null,
-      "cpx_total_acres": null
-    },
-    {
-      "name": "Stubble",
-      "county": "Harney",
-      "lat": 43.18,
-      "lon": -118.92,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 15673.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -3919,21 +3879,6 @@
       "cpx_total_acres": null
     },
     {
-      "name": "THE NARROWS",
-      "county": "Clackamas",
-      "lat": 45.146901,
-      "lon": -122.093611,
-      "status": "Active",
-      "triggered_evacuation": false,
-      "acres": 305.0,
-      "structures_lost_res": 0,
-      "structures_lost_comm": 0,
-      "structures_lost_other": 0,
-      "structures_lost_unc": 0,
-      "cpx_name": null,
-      "cpx_total_acres": null
-    },
-    {
       "name": "BIG GRASS",
       "county": "Malheur",
       "lat": 42.6292,
@@ -3974,6 +3919,21 @@
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
+      "structures_lost_unc": 0,
+      "cpx_name": null,
+      "cpx_total_acres": null
+    },
+    {
+      "name": "Second Flat",
+      "county": "Harney",
+      "lat": 43.608667,
+      "lon": -119.439167,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 105854.0,
+      "structures_lost_res": 2,
+      "structures_lost_comm": 0,
+      "structures_lost_other": 5,
       "structures_lost_unc": 0,
       "cpx_name": null,
       "cpx_total_acres": null
@@ -4144,6 +4104,21 @@
       "cpx_total_acres": null
     },
     {
+      "name": "Jackass Butte",
+      "county": "Harney",
+      "lat": 43.045,
+      "lon": -118.955667,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 24724.0,
+      "structures_lost_res": 0,
+      "structures_lost_comm": 2,
+      "structures_lost_other": 0,
+      "structures_lost_unc": 0,
+      "cpx_name": null,
+      "cpx_total_acres": null
+    },
+    {
       "name": "0512 BOX SPRINGS",
       "county": "Jefferson",
       "lat": 44.635333,
@@ -4181,6 +4156,21 @@
       "status": "Contained",
       "triggered_evacuation": false,
       "acres": 17460.0,
+      "structures_lost_res": 0,
+      "structures_lost_comm": 0,
+      "structures_lost_other": 0,
+      "structures_lost_unc": 0,
+      "cpx_name": null,
+      "cpx_total_acres": null
+    },
+    {
+      "name": "Stubble",
+      "county": "Harney",
+      "lat": 43.18,
+      "lon": -118.92,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 15673.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,
@@ -5006,6 +4996,21 @@
       "status": "Contained",
       "triggered_evacuation": true,
       "acres": 310.0,
+      "structures_lost_res": 0,
+      "structures_lost_comm": 0,
+      "structures_lost_other": 0,
+      "structures_lost_unc": 0,
+      "cpx_name": null,
+      "cpx_total_acres": null
+    },
+    {
+      "name": "THE NARROWS",
+      "county": "Clackamas",
+      "lat": 45.146901,
+      "lon": -122.093611,
+      "status": "Contained",
+      "triggered_evacuation": false,
+      "acres": 305.0,
       "structures_lost_res": 0,
       "structures_lost_comm": 0,
       "structures_lost_other": 0,

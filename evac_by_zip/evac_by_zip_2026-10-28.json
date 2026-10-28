@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-28",
+  "generated_at": "2026-10-28T15:00:06Z",
+  "as_of_iso": "2026-10-28T14:45:02.000Z",
+  "as_of_display": "October 28, 2026, 7:45 AM PDT",
+  "totals": {
+    "l1": 0,
+    "l2": 0,
+    "l3": 0,
+    "total": 0,
+    "zip_count": 0
+  },
+  "unmatched": {
+    "l1": 0,
+    "l2": 0,
+    "l3": 0,
+    "total": 0,
+    "zone_count": 0
+  },
+  "unmatched_zones": [],
+  "reconciled_total": {
+    "l1": 0,
+    "l2": 0,
+    "l3": 0,
+    "total": 0
+  },
+  "zips": [],
+  "note": "Reconciled 2026-10-28 to match the morning report's evac_raw.json snapshot (fetched 2026-10-28T14:45:02.000Z / October 28, 2026, 7:45 AM PDT) rather than a separate live pull. 0% of 0 total addresses (0) could be placed on a ZIP code using geometry cached from an earlier same-day pull; the remaining 0 addresses (L1:0 L2:0 L3:0, spanning 0 zones either entirely unmatched this run or only partially covered by the cached ZIP boundary layer \u2014 see the Evacuation Map's 'Unmatched zones' layer for the exact list) are shown as a single 'unmatched' summary row on the website so the table's own totals always tie exactly to the morning report."
+}
