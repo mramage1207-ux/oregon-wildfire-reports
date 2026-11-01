@@ -1,11 +1,11 @@
 {
   "last_updated": "2026-11-01",
-  "report_time": "8:12 AM PDT",
-  "report_time_iso": "2026-10-31T15:12:54Z",
-  "current_active_fires": 61,
-  "current_acres_burned": 207263.3,
-  "current_report_time": "8:12 AM PDT",
-  "current_report_time_iso": "2026-10-31T15:12:54Z",
+  "report_time": "8:13 AM PST",
+  "report_time_iso": "2026-11-01T16:13:16Z",
+  "current_active_fires": 50,
+  "current_acres_burned": 207103.4,
+  "current_report_time": "8:13 AM PST",
+  "current_report_time_iso": "2026-11-01T16:13:16Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-10-31",
     "active_large_fires": {
@@ -39,10 +39,10 @@
       "pct": 0.0
     },
     "active_fires": {
-      "current": 61,
+      "current": 50,
       "prior": 61,
-      "delta": 0,
-      "pct": 0.0
+      "delta": -11,
+      "pct": -18.0
     },
     "total_acres_ytd": {
       "current": 2131805.9,
@@ -90,10 +90,10 @@
       "pct": 0.0
     },
     "active_fires": {
-      "current": 61,
+      "current": 50,
       "prior": 70,
-      "delta": -9,
-      "pct": -12.9
+      "delta": -20,
+      "pct": -28.6
     },
     "total_acres_ytd": {
       "current": 2131805.9,
@@ -141,10 +141,10 @@
       "pct": 0.0
     },
     "active_fires": {
-      "current": 61,
+      "current": 50,
       "prior": 52,
-      "delta": 9,
-      "pct": 17.3
+      "delta": -2,
+      "pct": -3.8
     },
     "total_acres_ytd": {
       "current": 2131805.9,
@@ -565,7 +565,7 @@
         66,
         56,
         61,
-        61
+        50
       ]
     },
     "total_acres_ytd": {
@@ -706,7 +706,7 @@
     }
   },
   "exec_summary": {
-    "headline": "Total evacuation addresses are holding steady at 0 since yesterday morning. Total acres burned by large fires this season stands at 2,131,806, down 0 acres (0.0%) since yesterday morning.",
+    "headline": "Total evacuation addresses are holding steady at 0 since yesterday morning. Total acres burned by large fires this season stands at 2,131,806, down 0 acres (0.0%) since yesterday morning. The number of active fires statewide is down 18% (61 \u2192 50) since yesterday morning.",
     "losses": "This season has recorded 2 fatalities and 207 structures destroyed so far. Structure loss is unchanged since yesterday morning.",
     "has_loss": true,
     "closing": "Full details, county-by-county, are in the sections below."
@@ -723,8 +723,8 @@
   "evac_addresses_l1": 0,
   "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
-  "evac_data_as_of": "7:45 AM PDT",
-  "evac_data_as_of_iso": "2026-10-31T14:45:03Z",
+  "evac_data_as_of": "7:45 AM PST",
+  "evac_data_as_of_iso": "2026-11-01T15:45:04Z",
   "struct_loss": {
     "oregon_totals": {
       "res_threatened": 0,
@@ -3262,6 +3262,11 @@
       "date": "2026-10-31",
       "active_fires": 61,
       "acres_burned": 207263.3
+    },
+    {
+      "date": "2026-11-01",
+      "active_fires": 50,
+      "acres_burned": 207103.4
     }
   ],
   "historical_seasons": [
