@@ -1,11 +1,11 @@
 {
   "last_updated": "2026-11-03",
   "report_time": "8:13 AM PST",
-  "report_time_iso": "2026-11-03T16:13:25Z",
+  "report_time_iso": "2026-11-03T16:55:11Z",
   "current_active_fires": 39,
   "current_acres_burned": 207107.8,
   "current_report_time": "8:13 AM PST",
-  "current_report_time_iso": "2026-11-03T16:13:25Z",
+  "current_report_time_iso": "2026-11-03T16:55:11Z",
   "change_vs_prior_morning": {
     "prior_date": "2026-11-02",
     "active_large_fires": {
@@ -742,7 +742,7 @@
       "total_threatened": 0,
       "total_damaged": 0,
       "total_destroyed": 207,
-      "methodology_note": "Effective 2026-08-01: NWCC structure-loss figures reported as a bare number with no descriptive category text are labeled Uncategorized rather than assumed Residential. Data before this date used the prior assume-Residential convention and has not been retroactively revised."
+      "methodology_note": "Effective 2026-08-01: NWCC structure-loss figures reported as a bare number with no descriptive category text are labeled Uncategorized rather than assumed Residential. Data before this date used the prior assume-Residential convention and has not been retroactively revised. Reconciliation note (2026-11-03): Residence counts reflect the last figures NWCC reported via ICS-209 while each fire was active. Some outlets report a higher statewide total (56 residences per OPB, citing NWCC); agencies define and finalize counts differently (the Oregon State Fire Marshal counts primary residences only). Figures are under review and may be revised."
     }
   },
   "county_structure_data": [
