@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-13",
-  "report_time": "8:29 AM PST",
-  "report_time_iso": "2026-11-13T16:45:15Z",
-  "current_active_fires": 23,
-  "current_acres_burned": 196830.1,
-  "current_report_time": "8:29 AM PST",
-  "current_report_time_iso": "2026-11-13T16:45:15Z",
+  "last_updated": "2026-11-14",
+  "report_time": "8:13 AM PST",
+  "report_time_iso": "2026-11-14T16:13:03Z",
+  "current_active_fires": 33,
+  "current_acres_burned": 196841.34,
+  "current_report_time": "8:13 AM PST",
+  "current_report_time_iso": "2026-11-14T16:13:03Z",
   "change_vs_prior_morning": {
-    "prior_date": "2026-11-12",
+    "prior_date": "2026-11-13",
     "active_large_fires": {
       "current": 6,
       "prior": 6,
@@ -39,10 +39,10 @@
       "pct": 0.0
     },
     "active_fires": {
-      "current": 23,
-      "prior": 57,
-      "delta": -34,
-      "pct": -59.6
+      "current": 33,
+      "prior": 23,
+      "delta": 10,
+      "pct": 43.5
     },
     "total_acres_ytd": {
       "current": 2132048.9,
@@ -52,13 +52,13 @@
     },
     "structures_lost": {
       "current": 217,
-      "prior": 207,
-      "delta": 10,
-      "pct": 4.8
+      "prior": 217,
+      "delta": 0,
+      "pct": 0.0
     }
   },
   "change_vs_7d_ago": {
-    "prior_date": "2026-11-06",
+    "prior_date": "2026-11-07",
     "active_large_fires": {
       "current": 6,
       "prior": 6,
@@ -90,10 +90,10 @@
       "pct": 0.0
     },
     "active_fires": {
-      "current": 23,
-      "prior": 62,
-      "delta": -39,
-      "pct": -62.9
+      "current": 33,
+      "prior": 51,
+      "delta": -18,
+      "pct": -35.3
     },
     "total_acres_ytd": {
       "current": 2132048.9,
@@ -109,7 +109,7 @@
     }
   },
   "change_vs_30d_ago": {
-    "prior_date": "2026-10-14",
+    "prior_date": "2026-10-15",
     "active_large_fires": {
       "current": 6,
       "prior": 11,
@@ -141,10 +141,10 @@
       "pct": 0.0
     },
     "active_fires": {
-      "current": 23,
-      "prior": 40,
+      "current": 33,
+      "prior": 50,
       "delta": -17,
-      "pct": -42.5
+      "pct": -34.0
     },
     "total_acres_ytd": {
       "current": 2132048.9,
@@ -162,7 +162,6 @@
   "trend_history": {
     "active_large_fires": {
       "dates": [
-        "2026-10-14",
         "2026-10-15",
         "2026-10-16",
         "2026-10-17",
@@ -192,7 +191,8 @@
         "2026-11-10",
         "2026-11-11",
         "2026-11-12",
-        "2026-11-13"
+        "2026-11-13",
+        "2026-11-14"
       ],
       "values": [
         11,
@@ -208,7 +208,6 @@
         11,
         11,
         11,
-        11,
         7,
         6,
         6,
@@ -224,13 +223,13 @@
         7,
         7,
         7,
+        6,
         6,
         6
       ]
     },
     "active_evac_fires": {
       "dates": [
-        "2026-10-14",
         "2026-10-15",
         "2026-10-16",
         "2026-10-17",
@@ -260,7 +259,8 @@
         "2026-11-10",
         "2026-11-11",
         "2026-11-12",
-        "2026-11-13"
+        "2026-11-13",
+        "2026-11-14"
       ],
       "values": [
         0,
@@ -287,18 +287,17 @@
         0,
         0,
         0,
+        1,
+        1,
+        1,
+        1,
         0,
-        1,
-        1,
-        1,
-        1,
         0,
         0
       ]
     },
     "evac_addresses_l1": {
       "dates": [
-        "2026-10-14",
         "2026-10-15",
         "2026-10-16",
         "2026-10-17",
@@ -328,7 +327,8 @@
         "2026-11-10",
         "2026-11-11",
         "2026-11-12",
-        "2026-11-13"
+        "2026-11-13",
+        "2026-11-14"
       ],
       "values": [
         0,
@@ -356,17 +356,16 @@
         0,
         0,
         0,
+        260,
+        260,
+        260,
         0,
-        260,
-        260,
-        260,
         0,
         0
       ]
     },
     "evac_addresses_l2": {
       "dates": [
-        "2026-10-14",
         "2026-10-15",
         "2026-10-16",
         "2026-10-17",
@@ -396,7 +395,8 @@
         "2026-11-10",
         "2026-11-11",
         "2026-11-12",
-        "2026-11-13"
+        "2026-11-13",
+        "2026-11-14"
       ],
       "values": [
         0,
@@ -423,8 +423,8 @@
         0,
         0,
         0,
-        0,
         260,
+        0,
         0,
         0,
         0,
@@ -434,7 +434,6 @@
     },
     "evac_addresses_l3": {
       "dates": [
-        "2026-10-14",
         "2026-10-15",
         "2026-10-16",
         "2026-10-17",
@@ -464,7 +463,8 @@
         "2026-11-10",
         "2026-11-11",
         "2026-11-12",
-        "2026-11-13"
+        "2026-11-13",
+        "2026-11-14"
       ],
       "values": [
         0,
@@ -502,7 +502,6 @@
     },
     "active_fires": {
       "dates": [
-        "2026-10-14",
         "2026-10-15",
         "2026-10-16",
         "2026-10-17",
@@ -532,10 +531,10 @@
         "2026-11-10",
         "2026-11-11",
         "2026-11-12",
-        "2026-11-13"
+        "2026-11-13",
+        "2026-11-14"
       ],
       "values": [
-        40,
         50,
         46,
         47,
@@ -565,12 +564,12 @@
         52,
         58,
         57,
-        23
+        23,
+        33
       ]
     },
     "total_acres_ytd": {
       "dates": [
-        "2026-10-14",
         "2026-10-15",
         "2026-10-16",
         "2026-10-17",
@@ -600,10 +599,10 @@
         "2026-11-10",
         "2026-11-11",
         "2026-11-12",
-        "2026-11-13"
+        "2026-11-13",
+        "2026-11-14"
       ],
       "values": [
-        2131806,
         2131806,
         2131806,
         2131806,
@@ -633,12 +632,12 @@
         2132049,
         2132049,
         2132049,
+        2132049,
         2132048.9
       ]
     },
     "structures_lost": {
       "dates": [
-        "2026-10-14",
         "2026-10-15",
         "2026-10-16",
         "2026-10-17",
@@ -668,7 +667,8 @@
         "2026-11-10",
         "2026-11-11",
         "2026-11-12",
-        "2026-11-13"
+        "2026-11-13",
+        "2026-11-14"
       ],
       "values": [
         207,
@@ -700,14 +700,14 @@
         207,
         207,
         207,
-        207,
+        217,
         217
       ]
     }
   },
   "exec_summary": {
-    "headline": "Total evacuation addresses are holding steady at 0 since yesterday morning. Total acres burned by large fires this season stands at 2,132,049, down 0 acres (0.0%) since yesterday morning. The number of active fires statewide is down 60% (57 \u2192 23) since yesterday morning.",
-    "losses": "This season has recorded 2 fatalities and 217 structures destroyed so far. Structures destroyed up 5% (207 \u2192 217) since yesterday morning.",
+    "headline": "Total evacuation addresses are holding steady at 0 since yesterday morning. Total acres burned by large fires this season stands at 2,132,049, down 0 acres (0.0%) since yesterday morning. The number of active fires statewide is up 44% (23 \u2192 33) since yesterday morning.",
+    "losses": "This season has recorded 2 fatalities and 217 structures destroyed so far. Structure loss is unchanged since yesterday morning.",
     "has_loss": true,
     "closing": "Full details, county-by-county, are in the sections below."
   },
@@ -724,7 +724,7 @@
   "evac_addresses_l2": 0,
   "evac_addresses_l3": 0,
   "evac_data_as_of": "7:45 AM PST",
-  "evac_data_as_of_iso": "2026-11-13T15:45:02Z",
+  "evac_data_as_of_iso": "2026-11-14T15:45:02Z",
   "struct_loss": {
     "oregon_totals": {
       "res_threatened": 0,
@@ -3337,6 +3337,11 @@
       "date": "2026-11-13",
       "active_fires": 23,
       "acres_burned": 196830.1
+    },
+    {
+      "date": "2026-11-14",
+      "active_fires": 33,
+      "acres_burned": 196841.34
     }
   ],
   "historical_seasons": [
